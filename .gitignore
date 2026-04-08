@@ -1,0 +1,14 @@
+# Processed panel (large file)
+processed/panel/panel.pkl
+
+# Python
+__pycache__/
+*.pyc
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Editor
+*.swp
+*~

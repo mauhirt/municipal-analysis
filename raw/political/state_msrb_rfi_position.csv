@@ -1,0 +1,51 @@
+state_abb,state_name,signed_utah_antiesg_letter,msrb_rfi_position,signatory_role,source
+AL,Alabama,1,anti_esg,Attorney General (Steve Marshall),Utah coalition letter
+AK,Alaska,1,anti_esg,Attorney General (Treg R. Taylor) + Commissioner of Revenue (Lucinda Mahoney),Utah coalition letter
+AZ,Arizona,1,anti_esg,Attorney General (Mark Brnovich) + Treasurer (Kimberly Yee),Utah coalition letter
+AR,Arkansas,1,anti_esg,Attorney General (Leslie Rutledge) + Treasurer (Dennis Milligan),Utah coalition letter
+CA,California,0,pro_esg,,CA Green Bond Market Development Committee filed separate pro-ESG letter
+CO,Colorado,0,no_response,,
+CT,Connecticut,0,no_response,,
+DE,Delaware,0,no_response,,
+FL,Florida,1,anti_esg,Attorney General (Ashley Moody) + Division of Bond Finance filed separate nuanced letter,Utah coalition letter + separate FL letter
+GA,Georgia,1,anti_esg,Attorney General (Christopher M. Carr) + Treasurer (Steve McCoy),Utah coalition letter
+HI,Hawaii,0,no_response,,
+ID,Idaho,1,anti_esg,Attorney General (Lawrence Wasden) + Treasurer (Julie A. Ellsworth),Utah coalition letter
+IL,Illinois,0,no_response,,
+IN,Indiana,1,anti_esg,Attorney General (Todd Rokita),Utah coalition letter
+IA,Iowa,0,no_response,,
+KS,Kansas,1,anti_esg,Attorney General (Derek Schmidt),Utah coalition letter
+KY,Kentucky,1,anti_esg,Attorney General (Daniel Cameron) + Treasurer (Allison Ball) + Auditor (Mike Harmon),Utah coalition letter
+LA,Louisiana,1,anti_esg,Attorney General (Jeff Landry) + Treasurer (John M. Schroder),Utah coalition letter
+ME,Maine,0,no_response,,
+MD,Maryland,0,no_response,,
+MA,Massachusetts,0,no_response,,
+MI,Michigan,0,pro_esg,,City of Detroit and Lansing BWL filed pro-ESG letters (city-level not state)
+MN,Minnesota,0,no_response,,
+MS,Mississippi,1,anti_esg,Attorney General (Lynn Fitch) + Treasurer (David McRae),Utah coalition letter
+MO,Missouri,1,anti_esg,Attorney General (Eric Schmitt) + Treasurer (Scott Fitzpatrick),Utah coalition letter
+MT,Montana,1,anti_esg,Attorney General (Austin Knudsen),Utah coalition letter
+NE,Nebraska,1,anti_esg,Attorney General (Douglas J. Peterson) + Treasurer (John Murante),Utah coalition letter
+NV,Nevada,0,no_response,,
+NH,New Hampshire,0,no_response,,
+NJ,New Jersey,0,pro_esg,,NJ Infrastructure Bank filed separate pro-ESG letter
+NM,New Mexico,0,no_response,,
+NY,New York,0,pro_esg,,NYC Comptroller and NYC HDC filed separate pro-ESG letters (city-level not state)
+NC,North Carolina,0,no_response,,
+ND,North Dakota,1,anti_esg,Treasurer (Thomas Beadle),Utah coalition letter
+OH,Ohio,1,anti_esg,Attorney General (Dave Yost) + Treasurer (Robert Sprague),Utah coalition letter
+OK,Oklahoma,1,anti_esg,Attorney General (John M. O'Connor) + Treasurer (Randy McDaniel),Utah coalition letter
+OR,Oregon,0,no_response,,
+PA,Pennsylvania,0,no_response,,
+RI,Rhode Island,0,no_response,,
+SC,South Carolina,1,anti_esg,Attorney General (Alan Wilson) + Treasurer (Curtis Loftis),Utah coalition letter
+SD,South Dakota,1,anti_esg,Attorney General (Jason R. Ravnsborg),Utah coalition letter
+TN,Tennessee,0,no_response,,
+TX,Texas,1,anti_esg,Attorney General (Ken Paxton) + Comptroller (Glenn Hegar),Utah coalition letter
+UT,Utah,1,anti_esg,Attorney General (Sean D. Reyes) + Treasurer (Marlo M. Oaks) + Auditor (John Dougall),Lead author of coalition letter
+VT,Vermont,0,no_response,,
+VA,Virginia,0,no_response,,
+WA,Washington,0,no_response,,
+WV,West Virginia,1,anti_esg,Attorney General (Patrick Morrisey) + Treasurer (Riley Moore),Utah coalition letter
+WI,Wisconsin,0,neutral,,WI Dept of Administration filed separate nuanced letter
+WY,Wyoming,1,anti_esg,Treasurer (Curt Meier),Utah coalition letter

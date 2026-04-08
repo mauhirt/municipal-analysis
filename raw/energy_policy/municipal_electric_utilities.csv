@@ -1,0 +1,579 @@
+city_name,state_abb,utility_name,has_municipal_electric,customers,revenue_thousands,revenue_millions,large_enough_for_bonds
+alameda,CA,Alameda Municipal Power,1,37226.0,75541.7,75.54169999999999,1
+albany,GA,Albany Utility Board,1,33921.0,80382.8,80.3828,1
+ames,IA,City of Ames - (IA),1,28108.0,61011.8,61.0118,1
+anaheim,CA,City of Anaheim - (CA),1,123665.0,357316.0,357.316,1
+anderson,IN,City of Anderson - (IN),1,33466.0,93124.7,93.1247,1
+austin,TX,Austin Energy,1,562004.0,1475140.4,1475.1404,1
+bowling green,KY,City of Bowling Green - (KY),1,32517.0,90266.0,90.266,1
+brownsville,TX,Brownsville Public Utilities Board,1,54712.0,169249.0,169.249,1
+bryan,TX,City of Bryan - (TX),1,68685.0,166295.0,166.295,1
+chattanooga,TN,City of Chattanooga - (TN),1,200605.0,630400.0,630.4,1
+chicopee,MA,City of Chicopee - (MA),1,26052.0,68902.8,68.9028,1
+clarksville,TN,City of Clarksville - (TN),1,85314.0,204480.0,204.48,1
+cleveland,OH,City of Cleveland - (OH),1,73666.0,193423.1,193.4231,1
+college station,TX,City of College Station - (TX),1,47049.0,129388.0,129.388,1
+colorado springs,CO,City of Colorado Springs - (CO),1,260682.0,515877.0,515.877,1
+colton,CA,City of Colton - (CA),1,20064.0,83032.5,83.0325,1
+columbia,MO,City of Columbia - (MO),1,53276.0,137747.0,137.747,1
+columbus,OH,City of Columbus - (OH),1,19521.0,93155.4,93.1554,1
+concord,NC,City of Concord - (NC),1,34243.0,101528.7,101.5287,1
+cuyahoga falls,OH,City of Cuyahoga Falls - (OH),1,26783.0,48505.0,48.505,0
+decatur,AL,Decatur Utilities,1,26935.0,100688.0,100.688,1
+denton,TX,City of Denton - (TX),1,66609.0,198806.0,198.806,1
+dothan,AL,City of Dothan - (AL),1,32175.0,95972.0,95.972,1
+edmond,OK,City of Edmond - (OK),1,44461.0,100468.3,100.4683,1
+eugene,OR,City of Eugene - (OR),1,99939.0,236833.0,236.833,1
+fayetteville,NC,Fayetteville Public Works Commission,1,85435.0,212164.0,212.164,1
+fort collins,CO,City of Fort Collins - (CO),1,79990.0,163202.6,163.20260000000002,1
+gainesville,FL,Gainesville Regional Utilities,1,104509.0,280642.3,280.6423,1
+garland,TX,City of Garland - (TX),1,76337.0,243962.0,243.962,1
+gastonia,NC,City of Gastonia - (NC),1,31336.0,79276.5,79.2765,1
+grand island,NE,City of Grand Island - (NE),1,27425.0,70227.0,70.227,1
+greenville,NC,Greenville Utilities Comm,1,74118.0,181445.3,181.4453,1
+high point,NC,Town of High Point,1,44195.0,123070.5,123.0705,1
+huntsville,AL,City of Huntsville - (AL),1,220576.0,592072.0,592.072,1
+idaho falls,ID,City of Idaho Falls - (ID),1,32782.0,61951.8,61.951800000000006,1
+independence,MO,City of Independence - (MO),1,58789.0,150219.4,150.2194,1
+jackson,TN,City of Jackson - (TN),1,38719.0,155490.0,155.49,1
+jacksonville,FL,JEA,1,531883.0,1399888.0,1399.888,1
+kansas city,KS,City of Kansas City - (KS),1,68637.0,267090.0,267.09,1
+kissimmee,FL,Kissimmee Utility Authority,1,91561.0,234209.3,234.2093,1
+knoxville,TN,Knoxville Utilities Board,1,219297.0,647915.0,647.915,1
+lafayette,LA,City of Lafayette - (LA),1,72343.0,182464.0,182.464,1
+lakeland,FL,City of Lakeland - (FL),1,136543.0,332753.0,332.753,1
+lansing,MI,City of Lansing - (MI),1,99649.0,332469.0,332.469,1
+lincoln,NE,Lincoln Electric System,1,153069.0,301139.3,301.1393,1
+logan,UT,City of Logan - (UT),1,21774.0,47814.3,47.8143,0
+longmont,CO,City of Longmont,1,43741.0,91562.3,91.5623,1
+los angeles,CA,Los Angeles Department of Water & Power,1,1510995.0,4827216.1,4827.2161,1
+loveland,CO,City of Loveland - (CO),1,42375.0,86873.0,86.873,1
+lubbock,TX,City of Lubbock - (TX),1,5614.0,69586.0,69.586,1
+marietta,GA,City of Marietta - (GA),1,42506.0,115524.9,115.5249,1
+memphis,TN,City of Memphis - (TN),1,423338.0,1477600.3,1477.6003,1
+merced,CA,Merced Irrigation District,1,13140.0,98020.1,98.0201,1
+mesa,AZ,City of Mesa - (AZ),1,18101.0,50315.2,50.3152,1
+mishawaka,IN,City of Mishawaka,1,28872.0,57323.4,57.3234,1
+modesto,CA,Modesto Irrigation District,1,133517.0,464879.6,464.8796,1
+moreno valley,CA,City of Moreno Valley - (CA),1,8944.0,63579.0,63.579,1
+naperville,IL,City of Naperville - (IL),1,62990.0,142199.8,142.19979999999998,1
+north little rock,AR,City of North Little Rock - (AR),1,40137.0,100798.0,100.798,1
+ocala,FL,City of Ocala,1,57035.0,148263.1,148.2631,1
+omaha,NE,Omaha Public Power District,1,413414.0,1218066.0,1218.066,1
+orlando,FL,Orlando Utilities Comm,1,282182.0,824543.5,824.5435,1
+owensboro,KY,City of Owensboro - (KY),1,26556.0,81954.0,81.954,1
+pasadena,CA,City of Pasadena - (CA),1,67059.0,245140.2,245.1402,1
+peabody,MA,City of Peabody - (MA),1,27086.0,75458.5,75.4585,1
+provo,UT,Provo City Corp,1,40057.0,74149.0,74.149,1
+riverside,CA,City of Riverside - (CA),1,113373.0,376296.0,376.296,1
+rochester,MN,Rochester Public Utilities,1,60133.0,169137.1,169.1371,1
+rocky mount,NC,City of Rocky Mount - (NC),1,29188.0,77186.0,77.186,1
+sacramento,CA,Sacramento Municipal Util Dist,1,666235.0,1781725.5,1781.7255,1
+san antonio,TX,City of San Antonio - (TX),1,962272.0,2799182.0,2799.182,1
+san francisco,CA,City & County of San Francisco,1,2941.0,183008.6,183.0086,1
+santa clara,CA,City of Santa Clara - (CA),1,59389.0,724477.2,724.4771999999999,1
+seattle,WA,City of Seattle - (WA),1,512498.0,1129433.0,1129.433,1
+springfield,IL,City of Springfield - (IL),1,71179.0,186945.7,186.9457,1
+springfield,MO,City Utilities of Springfield - (MO),1,121603.0,304330.0,304.33,1
+springfield,OR,City of Springfield - (OR),1,33147.0,56824.9,56.8249,1
+tacoma,WA,City of Tacoma - (WA),1,203185.0,405383.9,405.3839,1
+tallahassee,FL,City of Tallahassee - (FL),1,120220.0,319082.1,319.0821,1
+taunton,MA,City of Taunton,1,40690.0,125020.0,125.02,1
+turlock,CA,Turlock Irrigation District,1,95746.0,320288.0,320.288,1
+vineland,NJ,City of Vineland - (NJ),1,25905.0,115311.7,115.3117,1
+abilene,TX,,0,,,,0
+akron,OH,,0,,,,0
+albany,NY,,0,,,,0
+albuquerque,NM,,0,,,,0
+alexandria,VA,,0,,,,0
+allen,TX,,0,,,,0
+allentown,PA,,0,,,,0
+alpharetta,GA,,0,,,,0
+amarillo,TX,,0,,,,0
+anchorage,AK,,0,,,,0
+ann arbor,MI,,0,,,,0
+antioch,CA,,0,,,,0
+apple valley,MN,,0,,,,0
+appleton,WI,,0,,,,0
+arlington,TX,,0,,,,0
+arlington heights,IL,,0,,,,0
+arvada,CO,,0,,,,0
+asheville,NC,,0,,,,0
+athens-clarke county,GA,,0,,,,0
+atlanta,GA,,0,,,,0
+auburn,WA,,0,,,,0
+augusta-richmond county,GA,,0,,,,0
+aurora,CO,,0,,,,0
+aurora,IL,,0,,,,0
+avondale,AZ,,0,,,,0
+bakersfield,CA,,0,,,,0
+baldwin park,CA,,0,,,,0
+baltimore,MD,,0,,,,0
+bartlett,TN,,0,,,,0
+baton rouge,LA,,0,,,,0
+battle creek,MI,,0,,,,0
+bayonne,NJ,,0,,,,0
+baytown,TX,,0,,,,0
+beaumont,TX,,0,,,,0
+beaverton,OR,,0,,,,0
+bellevue,NE,,0,,,,0
+bellevue,WA,,0,,,,0
+bellingham,WA,,0,,,,0
+bend,OR,,0,,,,0
+berkeley,CA,,0,,,,0
+berwyn,IL,,0,,,,0
+bethlehem,PA,,0,,,,0
+billings,MT,,0,,,,0
+birmingham,AL,,0,,,,0
+bismarck,ND,,0,,,,0
+blaine,MN,,0,,,,0
+bloomington,MN,,0,,,,0
+bloomington,IN,,0,,,,0
+bloomington,IL,,0,,,,0
+blue springs,MO,,0,,,,0
+boca raton,FL,,0,,,,0
+boise city,ID,,0,,,,0
+bolingbrook,IL,,0,,,,0
+bossier city,LA,,0,,,,0
+boston,MA,,0,,,,0
+boulder,CO,,0,,,,0
+bowie,MD,,0,,,,0
+boynton beach,FL,,0,,,,0
+bradenton,FL,,0,,,,0
+bridgeport,CT,,0,,,,0
+bristol,CT,,0,,,,0
+brockton,MA,,0,,,,0
+brooklyn park,MN,,0,,,,0
+buffalo,NY,,0,,,,0
+burlington,NC,,0,,,,0
+burnsville,MN,,0,,,,0
+camden,NJ,,0,,,,0
+canton,OH,,0,,,,0
+cape coral,FL,,0,,,,0
+carlsbad,CA,,0,,,,0
+carmel,IN,,0,,,,0
+carrollton,TX,,0,,,,0
+carson,CA,,0,,,,0
+carson,NV,,0,,,,0
+cary,NC,,0,,,,0
+cathedral city,CA,,0,,,,0
+cedar rapids,IA,,0,,,,0
+champaign,IL,,0,,,,0
+chandler,AZ,,0,,,,0
+chapel hill,NC,,0,,,,0
+charleston,SC,,0,,,,0
+charlotte,NC,,0,,,,0
+chesapeake,VA,,0,,,,0
+cheyenne,WY,,0,,,,0
+chicago,IL,,0,,,,0
+chino,CA,,0,,,,0
+chula vista,CA,,0,,,,0
+cicero,IL,,0,,,,0
+cincinnati,OH,,0,,,,0
+clearwater,FL,,0,,,,0
+collierville,TN,,0,,,,0
+columbia,SC,,0,,,,0
+columbus,GA,,0,,,,0
+compton,CA,,0,,,,0
+coon rapids,MN,,0,,,,0
+coral springs,FL,,0,,,,0
+corpus christi,TX,,0,,,,0
+corvallis,OR,,0,,,,0
+costa mesa,CA,,0,,,,0
+council bluffs,IA,,0,,,,0
+cranston,RI,,0,,,,0
+dallas,TX,,0,,,,0
+danbury,CT,,0,,,,0
+davenport,IA,,0,,,,0
+davie,FL,,0,,,,0
+dayton,OH,,0,,,,0
+daytona beach,FL,,0,,,,0
+dearborn,MI,,0,,,,0
+dearborn heights,MI,,0,,,,0
+decatur,IL,,0,,,,0
+deerfield beach,FL,,0,,,,0
+delray beach,FL,,0,,,,0
+deltona,FL,,0,,,,0
+denver,CO,,0,,,,0
+des moines,IA,,0,,,,0
+des plaines,IL,,0,,,,0
+desoto,TX,,0,,,,0
+detroit,MI,,0,,,,0
+downers grove,IL,,0,,,,0
+dubuque,IA,,0,,,,0
+duluth,MN,,0,,,,0
+durham,NC,,0,,,,0
+eagan,MN,,0,,,,0
+east orange,NJ,,0,,,,0
+eden prairie,MN,,0,,,,0
+edina,MN,,0,,,,0
+edinburg,TX,,0,,,,0
+edison,NJ,,0,,,,0
+el cajon,CA,,0,,,,0
+el monte,CA,,0,,,,0
+el paso,TX,,0,,,,0
+elgin,IL,,0,,,,0
+elizabeth,NJ,,0,,,,0
+elk grove,CA,,0,,,,0
+elkhart,IN,,0,,,,0
+elyria,OH,,0,,,,0
+encinitas,CA,,0,,,,0
+enid,OK,,0,,,,0
+erie,PA,,0,,,,0
+escondido,CA,,0,,,,0
+euless,TX,,0,,,,0
+evanston,IL,,0,,,,0
+evansville,IN,,0,,,,0
+everett,WA,,0,,,,0
+fairfield,CA,,0,,,,0
+fall river,MA,,0,,,,0
+fargo,ND,,0,,,,0
+farmington hills,MI,,0,,,,0
+fayetteville,AR,,0,,,,0
+federal way,WA,,0,,,,0
+flagstaff,AZ,,0,,,,0
+flint,MI,,0,,,,0
+florissant,MO,,0,,,,0
+flower mound,TX,,0,,,,0
+fontana,CA,,0,,,,0
+fort lauderdale,FL,,0,,,,0
+fort wayne,IN,,0,,,,0
+fort worth,TX,,0,,,,0
+frederick,MD,,0,,,,0
+fremont,CA,,0,,,,0
+fresno,CA,,0,,,,0
+frisco,TX,,0,,,,0
+gaithersburg,MD,,0,,,,0
+galveston,TX,,0,,,,0
+garden grove,CA,,0,,,,0
+gardena,CA,,0,,,,0
+gary,IN,,0,,,,0
+gilbert,AZ,,0,,,,0
+gilroy,CA,,0,,,,0
+glendale,AZ,,0,,,,0
+grand prairie,TX,,0,,,,0
+grand rapids,MI,,0,,,,0
+great falls,MT,,0,,,,0
+greeley,CO,,0,,,,0
+green bay,WI,,0,,,,0
+greensboro,NC,,0,,,,0
+greenville,SC,,0,,,,0
+greenwood,IN,,0,,,,0
+gresham,OR,,0,,,,0
+gulfport,MS,,0,,,,0
+hammond,IN,,0,,,,0
+hampton,VA,,0,,,,0
+harrisburg,PA,,0,,,,0
+hartford,CT,,0,,,,0
+haverhill,MA,,0,,,,0
+hawthorne,CA,,0,,,,0
+hayward,CA,,0,,,,0
+hempstead,NY,,0,,,,0
+henderson,NV,,0,,,,0
+hendersonville,TN,,0,,,,0
+hialeah,FL,,0,,,,0
+hillsboro,OR,,0,,,,0
+hoboken,NJ,,0,,,,0
+hoffman estates,IL,,0,,,,0
+hollywood,FL,,0,,,,0
+honolulu,HI,,0,,,,0
+hoover,AL,,0,,,,0
+houston,TX,,0,,,,0
+indianapolis,IN,,0,,,,0
+inglewood,CA,,0,,,,0
+iowa city,IA,,0,,,,0
+irvine,CA,,0,,,,0
+irving,TX,,0,,,,0
+jackson,MS,,0,,,,0
+jacksonville,NC,,0,,,,0
+jersey city,NJ,,0,,,,0
+joliet,IL,,0,,,,0
+jonesboro,AR,,0,,,,0
+jupiter,FL,,0,,,,0
+kalamazoo,MI,,0,,,,0
+kannapolis,NC,,0,,,,0
+kansas city,MO,,0,,,,0
+kenner,LA,,0,,,,0
+kenosha,WI,,0,,,,0
+kent,WA,,0,,,,0
+kentwood,MI,,0,,,,0
+kettering,OH,,0,,,,0
+killeen,TX,,0,,,,0
+kokomo,IN,,0,,,,0
+la crosse,WI,,0,,,,0
+la mesa,CA,,0,,,,0
+lafayette,IN,,0,,,,0
+lake charles,LA,,0,,,,0
+lake havasu city,AZ,,0,,,,0
+lakeville,MN,,0,,,,0
+lakewood,CO,,0,,,,0
+lakewood,OH,,0,,,,0
+lancaster,CA,,0,,,,0
+lancaster,PA,,0,,,,0
+laredo,TX,,0,,,,0
+largo,FL,,0,,,,0
+las cruces,NM,,0,,,,0
+las vegas,NV,,0,,,,0
+lauderhill,FL,,0,,,,0
+lawrence,MA,,0,,,,0
+lawton,OK,,0,,,,0
+layton,UT,,0,,,,0
+league city,TX,,0,,,,0
+lee's summit,MO,,0,,,,0
+lenexa,KS,,0,,,,0
+lewisville,TX,,0,,,,0
+lexington-fayette county,KY,,0,,,,0
+little rock,AR,,0,,,,0
+livermore,CA,,0,,,,0
+livonia,MI,,0,,,,0
+long beach,CA,,0,,,,0
+longview,TX,,0,,,,0
+lorain,OH,,0,,,,0
+louisville,KY,,0,,,,0
+lynn,MA,,0,,,,0
+madera,CA,,0,,,,0
+madison,WI,,0,,,,0
+malden,MA,,0,,,,0
+manchester,NH,,0,,,,0
+manteca,CA,,0,,,,0
+maple grove,MN,,0,,,,0
+mcallen,TX,,0,,,,0
+mckinney,TX,,0,,,,0
+medford,OR,,0,,,,0
+medford,MA,,0,,,,0
+melbourne,FL,,0,,,,0
+meriden,CT,,0,,,,0
+meridian,ID,,0,,,,0
+mesquite,TX,,0,,,,0
+methuen,MA,,0,,,,0
+miami,FL,,0,,,,0
+miami beach,FL,,0,,,,0
+middletown,OH,,0,,,,0
+midland,TX,,0,,,,0
+midwest city,OK,,0,,,,0
+milpitas,CA,,0,,,,0
+milwaukee,WI,,0,,,,0
+minneapolis,MN,,0,,,,0
+minnetonka,MN,,0,,,,0
+miramar,FL,,0,,,,0
+missoula,MT,,0,,,,0
+missouri city,TX,,0,,,,0
+mobile,AL,,0,,,,0
+monterey park,CA,,0,,,,0
+montgomery,AL,,0,,,,0
+mount prospect,IL,,0,,,,0
+mount vernon,NY,,0,,,,0
+muncie,IN,,0,,,,0
+murfreesboro,TN,,0,,,,0
+nampa,ID,,0,,,,0
+napa,CA,,0,,,,0
+nashua,NH,,0,,,,0
+nashville-davidson county,TN,,0,,,,0
+national city,CA,,0,,,,0
+new bedford,MA,,0,,,,0
+new britain,CT,,0,,,,0
+new haven,CT,,0,,,,0
+new orleans,LA,,0,,,,0
+new rochelle,NY,,0,,,,0
+new york,NY,,0,,,,0
+newark,NJ,,0,,,,0
+newport news,VA,,0,,,,0
+newton,MA,,0,,,,0
+norfolk,VA,,0,,,,0
+norman,OK,,0,,,,0
+north charleston,SC,,0,,,,0
+north las vegas,NV,,0,,,,0
+north miami,FL,,0,,,,0
+norwalk,CT,,0,,,,0
+novi,MI,,0,,,,0
+oak lawn,IL,,0,,,,0
+oak park,IL,,0,,,,0
+oakland,CA,,0,,,,0
+oceanside,CA,,0,,,,0
+odessa,TX,,0,,,,0
+ogden,UT,,0,,,,0
+oklahoma city,OK,,0,,,,0
+olathe,KS,,0,,,,0
+olympia,WA,,0,,,,0
+ontario,CA,,0,,,,0
+orange,CA,,0,,,,0
+orem,UT,,0,,,,0
+orland park,IL,,0,,,,0
+oshkosh,WI,,0,,,,0
+overland park,KS,,0,,,,0
+oxnard,CA,,0,,,,0
+palatine,IL,,0,,,,0
+palm bay,FL,,0,,,,0
+palmdale,CA,,0,,,,0
+parma,OH,,0,,,,0
+pasadena,TX,,0,,,,0
+passaic,NJ,,0,,,,0
+paterson,NJ,,0,,,,0
+pawtucket,RI,,0,,,,0
+pearland,TX,,0,,,,0
+pembroke pines,FL,,0,,,,0
+pensacola,FL,,0,,,,0
+peoria,AZ,,0,,,,0
+peoria,IL,,0,,,,0
+perris,CA,,0,,,,0
+perth amboy,NJ,,0,,,,0
+petaluma,CA,,0,,,,0
+pharr,TX,,0,,,,0
+philadelphia,PA,,0,,,,0
+phoenix,AZ,,0,,,,0
+pico rivera,CA,,0,,,,0
+pinellas park,FL,,0,,,,0
+pittsburgh,PA,,0,,,,0
+plainfield,NJ,,0,,,,0
+plano,TX,,0,,,,0
+plantation,FL,,0,,,,0
+pleasanton,CA,,0,,,,0
+plymouth,MN,,0,,,,0
+pocatello,ID,,0,,,,0
+pomona,CA,,0,,,,0
+pompano beach,FL,,0,,,,0
+pontiac,MI,,0,,,,0
+port st. lucie,FL,,0,,,,0
+portland,OR,,0,,,,0
+portland,ME,,0,,,,0
+portsmouth,VA,,0,,,,0
+providence,RI,,0,,,,0
+pueblo,CO,,0,,,,0
+quincy,MA,,0,,,,0
+racine,WI,,0,,,,0
+raleigh,NC,,0,,,,0
+rancho cucamonga,CA,,0,,,,0
+rapid city,SD,,0,,,,0
+reading,PA,,0,,,,0
+redmond,WA,,0,,,,0
+redondo beach,CA,,0,,,,0
+reno,NV,,0,,,,0
+renton,WA,,0,,,,0
+rialto,CA,,0,,,,0
+richardson,TX,,0,,,,0
+richmond,VA,,0,,,,0
+richmond,CA,,0,,,,0
+rio rancho,NM,,0,,,,0
+roanoke,VA,,0,,,,0
+rochester,NY,,0,,,,0
+rochester hills,MI,,0,,,,0
+rockford,IL,,0,,,,0
+rockville,MD,,0,,,,0
+rogers,AR,,0,,,,0
+roswell,GA,,0,,,,0
+round rock,TX,,0,,,,0
+royal oak,MI,,0,,,,0
+salem,OR,,0,,,,0
+salinas,CA,,0,,,,0
+salt lake city,UT,,0,,,,0
+san angelo,TX,,0,,,,0
+san bernardino,CA,,0,,,,0
+san diego,CA,,0,,,,0
+san jose,CA,,0,,,,0
+san leandro,CA,,0,,,,0
+san marcos,CA,,0,,,,0
+san rafael,CA,,0,,,,0
+san ramon,CA,,0,,,,0
+sandy,UT,,0,,,,0
+santa ana,CA,,0,,,,0
+santa barbara,CA,,0,,,,0
+santa fe,NM,,0,,,,0
+santa maria,CA,,0,,,,0
+santee,CA,,0,,,,0
+savannah,GA,,0,,,,0
+schaumburg,IL,,0,,,,0
+schenectady,NY,,0,,,,0
+scottsdale,AZ,,0,,,,0
+scranton,PA,,0,,,,0
+shawnee,KS,,0,,,,0
+shreveport,LA,,0,,,,0
+simi valley,CA,,0,,,,0
+sioux city,IA,,0,,,,0
+sioux falls,SD,,0,,,,0
+skokie,IL,,0,,,,0
+smyrna,GA,,0,,,,0
+somerville,MA,,0,,,,0
+south bend,IN,,0,,,,0
+southfield,MI,,0,,,,0
+sparks,NV,,0,,,,0
+spokane,WA,,0,,,,0
+springfield,MA,,0,,,,0
+springfield,OH,,0,,,,0
+st. charles,MO,,0,,,,0
+st. clair shores,MI,,0,,,,0
+st. cloud,MN,,0,,,,0
+st. joseph,MO,,0,,,,0
+st. louis,MO,,0,,,,0
+st. louis park,MN,,0,,,,0
+st. paul,MN,,0,,,,0
+st. peters,MO,,0,,,,0
+st. petersburg,FL,,0,,,,0
+stamford,CT,,0,,,,0
+sterling heights,MI,,0,,,,0
+stockton,CA,,0,,,,0
+suffolk,VA,,0,,,,0
+sunnyvale,CA,,0,,,,0
+sunrise,FL,,0,,,,0
+surprise,AZ,,0,,,,0
+syracuse,NY,,0,,,,0
+tamarac,FL,,0,,,,0
+tampa,FL,,0,,,,0
+taylor,MI,,0,,,,0
+taylorsville,UT,,0,,,,0
+tempe,AZ,,0,,,,0
+temple,TX,,0,,,,0
+terre haute,IN,,0,,,,0
+thornton,CO,,0,,,,0
+tinley park,IL,,0,,,,0
+toledo,OH,,0,,,,0
+topeka,KS,,0,,,,0
+torrance,CA,,0,,,,0
+tracy,CA,,0,,,,0
+trenton,NJ,,0,,,,0
+troy,MI,,0,,,,0
+troy,NY,,0,,,,0
+tucson,AZ,,0,,,,0
+tulsa,OK,,0,,,,0
+tuscaloosa,AL,,0,,,,0
+tyler,TX,,0,,,,0
+union city,CA,,0,,,,0
+upland,CA,,0,,,,0
+utica,NY,,0,,,,0
+vacaville,CA,,0,,,,0
+vallejo,CA,,0,,,,0
+vancouver,WA,,0,,,,0
+virginia beach,VA,,0,,,,0
+vista,CA,,0,,,,0
+waco,TX,,0,,,,0
+waltham,MA,,0,,,,0
+warren,MI,,0,,,,0
+warwick,RI,,0,,,,0
+washington,DC,,0,,,,0
+waterbury,CT,,0,,,,0
+waterloo,IA,,0,,,,0
+waukegan,IL,,0,,,,0
+waukesha,WI,,0,,,,0
+west des moines,IA,,0,,,,0
+west haven,CT,,0,,,,0
+west jordan,UT,,0,,,,0
+west palm beach,FL,,0,,,,0
+west sacramento,CA,,0,,,,0
+west valley city,UT,,0,,,,0
+westland,MI,,0,,,,0
+westminster,CA,,0,,,,0
+westminster,CO,,0,,,,0
+wheaton,IL,,0,,,,0
+white plains,NY,,0,,,,0
+whittier,CA,,0,,,,0
+wichita,KS,,0,,,,0
+wilmington,DE,,0,,,,0
+wilmington,NC,,0,,,,0
+winston-salem,NC,,0,,,,0
+woodbury,MN,,0,,,,0
+woodland,CA,,0,,,,0
+worcester,MA,,0,,,,0
+wyoming,MI,,0,,,,0
+yakima,WA,,0,,,,0
+yonkers,NY,,0,,,,0
+youngstown,OH,,0,,,,0
+yuma,AZ,,0,,,,0

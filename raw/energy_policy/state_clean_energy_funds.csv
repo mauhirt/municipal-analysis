@@ -1,0 +1,51 @@
+state_abb,state_name,state_has_green_bank,state_green_bank_year,state_green_bank_name,state_has_resilience_fund,state_has_energy_efficiency_program,state_has_clean_energy_standard,state_has_rps,state_eers_target,state_eers_has,notes
+AL,Alabama,1,2025,Alabama Energy Infrastructure Bank,0,0,0,0,,0,Green bank established 2025
+AK,Alaska,1,2024,Alaska Sustainable Energy Corporation,0,0,0,0,,0,Green bank 2024; voluntary energy goal only
+AZ,Arizona,0,,,,1,0,1,1.3,1,RPS 15% by 2025; EERS 1.3% annual
+AR,Arkansas,0,,,,1,0,0,1.2,1,EERS 1.2% electric 0.5% gas
+CA,California,1,2020,California IBank Clean Energy,1,1,1,1,1.6,1,CES 100% clean by 2045; $3.7B Climate Resilience Package; EERS ~1.6%
+CO,Colorado,1,2018,Colorado Clean Energy Fund,0,1,1,1,1.7,1,CES 100% by 2050; 80% by 2030; EERS 1.7%
+CT,Connecticut,1,2011,Connecticut Green Bank,0,1,1,1,,1,First state green bank; CES 100% by 2040; EERS varies
+DE,Delaware,1,2007,Energize Delaware,0,1,0,1,0.7,0,RPS 25% by 2026; voluntary EERS 0.7%
+FL,Florida,0,,,,1,0,0,0,,"0,No RPS or CES; limited EE programs"
+GA,Georgia,0,,,,0,0,0,0,,"0,No RPS CES or EERS"
+HI,Hawaii,1,2013,Hawaii Green Infrastructure Authority,0,1,0,1,1.4,1,RPS 100% by 2045; EERS 1.4%
+ID,Idaho,0,,,,0,0,0,0,,"0,No RPS CES or mandatory EERS"
+IL,Illinois,1,2021,Illinois Climate Bank,0,1,1,1,2.0,1,CES 100% zero-carbon by 2045; EERS 1.77-2.08%
+IN,Indiana,1,2023,Indiana Energy Independence Fund,0,0,0,0,,0,Green bank 2023; voluntary clean energy goal expired
+IA,Iowa,1,2024,Iowa Energy Fund,0,1,0,1,0.89,1,RPS 105 MW (met); EERS 0.89%
+KS,Kansas,0,,,,0,0,0,0,,"0,No RPS CES or EERS"
+KY,Kentucky,1,2009,Green Bank of Kentucky,0,0,0,0,,0,Green bank 2009; no RPS CES or EERS
+LA,Louisiana,1,2023,Louisiana Clean Energy Fund,0,0,0,0,,0,Green bank 2023; most improved ACEEE 2025
+ME,Maine,1,2021,Efficiency Maine Green Bank,1,1,0,1,2.3,1,RPS 80% by 2030; EERS 2.3%; resilience fund 2025
+MD,Maryland,1,2008,Maryland Clean Energy Center,0,1,1,1,2.0,1,CES tied to climate goals; RPS 50% by 2030; EERS 2.0%
+MA,Massachusetts,1,2023,Massachusetts Community Climate Bank,0,1,1,1,2.7,1,CES via emissions limits; strongest EERS ~2.7%
+MI,Michigan,1,2009,Michigan Saves,0,1,1,1,1.0,1,CES 100% clean by 2040; EERS 1.0% electric 0.75% gas
+MN,Minnesota,1,2023,Minnesota Climate Innovation Finance Authority,0,1,1,1,1.75,1,CES 100% clean by 2040; 55% renewable by 2035; EERS 1.75%
+MS,Mississippi,0,,,,0,0,0,0,,"0,No RPS CES EERS or green bank"
+MO,Missouri,1,2010,Missouri Clean Energy District,0,0,0,1,,0,RPS 15% by 2021; voluntary EERS up to 1.7%
+MT,Montana,0,,,,0,0,0,1,,"0,RPS 15% by 2015 (met)"
+NE,Nebraska,0,,,,0,0,0,0,,"0,No RPS CES EERS or green bank"
+NV,Nevada,1,2017,Nevada Clean Energy Fund,0,1,1,1,,1,CES 100% carbon-free by 2050; RPS 50% by 2030
+NH,New Hampshire,1,1983,New Hampshire Clean Energy Fund,0,1,0,1,1.05,1,RPS 25.2% by 2025; EERS 0.8-1.3%
+NJ,New Jersey,1,2024,New Jersey Green Bank,0,1,1,1,2.0,1,CES 100% clean by 2035; EERS 2.0%
+NM,New Mexico,1,2023,New Mexico Climate Investment Center,0,1,1,1,5.0,1,CES 100% zero-carbon by 2045 (IOUs); EERS 5-8%
+NY,New York,1,2013,NY Green Bank,1,1,1,1,3.0,1,CES 100% carbon-free by 2040; largest green bank; EERS 3.0%; $75B climate superfund
+NC,North Carolina,0,,,,1,1,0,1,,"1,Clean energy target 70% CO2 reduction by 2030; carbon neutral 2050; EERS capped"
+ND,North Dakota,0,,,,0,0,0,0,,"0,Voluntary 10% goal by 2015 (expired)"
+OH,Ohio,0,,,,0,0,0,1,,"0,RPS 8.5% by 2026; EERS terminated 2020"
+OK,Oklahoma,0,,,,0,0,0,0,,"0,No RPS CES or EERS; voluntary goal expired"
+OR,Oregon,0,,,,1,1,1,1,1.3,"1,CES 100% clean by 2040; EERS 1.3%"
+PA,Pennsylvania,0,,,,1,0,1,0.8,1,RPS/AEPS 18% by 2021; EERS 0.8%
+RI,Rhode Island,1,1989,Rhode Island Infrastructure Bank,1,1,0,1,2.5,1,RPS 100% by 2033; EERS 2.5%; OSCAR resilience fund
+SC,South Carolina,0,,,,0,0,0,0,,"0,No RPS CES or mandatory EERS"
+SD,South Dakota,0,,,,0,0,0,0,,"0,Voluntary 10% goal by 2015 (expired)"
+TN,Tennessee,0,,,,0,0,0,0,,"0,No RPS CES or EERS"
+TX,Texas,0,,,,1,0,0,0.4,1,RPS 10GW by 2025 (exceeded); EERS 0.4% of peak demand
+UT,Utah,0,,,,1,0,0,,1,Voluntary 20% by 2025; uncapped EERS
+VT,Vermont,0,,,,1,1,0,1,2.4,"1,RPS 75% by 2032; EERS 2.4%; climate superfund law 2024"
+VA,Virginia,1,2024,Virginia Clean Energy Innovation Bank,1,1,1,1,1.2,1,CES via VCEA 100% by 2045-2050; EERS 1.2%; Community Flood Preparedness Fund
+WA,Washington,1,2024,Washington State Green Bank,0,1,1,1,0.9,1,CES 100% clean by 2045; EERS 0.9%
+WV,West Virginia,0,,,,0,0,0,0,,"0,RPS repealed 2015; no CES or EERS"
+WI,Wisconsin,1,2024,Green Innovation Fund,0,1,1,1,0.5,1,CES 100% carbon-free by 2050; EERS 0.5% net
+WY,Wyoming,0,,,,0,0,0,0,,"0,No RPS CES or EERS"
