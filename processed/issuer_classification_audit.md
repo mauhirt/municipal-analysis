@@ -10,10 +10,10 @@ against the MSRB's official `Issuer Type` in `All_US_Municipal_Bond_Issuers.csv`
 
 | Comparison outcome | Count |
 |---|---|
-| AGREES | 371 |
+| AGREES | 372 |
 | AGREES_ALTERNATE_ENTRY | 215 |
 | PLAUSIBLE_MSRB_USES_PARENT | 67 |
-| DISCREPANCY | 22 |
+| DISCREPANCY | 21 |
 | UNABLE_TO_COMPARE | 285 |
 
 **Interpretation of categories:**
@@ -30,13 +30,13 @@ For the 675 issuers with reliable MSRB matches:
 
 | Your_Jurisdiction    |   City |   County |   Other |   State |   All |
 |:---------------------|-------:|---------:|--------:|--------:|------:|
-| CITY                 |    173 |       10 |      22 |       9 |   214 |
+| CITY                 |    174 |       10 |      22 |       9 |   215 |
 | COUNTY               |     20 |       25 |      12 |       0 |    57 |
 | MULTI_JURISDICTIONAL |     43 |        5 |      19 |      14 |    81 |
 | OTHER                |      1 |        0 |       0 |       0 |     1 |
 | SCHOOL_DISTRICT      |     57 |        7 |      39 |      11 |   114 |
 | SPECIAL_DISTRICT     |     35 |        8 |      22 |       5 |    70 |
-| STATE                |     16 |        1 |      28 |      93 |   138 |
+| STATE                |     15 |        1 |      28 |      93 |   137 |
 | All                  |    345 |       56 |     142 |     132 |   675 |
 
 ## Match quality distribution
@@ -71,18 +71,9 @@ MSRB classifies DC as "State". Your classification as CITY is a reasonable alter
 
 You classified state-created authorities (financing authorities, development corporations, public universities) as STATE. MSRB frequently classifies these as "Other" (e.g., MTA, NJ Infrastructure Bank, state universities). Both approaches have merit: yours reflects the controlling jurisdiction, MSRB's reflects that these are not the state government itself.
 
-## Discrepancies requiring review (22 issuers)
+## Discrepancies requiring review (21 issuers)
 
 These are cases where your classification and the MSRB classification clearly disagree, and no alternate MSRB entry has a matching type.
-
-### District of Columbia [DC]
-
-- **Your classification:** CITY (Direct government)
-- **MSRB best match:** DISTRICT OF COLUMBIA
-- **MSRB type:** State
-- **Match score:** 100 (HIGH)
-- **MSRB type distribution across matches:** {'State': 1, 'Other': 14}
-- **Analysis:** DC is a unique jurisdiction — it functions as both a city and a state. MSRB classifies it as State; your classification as CITY reflects its municipal government role. Definitional difference, not an error.
 
 ### Parish of Terrebonne LA Sales & Use Tax Revenue [LA]
 
@@ -111,15 +102,6 @@ These are cases where your classification and the MSRB classification clearly di
 - **MSRB type distribution across matches:** {'Other': 2}
 - **Analysis:** MSRB classifies this city entity's bond programs as Other (typically used for revenue bonds). Your CITY classification reflects the actual governmental jurisdiction. The MSRB category may reflect the bond type rather than the issuer type.
 
-### Indianapolis Local Public Improvement Bond Bank [IN]
-
-- **Your classification:** STATE (Bond bank)
-- **MSRB best match:** INDIANAPOLIS LOCAL PUBLIC IMPROVEMENT BOND BANK
-- **MSRB type:** City
-- **Match score:** 100 (HIGH)
-- **MSRB type distribution across matches:** {'City': 8, 'County': 1, 'Other': 1}
-- **Analysis:** MSRB has classified this entity under City, which may reflect local rather than state control. Your STATE classification assigns it to the controlling state. Review whether this entity truly operates at the state level.
-
 ### District of Columbia Water & Sewer Authority [DC]
 
 - **Your classification:** CITY (Authority/Agency)
@@ -127,6 +109,15 @@ These are cases where your classification and the MSRB classification clearly di
 - **MSRB type:** State
 - **Match score:** 100 (HIGH)
 - **MSRB type distribution across matches:** {'State': 1, 'Other': 12}
+- **Analysis:** DC is a unique jurisdiction — it functions as both a city and a state. MSRB classifies it as State; your classification as CITY reflects its municipal government role. Definitional difference, not an error.
+
+### District of Columbia [DC]
+
+- **Your classification:** CITY (Direct government)
+- **MSRB best match:** DISTRICT OF COLUMBIA
+- **MSRB type:** State
+- **Match score:** 100 (HIGH)
+- **MSRB type distribution across matches:** {'State': 1, 'Other': 14}
 - **Analysis:** DC is a unique jurisdiction — it functions as both a city and a state. MSRB classifies it as State; your classification as CITY reflects its municipal government role. Definitional difference, not an error.
 
 ### Warm Springs Reservation Confederated Tribe [OR]
@@ -569,7 +560,7 @@ The best MSRB match had a different type, but another high-scoring MSRB entry fo
 | Washington State University | WA | STATE | City | FB WASHINGTON TR | 86 |
 | Western Washington University | WA | STATE | City | FB WASHINGTON TR | 86 |
 
-## Direct agreement (371 issuers)
+## Direct agreement (372 issuers)
 
 Your classification directly matches the MSRB best match type.
 
@@ -658,6 +649,7 @@ Your classification directly matches the MSRB best match type.
 | City of Mishawaka IN Sewage Works Revenue | IN | CITY | City | CITY OF ANDERSON, IN  | 86 |
 | City of Mishawaka IN Waterworks Revenue | IN | CITY | City | CITY OF ANDERSON, IN  | 86 |
 | City of West Lafayette IN Sewer Revenue | IN | CITY | City | WEST LAFAYETTE IND | 88 |
+| Indianapolis Local Public Improvement Bond Bank | IN | CITY | City | INDIANAPOLIS LOCAL PUBLIC IMPROVEMENT BOND BANK | 100 |
 | Town of Schererville IN Sewage Works Revenue | IN | CITY | City | SCHERERVILLE IND | 86 |
 | City of Fredonia KS | KS | CITY | City | CITY OF LAWRENCE, KS WATER AND SEWER | 86 |
 | City of Girard KS | KS | CITY | City | CITY OF LAWRENCE, KS WATER AND SEWER | 86 |
