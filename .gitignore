@@ -1,6 +1,11 @@
 # Processed panel (large file)
 processed/panel/panel.pkl
 
+# EMMA bond prospectus downloads (large binary PDFs; reproducible via
+# pipeline/02_download_emma_prospectuses.py).
+raw/bloomberg/prospectuses/pdfs/
+raw/bloomberg/prospectuses/fetch_log.jsonl
+
 # Python
 __pycache__/
 *.pyc
