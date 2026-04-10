@@ -276,13 +276,13 @@ The lag logic does a proper **cross-year merge**: `{var}_lag1` at outcome year Y
 
 **Variables NOT extended** (`mayors_climate_signatory`, `iclei_member`, `climate_commitment_score`): still limited to 2013-2023 raw coverage because those sources require scraping Wayback Machine / manual compilation not yet done. If you need these at the right tail, contact ICLEI USA / GCoM directly or scrape archived pages.
 
-**Anti-ESG laws** (`esg_*`). Raw ends at **2023**.
+**Anti-ESG laws** (`esg_*`). Source: `raw/political/esg_legislation_panel.csv` (state-year, **2010–2025**, replaces the older 2013–2023 file). Broadcast to city-year via state_abbrev→state_abb merge on the crosswalk.
 
 | Outcome year | 2013 | 2014 | 2015 | 2016 | 2017 | 2018 | 2019 | 2020 | 2021 | 2022 | 2023 | 2024 | 2025 |
 |---|---|---|---|---|---|---|---|---|---|---|---|---|---|
-| contemp | 511 | 471 | 476 | 478 | 557 | 485 | 510 | 516 | 517 | 570 | 518 | 0 | 0 |
-| lag1 | 0 | 511 | 471 | 476 | 478 | 557 | 485 | 510 | 516 | 517 | 570 | 518 | 0 |
-| **lag2** | 0 | 0 | 511 | 471 | 476 | 478 | 557 | 485 | 510 | 516 | 517 | 570 | **518** |
+| contemp | **578** | **578** | **578** | **578** | **578** | **578** | **578** | **578** | **578** | **578** | **578** | **578** | **578** |
+| **lag1** | **578** | **578** | **578** | **578** | **578** | **578** | **578** | **578** | **578** | **578** | **578** | **578** | **578** |
+| **lag2** | **578** | **578** | **578** | **578** | **578** | **578** | **578** | **578** | **578** | **578** | **578** | **578** | **578** |
 
 **Federal grants** (IIJA/IRA/EECBG/GGRF/FEMA resilience). Raw ends at **2025** — contemporaneous and all lags available throughout.
 

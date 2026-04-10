@@ -191,12 +191,33 @@ cpol_cols = [c for c in cpol_cols if c in cpol.columns]
 panel = attach(panel, cpol, "fips7", "year", cpol_cols, "cpol")
 
 # ---------------------------------------------------------------------------
-# 6. Anti-ESG laws (2013-2023)
+# 6. ESG legislation panel (2010-2025, state-year).
+#    The newer esg_legislation_panel.csv (state-year, 2010-2025) supersedes
+#    the older antiesg_laws.csv (city-year broadcast, 2013-2023). We
+#    broadcast state-year values to city-year via the crosswalk state_abb
+#    and prefix all variable columns with "esg_" to match the prior naming.
 # ---------------------------------------------------------------------------
-print("\n[6/10] Loading anti-esg laws...")
-esg = pd.read_csv(RAW / "political" / "antiesg_laws.csv")
-esg_cols = [c for c in esg.columns if c.startswith("esg_")]
-panel = attach(panel, esg, "fips7", "year", esg_cols, "antiesg")
+print("\n[6/10] Loading ESG legislation panel...")
+esg_path_new = RAW / "political" / "esg_legislation_panel.csv"
+if esg_path_new.exists():
+    esg_state = pd.read_csv(esg_path_new)
+    # Broadcast state-year to city-year via the crosswalk
+    cw = crosswalk[["fips7", "state_abb"]].rename(columns={"fips7": "city_fips7"})
+    esg_city = esg_state.merge(cw, left_on="state_abbrev", right_on="state_abb", how="left")
+    esg_city = esg_city[esg_city["city_fips7"].notna()].copy()
+    esg_city["city_fips7"] = esg_city["city_fips7"].astype(int)
+    # Prefix variable columns with esg_ to match previous naming convention
+    var_cols = [c for c in esg_state.columns
+                if c not in ("state", "state_abbrev", "fips", "year")]
+    rename_map = {c: f"esg_{c}" for c in var_cols}
+    esg_city = esg_city.rename(columns=rename_map)
+    esg_cols = list(rename_map.values())
+    print(f"  Broadcast to {esg_city['city_fips7'].nunique()} cities across {esg_state['year'].min()}-{esg_state['year'].max()}")
+    panel = attach(panel, esg_city, "city_fips7", "year", esg_cols, "antiesg")
+else:
+    esg = pd.read_csv(RAW / "political" / "antiesg_laws.csv")
+    esg_cols = [c for c in esg.columns if c.startswith("esg_")]
+    panel = attach(panel, esg, "fips7", "year", esg_cols, "antiesg")
 
 # ---------------------------------------------------------------------------
 # 7. Political state (2013-2023)
