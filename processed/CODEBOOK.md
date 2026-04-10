@@ -184,6 +184,98 @@ West Virginia and Vermont have no cities in the 578-city crosswalk. They appear 
 
 ---
 
+## 4a. Merged city-year panel with all independent variables
+
+### `merged_city_year_panel.{csv,xlsx}` ⭐ main analysis file
+
+**Script:** `pipeline/15_build_merged_city_year_panel.py`
+
+**Shape:** 7,514 rows × 1,590 columns. Same `FIPS × Year` key.
+
+**Contents:**
+- Identifiers (FIPS, City, City_Name, State, Year)
+- The **outcome panel** (Green_Bond_Issued + 552 Issued/Amt/Count pivots)
+- The **green bond controls** (State_Total, State_Govt, State_Total_Ex_City, State_Govt_Ex_City, City_Own, Nearby_* at 10/25/50 km)
+- **Fiscal + TEL** (from `fiscal_tel_merged_2007_2024.csv`, 54 vars) with **lag1 and lag2 computed from pre-2013 data** (2011/2012) — so 2013 outcome rows have legitimate lags, not NaN.
+- **Census additional city variables** (20 vars including state political control, YCOM climate opinion subset, presidential vote shares)
+- **YCOM climate opinion** (24 vars, `ycom_*` prefix)
+- **Climate policy controls** (10 vars: C40 membership, muni yield, RPS, carbon pricing)
+- **Anti-ESG laws** (28 vars, `esg_*` prefix)
+- **Other state political** (non-overlapping vars)
+- **Federal grants** (IIJA/IRA/EECBG/GGRF/FEMA resilience, 24 base vars)
+- **NRI hazard risk** (432 vars, `nri_*` prefix, time-invariant — merged once)
+
+All time-varying vars have `{var}`, `{var}_lag1`, and `{var}_lag2` triples.
+
+### Lag strategy (Option B — predetermined controls)
+
+For each variable, the lag is computed from the **raw data frame** (which may extend back to 2007 for fiscal, 2010 for census) before filtering to the 2013–2025 outcome window. This means:
+
+| Outcome year | `fiscal` lag-1 source | `fiscal` lag-2 source |
+|---|---|---|
+| 2013 | 2012 (real) | 2011 (real) |
+| 2014 | 2013 (real) | 2012 (real) |
+| … | … | … |
+| 2024 | 2023 (real) | 2022 (real) |
+| 2025 | 2024 (real, carried from 2024) | 2023 (real) |
+
+No outcome years are dropped because of missing lags.
+
+### Carry-forward flags
+
+For control groups whose last year is earlier than 2025, the last observed year is **carried forward** to fill the gap. A boolean flag `__<group>_carry_forward` marks rows where the contemporaneous value is a carry-forward, so you can drop or weight those rows in robustness checks.
+
+| Group | Data end year | Carry-forward years | Flag | Rows flagged |
+|---|---|---|---|---|
+| Fiscal (incl. TEL) | 2024 | 2025 | `__fiscal_carry_forward` | 578 |
+| Census additional | 2024 | 2025 | `__census_add_carry_forward` | 576 |
+| YCOM climate opinion | 2023 | 2024, 2025 | `__ycom_carry_forward` | 1,034 |
+| Climate policy | 2023 | 2024, 2025 | `__cpol_carry_forward` | 1,034 |
+| Anti-ESG laws | 2023 | 2024, 2025 | `__antiesg_carry_forward` | 1,036 |
+| Other state political | 2023 | 2024, 2025 | `__pol_state_carry_forward` | 1,044 |
+| Federal grants | 2025 | — | `__fed_grants_carry_forward` | 0 |
+
+**Important:** The flag applies only to the **contemporaneous** value. The lag-1 and lag-2 columns in carry-forward years are themselves lagged values of the last-observed year — so `esg_num_antiesg_laws` at Y=2025 equals the 2023 value (carried forward), and `esg_num_antiesg_laws_lag1` at Y=2025 equals the 2024 value (which is also the 2023 value carried forward). For robustness, you can restrict to rows where the relevant carry-forward flag is 0.
+
+### Variable availability summary
+
+| Data group | Last real year | Ever pre-2013? | Lag1 real for 2013? | Contemporary available for 2025? |
+|---|---|---|---|---|
+| Fiscal + TEL (1,022 cols in raw, 54 used) | 2024 | ✅ 2007 | ✅ | Carried from 2024 |
+| Census additional | 2024 | ✅ 2010 | ✅ | Carried from 2024 |
+| YCOM climate opinion | 2023 | ❌ | 2013 itself (no lag) | Carried from 2023 |
+| Climate policy controls | 2023 | ❌ | 2013 itself | Carried from 2023 |
+| Anti-ESG laws | 2023 | ❌ | 2013 itself (all zeros pre-2022) | Carried from 2023 |
+| Presidential vote shares (in census additional) | 2024 | ✅ 2010 | ✅ | Carried from 2024 |
+| Federal grants | 2025 | ❌ | 2013 itself | ✅ native |
+| NRI hazards | — (time-invariant) | — | — | — |
+| Green bond outcomes | 2025 | — | — | ✅ native |
+| Green bond nearby/state controls (built) | 2025 | — | — | ✅ native |
+
+### Usage
+
+```python
+import pandas as pd
+panel = pd.read_csv("processed/merged_city_year_panel.csv", low_memory=False)
+# 7,514 rows x 1,590 cols, covering 578 cities x 13 years (2013-2025)
+
+# Regression with t-1 lagged predetermined controls
+import statsmodels.formula.api as smf
+model = smf.logit(
+    "Green_Bond_Issued ~ "
+    "fiscal_stress_pca_lag1 + debt_to_revenue_lag1 + "
+    "pres_dem_two_party_share_lag1 + esg_num_antiesg_laws_lag1 + "
+    "State_Total_Ex_City_Amt_Cumul + "
+    "Nearby_NonState_Total_Amt_25km_Cumul",
+    data=panel,
+).fit()
+
+# Robustness: drop rows where critical controls are carried forward
+clean = panel[(panel["__fiscal_carry_forward"]==0) & (panel["__antiesg_carry_forward"]==0)]
+```
+
+---
+
 ## 5. Pipeline scripts (in `pipeline/`)
 
 | Script | Purpose |
