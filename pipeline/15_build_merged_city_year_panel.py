@@ -168,10 +168,19 @@ climate_cols = [f"ycom_{c}" for c in climate_cols]
 panel = attach(panel, climate, "fips7", "year", climate_cols, "ycom")
 
 # ---------------------------------------------------------------------------
-# 5. Climate policy controls (2013-2023)
+# 5. Climate policy controls (extended to 2007-2025)
+#    Prefers processed/climate_policy_controls_extended.csv if present
+#    (built by pipeline/16_extend_climate_policy_controls.py), otherwise
+#    falls back to the original raw file (2013-2023).
 # ---------------------------------------------------------------------------
 print("\n[5/10] Loading climate_policy_controls...")
-cpol = pd.read_csv(RAW / "climate" / "climate_policy_controls.csv")
+ext_path = PROC / "climate_policy_controls_extended.csv"
+if ext_path.exists():
+    cpol = pd.read_csv(ext_path)
+    print(f"  Using extended file (2007-2025): {cpol.shape}")
+else:
+    cpol = pd.read_csv(RAW / "climate" / "climate_policy_controls.csv")
+    print(f"  Using original raw file (2013-2023): {cpol.shape}")
 cpol_cols = [
     "muni_aaa_yield", "c40_member", "mayors_climate_signatory",
     "iclei_member", "climate_commitment_score",
@@ -264,10 +273,8 @@ panel = panel.sort_values(["State", "City", "Year"]).reset_index(drop=True)
 
 PROC.mkdir(parents=True, exist_ok=True)
 panel.to_csv(PROC / "merged_city_year_panel.csv", index=False)
-# XLSX has a 16,384 column limit. Our panel should be well below that but
-# the file may be huge; skip xlsx if wider than 10,000 cols to save time.
-if panel.shape[1] < 10000:
-    panel.to_excel(PROC / "merged_city_year_panel.xlsx", index=False)
+# XLSX is skipped when the panel is very wide — pandas needs a lot of memory
+# to write ~1600 columns to XLSX. The CSV is the canonical output.
 
 # Save an availability report
 print("\n=== Non-null counts per column (sample) ===")

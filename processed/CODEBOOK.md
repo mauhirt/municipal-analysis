@@ -266,13 +266,15 @@ The lag logic does a proper **cross-year merge**: `{var}_lag1` at outcome year Y
 | lag1 | 0 | 0 | 470 | 475 | 477 | 556 | 484 | 509 | 515 | 516 | 569 | 517 | 0 |
 | **lag2** | 0 | 0 | 0 | 470 | 475 | 477 | 556 | 484 | 509 | 515 | 516 | 569 | **517** |
 
-**Climate policy controls** (`c40_member`, `mayors_climate_signatory`, `muni_aaa_yield`, state RPS/carbon). Raw ends at **2023**; some vars start at 2013, others at 2014.
+**Climate policy controls — EXTENDED to 2007-2025** (`c40_member`, `muni_aaa_yield`, `state_rps_active`, `state_rps_target_pct`, `state_carbon_pricing`, `state_carbon_price`, `state_climate_plan`). See `pipeline/16_extend_climate_policy_controls.py` for source notes.
 
 | Outcome year | 2013 | 2014 | 2015 | 2016 | 2017 | 2018 | 2019 | 2020 | 2021 | 2022 | 2023 | 2024 | 2025 |
 |---|---|---|---|---|---|---|---|---|---|---|---|---|---|
-| contemp | 510 | 470 | 475 | 477 | 556 | 484 | 509 | 515 | 516 | 569 | 517 | 0 | 0 |
-| lag1 | 0 | 510 | 470 | 475 | 477 | 556 | 484 | 509 | 515 | 516 | 569 | 517 | 0 |
-| **lag2** | 0 | 0 | 510 | 470 | 475 | 477 | 556 | 484 | 509 | 515 | 516 | 569 | **517** |
+| contemp | **578** | **578** | **578** | **578** | **578** | **578** | **578** | **578** | **578** | **578** | **578** | **578** | **578** |
+| **lag1** | **578** | **578** | **578** | **578** | **578** | **578** | **578** | **578** | **578** | **578** | **578** | **578** | **578** |
+| **lag2** | **578** | **578** | **578** | **578** | **578** | **578** | **578** | **578** | **578** | **578** | **578** | **578** | **578** |
+
+**Variables NOT extended** (`mayors_climate_signatory`, `iclei_member`, `climate_commitment_score`): still limited to 2013-2023 raw coverage because those sources require scraping Wayback Machine / manual compilation not yet done. If you need these at the right tail, contact ICLEI USA / GCoM directly or scrape archived pages.
 
 **Anti-ESG laws** (`esg_*`). Raw ends at **2023**.
 
@@ -348,6 +350,47 @@ model = smf.logit(
     data=panel,
 ).fit()
 ```
+
+---
+
+## 4b. Extended climate policy controls
+
+### `processed/climate_policy_controls_extended.csv`
+
+**Script:** `pipeline/16_extend_climate_policy_controls.py`
+
+**Purpose:** The original `raw/climate/climate_policy_controls.csv` only
+covered 2013–2023. This extension adds 2007–2012 (for pre-sample lags)
+and 2024–2025 (for contemporaneous and lag1 at the right tail), producing
+a 10,982-row panel (578 cities × 19 years).
+
+**Variables extended:**
+
+| Variable | Public source | Coverage |
+|---|---|---|
+| `muni_aaa_yield` | Annual averages of S&P Municipal 10Y AAA / Bond Buyer 20-Bond GO Index from FRED, SIFMA, Bond Buyer, Raymond James, Eaton Vance market reports | 2007–2025 |
+| `c40_member` | C40.org membership documents, Wikipedia, Clinton Climate Initiative history | 2007–2025 for all US cities in the 578-city panel that are/were C40 members |
+| `state_rps_active` | LBNL Berkeley Lab 2024 RPS Status Update, DSIRE, Wikipedia state RPS timelines | 2007–2025 |
+| `state_rps_target_pct` | Same as above; nominal final target % in law at each year | 2007–2025 |
+| `state_carbon_pricing` | RGGI member history (rggi.org), California cap-and-trade (CARB, 2013+), Washington cap-and-invest (2023+) | 2007–2025 |
+| `state_carbon_price` | RGGI annual auction-clearing averages (rggi.org), California annual settlement prices (CARB), Washington annual averages (Ecology) | 2007–2025 |
+| `state_climate_plan` | C2ES State Climate Action Plans, Sabin Center, Georgetown Climate Center, EPA CPRG 2024 Priority Climate Action Plans (45 states + DC) | 2007–2025 |
+
+**Variables NOT extended (kept as NaN outside 2013–2023):**
+- `mayors_climate_signatory` — requires scraping US Conference of Mayors
+  Climate Protection Agreement historical lists + Global Covenant of Mayors
+- `iclei_member` — requires Wayback Machine scraping of ICLEI USA rosters
+- `climate_commitment_score` — derived from the above, so recomputable only
+  when the components are extended
+
+**Key state-year values (cross-checks):**
+
+- **CA**: RPS target 20% (2002-2010) → 33% (2011) → 50% (2015) → 60% (2018) → 90% (2022). Cap-and-trade active 2013+, annual prices $11-35/ton.
+- **NY**: RPS 24% (2004) → 50% (2015) → 70% (2019, CLCPA). RGGI member 2009+.
+- **NJ**: RPS 6.5% → 22.5% (2012) → 50% (2018). RGGI 2009-2012, withdrew, rejoined 2020.
+- **WA**: RPS 15% (2006) → 100% (2019, CETA). Cap-and-Invest 2023+, clearing $30-60/ton.
+- **MA**: RPS 11% → 15% (2008) → 35% (2018). RGGI member 2009+.
+- **VA**: RPS voluntary 2007 → 100% (2020, VCEA). RGGI member 2021–2023, withdrew.
 
 ---
 
