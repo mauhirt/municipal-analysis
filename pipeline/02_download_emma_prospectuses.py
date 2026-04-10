@@ -111,31 +111,46 @@ def make_session() -> requests.Session:
     return s
 
 
-def accept_terms_of_use(session: requests.Session, referer: str | None = None) -> None:
+def accept_terms_of_use(session: requests.Session, referer: str | None = None,
+                        max_retries: int = 4) -> None:
     """POST the EMMA disclaimer form so subsequent requests return content.
 
     A known-good referer is used by default so this can be called mid-run
-    without depending on the CUSIP that happens to have failed.
+    without depending on the CUSIP that happens to have failed. Retries
+    transient 5xx / network failures with exponential backoff.
     """
     referer = referer or SECURITY_URL.format(cusip=DISCLAIMER_REFERER_CUSIP)
-    r = session.get(referer, timeout=30)
-    r.raise_for_status()
-    fields = {
-        m.group(1): m.group(2)
-        for m in re.finditer(
-            r'<input type="hidden"[^>]*name="([^"]+)"[^>]*value="([^"]*)"', r.text
-        )
-    }
-    if not fields:
-        raise RuntimeError("Disclaimer form not found on EMMA response")
-    fields["ctl00$mainContentArea$disclaimerContent$yesButton"] = "Accept"
-    session.post(
-        DISCLAIMER_URL,
-        data=fields,
-        headers={"Referer": referer, "Origin": BASE},
-        allow_redirects=True,
-        timeout=30,
-    )
+    last_exc: Exception | None = None
+    for attempt in range(max_retries):
+        try:
+            r = session.get(referer, timeout=30)
+            r.raise_for_status()
+            fields = {
+                m.group(1): m.group(2)
+                for m in re.finditer(
+                    r'<input type="hidden"[^>]*name="([^"]+)"[^>]*value="([^"]*)"', r.text
+                )
+            }
+            if not fields:
+                raise RuntimeError("Disclaimer form not found on EMMA response")
+            fields["ctl00$mainContentArea$disclaimerContent$yesButton"] = "Accept"
+            r2 = session.post(
+                DISCLAIMER_URL,
+                data=fields,
+                headers={"Referer": referer, "Origin": BASE},
+                allow_redirects=True,
+                timeout=30,
+            )
+            r2.raise_for_status()
+            return
+        except Exception as exc:
+            last_exc = exc
+            wait = 2 ** (attempt + 1)  # 2, 4, 8, 16 s
+            print(f"  accept_terms_of_use attempt {attempt+1}/{max_retries} failed "
+                  f"({type(exc).__name__}: {exc}); sleeping {wait}s")
+            time.sleep(wait)
+    assert last_exc is not None
+    raise last_exc
 
 
 def is_disclaimer_page(html: str) -> bool:
@@ -251,12 +266,15 @@ def download_pdf(session: requests.Session, url: str, dest: Path, timeout: int =
     return n
 
 
-def fetch_security_page(session: requests.Session, cusip: str, max_retries: int = 3) -> str:
+def fetch_security_page(session: requests.Session, cusip: str, max_retries: int = 4) -> str:
     url = SECURITY_URL.format(cusip=cusip)
     last_exc: Exception | None = None
     for attempt in range(max_retries):
         try:
             r = session.get(url, timeout=45)
+            # Back off longer on 5xx (EMMA under load)
+            if r.status_code >= 500:
+                raise requests.HTTPError(f"{r.status_code} server error", response=r)
             r.raise_for_status()
             if is_disclaimer_page(r.text):
                 # Session timed out — re-accept via a known-good referer.
@@ -266,7 +284,10 @@ def fetch_security_page(session: requests.Session, cusip: str, max_retries: int 
             return r.text
         except Exception as exc:
             last_exc = exc
-            time.sleep(2 ** attempt)
+            wait = 2 ** (attempt + 2)  # 4, 8, 16, 32 s
+            print(f"  {cusip}: fetch attempt {attempt+1}/{max_retries} failed "
+                  f"({type(exc).__name__}: {exc}); sleeping {wait}s")
+            time.sleep(wait)
     assert last_exc is not None
     raise last_exc
 
