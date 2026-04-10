@@ -1,0 +1,14 @@
+FIPS,City,City_Name,State,Year,State_Total_Amt_Annual,State_Total_Count_Annual,State_Total_Amt_Cumul,State_Total_Count_Cumul,State_Govt_Amt_Annual,State_Govt_Count_Annual,State_Govt_Amt_Cumul,State_Govt_Count_Cumul,State_Total_Ex_City_Amt_Annual,State_Total_Ex_City_Count_Annual,State_Total_Ex_City_Amt_Cumul,State_Total_Ex_City_Count_Cumul,State_Govt_Ex_City_Amt_Annual,State_Govt_Ex_City_Count_Annual,State_Govt_Ex_City_Amt_Cumul,State_Govt_Ex_City_Count_Cumul,City_Own_Amt_Annual,City_Own_Count_Annual,City_Own_Govt_Amt_Annual,City_Own_Govt_Count_Annual
+1150000,washington,Washington,DC,2013,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+1150000,washington,Washington,DC,2014,350000000.0,1.0,350000000.0,1.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,350000000.0,1.0,0.0,0.0
+1150000,washington,Washington,DC,2015,100000000.0,14.0,450000000.0,15.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,100000000.0,14.0,0.0,0.0
+1150000,washington,Washington,DC,2016,0.0,0.0,450000000.0,15.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+1150000,washington,Washington,DC,2017,100000000.0,2.0,550000000.0,17.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,100000000.0,2.0,0.0,0.0
+1150000,washington,Washington,DC,2018,100000000.0,6.0,650000000.0,23.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,100000000.0,6.0,0.0,0.0
+1150000,washington,Washington,DC,2019,104010000.0,5.0,754010000.0,28.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,104010000.0,5.0,0.0,0.0
+1150000,washington,Washington,DC,2020,0.0,0.0,754010000.0,28.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+1150000,washington,Washington,DC,2021,784425000.0,24.0,1538435000.0,52.0,0.0,0.0,0.0,0.0,784425000.0,24.0,784425000.0,24.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+1150000,washington,Washington,DC,2022,238420000.0,37.0,1776855000.0,89.0,0.0,0.0,0.0,0.0,0.0,0.0,784425000.0,24.0,0.0,0.0,0.0,0.0,238420000.0,37.0,0.0,0.0
+1150000,washington,Washington,DC,2023,392000000.0,22.0,2168855000.0,111.0,0.0,0.0,0.0,0.0,392000000.0,22.0,1176425000.0,46.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+1150000,washington,Washington,DC,2024,0.0,0.0,2168855000.0,111.0,0.0,0.0,0.0,0.0,0.0,0.0,1176425000.0,46.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+1150000,washington,Washington,DC,2025,160615000.0,21.0,2329470000.0,132.0,0.0,0.0,0.0,0.0,0.0,0.0,1176425000.0,46.0,0.0,0.0,0.0,0.0,160615000.0,21.0,0.0,0.0
