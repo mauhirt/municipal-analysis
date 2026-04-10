@@ -1,0 +1,26 @@
+fips7,city_name,state_abb,first_observed_year,c40_joined_year,pre_2013_status,source_name,source_url,access_date,verification_status,notes
+644000,los angeles,CA,2013,2006,likely_member,c40.org Our Cities + original raw compilation,https://www.c40.org/cities/,2026-04-10,raw_anchor,Founding-era C40 city; actual joining year 2006 per C40 history but pre-2013 not in raw file.
+667000,san francisco,CA,2013,2006,likely_member,c40.org Our Cities + original raw compilation,https://www.c40.org/cities/,2026-04-10,raw_anchor,Founding-era; actual joining ~2006.
+1150000,washington,DC,2013,2006,likely_member,c40.org Our Cities + original raw compilation,https://www.c40.org/cities/,2026-04-10,raw_anchor,Founding-era; actual joining ~2006.
+1714000,chicago,IL,2013,2005,likely_member,c40.org Our Cities + original raw compilation,https://www.c40.org/cities/,2026-04-10,raw_anchor,Founding member 2005 under Daley administration.
+2360545,portland,ME,2013,2013,likely_member,c40.org Our Cities + original raw compilation,https://www.c40.org/cities/,2026-04-10,raw_anchor,Innovator City status; joined around 2013.
+2507000,boston,MA,2013,2014,likely_member,c40.org Our Cities + original raw compilation,https://www.c40.org/cities/,2026-04-10,raw_anchor,Joined under Walsh administration; raw file has 2013 which may reflect Menino era preliminary membership.
+3651000,new york,NY,2013,2005,likely_member,c40.org Our Cities + original raw compilation,https://www.c40.org/cities/,2026-04-10,raw_anchor,Founding member 2005; Bloomberg hosted C40 Summit 2007.
+4159000,portland,OR,2013,2006,likely_member,c40.org Our Cities + original raw compilation,https://www.c40.org/cities/,2026-04-10,raw_anchor,Founding-era; actual joining ~2006.
+4835000,houston,TX,2013,2006,likely_member,c40.org Our Cities + original raw compilation,https://www.c40.org/cities/,2026-04-10,raw_anchor,Founding-era; actual joining ~2006.
+5363000,seattle,WA,2013,2006,likely_member,c40.org Our Cities + original raw compilation,https://www.c40.org/cities/,2026-04-10,raw_anchor,Founding-era; actual joining ~2006.
+4805000,austin,TX,2014,2014,not_member,c40.org Our Cities + original raw compilation,https://www.c40.org/cities/,2026-04-10,raw_anchor,Innovator City 2014.
+4865000,san antonio,TX,2014,2014,not_member,c40.org Our Cities + original raw compilation,https://www.c40.org/cities/,2026-04-10,raw_anchor,
+4819000,dallas,TX,2014,2014,not_member,c40.org Our Cities + original raw compilation,https://www.c40.org/cities/,2026-04-10,raw_anchor,
+666000,san diego,CA,2014,2014,not_member,c40.org Our Cities + original raw compilation,https://www.c40.org/cities/,2026-04-10,raw_anchor,
+4260000,philadelphia,PA,2015,2015,not_member,c40.org Our Cities + original raw compilation,https://www.c40.org/cities/,2026-04-10,raw_anchor,
+668000,san jose,CA,2016,2016,not_member,c40.org Our Cities + original raw compilation,https://www.c40.org/cities/,2026-04-10,raw_anchor,
+455000,phoenix,AZ,2016,2016,not_member,c40.org Our Cities + original raw compilation,https://www.c40.org/cities/,2026-04-10,raw_anchor,
+1245000,miami,FL,2017,2017,not_member,c40.org Our Cities + original raw compilation,https://www.c40.org/cities/,2026-04-10,raw_anchor,
+820000,denver,CO,2017,2017,not_member,c40.org Our Cities + original raw compilation,https://www.c40.org/cities/,2026-04-10,raw_anchor,
+2255000,new orleans,LA,2017,2017,not_member,c40.org Our Cities + original raw compilation,https://www.c40.org/cities/,2026-04-10,raw_anchor,
+1304000,atlanta,GA,2019,2019,not_member,c40.org Our Cities + original raw compilation,https://www.c40.org/cities/,2026-04-10,raw_anchor,
+3712000,charlotte,NC,2019,2019,not_member,c40.org Our Cities + original raw compilation,https://www.c40.org/cities/,2026-04-10,raw_anchor,
+3918000,columbus,OH,2020,2020,not_member,c40.org Our Cities + original raw compilation,https://www.c40.org/cities/,2026-04-10,raw_anchor,
+1319000,columbus,GA,2020,2020,not_member,c40.org Our Cities + original raw compilation,https://www.c40.org/cities/,2026-04-10,raw_anchor,Unusual — small city; reviewer should verify membership against current c40.org list.
+2743000,minneapolis,MN,2021,2021,not_member,c40.org Our Cities + original raw compilation,https://www.c40.org/cities/,2026-04-10,raw_anchor,

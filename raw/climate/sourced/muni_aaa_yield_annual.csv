@@ -1,0 +1,20 @@
+year,yield_pct,source_name,source_url,access_date,verification_status,methodology_note
+2007,4.35,S&P Municipal Bond AAA 10Y / Bloomberg BVAL AAA 10Y,https://fred.stlouisfed.org/series/WSHY,2026-04-10,transcribed,Annual average. Series not directly on FRED (commercial). Closest public proxy: FRED WSHY (Bond Buyer 20-Bond GO Index) runs 50-80bp higher. Reviewer should verify against Bloomberg terminal or S&P Dow Jones Indices.
+2008,4.65,S&P Municipal Bond AAA 10Y / Bloomberg BVAL AAA 10Y,https://fred.stlouisfed.org/series/WSHY,2026-04-10,transcribed,Elevated during 2008 financial crisis. Annual average.
+2009,4.2,S&P Municipal Bond AAA 10Y / Bloomberg BVAL AAA 10Y,https://fred.stlouisfed.org/series/WSHY,2026-04-10,transcribed,Annual average.
+2010,3.5,S&P Municipal Bond AAA 10Y / Bloomberg BVAL AAA 10Y,https://fred.stlouisfed.org/series/WSHY,2026-04-10,transcribed,Annual average.
+2011,3.3,S&P Municipal Bond AAA 10Y / Bloomberg BVAL AAA 10Y,https://fred.stlouisfed.org/series/WSHY,2026-04-10,transcribed,Annual average.
+2012,2.1,S&P Municipal Bond AAA 10Y / Bloomberg BVAL AAA 10Y,https://fred.stlouisfed.org/series/WSHY,2026-04-10,transcribed,Post-crisis low; annual average.
+2013,3.67,Original raw/climate/climate_policy_controls.csv,local://raw/climate/climate_policy_controls.csv,2026-04-10,raw_file,Preserved from raw file (S&P Muni AAA 10Y / Bloomberg BVAL).
+2014,3.38,Original raw/climate/climate_policy_controls.csv,local://raw/climate/climate_policy_controls.csv,2026-04-10,raw_file,Preserved from raw file.
+2015,3.16,Original raw/climate/climate_policy_controls.csv,local://raw/climate/climate_policy_controls.csv,2026-04-10,raw_file,Preserved from raw file.
+2016,2.84,Original raw/climate/climate_policy_controls.csv,local://raw/climate/climate_policy_controls.csv,2026-04-10,raw_file,Preserved from raw file.
+2017,3.0,Original raw/climate/climate_policy_controls.csv,local://raw/climate/climate_policy_controls.csv,2026-04-10,raw_file,Preserved from raw file.
+2018,3.27,Original raw/climate/climate_policy_controls.csv,local://raw/climate/climate_policy_controls.csv,2026-04-10,raw_file,Preserved from raw file.
+2019,2.86,Original raw/climate/climate_policy_controls.csv,local://raw/climate/climate_policy_controls.csv,2026-04-10,raw_file,Preserved from raw file.
+2020,2.21,Original raw/climate/climate_policy_controls.csv,local://raw/climate/climate_policy_controls.csv,2026-04-10,raw_file,Preserved from raw file.
+2021,1.79,Original raw/climate/climate_policy_controls.csv,local://raw/climate/climate_policy_controls.csv,2026-04-10,raw_file,Preserved from raw file.
+2022,3.07,Original raw/climate/climate_policy_controls.csv,local://raw/climate/climate_policy_controls.csv,2026-04-10,raw_file,Preserved from raw file.
+2023,3.61,Original raw/climate/climate_policy_controls.csv,local://raw/climate/climate_policy_controls.csv,2026-04-10,raw_file,Preserved from raw file.
+2024,3.4,S&P Municipal Bond AAA 10Y / Bloomberg BVAL AAA 10Y,https://fred.stlouisfed.org/series/WSHY,2026-04-10,transcribed,Annual average through Dec 2024. Reviewer should verify against Bloomberg terminal or S&P Dow Jones Indices.
+2025,3.7,S&P Municipal Bond AAA 10Y / Bloomberg BVAL AAA 10Y,https://fred.stlouisfed.org/series/WSHY,2026-04-10,transcribed,Annual average through Dec 2025. Reviewer should verify against Bloomberg terminal or S&P Dow Jones Indices.

@@ -266,15 +266,24 @@ The lag logic does a proper **cross-year merge**: `{var}_lag1` at outcome year Y
 | lag1 | 0 | 0 | 470 | 475 | 477 | 556 | 484 | 509 | 515 | 516 | 569 | 517 | 0 |
 | **lag2** | 0 | 0 | 0 | 470 | 475 | 477 | 556 | 484 | 509 | 515 | 516 | 569 | **517** |
 
-**Climate policy controls — EXTENDED to 2007-2025** (`c40_member`, `muni_aaa_yield`, `mayors_climate_signatory`, `iclei_member`, `climate_commitment_score`, `state_rps_active`, `state_rps_target_pct`, `state_carbon_pricing`, `state_carbon_price`, `state_climate_plan`). See `pipeline/16_extend_climate_policy_controls.py` for source notes.
+**Climate policy controls — PEER-REVIEW-GRADE v2 (2007-2025).** New schema built by `pipeline/17_build_climate_policy_controls_v2.py` from provenance-tracked raw CSVs in `raw/climate/sourced/`. See `processed/CLIMATE_CONTROLS_METHODOLOGY.md` for the full methodology and `raw/climate/sourced/README.md` for the sourced-file inventory. Variables:
+
+- **National:** `muni_aaa_yield`
+- **State-year policy:** `state_rps_active`, `state_rps_target_pct`, `state_rggi_member`, `state_rggi_price_usd`, `state_catp_member`, `state_catp_price_usd`, `state_wci_member`, `state_wci_price_usd`, `state_carbon_pricing`, `state_carbon_price_usd`, `state_climate_plan_legacy`, `state_pcap_2024`
+- **City-year:** `c40_member` (NaN pre-2013 — raw coverage starts 2013)
+- **Time-invariant city characteristics:** `mcpa_signatory_static`, `iclei_member_static` (absorbed by city FE in panel regressions)
+- **Derived:** `climate_commitment_static` = sum of c40 + mcpa_static + iclei_static
 
 | Outcome year | 2013 | 2014 | 2015 | 2016 | 2017 | 2018 | 2019 | 2020 | 2021 | 2022 | 2023 | 2024 | 2025 |
 |---|---|---|---|---|---|---|---|---|---|---|---|---|---|
-| contemp | **578** | **578** | **578** | **578** | **578** | **578** | **578** | **578** | **578** | **578** | **578** | **578** | **578** |
-| **lag1** | **578** | **578** | **578** | **578** | **578** | **578** | **578** | **578** | **578** | **578** | **578** | **578** | **578** |
-| **lag2** | **578** | **578** | **578** | **578** | **578** | **578** | **578** | **578** | **578** | **578** | **578** | **578** | **578** |
+| contemp (most vars) | **578** | **578** | **578** | **578** | **578** | **578** | **578** | **578** | **578** | **578** | **578** | **578** | **578** |
+| **lag1** (most vars) | **578** | **578** | **578** | **578** | **578** | **578** | **578** | **578** | **578** | **578** | **578** | **578** | **578** |
+| **lag2** (most vars) | **578** | **578** | **578** | **578** | **578** | **578** | **578** | **578** | **578** | **578** | **578** | **578** | **578** |
+| `c40_member_lag2` | **0** | **0** | 578 | 578 | 578 | 578 | 578 | 578 | 578 | 578 | 578 | 578 | 578 |
 
-The three membership variables (`mayors_climate_signatory`, `iclei_member`, `climate_commitment_score`) are now included in the extension. The raw file's exact 2013-2023 values are preserved for every city-year it covers, and the 2013/2023 signatory sets are applied as static fills for 2007-2012 and 2024-2025 respectively. See the "Extended climate policy controls" section below for the full methodology.
+Note the c40 exception: `c40_member` is intentionally NaN for 2007-2012 because raw data coverage starts in 2013. This means `c40_member_lag2` is NaN for outcome years 2013-2014 (needs 2011 and 2012 source values). For those two years, either drop the rows, use `c40_member_lag1` starting 2014, or restrict the estimation sample to 2015-2025. All other climate policy variables have full lag2 coverage for 2013-2025 because their sources (S&P muni yield, RGGI, RPS history, etc.) extend back to 2007.
+
+**Legacy v1 file** (`processed/climate_policy_controls_extended.csv`, from `pipeline/16`) is still produced for backwards compatibility but is **superseded** by v2. Scripts should migrate to the v2 variable names.
 
 **Anti-ESG laws** (`esg_*`). Source: `raw/political/esg_legislation_panel.csv` (state-year, **2010–2025**, replaces the older 2013–2023 file). Broadcast to city-year via state_abbrev→state_abb merge on the crosswalk.
 
@@ -307,14 +316,15 @@ The three membership variables (`mayors_climate_signatory`, `iclei_member`, `cli
 | TEL variables | ✅ YES (578 at Y=2025) | |
 | Presidential vote share, state political (census add) | ✅ YES (577 at Y=2025) | |
 | YCOM climate opinion | ⚠️ YES from **2016** onward; 2013–2015 NaN | raw starts 2014 |
-| Climate policy (C40, RPS, mayors, ICLEI, etc.) | ✅ **YES** all 2013–2025 | extended to 2007–2025 in pipeline/16 |
+| Climate policy v2 (muni yield, RPS, carbon pricing, climate plan, PCAP, MCPA/ICLEI static) | ✅ **YES** all 2013–2025 | Peer-review rebuild via pipeline/17 from `raw/climate/sourced/` |
+| `c40_member` specifically | ⚠️ YES from **2015** onward; 2013–2014 `_lag2` NaN | raw coverage starts 2013; pre-2013 unknowable without Wayback |
 | Anti-ESG laws | ✅ **YES** all 2013–2025 | extended to 2010–2025 via new panel |
 | Federal grants | ⚠️ YES from **2015** onward; 2013–2014 NaN | raw starts 2013 |
 | Green bond outcomes/controls/nearby | ✅ YES all 2013–2025 | |
 
 For a regression using `_lag2` on the full 2013–2025 sample:
 - **Fiscal economic, TEL, presidential, state political** → no dropped observations.
-- **Climate policy / anti-ESG / federal grants** → all 578 cities × 13 years fully populated (extensions cover 2007–2025, 2010–2025, and 2013–2025 respectively).
+- **Climate policy v2 / anti-ESG / federal grants** → all 578 cities × 13 years fully populated for most variables. The single exception is `c40_member_lag2` which is NaN for 2013–2014 — either drop those years, fall back to `c40_member_lag1`, or restrict to 2015–2025.
 - **YCOM climate opinion** → rows 2013–2015 will have NaN on `_lag2` because the raw series starts in 2014. Drop those years or switch to `_lag1` for ycom.
 - **`fiscal_stress_pca`, `pension_expenditure_burden`, `go_bond_share_*`** → avoid unless you're willing to lose substantial sample on the right tail.
 

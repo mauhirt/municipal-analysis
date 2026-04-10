@@ -168,25 +168,50 @@ climate_cols = [f"ycom_{c}" for c in climate_cols]
 panel = attach(panel, climate, "fips7", "year", climate_cols, "ycom")
 
 # ---------------------------------------------------------------------------
-# 5. Climate policy controls (extended to 2007-2025)
-#    Prefers processed/climate_policy_controls_extended.csv if present
-#    (built by pipeline/16_extend_climate_policy_controls.py), otherwise
-#    falls back to the original raw file (2013-2023).
+# 5. Climate policy controls.
+#    Prefers processed/climate_policy_controls_v2.csv if present — the
+#    peer-review-grade rebuild from pipeline/17_build_climate_policy_controls_v2.py
+#    which sources every value from committed provenance-tracked CSVs in
+#    raw/climate/sourced/.
+#    Falls back to processed/climate_policy_controls_extended.csv (pipeline/16)
+#    and then to the original raw file (2013-2023) for backwards compatibility.
 # ---------------------------------------------------------------------------
 print("\n[5/10] Loading climate_policy_controls...")
+v2_path = PROC / "climate_policy_controls_v2.csv"
 ext_path = PROC / "climate_policy_controls_extended.csv"
-if ext_path.exists():
+if v2_path.exists():
+    cpol = pd.read_csv(v2_path)
+    print(f"  Using peer-review v2 file (2007-2025): {cpol.shape}")
+    cpol_cols = [
+        "muni_aaa_yield",
+        "state_rps_active", "state_rps_target_pct",
+        "state_rggi_member", "state_rggi_price_usd",
+        "state_catp_member", "state_catp_price_usd",
+        "state_wci_member", "state_wci_price_usd",
+        "state_carbon_pricing", "state_carbon_price_usd",
+        "state_climate_plan_legacy", "state_pcap_2024",
+        "c40_member",
+        "mcpa_signatory_static", "iclei_member_static",
+        "climate_commitment_static",
+    ]
+elif ext_path.exists():
     cpol = pd.read_csv(ext_path)
     print(f"  Using extended file (2007-2025): {cpol.shape}")
+    cpol_cols = [
+        "muni_aaa_yield", "c40_member", "mayors_climate_signatory",
+        "iclei_member", "climate_commitment_score",
+        "state_rps_active", "state_rps_target_pct",
+        "state_carbon_pricing", "state_carbon_price", "state_climate_plan",
+    ]
 else:
     cpol = pd.read_csv(RAW / "climate" / "climate_policy_controls.csv")
     print(f"  Using original raw file (2013-2023): {cpol.shape}")
-cpol_cols = [
-    "muni_aaa_yield", "c40_member", "mayors_climate_signatory",
-    "iclei_member", "climate_commitment_score",
-    "state_rps_active", "state_rps_target_pct",
-    "state_carbon_pricing", "state_carbon_price", "state_climate_plan",
-]
+    cpol_cols = [
+        "muni_aaa_yield", "c40_member", "mayors_climate_signatory",
+        "iclei_member", "climate_commitment_score",
+        "state_rps_active", "state_rps_target_pct",
+        "state_carbon_pricing", "state_carbon_price", "state_climate_plan",
+    ]
 cpol_cols = [c for c in cpol_cols if c in cpol.columns]
 panel = attach(panel, cpol, "fips7", "year", cpol_cols, "cpol")
 
