@@ -15,14 +15,22 @@ every row cites a primary source (`source_name`, `source_url`, `access_date`,
 | `rggi_auction_prices.csv` | `state_rggi_price_usd` | 2008-01 to 2025-12, 70 quarterly auctions | RGGI Auction Results page | **fetched live** 2026-04-10 |
 | `rggi_member_states.csv` | `state_rggi_member` | 10 founding states + VA/NJ transitions | RGGI Program Overview and Design | **fetched live** 2026-04-10 |
 | `state_pcap_2024.csv` | `state_pcap_2024` | 50 states + DC | EPA CPRG PCAP Directory | **fetched live** 2026-04-10 |
-| `muni_aaa_yield_annual.csv` | `muni_aaa_yield` | 2007-2025 | S&P Muni AAA 10Y / Bloomberg BVAL AAA 10Y / FRED WSHY | 2013-2023 preserved from original raw file; 2007-2012 and 2024-2025 **transcribed** pending external verification |
-| `ca_capandtrade_auction_prices_annual.csv` | `state_catp_price_usd` | 2013-2025 annual averages | CARB Summary of Auction Settlement Prices and Results | **transcribed** pending external verification |
-| `wa_capandinvest_auction_prices_annual.csv` | `state_wci_price_usd` | 2023-2025 annual averages | WA Ecology Cap-and-Invest Auction Results | **transcribed** pending external verification |
-| `state_rps_history.csv` | `state_rps_active`, `state_rps_target_pct` | 1983-2025 enactment milestones across 38 states | LBNL Berkeley Lab 2024 RPS Status Update (Barbose) + DSIRE | **transcribed** pending external verification |
-| `state_climate_plan_legacy.csv` | `state_climate_plan_legacy` | 31 states with pre-2024 statewide climate action plans | C2ES State Climate Policy Database | **transcribed** pending external verification |
-| `c40_us_members.csv` | `c40_member` | 25 US C40 member cities with first-observed year | c40.org Our Cities + original raw file | **raw_anchor** — first-observed year from raw 2013-2023, joining year notes from c40.org history |
-| `mcpa_signatory_static.csv` | `mcpa_signatory_static` | 54 US Conference of Mayors Climate Protection Agreement signatories (static) | Original raw/climate/climate_policy_controls.csv 2013-2023 snapshot | **raw_snapshot** — time-invariant derived from union of 2013-2023 slices |
+| **`ca_capandtrade_auction_prices.csv`** (NEW) | `state_catp_price_usd` | 53 auctions, Nov 2012 to Nov 2025 | CARB Summary of CA-Quebec Joint Auction Settlement Prices and Results PDF | **fetched live** 2026-04-10 via curl+pdftotext |
+| **`wa_capandinvest_auction_prices.csv`** (NEW) | `state_wci_price_usd` | 12 auctions, Feb 2023 to Dec 2025 | WA Ecology Auction Summary Report PDFs (12 individual reports) | **fetched live** 2026-04-10 via curl+pdftotext |
+| `muni_aaa_yield_annual.csv` | `muni_aaa_yield` | 2007-2025 | S&P Muni AAA 10Y / Bloomberg BVAL AAA 10Y | 2013-2023 preserved from original raw file; 2007-2012 and 2024-2025 **transcribed**. FRED WSHY blocked in environment (503). See VERIFICATION_LOG.md |
+| `state_rps_history.csv` | `state_rps_active`, `state_rps_target_pct` | 1983-2025 enactment milestones across 38 states | LBNL Berkeley Lab 2024 RPS Status Update (Barbose) + DSIRE | **transcribed** — LBNL/NCSL/DSIRE all blocked (403/Cloudflare). EIA "28 states + DC" headline count verified as consistent. See VERIFICATION_LOG.md |
+| `state_climate_plan_legacy.csv` | `state_climate_plan_legacy` | 31 states with pre-2024 statewide climate action plans | C2ES State Climate Policy Database | **transcribed** — C2ES interactive database requires JavaScript. C2ES "33 states" summary count verified as consistent. See VERIFICATION_LOG.md |
+| `c40_us_members.csv` | `c40_member` | 25 US C40 member cities with first-observed year | c40.org Our Cities + original raw file | **raw_anchor** — first-observed year from raw 2013-2023 |
+| `mcpa_signatory_static.csv` | `mcpa_signatory_static` | 54 US Conference of Mayors Climate Protection Agreement signatories (static) | Original raw/climate/climate_policy_controls.csv 2013-2023 snapshot | **raw_snapshot** — time-invariant |
 | `iclei_usa_static.csv` | `iclei_member_static` | 43 ICLEI USA member cities (static) | Original raw/climate/climate_policy_controls.csv 2013-2023 snapshot | **raw_snapshot** — time-invariant |
+
+**Superseded (kept for reference):**
+- `ca_capandtrade_auction_prices_annual.legacy.csv` — previous transcribed annual averages, now replaced by auction-level CSV
+- `wa_capandinvest_auction_prices_annual.legacy.csv` — same
+
+See `VERIFICATION_LOG.md` in this directory for the full per-source log of
+every URL we attempted to fetch, the HTTP results, and the verification
+pass summary (2026-04-10).
 
 ## Verification status codes
 

@@ -249,7 +249,33 @@ them only in between-city specifications or in interactions.
 
 ## Change log
 
-- **2026-04-10**: Initial version, built from scratch via pipeline/17. Core
-  primary sources (RGGI auctions and members, EPA PCAP directory) fetched
-  live from the canonical URLs. All other values transcribed with explicit
-  source citation.
+- **2026-04-10 (initial)**: First version, built from scratch via
+  pipeline/17. RGGI auctions/members and EPA PCAP directory fetched live;
+  all other values transcribed with explicit source citation.
+
+- **2026-04-10 (verification pass)**: Upgraded CA Cap-and-Trade and WA
+  Cap-and-Invest auction data from transcribed annual averages to fully
+  primary-source-fetched auction-level CSVs:
+  - `ca_capandtrade_auction_prices.csv`: 53 quarterly auctions fetched
+    from CARB "Summary of CA-Quebec Joint Auction Settlement Prices and
+    Results" PDF (Nov 2012 – Nov 2025). Annual averages now computed in
+    pipeline/17.
+  - `wa_capandinvest_auction_prices.csv`: 12 quarterly auctions fetched
+    from 12 individual WA Ecology Auction Summary Report PDFs (Feb 2023 –
+    Dec 2025). Annual averages now computed in pipeline/17.
+  - Cross-checked annual values against ICAP factsheets; discrepancies
+    (<0.2 USD) attributable to ICAP's volume-weighted methodology vs. our
+    simple mean across quarterly settlement prices.
+  - WA 2023 annual average corrected from $56.01 (was the May 2023 single-
+    auction price misidentified as annual) to the correct $54.86 mean.
+  - 2024 CA annual: $35.45 → $35.23 (0.22 correction).
+  - 2023 CA annual: $33.32 → $33.03 (0.29 correction).
+  - 2018 CA annual: $14.80 → $14.90 (0.10 correction).
+  - Overall: ~65 rows upgraded from transcribed to fetched.
+
+  Muni AAA yield, state RPS history, and state climate plan legacy remain
+  transcribed because LBNL, DSIRE, NCSL, C2ES, Georgetown, FRED CSV
+  downloads, Bond Buyer, SIFMA, and Wikipedia are all blocked (403/503/
+  Cloudflare/Sucuri challenges) in this working environment. See
+  `raw/climate/sourced/VERIFICATION_LOG.md` for the full list of URLs
+  attempted and their responses.

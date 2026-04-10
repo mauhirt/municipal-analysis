@@ -67,8 +67,30 @@ YEARS = list(range(2007, 2026))  # 19 years
 muni = pd.read_csv(SRC / "muni_aaa_yield_annual.csv")
 rggi_auctions = pd.read_csv(SRC / "rggi_auction_prices.csv")
 rggi_members = pd.read_csv(SRC / "rggi_member_states.csv")
-ca_auctions = pd.read_csv(SRC / "ca_capandtrade_auction_prices_annual.csv")
-wa_auctions = pd.read_csv(SRC / "wa_capandinvest_auction_prices_annual.csv")
+# Prefer auction-level CSVs (one row per quarterly auction, fetched live) and
+# fall back to the annual-average CSVs if only those are available.
+ca_auc_path = SRC / "ca_capandtrade_auction_prices.csv"
+wa_auc_path = SRC / "wa_capandinvest_auction_prices.csv"
+if ca_auc_path.exists():
+    ca_auctions_raw = pd.read_csv(ca_auc_path)
+    ca_auctions = (
+        ca_auctions_raw.groupby("year")["current_auction_price_usd"].mean().round(2)
+        .reset_index()
+        .rename(columns={"current_auction_price_usd": "current_auction_price_usd"})
+    )
+    print(f"  CA: {len(ca_auctions_raw)} auctions, {len(ca_auctions)} annual averages")
+else:
+    ca_auctions = pd.read_csv(SRC / "ca_capandtrade_auction_prices_annual.csv")
+if wa_auc_path.exists():
+    wa_auctions_raw = pd.read_csv(wa_auc_path)
+    wa_auctions = (
+        wa_auctions_raw.groupby("year")["current_auction_price_usd"].mean().round(2)
+        .reset_index()
+        .rename(columns={"current_auction_price_usd": "current_auction_price_usd"})
+    )
+    print(f"  WA: {len(wa_auctions_raw)} auctions, {len(wa_auctions)} annual averages")
+else:
+    wa_auctions = pd.read_csv(SRC / "wa_capandinvest_auction_prices_annual.csv")
 rps_hist = pd.read_csv(SRC / "state_rps_history.csv")
 climate_plan_legacy = pd.read_csv(SRC / "state_climate_plan_legacy.csv")
 pcap_2024 = pd.read_csv(SRC / "state_pcap_2024.csv")
@@ -104,15 +126,9 @@ rggi_annual = (
     .rename(columns={"clearing_price_usd": "state_rggi_price_usd"})
 )
 
-# CA Cap-and-Trade annual prices (already annual)
-ca_annual = ca_auctions[["year", "current_auction_price_usd"]].rename(
-    columns={"current_auction_price_usd": "state_catp_price_usd"}
-)
-
-# WA Cap-and-Invest annual prices (already annual)
-wa_annual = wa_auctions[["year", "current_auction_price_usd"]].rename(
-    columns={"current_auction_price_usd": "state_wci_price_usd"}
-)
+# CA and WA annual prices are now the ca_auctions / wa_auctions frames
+# directly (either loaded from annual CSV or computed from auction-level CSV
+# above). They both carry a "current_auction_price_usd" column.
 
 # Build state-year RGGI membership panel from rggi_member_states.csv
 def parse_participating_years(spec):
@@ -236,12 +252,13 @@ for _, row in skel.iterrows():
     catp_price = 0.0
     wci_price = 0.0
     if rggi_m:
-        rggi_price = rggi_annual.loc[rggi_annual["year"] == year, "state_rggi_price_usd"].squeeze() if year in rggi_annual["year"].values else 0.0
+        vals = rggi_annual.loc[rggi_annual["year"] == year, "state_rggi_price_usd"]
+        rggi_price = float(vals.iloc[0]) if len(vals) else 0.0
     if catp_m:
-        vals = ca_annual.loc[ca_annual["year"] == year, "state_catp_price_usd"]
+        vals = ca_auctions.loc[ca_auctions["year"] == year, "current_auction_price_usd"]
         catp_price = float(vals.iloc[0]) if len(vals) else 0.0
     if wci_m:
-        vals = wa_annual.loc[wa_annual["year"] == year, "state_wci_price_usd"]
+        vals = wa_auctions.loc[wa_auctions["year"] == year, "current_auction_price_usd"]
         wci_price = float(vals.iloc[0]) if len(vals) else 0.0
 
     rows.append({
