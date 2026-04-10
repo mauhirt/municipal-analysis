@@ -1,6 +1,11 @@
 """
 Build city-year outcome panel from cusip_with_assignment.csv.
 
+NOTE: All bonds in cusip_with_assignment.csv are green bonds. The
+`Self-reported Green` field just indicates whether the issuer formally
+self-labeled it, not whether it counts as green. So the top-level
+variables here are labelled Green_* accordingly.
+
 Input:
   raw/bloomberg/cusip_with_assignment.csv  (CUSIP level with city_fips7 joined)
   raw/crosswalk/Crosswalk.csv              (578 target cities)
@@ -11,9 +16,9 @@ Output:
 Structure: 578 cities x 13 years (2013-2025), keyed on FIPS (verified city+state).
 
 Variables per city-year:
-  - Bond_Issued                1 if any bond issued in that city-year
-  - City_Total_Amt_Issued      sum of Amt Issued
-  - City_Total_Issuance_Count  count of CUSIPs
+  - Green_Bond_Issued          1 if any green bond issued in that city-year
+  - City_Green_Amt_Issued      sum of Amt Issued
+  - City_Green_Issuance_Count  count of CUSIPs
 
   For each categorical field, for every distinct value:
     Issued_{field}__{value}  1/0 flag (any bond with that attribute)
@@ -107,17 +112,17 @@ print(f"Skeleton: {len(skeleton)} rows")
 totals = (
     bonds.groupby(["city_fips7", "panel_year"])
     .agg(
-        City_Total_Amt_Issued=("Amt Issued", "sum"),
-        City_Total_Issuance_Count=("CUSIP", "count"),
+        City_Green_Amt_Issued=("Amt Issued", "sum"),
+        City_Green_Issuance_Count=("CUSIP", "count"),
     )
     .reset_index()
     .rename(columns={"city_fips7": "FIPS", "panel_year": "Year"})
 )
 
 panel = skeleton.merge(totals, on=["FIPS", "Year"], how="left").fillna(
-    {"City_Total_Amt_Issued": 0, "City_Total_Issuance_Count": 0}
+    {"City_Green_Amt_Issued": 0, "City_Green_Issuance_Count": 0}
 )
-panel["Bond_Issued"] = (panel["City_Total_Issuance_Count"] > 0).astype(int)
+panel["Green_Bond_Issued"] = (panel["City_Green_Issuance_Count"] > 0).astype(int)
 
 # ---------------------------------------------------------------------------
 # Pivots: for each categorical field, for each distinct value
@@ -172,7 +177,7 @@ assert panel[["FIPS", "City", "State"]].drop_duplicates().shape[0] == 578, "Not 
 
 # Column order: id cols, top-level, then grouped per field
 id_cols = ["FIPS", "City", "City_Name", "State", "Year"]
-top_cols = ["Bond_Issued", "City_Total_Amt_Issued", "City_Total_Issuance_Count"]
+top_cols = ["Green_Bond_Issued", "City_Green_Amt_Issued", "City_Green_Issuance_Count"]
 
 grouped = []
 for field in CATEGORICAL_FIELDS:
@@ -198,8 +203,8 @@ panel.to_csv(OUT / "outcome_city_year_panel.csv", index=False)
 panel.to_excel(OUT / "outcome_city_year_panel.xlsx", index=False)
 
 print(f"\nPanel shape: {panel.shape}")
-print(f"Cities with at least one bond ever: {panel.groupby('FIPS')['Bond_Issued'].max().sum()}")
-print(f"City-year cells with bond: {panel['Bond_Issued'].sum()}")
+print(f"Cities with at least one green bond ever: {panel.groupby('FIPS')['Green_Bond_Issued'].max().sum()}")
+print(f"City-year cells with green bond: {panel['Green_Bond_Issued'].sum()}")
 print(f"Total columns: {len(panel.columns)}")
 print(f"  Id + top-level: {len(id_cols + top_cols)}")
 print(f"  Issued_/Amt_/Count_ pivots: {len(grouped)}")
