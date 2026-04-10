@@ -36,11 +36,13 @@ YEARS = list(range(2013, 2026))
 bonds = pd.read_csv(RAW / "cusip_with_assignment.csv")
 crosswalk = pd.read_csv(ROOT / "raw" / "crosswalk" / "Crosswalk.csv")
 
-# Drop duplicate CUSIPs flagged in the input file
+# Note: cusip_duplicate_flag marks 8 rows (4 CUSIPs x 2 each) as suspected
+# duplicates, but they are suspected only — could be legitimate tranches or
+# Bloomberg data errors. All 4 CUSIPs have city_fips7 = NaN, so they do not
+# affect this panel either way. We keep them in the input frame.
 if "cusip_duplicate_flag" in bonds.columns:
-    n_dupes = bonds["cusip_duplicate_flag"].sum()
-    bonds = bonds[~bonds["cusip_duplicate_flag"]]
-    print(f"Dropped {n_dupes} duplicate-flagged CUSIP rows")
+    n_flagged = bonds["cusip_duplicate_flag"].sum()
+    print(f"Note: {n_flagged} rows flagged as suspected duplicates (kept; none in 578-panel)")
 
 # Keep only rows assigned to a 578-city
 bonds = bonds[bonds["is_in_578_panel"] == True].copy()
