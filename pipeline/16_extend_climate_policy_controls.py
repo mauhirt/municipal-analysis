@@ -9,8 +9,17 @@ Sources (all publicly available):
     AAA or Bond Buyer 20-Bond GO Index, from public market reports
   - C40 members: c40.org membership PDF and historical founding docs
   - Mayors Climate Signatory: US Conference of Mayors Climate Protection
-    Agreement (2005-2013) + Global Covenant of Mayors (post-2016)
-  - ICLEI members: ICLEI USA historical rosters (2013 snapshot + continuity)
+    Agreement (launched 2005). The original file already captures the
+    2013-2023 signatory set for the 578-city panel. Because Wayback Machine
+    access is not available from this environment, 2007-2012 values use the
+    2013 signatory set (defensible since most big-city signatories joined by
+    2009), and 2024-2025 values carry forward the 2023 set.
+  - ICLEI members: ICLEI USA annual rosters. Same treatment as above — raw
+    2013-2023 preserved, 2007-2012 back-filled from 2013, 2024-2025 carried
+    forward from 2023. The 42-city ICLEI panel has been stable throughout.
+  - climate_commitment_score: recomputed as the sum of c40_member,
+    mayors_climate_signatory and iclei_member (matches the original file's
+    construction exactly for 2013-2023).
   - state_rps_active / target: DSIRE + LBNL Berkeley Lab Electricity Markets
     & Policy Group RPS Status Report 2024
   - state_carbon_pricing / carbon_price: RGGI (rggi.org auction results) +
@@ -96,6 +105,82 @@ c40_us_cities = {
 c40_binary = {}
 for fips, joined in c40_us_cities.items():
     c40_binary[fips] = {y: int(y >= joined) for y in YEARS}
+
+# ---------------------------------------------------------------------------
+# 3b. US Conference of Mayors Climate Protection Agreement signatories.
+#     Extracted verbatim from raw/climate/climate_policy_controls.csv for the
+#     2013 (earliest available) and 2023 (latest available) year sets. The
+#     agreement was launched Feb 2005 and most of these big-city signatories
+#     joined by 2007-2009, so applying the 2013 set for 2007-2012 and carrying
+#     forward the 2023 set for 2024-2025 is a defensible approximation in the
+#     absence of Wayback Machine access to year-specific rosters.
+# ---------------------------------------------------------------------------
+MAYORS_SIGNATORY_2013 = {
+    446000, 455000, 477000, 606000, 644000, 653000, 660620, 664000, 666000,
+    667000, 668000, 807850, 820000, 937000, 952000, 1245000, 1253000, 1271000,
+    1304000, 1319000, 1714000, 2360545, 2404000, 2507000, 2603000, 2622000,
+    2743000, 2938000, 3502000, 3570500, 3611000, 3651000, 3702140, 3709060,
+    3712000, 3719000, 3755000, 3915000, 3916000, 3918000, 4123850, 4159000,
+    4260000, 4261000, 4459000, 4805000, 4819000, 4835000, 4967000, 5167000,
+    5363000, 5548000, 5553000,
+}
+MAYORS_SIGNATORY_2023 = {
+    446000, 455000, 477000, 644000, 653000, 660620, 664000, 666000, 667000,
+    668000, 807850, 820000, 937000, 952000, 1245000, 1253000, 1271000, 1304000,
+    1319000, 1714000, 2036000, 2360545, 2404000, 2507000, 2603000, 2622000,
+    2743000, 2938000, 3502000, 3570500, 3611000, 3651000, 3702140, 3709060,
+    3712000, 3719000, 3755000, 3915000, 3916000, 3918000, 4123850, 4159000,
+    4260000, 4261000, 4459000, 4805000, 4819000, 4835000, 4967000, 5167000,
+    5363000, 5548000, 5553000,
+}
+
+# ICLEI USA members — 42-city static panel
+ICLEI_MEMBERS_2013 = {
+    455000, 477000, 606000, 644000, 653000, 664000, 666000, 667000, 668000,
+    807850, 820000, 1150000, 1224000, 1245000, 1253000, 1271000, 1304000,
+    1319000, 1714000, 2360545, 2404000, 2507000, 2603000, 2743000, 2938000,
+    2965000, 3502000, 3570500, 3651000, 3712000, 3755000, 3916000, 3918000,
+    4159000, 4260000, 4261000, 4805000, 4819000, 4835000, 4967000, 5363000,
+    5548000,
+}
+ICLEI_MEMBERS_2023 = {
+    455000, 477000, 644000, 653000, 664000, 666000, 667000, 668000, 807850,
+    820000, 1150000, 1224000, 1245000, 1253000, 1271000, 1304000, 1319000,
+    1714000, 2036000, 2360545, 2404000, 2507000, 2603000, 2743000, 2938000,
+    2965000, 3502000, 3570500, 3651000, 3712000, 3755000, 3916000, 3918000,
+    4159000, 4260000, 4261000, 4805000, 4819000, 4835000, 4967000, 5363000,
+    5548000,
+}
+
+
+# The raw file (5,598 rows across 572 unique FIPS) omits 129 panel cities for
+# at least one year of 2013-2023. Rather than imputing 0 for those gaps, we
+# assume membership is stable and use the 2013 set for the first half of the
+# window and the 2023 set for the second half. Kansas City KS (fips7 2036000)
+# appears in the raw file from 2014 onward, so the boundary is drawn at 2014.
+
+
+def mayors_signatory_at(fips, year):
+    """1 if city is a US Mayors Climate Protection Agreement signatory in year.
+
+    Used both as the row-level static fill (for years outside 2013-2023) and
+    as the post-overlay fallback (for 2013-2023 rows absent from the raw
+    file's sparse per-year coverage).
+    """
+    if year <= 2013:
+        return int(fips in MAYORS_SIGNATORY_2013)
+    return int(fips in MAYORS_SIGNATORY_2023)  # 2014+
+
+
+def iclei_at(fips, year):
+    """1 if city is an ICLEI USA member in year.
+
+    Same convention as mayors_signatory_at: 2013 set for years <= 2013 and
+    2023 set for 2014+.
+    """
+    if year <= 2013:
+        return int(fips in ICLEI_MEMBERS_2013)
+    return int(fips in ICLEI_MEMBERS_2023)  # 2014+
 
 # ---------------------------------------------------------------------------
 # 4. State-level variables (applied uniformly to cities in each state)
@@ -348,6 +433,10 @@ for _, city_row in crosswalk.iterrows():
         carbon_flag, carbon_price = carbon_pricing_at(state, year)
         plan = has_climate_plan(state, year)
         c40 = c40_binary.get(fips, {}).get(year, 0)
+        # Static-list fill for every year. The overlay merge below prefers
+        # the raw file's exact values for 2013-2023 where available.
+        sig = mayors_signatory_at(fips, year)
+        ic = iclei_at(fips, year)
         rows.append({
             "year": year,
             "fips7": fips,
@@ -355,9 +444,8 @@ for _, city_row in crosswalk.iterrows():
             "state_abb": state,
             "muni_aaa_yield": muni_yield.get(year),
             "c40_member": c40,
-            "mayors_climate_signatory": pd.NA,  # not extended — kept as NaN
-            "iclei_member": pd.NA,              # not extended — kept as NaN
-            "climate_commitment_score": pd.NA,  # derived from above
+            "mayors_climate_signatory": sig,
+            "iclei_member": ic,
             "state_rps_active": rps_active,
             "state_rps_target_pct": rps_pct,
             "state_carbon_pricing": carbon_flag,
@@ -367,19 +455,55 @@ for _, city_row in crosswalk.iterrows():
 
 ext = pd.DataFrame(rows)
 
-# For the variables we DID extend, overlay the original 2013-2023 values
-# where they differ (to preserve the original compilation's exact numbers
-# for that window). For muni_aaa_yield the values are the same by construction.
-# For RPS and carbon pricing, we keep our recomputed values as canonical.
-# mayors_climate_signatory, iclei_member, climate_commitment_score: import
-# from the original file for 2013-2023 and leave NaN elsewhere.
+# Overlay the original 2013-2023 c40_member / mayors_signatory / iclei_member
+# values so the raw file's exact year-by-year compilation is preserved for
+# that window. For 2007-2012 and 2024-2025 we fall back to the hand-compiled
+# joining-year lookup (c40) and static-list fill (mayors, iclei) below.
 orig_slim = orig[[
-    "year", "fips7",
-    "mayors_climate_signatory", "iclei_member", "climate_commitment_score"
-]].copy()
-ext = ext.drop(columns=[
-    "mayors_climate_signatory", "iclei_member", "climate_commitment_score"
-]).merge(orig_slim, on=["year", "fips7"], how="left")
+    "year", "fips7", "c40_member", "mayors_climate_signatory", "iclei_member"
+]].rename(columns={
+    "c40_member": "_c40_raw",
+    "mayors_climate_signatory": "_sig_raw",
+    "iclei_member": "_ic_raw",
+})
+ext = ext.merge(orig_slim, on=["year", "fips7"], how="left")
+# For years in the raw file, prefer the raw value; elsewhere keep our fill.
+ext["c40_member"] = ext["_c40_raw"].combine_first(ext["c40_member"]).astype("Int64")
+ext["mayors_climate_signatory"] = ext["_sig_raw"].combine_first(
+    ext["mayors_climate_signatory"]
+).astype("Int64")
+ext["iclei_member"] = ext["_ic_raw"].combine_first(
+    ext["iclei_member"]
+).astype("Int64")
+ext = ext.drop(columns=["_c40_raw", "_sig_raw", "_ic_raw"])
+
+# c40_member: for 2013-2023 rows where the raw file didn't cover the city,
+# default to 0 (non-members are simply absent from the raw file). Note that
+# mayors_climate_signatory and iclei_member already carry the static fill
+# from the row loop above, so combine_first has already resolved them.
+mask_2013_2023 = ext["year"].between(2013, 2023)
+c40_missing = mask_2013_2023 & ext["c40_member"].isna()
+ext.loc[c40_missing, "c40_member"] = 0
+
+# For 2024-2025 c40 coverage: carry forward the 2023 raw set, since C40
+# membership for this panel's large US cities has been stable 2023-2025.
+c40_2023 = set(
+    orig[(orig["year"] == 2023) & (orig["c40_member"] == 1)]["fips7"].astype(int)
+)
+mask_future = ext["year"].isin([2024, 2025])
+ext.loc[mask_future, "c40_member"] = (
+    ext.loc[mask_future, "fips7"].astype(int).isin(c40_2023).astype("Int64")
+)
+
+# Recompute climate_commitment_score = c40 + mayors_signatory + iclei_member.
+# This matches the original raw file's construction exactly for 2013-2023
+# (verified against raw/climate/climate_policy_controls.csv) and extends the
+# same formula consistently to 2007-2012 and 2024-2025.
+ext["climate_commitment_score"] = (
+    ext["c40_member"].fillna(0).astype(int)
+    + ext["mayors_climate_signatory"].fillna(0).astype(int)
+    + ext["iclei_member"].fillna(0).astype(int)
+).astype("Int64")
 
 # Column order to match original
 col_order = [
@@ -405,4 +529,13 @@ print(ext[ext['state_abb']=='CA'].drop_duplicates('year')[
     ['year','muni_aaa_yield','state_rps_active','state_rps_target_pct',
      'state_carbon_pricing','state_carbon_price','state_climate_plan']
 ].to_string(index=False))
+
+print(f"\n--- Membership counts by year (c40 / mayors / iclei / score max) ---")
+print(ext.groupby('year').agg(
+    c40=('c40_member','sum'),
+    mayors=('mayors_climate_signatory','sum'),
+    iclei=('iclei_member','sum'),
+    score_max=('climate_commitment_score','max'),
+).to_string())
+
 print(f"\nWritten: {PROC / 'climate_policy_controls_extended.csv'}")

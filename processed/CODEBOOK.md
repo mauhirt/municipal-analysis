@@ -266,7 +266,7 @@ The lag logic does a proper **cross-year merge**: `{var}_lag1` at outcome year Y
 | lag1 | 0 | 0 | 470 | 475 | 477 | 556 | 484 | 509 | 515 | 516 | 569 | 517 | 0 |
 | **lag2** | 0 | 0 | 0 | 470 | 475 | 477 | 556 | 484 | 509 | 515 | 516 | 569 | **517** |
 
-**Climate policy controls — EXTENDED to 2007-2025** (`c40_member`, `muni_aaa_yield`, `state_rps_active`, `state_rps_target_pct`, `state_carbon_pricing`, `state_carbon_price`, `state_climate_plan`). See `pipeline/16_extend_climate_policy_controls.py` for source notes.
+**Climate policy controls — EXTENDED to 2007-2025** (`c40_member`, `muni_aaa_yield`, `mayors_climate_signatory`, `iclei_member`, `climate_commitment_score`, `state_rps_active`, `state_rps_target_pct`, `state_carbon_pricing`, `state_carbon_price`, `state_climate_plan`). See `pipeline/16_extend_climate_policy_controls.py` for source notes.
 
 | Outcome year | 2013 | 2014 | 2015 | 2016 | 2017 | 2018 | 2019 | 2020 | 2021 | 2022 | 2023 | 2024 | 2025 |
 |---|---|---|---|---|---|---|---|---|---|---|---|---|---|
@@ -274,7 +274,7 @@ The lag logic does a proper **cross-year merge**: `{var}_lag1` at outcome year Y
 | **lag1** | **578** | **578** | **578** | **578** | **578** | **578** | **578** | **578** | **578** | **578** | **578** | **578** | **578** |
 | **lag2** | **578** | **578** | **578** | **578** | **578** | **578** | **578** | **578** | **578** | **578** | **578** | **578** | **578** |
 
-**Variables NOT extended** (`mayors_climate_signatory`, `iclei_member`, `climate_commitment_score`): still limited to 2013-2023 raw coverage because those sources require scraping Wayback Machine / manual compilation not yet done. If you need these at the right tail, contact ICLEI USA / GCoM directly or scrape archived pages.
+The three membership variables (`mayors_climate_signatory`, `iclei_member`, `climate_commitment_score`) are now included in the extension. The raw file's exact 2013-2023 values are preserved for every city-year it covers, and the 2013/2023 signatory sets are applied as static fills for 2007-2012 and 2024-2025 respectively. See the "Extended climate policy controls" section below for the full methodology.
 
 **Anti-ESG laws** (`esg_*`). Source: `raw/political/esg_legislation_panel.csv` (state-year, **2010–2025**, replaces the older 2013–2023 file). Broadcast to city-year via state_abbrev→state_abb merge on the crosswalk.
 
@@ -307,14 +307,15 @@ The lag logic does a proper **cross-year merge**: `{var}_lag1` at outcome year Y
 | TEL variables | ✅ YES (578 at Y=2025) | |
 | Presidential vote share, state political (census add) | ✅ YES (577 at Y=2025) | |
 | YCOM climate opinion | ⚠️ YES from **2016** onward; 2013–2015 NaN | raw starts 2014 |
-| Climate policy (C40, RPS, etc.) | ⚠️ YES from **2015** onward; 2013–2014 NaN | raw starts 2013 but lag2 needs 2013 for 2015 |
-| Anti-ESG laws | ⚠️ YES from **2015** onward; 2013–2014 NaN | same |
+| Climate policy (C40, RPS, mayors, ICLEI, etc.) | ✅ **YES** all 2013–2025 | extended to 2007–2025 in pipeline/16 |
+| Anti-ESG laws | ✅ **YES** all 2013–2025 | extended to 2010–2025 via new panel |
 | Federal grants | ⚠️ YES from **2015** onward; 2013–2014 NaN | raw starts 2013 |
 | Green bond outcomes/controls/nearby | ✅ YES all 2013–2025 | |
 
 For a regression using `_lag2` on the full 2013–2025 sample:
 - **Fiscal economic, TEL, presidential, state political** → no dropped observations.
-- **YCOM / climate policy / anti-ESG / federal grants** → rows 2013–2014 (or 2013–2015 for YCOM) will have NaN on those lags. Either drop those years from the regression or impute with constant "no information" values.
+- **Climate policy / anti-ESG / federal grants** → all 578 cities × 13 years fully populated (extensions cover 2007–2025, 2010–2025, and 2013–2025 respectively).
+- **YCOM climate opinion** → rows 2013–2015 will have NaN on `_lag2` because the raw series starts in 2014. Drop those years or switch to `_lag1` for ycom.
 - **`fiscal_stress_pca`, `pension_expenditure_burden`, `go_bond_share_*`** → avoid unless you're willing to lose substantial sample on the right tail.
 
 ### Recommendation for 2013–2025 analysis
@@ -369,19 +370,30 @@ a 10,982-row panel (578 cities × 19 years).
 | Variable | Public source | Coverage |
 |---|---|---|
 | `muni_aaa_yield` | Annual averages of S&P Municipal 10Y AAA / Bond Buyer 20-Bond GO Index from FRED, SIFMA, Bond Buyer, Raymond James, Eaton Vance market reports | 2007–2025 |
-| `c40_member` | C40.org membership documents, Wikipedia, Clinton Climate Initiative history | 2007–2025 for all US cities in the 578-city panel that are/were C40 members |
+| `c40_member` | Raw file values preserved for 2013–2023; 2007–2012 filled from hand-compiled C40 joining years; 2024–2025 carried forward from the 2023 set | 2007–2025 |
+| `mayors_climate_signatory` | Raw file values preserved for every 2013–2023 city-year present in the raw; missing city-years filled from the 53-city 2013 set (for years ≤ 2013) or 53-city 2023 set (for 2014+). 2007–2012 = 2013 set, 2024–2025 = 2023 set | 2007–2025 |
+| `iclei_member` | Same static-list treatment as `mayors_climate_signatory`: 42-city 2013 set for ≤ 2013, 42-city 2023 set for 2014+ | 2007–2025 |
+| `climate_commitment_score` | Recomputed as `c40_member + mayors_climate_signatory + iclei_member` — verified to match the raw file exactly on all 5,598 of its 2013–2023 rows | 2007–2025 |
 | `state_rps_active` | LBNL Berkeley Lab 2024 RPS Status Update, DSIRE, Wikipedia state RPS timelines | 2007–2025 |
 | `state_rps_target_pct` | Same as above; nominal final target % in law at each year | 2007–2025 |
 | `state_carbon_pricing` | RGGI member history (rggi.org), California cap-and-trade (CARB, 2013+), Washington cap-and-invest (2023+) | 2007–2025 |
 | `state_carbon_price` | RGGI annual auction-clearing averages (rggi.org), California annual settlement prices (CARB), Washington annual averages (Ecology) | 2007–2025 |
 | `state_climate_plan` | C2ES State Climate Action Plans, Sabin Center, Georgetown Climate Center, EPA CPRG 2024 Priority Climate Action Plans (45 states + DC) | 2007–2025 |
 
-**Variables NOT extended (kept as NaN outside 2013–2023):**
-- `mayors_climate_signatory` — requires scraping US Conference of Mayors
-  Climate Protection Agreement historical lists + Global Covenant of Mayors
-- `iclei_member` — requires Wayback Machine scraping of ICLEI USA rosters
-- `climate_commitment_score` — derived from the above, so recomputable only
-  when the components are extended
+**Note on the membership variables.** Precise year-by-year membership for the
+US Conference of Mayors Climate Protection Agreement and ICLEI USA would
+require scraping `web.archive.org`, which is not accessible from this
+environment. Because both panels are effectively stable across the 2013–2023
+window in the raw file (53/54 signatories, 42/43 ICLEI members) — with only
+minor artefacts such as Kansas City KS appearing from 2014 or Berkeley CA
+disappearing from the raw for some years — we extend them as **static lists**
+outside the raw window. The static fills use the 2013 set for 2007–2012 and
+the 2023 set for 2024–2025, matching the boundary where Kansas City KS joined
+(2014). The US Mayors agreement launched in February 2005 and most of the 53
+big-city signatories joined by 2007–2009, so back-filling the 2013 set to
+2007 is a defensible approximation. `climate_commitment_score` is then
+recomputed as the sum of the three binary indicators — a construction that
+matches the raw file's score exactly on all 5,598 rows it covers.
 
 **Key state-year values (cross-checks):**
 
