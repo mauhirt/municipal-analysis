@@ -121,6 +121,22 @@ For each focal city, nearby green bonds are those whose **issuer coordinates** (
 
 **Verification:** For each radius, `Nearby_NonState_Total` equals the sum of the six subcategory columns. Radii are monotonic: 10km ⊆ 25km ⊆ 50km.
 
+**⚠️ Known limitation — the 10 km radius is too tight for large cities.**
+The nearby-distance is computed from the focal city's **centroid** to the issuer's lat/lng. For geographically small cities this works fine, but for large-footprint cities (LA, SF, Chicago, Houston, Phoenix, etc.) a 10 km ring from the centroid falls well inside the city limits and misses nearby same-metro entities.
+
+Concrete example: for **Los Angeles**, the 10 km ring has **0 non-state bonds in every year**, while 25 km picks up 138 and 50 km picks up 385. Key LA-area entities sit at these distances from the LA centroid:
+
+| Entity | Distance from LA centroid |
+|---|---|
+| Monterey Park Financing Authority | 10.8 km |
+| LA County Sanitation Districts Financing Authority | 20.5 km |
+| LA County Metropolitan Transportation Authority | 39.0 km |
+| LA County Public Works Financing Authority | 39.0 km |
+
+**Practical implication:** Use the **25 km or 50 km** variables as the working diffusion/learning controls. The 10 km variable is retained in the panel for completeness and for small-to-medium cities where it is meaningful, but it will be near-zero for the largest cities and should not be used as the primary control for them.
+
+A more principled fix would be to compute the distance from the focal city's **boundary polygon** (TIGER shapefile) rather than the centroid, so that any bond inside the city + within 10 km of the boundary counts. That change requires adding geopandas + TIGER place boundaries and has not been implemented. Let me know if you want me to add it.
+
 ---
 
 ### 2.3 Component files (kept for provenance)
