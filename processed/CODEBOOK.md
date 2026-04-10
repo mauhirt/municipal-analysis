@@ -222,45 +222,98 @@ For each variable, `lag1` and `lag2` are computed from the **raw data frame** (w
 contain year Y, the contemporaneous `X` column at Y is **NaN**. The user
 should rely on `X_lag1` or `X_lag2` instead.
 
-### ⚠️ Raw-data end-year constraints
+### Verified availability matrix (number of cities with non-null data out of 578)
 
-Although the fiscal file is named `fiscal_tel_merged_2007_2024`, the actual
-Census fiscal data for most variables **ends at 2023** (Census of Governments
-publishes with a ~18-month lag, so 2024 fiscal numbers are not yet
-available). Only the TEL (tax/expenditure limit) variables actually extend
-through 2024.
+The lag logic does a proper **cross-year merge**: `{var}_lag1` at outcome year Y pulls `raw[fips, Y-1]`, and `{var}_lag2` at Y pulls `raw[fips, Y-2]`. So when the raw data has year Y-1 or Y-2, the panel is populated for that outcome year.
 
-**Last year with real data, by variable group in the fiscal file:**
+**Fiscal — core economic variables** (`population_city`, `percapita_income_city`, `total_revenue_pc`, `own_source_rev_pc`, `debt_pc`, `property_tax_share`, `fiscal_stress_index`, `debt_to_revenue`, etc.). Raw ends at **2023** (Census of Governments publishing lag).
 
-| Variable group | Last year | Notes |
+| Outcome year | 2013 | 2014 | 2015 | 2016 | 2017 | 2018 | 2019 | 2020 | 2021 | 2022 | 2023 | 2024 | 2025 |
+|---|---|---|---|---|---|---|---|---|---|---|---|---|---|
+| contemp | 577 | 577 | 577 | 577 | 577 | 577 | 577 | 577 | 577 | 577 | 577 | **0** | **0** |
+| **lag1** | 577 | 577 | 577 | 577 | 577 | 577 | 577 | 577 | 577 | 577 | 577 | 577 | **0** |
+| **lag2** | 577 | 577 | 577 | 577 | 577 | 577 | 577 | 577 | 577 | 577 | 577 | 577 | **577** |
+
+**Fiscal — `fiscal_stress_pca`**. Raw ends at **2021**.
+
+| Outcome year | 2013 | 2014 | 2015 | 2016 | 2017 | 2018 | 2019 | 2020 | 2021 | 2022 | 2023 | 2024 | 2025 |
+|---|---|---|---|---|---|---|---|---|---|---|---|---|---|
+| contemp | 577 | 577 | 577 | 576 | 574 | 573 | 575 | 575 | 574 | 0 | 0 | 0 | 0 |
+| lag1 | 577 | 577 | 577 | 577 | 576 | 574 | 573 | 575 | 575 | 574 | 0 | 0 | 0 |
+| lag2 | 577 | 577 | 577 | 577 | 577 | 576 | 574 | 573 | 575 | 575 | 574 | 0 | 0 |
+
+**TEL variables** (`tel_stringency_*`, `tel_levy_limit`, etc.). Raw ends at **2024**.
+
+| Outcome year | 2013 | 2014 | 2015 | 2016 | 2017 | 2018 | 2019 | 2020 | 2021 | 2022 | 2023 | 2024 | 2025 |
+|---|---|---|---|---|---|---|---|---|---|---|---|---|---|
+| contemp | 578 | 578 | 578 | 578 | 578 | 578 | 578 | 578 | 578 | 578 | 578 | 578 | 0 |
+| **lag1** | 578 | 578 | 578 | 578 | 578 | 578 | 578 | 578 | 578 | 578 | 578 | 578 | **578** |
+| **lag2** | 578 | 578 | 578 | 578 | 578 | 578 | 578 | 578 | 578 | 578 | 578 | 578 | **578** |
+
+**Census additional — presidential vote share, state political, opinion subset** (`pres_dem_two_party_share`, `state_dem_governor`, `opinion_happening`, etc.). Raw ends at **2024**.
+
+| Outcome year | 2013 | 2014 | 2015 | 2016 | 2017 | 2018 | 2019 | 2020 | 2021 | 2022 | 2023 | 2024 | 2025 |
+|---|---|---|---|---|---|---|---|---|---|---|---|---|---|
+| contemp | 577 | 577 | 577 | 577 | 577 | 577 | 577 | 577 | 577 | 577 | 577 | 576 | 0 |
+| **lag1** | 577 | 577 | 577 | 577 | 577 | 577 | 577 | 577 | 577 | 577 | 577 | 577 | **576** |
+| **lag2** | 577 | 577 | 577 | 577 | 577 | 577 | 577 | 577 | 577 | 577 | 577 | 577 | **577** |
+
+**YCOM climate opinion** (`ycom_*`). Raw file has years 2013–2023 but the opinion variables start at **2014** (2013 rows exist but are NaN).
+
+| Outcome year | 2013 | 2014 | 2015 | 2016 | 2017 | 2018 | 2019 | 2020 | 2021 | 2022 | 2023 | 2024 | 2025 |
+|---|---|---|---|---|---|---|---|---|---|---|---|---|---|
+| contemp | **0** | 470 | 475 | 477 | 556 | 484 | 509 | 515 | 516 | 569 | 517 | 0 | 0 |
+| lag1 | 0 | 0 | 470 | 475 | 477 | 556 | 484 | 509 | 515 | 516 | 569 | 517 | 0 |
+| **lag2** | 0 | 0 | 0 | 470 | 475 | 477 | 556 | 484 | 509 | 515 | 516 | 569 | **517** |
+
+**Climate policy controls** (`c40_member`, `mayors_climate_signatory`, `muni_aaa_yield`, state RPS/carbon). Raw ends at **2023**; some vars start at 2013, others at 2014.
+
+| Outcome year | 2013 | 2014 | 2015 | 2016 | 2017 | 2018 | 2019 | 2020 | 2021 | 2022 | 2023 | 2024 | 2025 |
+|---|---|---|---|---|---|---|---|---|---|---|---|---|---|
+| contemp | 510 | 470 | 475 | 477 | 556 | 484 | 509 | 515 | 516 | 569 | 517 | 0 | 0 |
+| lag1 | 0 | 510 | 470 | 475 | 477 | 556 | 484 | 509 | 515 | 516 | 569 | 517 | 0 |
+| **lag2** | 0 | 0 | 510 | 470 | 475 | 477 | 556 | 484 | 509 | 515 | 516 | 569 | **517** |
+
+**Anti-ESG laws** (`esg_*`). Raw ends at **2023**.
+
+| Outcome year | 2013 | 2014 | 2015 | 2016 | 2017 | 2018 | 2019 | 2020 | 2021 | 2022 | 2023 | 2024 | 2025 |
+|---|---|---|---|---|---|---|---|---|---|---|---|---|---|
+| contemp | 511 | 471 | 476 | 478 | 557 | 485 | 510 | 516 | 517 | 570 | 518 | 0 | 0 |
+| lag1 | 0 | 511 | 471 | 476 | 478 | 557 | 485 | 510 | 516 | 517 | 570 | 518 | 0 |
+| **lag2** | 0 | 0 | 511 | 471 | 476 | 478 | 557 | 485 | 510 | 516 | 517 | 570 | **518** |
+
+**Federal grants** (IIJA/IRA/EECBG/GGRF/FEMA resilience). Raw ends at **2025** — contemporaneous and all lags available throughout.
+
+| Outcome year | 2013 | 2014 | 2015 | 2016 | 2017 | 2018 | 2019 | 2020 | 2021 | 2022 | 2023 | 2024 | 2025 |
+|---|---|---|---|---|---|---|---|---|---|---|---|---|---|
+| contemp | 578 | 578 | 578 | 578 | 578 | 578 | 578 | 578 | 578 | 578 | 578 | 578 | 578 |
+| lag1 | 0 | 578 | 578 | 578 | 578 | 578 | 578 | 578 | 578 | 578 | 578 | 578 | 578 |
+| lag2 | 0 | 0 | 578 | 578 | 578 | 578 | 578 | 578 | 578 | 578 | 578 | 578 | 578 |
+
+**Green bond outcomes, state controls, and nearby controls** — all 578 cities × all 13 years, no missing.
+
+**NRI hazards** — time-invariant, merged once across the panel.
+
+### Summary: is `_lag2` sufficient for 2013–2025?
+
+| Variable group | Can use `_lag2` 2013–2025? | Notes |
 |---|---|---|
-| `population_city`, `unemployment_city`, `percapita_income_city`, `totalincome_city` | **2023** | 577/578 |
-| `total_revenue_pc`, `own_source_rev_pc`, `debt_pc`, `capital_outlay_pc`, share vars | **2023** | 522–525/578 |
-| `fiscal_stress_index`, `debt_to_revenue`, `debt_affordability`, fiscal health | **2023** | 513–524/578 |
-| `capital_stock_pc` | **2024** | 525/578 — rare exception |
-| `fiscal_stress_pca` | **2021** | ends earlier due to PCA input limits |
-| `pension_expenditure_burden` | **2016** | historical only |
-| `go_bond_share_outstanding`, `go_bond_share_issuance` | **2012** | historical only |
-| **All TEL variables** (`tel_*`) | **2024** | 578/578 — fully available |
+| Fiscal core economic vars | ✅ **YES** (577 at Y=2025) | lag2 = raw 2023 |
+| `fiscal_stress_pca` | ❌ No (ends at 2023 outcome) | raw ends 2021 |
+| `pension_expenditure_burden` | ❌ No (ends at 2018 outcome) | raw ends 2016 |
+| `go_bond_share_*` | ❌ No | raw ends 2012 |
+| TEL variables | ✅ YES (578 at Y=2025) | |
+| Presidential vote share, state political (census add) | ✅ YES (577 at Y=2025) | |
+| YCOM climate opinion | ⚠️ YES from **2016** onward; 2013–2015 NaN | raw starts 2014 |
+| Climate policy (C40, RPS, etc.) | ⚠️ YES from **2015** onward; 2013–2014 NaN | raw starts 2013 but lag2 needs 2013 for 2015 |
+| Anti-ESG laws | ⚠️ YES from **2015** onward; 2013–2014 NaN | same |
+| Federal grants | ⚠️ YES from **2015** onward; 2013–2014 NaN | raw starts 2013 |
+| Green bond outcomes/controls/nearby | ✅ YES all 2013–2025 | |
 
-**Implication for outcome year 2025:** For most fiscal economic variables,
-`lag1` at Y=2025 would need 2024 data (which raw does not have) → NaN.
-Use `lag2` instead: at Y=2025, lag2 = raw 2023 value (real).
-
-### Data end years across all sources
-
-| Source | Raw end year | lag1 at 2025? | lag2 at 2025? |
-|---|---|---|---|
-| Fiscal economic vars (`fiscal_tel_merged_2007_2024`) | 2023 | ❌ NaN | ✅ real 2023 |
-| TEL vars (same file) | 2024 | ✅ real 2024 | ✅ real 2023 |
-| Census additional (`additional_city_variables_2010_2024`) | 2024 | ✅ real 2024 | ✅ real 2023 |
-| YCOM climate opinion | 2023 | ❌ NaN | ✅ real 2023 |
-| Climate policy | 2023 | ❌ NaN | ✅ real 2023 |
-| Anti-ESG laws | 2023 | ❌ NaN | ✅ real 2023 |
-| Other state political | 2023 | ❌ NaN | ✅ real 2023 |
-| Federal grants | 2025 | ✅ real 2024 | ✅ real 2023 |
-| Green bond controls | 2025 | ✅ | ✅ |
-| NRI hazards | time-invariant | — | — |
+For a regression using `_lag2` on the full 2013–2025 sample:
+- **Fiscal economic, TEL, presidential, state political** → no dropped observations.
+- **YCOM / climate policy / anti-ESG / federal grants** → rows 2013–2014 (or 2013–2015 for YCOM) will have NaN on those lags. Either drop those years from the regression or impute with constant "no information" values.
+- **`fiscal_stress_pca`, `pension_expenditure_burden`, `go_bond_share_*`** → avoid unless you're willing to lose substantial sample on the right tail.
 
 ### Recommendation for 2013–2025 analysis
 

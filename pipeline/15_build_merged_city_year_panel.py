@@ -50,11 +50,15 @@ print(f"Skeleton: {skeleton.shape}")
 
 
 def attach(panel, raw, raw_fips, raw_year, cols, source_label):
-    """Merge raw (fips, year) data with lag1/lag2 computed from raw.
+    """Merge raw (fips, year) data with lag1/lag2.
+
+    Lags are computed via three separate merges so lag1 at outcome year Y
+    equals raw[fips, year=Y-1] and lag2 at Y equals raw[fips, year=Y-2],
+    regardless of whether raw has a row at year Y itself.
 
     No carry-forward: contemporaneous values that aren't in raw become NaN.
-    Lag values are computed from the FULL raw frame (which may extend
-    before 2013), so early-outcome-year lags are real pre-sample data.
+    Lag values are populated whenever raw has a row at year Y-L, which for
+    pre-2013 raw data means 2013-2014 outcome years get real pre-sample lags.
     """
     r = raw[[raw_fips, raw_year] + cols].copy()
     r[raw_fips] = pd.to_numeric(r[raw_fips], errors="coerce").astype("Int64")
@@ -64,17 +68,21 @@ def attach(panel, raw, raw_fips, raw_year, cols, source_label):
     r["FIPS"] = r["FIPS"].astype(int)
     r["Year"] = r["Year"].astype(int)
 
-    # Compute lags on the full raw frame (before year-window filter)
-    r = r.sort_values(["FIPS", "Year"]).reset_index(drop=True)
-    for c in cols:
-        r[f"{c}_lag1"] = r.groupby("FIPS")[c].shift(1)
-        r[f"{c}_lag2"] = r.groupby("FIPS")[c].shift(2)
+    # Contemporaneous merge: panel[Y] gets raw[Y]
+    out = panel.merge(r, on=["FIPS", "Year"], how="left")
 
-    # Merge; raw_last_year is recorded as metadata on the panel
-    keep = ["FIPS", "Year"] + cols + [f"{c}_lag1" for c in cols] + [f"{c}_lag2" for c in cols]
-    out = panel.merge(r[keep], on=["FIPS", "Year"], how="left")
+    # Lag1 merge: panel[Y] gets raw[Y-1]
+    r_lag1 = r.copy()
+    r_lag1["Year"] = r_lag1["Year"] + 1  # shift raw year forward so raw[2012] aligns with outcome[2013]
+    r_lag1 = r_lag1.rename(columns={c: f"{c}_lag1" for c in cols})
+    out = out.merge(r_lag1, on=["FIPS", "Year"], how="left")
 
-    # Record the last raw year available for this source (for documentation)
+    # Lag2 merge: panel[Y] gets raw[Y-2]
+    r_lag2 = r.copy()
+    r_lag2["Year"] = r_lag2["Year"] + 2
+    r_lag2 = r_lag2.rename(columns={c: f"{c}_lag2" for c in cols})
+    out = out.merge(r_lag2, on=["FIPS", "Year"], how="left")
+
     out.attrs[f"{source_label}_last_year"] = int(r["Year"].max())
     return out
 
