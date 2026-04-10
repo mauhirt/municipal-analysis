@@ -1,17 +1,28 @@
 """
 Build a unified, lag-friendly city-year panel for the 2013-2025 outcome period.
 
-Strategy (Option B — lagged controls):
+Strategy (Option B — lagged controls, no carry-forward):
   - Outcome variables span 2013-2025.
-  - For controls, we prefer REAL pre-2013 data where it exists (fiscal
-    2007+, census 2010+, mayor 2010+) so that lag-1 and lag-2 for 2013-2014
-    are legitimate, not imputed.
-  - For controls that end before 2025 (mostly at 2023), we CARRY FORWARD
-    the last observed value so lag-1 for outcome year Y+1 is just the
-    last-observed value. A boolean `{var}_is_carried_forward` flag is
-    added so the user can drop or weight those rows.
-  - Each non-constant control `X` gets three columns: `X`, `X_lag1`, `X_lag2`.
-  - NRI hazard variables are time-invariant → merged once, no lag.
+  - For each control variable, compute lag1 and lag2 from the RAW data
+    frame (which may extend back to 2007 for fiscal, 2010 for census)
+    BEFORE filtering to 2013-2025. So lag1/lag2 for early outcome years
+    are real pre-sample observations.
+  - Contemporaneous values at year Y are the actual Y values from the raw
+    file. If the raw file does not cover Y (e.g., fiscal ends 2024), the
+    contemporaneous column is NaN — but lag1 at Y=2025 is the real 2024
+    value, so the user can still use lagged RHS at 2025.
+  - Availability matrix by outcome year:
+      Fiscal + TEL (raw 2007-2024):
+        contemporaneous: 2013-2024 real, 2025 NaN
+        lag1: 2013-2025 real (lag1 at 2025 = raw 2024)
+        lag2: 2013-2025 real (lag2 at 2025 = raw 2023)
+      Census additional (raw 2010-2024): same as fiscal
+      Climate / anti-ESG / state political (raw 2013-2023):
+        contemporaneous: 2013-2023 real, 2024-2025 NaN
+        lag1: 2014-2024 real, 2025 NaN
+        lag2: 2015-2025 real (lag2 at 2025 = raw 2023)
+      Federal grants (raw 2013-2025):
+        contemporaneous, lag1, lag2: all available
 
 Output:
   processed/merged_city_year_panel.{csv,xlsx}
@@ -38,18 +49,12 @@ skeleton = (
 print(f"Skeleton: {skeleton.shape}")
 
 
-def attach(panel, raw, raw_fips, raw_year, cols, source_label, carry_forward_end=None):
-    """Merge raw (fips, year) data onto the panel with lag and carry-forward.
+def attach(panel, raw, raw_fips, raw_year, cols, source_label):
+    """Merge raw (fips, year) data with lag1/lag2 computed from raw.
 
-    Parameters
-    ----------
-    panel : DataFrame with columns [FIPS, Year, ...]
-    raw : DataFrame with fips and year columns and control variables
-    raw_fips, raw_year : key names in raw
-    cols : list of variable columns from raw to include
-    source_label : short label used in the carry-forward flag name
-    carry_forward_end : last year in raw; years > this get carry-forward values.
-                        If None, no carry-forward is done.
+    No carry-forward: contemporaneous values that aren't in raw become NaN.
+    Lag values are computed from the FULL raw frame (which may extend
+    before 2013), so early-outcome-year lags are real pre-sample data.
     """
     r = raw[[raw_fips, raw_year] + cols].copy()
     r[raw_fips] = pd.to_numeric(r[raw_fips], errors="coerce").astype("Int64")
@@ -59,27 +64,19 @@ def attach(panel, raw, raw_fips, raw_year, cols, source_label, carry_forward_end
     r["FIPS"] = r["FIPS"].astype(int)
     r["Year"] = r["Year"].astype(int)
 
-    # Build a lookup table and compute lags from the raw frame (which may
-    # extend before 2013), so lag-1/lag-2 for early outcome years are real.
+    # Compute lags on the full raw frame (before year-window filter)
     r = r.sort_values(["FIPS", "Year"]).reset_index(drop=True)
     for c in cols:
         r[f"{c}_lag1"] = r.groupby("FIPS")[c].shift(1)
         r[f"{c}_lag2"] = r.groupby("FIPS")[c].shift(2)
 
-    # Carry forward to fill post-end years for contemporaneous values
-    if carry_forward_end is not None and carry_forward_end < 2025:
-        last = r[r["Year"] == carry_forward_end].copy()
-        for extra_year in range(carry_forward_end + 1, 2026):
-            ext = last.copy()
-            ext["Year"] = extra_year
-            r = pd.concat([r, ext], ignore_index=True)
-        r[f"__{source_label}_carry_forward"] = (r["Year"] > carry_forward_end).astype(int)
-    else:
-        r[f"__{source_label}_carry_forward"] = 0
+    # Merge; raw_last_year is recorded as metadata on the panel
+    keep = ["FIPS", "Year"] + cols + [f"{c}_lag1" for c in cols] + [f"{c}_lag2" for c in cols]
+    out = panel.merge(r[keep], on=["FIPS", "Year"], how="left")
 
-    # Now merge onto panel
-    keep = ["FIPS", "Year"] + cols + [f"{c}_lag1" for c in cols] + [f"{c}_lag2" for c in cols] + [f"__{source_label}_carry_forward"]
-    return panel.merge(r[keep], on=["FIPS", "Year"], how="left")
+    # Record the last raw year available for this source (for documentation)
+    out.attrs[f"{source_label}_last_year"] = int(r["Year"].max())
+    return out
 
 
 panel = skeleton.copy()
@@ -125,7 +122,7 @@ fiscal_cols = [
 ]
 fiscal_cols = [c for c in fiscal_cols if c in fiscal.columns]
 print(f"  Using {len(fiscal_cols)} fiscal columns (fiscal file uses entity_id as the FIPS key — fips7 is only populated 2007-2012)")
-panel = attach(panel, fiscal, "entity_id", "year", fiscal_cols, "fiscal", carry_forward_end=2024)
+panel = attach(panel, fiscal, "entity_id", "year", fiscal_cols, "fiscal")
 
 # ---------------------------------------------------------------------------
 # 2. Census additional city variables (2010-2024)
@@ -142,7 +139,7 @@ add_cols = [
     "pres_dem_two_party_share", "pres_dem_vote_share", "pres_rep_vote_share",
 ]
 add_cols = [c for c in add_cols if c in add.columns]
-panel = attach(panel, add, "fips", "Year", add_cols, "census_add", carry_forward_end=2024)
+panel = attach(panel, add, "fips", "Year", add_cols, "census_add")
 
 # ---------------------------------------------------------------------------
 # 3. SKIPPED: economic_bls_acs — these variables are already included in
@@ -160,7 +157,7 @@ climate_cols = [c for c in climate.columns if c.startswith("opinion_")]
 # with 'ycom_' to keep the sources distinct
 climate = climate.rename(columns={c: f"ycom_{c}" for c in climate_cols})
 climate_cols = [f"ycom_{c}" for c in climate_cols]
-panel = attach(panel, climate, "fips7", "year", climate_cols, "ycom", carry_forward_end=2023)
+panel = attach(panel, climate, "fips7", "year", climate_cols, "ycom")
 
 # ---------------------------------------------------------------------------
 # 5. Climate policy controls (2013-2023)
@@ -174,7 +171,7 @@ cpol_cols = [
     "state_carbon_pricing", "state_carbon_price", "state_climate_plan",
 ]
 cpol_cols = [c for c in cpol_cols if c in cpol.columns]
-panel = attach(panel, cpol, "fips7", "year", cpol_cols, "cpol", carry_forward_end=2023)
+panel = attach(panel, cpol, "fips7", "year", cpol_cols, "cpol")
 
 # ---------------------------------------------------------------------------
 # 6. Anti-ESG laws (2013-2023)
@@ -182,7 +179,7 @@ panel = attach(panel, cpol, "fips7", "year", cpol_cols, "cpol", carry_forward_en
 print("\n[6/10] Loading anti-esg laws...")
 esg = pd.read_csv(RAW / "political" / "antiesg_laws.csv")
 esg_cols = [c for c in esg.columns if c.startswith("esg_")]
-panel = attach(panel, esg, "fips7", "year", esg_cols, "antiesg", carry_forward_end=2023)
+panel = attach(panel, esg, "fips7", "year", esg_cols, "antiesg")
 
 # ---------------------------------------------------------------------------
 # 7. Political state (2013-2023)
@@ -198,7 +195,7 @@ already_in_census_add = {
 }
 pol_cols = [c for c in pol.columns
             if c not in ("year", "fips7", "city_name") and c not in already_in_census_add]
-panel = attach(panel, pol, "fips7", "year", pol_cols, "pol_state", carry_forward_end=2023)
+panel = attach(panel, pol, "fips7", "year", pol_cols, "pol_state")
 
 # ---------------------------------------------------------------------------
 # 8. SKIPPED: TEL institutional — all TEL variables are already in
@@ -214,7 +211,7 @@ print("\n[9/10] Loading federal grants...")
 fg = pd.read_csv(RAW / "grants" / "federal_grants_panel.csv")
 fg_cols = [c for c in fg.columns
            if c not in ("fips7", "year") and not c.endswith(("_lag1", "_lag2", "_cum"))]
-panel = attach(panel, fg, "fips7", "year", fg_cols, "fed_grants", carry_forward_end=None)
+panel = attach(panel, fg, "fips7", "year", fg_cols, "fed_grants")
 
 # ---------------------------------------------------------------------------
 # 10. NRI — time-invariant, merge once
