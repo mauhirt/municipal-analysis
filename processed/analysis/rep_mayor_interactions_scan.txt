@@ -1,0 +1,61 @@
+===================================================================================================================
+Rep_Mayor_lag1 interaction scan — what moderates the partisan gap?
+===================================================================================================================
+
+For each candidate moderator Z, fit:
+  Green_Bond_Issued ~ Rep_Mayor_lag1 * Z + base_controls + C(State) + C(Year)
+SE clustered at FIPS. LPM. Sample: 2013-2025, N varies by moderator availability.
+
+Rank Category        Moderator                               β (int)        SE       p            N
+-------------------------------------------------------------------------------------------------------------------
+   1 Fiscal          Charges / own-source                   -0.15355   0.04066  0.0002 ***     5564
+   2 Structural      Benchmarking adopted                   -0.20124   0.05791  0.0005 ***     5564
+   3 Physical        NFIP repetitive loss                    0.00001   0.00000  0.0013 **      5564
+   4 Fiscal          log CWNS needs                         -0.01354   0.00484  0.0052 **      5564
+   5 Structural      log Population (lag2)                  -0.03180   0.01244  0.0106 *       5564
+   6 Peer            log State water cumul (ex-city)        -0.00132   0.00060  0.0286 *       5564
+   7 Institutional   State green bond ever                  -0.02333   0.01081  0.0308 *       5564
+   8 Institutional   State Dem governor                     -0.02954   0.01437  0.0397 *       5564
+   9 Fiscal          Fiscal stress PCA (lag2)               -0.00909   0.00444  0.0405 *       5558
+  10 Institutional   State Rep trifecta                      0.02657   0.01412  0.0598 †       5564
+  11 Climate policy  Muni AAA 10Y yield                      0.01381   0.00742  0.0626 †       5564
+  12 Institutional   State has bond bank                    -0.02993   0.01675  0.0740 †       5564
+  13 Climate policy  State carbon price USD                 -0.00182   0.00107  0.0907 †       5564
+  14 Climate policy  State CA cap-and-trade                 -0.03864   0.02321  0.0960 †       5564
+  15 Peer            log Nearby water 25km cumul            -0.00098   0.00059  0.0972 †       5564
+  16 Compulsion      NPDES formal prior3yr                  -0.02455   0.01485  0.0983 †       5564
+  17 Temporal        Year (z-scored)                        -0.00750   0.00469  0.1102         5564
+  18 Climate policy  State RPS target %                     -0.00043   0.00027  0.1104         5564
+  19 Fiscal          Budget flexibility squeeze             -0.25806   0.16560  0.1192         5558
+  20 Structural      log PCI (lag2)                         -0.03164   0.02113  0.1344         5564
+  21 Climate policy  State climate plan (legacy)            -0.02268   0.01529  0.1382         5564
+  22 Institutional   Signed Utah anti-ESG letter             0.01923   0.01412  0.1733         5564
+  23 Institutional   State GO voter approval req            -0.05680   0.04559  0.2128         5564
+  24 Fiscal          log CWSRF obligations                  -0.00399   0.00326  0.2212         5564
+  25 Climate policy  State PCAP (2024)                      -0.00000   0.00000  0.2406         5564
+  26 Compulsion      Overflow events lag2                   -0.00000   0.00000  0.2406         5564
+  27 Fiscal          Debt service burden (lag2)             -0.10427   0.09128  0.2533         5558
+  28 Fiscal          Reserve ratio (lag2)                   -0.01423   0.01301  0.2740         5564
+  29 Structural      BPS adopted (bcode)                    -0.06699   0.06303  0.2878         5564
+  30 ESG legislation Number of anti-ESG laws                 0.00705   0.00689  0.3063         5564
+  31 Institutional   State has muni bond law                 0.01736   0.01795  0.3335         5564
+  32 Structural      Has substitute issuer                  -0.01697   0.01850  0.3589         5564
+  33 Compulsion      Water violations asinh                 -0.00309   0.00383  0.4205         5564
+  34 Climate policy  State RGGI member                       0.00780   0.00988  0.4298         5564
+  35 Fiscal          Pct deficient bridges                  -0.00042   0.00053  0.4362         5564
+  36 Structural      Has muni electric utility              -0.01539   0.02310  0.5053         5564
+  37 Compulsion      All EPA cases prior3yr                 -0.00723   0.01204  0.5484         5564
+  38 Physical        FEMA disaster count (lag2)              0.00257   0.00458  0.5743         5564
+  39 Structural      Unemployment (lag2)                     0.00114   0.00209  0.5848         5564
+  40 Fiscal          TEL stringency                         -0.00016   0.00039  0.6798         5564
+  41 Physical        FEMA disaster any (lag2)               -0.00241   0.00890  0.7868         5564
+  42 Institutional   State const debt limit                  0.00306   0.01168  0.7935         5564
+  43 Structural      State BPS adopted                       0.01559   0.06087  0.7979         5564
+  44 Compulsion      SDWA events asinh                      -0.00239   0.02118  0.9102         5564
+-------------------------------------------------------------------------------------------------------------------
+Of 44 moderators tested:
+  p < 0.01 : 4
+  p < 0.05 : 9
+  p < 0.10 : 16
+  Bonferroni 0.05 threshold: 0.0011
+  Surviving Bonferroni: 2
