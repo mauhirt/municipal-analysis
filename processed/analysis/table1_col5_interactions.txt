@@ -1,0 +1,41 @@
+==============================================================================================================
+TABLE 1 Col 5 — Interaction panel
+Testing the compulsion × distress × Rep_Mayor story
+==============================================================================================================
+
+Six specifications (all with State + Year FE, city-clustered SEs):
+  M1: baseline (no interactions)
+  M2: compulsion × distress (Family 1a × 1b)
+  M3: compulsion × Rep_Mayor (Family 1a × 2)
+  M4: compulsion × Rep × distress TRIPLE (memo Col 5 target)
+  M5: all 2-way interactions without triple
+  M6: horse race — NPDES formal vs water_violations_asinh
+
+term                                                   M1          M2          M3          M4          M5          M6
+                                                     base         C×D         C×R      triple       2-way       horse
+------------------------------------------------------------------------------------------------------------------------
+Water violations asinh (lag2)                    0.00569*    0.00565*    0.00709*    0.00664†    0.00663†    0.00540†
+                                                (0.00264)   (0.00261)   (0.00355)   (0.00352)   (0.00356)   (0.00327)
+NPDES formal prior3yr (muni)                                                                                  0.01425
+                                                                                                            (0.01333)
+Rep Mayor (lag 1)                              -0.01742**  -0.01730**    -0.01223    -0.01370    -0.01370   -0.01368†
+                                                (0.00569)   (0.00567)   (0.00784)   (0.00838)   (0.00836)   (0.00827)
+Fiscal stress PCA (lag 2)                         0.00068    -0.00014     0.00076     0.00460     0.00451     0.00440
+                                                (0.00229)   (0.00322)   (0.00228)   (0.00562)   (0.00422)   (0.00431)
+Water viol × Rep                                                         -0.00350    -0.00240    -0.00237     0.00009
+                                                                        (0.00430)   (0.00438)   (0.00452)   (0.00451)
+Water viol × distress                                         0.00047                 0.00022     0.00027    -0.00020
+                                                            (0.00146)               (0.00251)   (0.00143)   (0.00139)
+Rep × distress                                                                       -0.00964   -0.00947†   -0.00941†
+                                                                                    (0.00702)   (0.00508)   (0.00513)
+Water viol × Rep × distress (TRIPLE)                                                  0.00010                        
+                                                                                    (0.00258)                        
+NPDES formal × Rep                                                                                           -0.02732
+                                                                                                            (0.01713)
+NPDES formal × distress                                                                                       0.00602
+                                                                                                            (0.00588)
+N                                                    4993        4993        4993        4993        4993        4993
+R²                                                 0.0956      0.0956      0.0958      0.0977      0.0977      0.0988
+------------------------------------------------------------------------------------------------------------------------
+Stars: † p<0.10, * p<0.05, ** p<0.01, *** p<0.001
+Sample: 4993 city-years, 2015-2023 (bounded by fiscal_stress_pca_lag2 raw ending 2021)
