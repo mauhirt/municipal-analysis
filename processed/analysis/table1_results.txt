@@ -1,0 +1,71 @@
+====================================================================================================
+TABLE 1 — The Compulsion Pipeline
+Paper: When Do Red and Blue Go Green?
+====================================================================================================
+
+Hypotheses: H1a (compulsion drives issuance regardless of party)
+            H1b (Rep_Mayor null at extensive margin conditional on compulsion)
+
+variable                                                 C1            C2            C3            C4            C5
+                                                  Bloomberg   asinh green    Self-green    asinh self    Triple int
+--------------------------------------------------------------------------------------------------------------
+NPDES formal x prior3yr (muni)                       0.0088        0.1893        0.0122        0.2444        0.0198
+                                                   (0.0085)      (0.1612)      (0.0078)      (0.1490)      (0.0142)
+Overflow events (muni)                                                                                     -0.0053*
+                                                                                                           (0.0026)
+Rep Mayor (lag 1)                                 -0.0177**     -0.3206**     -0.0135**      -0.2421*      -0.0138*
+                                                   (0.0057)      (0.1050)      (0.0051)      (0.0951)      (0.0059)
+Charges / own-source revenue                      0.1011***     1.8469***      0.0779**      1.4271**     0.0945***
+                                                   (0.0299)      (0.5451)      (0.0282)      (0.5137)      (0.0285)
+Reserve ratio (lag 2)                                0.0085        0.1420        0.0085        0.1432        0.0085
+                                                   (0.0071)      (0.1225)      (0.0069)      (0.1188)      (0.0076)
+TEL stringency (normalized)                        0.0011**      0.0213**       0.0008†       0.0153*       0.0010*
+                                                   (0.0004)      (0.0078)      (0.0004)      (0.0078)      (0.0004)
+log CWSRF obligations (lag 2)                       -0.0009       -0.0163       -0.0011       -0.0204       -0.0008
+                                                   (0.0013)      (0.0238)      (0.0013)      (0.0235)      (0.0013)
+log CWNS needs (lag 2)                               0.0001       -0.0012        0.0000        0.0005       -0.0001
+                                                   (0.0042)      (0.0783)      (0.0040)      (0.0761)      (0.0042)
+Pct deficient (lag 2)                                0.0001        0.0022        0.0002        0.0033        0.0001
+                                                   (0.0003)      (0.0061)      (0.0003)      (0.0055)      (0.0003)
+log Population (lag 2)                            0.0384***     0.7336***      0.0313**      0.5991**     0.0354***
+                                                   (0.0095)      (0.1864)      (0.0096)      (0.1883)      (0.0091)
+log Per-capita income (lag 2)                       0.0457*       0.9067*        0.0320        0.6657       0.0459*
+                                                   (0.0217)      (0.4301)      (0.0214)      (0.4272)      (0.0216)
+Unemployment (lag 2)                                0.0039†       0.0702†        0.0020        0.0389       0.0043*
+                                                   (0.0021)      (0.0381)      (0.0017)      (0.0310)      (0.0021)
+Has substitute issuer                                0.0010       -0.0018        0.0016        0.0124        0.0015
+                                                   (0.0131)      (0.2522)      (0.0127)      (0.2449)      (0.0132)
+State green bond ever (lag 1)                        0.0160        0.3011        0.0112        0.2121        0.0163
+                                                   (0.0102)      (0.1864)      (0.0101)      (0.1848)      (0.0106)
+State has muni bond law                            -0.0138†      -0.2879†       -0.0116      -0.2406†      -0.0145†
+                                                   (0.0083)      (0.1564)      (0.0074)      (0.1419)      (0.0086)
+State Rep trifecta                                  -0.0125       -0.2127       -0.0066       -0.1122       -0.0111
+                                                   (0.0079)      (0.1378)      (0.0057)      (0.1031)      (0.0081)
+NPDES × Rep                                                                                                 -0.0269
+                                                                                                           (0.0164)
+Overflow × Rep                                                                                               0.0045
+                                                                                                           (0.0031)
+NPDES × fiscal_stress                                                                                        0.0056
+                                                                                                           (0.0095)
+Rep × fiscal_stress                                                                                         -0.0094
+                                                                                                           (0.0058)
+NPDES × Rep × fiscal_stress (TRIPLE)                                                                        -0.0000
+                                                                                                           (0.0106)
+Fiscal stress PCA (lag 2)                                                                                    0.0046
+                                                                                                           (0.0042)
+N                                                      4999          4999          4999          4999          4993
+R²                                                   0.0944        0.0997        0.0925        0.0969        0.0978
+State FE                                                Yes           Yes           Yes           Yes           Yes
+Year FE                                                 Yes           Yes           Yes           Yes           Yes
+City clustering                                         Yes           Yes           Yes           Yes           Yes
+--------------------------------------------------------------------------------------------------------------
+Stars: † p<0.10, * p<0.05, ** p<0.01, *** p<0.001
+All columns: State + Year FE, standard errors clustered at city (FIPS)
+Cols 1-4: N=4999, window 2015-2025
+Col 5:    N=4993, window 2015-2023 (fiscal_stress_pca_lag2 restricts)
+
+Memo hypothesis predictions:
+  C1 Rep_Mayor: expected NULL (H1b) — compulsion overrides partisan preference
+  C3 Rep_Mayor: expected NEGATIVE — first discretionary step, partisan identity enters
+  C5 NPDES × Rep × fiscal_stress: expected POSITIVE triple interaction —
+    fiscally-distressed Republican mayors pulled into green market instrumentally
