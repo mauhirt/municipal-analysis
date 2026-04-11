@@ -1,0 +1,817 @@
+jurisdiction,state_abbr,state_name,jurisdiction_type,year,iecc_comm_vintage,iecc_comm_code_type,lag_model_code_yrs,no_statewide_code,home_rule,preemption_of_stricter_local,stretch_code_available,weakening_amendments,state_bps_adopted,state_bps_effective,state_bps_year_enacted,state_bps_first_compliance_year,state_bps_law_name,state_bps_law_id,state_bps_penalty_per_sqft,state_bps_penalty_per_tco2e,bps_adopted,bps_effective,bps_year_enacted,bps_first_compliance_year,years_since_bps,bps_metric,bps_covered_threshold_comm_sqft,bps_covered_threshold_public_sqft,bps_covered_threshold_mf_sqft,bps_covers_municipal,bps_ratchet,bps_penalty_per_sqft,bps_penalty_per_tco2e,bps_law_name,bps_law_id,bps_coalition_member,bps_coalition_launch_day,bps_coalition_joined_year,benchmarking_adopted,benchmarking_effective,benchmarking_year_enacted,benchmarking_first_reporting_year,years_since_benchmarking,benchmarking_threshold_sqft,audit_tuneup_req,any_policy_active,any_policy_effective
+Ann Arbor,MI,Michigan,city,2010,2004,IECC,5,0,0,0,0,1,0,0,,,,,,,0,0,,,,,,,,,,,,,,0,1,2022,0,0,2021,2022,,25000,0,0,0
+Ann Arbor,MI,Michigan,city,2011,2004,IECC,6,0,0,0,0,1,0,0,,,,,,,0,0,,,,,,,,,,,,,,0,1,2022,0,0,2021,2022,,25000,0,0,0
+Ann Arbor,MI,Michigan,city,2012,2004,IECC,8,0,0,0,0,1,0,0,,,,,,,0,0,,,,,,,,,,,,,,0,1,2022,0,0,2021,2022,,25000,0,0,0
+Ann Arbor,MI,Michigan,city,2013,2004,IECC,8,0,0,0,0,1,0,0,,,,,,,0,0,,,,,,,,,,,,,,0,1,2022,0,0,2021,2022,,25000,0,0,0
+Ann Arbor,MI,Michigan,city,2014,2004,IECC,9,0,0,0,0,1,0,0,,,,,,,0,0,,,,,,,,,,,,,,0,1,2022,0,0,2021,2022,,25000,0,0,0
+Ann Arbor,MI,Michigan,city,2015,2004,IECC,11,0,0,0,0,1,0,0,,,,,,,0,0,,,,,,,,,,,,,,0,1,2022,0,0,2021,2022,,25000,0,0,0
+Ann Arbor,MI,Michigan,city,2016,2004,IECC,11,0,0,0,0,1,0,0,,,,,,,0,0,,,,,,,,,,,,,,0,1,2022,0,0,2021,2022,,25000,0,0,0
+Ann Arbor,MI,Michigan,city,2017,2004,IECC,12,0,0,0,0,1,0,0,,,,,,,0,0,,,,,,,,,,,,,,0,1,2022,0,0,2021,2022,,25000,0,0,0
+Ann Arbor,MI,Michigan,city,2018,2004,IECC,12,0,0,0,0,1,0,0,,,,,,,0,0,,,,,,,,,,,,,,0,1,2022,0,0,2021,2022,,25000,0,0,0
+Ann Arbor,MI,Michigan,city,2019,2004,IECC,12,0,0,0,0,1,0,0,,,,,,,0,0,,,,,,,,,,,,,,0,1,2022,0,0,2021,2022,,25000,0,0,0
+Ann Arbor,MI,Michigan,city,2020,2004,IECC,15,0,0,0,0,1,0,0,,,,,,,0,0,,,,,,,,,,,,,,0,1,2022,0,0,2021,2022,,25000,0,0,0
+Ann Arbor,MI,Michigan,city,2021,2004,IECC,15,0,0,0,0,1,0,0,,,,,,,0,0,,,,,,,,,,,,,,0,1,2022,1,0,2021,2022,0,25000,0,1,0
+Ann Arbor,MI,Michigan,city,2022,2004,IECC,15,0,0,0,0,1,0,0,,,,,,,0,0,,,,,,,,,,,,,,1,1,2022,1,1,2021,2022,1,25000,0,1,1
+Ann Arbor,MI,Michigan,city,2023,2004,IECC,18,0,0,0,0,1,0,0,,,,,,,0,0,,,,,,,,,,,,,,1,1,2022,1,1,2021,2022,2,25000,0,1,1
+Ann Arbor,MI,Michigan,city,2024,2004,IECC,18,0,0,0,0,1,0,0,,,,,,,0,0,,,,,,,,,,,,,,1,1,2022,1,1,2021,2022,3,25000,0,1,1
+Ann Arbor,MI,Michigan,city,2025,2019,ASHRAE,3,0,0,0,0,1,0,0,,,,,,,0,0,,,,,,,,,,,,,,1,1,2022,1,1,2021,2022,4,25000,0,1,1
+Annapolis,MD,Maryland,city,2010,2009,IECC,0,0,0,0,1,0,0,0,2022,2030,Climate Solutions Now Act,SB 528,,230,0,0,,,,,,,,,,,,,,0,1,2022,0,0,,,,,,0,0
+Annapolis,MD,Maryland,city,2011,2009,IECC,1,0,0,0,1,0,0,0,2022,2030,Climate Solutions Now Act,SB 528,,230,0,0,,,,,,,,,,,,,,0,1,2022,0,0,,,,,,0,0
+Annapolis,MD,Maryland,city,2012,2012,IECC,0,0,0,0,1,0,0,0,2022,2030,Climate Solutions Now Act,SB 528,,230,0,0,,,,,,,,,,,,,,0,1,2022,0,0,,,,,,0,0
+Annapolis,MD,Maryland,city,2013,2012,IECC,0,0,0,0,1,0,0,0,2022,2030,Climate Solutions Now Act,SB 528,,230,0,0,,,,,,,,,,,,,,0,1,2022,0,0,,,,,,0,0
+Annapolis,MD,Maryland,city,2014,2012,IECC,1,0,0,0,1,0,0,0,2022,2030,Climate Solutions Now Act,SB 528,,230,0,0,,,,,,,,,,,,,,0,1,2022,0,0,,,,,,0,0
+Annapolis,MD,Maryland,city,2015,2015,IECC,0,0,0,0,1,0,0,0,2022,2030,Climate Solutions Now Act,SB 528,,230,0,0,,,,,,,,,,,,,,0,1,2022,0,0,,,,,,0,0
+Annapolis,MD,Maryland,city,2016,2015,IECC,0,0,0,0,1,0,0,0,2022,2030,Climate Solutions Now Act,SB 528,,230,0,0,,,,,,,,,,,,,,0,1,2022,0,0,,,,,,0,0
+Annapolis,MD,Maryland,city,2017,2015,IECC,1,0,0,0,1,0,0,0,2022,2030,Climate Solutions Now Act,SB 528,,230,0,0,,,,,,,,,,,,,,0,1,2022,0,0,,,,,,0,0
+Annapolis,MD,Maryland,city,2018,2015,IECC,1,0,0,0,1,0,0,0,2022,2030,Climate Solutions Now Act,SB 528,,230,0,0,,,,,,,,,,,,,,0,1,2022,0,0,,,,,,0,0
+Annapolis,MD,Maryland,city,2019,2015,IECC,1,0,0,0,1,0,0,0,2022,2030,Climate Solutions Now Act,SB 528,,230,0,0,,,,,,,,,,,,,,0,1,2022,0,0,,,,,,0,0
+Annapolis,MD,Maryland,city,2020,2015,IECC,4,0,0,0,1,0,0,0,2022,2030,Climate Solutions Now Act,SB 528,,230,0,0,,,,,,,,,,,,,,0,1,2022,0,0,,,,,,0,0
+Annapolis,MD,Maryland,city,2021,2015,IECC,4,0,0,0,1,0,0,0,2022,2030,Climate Solutions Now Act,SB 528,,230,0,0,,,,,,,,,,,,,,0,1,2022,0,0,,,,,,0,0
+Annapolis,MD,Maryland,city,2022,2015,IECC,4,0,0,0,1,0,1,0,2022,2030,Climate Solutions Now Act,SB 528,,230,0,0,,,,,,,,,,,,,,1,1,2022,0,0,,,,,,1,0
+Annapolis,MD,Maryland,city,2023,2019,ASHRAE,3,0,0,0,1,0,1,0,2022,2030,Climate Solutions Now Act,SB 528,,230,0,0,,,,,,,,,,,,,,1,1,2022,0,0,,,,,,1,0
+Annapolis,MD,Maryland,city,2024,2019,ASHRAE,3,0,0,0,1,0,1,0,2022,2030,Climate Solutions Now Act,SB 528,,230,0,0,,,,,,,,,,,,,,1,1,2022,0,0,,,,,,1,0
+Annapolis,MD,Maryland,city,2025,2019,ASHRAE,3,0,0,0,1,0,1,0,2022,2030,Climate Solutions Now Act,SB 528,,230,0,0,,,,,,,,,,,,,,1,1,2022,0,0,,,,,,1,0
+Aspen,CO,Colorado,city,2010,2006,IECC,3,0,1,0,1,0,0,0,2021,2026,Energy Performance for Buildings,HB21-1286,,,0,0,,,,,,,,,,,,,,0,1,2022,0,0,,,,,,0,0
+Aspen,CO,Colorado,city,2011,2006,IECC,4,0,1,0,1,0,0,0,2021,2026,Energy Performance for Buildings,HB21-1286,,,0,0,,,,,,,,,,,,,,0,1,2022,0,0,,,,,,0,0
+Aspen,CO,Colorado,city,2012,2006,IECC,6,0,1,0,1,0,0,0,2021,2026,Energy Performance for Buildings,HB21-1286,,,0,0,,,,,,,,,,,,,,0,1,2022,0,0,,,,,,0,0
+Aspen,CO,Colorado,city,2013,2006,IECC,6,0,1,0,1,0,0,0,2021,2026,Energy Performance for Buildings,HB21-1286,,,0,0,,,,,,,,,,,,,,0,1,2022,0,0,,,,,,0,0
+Aspen,CO,Colorado,city,2014,2006,IECC,7,0,1,0,1,0,0,0,2021,2026,Energy Performance for Buildings,HB21-1286,,,0,0,,,,,,,,,,,,,,0,1,2022,0,0,,,,,,0,0
+Aspen,CO,Colorado,city,2015,2006,IECC,9,0,1,0,1,0,0,0,2021,2026,Energy Performance for Buildings,HB21-1286,,,0,0,,,,,,,,,,,,,,0,1,2022,0,0,,,,,,0,0
+Aspen,CO,Colorado,city,2016,2006,IECC,9,0,1,0,1,0,0,0,2021,2026,Energy Performance for Buildings,HB21-1286,,,0,0,,,,,,,,,,,,,,0,1,2022,0,0,,,,,,0,0
+Aspen,CO,Colorado,city,2017,2006,IECC,10,0,1,0,1,0,0,0,2021,2026,Energy Performance for Buildings,HB21-1286,,,0,0,,,,,,,,,,,,,,0,1,2022,0,0,,,,,,0,0
+Aspen,CO,Colorado,city,2018,2006,IECC,10,0,1,0,1,0,0,0,2021,2026,Energy Performance for Buildings,HB21-1286,,,0,0,,,,,,,,,,,,,,0,1,2022,0,0,,,,,,0,0
+Aspen,CO,Colorado,city,2019,2006,IECC,10,0,1,0,1,0,0,0,2021,2026,Energy Performance for Buildings,HB21-1286,,,0,0,,,,,,,,,,,,,,0,1,2022,0,0,,,,,,0,0
+Aspen,CO,Colorado,city,2020,2006,IECC,13,0,1,0,1,0,0,0,2021,2026,Energy Performance for Buildings,HB21-1286,,,0,0,,,,,,,,,,,,,,0,1,2022,0,0,,,,,,0,0
+Aspen,CO,Colorado,city,2021,2006,IECC,13,0,1,0,1,0,1,0,2021,2026,Energy Performance for Buildings,HB21-1286,,,0,0,,,,,,,,,,,,,,0,1,2022,0,0,,,,,,1,0
+Aspen,CO,Colorado,city,2022,2006,IECC,13,0,1,0,1,0,1,0,2021,2026,Energy Performance for Buildings,HB21-1286,,,0,0,,,,,,,,,,,,,,1,1,2022,0,0,,,,,,1,0
+Aspen,CO,Colorado,city,2023,2021,IECC,1,0,1,0,1,0,1,0,2021,2026,Energy Performance for Buildings,HB21-1286,,,0,0,,,,,,,,,,,,,,1,1,2022,0,0,,,,,,1,0
+Aspen,CO,Colorado,city,2024,2021,IECC,1,0,1,0,1,0,1,0,2021,2026,Energy Performance for Buildings,HB21-1286,,,0,0,,,,,,,,,,,,,,1,1,2022,0,0,,,,,,1,0
+Aspen,CO,Colorado,city,2025,2021,IECC,1,0,1,0,1,0,1,0,2021,2026,Energy Performance for Buildings,HB21-1286,,,0,0,,,,,,,,,,,,,,1,1,2022,0,0,,,,,,1,0
+Atlanta,GA,Georgia,city,2010,2006,IECC,3,0,0,0,0,0,0,0,,,,,,,0,0,,,,,,,,,,,,,,0,1,2022,0,0,2015,2016,,25000,1,0,0
+Atlanta,GA,Georgia,city,2011,2006,IECC,4,0,0,0,0,0,0,0,,,,,,,0,0,,,,,,,,,,,,,,0,1,2022,0,0,2015,2016,,25000,1,0,0
+Atlanta,GA,Georgia,city,2012,2006,IECC,6,0,0,0,0,0,0,0,,,,,,,0,0,,,,,,,,,,,,,,0,1,2022,0,0,2015,2016,,25000,1,0,0
+Atlanta,GA,Georgia,city,2013,2006,IECC,6,0,0,0,0,0,0,0,,,,,,,0,0,,,,,,,,,,,,,,0,1,2022,0,0,2015,2016,,25000,1,0,0
+Atlanta,GA,Georgia,city,2014,2006,IECC,7,0,0,0,0,0,0,0,,,,,,,0,0,,,,,,,,,,,,,,0,1,2022,0,0,2015,2016,,25000,1,0,0
+Atlanta,GA,Georgia,city,2015,2006,IECC,9,0,0,0,0,0,0,0,,,,,,,0,0,,,,,,,,,,,,,,0,1,2022,1,0,2015,2016,0,25000,1,1,0
+Atlanta,GA,Georgia,city,2016,2006,IECC,9,0,0,0,0,0,0,0,,,,,,,0,0,,,,,,,,,,,,,,0,1,2022,1,1,2015,2016,1,25000,1,1,1
+Atlanta,GA,Georgia,city,2017,2006,IECC,10,0,0,0,0,0,0,0,,,,,,,0,0,,,,,,,,,,,,,,0,1,2022,1,1,2015,2016,2,25000,1,1,1
+Atlanta,GA,Georgia,city,2018,2006,IECC,10,0,0,0,0,0,0,0,,,,,,,0,0,,,,,,,,,,,,,,0,1,2022,1,1,2015,2016,3,25000,1,1,1
+Atlanta,GA,Georgia,city,2019,2006,IECC,10,0,0,0,0,0,0,0,,,,,,,0,0,,,,,,,,,,,,,,0,1,2022,1,1,2015,2016,4,25000,1,1,1
+Atlanta,GA,Georgia,city,2020,2013,ASHRAE,6,0,0,0,0,0,0,0,,,,,,,0,0,,,,,,,,,,,,,,0,1,2022,1,1,2015,2016,5,25000,1,1,1
+Atlanta,GA,Georgia,city,2021,2013,ASHRAE,6,0,0,0,0,0,0,0,,,,,,,0,0,,,,,,,,,,,,,,0,1,2022,1,1,2015,2016,6,25000,1,1,1
+Atlanta,GA,Georgia,city,2022,2013,ASHRAE,6,0,0,0,0,0,0,0,,,,,,,0,0,,,,,,,,,,,,,,1,1,2022,1,1,2015,2016,7,25000,1,1,1
+Atlanta,GA,Georgia,city,2023,2013,ASHRAE,9,0,0,0,0,0,0,0,,,,,,,0,0,,,,,,,,,,,,,,1,1,2022,1,1,2015,2016,8,25000,1,1,1
+Atlanta,GA,Georgia,city,2024,2013,ASHRAE,9,0,0,0,0,0,0,0,,,,,,,0,0,,,,,,,,,,,,,,1,1,2022,1,1,2015,2016,9,25000,1,1,1
+Atlanta,GA,Georgia,city,2025,2013,ASHRAE,9,0,0,0,0,0,0,0,,,,,,,0,0,,,,,,,,,,,,,,1,1,2022,1,1,2015,2016,10,25000,1,1,1
+Austin,TX,Texas,city,2010,2000,IECC,9,0,0,0,0,0,0,0,,,,,,,0,0,,,,,,,,,,,,,,0,0,,1,0,2008,2012,2,10000,1,1,0
+Austin,TX,Texas,city,2011,2009,IECC,1,0,0,0,0,0,0,0,,,,,,,0,0,,,,,,,,,,,,,,0,0,,1,0,2008,2012,3,10000,1,1,0
+Austin,TX,Texas,city,2012,2009,IECC,3,0,0,0,0,0,0,0,,,,,,,0,0,,,,,,,,,,,,,,0,0,,1,1,2008,2012,4,10000,1,1,1
+Austin,TX,Texas,city,2013,2009,IECC,3,0,0,0,0,0,0,0,,,,,,,0,0,,,,,,,,,,,,,,0,0,,1,1,2008,2012,5,10000,1,1,1
+Austin,TX,Texas,city,2014,2009,IECC,4,0,0,0,0,0,0,0,,,,,,,0,0,,,,,,,,,,,,,,0,0,,1,1,2008,2012,6,10000,1,1,1
+Austin,TX,Texas,city,2015,2009,IECC,6,0,0,0,0,0,0,0,,,,,,,0,0,,,,,,,,,,,,,,0,0,,1,1,2008,2012,7,10000,1,1,1
+Austin,TX,Texas,city,2016,2013,ASHRAE,2,0,0,0,0,0,0,0,,,,,,,0,0,,,,,,,,,,,,,,0,0,,1,1,2008,2012,8,10000,1,1,1
+Austin,TX,Texas,city,2017,2013,ASHRAE,3,0,0,0,0,0,0,0,,,,,,,0,0,,,,,,,,,,,,,,0,0,,1,1,2008,2012,9,10000,1,1,1
+Austin,TX,Texas,city,2018,2013,ASHRAE,3,0,0,0,0,0,0,0,,,,,,,0,0,,,,,,,,,,,,,,0,0,,1,1,2008,2012,10,10000,1,1,1
+Austin,TX,Texas,city,2019,2013,ASHRAE,3,0,0,0,0,0,0,0,,,,,,,0,0,,,,,,,,,,,,,,0,0,,1,1,2008,2012,11,10000,1,1,1
+Austin,TX,Texas,city,2020,2013,ASHRAE,6,0,0,0,0,0,0,0,,,,,,,0,0,,,,,,,,,,,,,,0,0,,1,1,2008,2012,12,10000,1,1,1
+Austin,TX,Texas,city,2021,2013,ASHRAE,6,0,0,0,0,0,0,0,,,,,,,0,0,,,,,,,,,,,,,,0,0,,1,1,2008,2012,13,10000,1,1,1
+Austin,TX,Texas,city,2022,2013,ASHRAE,6,0,0,0,0,0,0,0,,,,,,,0,0,,,,,,,,,,,,,,0,0,,1,1,2008,2012,14,10000,1,1,1
+Austin,TX,Texas,city,2023,2013,ASHRAE,9,0,0,0,0,0,0,0,,,,,,,0,0,,,,,,,,,,,,,,0,0,,1,1,2008,2012,15,10000,1,1,1
+Austin,TX,Texas,city,2024,2013,ASHRAE,9,0,0,0,0,0,0,0,,,,,,,0,0,,,,,,,,,,,,,,0,0,,1,1,2008,2012,16,10000,1,1,1
+Austin,TX,Texas,city,2025,2013,ASHRAE,9,0,0,0,0,0,0,0,,,,,,,0,0,,,,,,,,,,,,,,0,0,,1,1,2008,2012,17,10000,1,1,1
+Berkeley,CA,California,city,2010,2008,TITLE24,1,0,0,0,1,0,0,0,,,,,,,0,0,,,,,,,,,,,,,,0,0,2023,0,0,2015,2017,,25000,1,0,0
+Berkeley,CA,California,city,2011,2008,TITLE24,2,0,0,0,1,0,0,0,,,,,,,0,0,,,,,,,,,,,,,,0,0,2023,0,0,2015,2017,,25000,1,0,0
+Berkeley,CA,California,city,2012,2008,TITLE24,4,0,0,0,1,0,0,0,,,,,,,0,0,,,,,,,,,,,,,,0,0,2023,0,0,2015,2017,,25000,1,0,0
+Berkeley,CA,California,city,2013,2008,TITLE24,4,0,0,0,1,0,0,0,,,,,,,0,0,,,,,,,,,,,,,,0,0,2023,0,0,2015,2017,,25000,1,0,0
+Berkeley,CA,California,city,2014,2013,TITLE24,0,0,0,0,1,0,0,0,,,,,,,0,0,,,,,,,,,,,,,,0,0,2023,0,0,2015,2017,,25000,1,0,0
+Berkeley,CA,California,city,2015,2013,TITLE24,2,0,0,0,1,0,0,0,,,,,,,0,0,,,,,,,,,,,,,,0,0,2023,1,0,2015,2017,0,25000,1,1,0
+Berkeley,CA,California,city,2016,2013,TITLE24,2,0,0,0,1,0,0,0,,,,,,,0,0,,,,,,,,,,,,,,0,0,2023,1,0,2015,2017,1,25000,1,1,0
+Berkeley,CA,California,city,2017,2016,TITLE24,0,0,0,0,1,0,0,0,,,,,,,0,0,,,,,,,,,,,,,,0,0,2023,1,1,2015,2017,2,25000,1,1,1
+Berkeley,CA,California,city,2018,2016,TITLE24,0,0,0,0,1,0,0,0,,,,,,,0,0,,,,,,,,,,,,,,0,0,2023,1,1,2015,2017,3,25000,1,1,1
+Berkeley,CA,California,city,2019,2016,TITLE24,0,0,0,0,1,0,0,0,,,,,,,0,0,,,,,,,,,,,,,,0,0,2023,1,1,2015,2017,4,25000,1,1,1
+Berkeley,CA,California,city,2020,2019,TITLE24,0,0,0,0,1,0,0,0,,,,,,,0,0,,,,,,,,,,,,,,0,0,2023,1,1,2015,2017,5,25000,1,1,1
+Berkeley,CA,California,city,2021,2019,TITLE24,0,0,0,0,1,0,0,0,,,,,,,0,0,,,,,,,,,,,,,,0,0,2023,1,1,2015,2017,6,25000,1,1,1
+Berkeley,CA,California,city,2022,2019,TITLE24,0,0,0,0,1,0,0,0,,,,,,,0,0,,,,,,,,,,,,,,0,0,2023,1,1,2015,2017,7,25000,1,1,1
+Berkeley,CA,California,city,2023,2022,TITLE24,0,0,0,0,1,0,0,0,,,,,,,0,0,,,,,,,,,,,,,,1,0,2023,1,1,2015,2017,8,25000,1,1,1
+Berkeley,CA,California,city,2024,2022,TITLE24,0,0,0,0,1,0,0,0,,,,,,,0,0,,,,,,,,,,,,,,1,0,2023,1,1,2015,2017,9,25000,1,1,1
+Berkeley,CA,California,city,2025,2022,TITLE24,0,0,0,0,1,0,0,0,,,,,,,0,0,,,,,,,,,,,,,,1,0,2023,1,1,2015,2017,10,25000,1,1,1
+Boston,MA,Massachusetts,city,2010,2007,ASHRAE,2,0,0,0,1,0,0,0,,,,,,,0,0,2021,2025,,GHG (kgCO2e/sqft/yr),20000,20000,20000,1,1,,234,Building Emissions Reduction & Disclosure Ordinance (BERDO),Chpt VII Sec 7-2.1 & 7-2.2,0,1,2022,0,0,2013,2014,,35000,1,0,0
+Boston,MA,Massachusetts,city,2011,2007,ASHRAE,3,0,0,0,1,0,0,0,,,,,,,0,0,2021,2025,,GHG (kgCO2e/sqft/yr),20000,20000,20000,1,1,,234,Building Emissions Reduction & Disclosure Ordinance (BERDO),Chpt VII Sec 7-2.1 & 7-2.2,0,1,2022,0,0,2013,2014,,35000,1,0,0
+Boston,MA,Massachusetts,city,2012,2007,ASHRAE,5,0,0,0,1,0,0,0,,,,,,,0,0,2021,2025,,GHG (kgCO2e/sqft/yr),20000,20000,20000,1,1,,234,Building Emissions Reduction & Disclosure Ordinance (BERDO),Chpt VII Sec 7-2.1 & 7-2.2,0,1,2022,0,0,2013,2014,,35000,1,0,0
+Boston,MA,Massachusetts,city,2013,2007,ASHRAE,5,0,0,0,1,0,0,0,,,,,,,0,0,2021,2025,,GHG (kgCO2e/sqft/yr),20000,20000,20000,1,1,,234,Building Emissions Reduction & Disclosure Ordinance (BERDO),Chpt VII Sec 7-2.1 & 7-2.2,0,1,2022,1,0,2013,2014,0,35000,1,1,0
+Boston,MA,Massachusetts,city,2014,2007,ASHRAE,6,0,0,0,1,0,0,0,,,,,,,0,0,2021,2025,,GHG (kgCO2e/sqft/yr),20000,20000,20000,1,1,,234,Building Emissions Reduction & Disclosure Ordinance (BERDO),Chpt VII Sec 7-2.1 & 7-2.2,0,1,2022,1,1,2013,2014,1,35000,1,1,1
+Boston,MA,Massachusetts,city,2015,2007,ASHRAE,8,0,0,0,1,0,0,0,,,,,,,0,0,2021,2025,,GHG (kgCO2e/sqft/yr),20000,20000,20000,1,1,,234,Building Emissions Reduction & Disclosure Ordinance (BERDO),Chpt VII Sec 7-2.1 & 7-2.2,0,1,2022,1,1,2013,2014,2,35000,1,1,1
+Boston,MA,Massachusetts,city,2016,2007,ASHRAE,8,0,0,0,1,0,0,0,,,,,,,0,0,2021,2025,,GHG (kgCO2e/sqft/yr),20000,20000,20000,1,1,,234,Building Emissions Reduction & Disclosure Ordinance (BERDO),Chpt VII Sec 7-2.1 & 7-2.2,0,1,2022,1,1,2013,2014,3,35000,1,1,1
+Boston,MA,Massachusetts,city,2017,2007,ASHRAE,9,0,0,0,1,0,0,0,,,,,,,0,0,2021,2025,,GHG (kgCO2e/sqft/yr),20000,20000,20000,1,1,,234,Building Emissions Reduction & Disclosure Ordinance (BERDO),Chpt VII Sec 7-2.1 & 7-2.2,0,1,2022,1,1,2013,2014,4,35000,1,1,1
+Boston,MA,Massachusetts,city,2018,2007,ASHRAE,9,0,0,0,1,0,0,0,,,,,,,0,0,2021,2025,,GHG (kgCO2e/sqft/yr),20000,20000,20000,1,1,,234,Building Emissions Reduction & Disclosure Ordinance (BERDO),Chpt VII Sec 7-2.1 & 7-2.2,0,1,2022,1,1,2013,2014,5,35000,1,1,1
+Boston,MA,Massachusetts,city,2019,2007,ASHRAE,9,0,0,0,1,0,0,0,,,,,,,0,0,2021,2025,,GHG (kgCO2e/sqft/yr),20000,20000,20000,1,1,,234,Building Emissions Reduction & Disclosure Ordinance (BERDO),Chpt VII Sec 7-2.1 & 7-2.2,0,1,2022,1,1,2013,2014,6,35000,1,1,1
+Boston,MA,Massachusetts,city,2020,2007,ASHRAE,12,0,0,0,1,0,0,0,,,,,,,0,0,2021,2025,,GHG (kgCO2e/sqft/yr),20000,20000,20000,1,1,,234,Building Emissions Reduction & Disclosure Ordinance (BERDO),Chpt VII Sec 7-2.1 & 7-2.2,0,1,2022,1,1,2013,2014,7,35000,1,1,1
+Boston,MA,Massachusetts,city,2021,2007,ASHRAE,12,0,0,0,1,0,0,0,,,,,,,1,0,2021,2025,0,GHG (kgCO2e/sqft/yr),20000,20000,20000,1,1,,234,Building Emissions Reduction & Disclosure Ordinance (BERDO),Chpt VII Sec 7-2.1 & 7-2.2,0,1,2022,1,1,2013,2014,8,35000,1,1,1
+Boston,MA,Massachusetts,city,2022,2007,ASHRAE,12,0,0,0,1,0,0,0,,,,,,,1,0,2021,2025,1,GHG (kgCO2e/sqft/yr),20000,20000,20000,1,1,,234,Building Emissions Reduction & Disclosure Ordinance (BERDO),Chpt VII Sec 7-2.1 & 7-2.2,1,1,2022,1,1,2013,2014,9,35000,1,1,1
+Boston,MA,Massachusetts,city,2023,2007,ASHRAE,15,0,0,0,1,0,0,0,,,,,,,1,0,2021,2025,2,GHG (kgCO2e/sqft/yr),20000,20000,20000,1,1,,234,Building Emissions Reduction & Disclosure Ordinance (BERDO),Chpt VII Sec 7-2.1 & 7-2.2,1,1,2022,1,1,2013,2014,10,35000,1,1,1
+Boston,MA,Massachusetts,city,2024,2019,ASHRAE,3,0,0,0,1,0,0,0,,,,,,,1,0,2021,2025,3,GHG (kgCO2e/sqft/yr),20000,20000,20000,1,1,,234,Building Emissions Reduction & Disclosure Ordinance (BERDO),Chpt VII Sec 7-2.1 & 7-2.2,1,1,2022,1,1,2013,2014,11,35000,1,1,1
+Boston,MA,Massachusetts,city,2025,2019,ASHRAE,3,0,0,0,1,0,0,0,,,,,,,1,1,2021,2025,4,GHG (kgCO2e/sqft/yr),20000,20000,20000,1,1,,234,Building Emissions Reduction & Disclosure Ordinance (BERDO),Chpt VII Sec 7-2.1 & 7-2.2,1,1,2022,1,1,2013,2014,12,35000,1,1,1
+Boulder,CO,Colorado,city,2010,2006,IECC,3,0,1,0,1,0,0,0,2021,2026,Energy Performance for Buildings,HB21-1286,,,0,0,,,,,,,,,,,,,,0,0,2023,0,0,2016,2017,,20000,1,0,0
+Boulder,CO,Colorado,city,2011,2006,IECC,4,0,1,0,1,0,0,0,2021,2026,Energy Performance for Buildings,HB21-1286,,,0,0,,,,,,,,,,,,,,0,0,2023,0,0,2016,2017,,20000,1,0,0
+Boulder,CO,Colorado,city,2012,2006,IECC,6,0,1,0,1,0,0,0,2021,2026,Energy Performance for Buildings,HB21-1286,,,0,0,,,,,,,,,,,,,,0,0,2023,0,0,2016,2017,,20000,1,0,0
+Boulder,CO,Colorado,city,2013,2006,IECC,6,0,1,0,1,0,0,0,2021,2026,Energy Performance for Buildings,HB21-1286,,,0,0,,,,,,,,,,,,,,0,0,2023,0,0,2016,2017,,20000,1,0,0
+Boulder,CO,Colorado,city,2014,2006,IECC,7,0,1,0,1,0,0,0,2021,2026,Energy Performance for Buildings,HB21-1286,,,0,0,,,,,,,,,,,,,,0,0,2023,0,0,2016,2017,,20000,1,0,0
+Boulder,CO,Colorado,city,2015,2006,IECC,9,0,1,0,1,0,0,0,2021,2026,Energy Performance for Buildings,HB21-1286,,,0,0,,,,,,,,,,,,,,0,0,2023,0,0,2016,2017,,20000,1,0,0
+Boulder,CO,Colorado,city,2016,2006,IECC,9,0,1,0,1,0,0,0,2021,2026,Energy Performance for Buildings,HB21-1286,,,0,0,,,,,,,,,,,,,,0,0,2023,1,0,2016,2017,0,20000,1,1,0
+Boulder,CO,Colorado,city,2017,2006,IECC,10,0,1,0,1,0,0,0,2021,2026,Energy Performance for Buildings,HB21-1286,,,0,0,,,,,,,,,,,,,,0,0,2023,1,1,2016,2017,1,20000,1,1,1
+Boulder,CO,Colorado,city,2018,2006,IECC,10,0,1,0,1,0,0,0,2021,2026,Energy Performance for Buildings,HB21-1286,,,0,0,,,,,,,,,,,,,,0,0,2023,1,1,2016,2017,2,20000,1,1,1
+Boulder,CO,Colorado,city,2019,2006,IECC,10,0,1,0,1,0,0,0,2021,2026,Energy Performance for Buildings,HB21-1286,,,0,0,,,,,,,,,,,,,,0,0,2023,1,1,2016,2017,3,20000,1,1,1
+Boulder,CO,Colorado,city,2020,2006,IECC,13,0,1,0,1,0,0,0,2021,2026,Energy Performance for Buildings,HB21-1286,,,0,0,,,,,,,,,,,,,,0,0,2023,1,1,2016,2017,4,20000,1,1,1
+Boulder,CO,Colorado,city,2021,2006,IECC,13,0,1,0,1,0,1,0,2021,2026,Energy Performance for Buildings,HB21-1286,,,0,0,,,,,,,,,,,,,,0,0,2023,1,1,2016,2017,5,20000,1,1,1
+Boulder,CO,Colorado,city,2022,2006,IECC,13,0,1,0,1,0,1,0,2021,2026,Energy Performance for Buildings,HB21-1286,,,0,0,,,,,,,,,,,,,,0,0,2023,1,1,2016,2017,6,20000,1,1,1
+Boulder,CO,Colorado,city,2023,2021,IECC,1,0,1,0,1,0,1,0,2021,2026,Energy Performance for Buildings,HB21-1286,,,0,0,,,,,,,,,,,,,,1,0,2023,1,1,2016,2017,7,20000,1,1,1
+Boulder,CO,Colorado,city,2024,2021,IECC,1,0,1,0,1,0,1,0,2021,2026,Energy Performance for Buildings,HB21-1286,,,0,0,,,,,,,,,,,,,,1,0,2023,1,1,2016,2017,8,20000,1,1,1
+Boulder,CO,Colorado,city,2025,2021,IECC,1,0,1,0,1,0,1,0,2021,2026,Energy Performance for Buildings,HB21-1286,,,0,0,,,,,,,,,,,,,,1,0,2023,1,1,2016,2017,9,20000,1,1,1
+California,CA,California,state,2010,2008,TITLE24,1,0,0,0,1,0,0,0,,,,,,,0,0,,,,,,,,,,,,,,0,0,2023,0,0,2015,2018,,50000,0,0,0
+California,CA,California,state,2011,2008,TITLE24,2,0,0,0,1,0,0,0,,,,,,,0,0,,,,,,,,,,,,,,0,0,2023,0,0,2015,2018,,50000,0,0,0
+California,CA,California,state,2012,2008,TITLE24,4,0,0,0,1,0,0,0,,,,,,,0,0,,,,,,,,,,,,,,0,0,2023,0,0,2015,2018,,50000,0,0,0
+California,CA,California,state,2013,2008,TITLE24,4,0,0,0,1,0,0,0,,,,,,,0,0,,,,,,,,,,,,,,0,0,2023,0,0,2015,2018,,50000,0,0,0
+California,CA,California,state,2014,2013,TITLE24,0,0,0,0,1,0,0,0,,,,,,,0,0,,,,,,,,,,,,,,0,0,2023,0,0,2015,2018,,50000,0,0,0
+California,CA,California,state,2015,2013,TITLE24,2,0,0,0,1,0,0,0,,,,,,,0,0,,,,,,,,,,,,,,0,0,2023,1,0,2015,2018,0,50000,0,1,0
+California,CA,California,state,2016,2013,TITLE24,2,0,0,0,1,0,0,0,,,,,,,0,0,,,,,,,,,,,,,,0,0,2023,1,0,2015,2018,1,50000,0,1,0
+California,CA,California,state,2017,2016,TITLE24,0,0,0,0,1,0,0,0,,,,,,,0,0,,,,,,,,,,,,,,0,0,2023,1,0,2015,2018,2,50000,0,1,0
+California,CA,California,state,2018,2016,TITLE24,0,0,0,0,1,0,0,0,,,,,,,0,0,,,,,,,,,,,,,,0,0,2023,1,1,2015,2018,3,50000,0,1,1
+California,CA,California,state,2019,2016,TITLE24,0,0,0,0,1,0,0,0,,,,,,,0,0,,,,,,,,,,,,,,0,0,2023,1,1,2015,2018,4,50000,0,1,1
+California,CA,California,state,2020,2019,TITLE24,0,0,0,0,1,0,0,0,,,,,,,0,0,,,,,,,,,,,,,,0,0,2023,1,1,2015,2018,5,50000,0,1,1
+California,CA,California,state,2021,2019,TITLE24,0,0,0,0,1,0,0,0,,,,,,,0,0,,,,,,,,,,,,,,0,0,2023,1,1,2015,2018,6,50000,0,1,1
+California,CA,California,state,2022,2019,TITLE24,0,0,0,0,1,0,0,0,,,,,,,0,0,,,,,,,,,,,,,,0,0,2023,1,1,2015,2018,7,50000,0,1,1
+California,CA,California,state,2023,2022,TITLE24,0,0,0,0,1,0,0,0,,,,,,,0,0,,,,,,,,,,,,,,1,0,2023,1,1,2015,2018,8,50000,0,1,1
+California,CA,California,state,2024,2022,TITLE24,0,0,0,0,1,0,0,0,,,,,,,0,0,,,,,,,,,,,,,,1,0,2023,1,1,2015,2018,9,50000,0,1,1
+California,CA,California,state,2025,2022,TITLE24,0,0,0,0,1,0,0,0,,,,,,,0,0,,,,,,,,,,,,,,1,0,2023,1,1,2015,2018,10,50000,0,1,1
+Cambridge,MA,Massachusetts,city,2010,2007,ASHRAE,2,0,0,0,1,0,0,0,,,,,,,0,0,2023,2030,,GHG Intensity,25000,10000,25000,1,1,,,Building Energy Use Disclosure Ordinance (BEUDO),Ordinance 2021-26,0,1,2022,0,0,2014,2015,,25000,0,0,0
+Cambridge,MA,Massachusetts,city,2011,2007,ASHRAE,3,0,0,0,1,0,0,0,,,,,,,0,0,2023,2030,,GHG Intensity,25000,10000,25000,1,1,,,Building Energy Use Disclosure Ordinance (BEUDO),Ordinance 2021-26,0,1,2022,0,0,2014,2015,,25000,0,0,0
+Cambridge,MA,Massachusetts,city,2012,2007,ASHRAE,5,0,0,0,1,0,0,0,,,,,,,0,0,2023,2030,,GHG Intensity,25000,10000,25000,1,1,,,Building Energy Use Disclosure Ordinance (BEUDO),Ordinance 2021-26,0,1,2022,0,0,2014,2015,,25000,0,0,0
+Cambridge,MA,Massachusetts,city,2013,2007,ASHRAE,5,0,0,0,1,0,0,0,,,,,,,0,0,2023,2030,,GHG Intensity,25000,10000,25000,1,1,,,Building Energy Use Disclosure Ordinance (BEUDO),Ordinance 2021-26,0,1,2022,0,0,2014,2015,,25000,0,0,0
+Cambridge,MA,Massachusetts,city,2014,2007,ASHRAE,6,0,0,0,1,0,0,0,,,,,,,0,0,2023,2030,,GHG Intensity,25000,10000,25000,1,1,,,Building Energy Use Disclosure Ordinance (BEUDO),Ordinance 2021-26,0,1,2022,1,0,2014,2015,0,25000,0,1,0
+Cambridge,MA,Massachusetts,city,2015,2007,ASHRAE,8,0,0,0,1,0,0,0,,,,,,,0,0,2023,2030,,GHG Intensity,25000,10000,25000,1,1,,,Building Energy Use Disclosure Ordinance (BEUDO),Ordinance 2021-26,0,1,2022,1,1,2014,2015,1,25000,0,1,1
+Cambridge,MA,Massachusetts,city,2016,2007,ASHRAE,8,0,0,0,1,0,0,0,,,,,,,0,0,2023,2030,,GHG Intensity,25000,10000,25000,1,1,,,Building Energy Use Disclosure Ordinance (BEUDO),Ordinance 2021-26,0,1,2022,1,1,2014,2015,2,25000,0,1,1
+Cambridge,MA,Massachusetts,city,2017,2007,ASHRAE,9,0,0,0,1,0,0,0,,,,,,,0,0,2023,2030,,GHG Intensity,25000,10000,25000,1,1,,,Building Energy Use Disclosure Ordinance (BEUDO),Ordinance 2021-26,0,1,2022,1,1,2014,2015,3,25000,0,1,1
+Cambridge,MA,Massachusetts,city,2018,2007,ASHRAE,9,0,0,0,1,0,0,0,,,,,,,0,0,2023,2030,,GHG Intensity,25000,10000,25000,1,1,,,Building Energy Use Disclosure Ordinance (BEUDO),Ordinance 2021-26,0,1,2022,1,1,2014,2015,4,25000,0,1,1
+Cambridge,MA,Massachusetts,city,2019,2007,ASHRAE,9,0,0,0,1,0,0,0,,,,,,,0,0,2023,2030,,GHG Intensity,25000,10000,25000,1,1,,,Building Energy Use Disclosure Ordinance (BEUDO),Ordinance 2021-26,0,1,2022,1,1,2014,2015,5,25000,0,1,1
+Cambridge,MA,Massachusetts,city,2020,2007,ASHRAE,12,0,0,0,1,0,0,0,,,,,,,0,0,2023,2030,,GHG Intensity,25000,10000,25000,1,1,,,Building Energy Use Disclosure Ordinance (BEUDO),Ordinance 2021-26,0,1,2022,1,1,2014,2015,6,25000,0,1,1
+Cambridge,MA,Massachusetts,city,2021,2007,ASHRAE,12,0,0,0,1,0,0,0,,,,,,,0,0,2023,2030,,GHG Intensity,25000,10000,25000,1,1,,,Building Energy Use Disclosure Ordinance (BEUDO),Ordinance 2021-26,0,1,2022,1,1,2014,2015,7,25000,0,1,1
+Cambridge,MA,Massachusetts,city,2022,2007,ASHRAE,12,0,0,0,1,0,0,0,,,,,,,0,0,2023,2030,,GHG Intensity,25000,10000,25000,1,1,,,Building Energy Use Disclosure Ordinance (BEUDO),Ordinance 2021-26,1,1,2022,1,1,2014,2015,8,25000,0,1,1
+Cambridge,MA,Massachusetts,city,2023,2007,ASHRAE,15,0,0,0,1,0,0,0,,,,,,,1,0,2023,2030,0,GHG Intensity,25000,10000,25000,1,1,,,Building Energy Use Disclosure Ordinance (BEUDO),Ordinance 2021-26,1,1,2022,1,1,2014,2015,9,25000,0,1,1
+Cambridge,MA,Massachusetts,city,2024,2019,ASHRAE,3,0,0,0,1,0,0,0,,,,,,,1,0,2023,2030,1,GHG Intensity,25000,10000,25000,1,1,,,Building Energy Use Disclosure Ordinance (BEUDO),Ordinance 2021-26,1,1,2022,1,1,2014,2015,10,25000,0,1,1
+Cambridge,MA,Massachusetts,city,2025,2019,ASHRAE,3,0,0,0,1,0,0,0,,,,,,,1,0,2023,2030,2,GHG Intensity,25000,10000,25000,1,1,,,Building Energy Use Disclosure Ordinance (BEUDO),Ordinance 2021-26,1,1,2022,1,1,2014,2015,11,25000,0,1,1
+Chicago,IL,Illinois,city,2010,2006,IECC,3,0,0,0,0,0,0,0,,,,,,,0,0,,,,,,,,,,,,,,0,1,2022,0,0,2013,2014,,50000,0,0,0
+Chicago,IL,Illinois,city,2011,2006,IECC,4,0,0,0,0,0,0,0,,,,,,,0,0,,,,,,,,,,,,,,0,1,2022,0,0,2013,2014,,50000,0,0,0
+Chicago,IL,Illinois,city,2012,2006,IECC,6,0,0,0,0,0,0,0,,,,,,,0,0,,,,,,,,,,,,,,0,1,2022,0,0,2013,2014,,50000,0,0,0
+Chicago,IL,Illinois,city,2013,2012,IECC,0,0,0,0,0,0,0,0,,,,,,,0,0,,,,,,,,,,,,,,0,1,2022,1,0,2013,2014,0,50000,0,1,0
+Chicago,IL,Illinois,city,2014,2012,IECC,1,0,0,0,0,0,0,0,,,,,,,0,0,,,,,,,,,,,,,,0,1,2022,1,1,2013,2014,1,50000,0,1,1
+Chicago,IL,Illinois,city,2015,2012,IECC,3,0,0,0,0,0,0,0,,,,,,,0,0,,,,,,,,,,,,,,0,1,2022,1,1,2013,2014,2,50000,0,1,1
+Chicago,IL,Illinois,city,2016,2015,IECC,0,0,0,0,0,0,0,0,,,,,,,0,0,,,,,,,,,,,,,,0,1,2022,1,1,2013,2014,3,50000,0,1,1
+Chicago,IL,Illinois,city,2017,2015,IECC,1,0,0,0,0,0,0,0,,,,,,,0,0,,,,,,,,,,,,,,0,1,2022,1,1,2013,2014,4,50000,0,1,1
+Chicago,IL,Illinois,city,2018,2015,IECC,1,0,0,0,0,0,0,0,,,,,,,0,0,,,,,,,,,,,,,,0,1,2022,1,1,2013,2014,5,50000,0,1,1
+Chicago,IL,Illinois,city,2019,2015,IECC,1,0,0,0,0,0,0,0,,,,,,,0,0,,,,,,,,,,,,,,0,1,2022,1,1,2013,2014,6,50000,0,1,1
+Chicago,IL,Illinois,city,2020,2015,IECC,4,0,0,0,0,0,0,0,,,,,,,0,0,,,,,,,,,,,,,,0,1,2022,1,1,2013,2014,7,50000,0,1,1
+Chicago,IL,Illinois,city,2021,2015,IECC,4,0,0,0,0,0,0,0,,,,,,,0,0,,,,,,,,,,,,,,0,1,2022,1,1,2013,2014,8,50000,0,1,1
+Chicago,IL,Illinois,city,2022,2015,IECC,4,0,0,0,0,0,0,0,,,,,,,0,0,,,,,,,,,,,,,,1,1,2022,1,1,2013,2014,9,50000,0,1,1
+Chicago,IL,Illinois,city,2023,2015,IECC,7,0,0,0,0,0,0,0,,,,,,,0,0,,,,,,,,,,,,,,1,1,2022,1,1,2013,2014,10,50000,0,1,1
+Chicago,IL,Illinois,city,2024,2015,IECC,7,0,0,0,0,0,0,0,,,,,,,0,0,,,,,,,,,,,,,,1,1,2022,1,1,2013,2014,11,50000,0,1,1
+Chicago,IL,Illinois,city,2025,2022,ASHRAE,0,0,0,0,0,0,0,0,,,,,,,0,0,,,,,,,,,,,,,,1,1,2022,1,1,2013,2014,12,50000,0,1,1
+Chula Vista,CA,California,city,2010,2008,TITLE24,1,0,0,0,1,0,0,0,,,,,,,0,0,2021,,,ENERGY STAR or weather-normalized Site EUI,20000,20000,20000,1,1,,,Building Energy Saving Ordinance,Ordinance 3498,0,1,2022,0,0,,,,,,0,0
+Chula Vista,CA,California,city,2011,2008,TITLE24,2,0,0,0,1,0,0,0,,,,,,,0,0,2021,,,ENERGY STAR or weather-normalized Site EUI,20000,20000,20000,1,1,,,Building Energy Saving Ordinance,Ordinance 3498,0,1,2022,0,0,,,,,,0,0
+Chula Vista,CA,California,city,2012,2008,TITLE24,4,0,0,0,1,0,0,0,,,,,,,0,0,2021,,,ENERGY STAR or weather-normalized Site EUI,20000,20000,20000,1,1,,,Building Energy Saving Ordinance,Ordinance 3498,0,1,2022,0,0,,,,,,0,0
+Chula Vista,CA,California,city,2013,2008,TITLE24,4,0,0,0,1,0,0,0,,,,,,,0,0,2021,,,ENERGY STAR or weather-normalized Site EUI,20000,20000,20000,1,1,,,Building Energy Saving Ordinance,Ordinance 3498,0,1,2022,0,0,,,,,,0,0
+Chula Vista,CA,California,city,2014,2013,TITLE24,0,0,0,0,1,0,0,0,,,,,,,0,0,2021,,,ENERGY STAR or weather-normalized Site EUI,20000,20000,20000,1,1,,,Building Energy Saving Ordinance,Ordinance 3498,0,1,2022,0,0,,,,,,0,0
+Chula Vista,CA,California,city,2015,2013,TITLE24,2,0,0,0,1,0,0,0,,,,,,,0,0,2021,,,ENERGY STAR or weather-normalized Site EUI,20000,20000,20000,1,1,,,Building Energy Saving Ordinance,Ordinance 3498,0,1,2022,0,0,,,,,,0,0
+Chula Vista,CA,California,city,2016,2013,TITLE24,2,0,0,0,1,0,0,0,,,,,,,0,0,2021,,,ENERGY STAR or weather-normalized Site EUI,20000,20000,20000,1,1,,,Building Energy Saving Ordinance,Ordinance 3498,0,1,2022,0,0,,,,,,0,0
+Chula Vista,CA,California,city,2017,2016,TITLE24,0,0,0,0,1,0,0,0,,,,,,,0,0,2021,,,ENERGY STAR or weather-normalized Site EUI,20000,20000,20000,1,1,,,Building Energy Saving Ordinance,Ordinance 3498,0,1,2022,0,0,,,,,,0,0
+Chula Vista,CA,California,city,2018,2016,TITLE24,0,0,0,0,1,0,0,0,,,,,,,0,0,2021,,,ENERGY STAR or weather-normalized Site EUI,20000,20000,20000,1,1,,,Building Energy Saving Ordinance,Ordinance 3498,0,1,2022,0,0,,,,,,0,0
+Chula Vista,CA,California,city,2019,2016,TITLE24,0,0,0,0,1,0,0,0,,,,,,,0,0,2021,,,ENERGY STAR or weather-normalized Site EUI,20000,20000,20000,1,1,,,Building Energy Saving Ordinance,Ordinance 3498,0,1,2022,0,0,,,,,,0,0
+Chula Vista,CA,California,city,2020,2019,TITLE24,0,0,0,0,1,0,0,0,,,,,,,0,0,2021,,,ENERGY STAR or weather-normalized Site EUI,20000,20000,20000,1,1,,,Building Energy Saving Ordinance,Ordinance 3498,0,1,2022,0,0,,,,,,0,0
+Chula Vista,CA,California,city,2021,2019,TITLE24,0,0,0,0,1,0,0,0,,,,,,,1,0,2021,,0,ENERGY STAR or weather-normalized Site EUI,20000,20000,20000,1,1,,,Building Energy Saving Ordinance,Ordinance 3498,0,1,2022,0,0,,,,,,1,0
+Chula Vista,CA,California,city,2022,2019,TITLE24,0,0,0,0,1,0,0,0,,,,,,,1,0,2021,,1,ENERGY STAR or weather-normalized Site EUI,20000,20000,20000,1,1,,,Building Energy Saving Ordinance,Ordinance 3498,1,1,2022,0,0,,,,,,1,0
+Chula Vista,CA,California,city,2023,2022,TITLE24,0,0,0,0,1,0,0,0,,,,,,,1,0,2021,,2,ENERGY STAR or weather-normalized Site EUI,20000,20000,20000,1,1,,,Building Energy Saving Ordinance,Ordinance 3498,1,1,2022,0,0,,,,,,1,0
+Chula Vista,CA,California,city,2024,2022,TITLE24,0,0,0,0,1,0,0,0,,,,,,,1,0,2021,,3,ENERGY STAR or weather-normalized Site EUI,20000,20000,20000,1,1,,,Building Energy Saving Ordinance,Ordinance 3498,1,1,2022,0,0,,,,,,1,0
+Chula Vista,CA,California,city,2025,2022,TITLE24,0,0,0,0,1,0,0,0,,,,,,,1,0,2021,,4,ENERGY STAR or weather-normalized Site EUI,20000,20000,20000,1,1,,,Building Energy Saving Ordinance,Ordinance 3498,1,1,2022,0,0,,,,,,1,0
+Colorado,CO,Colorado,state,2010,2006,IECC,3,0,1,0,1,0,0,0,2021,2026,Energy Performance for Buildings,HB21-1286,,,0,0,2021,2026,,Site EUI or GHGI,50000,50000,50000,1,1,,,Energy Performance for Buildings,HB21-1286,0,1,2022,0,0,2021,2022,,50000,0,0,0
+Colorado,CO,Colorado,state,2011,2006,IECC,4,0,1,0,1,0,0,0,2021,2026,Energy Performance for Buildings,HB21-1286,,,0,0,2021,2026,,Site EUI or GHGI,50000,50000,50000,1,1,,,Energy Performance for Buildings,HB21-1286,0,1,2022,0,0,2021,2022,,50000,0,0,0
+Colorado,CO,Colorado,state,2012,2006,IECC,6,0,1,0,1,0,0,0,2021,2026,Energy Performance for Buildings,HB21-1286,,,0,0,2021,2026,,Site EUI or GHGI,50000,50000,50000,1,1,,,Energy Performance for Buildings,HB21-1286,0,1,2022,0,0,2021,2022,,50000,0,0,0
+Colorado,CO,Colorado,state,2013,2006,IECC,6,0,1,0,1,0,0,0,2021,2026,Energy Performance for Buildings,HB21-1286,,,0,0,2021,2026,,Site EUI or GHGI,50000,50000,50000,1,1,,,Energy Performance for Buildings,HB21-1286,0,1,2022,0,0,2021,2022,,50000,0,0,0
+Colorado,CO,Colorado,state,2014,2006,IECC,7,0,1,0,1,0,0,0,2021,2026,Energy Performance for Buildings,HB21-1286,,,0,0,2021,2026,,Site EUI or GHGI,50000,50000,50000,1,1,,,Energy Performance for Buildings,HB21-1286,0,1,2022,0,0,2021,2022,,50000,0,0,0
+Colorado,CO,Colorado,state,2015,2006,IECC,9,0,1,0,1,0,0,0,2021,2026,Energy Performance for Buildings,HB21-1286,,,0,0,2021,2026,,Site EUI or GHGI,50000,50000,50000,1,1,,,Energy Performance for Buildings,HB21-1286,0,1,2022,0,0,2021,2022,,50000,0,0,0
+Colorado,CO,Colorado,state,2016,2006,IECC,9,0,1,0,1,0,0,0,2021,2026,Energy Performance for Buildings,HB21-1286,,,0,0,2021,2026,,Site EUI or GHGI,50000,50000,50000,1,1,,,Energy Performance for Buildings,HB21-1286,0,1,2022,0,0,2021,2022,,50000,0,0,0
+Colorado,CO,Colorado,state,2017,2006,IECC,10,0,1,0,1,0,0,0,2021,2026,Energy Performance for Buildings,HB21-1286,,,0,0,2021,2026,,Site EUI or GHGI,50000,50000,50000,1,1,,,Energy Performance for Buildings,HB21-1286,0,1,2022,0,0,2021,2022,,50000,0,0,0
+Colorado,CO,Colorado,state,2018,2006,IECC,10,0,1,0,1,0,0,0,2021,2026,Energy Performance for Buildings,HB21-1286,,,0,0,2021,2026,,Site EUI or GHGI,50000,50000,50000,1,1,,,Energy Performance for Buildings,HB21-1286,0,1,2022,0,0,2021,2022,,50000,0,0,0
+Colorado,CO,Colorado,state,2019,2006,IECC,10,0,1,0,1,0,0,0,2021,2026,Energy Performance for Buildings,HB21-1286,,,0,0,2021,2026,,Site EUI or GHGI,50000,50000,50000,1,1,,,Energy Performance for Buildings,HB21-1286,0,1,2022,0,0,2021,2022,,50000,0,0,0
+Colorado,CO,Colorado,state,2020,2006,IECC,13,0,1,0,1,0,0,0,2021,2026,Energy Performance for Buildings,HB21-1286,,,0,0,2021,2026,,Site EUI or GHGI,50000,50000,50000,1,1,,,Energy Performance for Buildings,HB21-1286,0,1,2022,0,0,2021,2022,,50000,0,0,0
+Colorado,CO,Colorado,state,2021,2006,IECC,13,0,1,0,1,0,1,0,2021,2026,Energy Performance for Buildings,HB21-1286,,,1,0,2021,2026,0,Site EUI or GHGI,50000,50000,50000,1,1,,,Energy Performance for Buildings,HB21-1286,0,1,2022,1,0,2021,2022,0,50000,0,1,0
+Colorado,CO,Colorado,state,2022,2006,IECC,13,0,1,0,1,0,1,0,2021,2026,Energy Performance for Buildings,HB21-1286,,,1,0,2021,2026,1,Site EUI or GHGI,50000,50000,50000,1,1,,,Energy Performance for Buildings,HB21-1286,1,1,2022,1,1,2021,2022,1,50000,0,1,1
+Colorado,CO,Colorado,state,2023,2021,IECC,1,0,1,0,1,0,1,0,2021,2026,Energy Performance for Buildings,HB21-1286,,,1,0,2021,2026,2,Site EUI or GHGI,50000,50000,50000,1,1,,,Energy Performance for Buildings,HB21-1286,1,1,2022,1,1,2021,2022,2,50000,0,1,1
+Colorado,CO,Colorado,state,2024,2021,IECC,1,0,1,0,1,0,1,0,2021,2026,Energy Performance for Buildings,HB21-1286,,,1,0,2021,2026,3,Site EUI or GHGI,50000,50000,50000,1,1,,,Energy Performance for Buildings,HB21-1286,1,1,2022,1,1,2021,2022,3,50000,0,1,1
+Colorado,CO,Colorado,state,2025,2021,IECC,1,0,1,0,1,0,1,0,2021,2026,Energy Performance for Buildings,HB21-1286,,,1,0,2021,2026,4,Site EUI or GHGI,50000,50000,50000,1,1,,,Energy Performance for Buildings,HB21-1286,1,1,2022,1,1,2021,2022,4,50000,0,1,1
+Columbus,OH,Ohio,city,2010,2006,IECC,3,0,0,1,0,1,0,0,,,,,,,0,0,,,,,,,,,,,,,,0,1,2022,0,0,,,,,,0,0
+Columbus,OH,Ohio,city,2011,2007,ASHRAE,3,0,0,1,0,1,0,0,,,,,,,0,0,,,,,,,,,,,,,,0,1,2022,0,0,,,,,,0,0
+Columbus,OH,Ohio,city,2012,2007,ASHRAE,5,0,0,1,0,1,0,0,,,,,,,0,0,,,,,,,,,,,,,,0,1,2022,0,0,,,,,,0,0
+Columbus,OH,Ohio,city,2013,2007,ASHRAE,5,0,0,1,0,1,0,0,,,,,,,0,0,,,,,,,,,,,,,,0,1,2022,0,0,,,,,,0,0
+Columbus,OH,Ohio,city,2014,2007,ASHRAE,6,0,0,1,0,1,0,0,,,,,,,0,0,,,,,,,,,,,,,,0,1,2022,0,0,,,,,,0,0
+Columbus,OH,Ohio,city,2015,2007,ASHRAE,8,0,0,1,0,1,0,0,,,,,,,0,0,,,,,,,,,,,,,,0,1,2022,0,0,,,,,,0,0
+Columbus,OH,Ohio,city,2016,2007,ASHRAE,8,0,0,1,0,1,0,0,,,,,,,0,0,,,,,,,,,,,,,,0,1,2022,0,0,,,,,,0,0
+Columbus,OH,Ohio,city,2017,2013,ASHRAE,3,0,0,1,0,1,0,0,,,,,,,0,0,,,,,,,,,,,,,,0,1,2022,0,0,,,,,,0,0
+Columbus,OH,Ohio,city,2018,2013,ASHRAE,3,0,0,1,0,1,0,0,,,,,,,0,0,,,,,,,,,,,,,,0,1,2022,0,0,,,,,,0,0
+Columbus,OH,Ohio,city,2019,2013,ASHRAE,3,0,0,1,0,1,0,0,,,,,,,0,0,,,,,,,,,,,,,,0,1,2022,0,0,,,,,,0,0
+Columbus,OH,Ohio,city,2020,2013,ASHRAE,6,0,0,1,0,1,0,0,,,,,,,0,0,,,,,,,,,,,,,,0,1,2022,0,0,,,,,,0,0
+Columbus,OH,Ohio,city,2021,2013,ASHRAE,6,0,0,1,0,1,0,0,,,,,,,0,0,,,,,,,,,,,,,,0,1,2022,0,0,,,,,,0,0
+Columbus,OH,Ohio,city,2022,2013,ASHRAE,6,0,0,1,0,1,0,0,,,,,,,0,0,,,,,,,,,,,,,,1,1,2022,0,0,,,,,,0,0
+Columbus,OH,Ohio,city,2023,2013,ASHRAE,9,0,0,1,0,1,0,0,,,,,,,0,0,,,,,,,,,,,,,,1,1,2022,0,0,,,,,,0,0
+Columbus,OH,Ohio,city,2024,2019,ASHRAE,3,0,0,1,0,1,0,0,,,,,,,0,0,,,,,,,,,,,,,,1,1,2022,0,0,,,,,,0,0
+Columbus,OH,Ohio,city,2025,2019,ASHRAE,3,0,0,1,0,1,0,0,,,,,,,0,0,,,,,,,,,,,,,,1,1,2022,0,0,,,,,,0,0
+Denver,CO,Colorado,city,2010,2006,IECC,3,0,1,0,1,0,0,0,2021,2026,Energy Performance for Buildings,HB21-1286,,,0,0,2021,2028,,Weather-normalized Site EUI,25000,25000,25000,1,1,10,,Energize Denver,Bill 21-1310,0,1,2022,0,0,,,,,,0,0
+Denver,CO,Colorado,city,2011,2006,IECC,4,0,1,0,1,0,0,0,2021,2026,Energy Performance for Buildings,HB21-1286,,,0,0,2021,2028,,Weather-normalized Site EUI,25000,25000,25000,1,1,10,,Energize Denver,Bill 21-1310,0,1,2022,0,0,,,,,,0,0
+Denver,CO,Colorado,city,2012,2006,IECC,6,0,1,0,1,0,0,0,2021,2026,Energy Performance for Buildings,HB21-1286,,,0,0,2021,2028,,Weather-normalized Site EUI,25000,25000,25000,1,1,10,,Energize Denver,Bill 21-1310,0,1,2022,0,0,,,,,,0,0
+Denver,CO,Colorado,city,2013,2006,IECC,6,0,1,0,1,0,0,0,2021,2026,Energy Performance for Buildings,HB21-1286,,,0,0,2021,2028,,Weather-normalized Site EUI,25000,25000,25000,1,1,10,,Energize Denver,Bill 21-1310,0,1,2022,0,0,,,,,,0,0
+Denver,CO,Colorado,city,2014,2006,IECC,7,0,1,0,1,0,0,0,2021,2026,Energy Performance for Buildings,HB21-1286,,,0,0,2021,2028,,Weather-normalized Site EUI,25000,25000,25000,1,1,10,,Energize Denver,Bill 21-1310,0,1,2022,0,0,,,,,,0,0
+Denver,CO,Colorado,city,2015,2006,IECC,9,0,1,0,1,0,0,0,2021,2026,Energy Performance for Buildings,HB21-1286,,,0,0,2021,2028,,Weather-normalized Site EUI,25000,25000,25000,1,1,10,,Energize Denver,Bill 21-1310,0,1,2022,0,0,,,,,,0,0
+Denver,CO,Colorado,city,2016,2006,IECC,9,0,1,0,1,0,0,0,2021,2026,Energy Performance for Buildings,HB21-1286,,,0,0,2021,2028,,Weather-normalized Site EUI,25000,25000,25000,1,1,10,,Energize Denver,Bill 21-1310,0,1,2022,0,0,,,,,,0,0
+Denver,CO,Colorado,city,2017,2006,IECC,10,0,1,0,1,0,0,0,2021,2026,Energy Performance for Buildings,HB21-1286,,,0,0,2021,2028,,Weather-normalized Site EUI,25000,25000,25000,1,1,10,,Energize Denver,Bill 21-1310,0,1,2022,0,0,,,,,,0,0
+Denver,CO,Colorado,city,2018,2006,IECC,10,0,1,0,1,0,0,0,2021,2026,Energy Performance for Buildings,HB21-1286,,,0,0,2021,2028,,Weather-normalized Site EUI,25000,25000,25000,1,1,10,,Energize Denver,Bill 21-1310,0,1,2022,0,0,,,,,,0,0
+Denver,CO,Colorado,city,2019,2006,IECC,10,0,1,0,1,0,0,0,2021,2026,Energy Performance for Buildings,HB21-1286,,,0,0,2021,2028,,Weather-normalized Site EUI,25000,25000,25000,1,1,10,,Energize Denver,Bill 21-1310,0,1,2022,0,0,,,,,,0,0
+Denver,CO,Colorado,city,2020,2006,IECC,13,0,1,0,1,0,0,0,2021,2026,Energy Performance for Buildings,HB21-1286,,,0,0,2021,2028,,Weather-normalized Site EUI,25000,25000,25000,1,1,10,,Energize Denver,Bill 21-1310,0,1,2022,0,0,,,,,,0,0
+Denver,CO,Colorado,city,2021,2006,IECC,13,0,1,0,1,0,1,0,2021,2026,Energy Performance for Buildings,HB21-1286,,,1,0,2021,2028,0,Weather-normalized Site EUI,25000,25000,25000,1,1,10,,Energize Denver,Bill 21-1310,0,1,2022,0,0,,,,,,1,0
+Denver,CO,Colorado,city,2022,2006,IECC,13,0,1,0,1,0,1,0,2021,2026,Energy Performance for Buildings,HB21-1286,,,1,0,2021,2028,1,Weather-normalized Site EUI,25000,25000,25000,1,1,10,,Energize Denver,Bill 21-1310,1,1,2022,0,0,,,,,,1,0
+Denver,CO,Colorado,city,2023,2021,IECC,1,0,1,0,1,0,1,0,2021,2026,Energy Performance for Buildings,HB21-1286,,,1,0,2021,2028,2,Weather-normalized Site EUI,25000,25000,25000,1,1,10,,Energize Denver,Bill 21-1310,1,1,2022,0,0,,,,,,1,0
+Denver,CO,Colorado,city,2024,2021,IECC,1,0,1,0,1,0,1,0,2021,2026,Energy Performance for Buildings,HB21-1286,,,1,0,2021,2028,3,Weather-normalized Site EUI,25000,25000,25000,1,1,10,,Energize Denver,Bill 21-1310,1,1,2022,0,0,,,,,,1,0
+Denver,CO,Colorado,city,2025,2021,IECC,1,0,1,0,1,0,1,0,2021,2026,Energy Performance for Buildings,HB21-1286,,,1,0,2021,2028,4,Weather-normalized Site EUI,25000,25000,25000,1,1,10,,Energize Denver,Bill 21-1310,1,1,2022,0,0,,,,,,1,0
+Evanston,IL,Illinois,city,2010,2006,IECC,3,0,0,0,0,0,0,0,,,,,,,0,0,2025,,,Site EUI / GHG / renewable electricity %,20000,10000,20000,1,1,,,Healthy Buildings Ordinance,Ordinance 1-O-25,0,1,2022,0,0,2016,2017,,20000,0,0,0
+Evanston,IL,Illinois,city,2011,2006,IECC,4,0,0,0,0,0,0,0,,,,,,,0,0,2025,,,Site EUI / GHG / renewable electricity %,20000,10000,20000,1,1,,,Healthy Buildings Ordinance,Ordinance 1-O-25,0,1,2022,0,0,2016,2017,,20000,0,0,0
+Evanston,IL,Illinois,city,2012,2006,IECC,6,0,0,0,0,0,0,0,,,,,,,0,0,2025,,,Site EUI / GHG / renewable electricity %,20000,10000,20000,1,1,,,Healthy Buildings Ordinance,Ordinance 1-O-25,0,1,2022,0,0,2016,2017,,20000,0,0,0
+Evanston,IL,Illinois,city,2013,2012,IECC,0,0,0,0,0,0,0,0,,,,,,,0,0,2025,,,Site EUI / GHG / renewable electricity %,20000,10000,20000,1,1,,,Healthy Buildings Ordinance,Ordinance 1-O-25,0,1,2022,0,0,2016,2017,,20000,0,0,0
+Evanston,IL,Illinois,city,2014,2012,IECC,1,0,0,0,0,0,0,0,,,,,,,0,0,2025,,,Site EUI / GHG / renewable electricity %,20000,10000,20000,1,1,,,Healthy Buildings Ordinance,Ordinance 1-O-25,0,1,2022,0,0,2016,2017,,20000,0,0,0
+Evanston,IL,Illinois,city,2015,2012,IECC,3,0,0,0,0,0,0,0,,,,,,,0,0,2025,,,Site EUI / GHG / renewable electricity %,20000,10000,20000,1,1,,,Healthy Buildings Ordinance,Ordinance 1-O-25,0,1,2022,0,0,2016,2017,,20000,0,0,0
+Evanston,IL,Illinois,city,2016,2015,IECC,0,0,0,0,0,0,0,0,,,,,,,0,0,2025,,,Site EUI / GHG / renewable electricity %,20000,10000,20000,1,1,,,Healthy Buildings Ordinance,Ordinance 1-O-25,0,1,2022,1,0,2016,2017,0,20000,0,1,0
+Evanston,IL,Illinois,city,2017,2015,IECC,1,0,0,0,0,0,0,0,,,,,,,0,0,2025,,,Site EUI / GHG / renewable electricity %,20000,10000,20000,1,1,,,Healthy Buildings Ordinance,Ordinance 1-O-25,0,1,2022,1,1,2016,2017,1,20000,0,1,1
+Evanston,IL,Illinois,city,2018,2015,IECC,1,0,0,0,0,0,0,0,,,,,,,0,0,2025,,,Site EUI / GHG / renewable electricity %,20000,10000,20000,1,1,,,Healthy Buildings Ordinance,Ordinance 1-O-25,0,1,2022,1,1,2016,2017,2,20000,0,1,1
+Evanston,IL,Illinois,city,2019,2015,IECC,1,0,0,0,0,0,0,0,,,,,,,0,0,2025,,,Site EUI / GHG / renewable electricity %,20000,10000,20000,1,1,,,Healthy Buildings Ordinance,Ordinance 1-O-25,0,1,2022,1,1,2016,2017,3,20000,0,1,1
+Evanston,IL,Illinois,city,2020,2015,IECC,4,0,0,0,0,0,0,0,,,,,,,0,0,2025,,,Site EUI / GHG / renewable electricity %,20000,10000,20000,1,1,,,Healthy Buildings Ordinance,Ordinance 1-O-25,0,1,2022,1,1,2016,2017,4,20000,0,1,1
+Evanston,IL,Illinois,city,2021,2015,IECC,4,0,0,0,0,0,0,0,,,,,,,0,0,2025,,,Site EUI / GHG / renewable electricity %,20000,10000,20000,1,1,,,Healthy Buildings Ordinance,Ordinance 1-O-25,0,1,2022,1,1,2016,2017,5,20000,0,1,1
+Evanston,IL,Illinois,city,2022,2015,IECC,4,0,0,0,0,0,0,0,,,,,,,0,0,2025,,,Site EUI / GHG / renewable electricity %,20000,10000,20000,1,1,,,Healthy Buildings Ordinance,Ordinance 1-O-25,1,1,2022,1,1,2016,2017,6,20000,0,1,1
+Evanston,IL,Illinois,city,2023,2015,IECC,7,0,0,0,0,0,0,0,,,,,,,0,0,2025,,,Site EUI / GHG / renewable electricity %,20000,10000,20000,1,1,,,Healthy Buildings Ordinance,Ordinance 1-O-25,1,1,2022,1,1,2016,2017,7,20000,0,1,1
+Evanston,IL,Illinois,city,2024,2015,IECC,7,0,0,0,0,0,0,0,,,,,,,0,0,2025,,,Site EUI / GHG / renewable electricity %,20000,10000,20000,1,1,,,Healthy Buildings Ordinance,Ordinance 1-O-25,1,1,2022,1,1,2016,2017,8,20000,0,1,1
+Evanston,IL,Illinois,city,2025,2022,ASHRAE,0,0,0,0,0,0,0,0,,,,,,,1,0,2025,,0,Site EUI / GHG / renewable electricity %,20000,10000,20000,1,1,,,Healthy Buildings Ordinance,Ordinance 1-O-25,1,1,2022,1,1,2016,2017,9,20000,0,1,1
+Fort Collins,CO,Colorado,city,2010,2006,IECC,3,0,1,0,1,0,0,0,2021,2026,Energy Performance for Buildings,HB21-1286,,,0,0,,,,,,,,,,,,,,0,1,2022,0,0,,,,,,0,0
+Fort Collins,CO,Colorado,city,2011,2006,IECC,4,0,1,0,1,0,0,0,2021,2026,Energy Performance for Buildings,HB21-1286,,,0,0,,,,,,,,,,,,,,0,1,2022,0,0,,,,,,0,0
+Fort Collins,CO,Colorado,city,2012,2006,IECC,6,0,1,0,1,0,0,0,2021,2026,Energy Performance for Buildings,HB21-1286,,,0,0,,,,,,,,,,,,,,0,1,2022,0,0,,,,,,0,0
+Fort Collins,CO,Colorado,city,2013,2006,IECC,6,0,1,0,1,0,0,0,2021,2026,Energy Performance for Buildings,HB21-1286,,,0,0,,,,,,,,,,,,,,0,1,2022,0,0,,,,,,0,0
+Fort Collins,CO,Colorado,city,2014,2006,IECC,7,0,1,0,1,0,0,0,2021,2026,Energy Performance for Buildings,HB21-1286,,,0,0,,,,,,,,,,,,,,0,1,2022,0,0,,,,,,0,0
+Fort Collins,CO,Colorado,city,2015,2006,IECC,9,0,1,0,1,0,0,0,2021,2026,Energy Performance for Buildings,HB21-1286,,,0,0,,,,,,,,,,,,,,0,1,2022,0,0,,,,,,0,0
+Fort Collins,CO,Colorado,city,2016,2006,IECC,9,0,1,0,1,0,0,0,2021,2026,Energy Performance for Buildings,HB21-1286,,,0,0,,,,,,,,,,,,,,0,1,2022,0,0,,,,,,0,0
+Fort Collins,CO,Colorado,city,2017,2006,IECC,10,0,1,0,1,0,0,0,2021,2026,Energy Performance for Buildings,HB21-1286,,,0,0,,,,,,,,,,,,,,0,1,2022,0,0,,,,,,0,0
+Fort Collins,CO,Colorado,city,2018,2006,IECC,10,0,1,0,1,0,0,0,2021,2026,Energy Performance for Buildings,HB21-1286,,,0,0,,,,,,,,,,,,,,0,1,2022,0,0,,,,,,0,0
+Fort Collins,CO,Colorado,city,2019,2006,IECC,10,0,1,0,1,0,0,0,2021,2026,Energy Performance for Buildings,HB21-1286,,,0,0,,,,,,,,,,,,,,0,1,2022,0,0,,,,,,0,0
+Fort Collins,CO,Colorado,city,2020,2006,IECC,13,0,1,0,1,0,0,0,2021,2026,Energy Performance for Buildings,HB21-1286,,,0,0,,,,,,,,,,,,,,0,1,2022,0,0,,,,,,0,0
+Fort Collins,CO,Colorado,city,2021,2006,IECC,13,0,1,0,1,0,1,0,2021,2026,Energy Performance for Buildings,HB21-1286,,,0,0,,,,,,,,,,,,,,0,1,2022,0,0,,,,,,1,0
+Fort Collins,CO,Colorado,city,2022,2006,IECC,13,0,1,0,1,0,1,0,2021,2026,Energy Performance for Buildings,HB21-1286,,,0,0,,,,,,,,,,,,,,1,1,2022,0,0,,,,,,1,0
+Fort Collins,CO,Colorado,city,2023,2021,IECC,1,0,1,0,1,0,1,0,2021,2026,Energy Performance for Buildings,HB21-1286,,,0,0,,,,,,,,,,,,,,1,1,2022,0,0,,,,,,1,0
+Fort Collins,CO,Colorado,city,2024,2021,IECC,1,0,1,0,1,0,1,0,2021,2026,Energy Performance for Buildings,HB21-1286,,,0,0,,,,,,,,,,,,,,1,1,2022,0,0,,,,,,1,0
+Fort Collins,CO,Colorado,city,2025,2021,IECC,1,0,1,0,1,0,1,0,2021,2026,Energy Performance for Buildings,HB21-1286,,,0,0,,,,,,,,,,,,,,1,1,2022,0,0,,,,,,1,0
+Grand Rapids,MI,Michigan,city,2010,2004,IECC,5,0,0,0,0,1,0,0,,,,,,,0,0,,,,,,,,,,,,,,0,1,2022,0,0,,,,,,0,0
+Grand Rapids,MI,Michigan,city,2011,2004,IECC,6,0,0,0,0,1,0,0,,,,,,,0,0,,,,,,,,,,,,,,0,1,2022,0,0,,,,,,0,0
+Grand Rapids,MI,Michigan,city,2012,2004,IECC,8,0,0,0,0,1,0,0,,,,,,,0,0,,,,,,,,,,,,,,0,1,2022,0,0,,,,,,0,0
+Grand Rapids,MI,Michigan,city,2013,2004,IECC,8,0,0,0,0,1,0,0,,,,,,,0,0,,,,,,,,,,,,,,0,1,2022,0,0,,,,,,0,0
+Grand Rapids,MI,Michigan,city,2014,2004,IECC,9,0,0,0,0,1,0,0,,,,,,,0,0,,,,,,,,,,,,,,0,1,2022,0,0,,,,,,0,0
+Grand Rapids,MI,Michigan,city,2015,2004,IECC,11,0,0,0,0,1,0,0,,,,,,,0,0,,,,,,,,,,,,,,0,1,2022,0,0,,,,,,0,0
+Grand Rapids,MI,Michigan,city,2016,2004,IECC,11,0,0,0,0,1,0,0,,,,,,,0,0,,,,,,,,,,,,,,0,1,2022,0,0,,,,,,0,0
+Grand Rapids,MI,Michigan,city,2017,2004,IECC,12,0,0,0,0,1,0,0,,,,,,,0,0,,,,,,,,,,,,,,0,1,2022,0,0,,,,,,0,0
+Grand Rapids,MI,Michigan,city,2018,2004,IECC,12,0,0,0,0,1,0,0,,,,,,,0,0,,,,,,,,,,,,,,0,1,2022,0,0,,,,,,0,0
+Grand Rapids,MI,Michigan,city,2019,2004,IECC,12,0,0,0,0,1,0,0,,,,,,,0,0,,,,,,,,,,,,,,0,1,2022,0,0,,,,,,0,0
+Grand Rapids,MI,Michigan,city,2020,2004,IECC,15,0,0,0,0,1,0,0,,,,,,,0,0,,,,,,,,,,,,,,0,1,2022,0,0,,,,,,0,0
+Grand Rapids,MI,Michigan,city,2021,2004,IECC,15,0,0,0,0,1,0,0,,,,,,,0,0,,,,,,,,,,,,,,0,1,2022,0,0,,,,,,0,0
+Grand Rapids,MI,Michigan,city,2022,2004,IECC,15,0,0,0,0,1,0,0,,,,,,,0,0,,,,,,,,,,,,,,1,1,2022,0,0,,,,,,0,0
+Grand Rapids,MI,Michigan,city,2023,2004,IECC,18,0,0,0,0,1,0,0,,,,,,,0,0,,,,,,,,,,,,,,1,1,2022,0,0,,,,,,0,0
+Grand Rapids,MI,Michigan,city,2024,2004,IECC,18,0,0,0,0,1,0,0,,,,,,,0,0,,,,,,,,,,,,,,1,1,2022,0,0,,,,,,0,0
+Grand Rapids,MI,Michigan,city,2025,2019,ASHRAE,3,0,0,0,0,1,0,0,,,,,,,0,0,,,,,,,,,,,,,,1,1,2022,0,0,,,,,,0,0
+Hawaii,HI,Hawaii,state,2010,2006,IECC,3,0,0,0,0,0,0,0,,,,,,,0,0,,,,,,,,,,,,,,0,0,2023,0,0,,,,,,0,0
+Hawaii,HI,Hawaii,state,2011,2006,IECC,4,0,0,0,0,0,0,0,,,,,,,0,0,,,,,,,,,,,,,,0,0,2023,0,0,,,,,,0,0
+Hawaii,HI,Hawaii,state,2012,2006,IECC,6,0,0,0,0,0,0,0,,,,,,,0,0,,,,,,,,,,,,,,0,0,2023,0,0,,,,,,0,0
+Hawaii,HI,Hawaii,state,2013,2006,IECC,6,0,0,0,0,0,0,0,,,,,,,0,0,,,,,,,,,,,,,,0,0,2023,0,0,,,,,,0,0
+Hawaii,HI,Hawaii,state,2014,2006,IECC,7,0,0,0,0,0,0,0,,,,,,,0,0,,,,,,,,,,,,,,0,0,2023,0,0,,,,,,0,0
+Hawaii,HI,Hawaii,state,2015,2013,ASHRAE,2,0,0,0,0,0,0,0,,,,,,,0,0,,,,,,,,,,,,,,0,0,2023,0,0,,,,,,0,0
+Hawaii,HI,Hawaii,state,2016,2013,ASHRAE,2,0,0,0,0,0,0,0,,,,,,,0,0,,,,,,,,,,,,,,0,0,2023,0,0,,,,,,0,0
+Hawaii,HI,Hawaii,state,2017,2013,ASHRAE,3,0,0,0,0,0,0,0,,,,,,,0,0,,,,,,,,,,,,,,0,0,2023,0,0,,,,,,0,0
+Hawaii,HI,Hawaii,state,2018,2013,ASHRAE,3,0,0,0,0,0,0,0,,,,,,,0,0,,,,,,,,,,,,,,0,0,2023,0,0,,,,,,0,0
+Hawaii,HI,Hawaii,state,2019,2013,ASHRAE,3,0,0,0,0,0,0,0,,,,,,,0,0,,,,,,,,,,,,,,0,0,2023,0,0,,,,,,0,0
+Hawaii,HI,Hawaii,state,2020,2016,ASHRAE,3,0,0,0,0,0,0,0,,,,,,,0,0,,,,,,,,,,,,,,0,0,2023,0,0,,,,,,0,0
+Hawaii,HI,Hawaii,state,2021,2016,ASHRAE,3,0,0,0,0,0,0,0,,,,,,,0,0,,,,,,,,,,,,,,0,0,2023,0,0,,,,,,0,0
+Hawaii,HI,Hawaii,state,2022,2016,ASHRAE,3,0,0,0,0,0,0,0,,,,,,,0,0,,,,,,,,,,,,,,0,0,2023,0,0,,,,,,0,0
+Hawaii,HI,Hawaii,state,2023,2016,ASHRAE,6,0,0,0,0,0,0,0,,,,,,,0,0,,,,,,,,,,,,,,1,0,2023,0,0,,,,,,0,0
+Hawaii,HI,Hawaii,state,2024,2016,ASHRAE,6,0,0,0,0,0,0,0,,,,,,,0,0,,,,,,,,,,,,,,1,0,2023,0,0,,,,,,0,0
+Hawaii,HI,Hawaii,state,2025,2016,ASHRAE,6,0,0,0,0,0,0,0,,,,,,,0,0,,,,,,,,,,,,,,1,0,2023,0,0,,,,,,0,0
+Ithaca,NY,New York,city,2010,2007,ASHRAE,2,0,0,0,1,0,0,0,,,,,,,0,0,,,,,,,,,,,,,,0,1,2022,0,0,,,,,,0,0
+Ithaca,NY,New York,city,2011,2007,ASHRAE,3,0,0,0,1,0,0,0,,,,,,,0,0,,,,,,,,,,,,,,0,1,2022,0,0,,,,,,0,0
+Ithaca,NY,New York,city,2012,2007,ASHRAE,5,0,0,0,1,0,0,0,,,,,,,0,0,,,,,,,,,,,,,,0,1,2022,0,0,,,,,,0,0
+Ithaca,NY,New York,city,2013,2007,ASHRAE,5,0,0,0,1,0,0,0,,,,,,,0,0,,,,,,,,,,,,,,0,1,2022,0,0,,,,,,0,0
+Ithaca,NY,New York,city,2014,2007,ASHRAE,6,0,0,0,1,0,0,0,,,,,,,0,0,,,,,,,,,,,,,,0,1,2022,0,0,,,,,,0,0
+Ithaca,NY,New York,city,2015,2007,ASHRAE,8,0,0,0,1,0,0,0,,,,,,,0,0,,,,,,,,,,,,,,0,1,2022,0,0,,,,,,0,0
+Ithaca,NY,New York,city,2016,2013,ASHRAE,2,0,0,0,1,0,0,0,,,,,,,0,0,,,,,,,,,,,,,,0,1,2022,0,0,,,,,,0,0
+Ithaca,NY,New York,city,2017,2013,ASHRAE,3,0,0,0,1,0,0,0,,,,,,,0,0,,,,,,,,,,,,,,0,1,2022,0,0,,,,,,0,0
+Ithaca,NY,New York,city,2018,2013,ASHRAE,3,0,0,0,1,0,0,0,,,,,,,0,0,,,,,,,,,,,,,,0,1,2022,0,0,,,,,,0,0
+Ithaca,NY,New York,city,2019,2013,ASHRAE,3,0,0,0,1,0,0,0,,,,,,,0,0,,,,,,,,,,,,,,0,1,2022,0,0,,,,,,0,0
+Ithaca,NY,New York,city,2020,2016,ASHRAE,3,0,0,0,1,0,0,0,,,,,,,0,0,,,,,,,,,,,,,,0,1,2022,0,0,,,,,,0,0
+Ithaca,NY,New York,city,2021,2016,ASHRAE,3,0,0,0,1,0,0,0,,,,,,,0,0,,,,,,,,,,,,,,0,1,2022,0,0,,,,,,0,0
+Ithaca,NY,New York,city,2022,2016,ASHRAE,3,0,0,0,1,0,0,0,,,,,,,0,0,,,,,,,,,,,,,,1,1,2022,0,0,,,,,,0,0
+Ithaca,NY,New York,city,2023,2016,ASHRAE,6,0,0,0,1,0,0,0,,,,,,,0,0,,,,,,,,,,,,,,1,1,2022,0,0,,,,,,0,0
+Ithaca,NY,New York,city,2024,2016,ASHRAE,6,0,0,0,1,0,0,0,,,,,,,0,0,,,,,,,,,,,,,,1,1,2022,0,0,,,,,,0,0
+Ithaca,NY,New York,city,2025,2022,ASHRAE,0,0,0,0,1,0,0,0,,,,,,,0,0,,,,,,,,,,,,,,1,1,2022,0,0,,,,,,0,0
+Kansas City,MO,Missouri,city,2010,,,,0,1,0,0,0,0,0,,,,,,,0,0,,,,,,,,,,,,,,0,1,2022,0,0,2015,2017,,50000,0,0,0
+Kansas City,MO,Missouri,city,2011,,,,0,1,0,0,0,0,0,,,,,,,0,0,,,,,,,,,,,,,,0,1,2022,0,0,2015,2017,,50000,0,0,0
+Kansas City,MO,Missouri,city,2012,,,,0,1,0,0,0,0,0,,,,,,,0,0,,,,,,,,,,,,,,0,1,2022,0,0,2015,2017,,50000,0,0,0
+Kansas City,MO,Missouri,city,2013,,,,0,1,0,0,0,0,0,,,,,,,0,0,,,,,,,,,,,,,,0,1,2022,0,0,2015,2017,,50000,0,0,0
+Kansas City,MO,Missouri,city,2014,,,,0,1,0,0,0,0,0,,,,,,,0,0,,,,,,,,,,,,,,0,1,2022,0,0,2015,2017,,50000,0,0,0
+Kansas City,MO,Missouri,city,2015,,,,0,1,0,0,0,0,0,,,,,,,0,0,,,,,,,,,,,,,,0,1,2022,1,0,2015,2017,0,50000,0,1,0
+Kansas City,MO,Missouri,city,2016,,,,0,1,0,0,0,0,0,,,,,,,0,0,,,,,,,,,,,,,,0,1,2022,1,0,2015,2017,1,50000,0,1,0
+Kansas City,MO,Missouri,city,2017,,,,0,1,0,0,0,0,0,,,,,,,0,0,,,,,,,,,,,,,,0,1,2022,1,1,2015,2017,2,50000,0,1,1
+Kansas City,MO,Missouri,city,2018,,,,0,1,0,0,0,0,0,,,,,,,0,0,,,,,,,,,,,,,,0,1,2022,1,1,2015,2017,3,50000,0,1,1
+Kansas City,MO,Missouri,city,2019,,,,0,1,0,0,0,0,0,,,,,,,0,0,,,,,,,,,,,,,,0,1,2022,1,1,2015,2017,4,50000,0,1,1
+Kansas City,MO,Missouri,city,2020,,,,0,1,0,0,0,0,0,,,,,,,0,0,,,,,,,,,,,,,,0,1,2022,1,1,2015,2017,5,50000,0,1,1
+Kansas City,MO,Missouri,city,2021,,,,0,1,0,0,0,0,0,,,,,,,0,0,,,,,,,,,,,,,,0,1,2022,1,1,2015,2017,6,50000,0,1,1
+Kansas City,MO,Missouri,city,2022,,,,0,1,0,0,0,0,0,,,,,,,0,0,,,,,,,,,,,,,,1,1,2022,1,1,2015,2017,7,50000,0,1,1
+Kansas City,MO,Missouri,city,2023,,,,0,1,0,0,0,0,0,,,,,,,0,0,,,,,,,,,,,,,,1,1,2022,1,1,2015,2017,8,50000,0,1,1
+Kansas City,MO,Missouri,city,2024,,,,0,1,0,0,0,0,0,,,,,,,0,0,,,,,,,,,,,,,,1,1,2022,1,1,2015,2017,9,50000,0,1,1
+Kansas City,MO,Missouri,city,2025,,,,0,1,0,0,0,0,0,,,,,,,0,0,,,,,,,,,,,,,,1,1,2022,1,1,2015,2017,10,50000,0,1,1
+Los Angeles,CA,California,city,2010,2008,TITLE24,1,0,0,0,1,0,0,0,,,,,,,0,0,,,,,,,,,,,,,,0,1,2022,0,0,,,,,,0,0
+Los Angeles,CA,California,city,2011,2008,TITLE24,2,0,0,0,1,0,0,0,,,,,,,0,0,,,,,,,,,,,,,,0,1,2022,0,0,,,,,,0,0
+Los Angeles,CA,California,city,2012,2008,TITLE24,4,0,0,0,1,0,0,0,,,,,,,0,0,,,,,,,,,,,,,,0,1,2022,0,0,,,,,,0,0
+Los Angeles,CA,California,city,2013,2008,TITLE24,4,0,0,0,1,0,0,0,,,,,,,0,0,,,,,,,,,,,,,,0,1,2022,0,0,,,,,,0,0
+Los Angeles,CA,California,city,2014,2013,TITLE24,0,0,0,0,1,0,0,0,,,,,,,0,0,,,,,,,,,,,,,,0,1,2022,0,0,,,,,,0,0
+Los Angeles,CA,California,city,2015,2013,TITLE24,2,0,0,0,1,0,0,0,,,,,,,0,0,,,,,,,,,,,,,,0,1,2022,0,0,,,,,,0,0
+Los Angeles,CA,California,city,2016,2013,TITLE24,2,0,0,0,1,0,0,0,,,,,,,0,0,,,,,,,,,,,,,,0,1,2022,0,0,,,,,,0,0
+Los Angeles,CA,California,city,2017,2016,TITLE24,0,0,0,0,1,0,0,0,,,,,,,0,0,,,,,,,,,,,,,,0,1,2022,0,0,,,,,,0,0
+Los Angeles,CA,California,city,2018,2016,TITLE24,0,0,0,0,1,0,0,0,,,,,,,0,0,,,,,,,,,,,,,,0,1,2022,0,0,,,,,,0,0
+Los Angeles,CA,California,city,2019,2016,TITLE24,0,0,0,0,1,0,0,0,,,,,,,0,0,,,,,,,,,,,,,,0,1,2022,0,0,,,,,,0,0
+Los Angeles,CA,California,city,2020,2019,TITLE24,0,0,0,0,1,0,0,0,,,,,,,0,0,,,,,,,,,,,,,,0,1,2022,0,0,,,,,,0,0
+Los Angeles,CA,California,city,2021,2019,TITLE24,0,0,0,0,1,0,0,0,,,,,,,0,0,,,,,,,,,,,,,,0,1,2022,0,0,,,,,,0,0
+Los Angeles,CA,California,city,2022,2019,TITLE24,0,0,0,0,1,0,0,0,,,,,,,0,0,,,,,,,,,,,,,,1,1,2022,0,0,,,,,,0,0
+Los Angeles,CA,California,city,2023,2022,TITLE24,0,0,0,0,1,0,0,0,,,,,,,0,0,,,,,,,,,,,,,,1,1,2022,0,0,,,,,,0,0
+Los Angeles,CA,California,city,2024,2022,TITLE24,0,0,0,0,1,0,0,0,,,,,,,0,0,,,,,,,,,,,,,,1,1,2022,0,0,,,,,,0,0
+Los Angeles,CA,California,city,2025,2022,TITLE24,0,0,0,0,1,0,0,0,,,,,,,0,0,,,,,,,,,,,,,,1,1,2022,0,0,,,,,,0,0
+Maryland,MD,Maryland,state,2010,2009,IECC,0,0,0,0,1,0,0,0,2022,2030,Climate Solutions Now Act,SB 528,,230,0,0,2022,2030,,Net direct GHG (kgCO2e/sqft); Site EUI from 2027,35000,35000,35000,1,1,,230,Climate Solutions Now Act,SB 528,0,0,2022,0,0,,,,,,0,0
+Maryland,MD,Maryland,state,2011,2009,IECC,1,0,0,0,1,0,0,0,2022,2030,Climate Solutions Now Act,SB 528,,230,0,0,2022,2030,,Net direct GHG (kgCO2e/sqft); Site EUI from 2027,35000,35000,35000,1,1,,230,Climate Solutions Now Act,SB 528,0,0,2022,0,0,,,,,,0,0
+Maryland,MD,Maryland,state,2012,2012,IECC,0,0,0,0,1,0,0,0,2022,2030,Climate Solutions Now Act,SB 528,,230,0,0,2022,2030,,Net direct GHG (kgCO2e/sqft); Site EUI from 2027,35000,35000,35000,1,1,,230,Climate Solutions Now Act,SB 528,0,0,2022,0,0,,,,,,0,0
+Maryland,MD,Maryland,state,2013,2012,IECC,0,0,0,0,1,0,0,0,2022,2030,Climate Solutions Now Act,SB 528,,230,0,0,2022,2030,,Net direct GHG (kgCO2e/sqft); Site EUI from 2027,35000,35000,35000,1,1,,230,Climate Solutions Now Act,SB 528,0,0,2022,0,0,,,,,,0,0
+Maryland,MD,Maryland,state,2014,2012,IECC,1,0,0,0,1,0,0,0,2022,2030,Climate Solutions Now Act,SB 528,,230,0,0,2022,2030,,Net direct GHG (kgCO2e/sqft); Site EUI from 2027,35000,35000,35000,1,1,,230,Climate Solutions Now Act,SB 528,0,0,2022,0,0,,,,,,0,0
+Maryland,MD,Maryland,state,2015,2015,IECC,0,0,0,0,1,0,0,0,2022,2030,Climate Solutions Now Act,SB 528,,230,0,0,2022,2030,,Net direct GHG (kgCO2e/sqft); Site EUI from 2027,35000,35000,35000,1,1,,230,Climate Solutions Now Act,SB 528,0,0,2022,0,0,,,,,,0,0
+Maryland,MD,Maryland,state,2016,2015,IECC,0,0,0,0,1,0,0,0,2022,2030,Climate Solutions Now Act,SB 528,,230,0,0,2022,2030,,Net direct GHG (kgCO2e/sqft); Site EUI from 2027,35000,35000,35000,1,1,,230,Climate Solutions Now Act,SB 528,0,0,2022,0,0,,,,,,0,0
+Maryland,MD,Maryland,state,2017,2015,IECC,1,0,0,0,1,0,0,0,2022,2030,Climate Solutions Now Act,SB 528,,230,0,0,2022,2030,,Net direct GHG (kgCO2e/sqft); Site EUI from 2027,35000,35000,35000,1,1,,230,Climate Solutions Now Act,SB 528,0,0,2022,0,0,,,,,,0,0
+Maryland,MD,Maryland,state,2018,2015,IECC,1,0,0,0,1,0,0,0,2022,2030,Climate Solutions Now Act,SB 528,,230,0,0,2022,2030,,Net direct GHG (kgCO2e/sqft); Site EUI from 2027,35000,35000,35000,1,1,,230,Climate Solutions Now Act,SB 528,0,0,2022,0,0,,,,,,0,0
+Maryland,MD,Maryland,state,2019,2015,IECC,1,0,0,0,1,0,0,0,2022,2030,Climate Solutions Now Act,SB 528,,230,0,0,2022,2030,,Net direct GHG (kgCO2e/sqft); Site EUI from 2027,35000,35000,35000,1,1,,230,Climate Solutions Now Act,SB 528,0,0,2022,0,0,,,,,,0,0
+Maryland,MD,Maryland,state,2020,2015,IECC,4,0,0,0,1,0,0,0,2022,2030,Climate Solutions Now Act,SB 528,,230,0,0,2022,2030,,Net direct GHG (kgCO2e/sqft); Site EUI from 2027,35000,35000,35000,1,1,,230,Climate Solutions Now Act,SB 528,0,0,2022,0,0,,,,,,0,0
+Maryland,MD,Maryland,state,2021,2015,IECC,4,0,0,0,1,0,0,0,2022,2030,Climate Solutions Now Act,SB 528,,230,0,0,2022,2030,,Net direct GHG (kgCO2e/sqft); Site EUI from 2027,35000,35000,35000,1,1,,230,Climate Solutions Now Act,SB 528,0,0,2022,0,0,,,,,,0,0
+Maryland,MD,Maryland,state,2022,2015,IECC,4,0,0,0,1,0,1,0,2022,2030,Climate Solutions Now Act,SB 528,,230,1,0,2022,2030,0,Net direct GHG (kgCO2e/sqft); Site EUI from 2027,35000,35000,35000,1,1,,230,Climate Solutions Now Act,SB 528,1,0,2022,0,0,,,,,,1,0
+Maryland,MD,Maryland,state,2023,2019,ASHRAE,3,0,0,0,1,0,1,0,2022,2030,Climate Solutions Now Act,SB 528,,230,1,0,2022,2030,1,Net direct GHG (kgCO2e/sqft); Site EUI from 2027,35000,35000,35000,1,1,,230,Climate Solutions Now Act,SB 528,1,0,2022,0,0,,,,,,1,0
+Maryland,MD,Maryland,state,2024,2019,ASHRAE,3,0,0,0,1,0,1,0,2022,2030,Climate Solutions Now Act,SB 528,,230,1,0,2022,2030,2,Net direct GHG (kgCO2e/sqft); Site EUI from 2027,35000,35000,35000,1,1,,230,Climate Solutions Now Act,SB 528,1,0,2022,0,0,,,,,,1,0
+Maryland,MD,Maryland,state,2025,2019,ASHRAE,3,0,0,0,1,0,1,0,2022,2030,Climate Solutions Now Act,SB 528,,230,1,0,2022,2030,3,Net direct GHG (kgCO2e/sqft); Site EUI from 2027,35000,35000,35000,1,1,,230,Climate Solutions Now Act,SB 528,1,0,2022,0,0,,,,,,1,0
+Milwaukee,WI,Wisconsin,city,2010,2006,IECC,3,0,0,0,0,0,0,0,,,,,,,0,0,,,,,,,,,,,,,,0,1,2022,0,0,,,,,,0,0
+Milwaukee,WI,Wisconsin,city,2011,2009,IECC,1,0,0,0,0,0,0,0,,,,,,,0,0,,,,,,,,,,,,,,0,1,2022,0,0,,,,,,0,0
+Milwaukee,WI,Wisconsin,city,2012,2009,IECC,3,0,0,0,0,0,0,0,,,,,,,0,0,,,,,,,,,,,,,,0,1,2022,0,0,,,,,,0,0
+Milwaukee,WI,Wisconsin,city,2013,2009,IECC,3,0,0,0,0,0,0,0,,,,,,,0,0,,,,,,,,,,,,,,0,1,2022,0,0,,,,,,0,0
+Milwaukee,WI,Wisconsin,city,2014,2009,IECC,4,0,0,0,0,0,0,0,,,,,,,0,0,,,,,,,,,,,,,,0,1,2022,0,0,,,,,,0,0
+Milwaukee,WI,Wisconsin,city,2015,2009,IECC,6,0,0,0,0,0,0,0,,,,,,,0,0,,,,,,,,,,,,,,0,1,2022,0,0,,,,,,0,0
+Milwaukee,WI,Wisconsin,city,2016,2009,IECC,6,0,0,0,0,0,0,0,,,,,,,0,0,,,,,,,,,,,,,,0,1,2022,0,0,,,,,,0,0
+Milwaukee,WI,Wisconsin,city,2017,2009,IECC,7,0,0,0,0,0,0,0,,,,,,,0,0,,,,,,,,,,,,,,0,1,2022,0,0,,,,,,0,0
+Milwaukee,WI,Wisconsin,city,2018,2009,IECC,7,0,0,0,0,0,0,0,,,,,,,0,0,,,,,,,,,,,,,,0,1,2022,0,0,,,,,,0,0
+Milwaukee,WI,Wisconsin,city,2019,2009,IECC,7,0,0,0,0,0,0,0,,,,,,,0,0,,,,,,,,,,,,,,0,1,2022,0,0,,,,,,0,0
+Milwaukee,WI,Wisconsin,city,2020,2009,IECC,10,0,0,0,0,0,0,0,,,,,,,0,0,,,,,,,,,,,,,,0,1,2022,0,0,,,,,,0,0
+Milwaukee,WI,Wisconsin,city,2021,2009,IECC,10,0,0,0,0,0,0,0,,,,,,,0,0,,,,,,,,,,,,,,0,1,2022,0,0,,,,,,0,0
+Milwaukee,WI,Wisconsin,city,2022,2009,IECC,10,0,0,0,0,0,0,0,,,,,,,0,0,,,,,,,,,,,,,,1,1,2022,0,0,,,,,,0,0
+Milwaukee,WI,Wisconsin,city,2023,2009,IECC,13,0,0,0,0,0,0,0,,,,,,,0,0,,,,,,,,,,,,,,1,1,2022,0,0,,,,,,0,0
+Milwaukee,WI,Wisconsin,city,2024,2009,IECC,13,0,0,0,0,0,0,0,,,,,,,0,0,,,,,,,,,,,,,,1,1,2022,0,0,,,,,,0,0
+Milwaukee,WI,Wisconsin,city,2025,2019,ASHRAE,3,0,0,0,0,0,0,0,,,,,,,0,0,,,,,,,,,,,,,,1,1,2022,0,0,,,,,,0,0
+Minneapolis,MN,Minnesota,city,2010,2004,ASHRAE,5,0,0,0,0,0,0,0,,,,,,,0,0,,,,,,,,,,,,,,0,0,2023,0,0,2013,2014,,50000,0,0,0
+Minneapolis,MN,Minnesota,city,2011,2004,ASHRAE,6,0,0,0,0,0,0,0,,,,,,,0,0,,,,,,,,,,,,,,0,0,2023,0,0,2013,2014,,50000,0,0,0
+Minneapolis,MN,Minnesota,city,2012,2004,ASHRAE,8,0,0,0,0,0,0,0,,,,,,,0,0,,,,,,,,,,,,,,0,0,2023,0,0,2013,2014,,50000,0,0,0
+Minneapolis,MN,Minnesota,city,2013,2004,ASHRAE,8,0,0,0,0,0,0,0,,,,,,,0,0,,,,,,,,,,,,,,0,0,2023,1,0,2013,2014,0,50000,0,1,0
+Minneapolis,MN,Minnesota,city,2014,2004,ASHRAE,9,0,0,0,0,0,0,0,,,,,,,0,0,,,,,,,,,,,,,,0,0,2023,1,1,2013,2014,1,50000,0,1,1
+Minneapolis,MN,Minnesota,city,2015,2004,ASHRAE,11,0,0,0,0,0,0,0,,,,,,,0,0,,,,,,,,,,,,,,0,0,2023,1,1,2013,2014,2,50000,0,1,1
+Minneapolis,MN,Minnesota,city,2016,2004,ASHRAE,11,0,0,0,0,0,0,0,,,,,,,0,0,,,,,,,,,,,,,,0,0,2023,1,1,2013,2014,3,50000,0,1,1
+Minneapolis,MN,Minnesota,city,2017,2004,ASHRAE,12,0,0,0,0,0,0,0,,,,,,,0,0,,,,,,,,,,,,,,0,0,2023,1,1,2013,2014,4,50000,0,1,1
+Minneapolis,MN,Minnesota,city,2018,2004,ASHRAE,12,0,0,0,0,0,0,0,,,,,,,0,0,,,,,,,,,,,,,,0,0,2023,1,1,2013,2014,5,50000,0,1,1
+Minneapolis,MN,Minnesota,city,2019,2004,ASHRAE,12,0,0,0,0,0,0,0,,,,,,,0,0,,,,,,,,,,,,,,0,0,2023,1,1,2013,2014,6,50000,0,1,1
+Minneapolis,MN,Minnesota,city,2020,2004,ASHRAE,15,0,0,0,0,0,0,0,,,,,,,0,0,,,,,,,,,,,,,,0,0,2023,1,1,2013,2014,7,50000,0,1,1
+Minneapolis,MN,Minnesota,city,2021,2004,ASHRAE,15,0,0,0,0,0,0,0,,,,,,,0,0,,,,,,,,,,,,,,0,0,2023,1,1,2013,2014,8,50000,0,1,1
+Minneapolis,MN,Minnesota,city,2022,2004,ASHRAE,15,0,0,0,0,0,0,0,,,,,,,0,0,,,,,,,,,,,,,,0,0,2023,1,1,2013,2014,9,50000,0,1,1
+Minneapolis,MN,Minnesota,city,2023,2004,ASHRAE,18,0,0,0,0,0,0,0,,,,,,,0,0,,,,,,,,,,,,,,1,0,2023,1,1,2013,2014,10,50000,0,1,1
+Minneapolis,MN,Minnesota,city,2024,2019,ASHRAE,3,0,0,0,0,0,0,0,,,,,,,0,0,,,,,,,,,,,,,,1,0,2023,1,1,2013,2014,11,50000,0,1,1
+Minneapolis,MN,Minnesota,city,2025,2019,ASHRAE,3,0,0,0,0,0,0,0,,,,,,,0,0,,,,,,,,,,,,,,1,0,2023,1,1,2013,2014,12,50000,0,1,1
+Montgomery County,MD,Maryland,county,2010,2009,IECC,0,0,0,0,1,0,0,0,2022,2030,Climate Solutions Now Act,SB 528,,230,0,0,2022,,,Normalized Site EUI,25000,25000,25000,1,1,,,Building Energy Use Benchmarking and Performance Standards,Bill 16-21,0,1,2022,0,0,2014,2016,,50000,0,0,0
+Montgomery County,MD,Maryland,county,2011,2009,IECC,1,0,0,0,1,0,0,0,2022,2030,Climate Solutions Now Act,SB 528,,230,0,0,2022,,,Normalized Site EUI,25000,25000,25000,1,1,,,Building Energy Use Benchmarking and Performance Standards,Bill 16-21,0,1,2022,0,0,2014,2016,,50000,0,0,0
+Montgomery County,MD,Maryland,county,2012,2012,IECC,0,0,0,0,1,0,0,0,2022,2030,Climate Solutions Now Act,SB 528,,230,0,0,2022,,,Normalized Site EUI,25000,25000,25000,1,1,,,Building Energy Use Benchmarking and Performance Standards,Bill 16-21,0,1,2022,0,0,2014,2016,,50000,0,0,0
+Montgomery County,MD,Maryland,county,2013,2012,IECC,0,0,0,0,1,0,0,0,2022,2030,Climate Solutions Now Act,SB 528,,230,0,0,2022,,,Normalized Site EUI,25000,25000,25000,1,1,,,Building Energy Use Benchmarking and Performance Standards,Bill 16-21,0,1,2022,0,0,2014,2016,,50000,0,0,0
+Montgomery County,MD,Maryland,county,2014,2012,IECC,1,0,0,0,1,0,0,0,2022,2030,Climate Solutions Now Act,SB 528,,230,0,0,2022,,,Normalized Site EUI,25000,25000,25000,1,1,,,Building Energy Use Benchmarking and Performance Standards,Bill 16-21,0,1,2022,1,0,2014,2016,0,50000,0,1,0
+Montgomery County,MD,Maryland,county,2015,2015,IECC,0,0,0,0,1,0,0,0,2022,2030,Climate Solutions Now Act,SB 528,,230,0,0,2022,,,Normalized Site EUI,25000,25000,25000,1,1,,,Building Energy Use Benchmarking and Performance Standards,Bill 16-21,0,1,2022,1,0,2014,2016,1,50000,0,1,0
+Montgomery County,MD,Maryland,county,2016,2015,IECC,0,0,0,0,1,0,0,0,2022,2030,Climate Solutions Now Act,SB 528,,230,0,0,2022,,,Normalized Site EUI,25000,25000,25000,1,1,,,Building Energy Use Benchmarking and Performance Standards,Bill 16-21,0,1,2022,1,1,2014,2016,2,50000,0,1,1
+Montgomery County,MD,Maryland,county,2017,2015,IECC,1,0,0,0,1,0,0,0,2022,2030,Climate Solutions Now Act,SB 528,,230,0,0,2022,,,Normalized Site EUI,25000,25000,25000,1,1,,,Building Energy Use Benchmarking and Performance Standards,Bill 16-21,0,1,2022,1,1,2014,2016,3,50000,0,1,1
+Montgomery County,MD,Maryland,county,2018,2015,IECC,1,0,0,0,1,0,0,0,2022,2030,Climate Solutions Now Act,SB 528,,230,0,0,2022,,,Normalized Site EUI,25000,25000,25000,1,1,,,Building Energy Use Benchmarking and Performance Standards,Bill 16-21,0,1,2022,1,1,2014,2016,4,50000,0,1,1
+Montgomery County,MD,Maryland,county,2019,2015,IECC,1,0,0,0,1,0,0,0,2022,2030,Climate Solutions Now Act,SB 528,,230,0,0,2022,,,Normalized Site EUI,25000,25000,25000,1,1,,,Building Energy Use Benchmarking and Performance Standards,Bill 16-21,0,1,2022,1,1,2014,2016,5,50000,0,1,1
+Montgomery County,MD,Maryland,county,2020,2015,IECC,4,0,0,0,1,0,0,0,2022,2030,Climate Solutions Now Act,SB 528,,230,0,0,2022,,,Normalized Site EUI,25000,25000,25000,1,1,,,Building Energy Use Benchmarking and Performance Standards,Bill 16-21,0,1,2022,1,1,2014,2016,6,50000,0,1,1
+Montgomery County,MD,Maryland,county,2021,2015,IECC,4,0,0,0,1,0,0,0,2022,2030,Climate Solutions Now Act,SB 528,,230,0,0,2022,,,Normalized Site EUI,25000,25000,25000,1,1,,,Building Energy Use Benchmarking and Performance Standards,Bill 16-21,0,1,2022,1,1,2014,2016,7,50000,0,1,1
+Montgomery County,MD,Maryland,county,2022,2015,IECC,4,0,0,0,1,0,1,0,2022,2030,Climate Solutions Now Act,SB 528,,230,1,0,2022,,0,Normalized Site EUI,25000,25000,25000,1,1,,,Building Energy Use Benchmarking and Performance Standards,Bill 16-21,1,1,2022,1,1,2014,2016,8,50000,0,1,1
+Montgomery County,MD,Maryland,county,2023,2019,ASHRAE,3,0,0,0,1,0,1,0,2022,2030,Climate Solutions Now Act,SB 528,,230,1,0,2022,,1,Normalized Site EUI,25000,25000,25000,1,1,,,Building Energy Use Benchmarking and Performance Standards,Bill 16-21,1,1,2022,1,1,2014,2016,9,50000,0,1,1
+Montgomery County,MD,Maryland,county,2024,2019,ASHRAE,3,0,0,0,1,0,1,0,2022,2030,Climate Solutions Now Act,SB 528,,230,1,0,2022,,2,Normalized Site EUI,25000,25000,25000,1,1,,,Building Energy Use Benchmarking and Performance Standards,Bill 16-21,1,1,2022,1,1,2014,2016,10,50000,0,1,1
+Montgomery County,MD,Maryland,county,2025,2019,ASHRAE,3,0,0,0,1,0,1,0,2022,2030,Climate Solutions Now Act,SB 528,,230,1,0,2022,,3,Normalized Site EUI,25000,25000,25000,1,1,,,Building Energy Use Benchmarking and Performance Standards,Bill 16-21,1,1,2022,1,1,2014,2016,11,50000,0,1,1
+Montpelier,VT,Vermont,city,2010,2004,ASHRAE,5,0,0,0,0,0,0,0,,,,,,,0,0,,,,,,,,,,,,,,0,0,2023,0,0,,,,,,0,0
+Montpelier,VT,Vermont,city,2011,2004,ASHRAE,6,0,0,0,0,0,0,0,,,,,,,0,0,,,,,,,,,,,,,,0,0,2023,0,0,,,,,,0,0
+Montpelier,VT,Vermont,city,2012,2012,IECC,0,0,0,0,0,0,0,0,,,,,,,0,0,,,,,,,,,,,,,,0,0,2023,0,0,,,,,,0,0
+Montpelier,VT,Vermont,city,2013,2012,IECC,0,0,0,0,0,0,0,0,,,,,,,0,0,,,,,,,,,,,,,,0,0,2023,0,0,,,,,,0,0
+Montpelier,VT,Vermont,city,2014,2012,IECC,1,0,0,0,0,0,0,0,,,,,,,0,0,,,,,,,,,,,,,,0,0,2023,0,0,,,,,,0,0
+Montpelier,VT,Vermont,city,2015,2012,IECC,3,0,0,0,0,0,0,0,,,,,,,0,0,,,,,,,,,,,,,,0,0,2023,0,0,,,,,,0,0
+Montpelier,VT,Vermont,city,2016,2012,IECC,3,0,0,0,0,0,0,0,,,,,,,0,0,,,,,,,,,,,,,,0,0,2023,0,0,,,,,,0,0
+Montpelier,VT,Vermont,city,2017,2012,IECC,4,0,0,0,0,0,0,0,,,,,,,0,0,,,,,,,,,,,,,,0,0,2023,0,0,,,,,,0,0
+Montpelier,VT,Vermont,city,2018,2012,IECC,4,0,0,0,0,0,0,0,,,,,,,0,0,,,,,,,,,,,,,,0,0,2023,0,0,,,,,,0,0
+Montpelier,VT,Vermont,city,2019,2012,IECC,4,0,0,0,0,0,0,0,,,,,,,0,0,,,,,,,,,,,,,,0,0,2023,0,0,,,,,,0,0
+Montpelier,VT,Vermont,city,2020,2016,ASHRAE,3,0,0,0,0,0,0,0,,,,,,,0,0,,,,,,,,,,,,,,0,0,2023,0,0,,,,,,0,0
+Montpelier,VT,Vermont,city,2021,2016,ASHRAE,3,0,0,0,0,0,0,0,,,,,,,0,0,,,,,,,,,,,,,,0,0,2023,0,0,,,,,,0,0
+Montpelier,VT,Vermont,city,2022,2016,ASHRAE,3,0,0,0,0,0,0,0,,,,,,,0,0,,,,,,,,,,,,,,0,0,2023,0,0,,,,,,0,0
+Montpelier,VT,Vermont,city,2023,2016,ASHRAE,6,0,0,0,0,0,0,0,,,,,,,0,0,,,,,,,,,,,,,,1,0,2023,0,0,,,,,,0,0
+Montpelier,VT,Vermont,city,2024,2016,ASHRAE,6,0,0,0,0,0,0,0,,,,,,,0,0,,,,,,,,,,,,,,1,0,2023,0,0,,,,,,0,0
+Montpelier,VT,Vermont,city,2025,2016,ASHRAE,6,0,0,0,0,0,0,0,,,,,,,0,0,,,,,,,,,,,,,,1,0,2023,0,0,,,,,,0,0
+New Jersey,NJ,New Jersey,state,2010,2007,ASHRAE,2,0,0,0,0,0,0,0,,,,,,,0,0,,,,,,,,,,,,,,0,0,,0,0,2018,2023,,25000,0,0,0
+New Jersey,NJ,New Jersey,state,2011,2007,ASHRAE,3,0,0,0,0,0,0,0,,,,,,,0,0,,,,,,,,,,,,,,0,0,,0,0,2018,2023,,25000,0,0,0
+New Jersey,NJ,New Jersey,state,2012,2007,ASHRAE,5,0,0,0,0,0,0,0,,,,,,,0,0,,,,,,,,,,,,,,0,0,,0,0,2018,2023,,25000,0,0,0
+New Jersey,NJ,New Jersey,state,2013,2007,ASHRAE,5,0,0,0,0,0,0,0,,,,,,,0,0,,,,,,,,,,,,,,0,0,,0,0,2018,2023,,25000,0,0,0
+New Jersey,NJ,New Jersey,state,2014,2007,ASHRAE,6,0,0,0,0,0,0,0,,,,,,,0,0,,,,,,,,,,,,,,0,0,,0,0,2018,2023,,25000,0,0,0
+New Jersey,NJ,New Jersey,state,2015,2007,ASHRAE,8,0,0,0,0,0,0,0,,,,,,,0,0,,,,,,,,,,,,,,0,0,,0,0,2018,2023,,25000,0,0,0
+New Jersey,NJ,New Jersey,state,2016,2007,ASHRAE,8,0,0,0,0,0,0,0,,,,,,,0,0,,,,,,,,,,,,,,0,0,,0,0,2018,2023,,25000,0,0,0
+New Jersey,NJ,New Jersey,state,2017,2007,ASHRAE,9,0,0,0,0,0,0,0,,,,,,,0,0,,,,,,,,,,,,,,0,0,,0,0,2018,2023,,25000,0,0,0
+New Jersey,NJ,New Jersey,state,2018,2007,ASHRAE,9,0,0,0,0,0,0,0,,,,,,,0,0,,,,,,,,,,,,,,0,0,,1,0,2018,2023,0,25000,0,1,0
+New Jersey,NJ,New Jersey,state,2019,2007,ASHRAE,9,0,0,0,0,0,0,0,,,,,,,0,0,,,,,,,,,,,,,,0,0,,1,0,2018,2023,1,25000,0,1,0
+New Jersey,NJ,New Jersey,state,2020,2007,ASHRAE,12,0,0,0,0,0,0,0,,,,,,,0,0,,,,,,,,,,,,,,0,0,,1,0,2018,2023,2,25000,0,1,0
+New Jersey,NJ,New Jersey,state,2021,2007,ASHRAE,12,0,0,0,0,0,0,0,,,,,,,0,0,,,,,,,,,,,,,,0,0,,1,0,2018,2023,3,25000,0,1,0
+New Jersey,NJ,New Jersey,state,2022,2007,ASHRAE,12,0,0,0,0,0,0,0,,,,,,,0,0,,,,,,,,,,,,,,0,0,,1,0,2018,2023,4,25000,0,1,0
+New Jersey,NJ,New Jersey,state,2023,2019,ASHRAE,3,0,0,0,0,0,0,0,,,,,,,0,0,,,,,,,,,,,,,,0,0,,1,1,2018,2023,5,25000,0,1,1
+New Jersey,NJ,New Jersey,state,2024,2019,ASHRAE,3,0,0,0,0,0,0,0,,,,,,,0,0,,,,,,,,,,,,,,0,0,,1,1,2018,2023,6,25000,0,1,1
+New Jersey,NJ,New Jersey,state,2025,2019,ASHRAE,3,0,0,0,0,0,0,0,,,,,,,0,0,,,,,,,,,,,,,,0,0,,1,1,2018,2023,7,25000,0,1,1
+New Orleans,LA,Louisiana,city,2010,,,,0,0,0,0,0,0,0,,,,,,,0,0,,,,,,,,,,,,,,0,0,2023,0,0,,,,,,0,0
+New Orleans,LA,Louisiana,city,2011,2007,ASHRAE,3,0,0,0,0,0,0,0,,,,,,,0,0,,,,,,,,,,,,,,0,0,2023,0,0,,,,,,0,0
+New Orleans,LA,Louisiana,city,2012,2007,ASHRAE,5,0,0,0,0,0,0,0,,,,,,,0,0,,,,,,,,,,,,,,0,0,2023,0,0,,,,,,0,0
+New Orleans,LA,Louisiana,city,2013,2007,ASHRAE,5,0,0,0,0,0,0,0,,,,,,,0,0,,,,,,,,,,,,,,0,0,2023,0,0,,,,,,0,0
+New Orleans,LA,Louisiana,city,2014,2007,ASHRAE,6,0,0,0,0,0,0,0,,,,,,,0,0,,,,,,,,,,,,,,0,0,2023,0,0,,,,,,0,0
+New Orleans,LA,Louisiana,city,2015,2007,ASHRAE,8,0,0,0,0,0,0,0,,,,,,,0,0,,,,,,,,,,,,,,0,0,2023,0,0,,,,,,0,0
+New Orleans,LA,Louisiana,city,2016,2007,ASHRAE,8,0,0,0,0,0,0,0,,,,,,,0,0,,,,,,,,,,,,,,0,0,2023,0,0,,,,,,0,0
+New Orleans,LA,Louisiana,city,2017,2007,ASHRAE,9,0,0,0,0,0,0,0,,,,,,,0,0,,,,,,,,,,,,,,0,0,2023,0,0,,,,,,0,0
+New Orleans,LA,Louisiana,city,2018,2007,ASHRAE,9,0,0,0,0,0,0,0,,,,,,,0,0,,,,,,,,,,,,,,0,0,2023,0,0,,,,,,0,0
+New Orleans,LA,Louisiana,city,2019,2007,ASHRAE,9,0,0,0,0,0,0,0,,,,,,,0,0,,,,,,,,,,,,,,0,0,2023,0,0,,,,,,0,0
+New Orleans,LA,Louisiana,city,2020,2007,ASHRAE,12,0,0,0,0,0,0,0,,,,,,,0,0,,,,,,,,,,,,,,0,0,2023,0,0,,,,,,0,0
+New Orleans,LA,Louisiana,city,2021,2007,ASHRAE,12,0,0,0,0,0,0,0,,,,,,,0,0,,,,,,,,,,,,,,0,0,2023,0,0,,,,,,0,0
+New Orleans,LA,Louisiana,city,2022,2007,ASHRAE,12,0,0,0,0,0,0,0,,,,,,,0,0,,,,,,,,,,,,,,0,0,2023,0,0,,,,,,0,0
+New Orleans,LA,Louisiana,city,2023,2021,IECC,1,0,0,0,0,0,0,0,,,,,,,0,0,,,,,,,,,,,,,,1,0,2023,0,0,,,,,,0,0
+New Orleans,LA,Louisiana,city,2024,2021,IECC,1,0,0,0,0,0,0,0,,,,,,,0,0,,,,,,,,,,,,,,1,0,2023,0,0,,,,,,0,0
+New Orleans,LA,Louisiana,city,2025,2021,IECC,1,0,0,0,0,0,0,0,,,,,,,0,0,,,,,,,,,,,,,,1,0,2023,0,0,,,,,,0,0
+New York City,NY,New York,city,2010,2007,ASHRAE,2,0,0,0,1,0,0,0,,,,,,,0,0,2019,2024,,GHG emissions (tCO2e/sqft),25000,25000,25000,0,1,,268,Sustainable Buildings NYC,Local Law 97,0,1,2022,1,0,2009,2011,1,50000,1,1,0
+New York City,NY,New York,city,2011,2007,ASHRAE,3,0,0,0,1,0,0,0,,,,,,,0,0,2019,2024,,GHG emissions (tCO2e/sqft),25000,25000,25000,0,1,,268,Sustainable Buildings NYC,Local Law 97,0,1,2022,1,1,2009,2011,2,50000,1,1,1
+New York City,NY,New York,city,2012,2007,ASHRAE,5,0,0,0,1,0,0,0,,,,,,,0,0,2019,2024,,GHG emissions (tCO2e/sqft),25000,25000,25000,0,1,,268,Sustainable Buildings NYC,Local Law 97,0,1,2022,1,1,2009,2011,3,50000,1,1,1
+New York City,NY,New York,city,2013,2007,ASHRAE,5,0,0,0,1,0,0,0,,,,,,,0,0,2019,2024,,GHG emissions (tCO2e/sqft),25000,25000,25000,0,1,,268,Sustainable Buildings NYC,Local Law 97,0,1,2022,1,1,2009,2011,4,50000,1,1,1
+New York City,NY,New York,city,2014,2007,ASHRAE,6,0,0,0,1,0,0,0,,,,,,,0,0,2019,2024,,GHG emissions (tCO2e/sqft),25000,25000,25000,0,1,,268,Sustainable Buildings NYC,Local Law 97,0,1,2022,1,1,2009,2011,5,50000,1,1,1
+New York City,NY,New York,city,2015,2007,ASHRAE,8,0,0,0,1,0,0,0,,,,,,,0,0,2019,2024,,GHG emissions (tCO2e/sqft),25000,25000,25000,0,1,,268,Sustainable Buildings NYC,Local Law 97,0,1,2022,1,1,2009,2011,6,50000,1,1,1
+New York City,NY,New York,city,2016,2013,ASHRAE,2,0,0,0,1,0,0,0,,,,,,,0,0,2019,2024,,GHG emissions (tCO2e/sqft),25000,25000,25000,0,1,,268,Sustainable Buildings NYC,Local Law 97,0,1,2022,1,1,2009,2011,7,50000,1,1,1
+New York City,NY,New York,city,2017,2013,ASHRAE,3,0,0,0,1,0,0,0,,,,,,,0,0,2019,2024,,GHG emissions (tCO2e/sqft),25000,25000,25000,0,1,,268,Sustainable Buildings NYC,Local Law 97,0,1,2022,1,1,2009,2011,8,50000,1,1,1
+New York City,NY,New York,city,2018,2013,ASHRAE,3,0,0,0,1,0,0,0,,,,,,,0,0,2019,2024,,GHG emissions (tCO2e/sqft),25000,25000,25000,0,1,,268,Sustainable Buildings NYC,Local Law 97,0,1,2022,1,1,2009,2011,9,50000,1,1,1
+New York City,NY,New York,city,2019,2013,ASHRAE,3,0,0,0,1,0,0,0,,,,,,,1,0,2019,2024,0,GHG emissions (tCO2e/sqft),25000,25000,25000,0,1,,268,Sustainable Buildings NYC,Local Law 97,0,1,2022,1,1,2009,2011,10,50000,1,1,1
+New York City,NY,New York,city,2020,2016,ASHRAE,3,0,0,0,1,0,0,0,,,,,,,1,0,2019,2024,1,GHG emissions (tCO2e/sqft),25000,25000,25000,0,1,,268,Sustainable Buildings NYC,Local Law 97,0,1,2022,1,1,2009,2011,11,50000,1,1,1
+New York City,NY,New York,city,2021,2016,ASHRAE,3,0,0,0,1,0,0,0,,,,,,,1,0,2019,2024,2,GHG emissions (tCO2e/sqft),25000,25000,25000,0,1,,268,Sustainable Buildings NYC,Local Law 97,0,1,2022,1,1,2009,2011,12,50000,1,1,1
+New York City,NY,New York,city,2022,2016,ASHRAE,3,0,0,0,1,0,0,0,,,,,,,1,0,2019,2024,3,GHG emissions (tCO2e/sqft),25000,25000,25000,0,1,,268,Sustainable Buildings NYC,Local Law 97,1,1,2022,1,1,2009,2011,13,50000,1,1,1
+New York City,NY,New York,city,2023,2016,ASHRAE,6,0,0,0,1,0,0,0,,,,,,,1,0,2019,2024,4,GHG emissions (tCO2e/sqft),25000,25000,25000,0,1,,268,Sustainable Buildings NYC,Local Law 97,1,1,2022,1,1,2009,2011,14,50000,1,1,1
+New York City,NY,New York,city,2024,2016,ASHRAE,6,0,0,0,1,0,0,0,,,,,,,1,1,2019,2024,5,GHG emissions (tCO2e/sqft),25000,25000,25000,0,1,,268,Sustainable Buildings NYC,Local Law 97,1,1,2022,1,1,2009,2011,15,50000,1,1,1
+New York City,NY,New York,city,2025,2022,ASHRAE,0,0,0,0,1,0,0,0,,,,,,,1,1,2019,2024,6,GHG emissions (tCO2e/sqft),25000,25000,25000,0,1,,268,Sustainable Buildings NYC,Local Law 97,1,1,2022,1,1,2009,2011,16,50000,1,1,1
+New York State,NY,New York,state,2010,2007,ASHRAE,2,0,0,0,1,0,0,0,,,,,,,0,0,,,,,,,,,,,,,,0,0,,0,0,2018,2019,,50000,0,0,0
+New York State,NY,New York,state,2011,2007,ASHRAE,3,0,0,0,1,0,0,0,,,,,,,0,0,,,,,,,,,,,,,,0,0,,0,0,2018,2019,,50000,0,0,0
+New York State,NY,New York,state,2012,2007,ASHRAE,5,0,0,0,1,0,0,0,,,,,,,0,0,,,,,,,,,,,,,,0,0,,0,0,2018,2019,,50000,0,0,0
+New York State,NY,New York,state,2013,2007,ASHRAE,5,0,0,0,1,0,0,0,,,,,,,0,0,,,,,,,,,,,,,,0,0,,0,0,2018,2019,,50000,0,0,0
+New York State,NY,New York,state,2014,2007,ASHRAE,6,0,0,0,1,0,0,0,,,,,,,0,0,,,,,,,,,,,,,,0,0,,0,0,2018,2019,,50000,0,0,0
+New York State,NY,New York,state,2015,2007,ASHRAE,8,0,0,0,1,0,0,0,,,,,,,0,0,,,,,,,,,,,,,,0,0,,0,0,2018,2019,,50000,0,0,0
+New York State,NY,New York,state,2016,2013,ASHRAE,2,0,0,0,1,0,0,0,,,,,,,0,0,,,,,,,,,,,,,,0,0,,0,0,2018,2019,,50000,0,0,0
+New York State,NY,New York,state,2017,2013,ASHRAE,3,0,0,0,1,0,0,0,,,,,,,0,0,,,,,,,,,,,,,,0,0,,0,0,2018,2019,,50000,0,0,0
+New York State,NY,New York,state,2018,2013,ASHRAE,3,0,0,0,1,0,0,0,,,,,,,0,0,,,,,,,,,,,,,,0,0,,1,0,2018,2019,0,50000,0,1,0
+New York State,NY,New York,state,2019,2013,ASHRAE,3,0,0,0,1,0,0,0,,,,,,,0,0,,,,,,,,,,,,,,0,0,,1,1,2018,2019,1,50000,0,1,1
+New York State,NY,New York,state,2020,2016,ASHRAE,3,0,0,0,1,0,0,0,,,,,,,0,0,,,,,,,,,,,,,,0,0,,1,1,2018,2019,2,50000,0,1,1
+New York State,NY,New York,state,2021,2016,ASHRAE,3,0,0,0,1,0,0,0,,,,,,,0,0,,,,,,,,,,,,,,0,0,,1,1,2018,2019,3,50000,0,1,1
+New York State,NY,New York,state,2022,2016,ASHRAE,3,0,0,0,1,0,0,0,,,,,,,0,0,,,,,,,,,,,,,,0,0,,1,1,2018,2019,4,50000,0,1,1
+New York State,NY,New York,state,2023,2016,ASHRAE,6,0,0,0,1,0,0,0,,,,,,,0,0,,,,,,,,,,,,,,0,0,,1,1,2018,2019,5,50000,0,1,1
+New York State,NY,New York,state,2024,2016,ASHRAE,6,0,0,0,1,0,0,0,,,,,,,0,0,,,,,,,,,,,,,,0,0,,1,1,2018,2019,6,50000,0,1,1
+New York State,NY,New York,state,2025,2022,ASHRAE,0,0,0,0,1,0,0,0,,,,,,,0,0,,,,,,,,,,,,,,0,0,,1,1,2018,2019,7,50000,0,1,1
+Newton,MA,Massachusetts,city,2010,2007,ASHRAE,2,0,0,0,1,0,0,0,,,,,,,0,0,2024,2027,,CO2 emissions (kgCO2/SF/yr),20000,20000,20000,1,1,,,Building Emissions Reduction and Disclosure Ordinance (BERDO Newton),,0,0,2024,0,0,,,,,,0,0
+Newton,MA,Massachusetts,city,2011,2007,ASHRAE,3,0,0,0,1,0,0,0,,,,,,,0,0,2024,2027,,CO2 emissions (kgCO2/SF/yr),20000,20000,20000,1,1,,,Building Emissions Reduction and Disclosure Ordinance (BERDO Newton),,0,0,2024,0,0,,,,,,0,0
+Newton,MA,Massachusetts,city,2012,2007,ASHRAE,5,0,0,0,1,0,0,0,,,,,,,0,0,2024,2027,,CO2 emissions (kgCO2/SF/yr),20000,20000,20000,1,1,,,Building Emissions Reduction and Disclosure Ordinance (BERDO Newton),,0,0,2024,0,0,,,,,,0,0
+Newton,MA,Massachusetts,city,2013,2007,ASHRAE,5,0,0,0,1,0,0,0,,,,,,,0,0,2024,2027,,CO2 emissions (kgCO2/SF/yr),20000,20000,20000,1,1,,,Building Emissions Reduction and Disclosure Ordinance (BERDO Newton),,0,0,2024,0,0,,,,,,0,0
+Newton,MA,Massachusetts,city,2014,2007,ASHRAE,6,0,0,0,1,0,0,0,,,,,,,0,0,2024,2027,,CO2 emissions (kgCO2/SF/yr),20000,20000,20000,1,1,,,Building Emissions Reduction and Disclosure Ordinance (BERDO Newton),,0,0,2024,0,0,,,,,,0,0
+Newton,MA,Massachusetts,city,2015,2007,ASHRAE,8,0,0,0,1,0,0,0,,,,,,,0,0,2024,2027,,CO2 emissions (kgCO2/SF/yr),20000,20000,20000,1,1,,,Building Emissions Reduction and Disclosure Ordinance (BERDO Newton),,0,0,2024,0,0,,,,,,0,0
+Newton,MA,Massachusetts,city,2016,2007,ASHRAE,8,0,0,0,1,0,0,0,,,,,,,0,0,2024,2027,,CO2 emissions (kgCO2/SF/yr),20000,20000,20000,1,1,,,Building Emissions Reduction and Disclosure Ordinance (BERDO Newton),,0,0,2024,0,0,,,,,,0,0
+Newton,MA,Massachusetts,city,2017,2007,ASHRAE,9,0,0,0,1,0,0,0,,,,,,,0,0,2024,2027,,CO2 emissions (kgCO2/SF/yr),20000,20000,20000,1,1,,,Building Emissions Reduction and Disclosure Ordinance (BERDO Newton),,0,0,2024,0,0,,,,,,0,0
+Newton,MA,Massachusetts,city,2018,2007,ASHRAE,9,0,0,0,1,0,0,0,,,,,,,0,0,2024,2027,,CO2 emissions (kgCO2/SF/yr),20000,20000,20000,1,1,,,Building Emissions Reduction and Disclosure Ordinance (BERDO Newton),,0,0,2024,0,0,,,,,,0,0
+Newton,MA,Massachusetts,city,2019,2007,ASHRAE,9,0,0,0,1,0,0,0,,,,,,,0,0,2024,2027,,CO2 emissions (kgCO2/SF/yr),20000,20000,20000,1,1,,,Building Emissions Reduction and Disclosure Ordinance (BERDO Newton),,0,0,2024,0,0,,,,,,0,0
+Newton,MA,Massachusetts,city,2020,2007,ASHRAE,12,0,0,0,1,0,0,0,,,,,,,0,0,2024,2027,,CO2 emissions (kgCO2/SF/yr),20000,20000,20000,1,1,,,Building Emissions Reduction and Disclosure Ordinance (BERDO Newton),,0,0,2024,0,0,,,,,,0,0
+Newton,MA,Massachusetts,city,2021,2007,ASHRAE,12,0,0,0,1,0,0,0,,,,,,,0,0,2024,2027,,CO2 emissions (kgCO2/SF/yr),20000,20000,20000,1,1,,,Building Emissions Reduction and Disclosure Ordinance (BERDO Newton),,0,0,2024,0,0,,,,,,0,0
+Newton,MA,Massachusetts,city,2022,2007,ASHRAE,12,0,0,0,1,0,0,0,,,,,,,0,0,2024,2027,,CO2 emissions (kgCO2/SF/yr),20000,20000,20000,1,1,,,Building Emissions Reduction and Disclosure Ordinance (BERDO Newton),,0,0,2024,0,0,,,,,,0,0
+Newton,MA,Massachusetts,city,2023,2007,ASHRAE,15,0,0,0,1,0,0,0,,,,,,,0,0,2024,2027,,CO2 emissions (kgCO2/SF/yr),20000,20000,20000,1,1,,,Building Emissions Reduction and Disclosure Ordinance (BERDO Newton),,0,0,2024,0,0,,,,,,0,0
+Newton,MA,Massachusetts,city,2024,2019,ASHRAE,3,0,0,0,1,0,0,0,,,,,,,1,0,2024,2027,0,CO2 emissions (kgCO2/SF/yr),20000,20000,20000,1,1,,,Building Emissions Reduction and Disclosure Ordinance (BERDO Newton),,1,0,2024,0,0,,,,,,1,0
+Newton,MA,Massachusetts,city,2025,2019,ASHRAE,3,0,0,0,1,0,0,0,,,,,,,1,0,2024,2027,1,CO2 emissions (kgCO2/SF/yr),20000,20000,20000,1,1,,,Building Emissions Reduction and Disclosure Ordinance (BERDO Newton),,1,0,2024,0,0,,,,,,1,0
+Oregon,OR,Oregon,state,2010,,,,0,0,0,1,0,0,0,2023,2028,Energy Performance Standards,HB 3409,,,0,0,2023,2028,,EUI,20000,35000,35000,1,1,,,Energy Performance Standards,HB 3409,0,0,2022,0,0,,,,,,0,0
+Oregon,OR,Oregon,state,2011,2010,ASHRAE,0,0,0,0,1,0,0,0,2023,2028,Energy Performance Standards,HB 3409,,,0,0,2023,2028,,EUI,20000,35000,35000,1,1,,,Energy Performance Standards,HB 3409,0,0,2022,0,0,,,,,,0,0
+Oregon,OR,Oregon,state,2012,2010,ASHRAE,2,0,0,0,1,0,0,0,2023,2028,Energy Performance Standards,HB 3409,,,0,0,2023,2028,,EUI,20000,35000,35000,1,1,,,Energy Performance Standards,HB 3409,0,0,2022,0,0,,,,,,0,0
+Oregon,OR,Oregon,state,2013,2010,ASHRAE,2,0,0,0,1,0,0,0,2023,2028,Energy Performance Standards,HB 3409,,,0,0,2023,2028,,EUI,20000,35000,35000,1,1,,,Energy Performance Standards,HB 3409,0,0,2022,0,0,,,,,,0,0
+Oregon,OR,Oregon,state,2014,2010,ASHRAE,3,0,0,0,1,0,0,0,2023,2028,Energy Performance Standards,HB 3409,,,0,0,2023,2028,,EUI,20000,35000,35000,1,1,,,Energy Performance Standards,HB 3409,0,0,2022,0,0,,,,,,0,0
+Oregon,OR,Oregon,state,2015,2010,ASHRAE,5,0,0,0,1,0,0,0,2023,2028,Energy Performance Standards,HB 3409,,,0,0,2023,2028,,EUI,20000,35000,35000,1,1,,,Energy Performance Standards,HB 3409,0,0,2022,0,0,,,,,,0,0
+Oregon,OR,Oregon,state,2016,2010,ASHRAE,5,0,0,0,1,0,0,0,2023,2028,Energy Performance Standards,HB 3409,,,0,0,2023,2028,,EUI,20000,35000,35000,1,1,,,Energy Performance Standards,HB 3409,0,0,2022,0,0,,,,,,0,0
+Oregon,OR,Oregon,state,2017,2013,ASHRAE,3,0,0,0,1,0,0,0,2023,2028,Energy Performance Standards,HB 3409,,,0,0,2023,2028,,EUI,20000,35000,35000,1,1,,,Energy Performance Standards,HB 3409,0,0,2022,0,0,,,,,,0,0
+Oregon,OR,Oregon,state,2018,2013,ASHRAE,3,0,0,0,1,0,0,0,2023,2028,Energy Performance Standards,HB 3409,,,0,0,2023,2028,,EUI,20000,35000,35000,1,1,,,Energy Performance Standards,HB 3409,0,0,2022,0,0,,,,,,0,0
+Oregon,OR,Oregon,state,2019,2013,ASHRAE,3,0,0,0,1,0,0,0,2023,2028,Energy Performance Standards,HB 3409,,,0,0,2023,2028,,EUI,20000,35000,35000,1,1,,,Energy Performance Standards,HB 3409,0,0,2022,0,0,,,,,,0,0
+Oregon,OR,Oregon,state,2020,2013,ASHRAE,6,0,0,0,1,0,0,0,2023,2028,Energy Performance Standards,HB 3409,,,0,0,2023,2028,,EUI,20000,35000,35000,1,1,,,Energy Performance Standards,HB 3409,0,0,2022,0,0,,,,,,0,0
+Oregon,OR,Oregon,state,2021,2019,ASHRAE,0,0,0,0,1,0,0,0,2023,2028,Energy Performance Standards,HB 3409,,,0,0,2023,2028,,EUI,20000,35000,35000,1,1,,,Energy Performance Standards,HB 3409,0,0,2022,0,0,,,,,,0,0
+Oregon,OR,Oregon,state,2022,2019,ASHRAE,0,0,0,0,1,0,0,0,2023,2028,Energy Performance Standards,HB 3409,,,0,0,2023,2028,,EUI,20000,35000,35000,1,1,,,Energy Performance Standards,HB 3409,1,0,2022,0,0,,,,,,0,0
+Oregon,OR,Oregon,state,2023,2019,ASHRAE,3,0,0,0,1,0,1,0,2023,2028,Energy Performance Standards,HB 3409,,,1,0,2023,2028,0,EUI,20000,35000,35000,1,1,,,Energy Performance Standards,HB 3409,1,0,2022,0,0,,,,,,1,0
+Oregon,OR,Oregon,state,2024,2019,ASHRAE,3,0,0,0,1,0,1,0,2023,2028,Energy Performance Standards,HB 3409,,,1,0,2023,2028,1,EUI,20000,35000,35000,1,1,,,Energy Performance Standards,HB 3409,1,0,2022,0,0,,,,,,1,0
+Oregon,OR,Oregon,state,2025,2022,ASHRAE,0,0,0,0,1,0,1,0,2023,2028,Energy Performance Standards,HB 3409,,,1,0,2023,2028,2,EUI,20000,35000,35000,1,1,,,Energy Performance Standards,HB 3409,1,0,2022,0,0,,,,,,1,0
+Orlando,FL,Florida,city,2010,2006,IECC,3,0,0,0,0,0,0,0,,,,,,,0,0,,,,,,,,,,,,,,0,1,2022,0,0,2016,2017,,50000,1,0,0
+Orlando,FL,Florida,city,2011,2006,IECC,4,0,0,0,0,0,0,0,,,,,,,0,0,,,,,,,,,,,,,,0,1,2022,0,0,2016,2017,,50000,1,0,0
+Orlando,FL,Florida,city,2012,2009,IECC,3,0,0,0,0,0,0,0,,,,,,,0,0,,,,,,,,,,,,,,0,1,2022,0,0,2016,2017,,50000,1,0,0
+Orlando,FL,Florida,city,2013,2009,IECC,3,0,0,0,0,0,0,0,,,,,,,0,0,,,,,,,,,,,,,,0,1,2022,0,0,2016,2017,,50000,1,0,0
+Orlando,FL,Florida,city,2014,2009,IECC,4,0,0,0,0,0,0,0,,,,,,,0,0,,,,,,,,,,,,,,0,1,2022,0,0,2016,2017,,50000,1,0,0
+Orlando,FL,Florida,city,2015,2009,IECC,6,0,0,0,0,0,0,0,,,,,,,0,0,,,,,,,,,,,,,,0,1,2022,0,0,2016,2017,,50000,1,0,0
+Orlando,FL,Florida,city,2016,2009,IECC,6,0,0,0,0,0,0,0,,,,,,,0,0,,,,,,,,,,,,,,0,1,2022,1,0,2016,2017,0,50000,1,1,0
+Orlando,FL,Florida,city,2017,2009,IECC,7,0,0,0,0,0,0,0,,,,,,,0,0,,,,,,,,,,,,,,0,1,2022,1,1,2016,2017,1,50000,1,1,1
+Orlando,FL,Florida,city,2018,2009,IECC,7,0,0,0,0,0,0,0,,,,,,,0,0,,,,,,,,,,,,,,0,1,2022,1,1,2016,2017,2,50000,1,1,1
+Orlando,FL,Florida,city,2019,2009,IECC,7,0,0,0,0,0,0,0,,,,,,,0,0,,,,,,,,,,,,,,0,1,2022,1,1,2016,2017,3,50000,1,1,1
+Orlando,FL,Florida,city,2020,2009,IECC,10,0,0,0,0,0,0,0,,,,,,,0,0,,,,,,,,,,,,,,0,1,2022,1,1,2016,2017,4,50000,1,1,1
+Orlando,FL,Florida,city,2021,2009,IECC,10,0,0,0,0,0,0,0,,,,,,,0,0,,,,,,,,,,,,,,0,1,2022,1,1,2016,2017,5,50000,1,1,1
+Orlando,FL,Florida,city,2022,2009,IECC,10,0,0,0,0,0,0,0,,,,,,,0,0,,,,,,,,,,,,,,1,1,2022,1,1,2016,2017,6,50000,1,1,1
+Orlando,FL,Florida,city,2023,2019,ASHRAE,3,0,0,0,0,0,0,0,,,,,,,0,0,,,,,,,,,,,,,,1,1,2022,1,1,2016,2017,7,50000,1,1,1
+Orlando,FL,Florida,city,2024,2019,ASHRAE,3,0,0,0,0,0,0,0,,,,,,,0,0,,,,,,,,,,,,,,1,1,2022,1,1,2016,2017,8,50000,1,1,1
+Orlando,FL,Florida,city,2025,2019,ASHRAE,3,0,0,0,0,0,0,0,,,,,,,0,0,,,,,,,,,,,,,,1,1,2022,1,1,2016,2017,9,50000,1,1,1
+Philadelphia,PA,Pennsylvania,city,2010,2009,IECC,0,0,0,0,0,0,0,0,,,,,,,0,0,,,,,,,,,,,,,,0,1,2022,0,0,2012,2013,,50000,0,0,0
+Philadelphia,PA,Pennsylvania,city,2011,2009,IECC,1,0,0,0,0,0,0,0,,,,,,,0,0,,,,,,,,,,,,,,0,1,2022,0,0,2012,2013,,50000,0,0,0
+Philadelphia,PA,Pennsylvania,city,2012,2009,IECC,3,0,0,0,0,0,0,0,,,,,,,0,0,,,,,,,,,,,,,,0,1,2022,1,0,2012,2013,0,50000,0,1,0
+Philadelphia,PA,Pennsylvania,city,2013,2009,IECC,3,0,0,0,0,0,0,0,,,,,,,0,0,,,,,,,,,,,,,,0,1,2022,1,1,2012,2013,1,50000,0,1,1
+Philadelphia,PA,Pennsylvania,city,2014,2009,IECC,4,0,0,0,0,0,0,0,,,,,,,0,0,,,,,,,,,,,,,,0,1,2022,1,1,2012,2013,2,50000,0,1,1
+Philadelphia,PA,Pennsylvania,city,2015,2009,IECC,6,0,0,0,0,0,0,0,,,,,,,0,0,,,,,,,,,,,,,,0,1,2022,1,1,2012,2013,3,50000,0,1,1
+Philadelphia,PA,Pennsylvania,city,2016,2013,ASHRAE,2,0,0,0,0,0,0,0,,,,,,,0,0,,,,,,,,,,,,,,0,1,2022,1,1,2012,2013,4,50000,0,1,1
+Philadelphia,PA,Pennsylvania,city,2017,2013,ASHRAE,3,0,0,0,0,0,0,0,,,,,,,0,0,,,,,,,,,,,,,,0,1,2022,1,1,2012,2013,5,50000,0,1,1
+Philadelphia,PA,Pennsylvania,city,2018,2013,ASHRAE,3,0,0,0,0,0,0,0,,,,,,,0,0,,,,,,,,,,,,,,0,1,2022,1,1,2012,2013,6,50000,0,1,1
+Philadelphia,PA,Pennsylvania,city,2019,2013,ASHRAE,3,0,0,0,0,0,0,0,,,,,,,0,0,,,,,,,,,,,,,,0,1,2022,1,1,2012,2013,7,50000,0,1,1
+Philadelphia,PA,Pennsylvania,city,2020,2013,ASHRAE,6,0,0,0,0,0,0,0,,,,,,,0,0,,,,,,,,,,,,,,0,1,2022,1,1,2012,2013,8,50000,0,1,1
+Philadelphia,PA,Pennsylvania,city,2021,2013,ASHRAE,6,0,0,0,0,0,0,0,,,,,,,0,0,,,,,,,,,,,,,,0,1,2022,1,1,2012,2013,9,50000,0,1,1
+Philadelphia,PA,Pennsylvania,city,2022,2016,ASHRAE,3,0,0,0,0,0,0,0,,,,,,,0,0,,,,,,,,,,,,,,1,1,2022,1,1,2012,2013,10,50000,0,1,1
+Philadelphia,PA,Pennsylvania,city,2023,2016,ASHRAE,6,0,0,0,0,0,0,0,,,,,,,0,0,,,,,,,,,,,,,,1,1,2022,1,1,2012,2013,11,50000,0,1,1
+Philadelphia,PA,Pennsylvania,city,2024,2016,ASHRAE,6,0,0,0,0,0,0,0,,,,,,,0,0,,,,,,,,,,,,,,1,1,2022,1,1,2012,2013,12,50000,0,1,1
+Philadelphia,PA,Pennsylvania,city,2025,2016,ASHRAE,6,0,0,0,0,0,0,0,,,,,,,0,0,,,,,,,,,,,,,,1,1,2022,1,1,2012,2013,13,50000,0,1,1
+Pittsburgh,PA,Pennsylvania,city,2010,2009,IECC,0,0,0,0,0,0,0,0,,,,,,,0,0,,,,,,,,,,,,,,0,1,2022,0,0,2016,2017,,50000,0,0,0
+Pittsburgh,PA,Pennsylvania,city,2011,2009,IECC,1,0,0,0,0,0,0,0,,,,,,,0,0,,,,,,,,,,,,,,0,1,2022,0,0,2016,2017,,50000,0,0,0
+Pittsburgh,PA,Pennsylvania,city,2012,2009,IECC,3,0,0,0,0,0,0,0,,,,,,,0,0,,,,,,,,,,,,,,0,1,2022,0,0,2016,2017,,50000,0,0,0
+Pittsburgh,PA,Pennsylvania,city,2013,2009,IECC,3,0,0,0,0,0,0,0,,,,,,,0,0,,,,,,,,,,,,,,0,1,2022,0,0,2016,2017,,50000,0,0,0
+Pittsburgh,PA,Pennsylvania,city,2014,2009,IECC,4,0,0,0,0,0,0,0,,,,,,,0,0,,,,,,,,,,,,,,0,1,2022,0,0,2016,2017,,50000,0,0,0
+Pittsburgh,PA,Pennsylvania,city,2015,2009,IECC,6,0,0,0,0,0,0,0,,,,,,,0,0,,,,,,,,,,,,,,0,1,2022,0,0,2016,2017,,50000,0,0,0
+Pittsburgh,PA,Pennsylvania,city,2016,2013,ASHRAE,2,0,0,0,0,0,0,0,,,,,,,0,0,,,,,,,,,,,,,,0,1,2022,1,0,2016,2017,0,50000,0,1,0
+Pittsburgh,PA,Pennsylvania,city,2017,2013,ASHRAE,3,0,0,0,0,0,0,0,,,,,,,0,0,,,,,,,,,,,,,,0,1,2022,1,1,2016,2017,1,50000,0,1,1
+Pittsburgh,PA,Pennsylvania,city,2018,2013,ASHRAE,3,0,0,0,0,0,0,0,,,,,,,0,0,,,,,,,,,,,,,,0,1,2022,1,1,2016,2017,2,50000,0,1,1
+Pittsburgh,PA,Pennsylvania,city,2019,2013,ASHRAE,3,0,0,0,0,0,0,0,,,,,,,0,0,,,,,,,,,,,,,,0,1,2022,1,1,2016,2017,3,50000,0,1,1
+Pittsburgh,PA,Pennsylvania,city,2020,2013,ASHRAE,6,0,0,0,0,0,0,0,,,,,,,0,0,,,,,,,,,,,,,,0,1,2022,1,1,2016,2017,4,50000,0,1,1
+Pittsburgh,PA,Pennsylvania,city,2021,2013,ASHRAE,6,0,0,0,0,0,0,0,,,,,,,0,0,,,,,,,,,,,,,,0,1,2022,1,1,2016,2017,5,50000,0,1,1
+Pittsburgh,PA,Pennsylvania,city,2022,2016,ASHRAE,3,0,0,0,0,0,0,0,,,,,,,0,0,,,,,,,,,,,,,,1,1,2022,1,1,2016,2017,6,50000,0,1,1
+Pittsburgh,PA,Pennsylvania,city,2023,2016,ASHRAE,6,0,0,0,0,0,0,0,,,,,,,0,0,,,,,,,,,,,,,,1,1,2022,1,1,2016,2017,7,50000,0,1,1
+Pittsburgh,PA,Pennsylvania,city,2024,2016,ASHRAE,6,0,0,0,0,0,0,0,,,,,,,0,0,,,,,,,,,,,,,,1,1,2022,1,1,2016,2017,8,50000,0,1,1
+Pittsburgh,PA,Pennsylvania,city,2025,2016,ASHRAE,6,0,0,0,0,0,0,0,,,,,,,0,0,,,,,,,,,,,,,,1,1,2022,1,1,2016,2017,9,50000,0,1,1
+Portland,OR,Oregon,city,2010,,,,0,0,0,1,0,0,0,2023,2028,Energy Performance Standards,HB 3409,,,0,0,,,,,,,,,,,,,,0,1,2022,0,0,2015,2016,,20000,0,0,0
+Portland,OR,Oregon,city,2011,2010,ASHRAE,0,0,0,0,1,0,0,0,2023,2028,Energy Performance Standards,HB 3409,,,0,0,,,,,,,,,,,,,,0,1,2022,0,0,2015,2016,,20000,0,0,0
+Portland,OR,Oregon,city,2012,2010,ASHRAE,2,0,0,0,1,0,0,0,2023,2028,Energy Performance Standards,HB 3409,,,0,0,,,,,,,,,,,,,,0,1,2022,0,0,2015,2016,,20000,0,0,0
+Portland,OR,Oregon,city,2013,2010,ASHRAE,2,0,0,0,1,0,0,0,2023,2028,Energy Performance Standards,HB 3409,,,0,0,,,,,,,,,,,,,,0,1,2022,0,0,2015,2016,,20000,0,0,0
+Portland,OR,Oregon,city,2014,2010,ASHRAE,3,0,0,0,1,0,0,0,2023,2028,Energy Performance Standards,HB 3409,,,0,0,,,,,,,,,,,,,,0,1,2022,0,0,2015,2016,,20000,0,0,0
+Portland,OR,Oregon,city,2015,2010,ASHRAE,5,0,0,0,1,0,0,0,2023,2028,Energy Performance Standards,HB 3409,,,0,0,,,,,,,,,,,,,,0,1,2022,1,0,2015,2016,0,20000,0,1,0
+Portland,OR,Oregon,city,2016,2010,ASHRAE,5,0,0,0,1,0,0,0,2023,2028,Energy Performance Standards,HB 3409,,,0,0,,,,,,,,,,,,,,0,1,2022,1,1,2015,2016,1,20000,0,1,1
+Portland,OR,Oregon,city,2017,2013,ASHRAE,3,0,0,0,1,0,0,0,2023,2028,Energy Performance Standards,HB 3409,,,0,0,,,,,,,,,,,,,,0,1,2022,1,1,2015,2016,2,20000,0,1,1
+Portland,OR,Oregon,city,2018,2013,ASHRAE,3,0,0,0,1,0,0,0,2023,2028,Energy Performance Standards,HB 3409,,,0,0,,,,,,,,,,,,,,0,1,2022,1,1,2015,2016,3,20000,0,1,1
+Portland,OR,Oregon,city,2019,2013,ASHRAE,3,0,0,0,1,0,0,0,2023,2028,Energy Performance Standards,HB 3409,,,0,0,,,,,,,,,,,,,,0,1,2022,1,1,2015,2016,4,20000,0,1,1
+Portland,OR,Oregon,city,2020,2013,ASHRAE,6,0,0,0,1,0,0,0,2023,2028,Energy Performance Standards,HB 3409,,,0,0,,,,,,,,,,,,,,0,1,2022,1,1,2015,2016,5,20000,0,1,1
+Portland,OR,Oregon,city,2021,2019,ASHRAE,0,0,0,0,1,0,0,0,2023,2028,Energy Performance Standards,HB 3409,,,0,0,,,,,,,,,,,,,,0,1,2022,1,1,2015,2016,6,20000,0,1,1
+Portland,OR,Oregon,city,2022,2019,ASHRAE,0,0,0,0,1,0,0,0,2023,2028,Energy Performance Standards,HB 3409,,,0,0,,,,,,,,,,,,,,1,1,2022,1,1,2015,2016,7,20000,0,1,1
+Portland,OR,Oregon,city,2023,2019,ASHRAE,3,0,0,0,1,0,1,0,2023,2028,Energy Performance Standards,HB 3409,,,0,0,,,,,,,,,,,,,,1,1,2022,1,1,2015,2016,8,20000,0,1,1
+Portland,OR,Oregon,city,2024,2019,ASHRAE,3,0,0,0,1,0,1,0,2023,2028,Energy Performance Standards,HB 3409,,,0,0,,,,,,,,,,,,,,1,1,2022,1,1,2015,2016,9,20000,0,1,1
+Portland,OR,Oregon,city,2025,2022,ASHRAE,0,0,0,0,1,0,1,0,2023,2028,Energy Performance Standards,HB 3409,,,0,0,,,,,,,,,,,,,,1,1,2022,1,1,2015,2016,10,20000,0,1,1
+Prince George's County,MD,Maryland,county,2010,2009,IECC,0,0,0,0,1,0,0,0,2022,2030,Climate Solutions Now Act,SB 528,,230,0,0,,,,,,,,,,,,,,0,1,2022,0,0,,,,,,0,0
+Prince George's County,MD,Maryland,county,2011,2009,IECC,1,0,0,0,1,0,0,0,2022,2030,Climate Solutions Now Act,SB 528,,230,0,0,,,,,,,,,,,,,,0,1,2022,0,0,,,,,,0,0
+Prince George's County,MD,Maryland,county,2012,2012,IECC,0,0,0,0,1,0,0,0,2022,2030,Climate Solutions Now Act,SB 528,,230,0,0,,,,,,,,,,,,,,0,1,2022,0,0,,,,,,0,0
+Prince George's County,MD,Maryland,county,2013,2012,IECC,0,0,0,0,1,0,0,0,2022,2030,Climate Solutions Now Act,SB 528,,230,0,0,,,,,,,,,,,,,,0,1,2022,0,0,,,,,,0,0
+Prince George's County,MD,Maryland,county,2014,2012,IECC,1,0,0,0,1,0,0,0,2022,2030,Climate Solutions Now Act,SB 528,,230,0,0,,,,,,,,,,,,,,0,1,2022,0,0,,,,,,0,0
+Prince George's County,MD,Maryland,county,2015,2015,IECC,0,0,0,0,1,0,0,0,2022,2030,Climate Solutions Now Act,SB 528,,230,0,0,,,,,,,,,,,,,,0,1,2022,0,0,,,,,,0,0
+Prince George's County,MD,Maryland,county,2016,2015,IECC,0,0,0,0,1,0,0,0,2022,2030,Climate Solutions Now Act,SB 528,,230,0,0,,,,,,,,,,,,,,0,1,2022,0,0,,,,,,0,0
+Prince George's County,MD,Maryland,county,2017,2015,IECC,1,0,0,0,1,0,0,0,2022,2030,Climate Solutions Now Act,SB 528,,230,0,0,,,,,,,,,,,,,,0,1,2022,0,0,,,,,,0,0
+Prince George's County,MD,Maryland,county,2018,2015,IECC,1,0,0,0,1,0,0,0,2022,2030,Climate Solutions Now Act,SB 528,,230,0,0,,,,,,,,,,,,,,0,1,2022,0,0,,,,,,0,0
+Prince George's County,MD,Maryland,county,2019,2015,IECC,1,0,0,0,1,0,0,0,2022,2030,Climate Solutions Now Act,SB 528,,230,0,0,,,,,,,,,,,,,,0,1,2022,0,0,,,,,,0,0
+Prince George's County,MD,Maryland,county,2020,2015,IECC,4,0,0,0,1,0,0,0,2022,2030,Climate Solutions Now Act,SB 528,,230,0,0,,,,,,,,,,,,,,0,1,2022,0,0,,,,,,0,0
+Prince George's County,MD,Maryland,county,2021,2015,IECC,4,0,0,0,1,0,0,0,2022,2030,Climate Solutions Now Act,SB 528,,230,0,0,,,,,,,,,,,,,,0,1,2022,0,0,,,,,,0,0
+Prince George's County,MD,Maryland,county,2022,2015,IECC,4,0,0,0,1,0,1,0,2022,2030,Climate Solutions Now Act,SB 528,,230,0,0,,,,,,,,,,,,,,1,1,2022,0,0,,,,,,1,0
+Prince George's County,MD,Maryland,county,2023,2019,ASHRAE,3,0,0,0,1,0,1,0,2022,2030,Climate Solutions Now Act,SB 528,,230,0,0,,,,,,,,,,,,,,1,1,2022,0,0,,,,,,1,0
+Prince George's County,MD,Maryland,county,2024,2019,ASHRAE,3,0,0,0,1,0,1,0,2022,2030,Climate Solutions Now Act,SB 528,,230,0,0,,,,,,,,,,,,,,1,1,2022,0,0,,,,,,1,0
+Prince George's County,MD,Maryland,county,2025,2019,ASHRAE,3,0,0,0,1,0,1,0,2022,2030,Climate Solutions Now Act,SB 528,,230,0,0,,,,,,,,,,,,,,1,1,2022,0,0,,,,,,1,0
+Reno,NV,Nevada,city,2010,,,,0,0,0,0,0,0,0,,,,,,,0,0,,,,,,,,,,,,,,0,1,2022,0,0,2019,2020,,30000,0,0,0
+Reno,NV,Nevada,city,2011,,,,0,0,0,0,0,0,0,,,,,,,0,0,,,,,,,,,,,,,,0,1,2022,0,0,2019,2020,,30000,0,0,0
+Reno,NV,Nevada,city,2012,2009,IECC,3,0,0,0,0,0,0,0,,,,,,,0,0,,,,,,,,,,,,,,0,1,2022,0,0,2019,2020,,30000,0,0,0
+Reno,NV,Nevada,city,2013,2009,IECC,3,0,0,0,0,0,0,0,,,,,,,0,0,,,,,,,,,,,,,,0,1,2022,0,0,2019,2020,,30000,0,0,0
+Reno,NV,Nevada,city,2014,2009,IECC,4,0,0,0,0,0,0,0,,,,,,,0,0,,,,,,,,,,,,,,0,1,2022,0,0,2019,2020,,30000,0,0,0
+Reno,NV,Nevada,city,2015,2009,IECC,6,0,0,0,0,0,0,0,,,,,,,0,0,,,,,,,,,,,,,,0,1,2022,0,0,2019,2020,,30000,0,0,0
+Reno,NV,Nevada,city,2016,2009,IECC,6,0,0,0,0,0,0,0,,,,,,,0,0,,,,,,,,,,,,,,0,1,2022,0,0,2019,2020,,30000,0,0,0
+Reno,NV,Nevada,city,2017,2009,IECC,7,0,0,0,0,0,0,0,,,,,,,0,0,,,,,,,,,,,,,,0,1,2022,0,0,2019,2020,,30000,0,0,0
+Reno,NV,Nevada,city,2018,2009,IECC,7,0,0,0,0,0,0,0,,,,,,,0,0,,,,,,,,,,,,,,0,1,2022,0,0,2019,2020,,30000,0,0,0
+Reno,NV,Nevada,city,2019,2009,IECC,7,0,0,0,0,0,0,0,,,,,,,0,0,,,,,,,,,,,,,,0,1,2022,1,0,2019,2020,0,30000,0,1,0
+Reno,NV,Nevada,city,2020,2009,IECC,10,0,0,0,0,0,0,0,,,,,,,0,0,,,,,,,,,,,,,,0,1,2022,1,1,2019,2020,1,30000,0,1,1
+Reno,NV,Nevada,city,2021,2009,IECC,10,0,0,0,0,0,0,0,,,,,,,0,0,,,,,,,,,,,,,,0,1,2022,1,1,2019,2020,2,30000,0,1,1
+Reno,NV,Nevada,city,2022,2009,IECC,10,0,0,0,0,0,0,0,,,,,,,0,0,,,,,,,,,,,,,,1,1,2022,1,1,2019,2020,3,30000,0,1,1
+Reno,NV,Nevada,city,2023,2009,IECC,13,0,0,0,0,0,0,0,,,,,,,0,0,,,,,,,,,,,,,,1,1,2022,1,1,2019,2020,4,30000,0,1,1
+Reno,NV,Nevada,city,2024,2022,ASHRAE,0,0,0,0,0,0,0,0,,,,,,,0,0,,,,,,,,,,,,,,1,1,2022,1,1,2019,2020,5,30000,0,1,1
+Reno,NV,Nevada,city,2025,2022,ASHRAE,0,0,0,0,0,0,0,0,,,,,,,0,0,,,,,,,,,,,,,,1,1,2022,1,1,2019,2020,6,30000,0,1,1
+Sacramento,CA,California,city,2010,2008,TITLE24,1,0,0,0,1,0,0,0,,,,,,,0,0,,,,,,,,,,,,,,0,1,2022,0,0,,,,,,0,0
+Sacramento,CA,California,city,2011,2008,TITLE24,2,0,0,0,1,0,0,0,,,,,,,0,0,,,,,,,,,,,,,,0,1,2022,0,0,,,,,,0,0
+Sacramento,CA,California,city,2012,2008,TITLE24,4,0,0,0,1,0,0,0,,,,,,,0,0,,,,,,,,,,,,,,0,1,2022,0,0,,,,,,0,0
+Sacramento,CA,California,city,2013,2008,TITLE24,4,0,0,0,1,0,0,0,,,,,,,0,0,,,,,,,,,,,,,,0,1,2022,0,0,,,,,,0,0
+Sacramento,CA,California,city,2014,2013,TITLE24,0,0,0,0,1,0,0,0,,,,,,,0,0,,,,,,,,,,,,,,0,1,2022,0,0,,,,,,0,0
+Sacramento,CA,California,city,2015,2013,TITLE24,2,0,0,0,1,0,0,0,,,,,,,0,0,,,,,,,,,,,,,,0,1,2022,0,0,,,,,,0,0
+Sacramento,CA,California,city,2016,2013,TITLE24,2,0,0,0,1,0,0,0,,,,,,,0,0,,,,,,,,,,,,,,0,1,2022,0,0,,,,,,0,0
+Sacramento,CA,California,city,2017,2016,TITLE24,0,0,0,0,1,0,0,0,,,,,,,0,0,,,,,,,,,,,,,,0,1,2022,0,0,,,,,,0,0
+Sacramento,CA,California,city,2018,2016,TITLE24,0,0,0,0,1,0,0,0,,,,,,,0,0,,,,,,,,,,,,,,0,1,2022,0,0,,,,,,0,0
+Sacramento,CA,California,city,2019,2016,TITLE24,0,0,0,0,1,0,0,0,,,,,,,0,0,,,,,,,,,,,,,,0,1,2022,0,0,,,,,,0,0
+Sacramento,CA,California,city,2020,2019,TITLE24,0,0,0,0,1,0,0,0,,,,,,,0,0,,,,,,,,,,,,,,0,1,2022,0,0,,,,,,0,0
+Sacramento,CA,California,city,2021,2019,TITLE24,0,0,0,0,1,0,0,0,,,,,,,0,0,,,,,,,,,,,,,,0,1,2022,0,0,,,,,,0,0
+Sacramento,CA,California,city,2022,2019,TITLE24,0,0,0,0,1,0,0,0,,,,,,,0,0,,,,,,,,,,,,,,1,1,2022,0,0,,,,,,0,0
+Sacramento,CA,California,city,2023,2022,TITLE24,0,0,0,0,1,0,0,0,,,,,,,0,0,,,,,,,,,,,,,,1,1,2022,0,0,,,,,,0,0
+Sacramento,CA,California,city,2024,2022,TITLE24,0,0,0,0,1,0,0,0,,,,,,,0,0,,,,,,,,,,,,,,1,1,2022,0,0,,,,,,0,0
+Sacramento,CA,California,city,2025,2022,TITLE24,0,0,0,0,1,0,0,0,,,,,,,0,0,,,,,,,,,,,,,,1,1,2022,0,0,,,,,,0,0
+Salt Lake City,UT,Utah,city,2010,2007,ASHRAE,2,0,0,1,0,0,0,0,,,,,,,0,0,,,,,,,,,,,,,,0,0,,0,0,2016,2017,,25000,1,0,0
+Salt Lake City,UT,Utah,city,2011,2007,ASHRAE,3,0,0,1,0,0,0,0,,,,,,,0,0,,,,,,,,,,,,,,0,0,,0,0,2016,2017,,25000,1,0,0
+Salt Lake City,UT,Utah,city,2012,2007,ASHRAE,5,0,0,1,0,0,0,0,,,,,,,0,0,,,,,,,,,,,,,,0,0,,0,0,2016,2017,,25000,1,0,0
+Salt Lake City,UT,Utah,city,2013,2007,ASHRAE,5,0,0,1,0,0,0,0,,,,,,,0,0,,,,,,,,,,,,,,0,0,,0,0,2016,2017,,25000,1,0,0
+Salt Lake City,UT,Utah,city,2014,2007,ASHRAE,6,0,0,1,0,0,0,0,,,,,,,0,0,,,,,,,,,,,,,,0,0,,0,0,2016,2017,,25000,1,0,0
+Salt Lake City,UT,Utah,city,2015,2010,ASHRAE,5,0,0,1,0,0,0,0,,,,,,,0,0,,,,,,,,,,,,,,0,0,,0,0,2016,2017,,25000,1,0,0
+Salt Lake City,UT,Utah,city,2016,2010,ASHRAE,5,0,0,1,0,0,0,0,,,,,,,0,0,,,,,,,,,,,,,,0,0,,1,0,2016,2017,0,25000,1,1,0
+Salt Lake City,UT,Utah,city,2017,2010,ASHRAE,6,0,0,1,0,0,0,0,,,,,,,0,0,,,,,,,,,,,,,,0,0,,1,1,2016,2017,1,25000,1,1,1
+Salt Lake City,UT,Utah,city,2018,2010,ASHRAE,6,0,0,1,0,0,0,0,,,,,,,0,0,,,,,,,,,,,,,,0,0,,1,1,2016,2017,2,25000,1,1,1
+Salt Lake City,UT,Utah,city,2019,2010,ASHRAE,6,0,0,1,0,0,0,0,,,,,,,0,0,,,,,,,,,,,,,,0,0,,1,1,2016,2017,3,25000,1,1,1
+Salt Lake City,UT,Utah,city,2020,2010,ASHRAE,9,0,0,1,0,0,0,0,,,,,,,0,0,,,,,,,,,,,,,,0,0,,1,1,2016,2017,4,25000,1,1,1
+Salt Lake City,UT,Utah,city,2021,2010,ASHRAE,9,0,0,1,0,0,0,0,,,,,,,0,0,,,,,,,,,,,,,,0,0,,1,1,2016,2017,5,25000,1,1,1
+Salt Lake City,UT,Utah,city,2022,2010,ASHRAE,9,0,0,1,0,0,0,0,,,,,,,0,0,,,,,,,,,,,,,,0,0,,1,1,2016,2017,6,25000,1,1,1
+Salt Lake City,UT,Utah,city,2023,2019,ASHRAE,3,0,0,1,0,0,0,0,,,,,,,0,0,,,,,,,,,,,,,,0,0,,1,1,2016,2017,7,25000,1,1,1
+Salt Lake City,UT,Utah,city,2024,2019,ASHRAE,3,0,0,1,0,0,0,0,,,,,,,0,0,,,,,,,,,,,,,,0,0,,1,1,2016,2017,8,25000,1,1,1
+Salt Lake City,UT,Utah,city,2025,2019,ASHRAE,3,0,0,1,0,0,0,0,,,,,,,0,0,,,,,,,,,,,,,,0,0,,1,1,2016,2017,9,25000,1,1,1
+San Diego,CA,California,city,2010,2008,TITLE24,1,0,0,0,1,0,0,0,,,,,,,0,0,,,,,,,,,,,,,,0,0,2023,0,0,,,,,,0,0
+San Diego,CA,California,city,2011,2008,TITLE24,2,0,0,0,1,0,0,0,,,,,,,0,0,,,,,,,,,,,,,,0,0,2023,0,0,,,,,,0,0
+San Diego,CA,California,city,2012,2008,TITLE24,4,0,0,0,1,0,0,0,,,,,,,0,0,,,,,,,,,,,,,,0,0,2023,0,0,,,,,,0,0
+San Diego,CA,California,city,2013,2008,TITLE24,4,0,0,0,1,0,0,0,,,,,,,0,0,,,,,,,,,,,,,,0,0,2023,0,0,,,,,,0,0
+San Diego,CA,California,city,2014,2013,TITLE24,0,0,0,0,1,0,0,0,,,,,,,0,0,,,,,,,,,,,,,,0,0,2023,0,0,,,,,,0,0
+San Diego,CA,California,city,2015,2013,TITLE24,2,0,0,0,1,0,0,0,,,,,,,0,0,,,,,,,,,,,,,,0,0,2023,0,0,,,,,,0,0
+San Diego,CA,California,city,2016,2013,TITLE24,2,0,0,0,1,0,0,0,,,,,,,0,0,,,,,,,,,,,,,,0,0,2023,0,0,,,,,,0,0
+San Diego,CA,California,city,2017,2016,TITLE24,0,0,0,0,1,0,0,0,,,,,,,0,0,,,,,,,,,,,,,,0,0,2023,0,0,,,,,,0,0
+San Diego,CA,California,city,2018,2016,TITLE24,0,0,0,0,1,0,0,0,,,,,,,0,0,,,,,,,,,,,,,,0,0,2023,0,0,,,,,,0,0
+San Diego,CA,California,city,2019,2016,TITLE24,0,0,0,0,1,0,0,0,,,,,,,0,0,,,,,,,,,,,,,,0,0,2023,0,0,,,,,,0,0
+San Diego,CA,California,city,2020,2019,TITLE24,0,0,0,0,1,0,0,0,,,,,,,0,0,,,,,,,,,,,,,,0,0,2023,0,0,,,,,,0,0
+San Diego,CA,California,city,2021,2019,TITLE24,0,0,0,0,1,0,0,0,,,,,,,0,0,,,,,,,,,,,,,,0,0,2023,0,0,,,,,,0,0
+San Diego,CA,California,city,2022,2019,TITLE24,0,0,0,0,1,0,0,0,,,,,,,0,0,,,,,,,,,,,,,,0,0,2023,0,0,,,,,,0,0
+San Diego,CA,California,city,2023,2022,TITLE24,0,0,0,0,1,0,0,0,,,,,,,0,0,,,,,,,,,,,,,,1,0,2023,0,0,,,,,,0,0
+San Diego,CA,California,city,2024,2022,TITLE24,0,0,0,0,1,0,0,0,,,,,,,0,0,,,,,,,,,,,,,,1,0,2023,0,0,,,,,,0,0
+San Diego,CA,California,city,2025,2022,TITLE24,0,0,0,0,1,0,0,0,,,,,,,0,0,,,,,,,,,,,,,,1,0,2023,0,0,,,,,,0,0
+San Francisco,CA,California,city,2010,2008,TITLE24,1,0,0,0,1,0,0,0,,,,,,,0,0,,,,,,,,,,,,,,0,1,2022,0,0,2011,2011,,10000,1,0,0
+San Francisco,CA,California,city,2011,2008,TITLE24,2,0,0,0,1,0,0,0,,,,,,,0,0,,,,,,,,,,,,,,0,1,2022,1,1,2011,2011,0,10000,1,1,1
+San Francisco,CA,California,city,2012,2008,TITLE24,4,0,0,0,1,0,0,0,,,,,,,0,0,,,,,,,,,,,,,,0,1,2022,1,1,2011,2011,1,10000,1,1,1
+San Francisco,CA,California,city,2013,2008,TITLE24,4,0,0,0,1,0,0,0,,,,,,,0,0,,,,,,,,,,,,,,0,1,2022,1,1,2011,2011,2,10000,1,1,1
+San Francisco,CA,California,city,2014,2013,TITLE24,0,0,0,0,1,0,0,0,,,,,,,0,0,,,,,,,,,,,,,,0,1,2022,1,1,2011,2011,3,10000,1,1,1
+San Francisco,CA,California,city,2015,2013,TITLE24,2,0,0,0,1,0,0,0,,,,,,,0,0,,,,,,,,,,,,,,0,1,2022,1,1,2011,2011,4,10000,1,1,1
+San Francisco,CA,California,city,2016,2013,TITLE24,2,0,0,0,1,0,0,0,,,,,,,0,0,,,,,,,,,,,,,,0,1,2022,1,1,2011,2011,5,10000,1,1,1
+San Francisco,CA,California,city,2017,2016,TITLE24,0,0,0,0,1,0,0,0,,,,,,,0,0,,,,,,,,,,,,,,0,1,2022,1,1,2011,2011,6,10000,1,1,1
+San Francisco,CA,California,city,2018,2016,TITLE24,0,0,0,0,1,0,0,0,,,,,,,0,0,,,,,,,,,,,,,,0,1,2022,1,1,2011,2011,7,10000,1,1,1
+San Francisco,CA,California,city,2019,2016,TITLE24,0,0,0,0,1,0,0,0,,,,,,,0,0,,,,,,,,,,,,,,0,1,2022,1,1,2011,2011,8,10000,1,1,1
+San Francisco,CA,California,city,2020,2019,TITLE24,0,0,0,0,1,0,0,0,,,,,,,0,0,,,,,,,,,,,,,,0,1,2022,1,1,2011,2011,9,10000,1,1,1
+San Francisco,CA,California,city,2021,2019,TITLE24,0,0,0,0,1,0,0,0,,,,,,,0,0,,,,,,,,,,,,,,0,1,2022,1,1,2011,2011,10,10000,1,1,1
+San Francisco,CA,California,city,2022,2019,TITLE24,0,0,0,0,1,0,0,0,,,,,,,0,0,,,,,,,,,,,,,,1,1,2022,1,1,2011,2011,11,10000,1,1,1
+San Francisco,CA,California,city,2023,2022,TITLE24,0,0,0,0,1,0,0,0,,,,,,,0,0,,,,,,,,,,,,,,1,1,2022,1,1,2011,2011,12,10000,1,1,1
+San Francisco,CA,California,city,2024,2022,TITLE24,0,0,0,0,1,0,0,0,,,,,,,0,0,,,,,,,,,,,,,,1,1,2022,1,1,2011,2011,13,10000,1,1,1
+San Francisco,CA,California,city,2025,2022,TITLE24,0,0,0,0,1,0,0,0,,,,,,,0,0,,,,,,,,,,,,,,1,1,2022,1,1,2011,2011,14,10000,1,1,1
+Santa Monica,CA,California,city,2010,2008,TITLE24,1,0,0,0,1,0,0,0,,,,,,,0,0,,,,,,,,,,,,,,0,0,2023,0,0,,,,,,0,0
+Santa Monica,CA,California,city,2011,2008,TITLE24,2,0,0,0,1,0,0,0,,,,,,,0,0,,,,,,,,,,,,,,0,0,2023,0,0,,,,,,0,0
+Santa Monica,CA,California,city,2012,2008,TITLE24,4,0,0,0,1,0,0,0,,,,,,,0,0,,,,,,,,,,,,,,0,0,2023,0,0,,,,,,0,0
+Santa Monica,CA,California,city,2013,2008,TITLE24,4,0,0,0,1,0,0,0,,,,,,,0,0,,,,,,,,,,,,,,0,0,2023,0,0,,,,,,0,0
+Santa Monica,CA,California,city,2014,2013,TITLE24,0,0,0,0,1,0,0,0,,,,,,,0,0,,,,,,,,,,,,,,0,0,2023,0,0,,,,,,0,0
+Santa Monica,CA,California,city,2015,2013,TITLE24,2,0,0,0,1,0,0,0,,,,,,,0,0,,,,,,,,,,,,,,0,0,2023,0,0,,,,,,0,0
+Santa Monica,CA,California,city,2016,2013,TITLE24,2,0,0,0,1,0,0,0,,,,,,,0,0,,,,,,,,,,,,,,0,0,2023,0,0,,,,,,0,0
+Santa Monica,CA,California,city,2017,2016,TITLE24,0,0,0,0,1,0,0,0,,,,,,,0,0,,,,,,,,,,,,,,0,0,2023,0,0,,,,,,0,0
+Santa Monica,CA,California,city,2018,2016,TITLE24,0,0,0,0,1,0,0,0,,,,,,,0,0,,,,,,,,,,,,,,0,0,2023,0,0,,,,,,0,0
+Santa Monica,CA,California,city,2019,2016,TITLE24,0,0,0,0,1,0,0,0,,,,,,,0,0,,,,,,,,,,,,,,0,0,2023,0,0,,,,,,0,0
+Santa Monica,CA,California,city,2020,2019,TITLE24,0,0,0,0,1,0,0,0,,,,,,,0,0,,,,,,,,,,,,,,0,0,2023,0,0,,,,,,0,0
+Santa Monica,CA,California,city,2021,2019,TITLE24,0,0,0,0,1,0,0,0,,,,,,,0,0,,,,,,,,,,,,,,0,0,2023,0,0,,,,,,0,0
+Santa Monica,CA,California,city,2022,2019,TITLE24,0,0,0,0,1,0,0,0,,,,,,,0,0,,,,,,,,,,,,,,0,0,2023,0,0,,,,,,0,0
+Santa Monica,CA,California,city,2023,2022,TITLE24,0,0,0,0,1,0,0,0,,,,,,,0,0,,,,,,,,,,,,,,1,0,2023,0,0,,,,,,0,0
+Santa Monica,CA,California,city,2024,2022,TITLE24,0,0,0,0,1,0,0,0,,,,,,,0,0,,,,,,,,,,,,,,1,0,2023,0,0,,,,,,0,0
+Santa Monica,CA,California,city,2025,2022,TITLE24,0,0,0,0,1,0,0,0,,,,,,,0,0,,,,,,,,,,,,,,1,0,2023,0,0,,,,,,0,0
+Savannah,GA,Georgia,city,2010,2006,IECC,3,0,0,0,0,0,0,0,,,,,,,0,0,,,,,,,,,,,,,,0,1,2022,0,0,,,,,,0,0
+Savannah,GA,Georgia,city,2011,2006,IECC,4,0,0,0,0,0,0,0,,,,,,,0,0,,,,,,,,,,,,,,0,1,2022,0,0,,,,,,0,0
+Savannah,GA,Georgia,city,2012,2006,IECC,6,0,0,0,0,0,0,0,,,,,,,0,0,,,,,,,,,,,,,,0,1,2022,0,0,,,,,,0,0
+Savannah,GA,Georgia,city,2013,2006,IECC,6,0,0,0,0,0,0,0,,,,,,,0,0,,,,,,,,,,,,,,0,1,2022,0,0,,,,,,0,0
+Savannah,GA,Georgia,city,2014,2006,IECC,7,0,0,0,0,0,0,0,,,,,,,0,0,,,,,,,,,,,,,,0,1,2022,0,0,,,,,,0,0
+Savannah,GA,Georgia,city,2015,2006,IECC,9,0,0,0,0,0,0,0,,,,,,,0,0,,,,,,,,,,,,,,0,1,2022,0,0,,,,,,0,0
+Savannah,GA,Georgia,city,2016,2006,IECC,9,0,0,0,0,0,0,0,,,,,,,0,0,,,,,,,,,,,,,,0,1,2022,0,0,,,,,,0,0
+Savannah,GA,Georgia,city,2017,2006,IECC,10,0,0,0,0,0,0,0,,,,,,,0,0,,,,,,,,,,,,,,0,1,2022,0,0,,,,,,0,0
+Savannah,GA,Georgia,city,2018,2006,IECC,10,0,0,0,0,0,0,0,,,,,,,0,0,,,,,,,,,,,,,,0,1,2022,0,0,,,,,,0,0
+Savannah,GA,Georgia,city,2019,2006,IECC,10,0,0,0,0,0,0,0,,,,,,,0,0,,,,,,,,,,,,,,0,1,2022,0,0,,,,,,0,0
+Savannah,GA,Georgia,city,2020,2013,ASHRAE,6,0,0,0,0,0,0,0,,,,,,,0,0,,,,,,,,,,,,,,0,1,2022,0,0,,,,,,0,0
+Savannah,GA,Georgia,city,2021,2013,ASHRAE,6,0,0,0,0,0,0,0,,,,,,,0,0,,,,,,,,,,,,,,0,1,2022,0,0,,,,,,0,0
+Savannah,GA,Georgia,city,2022,2013,ASHRAE,6,0,0,0,0,0,0,0,,,,,,,0,0,,,,,,,,,,,,,,1,1,2022,0,0,,,,,,0,0
+Savannah,GA,Georgia,city,2023,2013,ASHRAE,9,0,0,0,0,0,0,0,,,,,,,0,0,,,,,,,,,,,,,,1,1,2022,0,0,,,,,,0,0
+Savannah,GA,Georgia,city,2024,2013,ASHRAE,9,0,0,0,0,0,0,0,,,,,,,0,0,,,,,,,,,,,,,,1,1,2022,0,0,,,,,,0,0
+Savannah,GA,Georgia,city,2025,2013,ASHRAE,9,0,0,0,0,0,0,0,,,,,,,0,0,,,,,,,,,,,,,,1,1,2022,0,0,,,,,,0,0
+Seattle,WA,Washington,city,2010,2004,ASHRAE,5,0,0,0,1,0,0,0,2019,2026,Clean Buildings Performance Standard,HB 1257,1.0,,0,0,2023,,,GHG Intensity (kgCO2e/SF/yr),20000,20000,20000,1,1,,,Building Emissions Performance Standard,Ordinance 126959,0,1,2022,1,0,2010,2012,0,20000,0,1,0
+Seattle,WA,Washington,city,2011,2004,ASHRAE,6,0,0,0,1,0,0,0,2019,2026,Clean Buildings Performance Standard,HB 1257,1.0,,0,0,2023,,,GHG Intensity (kgCO2e/SF/yr),20000,20000,20000,1,1,,,Building Emissions Performance Standard,Ordinance 126959,0,1,2022,1,0,2010,2012,1,20000,0,1,0
+Seattle,WA,Washington,city,2012,2004,ASHRAE,8,0,0,0,1,0,0,0,2019,2026,Clean Buildings Performance Standard,HB 1257,1.0,,0,0,2023,,,GHG Intensity (kgCO2e/SF/yr),20000,20000,20000,1,1,,,Building Emissions Performance Standard,Ordinance 126959,0,1,2022,1,1,2010,2012,2,20000,0,1,1
+Seattle,WA,Washington,city,2013,2004,ASHRAE,8,0,0,0,1,0,0,0,2019,2026,Clean Buildings Performance Standard,HB 1257,1.0,,0,0,2023,,,GHG Intensity (kgCO2e/SF/yr),20000,20000,20000,1,1,,,Building Emissions Performance Standard,Ordinance 126959,0,1,2022,1,1,2010,2012,3,20000,0,1,1
+Seattle,WA,Washington,city,2014,2004,ASHRAE,9,0,0,0,1,0,0,0,2019,2026,Clean Buildings Performance Standard,HB 1257,1.0,,0,0,2023,,,GHG Intensity (kgCO2e/SF/yr),20000,20000,20000,1,1,,,Building Emissions Performance Standard,Ordinance 126959,0,1,2022,1,1,2010,2012,4,20000,0,1,1
+Seattle,WA,Washington,city,2015,2004,ASHRAE,11,0,0,0,1,0,0,0,2019,2026,Clean Buildings Performance Standard,HB 1257,1.0,,0,0,2023,,,GHG Intensity (kgCO2e/SF/yr),20000,20000,20000,1,1,,,Building Emissions Performance Standard,Ordinance 126959,0,1,2022,1,1,2010,2012,5,20000,0,1,1
+Seattle,WA,Washington,city,2016,2004,ASHRAE,11,0,0,0,1,0,0,0,2019,2026,Clean Buildings Performance Standard,HB 1257,1.0,,0,0,2023,,,GHG Intensity (kgCO2e/SF/yr),20000,20000,20000,1,1,,,Building Emissions Performance Standard,Ordinance 126959,0,1,2022,1,1,2010,2012,6,20000,0,1,1
+Seattle,WA,Washington,city,2017,2004,ASHRAE,12,0,0,0,1,0,0,0,2019,2026,Clean Buildings Performance Standard,HB 1257,1.0,,0,0,2023,,,GHG Intensity (kgCO2e/SF/yr),20000,20000,20000,1,1,,,Building Emissions Performance Standard,Ordinance 126959,0,1,2022,1,1,2010,2012,7,20000,0,1,1
+Seattle,WA,Washington,city,2018,2004,ASHRAE,12,0,0,0,1,0,0,0,2019,2026,Clean Buildings Performance Standard,HB 1257,1.0,,0,0,2023,,,GHG Intensity (kgCO2e/SF/yr),20000,20000,20000,1,1,,,Building Emissions Performance Standard,Ordinance 126959,0,1,2022,1,1,2010,2012,8,20000,0,1,1
+Seattle,WA,Washington,city,2019,2004,ASHRAE,12,0,0,0,1,0,1,0,2019,2026,Clean Buildings Performance Standard,HB 1257,1.0,,0,0,2023,,,GHG Intensity (kgCO2e/SF/yr),20000,20000,20000,1,1,,,Building Emissions Performance Standard,Ordinance 126959,0,1,2022,1,1,2010,2012,9,20000,0,1,1
+Seattle,WA,Washington,city,2020,2004,ASHRAE,15,0,0,0,1,0,1,0,2019,2026,Clean Buildings Performance Standard,HB 1257,1.0,,0,0,2023,,,GHG Intensity (kgCO2e/SF/yr),20000,20000,20000,1,1,,,Building Emissions Performance Standard,Ordinance 126959,0,1,2022,1,1,2010,2012,10,20000,0,1,1
+Seattle,WA,Washington,city,2021,2004,ASHRAE,15,0,0,0,1,0,1,0,2019,2026,Clean Buildings Performance Standard,HB 1257,1.0,,0,0,2023,,,GHG Intensity (kgCO2e/SF/yr),20000,20000,20000,1,1,,,Building Emissions Performance Standard,Ordinance 126959,0,1,2022,1,1,2010,2012,11,20000,0,1,1
+Seattle,WA,Washington,city,2022,2004,ASHRAE,15,0,0,0,1,0,1,0,2019,2026,Clean Buildings Performance Standard,HB 1257,1.0,,0,0,2023,,,GHG Intensity (kgCO2e/SF/yr),20000,20000,20000,1,1,,,Building Emissions Performance Standard,Ordinance 126959,1,1,2022,1,1,2010,2012,12,20000,0,1,1
+Seattle,WA,Washington,city,2023,2004,ASHRAE,18,0,0,0,1,0,1,0,2019,2026,Clean Buildings Performance Standard,HB 1257,1.0,,1,0,2023,,0,GHG Intensity (kgCO2e/SF/yr),20000,20000,20000,1,1,,,Building Emissions Performance Standard,Ordinance 126959,1,1,2022,1,1,2010,2012,13,20000,0,1,1
+Seattle,WA,Washington,city,2024,2019,ASHRAE,3,0,0,0,1,0,1,0,2019,2026,Clean Buildings Performance Standard,HB 1257,1.0,,1,0,2023,,1,GHG Intensity (kgCO2e/SF/yr),20000,20000,20000,1,1,,,Building Emissions Performance Standard,Ordinance 126959,1,1,2022,1,1,2010,2012,14,20000,0,1,1
+Seattle,WA,Washington,city,2025,2019,ASHRAE,3,0,0,0,1,0,1,0,2019,2026,Clean Buildings Performance Standard,HB 1257,1.0,,1,0,2023,,2,GHG Intensity (kgCO2e/SF/yr),20000,20000,20000,1,1,,,Building Emissions Performance Standard,Ordinance 126959,1,1,2022,1,1,2010,2012,15,20000,0,1,1
+St. Louis,MO,Missouri,city,2010,,,,0,1,0,0,0,0,0,,,,,,,0,0,2020,2025,,Site EUI,50000,50000,50000,1,1,,,Building Energy Performance Standards,Ordinance 71132,0,1,2022,0,0,2017,2018,,50000,0,0,0
+St. Louis,MO,Missouri,city,2011,,,,0,1,0,0,0,0,0,,,,,,,0,0,2020,2025,,Site EUI,50000,50000,50000,1,1,,,Building Energy Performance Standards,Ordinance 71132,0,1,2022,0,0,2017,2018,,50000,0,0,0
+St. Louis,MO,Missouri,city,2012,,,,0,1,0,0,0,0,0,,,,,,,0,0,2020,2025,,Site EUI,50000,50000,50000,1,1,,,Building Energy Performance Standards,Ordinance 71132,0,1,2022,0,0,2017,2018,,50000,0,0,0
+St. Louis,MO,Missouri,city,2013,,,,0,1,0,0,0,0,0,,,,,,,0,0,2020,2025,,Site EUI,50000,50000,50000,1,1,,,Building Energy Performance Standards,Ordinance 71132,0,1,2022,0,0,2017,2018,,50000,0,0,0
+St. Louis,MO,Missouri,city,2014,,,,0,1,0,0,0,0,0,,,,,,,0,0,2020,2025,,Site EUI,50000,50000,50000,1,1,,,Building Energy Performance Standards,Ordinance 71132,0,1,2022,0,0,2017,2018,,50000,0,0,0
+St. Louis,MO,Missouri,city,2015,,,,0,1,0,0,0,0,0,,,,,,,0,0,2020,2025,,Site EUI,50000,50000,50000,1,1,,,Building Energy Performance Standards,Ordinance 71132,0,1,2022,0,0,2017,2018,,50000,0,0,0
+St. Louis,MO,Missouri,city,2016,,,,0,1,0,0,0,0,0,,,,,,,0,0,2020,2025,,Site EUI,50000,50000,50000,1,1,,,Building Energy Performance Standards,Ordinance 71132,0,1,2022,0,0,2017,2018,,50000,0,0,0
+St. Louis,MO,Missouri,city,2017,,,,0,1,0,0,0,0,0,,,,,,,0,0,2020,2025,,Site EUI,50000,50000,50000,1,1,,,Building Energy Performance Standards,Ordinance 71132,0,1,2022,1,0,2017,2018,0,50000,0,1,0
+St. Louis,MO,Missouri,city,2018,,,,0,1,0,0,0,0,0,,,,,,,0,0,2020,2025,,Site EUI,50000,50000,50000,1,1,,,Building Energy Performance Standards,Ordinance 71132,0,1,2022,1,1,2017,2018,1,50000,0,1,1
+St. Louis,MO,Missouri,city,2019,,,,0,1,0,0,0,0,0,,,,,,,0,0,2020,2025,,Site EUI,50000,50000,50000,1,1,,,Building Energy Performance Standards,Ordinance 71132,0,1,2022,1,1,2017,2018,2,50000,0,1,1
+St. Louis,MO,Missouri,city,2020,,,,0,1,0,0,0,0,0,,,,,,,1,0,2020,2025,0,Site EUI,50000,50000,50000,1,1,,,Building Energy Performance Standards,Ordinance 71132,0,1,2022,1,1,2017,2018,3,50000,0,1,1
+St. Louis,MO,Missouri,city,2021,,,,0,1,0,0,0,0,0,,,,,,,1,0,2020,2025,1,Site EUI,50000,50000,50000,1,1,,,Building Energy Performance Standards,Ordinance 71132,0,1,2022,1,1,2017,2018,4,50000,0,1,1
+St. Louis,MO,Missouri,city,2022,,,,0,1,0,0,0,0,0,,,,,,,1,0,2020,2025,2,Site EUI,50000,50000,50000,1,1,,,Building Energy Performance Standards,Ordinance 71132,1,1,2022,1,1,2017,2018,5,50000,0,1,1
+St. Louis,MO,Missouri,city,2023,,,,0,1,0,0,0,0,0,,,,,,,1,0,2020,2025,3,Site EUI,50000,50000,50000,1,1,,,Building Energy Performance Standards,Ordinance 71132,1,1,2022,1,1,2017,2018,6,50000,0,1,1
+St. Louis,MO,Missouri,city,2024,,,,0,1,0,0,0,0,0,,,,,,,1,0,2020,2025,4,Site EUI,50000,50000,50000,1,1,,,Building Energy Performance Standards,Ordinance 71132,1,1,2022,1,1,2017,2018,7,50000,0,1,1
+St. Louis,MO,Missouri,city,2025,,,,0,1,0,0,0,0,0,,,,,,,1,1,2020,2025,5,Site EUI,50000,50000,50000,1,1,,,Building Energy Performance Standards,Ordinance 71132,1,1,2022,1,1,2017,2018,8,50000,0,1,1
+Washington,DC,District of Columbia,district,2010,2007,ASHRAE,2,0,0,0,1,0,0,0,,,,,,,0,0,2018,2021,,ENERGY STAR score or source EUI,50000,10000,50000,1,1,10.0,,Building Energy Performance Standards and Benchmarking,DC Law 22-257,0,1,2022,1,1,2008,2010,2,50000,0,1,1
+Washington,DC,District of Columbia,district,2011,2007,ASHRAE,3,0,0,0,1,0,0,0,,,,,,,0,0,2018,2021,,ENERGY STAR score or source EUI,50000,10000,50000,1,1,10.0,,Building Energy Performance Standards and Benchmarking,DC Law 22-257,0,1,2022,1,1,2008,2010,3,50000,0,1,1
+Washington,DC,District of Columbia,district,2012,2007,ASHRAE,5,0,0,0,1,0,0,0,,,,,,,0,0,2018,2021,,ENERGY STAR score or source EUI,50000,10000,50000,1,1,10.0,,Building Energy Performance Standards and Benchmarking,DC Law 22-257,0,1,2022,1,1,2008,2010,4,50000,0,1,1
+Washington,DC,District of Columbia,district,2013,2007,ASHRAE,5,0,0,0,1,0,0,0,,,,,,,0,0,2018,2021,,ENERGY STAR score or source EUI,50000,10000,50000,1,1,10.0,,Building Energy Performance Standards and Benchmarking,DC Law 22-257,0,1,2022,1,1,2008,2010,5,50000,0,1,1
+Washington,DC,District of Columbia,district,2014,2013,ASHRAE,0,0,0,0,1,0,0,0,,,,,,,0,0,2018,2021,,ENERGY STAR score or source EUI,50000,10000,50000,1,1,10.0,,Building Energy Performance Standards and Benchmarking,DC Law 22-257,0,1,2022,1,1,2008,2010,6,50000,0,1,1
+Washington,DC,District of Columbia,district,2015,2013,ASHRAE,2,0,0,0,1,0,0,0,,,,,,,0,0,2018,2021,,ENERGY STAR score or source EUI,50000,10000,50000,1,1,10.0,,Building Energy Performance Standards and Benchmarking,DC Law 22-257,0,1,2022,1,1,2008,2010,7,50000,0,1,1
+Washington,DC,District of Columbia,district,2016,2013,ASHRAE,2,0,0,0,1,0,0,0,,,,,,,0,0,2018,2021,,ENERGY STAR score or source EUI,50000,10000,50000,1,1,10.0,,Building Energy Performance Standards and Benchmarking,DC Law 22-257,0,1,2022,1,1,2008,2010,8,50000,0,1,1
+Washington,DC,District of Columbia,district,2017,2013,ASHRAE,3,0,0,0,1,0,0,0,,,,,,,0,0,2018,2021,,ENERGY STAR score or source EUI,50000,10000,50000,1,1,10.0,,Building Energy Performance Standards and Benchmarking,DC Law 22-257,0,1,2022,1,1,2008,2010,9,50000,0,1,1
+Washington,DC,District of Columbia,district,2018,2013,ASHRAE,3,0,0,0,1,0,0,0,,,,,,,1,0,2018,2021,0,ENERGY STAR score or source EUI,50000,10000,50000,1,1,10.0,,Building Energy Performance Standards and Benchmarking,DC Law 22-257,0,1,2022,1,1,2008,2010,10,50000,0,1,1
+Washington,DC,District of Columbia,district,2019,2013,ASHRAE,3,0,0,0,1,0,0,0,,,,,,,1,0,2018,2021,1,ENERGY STAR score or source EUI,50000,10000,50000,1,1,10.0,,Building Energy Performance Standards and Benchmarking,DC Law 22-257,0,1,2022,1,1,2008,2010,11,50000,0,1,1
+Washington,DC,District of Columbia,district,2020,2013,ASHRAE,6,0,0,0,1,0,0,0,,,,,,,1,0,2018,2021,2,ENERGY STAR score or source EUI,50000,10000,50000,1,1,10.0,,Building Energy Performance Standards and Benchmarking,DC Law 22-257,0,1,2022,1,1,2008,2010,12,50000,0,1,1
+Washington,DC,District of Columbia,district,2021,2013,ASHRAE,6,0,0,0,1,0,0,0,,,,,,,1,1,2018,2021,3,ENERGY STAR score or source EUI,50000,10000,50000,1,1,10.0,,Building Energy Performance Standards and Benchmarking,DC Law 22-257,0,1,2022,1,1,2008,2010,13,50000,0,1,1
+Washington,DC,District of Columbia,district,2022,2013,ASHRAE,6,0,0,0,1,0,0,0,,,,,,,1,1,2018,2021,4,ENERGY STAR score or source EUI,50000,10000,50000,1,1,10.0,,Building Energy Performance Standards and Benchmarking,DC Law 22-257,1,1,2022,1,1,2008,2010,14,50000,0,1,1
+Washington,DC,District of Columbia,district,2023,2013,ASHRAE,9,0,0,0,1,0,0,0,,,,,,,1,1,2018,2021,5,ENERGY STAR score or source EUI,50000,10000,50000,1,1,10.0,,Building Energy Performance Standards and Benchmarking,DC Law 22-257,1,1,2022,1,1,2008,2010,15,50000,0,1,1
+Washington,DC,District of Columbia,district,2024,2013,ASHRAE,9,0,0,0,1,0,0,0,,,,,,,1,1,2018,2021,6,ENERGY STAR score or source EUI,50000,10000,50000,1,1,10.0,,Building Energy Performance Standards and Benchmarking,DC Law 22-257,1,1,2022,1,1,2008,2010,16,50000,0,1,1
+Washington,DC,District of Columbia,district,2025,2013,ASHRAE,9,0,0,0,1,0,0,0,,,,,,,1,1,2018,2021,7,ENERGY STAR score or source EUI,50000,10000,50000,1,1,10.0,,Building Energy Performance Standards and Benchmarking,DC Law 22-257,1,1,2022,1,1,2008,2010,17,50000,0,1,1
+Washington,WA,Washington,state,2010,2004,ASHRAE,5,0,0,0,1,0,0,0,2019,2026,Clean Buildings Performance Standard,HB 1257,1.0,,0,0,,,,,,,,,,,,,,0,0,,0,0,2019,2021,,50000,0,0,0
+Washington,WA,Washington,state,2011,2004,ASHRAE,6,0,0,0,1,0,0,0,2019,2026,Clean Buildings Performance Standard,HB 1257,1.0,,0,0,,,,,,,,,,,,,,0,0,,0,0,2019,2021,,50000,0,0,0
+Washington,WA,Washington,state,2012,2004,ASHRAE,8,0,0,0,1,0,0,0,2019,2026,Clean Buildings Performance Standard,HB 1257,1.0,,0,0,,,,,,,,,,,,,,0,0,,0,0,2019,2021,,50000,0,0,0
+Washington,WA,Washington,state,2013,2004,ASHRAE,8,0,0,0,1,0,0,0,2019,2026,Clean Buildings Performance Standard,HB 1257,1.0,,0,0,,,,,,,,,,,,,,0,0,,0,0,2019,2021,,50000,0,0,0
+Washington,WA,Washington,state,2014,2004,ASHRAE,9,0,0,0,1,0,0,0,2019,2026,Clean Buildings Performance Standard,HB 1257,1.0,,0,0,,,,,,,,,,,,,,0,0,,0,0,2019,2021,,50000,0,0,0
+Washington,WA,Washington,state,2015,2004,ASHRAE,11,0,0,0,1,0,0,0,2019,2026,Clean Buildings Performance Standard,HB 1257,1.0,,0,0,,,,,,,,,,,,,,0,0,,0,0,2019,2021,,50000,0,0,0
+Washington,WA,Washington,state,2016,2004,ASHRAE,11,0,0,0,1,0,0,0,2019,2026,Clean Buildings Performance Standard,HB 1257,1.0,,0,0,,,,,,,,,,,,,,0,0,,0,0,2019,2021,,50000,0,0,0
+Washington,WA,Washington,state,2017,2004,ASHRAE,12,0,0,0,1,0,0,0,2019,2026,Clean Buildings Performance Standard,HB 1257,1.0,,0,0,,,,,,,,,,,,,,0,0,,0,0,2019,2021,,50000,0,0,0
+Washington,WA,Washington,state,2018,2004,ASHRAE,12,0,0,0,1,0,0,0,2019,2026,Clean Buildings Performance Standard,HB 1257,1.0,,0,0,,,,,,,,,,,,,,0,0,,0,0,2019,2021,,50000,0,0,0
+Washington,WA,Washington,state,2019,2004,ASHRAE,12,0,0,0,1,0,1,0,2019,2026,Clean Buildings Performance Standard,HB 1257,1.0,,0,0,,,,,,,,,,,,,,0,0,,1,0,2019,2021,0,50000,0,1,0
+Washington,WA,Washington,state,2020,2004,ASHRAE,15,0,0,0,1,0,1,0,2019,2026,Clean Buildings Performance Standard,HB 1257,1.0,,0,0,,,,,,,,,,,,,,0,0,,1,0,2019,2021,1,50000,0,1,0
+Washington,WA,Washington,state,2021,2004,ASHRAE,15,0,0,0,1,0,1,0,2019,2026,Clean Buildings Performance Standard,HB 1257,1.0,,0,0,,,,,,,,,,,,,,0,0,,1,1,2019,2021,2,50000,0,1,1
+Washington,WA,Washington,state,2022,2004,ASHRAE,15,0,0,0,1,0,1,0,2019,2026,Clean Buildings Performance Standard,HB 1257,1.0,,0,0,,,,,,,,,,,,,,0,0,,1,1,2019,2021,3,50000,0,1,1
+Washington,WA,Washington,state,2023,2004,ASHRAE,18,0,0,0,1,0,1,0,2019,2026,Clean Buildings Performance Standard,HB 1257,1.0,,0,0,,,,,,,,,,,,,,0,0,,1,1,2019,2021,4,50000,0,1,1
+Washington,WA,Washington,state,2024,2019,ASHRAE,3,0,0,0,1,0,1,0,2019,2026,Clean Buildings Performance Standard,HB 1257,1.0,,0,0,,,,,,,,,,,,,,0,0,,1,1,2019,2021,5,50000,0,1,1
+Washington,WA,Washington,state,2025,2019,ASHRAE,3,0,0,0,1,0,1,0,2019,2026,Clean Buildings Performance Standard,HB 1257,1.0,,0,0,,,,,,,,,,,,,,0,0,,1,1,2019,2021,6,50000,0,1,1
+Washington State,WA,Washington,state,2010,2004,ASHRAE,5,0,0,0,1,0,0,0,2019,2026,Clean Buildings Performance Standard,HB 1257,1.0,,0,0,2019,2026,,Weather-normalized EUI; alt metrics permitted,20000,10000,20000,1,1,1.0,,Clean Buildings Performance Standard,HB 1257,0,1,2022,0,0,,,,,,0,0
+Washington State,WA,Washington,state,2011,2004,ASHRAE,6,0,0,0,1,0,0,0,2019,2026,Clean Buildings Performance Standard,HB 1257,1.0,,0,0,2019,2026,,Weather-normalized EUI; alt metrics permitted,20000,10000,20000,1,1,1.0,,Clean Buildings Performance Standard,HB 1257,0,1,2022,0,0,,,,,,0,0
+Washington State,WA,Washington,state,2012,2004,ASHRAE,8,0,0,0,1,0,0,0,2019,2026,Clean Buildings Performance Standard,HB 1257,1.0,,0,0,2019,2026,,Weather-normalized EUI; alt metrics permitted,20000,10000,20000,1,1,1.0,,Clean Buildings Performance Standard,HB 1257,0,1,2022,0,0,,,,,,0,0
+Washington State,WA,Washington,state,2013,2004,ASHRAE,8,0,0,0,1,0,0,0,2019,2026,Clean Buildings Performance Standard,HB 1257,1.0,,0,0,2019,2026,,Weather-normalized EUI; alt metrics permitted,20000,10000,20000,1,1,1.0,,Clean Buildings Performance Standard,HB 1257,0,1,2022,0,0,,,,,,0,0
+Washington State,WA,Washington,state,2014,2004,ASHRAE,9,0,0,0,1,0,0,0,2019,2026,Clean Buildings Performance Standard,HB 1257,1.0,,0,0,2019,2026,,Weather-normalized EUI; alt metrics permitted,20000,10000,20000,1,1,1.0,,Clean Buildings Performance Standard,HB 1257,0,1,2022,0,0,,,,,,0,0
+Washington State,WA,Washington,state,2015,2004,ASHRAE,11,0,0,0,1,0,0,0,2019,2026,Clean Buildings Performance Standard,HB 1257,1.0,,0,0,2019,2026,,Weather-normalized EUI; alt metrics permitted,20000,10000,20000,1,1,1.0,,Clean Buildings Performance Standard,HB 1257,0,1,2022,0,0,,,,,,0,0
+Washington State,WA,Washington,state,2016,2004,ASHRAE,11,0,0,0,1,0,0,0,2019,2026,Clean Buildings Performance Standard,HB 1257,1.0,,0,0,2019,2026,,Weather-normalized EUI; alt metrics permitted,20000,10000,20000,1,1,1.0,,Clean Buildings Performance Standard,HB 1257,0,1,2022,0,0,,,,,,0,0
+Washington State,WA,Washington,state,2017,2004,ASHRAE,12,0,0,0,1,0,0,0,2019,2026,Clean Buildings Performance Standard,HB 1257,1.0,,0,0,2019,2026,,Weather-normalized EUI; alt metrics permitted,20000,10000,20000,1,1,1.0,,Clean Buildings Performance Standard,HB 1257,0,1,2022,0,0,,,,,,0,0
+Washington State,WA,Washington,state,2018,2004,ASHRAE,12,0,0,0,1,0,0,0,2019,2026,Clean Buildings Performance Standard,HB 1257,1.0,,0,0,2019,2026,,Weather-normalized EUI; alt metrics permitted,20000,10000,20000,1,1,1.0,,Clean Buildings Performance Standard,HB 1257,0,1,2022,0,0,,,,,,0,0
+Washington State,WA,Washington,state,2019,2004,ASHRAE,12,0,0,0,1,0,1,0,2019,2026,Clean Buildings Performance Standard,HB 1257,1.0,,1,0,2019,2026,0,Weather-normalized EUI; alt metrics permitted,20000,10000,20000,1,1,1.0,,Clean Buildings Performance Standard,HB 1257,0,1,2022,0,0,,,,,,1,0
+Washington State,WA,Washington,state,2020,2004,ASHRAE,15,0,0,0,1,0,1,0,2019,2026,Clean Buildings Performance Standard,HB 1257,1.0,,1,0,2019,2026,1,Weather-normalized EUI; alt metrics permitted,20000,10000,20000,1,1,1.0,,Clean Buildings Performance Standard,HB 1257,0,1,2022,0,0,,,,,,1,0
+Washington State,WA,Washington,state,2021,2004,ASHRAE,15,0,0,0,1,0,1,0,2019,2026,Clean Buildings Performance Standard,HB 1257,1.0,,1,0,2019,2026,2,Weather-normalized EUI; alt metrics permitted,20000,10000,20000,1,1,1.0,,Clean Buildings Performance Standard,HB 1257,0,1,2022,0,0,,,,,,1,0
+Washington State,WA,Washington,state,2022,2004,ASHRAE,15,0,0,0,1,0,1,0,2019,2026,Clean Buildings Performance Standard,HB 1257,1.0,,1,0,2019,2026,3,Weather-normalized EUI; alt metrics permitted,20000,10000,20000,1,1,1.0,,Clean Buildings Performance Standard,HB 1257,1,1,2022,0,0,,,,,,1,0
+Washington State,WA,Washington,state,2023,2004,ASHRAE,18,0,0,0,1,0,1,0,2019,2026,Clean Buildings Performance Standard,HB 1257,1.0,,1,0,2019,2026,4,Weather-normalized EUI; alt metrics permitted,20000,10000,20000,1,1,1.0,,Clean Buildings Performance Standard,HB 1257,1,1,2022,0,0,,,,,,1,0
+Washington State,WA,Washington,state,2024,2019,ASHRAE,3,0,0,0,1,0,1,0,2019,2026,Clean Buildings Performance Standard,HB 1257,1.0,,1,0,2019,2026,5,Weather-normalized EUI; alt metrics permitted,20000,10000,20000,1,1,1.0,,Clean Buildings Performance Standard,HB 1257,1,1,2022,0,0,,,,,,1,0
+Washington State,WA,Washington,state,2025,2019,ASHRAE,3,0,0,0,1,0,1,0,2019,2026,Clean Buildings Performance Standard,HB 1257,1.0,,1,0,2019,2026,6,Weather-normalized EUI; alt metrics permitted,20000,10000,20000,1,1,1.0,,Clean Buildings Performance Standard,HB 1257,1,1,2022,0,0,,,,,,1,0
+West Hollywood,CA,California,city,2010,2008,TITLE24,1,0,0,0,1,0,0,0,,,,,,,0,0,2025,2028,,Site EUI and/or GHGI,20000,20000,20000,1,1,,,Equitable Building Performance Standards,EBPS,0,0,2024,0,0,,,,,,0,0
+West Hollywood,CA,California,city,2011,2008,TITLE24,2,0,0,0,1,0,0,0,,,,,,,0,0,2025,2028,,Site EUI and/or GHGI,20000,20000,20000,1,1,,,Equitable Building Performance Standards,EBPS,0,0,2024,0,0,,,,,,0,0
+West Hollywood,CA,California,city,2012,2008,TITLE24,4,0,0,0,1,0,0,0,,,,,,,0,0,2025,2028,,Site EUI and/or GHGI,20000,20000,20000,1,1,,,Equitable Building Performance Standards,EBPS,0,0,2024,0,0,,,,,,0,0
+West Hollywood,CA,California,city,2013,2008,TITLE24,4,0,0,0,1,0,0,0,,,,,,,0,0,2025,2028,,Site EUI and/or GHGI,20000,20000,20000,1,1,,,Equitable Building Performance Standards,EBPS,0,0,2024,0,0,,,,,,0,0
+West Hollywood,CA,California,city,2014,2013,TITLE24,0,0,0,0,1,0,0,0,,,,,,,0,0,2025,2028,,Site EUI and/or GHGI,20000,20000,20000,1,1,,,Equitable Building Performance Standards,EBPS,0,0,2024,0,0,,,,,,0,0
+West Hollywood,CA,California,city,2015,2013,TITLE24,2,0,0,0,1,0,0,0,,,,,,,0,0,2025,2028,,Site EUI and/or GHGI,20000,20000,20000,1,1,,,Equitable Building Performance Standards,EBPS,0,0,2024,0,0,,,,,,0,0
+West Hollywood,CA,California,city,2016,2013,TITLE24,2,0,0,0,1,0,0,0,,,,,,,0,0,2025,2028,,Site EUI and/or GHGI,20000,20000,20000,1,1,,,Equitable Building Performance Standards,EBPS,0,0,2024,0,0,,,,,,0,0
+West Hollywood,CA,California,city,2017,2016,TITLE24,0,0,0,0,1,0,0,0,,,,,,,0,0,2025,2028,,Site EUI and/or GHGI,20000,20000,20000,1,1,,,Equitable Building Performance Standards,EBPS,0,0,2024,0,0,,,,,,0,0
+West Hollywood,CA,California,city,2018,2016,TITLE24,0,0,0,0,1,0,0,0,,,,,,,0,0,2025,2028,,Site EUI and/or GHGI,20000,20000,20000,1,1,,,Equitable Building Performance Standards,EBPS,0,0,2024,0,0,,,,,,0,0
+West Hollywood,CA,California,city,2019,2016,TITLE24,0,0,0,0,1,0,0,0,,,,,,,0,0,2025,2028,,Site EUI and/or GHGI,20000,20000,20000,1,1,,,Equitable Building Performance Standards,EBPS,0,0,2024,0,0,,,,,,0,0
+West Hollywood,CA,California,city,2020,2019,TITLE24,0,0,0,0,1,0,0,0,,,,,,,0,0,2025,2028,,Site EUI and/or GHGI,20000,20000,20000,1,1,,,Equitable Building Performance Standards,EBPS,0,0,2024,0,0,,,,,,0,0
+West Hollywood,CA,California,city,2021,2019,TITLE24,0,0,0,0,1,0,0,0,,,,,,,0,0,2025,2028,,Site EUI and/or GHGI,20000,20000,20000,1,1,,,Equitable Building Performance Standards,EBPS,0,0,2024,0,0,,,,,,0,0
+West Hollywood,CA,California,city,2022,2019,TITLE24,0,0,0,0,1,0,0,0,,,,,,,0,0,2025,2028,,Site EUI and/or GHGI,20000,20000,20000,1,1,,,Equitable Building Performance Standards,EBPS,0,0,2024,0,0,,,,,,0,0
+West Hollywood,CA,California,city,2023,2022,TITLE24,0,0,0,0,1,0,0,0,,,,,,,0,0,2025,2028,,Site EUI and/or GHGI,20000,20000,20000,1,1,,,Equitable Building Performance Standards,EBPS,0,0,2024,0,0,,,,,,0,0
+West Hollywood,CA,California,city,2024,2022,TITLE24,0,0,0,0,1,0,0,0,,,,,,,0,0,2025,2028,,Site EUI and/or GHGI,20000,20000,20000,1,1,,,Equitable Building Performance Standards,EBPS,1,0,2024,0,0,,,,,,0,0
+West Hollywood,CA,California,city,2025,2022,TITLE24,0,0,0,0,1,0,0,0,,,,,,,1,0,2025,2028,0,Site EUI and/or GHGI,20000,20000,20000,1,1,,,Equitable Building Performance Standards,EBPS,1,0,2024,0,0,,,,,,1,0
