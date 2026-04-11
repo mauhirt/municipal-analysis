@@ -117,6 +117,8 @@ fiscal_cols = [
     "reserve_ratio", "reserve_ratio_3yr",
     "expenditure_gap_pc",
     "vfi",
+    # Enterprise fund depth (memo Family 1b - charges_to_own_source)
+    "charges_to_own_source",
     # Debt composition
     "short_term_debt_share", "go_bond_share_outstanding",
     "go_bond_share_issuance",
@@ -338,6 +340,99 @@ for df in (outcome, gb_controls):
             inplace=True, errors="ignore")
 panel = panel.merge(outcome, on=["FIPS", "Year"], how="left")
 panel = panel.merge(gb_controls, on=["FIPS", "Year"], how="left")
+
+# ---------------------------------------------------------------------------
+# 11b. Water-only green bond panels (pipeline/21) — state cumul + nearby
+# ---------------------------------------------------------------------------
+print("\n[11b] Loading water-only green bond panels...")
+water_state_path = PROC / "state_controls_city_year_panel_water_only.csv"
+water_nearby_path = PROC / "nearby_by_jurisdiction_panel_water_only.csv"
+if water_state_path.exists():
+    ws = pd.read_csv(water_state_path, low_memory=False)
+    ws.drop(columns=[c for c in ("City", "City_Name", "State") if c in ws.columns],
+            inplace=True, errors="ignore")
+    panel = panel.merge(ws, on=["FIPS", "Year"], how="left")
+    print(f"  State water cols merged: {sum(1 for c in ws.columns if c.startswith(('State_', 'City_Own_')))}")
+else:
+    print(f"  SKIPPED: {water_state_path} not found - run pipeline/21 first")
+
+if water_nearby_path.exists():
+    wn = pd.read_csv(water_nearby_path, low_memory=False)
+    wn.drop(columns=[c for c in ("City", "City_Name", "State") if c in wn.columns],
+            inplace=True, errors="ignore")
+    panel = panel.merge(wn, on=["FIPS", "Year"], how="left")
+    print(f"  Nearby water cols merged: {sum(1 for c in wn.columns if c.startswith('Nearby_'))}")
+else:
+    print(f"  SKIPPED: {water_nearby_path} not found - run pipeline/21 first")
+
+# ---------------------------------------------------------------------------
+# 11c. Memo variable integration (pipeline/20) — mayor, EPA, CWSRF,
+#      cwns/pct_deficient, substitute water, state green bond capacity,
+#      ESG AUM, state bond banks, referenda, MSRB position, FEMA, NFIP.
+#      All lags computed via attach() for consistency.
+# ---------------------------------------------------------------------------
+print("\n[11c] Loading memo integration panel...")
+memo_path = PROC / "memo_integration_city_year_panel.csv"
+if memo_path.exists():
+    memo = pd.read_csv(memo_path, low_memory=False)
+    memo_cols = [c for c in memo.columns
+                 if c not in ("FIPS", "City", "City_Name", "State", "Year",
+                              "mayor_name", "mayor_election_type")]
+    memo_slim = memo[["FIPS", "Year"] + memo_cols].rename(
+        columns={"FIPS": "fips7", "Year": "year"}
+    )
+    panel = attach(panel, memo_slim, "fips7", "year", memo_cols, "memo")
+    print(f"  Memo integration columns merged: {len(memo_cols)}")
+else:
+    print(f"  SKIPPED: {memo_path} not found - run pipeline/20 first")
+
+# ---------------------------------------------------------------------------
+# 11d. Derive memo-specific outcome aliases (Y_self_green, Y_esg_assurance,
+#      Y_water_only, Y_clean_trans, Y_renewable, Y_energy_eff, Y_green_bldg,
+#      Y_climate_adapt, Y_pollution_control, asinh_*_amt)
+# ---------------------------------------------------------------------------
+print("\n[11d] Deriving memo outcome aliases...")
+import numpy as np
+
+# Y_self_green: issuer explicitly self-designated as green
+if "Issued_Self-reported Green__Yes" in panel.columns:
+    panel["Y_self_green"] = (panel["Issued_Self-reported Green__Yes"] > 0).astype(int)
+
+# Y_esg_assurance: issuer obtained third-party ESG assurance
+if "Issued_ESG Assurance Providers__Yes" in panel.columns:
+    panel["Y_esg_assurance"] = (panel["Issued_ESG Assurance Providers__Yes"] > 0).astype(int)
+
+# Amount versions with asinh transform
+if "City_Green_Amt_Issued" in panel.columns:
+    panel["asinh_green_amt"] = np.arcsinh(panel["City_Green_Amt_Issued"].fillna(0))
+if "Amt_Self-reported Green__Yes" in panel.columns:
+    panel["asinh_self_green_amt"] = np.arcsinh(panel["Amt_Self-reported Green__Yes"].fillna(0))
+
+# Category-specific binary outcomes — collapse multi-category combos
+def any_col_positive(df, keyword):
+    """Return 1 if any Issued_ESG Project Categories__* col containing keyword is positive."""
+    cols = [c for c in df.columns
+            if c.startswith("Issued_ESG Project Categories__") and keyword in c]
+    if not cols:
+        return pd.Series(0, index=df.index, dtype=int)
+    return (df[cols].fillna(0).sum(axis=1) > 0).astype(int)
+
+panel["Y_water_only"] = any_col_positive(panel, "Sustainable_Water")
+panel["Y_clean_trans"] = any_col_positive(panel, "Clean_Transportation")
+panel["Y_renewable"] = any_col_positive(panel, "Renewable_Energy")
+panel["Y_energy_eff"] = any_col_positive(panel, "Energy_Efficiency")
+panel["Y_green_bldg"] = any_col_positive(panel, "Green_Buildings")
+panel["Y_climate_adapt"] = any_col_positive(panel, "Climate_Change_Adaptation")
+panel["Y_pollution_control"] = any_col_positive(panel, "Pollution_Control")
+panel["Y_natural_resource"] = any_col_positive(panel, "Natural_Resource")
+
+# Print sanity counts
+y_cols = ["Y_self_green", "Y_esg_assurance", "Y_water_only", "Y_clean_trans",
+          "Y_renewable", "Y_energy_eff", "Y_green_bldg", "Y_climate_adapt",
+          "Y_pollution_control", "Y_natural_resource"]
+for y in y_cols:
+    if y in panel.columns:
+        print(f"  {y}: {int(panel[y].sum())} city-years")
 
 # ---------------------------------------------------------------------------
 # Final panel

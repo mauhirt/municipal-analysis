@@ -4,6 +4,54 @@ This folder contains the processed panels used in the municipal green bond
 analysis. All panels are keyed on `FIPS × Year` (578 cities × 13 years,
 2013–2025) unless noted otherwise.
 
+**Main analysis panel**: `merged_city_year_panel.csv` — 7,514 rows × ~2,156 columns.
+As of the April 2026 memo integration (pipelines 20+21), the panel includes
+the full Four-Family memo specification:
+
+- **Outcomes** (from in-repo Bloomberg aggregation in pipelines 10-14):
+  `Green_Bond_Issued`, `Y_self_green`, `Y_esg_assurance`, `Y_water_only`,
+  `Y_clean_trans`, `Y_renewable`, `Y_energy_eff`, `Y_green_bldg`,
+  `Y_climate_adapt`, `Y_pollution_control`, `Y_natural_resource`,
+  `asinh_green_amt`, `asinh_self_green_amt`
+- **Family 1a (Federal regulatory compulsion)**: `epa_npdes_formal_prior3yr_muni`,
+  `epa_npdes_formal_prior3yr_locgov`, `epa_npdes_formal_prior3yr_private` (placebo),
+  `epa_case_jdc_prior3yr_*`, `epa_npdes_formal_count_muni`, `bcode_bps_adopted`
+  (second compulsion channel — Building Performance Standards)
+- **Family 1b (Fiscal-economic necessity)**: `charges_to_own_source`, `reserve_ratio`,
+  `debt_service_burden`, `tel_stringency_normalized`, `fiscal_stress_pca`,
+  `cwsrf_log_obligations`, `cwsrf_usaspending_cwsrf`, `fn_cwns_needs_real`,
+  `fn_pct_deficient`
+- **Family 2 (Partisan identity)**: `Rep_Mayor` (binary, from prob_republican > 0.5),
+  `mayor_prob_rep` (continuous), `mayor_pid`, `Dem_Mayor`, `mayor_election_year`
+- **Family 3 (State feasibility frontier)**:
+  - Market: `mkt_state_green_bond_ever`, `mkt_state_green_bond_cum_amt`,
+    `mkt_esg_aum_us`, `fn_esg_has_muni_bond_law`
+  - Substitute: `has_substitute_issuer`, `subst_substitute_water_*`
+  - Political: `state_rep_trifecta`, `inst_signed_utah_antiesg_letter`,
+    `inst_msrb_position_anti_esg`
+  - Institutional: `inst_has_bond_bank`, `inst_go_voter_approval_required`,
+    `inst_go_vote_threshold`, `inst_has_constitutional_debt_limit`
+- **Water-only peer effects** (new water-only aggregates for the water
+  Fisher test): `State_Total_Water_Amt_Cumul`, `State_Total_Water_Ex_City_Amt_Cumul`,
+  `Nearby_NonState_Water_Total_Amt_25km_Cumul`, `Nearby_Water_*_{10,25,50}km_*`
+- **Physical risk exposure**: `fema_disaster_any`, `fema_disaster_count`,
+  `fema_disaster_flood`, `fema_disaster_hurricane`, `fema_disaster_fire`,
+  `nfip_repetitive_loss`, `nfip_severe_repetitive_loss`
+
+Full memo-spec complete rows in the 2015-2025 window: **5,599 of 6,358 (88.1%)** —
+closely matches the memo's stated "~5,056-5,064 city-years" sample.
+
+**Known time-coverage gaps** (flagged 2026-04-11):
+- `pres_dem_two_party_share` / presidential vote share: raw file covers 2013-2023.
+  **Needs 2012 election backfill** (for lag1 at outcome year 2013) and
+  **2024 election forward extension** (for lag1 at outcome year 2025). Currently
+  unavailable in repo; will need external fetch.
+- `climate_opinion_ycom.csv` / YCOM 22-item climate opinion battery: raw ends
+  2023. **Needs 2024-2025 extension** for Table 3 Col 4 electoral-discipline
+  test (Rep_Mayor × pres_dem_vote_share interaction and 22-item robustness in
+  memo Appendix B). Currently unavailable in repo; requires Yale YCOM 2024 and
+  2025 data releases when published.
+
 **Important scope note:** Every bond in the source file
 (`raw/bloomberg/cusip_with_assignment.csv`) is a green bond. The
 `Self-reported Green` field is a subcategory indicating whether the
