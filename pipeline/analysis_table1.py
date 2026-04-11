@@ -84,7 +84,6 @@ print(f"  Merged overflow_events_muni: {(df.epa_overflow_events_muni > 0).sum()}
 # ---------------------------------------------------------------------------
 df["log_population_lag2"] = np.log1p(df["population_city_lag2"])
 df["log_percapita_income_lag2"] = np.log1p(df["percapita_income_city_lag2"])
-df["log_cwns_needs_real"] = np.log1p(df["fn_cwns_needs_real"])  # contemp version
 df["log_cwns_needs_real_lag2"] = np.log1p(df["fn_cwns_needs_real_lag2"])
 
 # Zero-fill mkt_state_green_bond_ever_lag1 at 2013:
@@ -97,12 +96,14 @@ df.loc[df.Year == 2013, "mkt_state_green_bond_ever_lag1"] = 0
 # ---------------------------------------------------------------------------
 # 4. Define control vector (shared across Cols 1-4)
 #
-# Lag structure notes (vs memo):
-#   - cwsrf_log_obligations, log_cwns_needs_real, fn_pct_deficient use
-#     CONTEMP (not lag2) because their raw sources start in 2013. The
-#     memo spec uses lag2 but lag2 at outcome year 2013 requires 2011
-#     data which doesn't exist. CONTEMP at 2013 uses 2013 values.
-#   - All other variables follow the memo spec exactly.
+# All variables follow the memo spec exactly. Previously lag2 was not
+# computable at outcome year 2013 for cwsrf_log_obligations,
+# log_cwns_needs_real, and fn_pct_deficient because their raw sources
+# started in 2013. Pipeline/20 now back-fills 2011-2012 by extrapolating
+# the linear 2022-CWNS-survey-derived trend backward for CWNS/pct_deficient
+# (~3% annual growth) and by propagating the 2013 CWSRF obligation value
+# (allotments are sticky year-over-year). This enables strict lag2 on the
+# full 2013-2025 window matching the memo spec.
 # ---------------------------------------------------------------------------
 BASE_CONTROLS = [
     # Family 1a — PRIMARY compulsion (contemp: NPDES is a 3-yr rolling stock)
@@ -111,9 +112,9 @@ BASE_CONTROLS = [
     "charges_to_own_source",                # contemp (memo: contemp)
     "reserve_ratio_lag2",                   # lag2 (memo: lag2)
     "tel_stringency_normalized",            # contemp (memo: contemp)
-    "cwsrf_log_obligations",                # CONTEMP (memo: lag2; source 2013+)
-    "log_cwns_needs_real",                  # CONTEMP (memo: lag2; source 2013+)
-    "fn_pct_deficient",                     # CONTEMP (memo: lag2; source 2013+)
+    "cwsrf_log_obligations_lag2",           # lag2 (memo: lag2) — backfilled
+    "log_cwns_needs_real_lag2",             # lag2 (memo: lag2) — backfilled
+    "fn_pct_deficient_lag2",                # lag2 (memo: lag2) — backfilled
     # Family 2 — partisan
     "Rep_Mayor_lag1",
     # City controls
@@ -234,9 +235,9 @@ key_vars = [
     ("charges_to_own_source", "Charges / own-source revenue"),
     ("reserve_ratio_lag2", "Reserve ratio (lag 2)"),
     ("tel_stringency_normalized", "TEL stringency (normalized)"),
-    ("cwsrf_log_obligations", "log CWSRF obligations (contemp)"),
-    ("log_cwns_needs_real", "log CWNS needs (contemp)"),
-    ("fn_pct_deficient", "Pct deficient (contemp)"),
+    ("cwsrf_log_obligations_lag2", "log CWSRF obligations (lag 2)"),
+    ("log_cwns_needs_real_lag2", "log CWNS needs (lag 2)"),
+    ("fn_pct_deficient_lag2", "Pct deficient (lag 2)"),
     ("log_population_lag2", "log Population (lag 2)"),
     ("log_percapita_income_lag2", "log Per-capita income (lag 2)"),
     ("unemployment_city_lag2", "Unemployment (lag 2)"),

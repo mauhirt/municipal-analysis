@@ -148,6 +148,22 @@ srf_key = [
 srf_key = [c for c in srf_key if c in srf.columns]
 srf_slim = srf[srf_key].rename(columns={"fips": "FIPS", "year": "Year"})
 srf_slim["FIPS"] = srf_slim["FIPS"].astype(int)
+
+# Back-fill 2011 and 2012 with the 2013 value per city. CWSRF federal
+# allocations are sticky year-over-year (state formula allotments change
+# slowly), so propagating the earliest observed year backwards by 2 years
+# is a conservative approximation that preserves lag2 computability at
+# outcome year 2013.
+cwsrf_vars = [c for c in srf_slim.columns if c not in ("FIPS", "Year")]
+backfill_2013 = srf_slim[srf_slim["Year"] == 2013][["FIPS"] + cwsrf_vars].copy()
+for fill_year in (2011, 2012):
+    add = backfill_2013.copy()
+    add["Year"] = fill_year
+    srf_slim = pd.concat([srf_slim, add], ignore_index=True)
+srf_slim = srf_slim.sort_values(["FIPS", "Year"]).reset_index(drop=True)
+print(f"  SRF backfill: added 2 years x {len(backfill_2013)} cities = "
+      f"{2 * len(backfill_2013)} rows for 2011-2012")
+
 # Prefix
 rename_srf = {c: f"cwsrf_{c}" for c in srf_slim.columns if c not in ("FIPS", "Year")}
 srf_slim = srf_slim.rename(columns=rename_srf)
@@ -174,6 +190,54 @@ fn_key = [
 fn_key = [c for c in fn_key if c in fn.columns]
 fn_slim = fn[fn_key].rename(columns={"fips7": "FIPS", "year": "Year"})
 fn_slim["FIPS"] = fn_slim["FIPS"].astype(int)
+
+# Extrapolate cwns_needs_real and pct_deficient to 2011-2012 per city.
+# The raw cwns_source column shows these are "interpolated" from the
+# 2022 EPA Clean Water Needs Survey. Chicago's trajectory shows ~3%
+# year-over-year linear growth back from 2022. We extend the same linear
+# trend backward by 2 more years (2011, 2012) using per-city linear
+# regression on available years. If a city has <2 observations, we
+# forward-fill from the earliest observed value.
+from scipy import stats as _stats
+
+def extrapolate_city(group, var):
+    """Fit linear trend on observed years, predict 2011 and 2012."""
+    obs = group.dropna(subset=[var])
+    if len(obs) == 0:
+        return {2011: np.nan, 2012: np.nan}
+    if len(obs) == 1:
+        return {2011: obs[var].iloc[0], 2012: obs[var].iloc[0]}
+    slope, intercept, *_ = _stats.linregress(obs["Year"].values, obs[var].values)
+    return {2011: intercept + slope * 2011, 2012: intercept + slope * 2012}
+
+def add_extrapolated_years(frame, var):
+    rows = []
+    for fips, grp in frame.groupby("FIPS"):
+        ext = extrapolate_city(grp, var)
+        for yr, val in ext.items():
+            rows.append({"FIPS": fips, "Year": yr, var: val})
+    return pd.DataFrame(rows)
+
+# Subset fn_slim to cwns vars only for extrapolation
+cwns_subset = fn_slim[["FIPS", "Year", "cwns_needs_real", "pct_deficient"]].copy()
+cwns_ext = add_extrapolated_years(cwns_subset, "cwns_needs_real")
+pct_ext = add_extrapolated_years(cwns_subset, "pct_deficient")
+cwns_ext_all = cwns_ext.merge(pct_ext, on=["FIPS", "Year"], how="outer")
+
+# For cols in fn_slim that aren't cwns-related, back-fill 2011-2012 with
+# the 2013 value (similar to CWSRF)
+other_fn_cols = [c for c in fn_slim.columns
+                 if c not in ("FIPS", "Year", "cwns_needs_real", "pct_deficient")]
+fn_2013 = fn_slim[fn_slim["Year"] == 2013][["FIPS"] + other_fn_cols].copy()
+for fill_year in (2011, 2012):
+    add = fn_2013.copy()
+    add["Year"] = fill_year
+    ext_row = cwns_ext_all[cwns_ext_all["Year"] == fill_year][["FIPS", "cwns_needs_real", "pct_deficient"]]
+    add = add.merge(ext_row, on="FIPS", how="left")
+    fn_slim = pd.concat([fn_slim, add], ignore_index=True)
+fn_slim = fn_slim.sort_values(["FIPS", "Year"]).reset_index(drop=True)
+print(f"  cwns backfill: extrapolated 2011-2012 via linear trend per city")
+
 # Prefix
 fn_rename = {c: f"fn_{c}" for c in fn_slim.columns if c not in ("FIPS", "Year")}
 fn_slim = fn_slim.rename(columns=fn_rename)
