@@ -60,24 +60,14 @@ print("=" * 78)
 # ---------------------------------------------------------------------------
 # 1. Load merged panel
 # ---------------------------------------------------------------------------
-df = pd.read_csv(PROC / "merged_city_year_panel.csv", low_memory=False)
+df = pd.read_csv(PROC / "merged_city_year_panel.csv.gz", compression="gzip", low_memory=False)
 print(f"\nPanel loaded: {df.shape}")
 
 # ---------------------------------------------------------------------------
-# 2. Add overflow_events_muni (not in pipeline/20 whitelist)
+# 2. EPA enforcement vars are now in pipeline/20's expanded whitelist,
+#    including overflow_events_muni + violations + SDWA + RCRA + cases.
 # ---------------------------------------------------------------------------
-epa = pd.read_csv(
-    ROOT / "raw" / "epa" / "city_year_epa_enforcement_expanded_20260407_125920.csv",
-    usecols=["FIPS", "YEAR", "overflow_events_muni"],
-    low_memory=False,
-)
-epa = epa.rename(columns={
-    "YEAR": "Year",
-    "overflow_events_muni": "epa_overflow_events_muni",
-})
-df = df.merge(epa, on=["FIPS", "Year"], how="left")
-df["epa_overflow_events_muni"] = df["epa_overflow_events_muni"].fillna(0)
-print(f"  Merged overflow_events_muni: {(df.epa_overflow_events_muni > 0).sum()} non-zero rows")
+# No manual merge needed — all columns are already in the panel.
 
 # ---------------------------------------------------------------------------
 # 3. Derive log transforms for size variables
@@ -85,6 +75,28 @@ print(f"  Merged overflow_events_muni: {(df.epa_overflow_events_muni > 0).sum()}
 df["log_population_lag2"] = np.log1p(df["population_city_lag2"])
 df["log_percapita_income_lag2"] = np.log1p(df["percapita_income_city_lag2"])
 df["log_cwns_needs_real_lag2"] = np.log1p(df["fn_cwns_needs_real_lag2"])
+
+# Enriched compulsion measures using the full EPA enforcement data.
+# The memo's primary `npdes_formal_prior3yr_muni` captures only 1,239 of
+# 8,670 cell-years (14%) — too sparse. Violations and SDWA events are
+# denser signals and capture the "violations" and "enforcement" dimensions
+# the memo also invokes but didn't code as separate variables.
+#
+# asinh (inverse hyperbolic sine) handles zeros gracefully and preserves
+# order-of-magnitude variation in non-zero counts.
+df["epa_water_violations_asinh"] = np.arcsinh(
+    df["epa_water_violations_count_muni"].fillna(0))
+df["epa_water_violations_asinh_lag2"] = np.arcsinh(
+    df["epa_water_violations_count_muni_lag2"].fillna(0))
+df["epa_sdwa_events_asinh"] = np.arcsinh(
+    df["epa_sdwa_events_milestones_count_muni"].fillna(0))
+df["epa_sdwa_events_asinh_lag2"] = np.arcsinh(
+    df["epa_sdwa_events_milestones_count_muni_lag2"].fillna(0))
+df["epa_case_penalty_asinh_muni"] = np.arcsinh(
+    df["epa_case_penalty_total_muni"].fillna(0))
+# Placebo: private-tier violations (not expected to drive municipal issuance)
+df["epa_water_violations_private_asinh"] = np.arcsinh(
+    df["epa_water_violations_count_private"].fillna(0))
 
 # Zero-fill mkt_state_green_bond_ever_lag1 at 2013:
 # empirically correct because the first municipal green bond was
@@ -106,23 +118,38 @@ df.loc[df.Year == 2013, "mkt_state_green_bond_ever_lag1"] = 0
 # full 2013-2025 window matching the memo spec.
 # ---------------------------------------------------------------------------
 BASE_CONTROLS = [
-    # Family 1a — PRIMARY compulsion (contemp: NPDES is a 3-yr rolling stock)
+    # === Family 1a — EPA enforcement compulsion (enriched spec) ===
+    # Three dimensions: actions, violations, enforcement (cases).
+    # (A) ACTIONS — memo's primary variable: 3-yr rolling stock of formal
+    #               NPDES enforcement actions against muni facilities.
     "epa_npdes_formal_prior3yr_muni",
-    # Family 1b — fiscal necessity
+    # (B) VIOLATIONS — asinh of sum of NPDES effluent + compliance schedule
+    #                  + permit schedule + standard exceedance violations.
+    #                  Much denser signal than formal actions.
+    "epa_water_violations_asinh_lag2",
+    # (B) VIOLATIONS — SDWA events (drinking water): asinh of count.
+    "epa_sdwa_events_asinh_lag2",
+    # (B) VIOLATIONS — overflow events (sanitary sewer overflows): the
+    #                  specific signal from memo Col 5.
+    "epa_overflow_events_muni_lag2",
+    # (C) ENFORCEMENT — rolling total of ALL EPA cases prior 3 yrs (admin
+    #                   + judicial + consent decrees) against muni tier.
+    "epa_case_all_prior3yr_muni",
+    # === Family 1b — fiscal necessity ===
     "charges_to_own_source",                # contemp (memo: contemp)
     "reserve_ratio_lag2",                   # lag2 (memo: lag2)
     "tel_stringency_normalized",            # contemp (memo: contemp)
     "cwsrf_log_obligations_lag2",           # lag2 (memo: lag2) — backfilled
     "log_cwns_needs_real_lag2",             # lag2 (memo: lag2) — backfilled
     "fn_pct_deficient_lag2",                # lag2 (memo: lag2) — backfilled
-    # Family 2 — partisan
+    # === Family 2 — partisan ===
     "Rep_Mayor_lag1",
-    # City controls
+    # === City controls ===
     "log_population_lag2",
     "log_percapita_income_lag2",
     "unemployment_city_lag2",
     "has_substitute_issuer",
-    # State institutional (Family 3)
+    # === State institutional (Family 3) ===
     "mkt_state_green_bond_ever_lag1",       # zero-filled at 2013 above
     "fn_esg_has_muni_bond_law",
     "state_rep_trifecta",
@@ -230,7 +257,11 @@ c5 = run_reg(f5, s5, "Col 5: Green_Bond_Issued w/ triple interaction")
 # ---------------------------------------------------------------------------
 key_vars = [
     ("epa_npdes_formal_prior3yr_muni", "NPDES formal x prior3yr (muni)"),
-    ("epa_overflow_events_muni", "Overflow events (muni)"),
+    ("epa_water_violations_asinh_lag2", "Water violations asinh (lag 2)"),
+    ("epa_sdwa_events_asinh_lag2", "SDWA events asinh (lag 2)"),
+    ("epa_overflow_events_muni_lag2", "Overflow events (lag 2)"),
+    ("epa_case_all_prior3yr_muni", "All EPA cases prior3yr (muni)"),
+    ("epa_overflow_events_muni", "Overflow events contemp (Col 5)"),
     ("Rep_Mayor_lag1", "Rep Mayor (lag 1)"),
     ("charges_to_own_source", "Charges / own-source revenue"),
     ("reserve_ratio_lag2", "Reserve ratio (lag 2)"),

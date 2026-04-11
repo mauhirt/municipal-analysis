@@ -472,7 +472,10 @@ panel = panel[id_cols + other]
 panel = panel.sort_values(["State", "City", "Year"]).reset_index(drop=True)
 
 PROC.mkdir(parents=True, exist_ok=True)
-panel.to_csv(PROC / "merged_city_year_panel.csv", index=False)
+# Write as gzip-compressed CSV — the uncompressed file is now >100 MB
+# which exceeds GitHub's hard limit. The .csv.gz version is ~15 MB and
+# pandas reads it transparently via read_csv(..., compression='gzip').
+panel.to_csv(PROC / "merged_city_year_panel.csv.gz", index=False, compression="gzip")
 # XLSX is skipped when the panel is very wide — pandas needs a lot of memory
 # to write ~1600 columns to XLSX. The CSV is the canonical output.
 
@@ -488,4 +491,4 @@ print(f"\nCarry-forward flags: {len(cf_flags)}")
 for c in cf_flags:
     print(f"  {c}: {int(panel[c].sum())} rows flagged carry-forward")
 
-print(f"\nWritten: {PROC / 'merged_city_year_panel.csv'}")
+print(f"\nWritten: {PROC / 'merged_city_year_panel.csv.gz'} (gzip, {(PROC / 'merged_city_year_panel.csv.gz').stat().st_size / 1024**2:.1f} MB)")

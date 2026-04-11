@@ -112,26 +112,133 @@ print(panel.groupby("Year").Rep_Mayor.sum().to_string())
 print("\n[2/11] EPA ECHO enforcement...")
 epa_path = RAW / "epa" / "city_year_epa_enforcement_expanded_20260407_125920.csv"
 epa = pd.read_csv(epa_path, low_memory=False)
-# Rename key cols
+
+# Rename key cols - the full picture across THREE enforcement dimensions:
+#   1. ACTIONS (formal + informal regulatory responses)
+#   2. VIOLATIONS (measured infractions detected during compliance monitoring)
+#   3. ENFORCEMENT/CASES (administrative and judicial cases, penalties)
+# Across three ownership tiers (muni/locgov/private) and six EPA programs:
+#   NPDES (Clean Water Act point sources) - memo primary
+#   SDWA (Safe Drinking Water Act) - crucial for water utility bonds
+#   Overflow events (sanitary sewer overflows) - infrastructure failure signal
+#   RCRA (hazardous waste) - secondary
+#   Air (Clean Air Act) - robustness
+#   Case totals (administrative + judicial + penalties)
 epa_key = [
     "FIPS", "YEAR",
-    # Memo primary
+    # === NPDES (Clean Water Act) — primary memo compulsion channel ===
+    # Actions
     "npdes_formal_prior3yr_muni", "npdes_formal_prior3yr_locgov", "npdes_formal_prior3yr_private",
+    "npdes_formal_count_muni", "npdes_formal_cum_muni", "npdes_formal_any_muni",
+    "npdes_informal_actions_count_muni", "npdes_informal_actions_count_locgov",
+    "npdes_informal_actions_count_private",
+    # Violations (by type)
+    "npdes_effluent_violations_count_muni", "npdes_effluent_violations_count_locgov",
+    "npdes_effluent_violations_count_private",
+    "npdes_cs_violations_count_muni", "npdes_cs_violations_count_locgov",
+    "npdes_cs_violations_count_private",
+    "npdes_ps_violations_count_muni", "npdes_ps_violations_count_locgov",
+    "npdes_ps_violations_count_private",
+    "npdes_se_violations_count_muni", "npdes_se_violations_count_locgov",
+    "npdes_se_violations_count_private",
+    # Inspections (exposure/monitoring)
+    "npdes_inspections_count_muni", "npdes_inspections_count_locgov",
+    "npdes_inspections_count_private",
+    # === SDWA (Safe Drinking Water Act) ===
+    "sdwa_events_milestones_count_muni", "sdwa_events_milestones_count_locgov",
+    "sdwa_events_milestones_count_private",
+    "sdwa_lcr_samples_count_muni", "sdwa_lcr_samples_count_locgov",
+    "sdwa_lcr_samples_count_private",
+    "sdwa_site_visits_count_muni", "sdwa_site_visits_count_locgov",
+    "sdwa_site_visits_count_private",
+    # === Overflow events (sanitary sewer overflows) ===
+    "overflow_events_muni", "overflow_events_locgov", "overflow_events_private",
+    # === Cases (administrative + judicial consent decrees, penalties) ===
     "case_jdc_prior3yr_muni", "case_jdc_prior3yr_locgov", "case_jdc_prior3yr_private",
     "case_afr_prior3yr_muni", "case_afr_prior3yr_locgov", "case_afr_prior3yr_private",
     "case_all_prior3yr_muni", "case_all_prior3yr_locgov", "case_all_prior3yr_private",
-    # Current year
-    "npdes_formal_count_muni", "npdes_formal_cum_muni",
     "case_jdc_count_muni", "case_jdc_cum_muni",
-    "case_penalty_total_muni",
+    "case_penalty_total_muni", "case_penalty_total_locgov", "case_penalty_total_private",
+    # === RCRA (hazardous waste - secondary) ===
+    "rcra_enforcements_count_muni", "rcra_enforcements_count_locgov",
+    "rcra_enforcements_count_private",
+    "rcra_snc_vio_months_count_muni", "rcra_snc_vio_months_count_locgov",
+    "rcra_snc_vio_months_count_private",
+    # === Air (CAA - robustness only, not expected to drive green bonds) ===
+    "air_formal_actions_count_muni", "air_formal_actions_count_locgov",
+    "air_formal_actions_count_private",
+    "air_violations_count_muni", "air_violations_count_locgov",
+    "air_violations_count_private",
 ]
 epa_key = [c for c in epa_key if c in epa.columns]
 epa_slim = epa[epa_key].rename(columns={"YEAR": "Year"})
-# Prefix with epa_
+
+# Prefix with epa_ and fill NaN with 0 for cities where enforcement file has
+# no matching record (non-muni infrastructure presence, etc.)
 rename_map = {c: f"epa_{c}" for c in epa_slim.columns if c not in ("FIPS", "Year")}
 epa_slim = epa_slim.rename(columns=rename_map)
+numeric_epa = [c for c in epa_slim.columns if c not in ("FIPS", "Year")]
+epa_slim[numeric_epa] = epa_slim[numeric_epa].fillna(0)
+
+# Build composite compulsion indices at the muni/locgov/private level.
+# The memo's Four-Family theory treats compulsion as a directed capital-
+# demand channel (regulatory bite forces infrastructure investment). The
+# three dimensions the user flagged (actions, violations, enforcement) map
+# to the following composites:
+for tier in ("muni", "locgov", "private"):
+    # Water violations: sum of effluent + CS + PS + SE (direct infractions)
+    cols_viol = [f"epa_npdes_{v}_violations_count_{tier}"
+                 for v in ("effluent", "cs", "ps", "se")]
+    cols_viol = [c for c in cols_viol if c in epa_slim.columns]
+    if cols_viol:
+        epa_slim[f"epa_water_violations_count_{tier}"] = epa_slim[cols_viol].sum(axis=1)
+
+    # Water actions: formal + informal NPDES responses
+    cols_act = [f"epa_npdes_formal_count_{tier}" if tier == "muni" else None,
+                f"epa_npdes_informal_actions_count_{tier}"]
+    cols_act = [c for c in cols_act if c and c in epa_slim.columns]
+    if cols_act:
+        epa_slim[f"epa_water_actions_count_{tier}"] = epa_slim[cols_act].sum(axis=1)
+
+    # Cases total (enforcement): all EPA cases closed (admin + judicial)
+    # "case_all_prior3yr_<tier>" is already in whitelist.
+    # Just ensure it's numeric.
+
+    # SDWA composite (drinking water events)
+    cols_sdwa = [f"epa_sdwa_events_milestones_count_{tier}",
+                 f"epa_sdwa_lcr_samples_count_{tier}",
+                 f"epa_sdwa_site_visits_count_{tier}"]
+    cols_sdwa = [c for c in cols_sdwa if c in epa_slim.columns]
+    if cols_sdwa:
+        epa_slim[f"epa_sdwa_total_count_{tier}"] = epa_slim[cols_sdwa].sum(axis=1)
+
+    # Combined water compulsion = NPDES formal actions prior3yr + violations
+    # + overflow + SDWA events. This is the richer "compulsion" measure that
+    # captures all three dimensions (actions, violations, enforcement) in
+    # a single scale-normalized index.
+    base_cols = [
+        f"epa_npdes_formal_prior3yr_{tier}",
+        f"epa_water_violations_count_{tier}",
+        f"epa_overflow_events_{tier}",
+        f"epa_sdwa_total_count_{tier}",
+    ]
+    base_cols = [c for c in base_cols if c in epa_slim.columns]
+    if base_cols:
+        # asinh transform to handle zero-heavy distributions
+        epa_slim[f"epa_water_compulsion_asinh_{tier}"] = np.arcsinh(
+            epa_slim[base_cols].sum(axis=1)
+        )
+
 panel = panel.merge(epa_slim, on=["FIPS", "Year"], how="left")
-print(f"  Cities with non-zero npdes_formal_prior3yr_muni: {(panel.epa_npdes_formal_prior3yr_muni > 0).sum()}")
+print(f"  EPA columns merged: {len(numeric_epa)} raw + composites")
+print(f"  Cities with non-zero npdes_formal_prior3yr_muni: "
+      f"{(panel.epa_npdes_formal_prior3yr_muni > 0).sum()}")
+print(f"  Cities with non-zero water_violations_count_muni: "
+      f"{(panel.epa_water_violations_count_muni > 0).sum() if 'epa_water_violations_count_muni' in panel.columns else 0}")
+print(f"  Cities with non-zero overflow_events_muni: "
+      f"{(panel.epa_overflow_events_muni > 0).sum()}")
+print(f"  Cities with non-zero sdwa_events_milestones_muni: "
+      f"{(panel.epa_sdwa_events_milestones_count_muni > 0).sum() if 'epa_sdwa_events_milestones_count_muni' in panel.columns else 0}")
 
 # ---------------------------------------------------------------------------
 # 3. SRF (CWSRF Family 1b)
