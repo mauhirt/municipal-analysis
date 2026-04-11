@@ -43,7 +43,10 @@ from pathlib import Path
 ROOT = Path(__file__).resolve().parent.parent
 RAW = ROOT / "raw"
 OUT = ROOT / "processed"
-YEARS = list(range(2013, 2026))
+YEARS = list(range(2011, 2026))  # 2011-2025: includes 2 extra years of
+# pre-panel history so that pipeline/15's attach() can compute lag1 and
+# lag2 for variables whose raw sources go back before 2013 (mayor_party
+# 2010-2025, EPA enforcement 2000-2026, MIT pres 2012/2016/2020/2024).
 
 # ---------------------------------------------------------------------------
 # 0. Build skeleton from crosswalk
@@ -325,7 +328,7 @@ print(f"  Cities with NFIP repetitive loss data: {(panel.groupby('FIPS')['nfip_r
 # ---------------------------------------------------------------------------
 # Sanity checks + output
 # ---------------------------------------------------------------------------
-assert panel.shape[0] == 578 * 13, f"Expected 7514 rows, got {panel.shape[0]}"
+assert panel.shape[0] == 578 * len(YEARS), f"Expected {578*len(YEARS)} rows, got {panel.shape[0]}"
 assert panel.groupby(["FIPS", "Year"]).size().max() == 1
 
 # Sort for output

@@ -84,21 +84,36 @@ print(f"  Merged overflow_events_muni: {(df.epa_overflow_events_muni > 0).sum()}
 # ---------------------------------------------------------------------------
 df["log_population_lag2"] = np.log1p(df["population_city_lag2"])
 df["log_percapita_income_lag2"] = np.log1p(df["percapita_income_city_lag2"])
+df["log_cwns_needs_real"] = np.log1p(df["fn_cwns_needs_real"])  # contemp version
 df["log_cwns_needs_real_lag2"] = np.log1p(df["fn_cwns_needs_real_lag2"])
+
+# Zero-fill mkt_state_green_bond_ever_lag1 at 2013:
+# empirically correct because the first municipal green bond was
+# Massachusetts 2013, so no state had issued before 2013. The panel
+# variable is NaN at Y=2013 only because the raw source starts in 2013;
+# the true value is 0 for every state.
+df.loc[df.Year == 2013, "mkt_state_green_bond_ever_lag1"] = 0
 
 # ---------------------------------------------------------------------------
 # 4. Define control vector (shared across Cols 1-4)
+#
+# Lag structure notes (vs memo):
+#   - cwsrf_log_obligations, log_cwns_needs_real, fn_pct_deficient use
+#     CONTEMP (not lag2) because their raw sources start in 2013. The
+#     memo spec uses lag2 but lag2 at outcome year 2013 requires 2011
+#     data which doesn't exist. CONTEMP at 2013 uses 2013 values.
+#   - All other variables follow the memo spec exactly.
 # ---------------------------------------------------------------------------
 BASE_CONTROLS = [
-    # Family 1a — PRIMARY compulsion
+    # Family 1a — PRIMARY compulsion (contemp: NPDES is a 3-yr rolling stock)
     "epa_npdes_formal_prior3yr_muni",
     # Family 1b — fiscal necessity
-    "charges_to_own_source",
-    "reserve_ratio_lag2",
-    "tel_stringency_normalized",
-    "cwsrf_log_obligations_lag2",
-    "log_cwns_needs_real_lag2",
-    "fn_pct_deficient_lag2",
+    "charges_to_own_source",                # contemp (memo: contemp)
+    "reserve_ratio_lag2",                   # lag2 (memo: lag2)
+    "tel_stringency_normalized",            # contemp (memo: contemp)
+    "cwsrf_log_obligations",                # CONTEMP (memo: lag2; source 2013+)
+    "log_cwns_needs_real",                  # CONTEMP (memo: lag2; source 2013+)
+    "fn_pct_deficient",                     # CONTEMP (memo: lag2; source 2013+)
     # Family 2 — partisan
     "Rep_Mayor_lag1",
     # City controls
@@ -107,7 +122,7 @@ BASE_CONTROLS = [
     "unemployment_city_lag2",
     "has_substitute_issuer",
     # State institutional (Family 3)
-    "mkt_state_green_bond_ever_lag1",
+    "mkt_state_green_bond_ever_lag1",       # zero-filled at 2013 above
     "fn_esg_has_muni_bond_law",
     "state_rep_trifecta",
 ]
@@ -115,17 +130,17 @@ BASE_CONTROLS = [
 # ---------------------------------------------------------------------------
 # 5. Sample construction for Cols 1-4
 # ---------------------------------------------------------------------------
-# Core window: 2015-2025 (lag2 safe for most vars)
-s14 = df[df.Year.between(2015, 2025)].copy()
-# Drop rows with NA on the core set
-keep_vars = BASE_CONTROLS + ["Green_Bond_Issued", "Y_self_green",
-                             "asinh_green_amt", "asinh_self_green_amt",
-                             "FIPS", "State", "Year"]
+# User request: full 2013-2025 window (13 outcome years)
+s14 = df[df.Year.between(2013, 2025)].copy()
 s14 = s14.dropna(subset=BASE_CONTROLS).copy()
-print(f"\nCols 1-4 sample: {len(s14)} city-years, {s14.FIPS.nunique()} cities")
+print(f"\nCols 1-4 sample: {len(s14)} city-years, {s14.FIPS.nunique()} cities, "
+      f"window 2013-2025")
 
-# Col 5 sample: 2015-2023 because fiscal_stress_pca_lag2 requires 2013-2021
-# source data (ends 2021 in the raw fiscal file)
+# Col 5 sample: the triple interaction uses fiscal_stress_pca_lag2 which
+# is bounded by the fiscal_stress_pca raw series ending 2021, so lag2 is
+# only computable for outcome years 2015-2023. We DO keep lag2 here
+# (strict predetermination) because the triple-interaction test is
+# causal-identification-heavy and the 9-year window is still adequate.
 s5 = df[df.Year.between(2015, 2023)].copy()
 s5 = s5.dropna(subset=BASE_CONTROLS + ["fiscal_stress_pca_lag2"]).copy()
 print(f"Col 5 sample:    {len(s5)} city-years, {s5.FIPS.nunique()} cities "
@@ -219,9 +234,9 @@ key_vars = [
     ("charges_to_own_source", "Charges / own-source revenue"),
     ("reserve_ratio_lag2", "Reserve ratio (lag 2)"),
     ("tel_stringency_normalized", "TEL stringency (normalized)"),
-    ("cwsrf_log_obligations_lag2", "log CWSRF obligations (lag 2)"),
-    ("log_cwns_needs_real_lag2", "log CWNS needs (lag 2)"),
-    ("fn_pct_deficient_lag2", "Pct deficient (lag 2)"),
+    ("cwsrf_log_obligations", "log CWSRF obligations (contemp)"),
+    ("log_cwns_needs_real", "log CWNS needs (contemp)"),
+    ("fn_pct_deficient", "Pct deficient (contemp)"),
     ("log_population_lag2", "log Population (lag 2)"),
     ("log_percapita_income_lag2", "log Per-capita income (lag 2)"),
     ("unemployment_city_lag2", "Unemployment (lag 2)"),
@@ -305,7 +320,7 @@ for _, r in summary_df.iterrows():
 print("-" * 110)
 print("Stars: † p<0.10, * p<0.05, ** p<0.01, *** p<0.001")
 print("All columns: State + Year FE, standard errors clustered at city (FIPS)")
-print(f"Cols 1-4 sample: {int(c1.nobs)} city-years, 2015-2025")
+print(f"Cols 1-4 sample: {int(c1.nobs)} city-years, 2013-2025")
 print(f"Col 5 sample:    {int(c5.nobs)} city-years, 2015-2023 (fiscal_stress_pca_lag2 restricts)")
 
 # ---------------------------------------------------------------------------
@@ -337,8 +352,17 @@ for _, r in summary_df.iterrows():
 text_out.append("-" * 110)
 text_out.append("Stars: † p<0.10, * p<0.05, ** p<0.01, *** p<0.001")
 text_out.append("All columns: State + Year FE, standard errors clustered at city (FIPS)")
-text_out.append(f"Cols 1-4: N={int(c1.nobs)}, window 2015-2025")
+text_out.append(f"Cols 1-4: N={int(c1.nobs)}, window 2013-2025")
 text_out.append(f"Col 5:    N={int(c5.nobs)}, window 2015-2023 (fiscal_stress_pca_lag2 restricts)")
+text_out.append("")
+text_out.append("Lag structure notes (deviation from memo):")
+text_out.append("  - cwsrf_log_obligations, log_cwns_needs_real, fn_pct_deficient use")
+text_out.append("    CONTEMP (memo: lag2) because raw sources start 2013, making")
+text_out.append("    lag2 at outcome year 2013 fundamentally unavailable.")
+text_out.append("  - mkt_state_green_bond_ever_lag1 zero-filled at Y=2013 because")
+text_out.append("    the first municipal green bond was Massachusetts 2013, so no")
+text_out.append("    state had issued before 2013 — empirically correct value is 0.")
+text_out.append("  - All other variables match the memo spec exactly.")
 text_out.append("")
 text_out.append("Memo hypothesis predictions:")
 text_out.append("  C1 Rep_Mayor: expected NULL (H1b) — compulsion overrides partisan preference")
