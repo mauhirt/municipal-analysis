@@ -285,6 +285,37 @@ Note the c40 exception: `c40_member` is intentionally NaN for 2007-2012 because 
 
 **Legacy v1 file** (`processed/climate_policy_controls_extended.csv`, from `pipeline/16`) is still produced for backwards compatibility but is **superseded** by v2. Scripts should migrate to the v2 variable names.
 
+**Building Codes + Building Performance Standards (`bcode_*`).** Built by `pipeline/18_build_climate_policy_controls_v2.py` — wait, by `pipeline/18_merge_building_codes.py` — from `raw/energy_policy/New Building Codes/master_city_year_panel_2010_2025.csv` and `master_state_year_panel_2010_2025.csv` (IMT BPS Matrix Jan 2026, DOE BECP state portals, Biden White House BPS Coalition launch-day list, primary ordinance records). Output: `processed/building_codes_city_year_panel.csv`. **38 `bcode_*` variables** added to the merged panel, spanning:
+
+- **State IECC stringency (time-varying 2013-2025)**: `bcode_iecc_vintage`, `bcode_iecc_lag_yrs`, `bcode_no_statewide_code`, `bcode_home_rule`, `bcode_state_preemption`, `bcode_state_stretch_code`, `bcode_state_weakening_amendments`. Coverage: 43/51 states by 2025 (8 no-statewide-code states are NaN by design — AK, AZ, KS, MS, MO, ND, SD, WY).
+- **State BPS rollup**: `bcode_state_bps_adopted`, `bcode_state_bps_effective`, `bcode_state_bps_year_enacted`, `bcode_state_bps_compliance_year`, `bcode_state_bps_pen_sqft`, `bcode_state_bps_pen_tco2e`, plus counts `bcode_state_n_city_bps`, `bcode_state_n_city_bench`, and `bcode_state_any_city_bps`, `bcode_state_any_city_bench`. State-BPS adopters as of 2025: CO, MD, OR, WA (total 42 cities under state-level mandate).
+- **City-level BPS** (9 matches in 578-city panel): `bcode_bps_adopted`, `bcode_bps_effective`, `bcode_bps_year_enacted`, `bcode_bps_compliance_year`, `bcode_bps_years_since`, `bcode_bps_pen_sqft`, `bcode_bps_pen_tco2e`, `bcode_bps_covers_municipal`, `bcode_bps_ratchet`, plus `bcode_bps_coalition_member`, `bcode_bps_coalition_launch_day`, `bcode_bps_coalition_joined_year`. Adopters: Washington DC (2018), New York (2019), St. Louis (2020), Boston (2021), Denver (2021), Chula Vista (2021), Seattle (2023), Newton MA (2024), Evanston IL (2025).
+- **City-level benchmarking** (20 matches): `bcode_benchmark_adopted`, `bcode_benchmark_effective`, `bcode_benchmark_year_enacted`, `bcode_benchmark_first_reporting_year`, `bcode_benchmark_years_since`, `bcode_benchmark_threshold_sqft`, `bcode_benchmark_audit_req`.
+- **Derived convenience**: `bcode_any_policy_active`, `bcode_any_policy_effective`.
+
+**Key signal**: BPS-adopter city-years have a 14.3% green-bond issuance rate (6 of 42 city-years) vs. 2.26% baseline across all 7,514 rows — roughly 6× the baseline. Washington DC alone accounts for 4 issuances in 8 post-2018 years. Full lag2 availability across the 2015-2025 outcome window for all `bcode_bps_*` and `bcode_benchmark_*` columns (except `bcode_iecc_vintage_lag2` at 91% coverage, reflecting the 8 no-statewide-code states).
+
+| Outcome year | 2013 | 2014 | 2015 | 2016 | 2017 | 2018 | 2019 | 2020 | 2021 | 2022 | 2023 | 2024 | 2025 |
+|---|---|---|---|---|---|---|---|---|---|---|---|---|---|
+| `bcode_bps_adopted` contemp | 0 | 0 | 0 | 0 | 0 | 0 | 1 | 2 | 5 | 5 | 6 | 7 | 8 |
+| `bcode_state_bps_adopted` contemp | 0 | 0 | 0 | 0 | 0 | 0 | 14 | 14 | 27 | 32 | 42 | 42 | 42 |
+| `bcode_benchmark_adopted` contemp | 8 | 8 | 12 | 17 | 18 | 18 | 19 | 19 | 20 | 20 | 20 | 20 | 20 |
+
+**Energy Policy state + city controls (`ep_*`).** Built by `pipeline/19_merge_energy_policy.py` from four files in `raw/energy_policy/`:
+
+- **`state_building_codes.csv`** (2025 snapshot, 50 states): only the non-overlapping columns are kept — `ep_state_aceee_code_rank` (ACEEE 2025 State Scorecard ordinal rank 1-51, best to worst), `ep_state_has_comm_benchmark_law`, `ep_state_has_resid_disclosure`. Treated as time-invariant state characteristics.
+- **`state_net_metering.csv`** (state-year 2010-2025): `ep_state_net_metering`, `ep_state_net_metering_cap_kw`, `ep_state_community_solar`, `ep_state_muni_util_exemption`. Time-varying.
+- **`state_clean_energy_funds.csv`** (2025 snapshot with green bank founding year): `ep_state_green_bank_active` is constructed as year-varying from `state_green_bank_year` (1=active when outcome year ≥ founding year). Static flags: `ep_state_has_green_bank_ever`, `ep_state_has_resilience_fund`, `ep_state_has_ee_program`, `ep_state_has_ces`, `ep_state_has_eers`, `ep_state_eers_target`. **`state_has_rps` is dropped on merge** because it conflicts with climate v2's `state_rps_active`.
+- **`municipal_electric_utilities.csv`** (578 cities cross-section): `ep_has_muni_electric`, `ep_muni_electric_customers`, `ep_muni_electric_rev_mil`, `ep_muni_electric_bond_scale`. Time-invariant city characteristic. **82 of 578 cities have a municipal electric utility**, and those cities have a 3.47% green-bond issuance base rate vs. 2.06% for non-muni-electric cities (1.68× higher).
+
+Total: **18 `ep_*` variables** added to the merged panel. All have full lag2 coverage for the 2015-2025 outcome window.
+
+| Outcome year | 2013 | 2014 | 2015 | 2016 | 2017 | 2018 | 2019 | 2020 | 2021 | 2022 | 2023 | 2024 | 2025 |
+|---|---|---|---|---|---|---|---|---|---|---|---|---|---|
+| `ep_state_net_metering` contemp | 502 | 506 | 508 | 508 | 508 | 508 | 508 | 508 | 508 | 508 | 508 | 508 | 508 |
+| `ep_state_green_bank_active` contemp | 76 | 76 | 82 | 95 | 95 | 186 | 216 | 216 | 282 | 340 | 348 | 348 | 348 |
+| `ep_has_muni_electric` (time-inv) | 82 | 82 | 82 | 82 | 82 | 82 | 82 | 82 | 82 | 82 | 82 | 82 | 82 |
+
 **Anti-ESG laws** (`esg_*`). Source: `raw/political/esg_legislation_panel.csv` (state-year, **2010–2025**, replaces the older 2013–2023 file). Broadcast to city-year via state_abbrev→state_abb merge on the crosswalk.
 
 | Outcome year | 2013 | 2014 | 2015 | 2016 | 2017 | 2018 | 2019 | 2020 | 2021 | 2022 | 2023 | 2024 | 2025 |

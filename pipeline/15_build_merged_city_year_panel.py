@@ -295,6 +295,39 @@ panel = panel.merge(nri_t0, on="FIPS", how="left")
 print(f"  NRI columns merged: {len(nri_cols_clean)}")
 
 # ---------------------------------------------------------------------------
+# 10b. Building Codes + BPS (pipeline/18) — city-year panel
+# ---------------------------------------------------------------------------
+print("\n[10b/11] Loading building codes + BPS panel...")
+bcode_path = PROC / "building_codes_city_year_panel.csv"
+if bcode_path.exists():
+    bcode = pd.read_csv(bcode_path)
+    bcode_cols = [c for c in bcode.columns if c.startswith("bcode_")]
+    # Drop duplicate ID columns so attach() can merge cleanly
+    bcode_slim = bcode[["FIPS", "Year"] + bcode_cols].rename(
+        columns={"FIPS": "fips7", "Year": "year"}
+    )
+    panel = attach(panel, bcode_slim, "fips7", "year", bcode_cols, "bcode")
+    print(f"  Building codes columns merged: {len(bcode_cols)}")
+else:
+    print(f"  SKIPPED: {bcode_path} not found - run pipeline/18 first")
+
+# ---------------------------------------------------------------------------
+# 10c. Energy Policy (pipeline/19) — state controls + muni electric
+# ---------------------------------------------------------------------------
+print("\n[10c/11] Loading energy policy panel...")
+ep_path = PROC / "energy_policy_city_year_panel.csv"
+if ep_path.exists():
+    ep = pd.read_csv(ep_path)
+    ep_cols = [c for c in ep.columns if c.startswith("ep_")]
+    ep_slim = ep[["FIPS", "Year"] + ep_cols].rename(
+        columns={"FIPS": "fips7", "Year": "year"}
+    )
+    panel = attach(panel, ep_slim, "fips7", "year", ep_cols, "ep")
+    print(f"  Energy policy columns merged: {len(ep_cols)}")
+else:
+    print(f"  SKIPPED: {ep_path} not found - run pipeline/19 first")
+
+# ---------------------------------------------------------------------------
 # 11. Bring in existing green bond outcome + controls (already built, 2013-2025)
 # ---------------------------------------------------------------------------
 print("\n[11/11] Merging in green bond outcome + controls panels...")
