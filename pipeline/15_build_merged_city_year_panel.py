@@ -387,6 +387,32 @@ else:
     print(f"  SKIPPED: {memo_path} not found - run pipeline/20 first")
 
 # ---------------------------------------------------------------------------
+# 11c2. Presidential vote city-year panel (pipeline/22)
+#       MIT MEDSL county returns 2012-2024 mapped to cities.
+#       REPLACES the partial 2013-2023 coverage from the older file.
+# ---------------------------------------------------------------------------
+print("\n[11c2] Loading presidential vote panel (MIT MEDSL 2012-2024)...")
+pres_path = PROC / "presidential_vote_city_year_panel.csv"
+if pres_path.exists():
+    pres = pd.read_csv(pres_path)
+    pres_cols = [
+        "pres_dem_two_party_share", "pres_dem_vote_share", "pres_rep_vote_share",
+        "applicable_election_year",
+    ]
+    pres_slim = pres[["FIPS", "Year"] + pres_cols].rename(
+        columns={"FIPS": "fips7", "Year": "year"}
+    )
+    # Drop any existing (older) presidential cols from panel so we use the
+    # new MIT-based ones; those older cols may have come from census_acs add.
+    for c in pres_cols + [f"{c}_lag1" for c in pres_cols] + [f"{c}_lag2" for c in pres_cols]:
+        if c in panel.columns:
+            panel = panel.drop(columns=[c])
+    panel = attach(panel, pres_slim, "fips7", "year", pres_cols, "pres")
+    print(f"  Presidential columns (re)merged: {len(pres_cols)}")
+else:
+    print(f"  SKIPPED: {pres_path} not found - run pipeline/22 first")
+
+# ---------------------------------------------------------------------------
 # 11d. Derive memo-specific outcome aliases (Y_self_green, Y_esg_assurance,
 #      Y_water_only, Y_clean_trans, Y_renewable, Y_energy_eff, Y_green_bldg,
 #      Y_climate_adapt, Y_pollution_control, asinh_*_amt)
