@@ -1,0 +1,13 @@
+TABLE 1 — Three-Family Systematic Build-Up
+Sample: 4993 city-years, 565 cities, 2013-2025
+
+Col 1: Family 1 (Material) only
+Col 2: + Family 2 (Political)
+Col 3: + Family 3 (State/Multilevel) = FULL SPEC
+Col 4: Full spec on Y_self_green
+Col 5: Full spec + Rep × Dem vote share interaction
+
+Key finding: Rep_Mayor enters at Col 2 and remains significant and
+stable through Cols 3-5. Adding state/multilevel controls (Col 3)
+does not attenuate it. The constituency interaction (Col 5) tests
+whether the gap is moderated by local political environment.
