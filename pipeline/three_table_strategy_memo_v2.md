@@ -187,10 +187,181 @@ Optional Col 6 (robustness):
 | H1a compulsion drives issuance | ✅ Confirmed — but on violations, not formal actions |
 | H1b Rep_Mayor null at extensive margin | ❌ Rejected — significantly negative |
 | H3a fiscal amplification triple | ❌ Rejected — zero effect |
-| Table 2 compulsion gradient | ⚠️ To be tested next |
-| Table 3 water-only Fisher test | ⚠️ Raw pattern confirmed (42% vs 10%) |
+| Table 2 compulsion gradient | ❌ Gradient reversed — gap widens with compulsion |
+| Table 3 water-only Fisher test | ✅ Confirmed (42.6% vs 13.6%, p = 0.014) |
+| H2b Rep_Mayor negative at Step 4 (assurance) | ✅ Confirmed (β = −0.260**, p = 0.010) |
+| H3a regulatory moderation of assurance gap | ❌ Not significant (p = 0.32) |
+| H3a fiscal stress moderation of assurance gap | ❌ Not significant (p = 0.59) |
+| H3b electoral discipline failure | ❌ Not significant (p = 0.19) |
 
 ---
+
+## 10. Table 2 Results — Compositional Gap
+
+**Sample**: N=6,054 city-years, 566 cities, 2013–2025.
+
+### Raw participation rates by party
+
+| Category | Dem | Rep | Gap | Rep events |
+|---|---:|---:|---:|---:|
+| Water/Sewer | 2.14% | 0.65% | +1.49 pp | 16 |
+| Clean Transportation | 0.42% | **0.00%** | +0.42 pp | **0** |
+| Renewable Energy | 0.36% | 0.04% | +0.32 pp | 1 |
+| Energy Efficiency | 0.42% | 0.08% | +0.34 pp | 2 |
+| Green Buildings | 0.47% | **0.00%** | +0.47 pp | **0** |
+| Climate Adaptation | 0.11% | 0.00% | +0.11 pp | 0 |
+| Pollution Control | 0.14% | 0.04% | +0.10 pp | 1 |
+
+Two categories have **complete Republican separation**: Clean Transportation
+and Green Buildings (zero events).
+
+### LPM regression coefficients on Rep_Mayor_lag1
+
+| Col | Category | β | p |
+|---:|---|---:|---:|
+| 1 | **Water/Sewer** | **−0.0097*** | **0.030** |
+| 2 | Clean Trans | −0.0017 | 0.237 |
+| 3 | Renewable (muni subsample N=885) | −0.0024 | 0.553 |
+| 4 | Energy Eff | −0.0012 | 0.380 |
+| 5 | **Green Buildings** | **−0.0037*** | **0.026** |
+
+### Stacked regression (Col 8)
+
+`Rep_Mayor × compulsion_ordinal`: **β = −0.0029** (p = 0.008)**
+
+**Wrong sign** relative to memo's H2a. The gap **widens** with compulsion
+ordinal — the most-compelled category (water) has the largest
+regression-adjusted partisan gap after controls.
+
+### Interpretation
+
+The descriptive cliff edge from water to discretionary categories is real
+(complete separation in clean trans and green buildings). But within the
+regression, compulsion does not narrow the gap — it widens it. This is
+consistent with the capacity-amplification finding: water infrastructure
+is where cities have the deepest structural capacity, so the Dem-Rep
+divide is sharpest there.
+
+---
+
+## 11. Table 3 Results — The Credibility Gap
+
+**Sample**: N=133 issuer city-years (conditional on Green_Bond_Issued=1),
+78 unique cities, 50 with ESG assurance (37.6%), 19 Republican (14.3%).
+
+### Water-only Fisher exact test (memo's signature inline result)
+
+| | Assurance | No assurance | Rate |
+|---|---:|---:|---:|
+| **Democratic mayors** | 40 | 54 | **42.6%** |
+| **Republican mayors** | 3 | 19 | **13.6%** |
+
+**Fisher exact p = 0.0135**, odds ratio = 4.69.
+
+Memo claimed "46% vs 14%, p = 0.010" — our result is very close
+(42.6% vs 13.6%, p = 0.014). The slight difference reflects
+the larger panel window (2013–2025 vs the memo's likely 2013–2023).
+
+**This is the paper's cleanest finding.** On identical compelled
+water infrastructure, Democratic mayors obtain ESG assurance at
+3× the rate of Republican mayors. The gap is not an artefact of
+category selection (both are in the water category) or issuance
+selection (both issued a Bloomberg-green-leaf bond).
+
+### LPM regression coefficients (Year FE, city-clustered SEs)
+
+| Col | Spec | Rep_Mayor β | p | Key interaction |
+|---:|---|---:|---:|---|
+| 1 | Baseline | **−0.260**** | **0.010** | — |
+| 2 | + Rep × violations | −0.152 | 0.210 | −0.052 (p=0.32) |
+| 3 | + Rep × fiscal_stress | −0.237* | 0.017 | −0.024 (p=0.59) |
+| 4 | + Rep × Dem_vote_share | +0.520 | 0.409 | −1.341 (p=0.19) |
+| 5 | Rep lag 2 (reverse causation) | −0.114 | 0.385 | — |
+| 6 | City + Year FE | — | — | Skipped: only 2 cities have both variation |
+
+### Hypothesis verdicts
+
+**H2b — Rep_Mayor negative at Step 4 (credibility gap): ✅ CONFIRMED**
+
+β = −0.260** (p = 0.010). A Republican mayor is **26 percentage points**
+less likely to obtain ESG assurance conditional on having issued a
+Bloomberg-green-leaf bond. This is the paper's strongest single finding.
+Magnitude: the assurance base rate in the sample is 37.6%, so a
+Republican mayor reduces it to ~12% — close to the raw Fisher gap.
+
+**H3a — Regulatory moderation (compulsion compresses assurance gap): ❌**
+
+The `Rep × water_violations` interaction is −0.052 (p = 0.32) — not
+significant. Compulsion does not compress the assurance gap. The
+credibility investment decision at Step 4 is purely discretionary and
+does not respond to regulatory pressure.
+
+**H3a — Fiscal stress moderation: ❌**
+
+The `Rep × fiscal_stress_pca` interaction is −0.024 (p = 0.59) — not
+significant. The memo predicted fiscal stress would WIDEN the assurance
+gap at Step 4 (because Democratic mayors use credibility signalling to
+improve credit standing while Republicans don't). The sign is correct
+(negative = widening) but the coefficient is not distinguishable from
+zero. With 133 observations, this test is underpowered.
+
+**H3b — Electoral discipline failure: ❌ (underpowered)**
+
+The `Rep × pres_dem_vote_share` interaction is −1.341 (p = 0.19).
+Suggestive of the memo's prediction (gap is largest where Republican
+mayors face the most Democratic constituency pressure) but not
+significant. Sign is correct but p = 0.19 with N = 129.
+
+**H3b — Reverse causation check: ❌ (attenuated)**
+
+`Rep_Mayor_lag2`: β = −0.114 (p = 0.39). Attenuated from −0.260 at
+lag 1 to −0.114 at lag 2. This could mean (a) the effect is
+contemporaneous (capital planning cycle is 1 year, not 2), or (b) loss
+of power from the longer lag.
+
+**Col 6 — City FE: not feasible**
+
+Only 2 cities in the sample have both a party switch and assurance
+variation. The within-city test is not identifiable with this sample.
+The memo correctly anticipated this: "null or attenuated result reflects
+power not absence of effect."
+
+---
+
+## 12. Summary of All Three Tables
+
+| Hypothesis | Table | Prediction | Finding | Verdict |
+|---|---|---|---|---|
+| **H1a** compulsion drives issuance | T1 | positive | **+0.006** (violations) | ✅ (on violations, not formal actions) |
+| **H1b** Rep null at extensive margin | T1 | null | **−0.014**** | ❌ Rejected |
+| **H2a** gap narrows with compulsion | T2 | positive gradient | **−0.003** gradient** | ❌ Reversed |
+| **H2b** Rep negative at Step 4 | T3 | negative | **−0.260**** | ✅ **Confirmed** |
+| **H3a** compulsion × distress | T1 | positive | 0.0001 (p=0.97) | ❌ Zero |
+| **H3a** regulatory moderation T3 | T3 | positive | −0.052 (p=0.32) | ❌ n.s. |
+| **H3b** electoral discipline fails | T3 | negative | −1.341 (p=0.19) | ❌ n.s. (underpowered) |
+| **Fisher** water-only assurance gap | T3 | large gap | **42.6% vs 13.6%** | ✅ **p = 0.014** |
+
+### The three things the paper can claim empirically:
+
+1. **Water violations drive green bond issuance** (H1a, correct variable).
+   β = +0.006** across all Table 1 columns. The compulsion pipeline works.
+
+2. **Republicans issue less at every step of the decision chain** (H1b
+   revised, H2b confirmed). The gap is −1.4 pp at Step 2 (extensive
+   margin), similar at Step 3 (self-labelling), and −26 pp at Step 4
+   (credibility investment conditional on issuance). The gap is not a
+   residual-space phenomenon — it's an immediate preference effect that
+   persists through compulsion.
+
+3. **The capacity-amplification mechanism**: the partisan gap is widest
+   where institutional capacity is highest (enterprise fund depth,
+   benchmarking infrastructure). This replaces the memo's
+   "compulsion-narrows-the-gap" story with a cleaner empirical pattern.
+
+---
+
+*Working memo — Oxford DPhil research — not for circulation*
+*Updated with Table 1, 2, 3 results — April 2026*
 
 ## 8. Data Status Update (April 2026)
 

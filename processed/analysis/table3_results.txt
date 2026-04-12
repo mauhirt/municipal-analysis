@@ -1,0 +1,41 @@
+==========================================================================================
+TABLE 3 — The Credibility Gap
+Conditional on Green_Bond_Issued == 1
+==========================================================================================
+
+Water-only Fisher exact test:
+  Democratic mayors: 40/94 = 42.6% assurance rate
+  Republican mayors: 3/22 = 13.6% assurance rate
+  Fisher p = 0.0135
+
+ALL issuers Fisher:
+  Democratic: 59/143 = 41.3%
+  Republican: 3/25 = 12.0%
+
+Key Coefficients (Year FE, SE clustered at FIPS):
+
+Variable                                      C1         C2         C3         C4         C5
+Rep Mayor (lag 1)                         -0.260**   -0.152    -0.237*     0.520                
+                                          (0.100)    (0.121)   (0.099)    (0.629)               
+Rep Mayor (lag 2, Col 5 only)                                                        -0.114    
+                                                                                     (0.132)   
+Rep x water violations                                -0.052                                    
+                                                     (0.053)                                    
+Fiscal stress PCA                                                0.058                          
+                                                                (0.037)                         
+Rep x fiscal stress                                             -0.024                          
+                                                                (0.044)                         
+Rep x Dem vote share                                                       -1.341              
+                                                                          (1.013)              
+N                                             133        133        133        129        133  
+R²                                          0.337      0.340      0.349      0.336      0.320  
+
+Hypothesis verdicts:
+  H2b Rep_Mayor negative (credibility gap):      ✓ CONFIRMED (-0.260**, p=0.010)
+  H3a Rep×violations (compulsion compresses):    ✗ not significant (-0.052, p=0.324)
+  H3a Rep×fiscal_stress (stress widens):         ✗ not significant (-0.024, p=0.587)
+  H3b Rep×Dem_vote (electoral discipline):       ✗ not significant (-1.341, p=0.185)
+  H3b Rep lag 2 (reverse causation):             ✗ not significant (-0.114, p=0.385)
+  Col 6 city FE:                                 ✗ skipped (only 2 cities with both variation)
+
+Stars: * p<0.05, ** p<0.01, *** p<0.001
