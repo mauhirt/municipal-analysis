@@ -1,0 +1,2070 @@
+New Issue – Book Entry Only See “RATINGS” herein
+Subject to compliance by the Issuer and the Company with certain covenants, in the opinion of Kutak Rock LLP, Bond Counsel, 
+under existing laws, regulations, rulings and judicial decisions, interest on the Bonds is excludable from gross income for federal 
+income tax purposes, except for interest on any Bond for any period during which such Bond is held by a “substantial user” of 
+the facilities financed with Bond proceeds or a “related person” (within the meaning of Section 147(a) of the Internal Revenue 
+Code of 1986, as amended); however, such interest on the Bonds is included as an item of tax preference in computing the federal 
+alternative minimum tax for individuals.  In the further opinion of Bond Counsel, under existing laws, regulations, rulings and 
+judicial decisions, the Bonds and the income therefrom are exempt from all taxation in the State of Alabama (the “State”).  See “TAX 
+MATTERS” herein for a more complete discussion.
+$63,400,000
+THE INDUSTRIAL DEVELOPMENT BOARD OF THE CITY OF HOOVER (ALABAMA)
+Environmental Improvement Revenue Bonds, Series 2020
+(United States Steel Corporation Project)
+(Green Bonds)
+(AMT)
+CUSIP: 439241 AB6*
+Dated:  Date of Issuance  Maturity Date:  November 1, 2050
+Term Interest Rate: 6.375% Mandatory Purchase Date: November 1, 2030
+The Bonds will bear interest at a Term Interest Rate of 6.375% to but not including November 1, 2030 (the “Mandatory Purchase Date”), 
+subject to adjustment of the Interest Rate Period for the Bonds as described herein.  Interest on the Bonds will be paid semiannually on each May 
+1 and November 1, commencing May 1, 2021, accruing from the date of issuance of the Bonds.  The Bonds will be issued as fully registered bonds 
+and initially will be registered in the name of CEDE & Co., as nominee for The Depository Trust Company, New York, New York (“DTC”).  DTC 
+will act as a securities depository for the Bonds.  Purchases of beneficial interests in the Bonds will be made in book-entry-only form (without 
+certificates) in denominations of $5,000 or any integral multiple thereof, and the Bonds are exchangeable as more fully described herein.  
+Principal will be payable with respect to the Bonds at the designated offices of The Bank of New York Mellon Trust Company, N.A., as Trustee.  
+So long as DTC or its nominee, CEDE & Co., is the registered owner of the Bonds, payment of the principal of and interest on the Bonds will be 
+made directly to CEDE & Co.  See “DTC AND THE BOOK-ENTRY SYSTEM” herein.
+This Official Statement only describes the Bonds while they bear interest at the Term Interest Rate set forth above.
+THE BONDS ARE SPECIAL AND LIMITED OBLIGATIONS OF THE ISSUER.  IN NO CASE WILL THE BONDS REPRESENT 
+OR CONSTITUTE A CHARGE AGAINST THE GENERAL CREDIT OF THE ISSUER OR AN INDEBTEDNESS OF THE CITY OF 
+HOOVER, ALABAMA (THE “CITY”), JEFFERSON COUNTY, ALABAMA (THE “COUNTY”), THE STATE OR ANY POLITICAL 
+SUBDIVISION OF THE STATE WITHIN THE MEANING OF ANY STATE CONSTITUTIONAL PROVISION OR STATUTORY 
+LIMITATION OR CONSTITUTE OR GIVE RISE TO A PECUNIARY LIABILITY OF THE CITY, THE COUNTY OR THE STATE OR 
+ANY POLITICAL SUBDIVISION OF THE STATE OR A CHARGE AGAINST THE GENERAL CREDIT OR TAXING POWER, IF 
+ANY, OF THE ISSUER OR OF THE STATE OR ANY POLITICAL SUBDIVISION OF THE STATE.  THE BONDS ARE PAYABLE 
+SOLELY FROM THE PLEDGED RECEIPTS. THE ISSUER HAS NO TAXING POWER. SEE “SOURCE OF PAYMENT FOR THE 
+BONDS.”
+The Bonds are payable solely from revenues derived under the terms of an Agreement of Sale with the Issuer delivered by:
+ 
+UNITED STATES STEEL CORPORATION
+The Bonds are subject to optional, extraordinary optional and extraordinary mandatory redemption prior to maturity, and 
+mandatory purchase prior to maturity, including purchase in lieu of redemption, pursuant to the Indenture, as described herein.  
+See “DESCRIPTION OF THE BONDS — Redemption” and “— Mandatory Tender of Bonds for Purchase” herein.
+Prospective purchasers of the Bonds should be aware of certain investment considerations and risk factors in evaluating an 
+investment in the Bonds.  PURCHASE OF THE BONDS INVOLVES A SIGNIFICANT DEGREE OF INVESTMENT RISK.  See “RISK 
+FACTORS” herein.
+Price:  100%
+The Bonds are offered when, as and if issued by the Issuer and accepted by the Underwriters, subject to prior sale, to the withdrawal or 
+modification of the offer without notice and to certain other conditions, including the unqualified approval of legality by Kutak Rock LLP, 
+Bond Counsel.  Certain legal matters will be passed upon for the Underwriters by their counsel, Ballard Spahr LLP; for the Issuer by Bradley 
+Arant Boult Cummings LLP; and for United States Steel Corporation by Mark Furry, its Associate General Counsel – Corporate and by Burr 
+& Forman LLP.  The Bonds are expected to be delivered to DTC in book-entry form on or about November 24, 2020.
+BofA Securities
+ Morgan Stanley  Wells Fargo Securities  
+ Barclays Citigroup  Fifth Third Securities, Inc.  Goldman Sachs & Co. LLC  Truist Securities  
+November 12, 2020
+*  CUSIP is a registered trademark of American Bankers Association.  The CUSIP number in this Official Statement is provided by CUSIP Global Services 
+LLC, managed on behalf of the American Bankers Association by S&P Global Market Intelligence, a division of S&P Global Inc.  The CUSIP number listed 
+is being provided solely for convenience of the bondholders only at the time of issuance of the Bonds and none of the Company, the Issuer, the Trustee 
+or the Underwriters make any representation as to the correctness of, nor shall any of them be responsible for, the accuracy of such number now or at 
+any time in the future.[THIS PAGE INTENTIONALLY LEFT BLANK]  
+DMEAST #42829301 v4 i 
+No dealer, broker, sales representative or other person has been authorized by the Company, the 
+Issuer or the Underwriters to give any informati on or to make any represen tations, other than those 
+contained in this Official Statement, and, if given or made, such other information or representations must 
+not be relied upon as having been authorized by any of  the foregoing.  This Official Statement does not 
+constitute an offer to sell or the solicitation of an offe r to buy, nor shall there be any sale of the Bonds by 
+any person in any jurisdiction in which it is unlawful for such person to make such offer, solicitation or 
+sale.  The information relating to the Issuer under the heading “THE ISSUER” and “NO LITIGATION” 
+as it relates to the Issuer has been obtained from the Issuer.  The Issuer makes no representation, warranty 
+or certification as to the adequacy or accuracy of th e information set forth elsewhere in the Official 
+Statement.  The Issuer has not reviewed or approved any information in this Official Statement except for 
+the information relating to the Issuer under the headings “THE ISSUER” and “NO LITIGATION” as it 
+relates to the Issuer.  The information set fort h in Appendix A hereto has been obtained from the 
+Company and is not guaranteed as to accuracy or completeness, and is not to be construed as a 
+representation by the Issuer or the Underwriters.  The other information and expressions of opinion herein 
+are subject to change without notice, and neither the delivery of this Official Statement nor any sale made 
+hereunder shall, under any circumstances,  create any implications that there has been no change in the 
+affairs of the parties already referred to or that the other information or opinions are correct as of any time 
+subsequent to the date hereof. 
+The Underwriters have provided the following sentence for inclusion in this Official Statement. 
+The Underwriters have reviewed the information in this Official Statement in accordance with, and as part 
+of, their responsibility to investors under the fede ral securities laws as applied to the facts and 
+circumstances of this transaction, but the Underwriters  do not guarantee the accuracy or completeness of 
+such information. 
+TABLE OF CONTENTS 
+Page 
+INTRODUCTION ......................................................................................................................... 1 
+THE ISSUER ................................................................................................................................. 2 
+APPLICATION OF PROCEEDS .................................................................................................. 3 
+GREEN BOND DESIGNATION .................................................................................................. 3 
+SOURCE OF PAYMENT FOR THE BONDS ............................................................................. 4 
+DESCRIPTION OF THE BONDS ................................................................................................ 5 
+DTC AND THE BOOK–ENTRY SYSTEM ............................................................................... 12 
+THE AGREEMENT .................................................................................................................... 14 
+THE INDENTURE ...................................................................................................................... 18 
+RISK FACTORS ......................................................................................................................... 24 
+THE TRUSTEE ........................................................................................................................... 29 
+TAX MATTERS .......................................................................................................................... 29 
+LEGAL MATTERS ..................................................................................................................... 31 
+NO LITIGATION ........................................................................................................................ 31 
+CERTAIN RELATIONSHIPS .................................................................................................... 31 
+RATINGS .................................................................................................................................... 32 
+UNDERWRITING ...................................................................................................................... 32 
+CONTINUING DISCLOSURE ................................................................................................... 33 
+MISCELLANEOUS .................................................................................................................... 34 DMEAST #42829301 v4 ii 
+APPENDIX A — United States Steel Corporation  
+APPENDIX B — Proposed Form of Opinion of Bond Counsel 
+APPENDIX C — Form of Continuing Disclosure Agreement 
+IN CONNECTION WITH THE OFFERING, THE UNDERWRITERS MAY OVERALLOT OR 
+EFFECT TRANSACTIONS WHICH STABILIZE OR MAINTAIN THE MARKET PRICE OF THE 
+BONDS AT A LEVEL ABOVE THAT WHICH MIGHT OTHERWISE PREVAIL IN THE OPEN 
+MARKET.  SUCH STABILIZING, IF COMMENCED, MAY BE DISCONTINUED AT ANY TIME. 
+THE BONDS HAVE NOT BEEN REGISTERED UNDER THE SECURITIES ACT OF 1933, 
+NOR HAS THE INDENTURE BEEN QUALIFIED UNDER THE TRUST INDENTURE ACT OF 1939, 
+IN RELIANCE UPON CERTAIN EXEMPTIONS SET FORTH IN SUCH ACTS.  THE 
+REGISTRATION, QUALIFICATION OR EXEMPTION OF THE BONDS IN ACCORDANCE WITH 
+THE APPLICABLE SECURITIES LAW PROVISIONS OF THE JURISDICTIONS WHEREIN THE 
+BONDS HAVE BEEN REGISTERED, QUALIFIED OR EXEMPTED SHOULD NOT BE REGARDED 
+AS A RECOMMENDATION THEREOF.  NONE OF THESE JURISDICTIONS NOR ANY OF THEIR 
+AGENCIES HAVE GUARANTEED OR PASSED UPON THE SAFETY OF THE BONDS AS AN 
+INVESTMENT OR UPON THE ACCURACY OR ADEQUACY OF THIS OFFICIAL STATEMENT.  
+ANY REPRESENTATION TO THE CONTRARY MAY BE A CRIMINAL OFFENSE.  
+DMEAST #42829301 v4
+$63,400,000 
+The Industrial Development Board of the City of Hoover (Alabama) 
+Environmental Improvement Revenue Bonds, Series 2020 
+(United States Steel Corporation Project) 
+(Green Bonds) 
+(AMT) 
+INTRODUCTION 
+This Official Statement sets forth informa tion concerning $63,400,000 aggregate principal 
+amount of The Industrial Development Board of the City of Hoover Environmental Improvement 
+Revenue Bonds, Series 2020 (United States Steel Corporation Project) (Green Bonds) (the “Bonds”) to be 
+issued by The Industrial Development Board of the City of Hoover (the “Issuer”).  The Bonds will be 
+issued under and secured by a Trust Indenture, dated as of November 1, 2020 (the “Indenture”), between 
+the Issuer and The Bank of New York Mellon Trus t Company, N.A., as trustee (the “Trustee”).  The 
+Trustee will act as registrar (the “Registrar”) of and paying agent (the “Paying Agent”) for the Bonds.  
+The Bonds are being issued pursuant to the authority  and in full compliance with the Act (as defined 
+below).  See “THE ISSUER” herein. 
+Concurrently with the issuance of the Bonds, the Issuer will enter into an Agreement of Sale 
+dated as of November 1, 2020 (the “Agreement”) w ith United States Steel Corporation, a Delaware 
+corporation (the “Company”).  Pursuant to the Agreement, the Issuer will provide the proceeds of the sale 
+of the Bonds to the Company for the purpose of fina ncing or refinancing the acquisition, construction, 
+equipping and installation of the Project Facilities (as defined below; see “APPLICATION OF 
+PROCEEDS” herein), and the Project Facilities will be sold by the Issuer to the Company for a purchase 
+price sufficient to pay, when due, the principal or redemption price of, and interest on the Bonds.  In 
+addition, the Company has agreed in the Agreement to pay the pur chase price of Bonds subject to 
+mandatory tender for purchase as described  below under “DESCRIPTION OF THE BONDS – 
+Mandatory Tender of Bonds for Purchase.”  No Letter of  Credit or other credit or liquidity facility will be 
+provided to support the payment of such purchase price.  Pursuant to the Indenture, the Issuer will pledge 
+and assign its rights in and to the Agreement (with th e exception of certain reserved rights) and to the 
+Pledged Receipts (as defined below under “SOURCE OF PAYMENT FOR THE BONDS”) to the 
+Trustee to secure the Bonds. 
+The Company, as obligor, is concurrently e ngaged in a separate simultaneous offering of 
+$33,300,000 aggregate principal amount of 6.750% Environmental Improvement Revenue Bonds, Series 
+2020A (United States Steel Corporation Project) to be issued by the Indiana Finance Authority (the 
+“Indiana Bonds”).  The Indiana Bonds are being issued pursuant to a separate Official Statement and are 
+not being offered pursuant to this Official Statement.  The current offering and the offering of the Indiana 
+Bonds are independent of one another, and neither of the offerings is  contingent upon the successful 
+closing of the other offering. 
+THE BONDS ARE SPECIAL AND LIMITED OBLIGATIONS OF THE ISSUER.  IN NO 
+CASE WILL THE BONDS REPRESENT OR CONSTITUTE A CHARGE AGAINST THE 
+GENERAL CREDIT OF THE ISSUER OR AN INDEBTEDNESS OF THE CITY OF HOOVER, 
+ALABAMA (THE “CITY”), JEFFERSON COUNTY, ALABAMA (THE “COUNTY”), THE 
+STATE OF ALABAMA (THE “STATE”) OR ANY POLITICAL SUBDIVISION OF THE STATE 
+WITHIN THE MEANING OF ANY STATE CONSTITUTIONAL PROVISION OR 
+STATUTORY LIMITATION OR CONSTITUTE OR GIVE RISE TO A PECUNIARY 
+LIABILITY OF THE CITY, THE COUNTY OR THE STATE OR ANY POLITICAL DMEAST #42829301 v4 2 
+SUBDIVISION OF THE STATE OR A CHARGE AGAINST THE GENERAL CREDIT OR 
+TAXING POWER, IF ANY, OF THE ISSUER OR OF THE STATE OR ANY POLITICAL 
+SUBDIVISION OF THE STATE.  THE BONDS ARE PAYABLE SOLELY FROM THE 
+PLEDGED RECEIPTS.  SEE “SOURCE OF PAYMENT FOR THE BONDS.” 
+The Bonds are subject to optional, extraordinary optional and extraordinary mandatory 
+redemption prior to maturity, and mandatory purchase prior to maturity, including purchase in lieu of 
+redemption, pursuant to the Indenture, as described herein.  See “DESCRIPTION OF THE 
+BONDS ― Redemption” and “― Mandatory Tender of Bonds for Purchase” herein. 
+This Official Statement contains brief descr iptions of, among other things, the Issuer, the 
+Company, the Bonds, the Indenture, the Agreement a nd certain other agreements relating to the Bonds.  
+Such descriptions and information do not purport to be comprehensive or definitive.  All references herein 
+to documents and agreements are qualified in thei r entirety by reference to such documents and 
+agreements and references herein to the Bonds are qualified in their entirety by reference to the form 
+thereof included in the Indenture.  Copies of such  documents will be available for inspection at the 
+designated office of the Trustee after delivery of the Bonds. 
+The Indenture and the Agreement require the perfo rmance of certain acts necessary to assure that 
+interest on the Bonds is excludable from the gross income of the owners thereof for the purposes of 
+federal income taxation.  The Company and the Issuer have each covenanted to perform such acts. 
+Appendix A to this Official Statement has b een furnished by the Company and contains 
+information concerning the Company. 
+Capitalized terms used herein but not otherwise defined have such meanings as are ascribed to 
+them in the Indenture. 
+THE ISSUER 
+The Issuer is a public corporation created and exis ting under the laws of the State, acting through 
+its duly elected board, duly organized and validly existing under and by virtue of Act No. 648 enacted at 
+the 1949 Regular Session of the Legislature of Alabama (Code of Alabama 1975 § 11-54-80, et seq.), as 
+amended (the “Act”).  The Issuer has no taxing power , and any indebtedness incurred by the Issuer does 
+not constitute an indebtedness of the State, the City, the County or any political subdivision of the State, 
+within the meaning or application of any constitutiona l provision or limitation.  The Issuer is authorized 
+under the Act to issue the Bonds.  In order to accomplish such action, the Issuer is authorized to enter into 
+and perform its obligations under the Indenture and the Agreement. 
+THE BONDS ARE SPECIAL AND LIMITED OBLIGATIONS OF THE ISSUER.  IN NO 
+CASE WILL THE BONDS REPRESENT OR CONSTI TUTE A CHARGE AGAINST THE GENERAL 
+CREDIT OF THE ISSUER OR AN INDEBTEDNESS OF THE CITY, THE COUNTY, THE STATE 
+OR ANY POLITICAL SUBDIVISION OF THE STATE WITHIN THE MEANING OF ANY STATE 
+CONSTITUTIONAL PROVISION OR STATUTORY LIMITATION OR CONSTITUTE OR GIVE 
+RISE TO A PECUNIARY LIABILITY OF THE CITY, THE COUNTY OR THE STATE OR ANY 
+POLITICAL SUBDIVISION OF THE STATE OR A CHARGE AGAINST THE GENERAL CREDIT 
+OR TAXING POWER, IF ANY, OF THE ISSUER OR OF THE STATE OR ANY POLITICAL 
+SUBDIVISION OF THE STATE.  THE BONDS  ARE PAYABLE SOLELY FROM THE PLEDGED 
+RECEIPTS.  SEE “SOURCE OF PAYMENT FOR THE BONDS.” DMEAST #42829301 v4 3 
+EXCEPT FOR INFORMATION CONCERNING TH E ISSUER IN THIS SECTION AND IN 
+THE SECTION CAPTIONED “NO LITIGATION” AS IT RELATES TO THE ISSUER, NONE OF 
+THE INFORMATION IN THIS OFFICIAL STATEMENT HAS BEEN SUPPLIED OR VERIFIED BY 
+THE ISSUER, AND THE ISSUER MAKES NO REPRESENTATION OR WARRANTY, EXPRESS 
+OR IMPLIED, AS TO THE ACCURACY OR COMPLETENESS OF ANY OTHER INFORMATION 
+CONTAINED IN THIS OFFICIAL STATEMENT. 
+APPLICATION OF PROCEEDS 
+General 
+The proceeds of the Bonds will be deposited with  the Trustee and held under the Indenture until 
+disbursed by the Trustee to finance or refinance th e acquisition, construction, equipping and installation 
+of certain solid waste disposal facilities, includi ng an electric arc furnace and other equipment and 
+facilities (the “Project Facilities”), at the Company’ s Fairfield Works Mill locat ed in unincorporated 
+Jefferson County, Alabama (the “Plant”), and to pay a ll or a portion of the costs of issuing the Bonds.  
+See “THE INDENTURE – Application of Bond Proceeds.” 
+No Security Provided by Project Facilities 
+None of the Project Facilities will provide security for the payment of the Bonds. 
+GREEN BOND DESIGNATION 
+General 
+The proceeds of the Bonds will be used for “elig ible Green Projects” within the meaning of the 
+Green Bond Principles of the International Capital Ma rkets Association, specifically within the category 
+of pollution prevention and control, including waste recycling and waste reduction. At least 90% of the 
+net proceeds of the Bonds, after deducting costs of issu ance, are expected to be spent on Project Facilities 
+focused on the handling, sorting, processing, treatment  and recycling of ferrous scrap metals which are 
+the raw materials for the Company’s new metals recycling electric arc furnace (“ EAF”) at the Plant. The 
+liquid steel which is produced in the EAF, will sub sequently be continuously cast into solid, round 
+shapes, and then finally processed into seamless tubular products, so that end customers can convey liquid 
+materials over long distances, safely and reliably. The solid rounds are not currently produced by the 
+Company. The EAF facility, once completed, is expected to operate at a significantly higher scrap 
+recycling rate and with significantly lower emissi ons of greenhouse gas compared to the Company’s 
+existing fully integrated operations at the Plant.  Th is strategy is known as the Company’s “Best of Both” 
+whereby the Company combines the benefits of inte grated blast furnace and basic oxygen process (BOP) 
+steelmaking using iron ore and coal as common raw ma terials with those of the electric arc furnace 
+steelmaking using scrap metal as raw material to produce an optimized suite of steel products, both 
+tubular and sheet.  Currently, the Company reports a CO
+2 intensity (both Scope 1 and Scope 2) of 2.4 ton 
+CO2/ton raw steel, whereas the Company’s EAF facility of which the Project Facilities are a part will 
+have a CO 2 intensity of 0.6 tons CO 2/ton raw steel.  In addition, the Company’s current average overall 
+corporate recycling rate of steel scrap is approximately 20%-25%.  With this “Best of Both” EAF facility, 
+the Company will have a significantly higher steel r ecycling rate of 80%-90%.  The Company expects 
+that the new facility’s environmental performance will be consistent with these metrics once the start-up 
+phase is completed, which will necessarily be a tr ansitional period with some lower efficiencies 
+anticipated. 
+ The purpose of designating the Bonds as “Green B onds” is to provide investors the opportunity to 
+invest directly in bonds that are specifically targeted  to support such environmentally beneficial projects. DMEAST #42829301 v4 4 
+Because the repayment obligation of the Company with respect to the Bonds is not conditioned on 
+completion of the  Project Facilities, holders of the B onds do not assume any risk directly related to the 
+Project Facilities. 
+Process for Expenditure Evaluation and Selection 
+The Company’s Treasury department, in consultatio n with its Environmental Affairs department, 
+will select expenditures based on the eligibility criteria set forth in “Eligible Green Expenditures” above. 
+Management of Proceeds 
+The payment of principal or redemption price and interest on the Bonds will be made from the 
+Company's general funds and will not be directly linked to the performance of any eligible Green 
+Projects. 
+Reporting 
+The Company has agreed in the Ag reement to annually, not later th an 180 days after the close of 
+the Company’s fiscal year commencing with the fiscal year ending December 31, 2021, deliver a 
+certificate to the Trustee that includes a description of the costs of the Project Facilities funded with the 
+Bonds and the amount of Bond proceeds so applied and stating to the effect that no changes have been 
+made to the Project Facilities that would reasonably be expected to materially adversely affect the 
+environmental benefits of the Project Facilities. Such certificate also will be posted to the Electronic 
+Municipal Market Access (“EMMA”) website of th e Municipal Securities Rulemaking Board (“MSRB”) 
+on an annual basis not later than 180 days after th e close of the Company's fiscal year commencing with 
+the fiscal year ending December 31, 2021. Once the Company has spent all of the proceeds of the Bonds, 
+it will submit a final certificate to the Trustee, which is to be posted on EMMA  that includes a statement 
+that all of the proceeds of the Bonds have been spent. Thereafter, the Company will no longer be 
+obligated to provide the certificate to the Trustee or  to post the certificate on EMMA.  The failure of the 
+Company to comply, or to cause comp liance with, the requirements of its  obligations described in this 
+paragraph, will not be considered an Event of Default under the Agreement or the Indenture. 
+The Agreement will not require the Company to allocate amounts relating to this offering to eligible 
+Green Projects or take the other actions as described under this heading. 
+While it is the Company’s intention to allocate an amount equal to the proceeds of this offering to 
+eligible Green Projects in the manner described above under this heading and to take the other actions as 
+described hereunder, any failure to do so will not co nstitute an Event of Default under the Agreement nor 
+require the Company to purchase or redeem any of the Bonds or make any additional payments to 
+Holders or take or refrain from taking any particular action as a result thereof. Any failure to allocate 
+amounts relating to this offering to eligible Green Projects, meet or continue to meet the investment 
+requirements or aspirations of certain sustainability  focused investors, or take the other actions as 
+described above under this heading may negatively affect the market price of the Bonds to the extent 
+investors are required or choose to sell their holdings as a result of such failure. 
+SOURCE OF PAYMENT FOR THE BONDS 
+The Bonds are special and limited obligations of  the Issuer, payment of which is secured by all 
+right, title and interest of the Issuer in and to the following rights and revenues pledged to the Trustee 
+under the Indenture: (a) the Agreement to receive payment or reimbursement of certain fees and expenses, 
+to be held harmless and indemnifie d, to receive notices, and to give or withhold consent to amendments, DMEAST #42829301 v4 5 
+changes, modifications and alterations of the Agreem ent (such rights, the “Unassigned Issuer’s Rights”)); 
+and (b) (i) the Installment Payments (as defi ned below under “THE AGREEMENT – Installment 
+Payments”) required to be paid by the Compan y to purchase the Project Facilities from the Issuer 
+pursuant to the Agreement, (ii) all other moneys receive d or to be received by the Issuer or the Trustee in 
+respect of the repayment of the Bonds, (iii) all mone ys and investments in th e Bond Fund and Project 
+Fund, and (iv) all income and profit from the investment of the foregoing moneys (excluding the 
+Unassigned Issuer’s Rights and any money or investme nts in the Rebate Fund under the Indenture or any 
+moneys for the payment of the purchase price of the Bonds subject to mandatory tender for purchase as 
+described below under “DESCRIPTION OF THE BONDS – Mandatory Tender of Bonds for Purchase”) 
+(such sources in (b)(i) through (iv), the “Pledged Receipts”). 
+THE BONDS ARE SPECIAL AND LIMITED OBLIGATIONS OF THE ISSUER.  IN NO CASE 
+WILL THE BONDS REPRESENT OR CONSTITUTE A CHARGE AGAINST THE GENERAL 
+CREDIT OF THE ISSUER OR AN INDEBTEDNESS OF THE CITY, THE COUNTY, THE 
+STATE OR ANY POLITICAL SUBDIVISION OF THE STATE WITHIN THE MEANING OF 
+ANY STATE CONSTITUTIONAL PROVISION OR STATUTORY LIMITATION OR 
+CONSTITUTE OR GIVE RISE TO A PECUNIARY LIABILITY OF THE CITY, THE COUNTY 
+OR THE STATE OR ANY POLITICAL SUBDIVISION OF THE STATE OR A CHARGE 
+AGAINST THE GENERAL CREDIT OR TAXING POWER, IF ANY, OF THE ISSUER OR OF 
+THE STATE OR ANY POLITICAL SUBDIVISION OF THE STATE.  THE BONDS ARE 
+PAYABLE SOLELY FROM THE PLEDGED RECEIPTS.  THE ISSUER HAS NO TAXING 
+POWER. 
+DESCRIPTION OF THE BONDS 
+General 
+The Bonds will bear interest at the Term Interest Rate set forth on the cover page hereof for the 
+period (the “Term Interest Rate Period”) from the date of issuance thereof (the “Date of Issuance”) to but 
+not including November 1, 2030 (the “Mandatory Purc hase Date”), subject to adjustment of the Term 
+Interest Rate Period for all or a portion of the Bonds as described below under “Adjustment of Term 
+Interest Rate Period.”  The Bonds will be issued in the aggregate principal amount, will bear interest 
+payable semiannually on May 1 and November 1 of each year, commencing on May 1, 2021 (each such 
+date, together with the Mandatory Purchase Date and any Conversion Date or redemption date is herein 
+referred to as an “Interest Payment Date”), and will mature on the Maturity Date set forth on the cover 
+page hereof, subject to earlier redemption as described he rein.  Payment of defaulted interest, if any, will 
+be made to owners of record on a special record date to be fixed by the Trustee. 
+The following description of the Bonds only describes the Bonds while  they bear interest at the 
+Term Interest Rate set forth on th e cover page hereof.  If any of th e Bonds are converted to another 
+Interest Rate Period during or after the Term Interest  Rate Period, the affected Bonds must be purchased 
+from the Holders pursuant to the mandatory tender provisions of the Indenture and if such Bonds are 
+remarketed to investors at the new Interest Rate Peri od it is anticipated that a new official statement or 
+other offering document will be prepared in connection with such remarketing. 
+The Bonds will be issuable only in fully regist ered form, in denominations of $5,000 and any 
+integral multiple thereof.   
+The Bonds will bear interest, calculated on the basis of a 360-day year, comprised of twelve 30-
+day months, from the most recent date to which interest has been paid or duly provided for or, if no 
+interest has been paid or duly provided for, from the Date of Issuance. DMEAST #42829301 v4 6 
+The principal and redemption price of any Bond w ill be payable when due to the person in whose 
+name such Bond is registered (the “Holder”) on the records kept and maintained by the Registrar for 
+registration and transfer of Bonds (the “Registe r”) upon presentation and surrender of such Bond at the 
+designated office of the Trustee or at the office, desi gnated by the Trustee, of any Paying Agent. Interest 
+on any Bond will be paid on each Interest Payment Date, by check or draft mailed by the Paying Agent on 
+that date, to the person in whose name such Bond is registered at the close of business on the fifteenth day 
+of the month preceding the month in which occurs such Interest Payment Date (or, if such day is not a 
+Business Day, the immediately preceding Business Day) (each, a “Regular Record Date”) on the Register 
+at the address appearing therein. While in book-entry form, payment of interest for any Bond registered in 
+the name of CEDE & Co. will be made by wire tran sfer of immediately available funds, or any other 
+manner permitted by the Blanket Issuer Letter of Repr esentations entered into by the Issuer with DTC 
+(the “Letter of Representations”), to the account of CEDE & Co. on the Interest Payment Date or the 
+redemption date.  
+If and to the extent that the Issuer fails to make  payment or provision for payment of interest on 
+any Bond on any Interest Payment Date, that interest  will cease to be payable to the person who was the 
+Holder of that Bond as of the applicable Regular Record Date. When moneys become available for 
+payment of such interest, (a) the Trustee will, in acco rdance with the Indenture, establish a record date (a 
+“Special Record Date”) for the payment of that inter est which is not more than 15 nor fewer than 10 days 
+prior to the date of the proposed payment, and (b ) the Trustee will cause notice of the proposed payment 
+and of such Special Record Date to be sent, not fewer than 10 days prior to such Special Record Date, to 
+each Holder at its address as it appears on the Register (or, in the case of Bonds held in book-entry form, 
+in accordance with DTC’s policies and procedures) as of a date not earlier than five days prior to such 
+date of sending and, thereafter, the interest will be payable to the Holders of the Bonds (or their respective 
+predecessor Bonds) at the close of business on such Special Record Date. 
+If any Interest Payment Date, date of maturity of  the principal of any Bonds or date fixed for 
+redemption of any Bonds is a day which is a Saturday , Sunday or other day on which banks located in the 
+city or cities in which the designated offices of the Trustee or any Paying Agent are located are required 
+or authorized to close for general banking business or on which The New York Stock Exchange is closed 
+(any day which is not such a day, a “Business Day”), then payment of interest, principal or redemption 
+price need not be made by the Trustee or any Paying Agent on that date, but that payment may be made 
+on the next succeeding Business Day with the same for ce and effect as if that payment were made on the 
+Interest Payment Date, date of maturity or date fi xed for redemption, and no interest will accrue for the 
+period after that date. 
+So long as CEDE & Co. is the registered owne r of the Bonds, as nominee for The Depository 
+Trust Company, New York, New York (“DTC”), paymen ts of the principal or redemption price of, and 
+interest on the Bonds will be made directly to DTC.  Disbursement of such payments to DTC participants 
+is the responsibility of DTC and disbursement of such payments to beneficial owners is the responsibility 
+of DTC participants and indirect participants.  See “DTC AND THE BOOK-ENTRY SYSTEM” herein. 
+Adjustment of Term Interest Rate Period 
+The Company may elect that the Term Interest Rate Period be adjusted to a different Term 
+Interest Rate Period or to a Fixed Interest Rate Period for all or a portion of the Bonds on any Business 
+Day (other than the Mandatory Purchase Date) on whic h the Bonds are subject to optional redemption.  
+See the first paragraph under “Redemption” below.  The effective date of any such  adjustment is referred 
+to herein as a “Conversion Date.”  The Term Interest Rate Period is to be adju sted to a different Term 
+Interest Rate Period or to a Fixed Interest Ra te Period on the Mandatory Purchase Date, which is 
+November 1, 2030.  The Bonds so adjusted shall be subject to mandatory tender for purchase on the DMEAST #42829301 v4 7 
+Conversion Date and on the Mandatory Purchase Date (see “Mandatory Tender of Bonds for Purchase” 
+below). 
+The Trustee shall give notice of the proposed adjustments described in the immediately preceding 
+paragraph to the Holders by mail (or, so long as all of the Bonds are registered in the name of DTC or any 
+nominee thereof, to DTC in accordan ce with the Letter of Representations) not less than fifteen (15) 
+calendar days prior to the proposed Conversion Date.  Such notice shall state (i) that the Term Interest 
+Rate Period will be adjusted for all or a portion of the Bonds to a Fixed Interest Rate Period or a different 
+Term Interest Rate Period, as applicable, (ii) th e Conversion Date or the Mandatory Purchase Date, as 
+applicable, (iii) that the Holders are required to  tender their Bonds for mandatory purchase on such 
+Conversion Date or the Mandatory  Purchase Date, as applicable, as described under “Mandatory Tender 
+of Bonds for Purchase” below, (iv) the procedures for such purchase and (v) the principal amount and the 
+Interest Rate Period for the Bonds to be adjusted, in cluding, if applicable, the CUSIP number or letter and 
+numerical designator of such Bonds. 
+The Company may rescind any election by it of an adjustment of the Term Interest Rate Period 
+for all or a portion of the Bonds as described above  prior to the proposed Conversion Date on which the 
+new Interest Rate Period was to begin by giving wri tten notice thereof to the Trustee, the Tender Agent 
+and the Remarketing Agent prior to such proposed Conversion Date.  If notice of such rescission is given 
+before the Holders have been no tified as described above, then the election by the Company shall be 
+deemed rescinded and of no force or effect.  If the notice of such rescission is given after the Holders 
+have been so notified or if the notice of rescission does not become effective for any reason, then the 
+affected Bonds shall be purchased on such proposed Conversion Date a nd shall be in the Term Interest 
+Rate Period on such proposed Conversion Date and bear  such interest as estab lished by the Remarketing 
+Agent in accordance with the provisions of the Indenture. 
+Redemption 
+Optional Redemption at the Make-Whole Redemption Price.  During the Term Interest Rate 
+Period, the Bonds are subject to optional redemption at any time, in whole or in part, in such amounts as 
+may be specified by the Company, at a redemption price calculated by the Quotation Agent (as defined 
+below), equal to the greater of: 
+(a) 100% of the principal amount of the B onds to be redeemed, plus accrued and 
+unpaid interest to, but not including, the date fixed for redemption; or 
+(b) an amount calculated by the Quotation Agent and provided in writing to the 
+Trustee equal to the sum of the present values of the remaining unpaid payments of principal and 
+interest to be paid on the Bonds to be redeemed, from and including the date fixed for redemption 
+to the Mandatory Purchase Date, discounted from th e scheduled due dates for such payments to, 
+but not including, the date fixed for redemption on a semiannual basis at a discount rate equal to 
+the Applicable Tax-Exempt Municipal Bond Rate  (as defined below) for the Bonds to be 
+redeemed. 
+“Applicable Tax-Exempt Municipal Bond Rate” means the “Comparable AAA General 
+Obligations” (as defined below) yield curve rate for the Maturity Date of the Bonds (assuming that on the 
+Maturity Date the principal of the Bonds is payable at 100%) published by Municipal Market Data 
+(“MMD”) five Business Days prior to the date fixed for redemption.  If no su ch yield curve rate is 
+established for the applicable year, the “Comparabl e AAA General Obligations” yield curve rate for the 
+two published maturities most closely corresponding to  the applicable year will be determined, and the 
+“Applicable Tax-Exempt Municipal Bond Rate” will be  interpolated or extrapolated from those yield DMEAST #42829301 v4 8 
+curve rates on a straight-line basis.  This rate is made available by MMD and is available to its subscribers 
+at: www.tm3.com.  In calculating the Applicable Tax-Exempt Municipal Bond Rate, if MMD no longer 
+publishes the “Comparable AAA General Obligations” yiel d curve rate, then the Applicable Tax-Exempt 
+Municipal Bond Rate will equal the Municipal Market Advisors Consensus Municipal yield curve rate for 
+the applicable year.  The Consensus Municipal yield curve rates are made available daily by Municipal 
+Market Analytics, Inc. through Bloomberg (Comma nd Prompt: CMMA).  In the further event that 
+Municipal Market Analytics, Inc. no longer publis hes the Consensus Municipal yield curve rate, the 
+Applicable Tax-Exempt Municipal Bond Rate will be determined by the Quotation Agent, based upon the 
+rate per annum equal to the semiannual equivalent yield to maturity of those tax-exempt general 
+obligation bonds rated in the highest rating category by Moody’s Investors Service, Inc. and S&P Global 
+Ratings with a maturity date equal to the Maturity Da te of the Bonds (assuming that on the Maturity Date 
+the principal of the Bonds is payable at 100%) and ha ving characteristics (other than the rating) most 
+comparable to the Bonds to be redeemed, in the judgment of the Quotation Agent. 
+“Quotation Agent” means BofA Securities, Inc. or  such other bank, underwriter or other financial 
+institution selected by the Company. 
+Extraordinary Optional Redemption.  The Bonds are subject to  extraordinary optional 
+redemption at the option of the Company, in whole or in part, at any time, at a redemption price equal to 
+the principal amount of the Bonds redeemed, plus inter est accrued thereon to, but not including, the date 
+fixed for redemption, upon the occurrence of any of the following circumstances: 
+(a) Damage or destruction to any of the Pr oject Facilities or the Plant to such extent 
+that, in the opinion of both the Company’s Board of Directors (expressed in a resolution) and an 
+architect or engineer (expressed in a written stat ement) selected by the Company, both filed with 
+the Trustee, (A) the Plant or such Project Facilities, as the case may be, cannot be reasonably 
+repaired, rebuilt or restored within a period of six months to its or their condition immediately 
+preceding such damage or destruction, or (B) the Company is thereby prevented from carrying on 
+its normal operations at the Plant for a period of six months; 
+(b) Loss of title to or use of a substantial part of the Plant that is, or of any Project 
+Facilities that are, at the time of such loss of title or loss of use owned and operated by the 
+Company as a result of the exercise of the power of eminent domain which, in the opinion of both 
+the Company’s Board of Directors (expressed in a resolution) and an architect or engineer 
+(expressed in a written statement) selected by the Company, both filed with the Trustee, results or 
+is likely to result in the Company being there by prevented from carrying on its normal operations 
+at the Plant for a period of six months;  
+(c) A change in the Constitution of the State or of the United States of America or 
+legislative or administrative action (whether local, state or federal) or a final decree, judgment or 
+order of any court or administrative body (wheth er local, state or federal) which causes the 
+Agreement to become void or unenforceable or impossible of performance in accordance with the 
+intent and purpose of the parties as expressed therein or unreasonable burdens or excessive 
+liabilities to be imposed upon the Issuer or the Comp any with respect to the Plant or any Project 
+Facilities or the operation thereof; or  
+(d) The Company has notice or actual k nowledge that proceeds of the Bonds, 
+including income from the investment thereof, re main in the Project Fund after completion of the 
+acquisition, construction, equipping and installation of the Project Facilities and the payment of 
+all costs thereof and of the issuance of the Bonds. DMEAST #42829301 v4 9 
+Anything in (a) or (b) above to the contrary notw ithstanding, if any of the events described in (a) 
+and (b) above occur with respect to part, but not all,  of the Project Facilities, the amount of Bonds that 
+may be redeemed shall not exceed an amount derive d by multiplying the total principal amount of the 
+Bonds by a fraction (i) the numerator of which is the cost of the affected portion of the Project Facilities 
+and (ii) the denominator of which is the total cost of the Project Facilities.  With respect to the event 
+described in (d) above, the principal amount of Bonds  that may be redeemed shall not exceed a principal 
+amount equal to the lowest amount divisible by $5,000 equal to or in excess of the remaining proceeds of 
+the Bonds, including income from the investment thereof, and such redemption shall occur within 90 
+calendar days of the Company’s having notice or  actual knowledge of such excess proceeds, including 
+investment income therefrom. 
+Extraordinary Mandatory Redemption .  The Bonds are subject to extraordinary mandatory 
+redemption at any time, in whole (or in part, if in the Opinion of Nationally Recognized Bond Counsel (as 
+defined below), such partial redemption will preserve  the exclusion from gross income for federal tax 
+purposes of interest on the Bonds remaining outstanding after such redemption) at a redemption price of 
+100% of the principal amount thereof, plus accrued interest to, but not including, the date fixed for 
+redemption, (a) if it is finally determined by the Internal Revenue Service or a court of competent 
+jurisdiction that the interest payable on the Bonds is  includable in the gross income of any owner thereof 
+for federal income tax purposes (other than an owner who is a “substantial user” of the Project Facilities 
+or a “related person,” as such terms are used in Secti on 147(a) of the Internal Revenue Code of 1986, as 
+amended, and regulations a nd rulings applicable thereto (the “Code” )), because of a failure to satisfy the 
+provisions of Section 103 or related sections of the Code, or but for such redemption would be so 
+includable, or receipt by the Trustee of an Opinion of Nationally Recognized Bond Counsel to such effect 
+obtained by the Company and rendered at the request of the Company or (b) at such time and to the extent 
+that the Company notifies the Trustee in writing that th e Project Facilities that are still in use at such time 
+are no longer being operated as qualifying exempt fa cilities under the Code (unless such facilities have 
+simply ceased to be operated).  “Opinion of Nationa lly Recognized Bond Counsel” means a legal opinion 
+of an attorney at law or firm of attorneys of nati onally recognized standing in matters pertaining to the 
+exclusion from gross income under federal tax law of interest on bonds issued by states and political 
+subdivisions, and duly admitted to practice law before the highest court of any state of the United States 
+of America. 
+With respect to clause (a) of the immediately preceding paragraph, any such determination will 
+not be considered final for this purpose unless the Co mpany has been given written notice thereof and, if 
+it so desires, has been affo rded the opportunity to contest the same, either directly or in the name of any 
+owner of Bonds and until a conclusi on of any appellate review, if sought.  Any action by the Company to 
+contest any determination either by the Internal Reve nue Service or a court of competent jurisdiction that 
+the interest payable on the Bonds is includable in th e gross income of any owner of a Bond for federal 
+income tax purposes (other than an owner who is a “substantial user” of the Project Facilities or a “related 
+person,” as such terms are used in Section 147(a) of the Code), either final or otherwise, shall be 
+undertaken with due diligence and dispatch.  The Bonds  shall be redeemed in whole after such final 
+determination or delivery of such Opinion of Nati onally Recognized Bond Counsel to the Trustee unless 
+the redemption of a portion of the Bonds outstanding w ould have the result that interest payable on the 
+Bonds remaining outstanding after such redemption w ould not be includable in the gross income of any 
+owner of a Bond for federal income tax purposes (other than an owner who is a “substantial user” of the 
+Project Facilities or a “related person,” as such terms ar e used in Section 147(a) of the Code), and in such 
+event the Bonds shall be redeemed by lot, or in  any other manner as the Trustee shall reasonably 
+determine, in such amount as to accomplish that result or, with respect to Bonds held in book-entry form, 
+in accordance with DTC’s policies and procedures.  A ny such redemption shall be made on the earlier of 
+(i) the 120th day after the date such determination b ecomes final or (ii) the date of delivery of such DMEAST #42829301 v4 10 
+Opinion of Nationally Recognized Bond Counsel to the Trustee, or on such earlier date as the Company 
+may designate in writing. 
+With respect to clause (b) of the second preceding paragraph, any such redemption shall be made 
+on or before the 90th day after the date the Project  Facilities are no longer bei ng operated as qualifying 
+exempt facilities under the Code (unless such facilities have simply ceased to be operated), or such later 
+date as may be provided for by the Company.  If the Company shall have provided for a later redemption 
+date, the Company will cause to be delivered to the Trustee an Opinion of Nationally Recognized Bond 
+Counsel to the effect that redemption made on such la ter date will not adversely affect the exclusion from 
+gross income of interest on the Bonds for federal income tax purposes.  The Bonds shall be redeemed by 
+lot, or in any other manner as the Trustee shall reasona bly determine, or, with respect to Bonds held in 
+book-entry form, in accordance with DTC’s policies and procedures, in such amount as to accomplish 
+such extraordinary mandatory redemption. 
+Selection of Bonds for Redemption .  If less than all of the Bonds are called for redemption, the 
+Trustee shall select the Bonds to be redeemed by lot or in any other manner which the Trustee may 
+reasonably determine or, with respect to Bonds he ld in book-entry form, in accordance with DTC’s 
+policies and procedures.  All or a portion of any B ond may be redeemed, but only in a principal amount 
+equal to $5,000 or any integral multiple thereof.  In the case of a par tial redemption of Bonds by lot when 
+Bonds of denominations greater than $5,000 are then outstanding, each $5,000 unit of face value of 
+principal thereof shall be treated as though it were a separate Bond of the denomination of $5,000. 
+Notice of Redemption.  Notice of redemption will be given by the Trustee by sending a copy of 
+the redemption notice at least 30 calendar days prior to  the redemption date, to the Holder of each Bond 
+subject to redemption in whole or in part at the Holder’s address shown on the Register on the fifth day 
+preceding the sending of such notice, provided that failure  to receive notice, or any defect in that notice, 
+as to any Bond shall not affect the validity of the proceedings for the redemption of any other Bond.  Such 
+notice shall (a) specify, among other things, the B onds to be redeemed, their CUSIP numbers, the 
+redemption date, the redemption price and the place or places where amounts due upon such redemption 
+will be payable and, if less than all of the Bonds are to be redeemed, the num bers of the Bonds, and the 
+portions of the Bonds to be redeemed, (b) state an y condition to redemption, and (c) state that on the 
+redemption date, and upon the satisfaction of any condition, the Bonds or portions thereof to be redeemed 
+shall cease to bear interest and that a new Bond maturing on the same date and bearing interest at the 
+same rate and in the same principal amount as the unredeemed portion of any Bond redeemed only in part 
+will be registered in the name of and returned to the Holder of any such Bond in exchange therefor.   
+SO LONG AS THE BOOK-ENTRY SYST EM IS USED FOR DETERMINING 
+BENEFICIAL OWNERSHIP OF THE BONDS, THE NOTICE OF REDEMPTION FOR THE 
+BONDS WILL BE GIVEN TO CEDE & CO. AS REGISTERED OWNER OF THE BONDS.  
+NEITHER FAILURE TO RECEIVE SUCH NOTICE NOR ANY DEFECT IN ANY NOTICE SO 
+GIVEN SHALL AFFECT THE SUFFICIEN CY OF THE PROCEEDINGS FOR THE 
+REDEMPTION OF THE BONDS. 
+Effect of Redemption.  Notice of redemption having been given as described above, and moneys 
+for the payment of the redemption price being held in trust to pay the redemption price of the Bonds or 
+portions thereof so called for redemption, the Bonds or portions thereof so called for redemption shall 
+become and be due and payable on such redemption da te, interest thereon shall cease to accrue, such 
+Bonds or portions thereof shall cease to be entitled to any lien, benefit or security under the Indenture and 
+the Holders of the Bonds shall have no rights in respect thereof except to receive payment of the 
+redemption price. DMEAST #42829301 v4 11 
+Purchase in Lieu of Redemption .  The Company may cause the Bonds (or a portion thereof) to 
+be purchased in lieu of any optional redemption of the Bonds as described above under “DESCRIPTION 
+OF THE BONDS – Redemption – Optional Redemption at the Make-Whole Redemption Price .”  Such 
+option shall be exercised by the Company delivering to the Trustee on or prior to the Business Day 
+preceding the redemption date a written direction specify ing that such Bonds sha ll not be redeemed, but 
+instead shall be subject to mandatory tender for purchase.  Upon delivery of such notice, the Bonds 
+specified therein shall not be redeem ed but shall instead be subject to  mandatory tender for purchase at a 
+purchase price equal to the redemption price at whic h the Bonds would have been redeemed had they 
+been redeemed, rather than tendered for mandatory purchase, on the date that would have been the 
+redemption date.  Following such purchase, the Trust ee shall cause the Bonds to be registered upon the 
+direction of the Company and deliver such Bonds as directed by the Company and the Bonds shall bear 
+interest at a Term Interest Rate determined by the Remarketing Agent for a Term Interest Rate Period 
+designated by the Company until the end of such Term Interest Rate Period or until a date designated by 
+the Company at which such Bonds shall be tende red for mandatory purch ase in accordance with the 
+provisions of the Indenture. The Company has agreed in the Agreement to pay or cause to be paid any 
+such purchase price in immediately available funds to  the Trustee or the Tender Agent, as the case may 
+be, by 4:00 p.m., New York City time, on each da y on which such a payment is due and that such 
+obligation will be absolute and uncondi tional. No purchase in lieu of re demption of the Bonds by or on 
+behalf of the Company shall be deemed to be a payment or redemption of the Bonds or any portion 
+thereof, and such purchase shall not operate to extingu ish or discharge the indebtedness evidenced by the 
+Bonds. 
+Mandatory Tender of Bonds for Purchase 
+Mandatory Tender for Purchase on Mandatory Purchase Date 
+All of the Bonds shall be subject to mandato ry tender for purchase on the Mandatory Purchase 
+Date at a purchase price equal to 100% of the princi pal amount thereof plus accrued and unpaid interest 
+thereon, if any. 
+Mandatory Tender for Purchase on Conversion Date 
+Each Bond shall be subject to mandatory tender for purchase on the Conversion Date, if any, for 
+such Bond at a purchase price equal to the redempti on price payable on such Bond if such Bond were 
+being redeemed pursuant to the provisions described above under “DESCRIPTION OF THE BONDS – 
+Redemption – Optional Redemption at the Make-Whole Redemption Price.” 
+Conditions Applicable to Mandatory Tenders 
+With respect to a mandatory tender: 
+(i) Not less than 15 calendar days prior to th e Mandatory Purchase Date or Conversion Date, 
+as applicable, of Bonds, the Trustee shall give notice to each Holder of affected Bonds of the mandatory 
+tender of such Bonds and that interest will cease to accrue on such Bonds to such Holder on and after the 
+Mandatory Purchase Date or Conversion Date, as a pplicable, provided funds for such purchase are on 
+deposit with the Trustee or the Tender Agent, as th e case may be (the “Notice of Mandatory Tender”), 
+and the Holder of each Bond to be purchased shall tender such Bond for purchase and such Bond shall be 
+purchased or deemed purchased pursuant to the Indenture at the applicable purchase price. 
+(ii)  Payment of the applicable purchase price of each such Bond shall be made by 4:30 p.m. 
+(New York City time), in the same manner as payment of  interest on the Bonds, to the Owner of record.  DMEAST #42829301 v4 12 
+The tendering Direct Participant shall transfer, on the registration books of DTC, the beneficial ownership 
+interests in such Bonds tendered for purchase to the account of the Trustee or a Direct Participant acting 
+on behalf of the Trustee.  
+(iii) The failure to provide the Notice of Mandato ry Tender with respect to any Bond shall not 
+affect the validity of the mandatory tender for pur chase of any other Bond with respect to which notice 
+was so given.  Any notice mailed (or given to DTC in accordance with the Letter of Representations) will 
+be conclusively presumed to have been given, whet her or not actually received by any Holder, Direct 
+Participant or Beneficial Owner. 
+The Indenture contemplates that the Company will  retain a Remarketing Agent, and that the 
+Remarketing Agent will attempt to remarket the Bonds on the Mandatory Purchase Date or Conversion 
+Date, as applicable. In the event that the Remarketing Agent is unable to remarket the Bonds, the 
+Company will be obligated to pay the applicable pur chase price of the Bonds on the Mandatory Purchase 
+Date or Conversion Date, as applicable.  No Letter of Credit or other credit or liquidity facility will be 
+provided to support the payment of the purchase price on the Mandatory Purchase Date or Conversion 
+Date, as applicable, for the Bonds. 
+No Additional Bonds 
+No additional bonds or series of bonds may be issued under the Indenture. 
+DTC AND THE BOOK–ENTRY SYSTEM 
+The following information about DTC and the book-entry only system applicable to the Bonds 
+has been supplied by DTC.  None of the Issuer, the Company, the Underwriters (as defined below), the 
+Trustee or the Paying Agent makes any representations , warranties or guarantees with respect to its 
+accuracy or completeness. 
+The Depository Trust Company (“DTC”), New Yo rk, New York, will act as securities depository 
+for the Bonds.  The Bonds will be issued as fully -registered securities registered in the name of 
+CEDE & Co. (DTC’s partnership nominee) or such ot her name as may be requested by an authorized 
+representative of DTC.  One fully-registered Bond certificate will be issued for the Bonds in the aggregate 
+principal amount of the issue and will be deposited with the Trustee as custodian for DTC.   
+DTC, the world’s largest securities depository, is a limited-purpose trust company organized 
+under the New York Banking Law, a “banking organization” within the meaning of the New York 
+Banking Law, a member of the Federal Reserve System , a “clearing corporation” within the meaning of 
+the New York Uniform Commercial Code, and a “clearing agency” registered pursuant to the provisions 
+of Section 17A of the Securities Exchange Act of 1934. DTC holds and provides asset servicing for over 
+3.5 million issues of U.S. and non-U.S. equity issues, corporate and municipal debt issues, and money 
+market instruments (from over 100 countries) that DTC’s participants (“Direct Participants”) deposit with 
+DTC. DTC also facilitates the post-trade settlemen t among Direct Participants of sales and other 
+securities transactions in deposited securities, through electronic computerized book-entry transfers and 
+pledges between Direct Participants’ accounts. This eliminates the need for physical movement of 
+securities certificates. Direct Participants include bot h U.S. and non-U.S. securities brokers and dealers, 
+banks, trust companies, clearing corporations, and ce rtain other organizations.  DTC is a wholly-owned 
+subsidiary of The Depository Trust & Clearing Cor poration (“DTCC”).  DTCC is the holding company 
+for DTC, National Securities Clearing Corporation and Fixed Income Clearing Corporation, all of which 
+are registered clearing agencies.  DTCC is owned by th e users of its regulated subsidiaries.  Access to the 
+DTC system is also available to others such as both U.S. and non-U.S. securities brokers and dealers, DMEAST #42829301 v4 13 
+banks, trust companies, and clearing corporations that  clear through or maintain a custodial relationship 
+with a Direct Participant, either directly or indir ectly (“Indirect Participants”).  DTC has a Standard & 
+Poor’s rating of AA+.  The DTC Rules applicable to its Participants are on file with the Securities and 
+Exchange Commission.  More information about DTC can be found at www.dtcc.com. 
+Purchases of Bonds under the DTC system must be  made by or through Direct Participants, 
+which will receive a credit for the Bonds on DTC’s records.  The ownership interest of each actual 
+purchaser of each Bond (“Beneficial Owner”) is in turn to be recorded on the Direct and Indirect 
+Participants’ records.  Beneficial Owners will not receive written confirmation from DTC of their 
+purchase.  Beneficial Owners are, however, expected to receive written confirmations providing details of 
+the transaction, as well as periodic statements of th eir holdings, from the Direct or Indirect Participant 
+through which the Beneficial Owner entered into the tr ansaction.  Transfers of ownership interests in the 
+Bonds are to be accomplished by entries made on the books of Direct and Indirect Participants acting on 
+behalf of Beneficial Owners.  Beneficial Owners w ill not receive certificates representing their ownership 
+interests in Bonds, except in the event that use of the book-entry system for the Bonds is discontinued. 
+To facilitate subsequent transfers, all Bonds de posited by Direct Participants with DTC are 
+registered in the name of DTC’s partnership nom inee, CEDE & Co., or such other name as may be 
+requested by an authorized representative of DTC.  The deposit of Bonds with DTC and their registration 
+in the name of CEDE & Co. or such other DTC nominee do not effect any change in beneficial 
+ownership.  DTC has no knowledge of the actual Benefi cial Owners of the Bonds; DTC’s records reflect 
+only the identity of the Direct Participants to whose accounts the Bonds are credited, which may or may 
+not be the Beneficial Owners.  The Direct and Indirect Participants will remain responsible for keeping 
+account of their holdings on behalf of their customers. 
+Conveyance of notices and other communications by DTC to Direct Participants, by Direct 
+Participants to Indirect Participants, and by Direct Participants and Indirect Participants to Beneficial 
+Owners will be governed by arrangements among them, subject to any statutory or regulatory 
+requirements as may be in effect from time to time.  Beneficial Owners of Bonds may wish to take certain 
+steps to augment the transmission to them of notices of significant events with respect to the Bonds, such 
+as redemptions, tenders, defaults, and proposed amen dments to the Bond documents.  For example, 
+Beneficial Owners of Bonds may wish to ascertain that the nominee holding the Bonds for their benefit 
+has agreed to obtain and transmit notices to Beneficial Owners. 
+Redemption notices shall be sent to DTC.  If l ess than all of the Bonds are being redeemed, 
+DTC’s practice is to determine by lot the amount of the interest of each Direct Participant to be redeemed. 
+Neither DTC nor CEDE & Co. (nor any other DTC nominee) will consent or vote with respect to 
+Bonds unless authorized by a Direct Participant in accordance with DTC’s MMI Procedures.  Under its 
+usual procedures, DTC mails an Omnibus Proxy to the Issuer as soon as possible after the record date.  
+The Omnibus Proxy assigns CEDE & Co.’s consenting or voting rights to those Direct Participants to 
+whose accounts Bonds are credited on the record date (identified in a listing attached to the Omnibus 
+Proxy). 
+Redemption proceeds, distributions, and inter est payments on the Bonds will be made to 
+CEDE & Co., or such other nominee as may be requested by an authorized representative of DTC.  
+DTC’s practice is to credit Direct Participants’ accounts upon DTC’s receipt of funds and corresponding 
+detail information from the Issuer or the Paying Agent, on payable dates in accordance with their 
+respective holdings shown on DTC’s records.  Payments  by Participants to Beneficial Owners will be 
+governed by standing instructions and customary pr actices, as is the case with Bonds held for the 
+accounts of customers in bearer form or registered in “street name,” and will be the responsibility of such DMEAST #42829301 v4 14 
+Participant and not of DTC, the Trustee, the Paying Agent, or the Issuer, subject to any statutory or 
+regulatory requirements as may be in effect from time to time.  Payment of redemption proceeds, 
+distributions, and interest payments to CEDE & Co. (or such other nominee as may be requested by an 
+authorized representative of DTC) is the responsibility of  the Issuer or the Paying Agent, disbursement of 
+such payments to Direct Participants will be the responsibility of DTC, and disbursement of such 
+payments to the Beneficial Owners will be the responsibility of Direct and Indirect Participants. 
+DTC may discontinue providing its services as depository with respect to the Bonds at any time 
+by giving reasonable notice to the Issuer or the Payi ng Agent.  Under such circumstances, in the event 
+that a successor depository is not obtained, Bond certificates are required to be printed and delivered. 
+The Issuer may decide to discontinue use of the system of book-entry-only transfers through DTC 
+(or a successor securities depository). In that event, Bond certificates will be printed and delivered to the 
+Holders. 
+NEITHER THE ISSUER, THE TRUSTEE NOR THE PAYING AGENT WILL HAVE ANY 
+RESPONSIBILITY OR OBLIGATION TO ANY DIRECT PARTICIPANT, INDIRECT 
+PARTICIPANT OR ANY BENEFICIAL OWNER OR ANY OTHER PERSON NOT SHOWN ON THE 
+REGISTER AS BEING A HOLDER WITH RESPECT TO: (1) THE BONDS; (2) THE ACCURACY 
+OF ANY RECORDS MAINTAINED BY DTC OR ANY DIRECT PARTICIPANT OR INDIRECT 
+PARTICIPANT; (3) THE PAYMENT BY DTC OR ANY DIRECT PARTICIPANT OR INDIRECT 
+PARTICIPANT OF ANY AMOUNT DUE TO ANY BENEFICIAL OWNER IN RESPECT OF THE 
+PRINCIPAL OR REDEMPTION PRICE OF OR INTEREST ON THE BONDS; (4) THE DELIVERY 
+BY ANY DIRECT PARTICIPANT OR INDI RECT PARTICIPANT OF ANY NOTICE TO ANY 
+BENEFICIAL OWNER WHICH IS REQUIRED OR PERMITTED UNDER THE TERMS OF THE 
+INDENTURE TO BE GIVEN TO HOLDERS; (5) THE SELECTION OF THE BENEFICIAL OWNERS 
+TO RECEIVE PAYMENT IN THE EVENT OF A NY PARTIAL REDEMPTION OF THE BONDS; OR 
+(6) ANY CONSENT GIVEN OR OTHER ACTION TAKEN BY DTC AS HOLDER. 
+THE ISSUER, THE COMPANY, THE TRUSTEE AND PAYING AGENT CANNOT AND DO 
+NOT GIVE ANY ASSURANCES THAT THE DIRECT PARTICIPANTS OR THE INDIRECT 
+PARTICIPANTS WILL DISTRIBUTE TO THE BENEFICIAL OWNERS OF THE BONDS 
+(i) PAYMENTS OF PRINCIPAL OF OR INTER EST ON THE BONDS, (ii) BONDS REPRESENTING 
+AN OWNERSHIP INTEREST OR OTHER CONFIRMATION OF BENEFICIAL OWNERSHIP 
+INTERESTS IN THE BONDS OR (iii) REDEMPTION OR OTHER NOTICES SENT TO DTC OR 
+CEDE & CO., ITS NOMINEE, AS THE REGISTERED OWNERS OF THE BONDS, OR THAT THEY 
+WILL DO SO ON A TIMELY BASIS OR THAT DTC, DIRECT PARTICIPANTS OR INDIRECT 
+PARTICIPANTS WILL SERVE AND ACT IN THE MANNER DESCRIBED IN THIS OFFICIAL 
+STATEMENT.  THE CURRENT “RULES” APPLICABLE TO DTC ARE ON FILE WITH THE 
+SECURITIES AND EXCHANGE COMMISSION, AND THE CURRENT “PROCEDURES” OF DTC 
+TO BE FOLLOWED IN DEALING WITH DIRECT PARTICIPANTS ARE ON FILE WITH DTC. 
+THE AGREEMENT 
+Certain provisions of the Agreement are describe d below.  Reference is made to the Agreement 
+for the detailed provisions thereof. 
+Installment Payments 
+The Company will agree to make installment pa yments (the “Installment Payments”) on each 
+date on which any payment of principal or redemption price of, or interest on the Bonds is due, whether at DMEAST #42829301 v4 15 
+maturity, upon redemption or acceleration or otherwise.  All such Installment Payments will be paid to the 
+Trustee, for the account of the Issuer, and will be in an amount which, together with other moneys held by 
+the Trustee under the Indenture and available theref or, will enable the Trustee to make payment of 
+principal or redemption price of, or interest on the Bonds to the Holders in full in a timely manner. 
+Purchase Price Payments 
+The Company has agreed in the Agreement to pay the purchase price of all Bonds upon the 
+Mandatory Purchase Date or any Conversion Date, as a pplicable, to the extent remarketing proceeds have 
+not been furnished to the Trustee by 11 a.m. New York City time on each such  Mandatory Purchase Date 
+or Conversion Date, as applicable (the “Purchase Price Payments”). 
+Obligations Unconditional 
+The obligation of the Company to make the Installment Payments and the Purchase Price 
+Payments required under the Agreement and to perfo rm and observe the other agreements on its part 
+contained in the Agreement will be, absolute an d unconditional and the Company will make such 
+payments without abatement, diminution or de duction regardless of any cause or circumstance 
+whatsoever, including, without limitation, damage, dest ruction or condemnation of the Project Facilities 
+(the risk of which shall be borne exclusively by the Company). 
+Term of Agreement 
+The term of the Agreement will continue until such time as all of the outstanding Bonds are fully 
+paid (or provision made for such payment) pursuant to the Indenture and all other sums payable under the 
+Agreement are fully paid. 
+Tax Covenants 
+The Company will represent that it has taken and caused to be taken, and will covenant that it will 
+take and cause to be taken, all actions that may be re quired of it, alone or in conjunction with the Issuer, 
+for the interest on the Bonds to be and to remain excludable from gross income for federal income tax 
+purposes, and will represent that it has not taken or pe rmitted to be taken on its behalf, and will covenant 
+that it will not take or permit to be taken on its behalf, any action that would adversely affect such 
+excludability under the provisions of the Code. 
+The Company will covenant that it will restrict the investment and reinvestment and the use of the 
+proceeds of the Bonds in such manner and to such ex tent, if any, as may be necessary so that the Bonds 
+will not constitute arbitrage bonds under Section 148 of the Code. 
+The Company will covenant that on or before the 90
+th day following the date any of the Project 
+Facilities are no longer being operated as qualifying exempt facilities under the Code (unless such 
+facilities have simply ceased to be operated), or such later date as provided in the Indenture, the Company 
+shall cause a related amount of Bonds to be rede emed pursuant to the extraordinary mandatory 
+redemption provision of the Bonds described  above under “DESCRIPTION OF THE BONDS – 
+Redemption – Extraordinary Mandatory Redemption.” 
+Completion of Project Facilities 
+The Company will represent that the acquisition, construction, equipping and installation of the 
+Project Facilities will be completed and that the pro ceeds of the Bonds, including any investment thereof, DMEAST #42829301 v4 16 
+will be expended in accordance with the provisions of  all bond authorizations, security and tax regulatory 
+agreements and certificates executed in respect of th e Bonds and in respect of the installation, operation 
+and use of the Project Facilities. 
+Mergers or Consolidations 
+The Company will covenant that it will not merge or consolidate with any other legal entity or 
+sell or convey all or substantially all of its assets to any other legal entity, except that the Company may 
+merge or consolidate with, or sell or convey all or substantia lly all of its assets to any other legal entity, 
+provided that (a) the Company is the continuing legal entity or the succes sor legal entity (if other than the 
+Company) is a legal entity organized and existing unde r the laws of the United States of America or a 
+state thereof, qualified to do business in the State,  and such legal entity expressly assumes the due and 
+punctual payment of the Installment Payments, the Purchase Price Payments and any additional 
+payments, and the due and punctual performance and observance of all the cove nants and conditions of 
+the Agreement to be performed by the Company (a n “Assumption Agreement”) and (b) the Company or 
+such successor legal entity, as the case may be, will not, immediately after such merger or consolidation, 
+or such sale or conveyance, be in default in the performance of any such covenant or condition and no 
+event which with the lapse of time, the giving of no tice or both would constitute an Event of Default 
+under the Agreement has occurred and is continuing. 
+The Company will, within 30 days after the execu tion of an Assumption Agreement, furnish to 
+the Issuer and the Trustee an executed copy of such Assumption Agreement and the appropriate 
+documentation demonstrating that the successor legal entity (if other than the Company) is organized and 
+existing under the laws of the United States of America or a state thereof and is qualified to do business in 
+the State. 
+Upon any such consolidation, merger, sale or conveyance and the assumption by the successor 
+legal entity of the obligations under the Agreement and on the Bonds, such successor legal entity will 
+succeed to and be substituted for the Company under the Agreement, and the Company will thereupon be 
+relieved of any further obligations or liabilities under the Agreement and upon the Bonds and the 
+Company as the predecessor legal entity may thereupon or at any time thereafter be dissolved, wound-up 
+or liquidated. 
+Assignment 
+The rights granted to the Company under the Agre ement may be assigned in whole or in part by 
+the Company without the necessity of obtaining the consent of the Issuer or the Trustee, provided, among 
+other things, that (a) the Company remains primarily li able for all of its obligations under the Agreement, 
+including the payment of the Installment Payments , Purchase Price Payments and other payments due 
+under the Agreement and for the performance and observance of its other agreements under the 
+Agreement, (b) the Company retain s such rights and interests as will permit the Company to perform its 
+obligations under the Agreement and (c) any such assignm ent will not materially impair fulfillment of the 
+purposes to be accomplished by operation of the Project  Facilities as a project the financing of which is 
+permitted under the Act. 
+Events of Default 
+The following are defined as “Events of Default” under the Agreement: DMEAST #42829301 v4 17 
+(a) Failure by the Company to pay any Installment Payment, Purchase Price 
+Payment or additional payment on each date on wh ich that Installment Payment, Purchase Price 
+Payment or additional payment is due and payable; 
+(b) Failure by the Company to observe and perform any other covenant, condition or 
+agreement on its part to be observed or perfo rmed under the Agreement (other than certain 
+representations, warranties and covenants regarding various matters relating to the tax status of 
+the interest on the Bonds) and the continuation of such failure for a period of 60 days after written 
+notice of such failure is given to the Company by  the Issuer or the Trustee, or for such longer 
+period as the Issuer and the Trustee may agree to in writing; provided that if the failure stated in 
+the notice cannot be corrected with in the applicable period, that failure will not constitute an 
+Event of Default so long as the Company institute s curative action within the applicable period 
+and diligently pursues that action to completion; 
+(c) The dissolution or liquidation of the Company or the voluntary initiation by the 
+Company of any proceeding under any federal or state law relating to bankruptcy, insolvency, 
+arrangement, reorganization, readju stment of debt or any other form of debtor relief, or the 
+initiation against the Company of any such pr oceeding which shall remain undismissed for 
+60 days, or failure by the Company to promptly  have discharged any execution, garnishment or 
+attachment of such consequence as would materia lly impair the ability of the Company to carry 
+on its operations, or assignment by the Company for the benefit of creditors, or the entry by the 
+Company into an agreement of composition with  creditors or the failure generally by the 
+Company to pay its debts as they become due; or 
+(d) The occurrence of an Event of Default under the Indenture.  See “THE 
+INDENTURE – Events of Default and Remedies.” 
+Any declaration of default under subparagraph (c ) above and the exercise of remedies upon any 
+such declaration will be subject to any applicable  limitations of federal bankruptcy law affecting or 
+precluding that declaration or exercise during the pendency of or immediately following any bankruptcy, 
+liquidation or reorganization proceedings. 
+Remedies 
+If any “Event of Default” under the Agreement has happened and is existing, any one or more of 
+the following remedial steps may be taken: 
+(a) If acceleration of the principal amount of the Bonds has been declared pursuant 
+to the Indenture, the Issuer or the Trustee will declare all Installment Payments to be immediately 
+due and payable; or 
+(b) The Issuer or the Trustee may pursue all remedies now or hereafter existing at 
+law or in equity to collect all amounts then due and thereafter to become due under the 
+Agreement or to enforce the performance and observance of any other obligation or agreement of 
+the Company under those instruments. 
+Any amounts collected pursuant to remedial action taken upon the happening of an Event of 
+Default (except for amounts payable directly to th e Issuer, the Trustee, the Tender Agent or the 
+Remarketing Agent) will be paid into the Bond Fund and applied in accordance with the provisions of the 
+Indenture or, if no Bonds are then outstanding and no amounts are then due and payable under the DMEAST #42829301 v4 18 
+Indenture, then such amounts will be paid  to the Company.  See “THE INDENTURE ― Events of 
+Default and Remedies.” 
+Notwithstanding the foregoing, the Trustee shall not be obligated to spend time or money or 
+otherwise incur liability enforcing remedies unless or until satisfactory indemnity has been furnished to 
+the Trustee at no cost to it for the reimbursement of all expenses which it may incur and to protect it 
+against all liability by reason of the performance of its duties or the exercise of any of its rights or powers, 
+except liability which is adjudicated to have resulted from its negligence or willful misconduct. 
+Amendments of the Agreement 
+The Indenture provides that Exhibit A to the Ag reement, which describes the Project Facilities, 
+may be amended or supplemented upon receipt by the Trustee of (a) a certificate from the Company 
+describing in detail the proposed ch anges, (b) a copy of the proposed form of amendment or supplement 
+to Exhibit A to the Agreement and such other documents, certificates and showings as may be required by 
+counsel rendering the opinion in clause (c) of this  paragraph; and (c) an Opinion of Nationally 
+Recognized Bond Counsel to the effect that such amendment complies with the requirements of the 
+Indenture, is in proper form for execution and deliv ery by the Company and will not adversely affect the 
+validity of the Bonds or the exclusion from gross income for federal income tax purposes of the interest 
+thereon. 
+The Indenture provides that the Issuer and the Trustee may, without the consent of or notice to the 
+Holders of the Bonds, consent to any other amendmen t, change or modification of the Agreement as may 
+be required (a) by the provisions of the Agreement or the Indenture, (b) for the purpose of curing any 
+ambiguity, inconsistency or defect or omission in th e Agreement, (c) to conform the provisions of the 
+Agreement to an amendment made to the Indenture,  (d) in connection with any other change therein 
+which is not to the prejudice of the Trustee or Holders of the Bonds or (e) to modify, alter, amend or 
+supplement the Agreement in any other respect, including amendments described in the next succeeding 
+paragraph, if the effective date of such amendmen t is a date on which all Bonds affected thereby are 
+subject to mandatory tender for purchase on the Manda tory Purchase Date or Conversion Date or are 
+owned or beneficially owned by the Company. 
+Except for such amendments, changes or m odifications described in the two preceding 
+paragraphs, neither the Issuer nor the Trustee will c onsent to (a) any amendment, change or modification 
+of the Agreement which would change the amount or  time as of which the Installment Payments or 
+Purchase Price Payments are required to be paid, without the giving of notice as provided in the Indenture 
+and the written consent thereto of the Holders of all Bonds then outstanding, or (b) any other amendment, 
+change or modification of the Agreement without the giving of notice as provided in the Indenture and the 
+written consent thereto of the Holders of not less than  a majority in aggregate principal amount of the 
+Bonds then outstanding. 
+THE INDENTURE 
+Certain provisions of the Indenture are described be low.  Reference is made to the Indenture for 
+the detailed provisions thereof. 
+Application of Bond Proceeds 
+The proceeds from the sale of the Bonds will be deposited in the Project Fund created under the 
+Indenture.  The Trustee will, from time to time upon receipt of a disbursement request from the Company, 
+disburse funds from the Project Fund to pay, or to re imburse the Company for its payment of, costs of the DMEAST #42829301 v4 19 
+acquisition, construction, installati on or equipping of the Project Facilities.  Disbursements will be made 
+from the Project Fund only to reimburse or pay the Company, or any person designated by the Company, 
+for (a) costs incurred directly or indirectly for or  in connection with the acquisition, construction, 
+equipping and installation of the Project Facilities, in cluding, without limitation, costs incurred in respect 
+of the Project Facilities for preliminary planning and studies; architectural, legal, engineering, surveying, 
+accounting, consulting, supe rvisory and other services; labor, servi ces and materials; and recording of 
+documents and title work;  (b) subject to the limitations set forth in the Code, financial, legal, accounting, 
+printing and engraving fees, charges and expenses, and all other such fees, charges and expenses incurred 
+in connection with the authorization, sale, issuance and delivery of the Bonds; or (c) any other costs, 
+expenses, fees and charges properly chargeable to the cost of the acqui sition, construction, equipping or 
+installation of the Project Facilities, including interest on the Bonds prior to the time the Project Facilities 
+are placed in service, and that otherwise comply with the Company’s representations, warranties and 
+covenants under the Agreement.  
+As soon as practicable after the filing by the Comp any with the Trustee of a certificate stating the 
+date that the acquisition, construc tion, equipping and installation of the Project Facilities have been 
+substantially completed, and in any event within 90 cal endar days of such date, any balance remaining in 
+the Project Fund (other than the amounts retained as described in such certificate), as directed by the 
+Company, will be transferred or disbursed, at the written direction of the Company, in accordance with 
+Section 1.142-2 of the Federal Income Tax Regulations  or any successor thereto, which generally require 
+that a portion of the Bonds be redeemed, or defeased to the first call date (with appropriate notice to the 
+Internal Revenue Service), within 90 calendar days of the earlier of (i) the date on which the Company 
+determines that the Project Facilities will not be completed or (ii) the date on which the Project Facilities 
+are placed in service.  If an Event of Default occurs under the Agreement prior to the filing by the 
+Company with the Trustee of the completion certifi cate and moneys remain in the Project Fund, the 
+Trustee will transfer such moneys to the Bond Fund. 
+Deposit and Use of Moneys in Bond Fund 
+All Installment Payments will be deposited in th e Bond Fund created under the Indenture, to be 
+used for the payment of principal or redemption price of, and interest on the Bonds as they become due on 
+the Maturity Date or by redemption. 
+Investments 
+Moneys in the Project Fund, Bond Fund and Rebate Fund created under the Indenture will be 
+invested and reinvested by the Trustee, at the written direction of the Company, in any Eligible 
+Investments (as defined in the Indenture). The Trustee shall not be held liable for the selection of Eligible 
+Investments, for determining whether an investment constitutes an Eligible Investment or by reason of 
+any insufficiency in resulting from any loss on any investment included therein. In addition, the Trustee 
+shall not have any liability in respect of losses incu rred as a result of the liqui dation of any investment 
+prior to its stated maturity or the failure by any party to provide timely written investment direction. 
+Events of Default and Remedies 
+Any of the following will be an “Event of Default” under the Indenture: 
+(a) Payment of any interest on any Bond is  not made on the date when such interest 
+has become due and payable; DMEAST #42829301 v4 20 
+(b) Payment of the principal or redemption price of, any Bond is not made on the 
+date when such principal or redemption price has become due and payable, whether at stated 
+maturity, by redemption, by acceleration or otherwise; 
+(c) Payment of the purchase price for any Bond is not made on the date when such 
+payments have become due and payable; 
+(d) Failure by the Issuer to observe or perform any other covenant, agreement or 
+obligation contained in the Indenture or in the Bonds, which failure has continued for a period of 
+60 calendar days after written notice by registered or certified mail to the Issuer and the Company 
+specifying the failure and requiring the same to be remedied, which notice may be given by the 
+Trustee in its discretion and which notice must be  given by the Trustee at the written request of 
+the Holders of not less than 25% in aggregate principal amount of the Bonds then outstanding; or 
+(e) The occurrence and continuance of an Event of Default under the Agreement.  
+See “THE AGREEMENT ― Events of Default” and “―Remedies.” 
+Upon the occurrence of any Event of Default (other than as described in clause (d) above), the 
+Trustee may, and, upon written request of the Holders of not less than 25% in aggregate principal amount 
+of the Bonds then outstanding, must, by a notice in writing delivered to the Issuer and the Company, 
+declare the principal of and accrued interest on all outstanding Bonds to be due and payable immediately.  
+Upon that declaration, that principal and interest will become and be due and payable immediately. 
+If at any time after declaration of acceleration and pr ior to the entry of a ju dgment in a court for 
+enforcement under the Indenture (after an opportunity for hearing by the Issuer and the Company), (a) all 
+sums payable under the Indenture (except the principa l of and interest on Bonds which have not reached 
+their stated maturity dates but which are due and payable solely by reason of that declaration of 
+acceleration), plus interest to the extent permitted by law on any overdue installments of interest at the 
+rate borne by the Bonds in respect of which the defau lt has occurred, have been duly paid or provided for 
+by deposit with the Trustee or the Paying Agent and (b ) all existing Events of De fault have been cured, 
+then, and in every case, the Trustee will waive the Event of Default and its consequences and will rescind 
+and annul that declaration. 
+Whether or not principal of the Bonds has been  accelerated, upon the occurrence and continuance 
+of an Event of Default, the Trustee may, and if requ ested to do so by the Ho lders of at least 25% in 
+aggregate principal amount of the Bonds then outstan ding and if indemnified as provided in the Indenture 
+will, pursue any available remedy to enforce the paymen t of principal or redemption price of, and interest 
+on the Bonds or the observance and performance of any other covenant, agreement or obligation 
+contained in the Indenture, the Agreement or an y other instrument providing security, directly or 
+indirectly, for the Bonds. 
+The Trustee will also be empowered to enfor ce the rights granted to the Issuer under the 
+Agreement, except the Unassigned Issuer’s Rights. 
+The Holders of a majority in aggregate principal amount of outstanding Bonds will have the right 
+at any time to direct, in writing, the method and place of conducting all proceedings to be taken in 
+connection with the enforcement of the terms and c onditions of the Indenture or any other proceeding 
+under the Indenture, provided that such direction will not be otherwise than in accordance with the 
+provisions of law and the Indenture, that the Trustee is  indemnified to its satisfaction and that the Trustee 
+may take any other action which it deems to be proper and which is not inconsistent with such direction. DMEAST #42829301 v4 21 
+The Trustee may in its discretion waive any Event of Default under the Indenture and its 
+consequences and rescind and annul any declaration of maturity of principal of the Bonds, and is required 
+to do so upon the written request of the Holders of (a) at least a majority in aggregate principal amount of 
+all Bonds then outstanding in respect of which an Event of Default exists in the payment of principal, 
+redemption price or interest on such Bonds or (b) at  least 25% in aggregate principal amount of all Bonds 
+then outstanding in case of any othe r Event of Default; provided, howeve r, that there will not be waived 
+any Event of Default respecting the nonpayment, when  due, of principal or redemption price or purchase 
+price of, or interest on, the Bonds as already describ ed or any declaration of acceleration in connection 
+therewith rescinded or annulled, unless, at the time of  such waiver or rescission and annulment, payments 
+of the amounts provided in the Indenture for waiver and rescission and annulment in connection with 
+acceleration of maturity have been made or provided for. 
+All moneys received by the Trustee from remedial action taken will be applied to the payment of 
+any fees and expenses of the Trustee (including, but  not limited to, reasonable attorneys’ fees and 
+expenses) and any costs, expenses, liabilities and adva nces paid, incurred or made by the Trustee in the 
+collection of such moneys, and the balance of such  moneys will be deposited in the Bond Fund and 
+applied to the payment of the principal or redemptio n price of, and interest on the Bonds in the manner 
+and in the order of priority set forth in the Indenture. 
+No Holder of any Bond will have any right to institute any suit, action or proceeding for the 
+enforcement of the Indenture, for the execution of an y trust under the Indenture or for the exercise of any 
+other remedy under the Indenture, unless (a) an Event of Default has occurred and is continuing of which 
+the Trustee has been notified or is deemed to have notice, (b) the Holders of at least 25% in aggregate 
+principal amount of the Bonds then outstanding ha ve made written request to the Trustee and have 
+afforded the Trustee reasonable opportunity to proceed to exercise the remedies, rights and powers 
+provided in the Indenture or to institute such action,  suit or proceeding in its own name and have offered 
+to the Trustee indemnity as provided for in the Inde nture and (c) the Trustee thereafter has failed or 
+refused to exercise its remedies, rights and powers under the Indenture or to institute such suit, action or 
+proceeding in its own name. 
+No Holders of the Bonds have any right to affect , disturb or prejudice in any manner whatsoever 
+the security or benefit of the Indenture by their action,  or to enforce, except in the manner provided in the 
+Indenture, any remedy, right or power under the Inde nture.  Any suit, action or proceedings must be 
+instituted, had and maintained in the manner provided in the Indenture for the benefit of the Holders of all 
+then outstanding Bonds.  
+Supplemental Indentures 
+The Issuer and the Trustee may enter into supp lemental indentures which are not inconsistent 
+with the terms and provisions of the Indenture, without the consent of or notice to any of the Holders of 
+the Bonds, for any one or more of the following pur poses: (a) to cure any ambiguity, inconsistency or 
+defect or omission in the Indenture; (b) to grant to or confer upon the Trustee for the benefit of the 
+Holders of the Bonds any additional rights, remedies, pow ers or authority that lawfully may be granted to 
+or conferred upon the Holders of the Bonds or the Trustee; (c) to assign additional revenues under the 
+Indenture; (d) to accept additional security and inst ruments and documents of further assurance with 
+respect to the Project Facilities; (e) to add to the c ovenants, agreements and ob ligations of the Issuer 
+contained in the Indenture, other c ovenants, agreements and obligations  to be observed for the protection 
+of the Holders of the Bonds or to surrender or limit any right, power or authority reserved to or conferred 
+upon the Issuer in the Indenture; (f) to evidence any succession to the Issuer and the assumption by its 
+successor of the covenants, agreements and obligations  of the Issuer contained in the Indenture, the 
+Agreement and the Bonds; (g) to f acilitate the transfer of Bonds from one securities depository to another DMEAST #42829301 v4 22 
+and the succession of securities depositories, or the withdrawal from a securities depository of Bonds held 
+in a book-entry system and the issuance of replacement  Bonds in fully registered form to persons other 
+than a securities depository; (h) to permit the Trustee to comply with any obligations imposed upon it by 
+law; (i) to specify further the duties and responsibiliti es of, and define further the relationship among, the 
+Trustee, the Registrar or the Paying Agent; (j) to achieve compliance of the Indenture or the Bonds with 
+any applicable law; (k) to permit any other amendment which, as set forth in an opinion of counsel 
+delivered to the Trustee, is not to the prejudice of th e Trustee or to the Holders; (l) to make amendments 
+to the provisions of the Indenture relating to arbitrage matters under the Code, if, in the Opinion of 
+Nationally Recognized Bond Counsel, those amendments would not cause the interest on the Bonds 
+outstanding to become includable in gross income for federal income tax purposes, which amendments 
+may, among other things, change the responsibility fo r making the relevant calculations; (m) to conform 
+the provisions of the Indenture to any amendments made to the Agreement; and (n) to modify, alter, 
+amend or supplement the Indenture in any other respect, including amendments which would otherwise 
+require the consent of the Holders of not less than a majority in aggregate principal amount of the Bonds 
+then outstanding, if the effective date of such modification, alteration, amendment or supplement to the 
+Indenture is the Mandatory Purchase Date, a Conversi on Date or a date on which all Bonds affected 
+thereby are owned or beneficially owned by the Company.  
+Exclusive of supplemental indentures for the aforesaid purposes, the consent of the Holders of not 
+less than a majority in aggregate principal amount of the Bonds then outstanding will be required to 
+approve any indenture supplementing the Indenture, provided that (a) without the consent of the Holder of 
+each Bond so affected, no supplemental indenture will permit an extension of the maturity of the 
+principal, redemption price or purchase price of, or the interest on, any Bond, or a reduction in the 
+principal amount or purchase price of any Bond or the rate of interest on any Bond, and (b) without the 
+consent of the Holders of all Bonds then outstandi ng, no supplemental indenture will permit the creation 
+of a privilege or priority of any Bond or Bonds over any other Bond or Bonds, or a reduction in the 
+aggregate principal amount of Bonds required for consent to a supplemental indenture. 
+The consent of the Company is also required for any supplemental indenture. 
+The rights and obligations of the Issuer and of the Holders of Bonds, and the terms and provisions 
+of the Bonds and the Indenture or any supplemental inde nture, may be modified or altered in any respect 
+with the consent of (a) the Issuer, (b) the Holders of all of the Bonds then outstanding, (c) the Trustee and 
+(d) the Company, provided the Trust ee shall be entitled to receipt of an opinion of coun sel in any such 
+event. 
+Discharge of Lien 
+The Indenture will be released if the Issuer pa ys or causes to be paid and discharged all 
+outstanding Bonds or there otherwise is paid to the Holders of the outstanding Bonds all the principal or 
+redemption price of and interest due or to become due on the Bonds and provision also is made for the 
+payment of all other sums payable under the Indenture and the Agreement. 
+All or any part of any of the Bonds will be deemed  to have been paid and discharged within the 
+meaning of the Indenture if: 
+(a) (i) the Trustee has received, in trust fo r and irrevocably committed thereto, sufficient 
+moneys; or 
+(ii) the Trustee has received, in trust for and irrevocably committed thereto, 
+noncallable and nonprepayable direct obligations  of (or certain obligations unconditionally DMEAST #42829301 v4 23 
+guaranteed by) the United States of America maturing as to principal and interest in such amounts 
+and at such times, without further investment or  reinvestment of either the principal amount 
+thereof or the interest earnings therefrom, as will insure, together with an y moneys referred to in 
+clause (a)(i), in the opinion of a nationally recognized investment bank, appraisal firm or firm of 
+independent public accountants, addressed to the Tr ustee and at the expense of the Company, the 
+availability of sufficient moneys for the payment of  principal or redemption price of and interest 
+on the Bonds deemed to have been paid or dischar ged, at their maturity or designated redemption 
+dates, as the case may be, or if default in su ch payment has occurred on any maturity or 
+redemption date, then to the date of the tender of such payment, provided that, if any Bonds are to 
+be redeemed prior to maturity thereof, notice of such redemption has been duly given or 
+irrevocable provision satisfactory to the Trustee has been duly made for the giving of such notice; 
+and 
+(b) all necessary and proper fees, compensation and expenses of the Trustee pertaining to 
+the Bonds with respect to which such deposit is made shall have been paid or the payment thereof 
+provided for to the reasonable satisfaction of the Trustee. 
+After such discharge, Holders must look only to the deposited moneys and securities for payment 
+of debt service on the Bonds. 
+Notwithstanding the foregoing, any provisions of the Indenture which relate to the payment of the 
+principal or redemption price of the Bonds on thei r maturity date or designated redemption dates as 
+described in the second preceding paragraph, interest pa yments and dates thereof,  exchange, transfer and 
+registration of Bonds, replacement of mutilated, dest royed, lost or stolen Bonds, the safekeeping and 
+cancellation of Bonds, nonpresentment of Bonds, the holdi ng of moneys in trust, and repayments to the 
+Company from the Bond Fund and the duties of the Trustee and the Registrar in connection with all of the 
+foregoing as set forth in the Indenture, will remain in effect and be binding upon the Trustee, the 
+Registrar, the Paying Agent, DTC or any successor secu rities depository and the Holders of the Bonds 
+notwithstanding the release and discharge of the Indenture. 
+The Trustee 
+Prior to the occurrence of a default or an Ev ent of Default under the Indenture of which the 
+Trustee has been notified or is deemed to have notice and after the cure or waiver of all defaults or Events 
+of Default which may have occurred, the Trust ee will undertake to perform only those duties and 
+obligations which are set forth specifically in the I ndenture and no other duties or obligations will be 
+implied to the Trustee.  The Trustee may, unless acting in bad faith, rely conclusively as to the truth of the 
+statements and the correctness of the opinions expressed therein, made in certificates or opinions 
+furnished to it which conform to th e requirements of the Indenture.  In case a default or an Event of 
+Default has occurred and is continuing of which the Trustee has been notified or is deemed to have notice, 
+the Trustee will exercise those rights and powers vested in it by the Indenture, and use the same degree of 
+care and skill in their exercise, as a prudent person w ould exercise or use under the circumstances.  The 
+Trustee will not be deemed to have notice of an Even t of Default described in clause (d) or (e) under the 
+heading “THE INDENTURE ― Events of Default and Remedies” unless a Responsible Officer (as 
+defined in the Indenture) of the Trustee has been notified specifically of the default or Event of Default in 
+a written instrument or document delivered by the Issu er or the Holders of at least 25% in aggregate 
+principal amount of the Bonds then outstanding, or by  the Company, in the case of an Event of Default 
+described in such clause (e).  No provision of the Indenture will be construed to relieve the Trustee from 
+liability for its own negligent action, its own negligent failure to act or its own willful misconduct. DMEAST #42829301 v4 24 
+The Trustee may resign at any time from the trusts created under the Indenture by giving written 
+notice of the resignation to the Issuer, the Company, the Registrar and the Paying Agent and by sending 
+written notice of the resignation to Holders of the Bonds as their names and addresses appear on the 
+Register at the close of business 15 calendar days prio r to sending of such notice.  The resignation will 
+take effect upon the appointment of a successor Trustee.   The Trustee may be removed at any time by an 
+instrument or document or concurrent instruments or documents in writing delivered to the Trustee, with 
+copies thereof sent to the Issuer, th e Registrar, the Paying Agent and the Company, and signed by or on 
+behalf of the Holders of not less than a majority in aggregate principal amount of the Bonds then 
+outstanding or, if no Event of Default under the Indenture or the Agreement or event which with the 
+giving of notice or the passage of time would cause an Event of Default under the Indenture or Agreement 
+has occurred and is continuing, by the Company by an instrument or document in writing from the 
+Company given to the Trustee, with copies sent to the Issuer, the Registrar and the Paying Agent.  The 
+Trustee also may be removed at any time for any breach  of trust or for acting or proceeding in breach of, 
+or for failing to act or proceed in accordance with, any provision of the Indenture with respect to the 
+duties and obligations of the Trustee by any court of competent jurisdiction upon  the application of the 
+Issuer or the Holders of not less than 50% in aggregate principal amount of the Bonds then outstanding 
+under the Indenture. 
+Any successor Trustee must (a) be a trust comp any or a bank having the powers of a trust 
+company, (b) be in good standing within the state of its incorporation or, if incorporated under the laws of 
+the United States of America, the state in which its pr incipal office is located, (c) have, or be a wholly 
+owned subsidiary of a bank or trust company which bank or trust company has, an unimpaired reported 
+capital and surplus of not less than $50,000,000 and (d) be willing to accept the trusteeship under the 
+terms and conditions of the Indenture. 
+RISK FACTORS 
+THE PURCHASE OF THE BONDS IS SUBJECT TO CERTAIN RISKS. EACH PROSPECTIVE 
+INVESTOR IN THE BONDS IS ENCOURAGED TO READ THIS OFFICIAL STATEMENT
+ IN 
+ITS ENTIRETY, INCLUDING ALL APPENDICES HERETO.  
+ The following discussion is not meant to be an exhaustive list of the risks and other factors that 
+should be considered in connection with the purchase of the Bonds and does not necessarily reflect the 
+relative importance of the various risks and other fa ctors. Any one or more of the risks described, and 
+others, could adversely affect the Company, and could lead to substantial decre ases in the market value 
+and/or the liquidity of the Bonds. There can be no assurance that other risk factors will not become 
+material in the future.  
+Investors should carefully consider the risk fa ctors set forth below and the risk factors 
+incorporated into this Official Statement by reference to the Company’s Annual Report on Form 10-K for 
+the year ended December 31, 2019 (the “2019 Form  10-K”) and the Company’s Quarterly Reports on 
+Form 10-Q for the quarters ended March 31, 2020, June 30, 2020 and September 30, 2020 (the “2020 
+Form 10-Qs”), as well as the other information contained in and incorporated by reference into this 
+Official Statement before deciding to invest in the Bonds. The selected risks described below and the risks 
+that are incorporated into this Official Statemen t by reference to the 2019 Form 10-K and the 2020 Form 
+10-Qs are not the only risks. Additional risks and un certainties not currently known to the Company or 
+those the Company currently view s to be immaterial also may materially and adversely affect the 
+Company’s business, financial condition or results of operations. Any of the following risks or any of the 
+risks described in the 2019 Form 10 -K and the 2020 Form 10-Qs could materially and adversely affect 
+the Company’s business, financial condition, operating resu lts or cash flow. In such a case, the trading DMEAST #42829301 v4 25 
+price of the Bonds could decline, or the Company may not be able to make payments under the Agreement 
+to satisfy the payment of interest and principal on th e Bonds, and investors may lose all or part of their 
+original investment. 
+Risks Related to the Bonds 
+The Bonds may not be a suitable investment. 
+An investment in the Bonds involves some degree of risk and should be considered only by 
+investors who have adequate experience to evaluate the merits and the risks of the Bonds and who are 
+able to bear the risk of loss of all or a portion of th eir investment in the Bonds.  The interest rate borne by 
+the Bonds (as compared to prevailing interest rates on bo nds with a higher credit rating such as those that 
+constitute general obligations of fi scally sound municipalities) is intended to compensate the investor for 
+assuming this element of additional risk.  Prospectiv e investors should carefully examine this Official 
+Statement, including the Appendices hereto, and their own financial condition, as well as consult their 
+own independent financial advisors, in order to make  a judgment as to their ability to bear the economic 
+risk of such an investment, and to determine whethe r or not the Bonds are an appropriate investment for 
+them. 
+There is not expected to be an active secondary market for the Bonds. 
+It is not anticipated that an active secondary ma rket for the Bonds will exist after the Bonds are 
+issued.  The Underwriters will not be obligated to repurchase any of the Bonds. The Company does not 
+intend to apply for listing of the Bonds on any secur ities exchange or inclusion of the Bonds on any 
+automated quotation system. 
+ 
+There is no liquidity facility for the Bonds. 
+ 
+No Letter of Credit or other credit or liquidity facility will be provided to support the payment of 
+the Purchase Price on the Mandatory Purchase Date for the Bonds or to  support payment of Installment 
+Payments for the Bonds. The funds of the Company are th e sole source of funds that will be used to make 
+the Purchase Price Payments on the Bonds on the Manda tory Purchase Date and Installment Payments for 
+the Bonds. Such funds may be insufficient to cove r such Purchase Price Pa yments and Installment 
+Payments. 
+ 
+The Bonds will be initially held in book-entry form and therefore investors must rely on the procedures 
+of DTC to exercise any rights and remedies. 
+Unless and until definitive bonds are issued in ex change for book-entry interests in the Bonds, 
+owners of the book-entry interests will not be cons idered owners or holders of the Bonds. Instead, a 
+nominee of DTC will be the sole holder of the Bonds. 
+Payments of amounts owing in respect of the Bonds will be made by the Company to the paying 
+agent. The paying agent will, in turn, make such payments to DTC or its nominee, which will distribute 
+such payments to participants in accordance with their respective procedures. 
+Unlike holders of the Bonds themselves, owners of book-entry interests will not have the direct 
+right to act upon solicitations for consents or request s for waivers or other actions from holders of the 
+Bonds. Instead, investors owning a book-entry interest will be permitted to act only to the extent they 
+have received appropriate proxies to do so from DTC or, if applicable, from a participant. The Company DMEAST #42829301 v4 26 
+cannot make assurances that procedures implemented for the granting of such proxies will be sufficient to 
+enable an investor to vote on any requested actions on a timely basis. 
+The lack of physical certificates could also: 
+ result in payment delays because the Trustee will be sending distributions on the Bonds 
+to DTC instead of directly to investors; and 
+ make it difficult or impossible for investors to pledge certificates if physical certificates 
+are required by the party demanding the pledge. 
+The Issuer will not grant any lien or mortgage on any project assets or pledge any Issuer assets. 
+The Bonds will not be secured by any mortgage or lien on the project financed by the Bonds or 
+by any mortgage, lien or claim against, security interest in or pledge of any assets or revenues of the 
+Issuer, or by any recourse against any funds or assets of  the Issuer other than the trust estate pledged and 
+assigned under the Indenture, which cons ists primarily of the right, title an d interest of the Issuer in the 
+Agreement and the funds and accounts created under the Indenture into which the Installment Payments 
+are to be deposited.  In evaluating a purchase or potential purchase of Bonds, investors are advised to rely 
+on their evaluation of the Company’s ability to meet its obligations under the Agreement. 
+Federal and state fraudulent transfer laws may permit a court to void the Bonds, and if that occurs, 
+investors may not receive any payments on the Bonds. 
+Federal and state fraudulent transfer and conveyan ce statutes may apply to the issuance of the 
+Bonds.  In the event of such legal proceedings or other legal proceedings involving the Bonds, a court 
+may find under certain factual circumstances legal or equitable principles are applicable in the 
+proceeding.  These principles include fraudulent conveyance statutes, the doctrine of equitable 
+subordination and other equitable re medies generally, and the court a pplying one or more of these 
+principles in the proceeding may have the effect of subordinating or voiding the payment obligations 
+under the Bonds and may require that prior payments thereunder be returned to the Company or to a fund 
+for the benefit of other creditors. 
+Any decline in the ratings of the Bonds or the Company’s credit rating could adversely affect the value 
+of the Bonds. 
+Any decline in the ratings of the Bonds, the Co mpany’s credit rating or any indications from the 
+rating agencies that their ratings on the Bonds or the Company’s credit rating are under surveillance or 
+review with possible negative implications could adve rsely affect the value of the Bonds. In addition, a 
+ratings downgrade of the Company could adversely affect the Company’s ability to access capital. 
+There are limited covenants and protections in the Indenture and the Agreement; consequently, the 
+Company may be able to incur substantially more in debtedness, all or a portion of which could be 
+secured indebtedness. 
+The Indenture and the Agreement do not limit th e amount of unsecured or secured indebtedness 
+the Company may issue, and the Company is not pr ohibited under the Indenture and the Agreement from 
+granting liens and security interests on its property and assets to lenders other than the Holders in order to 
+secure debt. DMEAST #42829301 v4 27 
+On May 29, 2020, the Company issued $1.056 billion aggregate principal amount of 12.000% 
+senior secured notes due June 1, 2025 (the “Senior Secured Notes”) in a 144A private transaction exempt 
+from the registration requirements of the Securities Ac t of 1933, as amended.  The Senior Secured Notes 
+are fully and unconditionally guaranteed on a senior s ecured basis by all of the Company’s existing and 
+future direct and indirect material domestic subsid iaries (other than certain subsidiaries excluded in the 
+indenture executed in connection with the offering of the Senior Secured Notes (the ”Notes Indenture”)).  
+The Senior Secured Notes and the guarantees thereof are secured by first priority-liens, subject to 
+permitted liens, on substantia lly all of the Company’s domestic assets, other than certain excluded assets 
+per the terms of the Notes Indenture and exclusive of the collateral required under the Company’s Fifth 
+Amended and Restated Credit Facility Agreement dated as of October 25, 2019, among the Company, the 
+lenders party thereto, the letter of credit issuing ba nks party thereto, and JP Morgan Chase Bank, N.A., as 
+administrative agent and collateral agent.  The possibility that the lenders of the Senior Secured Notes 
+foreclose on their security interests creates a risk that the Company will not be able to pay debt service on 
+the Bonds.  There is no guarantee that the Company will not issue additional secured debt in the future. 
+The outbreak of COVID-19 and disruptions in the oil and gas industry have had, and are expected to 
+continue to have, an adverse impact on the Compan y’s results of operations, financial condition and 
+cash flows. 
+The global pandemic resulting from the novel co ronavirus designated as COVID-19 has had a 
+significant impact on economies, businesses and indivi duals around the world. Efforts by governments 
+around the world to contain the virus have involve d, among other things, border closings and other 
+significant travel restrictions; mandatory stay-at-home and work-from-home orders in numerous 
+countries, including the United States; mandatory business closures; public gathering limitations; and 
+prolonged quarantines. These efforts and other gove rnmental, business and individual responses to the 
+COVID-19 pandemic have led to significant disruptio ns to commerce, lower consumer demand for goods 
+and services and general uncertainty regarding the near-term and long-term impact of the COVID-19 
+virus on the domestic and international economy and on public hea lth. These developments and other 
+consequences of the outbreak have and could contin ue to materially adversely impact the Company's 
+results of operations, financial condition and cash flows.  
+The U.S. Department of Homeland Security guidance has identified the Company’s business as a 
+critical infrastructure industry, essential to the economic  prosperity, security and continuity of the United 
+States. Similarly, in Slovakia, U.S. Steel Kosice was identified by the government as a strategic and 
+critical company, essential to economic prosperity, and continues to operate . However, although the 
+Company continues to operate, it has experienced and is likely to continue to experience, significant 
+reductions in demand. For example, the oil and gas industry, which is one of the Company’s significant 
+end markets, has been experiencing a significant amount of disruption and has been experiencing 
+oversupply at a time of declining demand, resulting in  a decline in profitability. The Company’s Tubular 
+operations (as described in the 2019 Form 10-K a nd the 2020 Form 10-Qs) support the oil and gas 
+industry, and therefore the industry's decline has led to a significant decline in demand for the Company’s 
+Tubular products. The Company also may experience disruptions to its operations resulting from changes 
+in government policy or guidance; quarantines of employees, customers and suppliers in areas affected by 
+the outbreak; and closures of businesses or manufacturing  facilities that are critical to its business or its 
+supply chain. 
+The COVID-19 pandemic could also adversely af fect the Company’s liq uidity and ability to 
+access the capital markets. The Company’s credit ra tings were downgraded earlier this year by three 
+credit ratings agencies, all citing, among other things , the uncertainty in duration and impact of the 
+COVID-19 outbreak on its business. Uncertainty regarding the duration of the COVID-19 pandemic and 
+disruptions to the oil and gas industry may, for exam ple, adversely impact the Company’s ability to raise DMEAST #42829301 v4 28 
+additional capital, or require additional capital, or require additional reductions in capital expenditures 
+that are otherwise needed, to support working capital  or continuation of its "best of both" strategy. 
+Additionally, government stimulus programs may not be  available to the Company, its customers, or its 
+suppliers, or may prove to be ine ffective. Furthermore, in the event that the impact from the COVID-19 
+outbreak causes the Company to be unable to satisfy any of its financial covenants under the agreements 
+governing its outstanding indebtedness, the availability of credit facilities may become limited, or it may 
+be required to renegotiate such agreements on less favorable terms. For example, based on the most recent 
+four quarters as of September 30, 2020, the Company h as not met the fixed charge negative covenant test 
+under its Credit Facility Agreement (as described in the 2019 Form 10-K and the 2020 Form 10-Qs), and 
+accordingly, the amount available to the Company unde r this facility was reduced by $200 million. In 
+addition, since the value of the Company’s inventory and trade accounts receivable less specified reserves 
+calculated in accordance with the Credit Facility Agreement do not support the full amount of the facility 
+at September 30, 2020, the amount available to the Company under this facility was further reduced by 
+$294 million. As of September 30, 2020, the availab ility under the Credit Facility Agreement was $1.006 
+billion. If the Company is unable to access additional credit at the levels it requires, or the cost of credit is 
+greater than expected, it could materially adversely affect its operating results.  
+COVID-19 could negatively affect the Company’s internal controls over financial reporting as a 
+portion of its workforce is required to work from home and therefore new processes, procedures, and 
+controls could be required to respond to changes in its business environment.  
+The Company may be susceptible to increased litigation related to, among other things, the 
+financial impacts of the pandemic on its business, its ability to meet contractual obligations due to the 
+pandemic, employment practices or policies adopted during the health crisis, or litigation related to 
+individuals contracting COVID-19 as result of alleged exposures on Company premises. 
+In addition, the COVID-19 outbreak has significantly increased economic and demand 
+uncertainty. The current outbreak and continued sp read of COVID-19 has caused a global recession, 
+which has had a further material adverse impact on the Company’s results of operations, financial 
+condition and cash flows. The full extent to whic h the COVID-19 outbreak will affect the Company’s 
+operations, and the steel industry generally, remains highly uncertain and will ultimately depend on future 
+developments which cannot be predicted at this time , including, but not limited to, the duration, severity, 
+speed and scope of the outbreak, the length of time required for demand to return and normal economic 
+and operating conditions to resume. The impact of th e COVID-19 outbreak may also have the effect of 
+exacerbating many of the other risks described in Item 1A. "Risk Factors" of the Company’s 2019 Form 
+10-K. 
+The Company’s Potential Investments in Big River Steel May Not be Fully Successful 
+On October 31, 2019, the Company, through its wholly-owned subsidiary, U.S. Steel Holdco 
+LLC (“USS Holdco”) acquired a 49.9% interest in  BRS Stock Holdco LLC and in Big River Steel 
+Holdings LLC (collectively, “Big River Steel”) through a recapitalization of Big River Steel Holdings 
+LLC and has a call option to purchase the remaining 50.1% interest through September 2023 (the “US 
+Steel Option”). The Company has been  and is currently evaluating its alternatives with respect to the 
+option to acquire the remaining 50.1% of Big River Steel, and it expects to continue to do so. The 
+Company could exercise this option at any time, without prior notice. However, there can be no assurance 
+as to if or when the Company will exercise the option. 
+Should the Company elect to exercise its call option to purchase Big River Steel, a portion of 
+their indebtedness may necessitate a refinancing. The option exercise initially would have triggered a 
+change of control and/or event of default under certain existing indebtedness of Big River Steel, including DMEAST #42829301 v4 29 
+$487 million of its Arkansas Development Finance Authority Industrial Development Revenue Bonds 
+(Big River Steel Project), Series 2019 (the “2019 BR S Bonds”) issued in May 2019, which provided the 
+holders of the bonds with the right to require th e repurchase of the bonds upon a change of control. 
+However, Big River Steel was successful in obtaining  the consent of the holders of the 2019 BRS Bonds 
+to an amendment to the Bond Financing Agreement (the “2019 Bond Financing Agreement”) executed in 
+connection with the issuance of the 2019 BRS Bonds and related documents to include USS Holdco as a 
+permitted holder under the 2019 Bond Financing Agreement.  As a result, the potential exercise of the US 
+Steel Option will no longer trigger a change of control with respect to the 2019 BRS Bonds and the 
+holders of the 2019 BRS Bonds will no longer have the right to require the repurchase of the 2019 BRS 
+Bonds. The Company will not be required to refinance such portion of Big River Steel’s indebtedness at a 
+premium should the Company elect to exercise the US Steel Option. 
+THE TRUSTEE 
+The obligations and duties of the Trustee are d escribed in the Indenture, and the Trustee has 
+undertaken only those obligations and duties which ar e expressly set out in the Indenture.  The Trustee 
+has not independently passed upon the validity of the Bonds, the sufficiency of the security therefor, the 
+adequacy of the provisions for payment thereof or the tax-exempt status of the interest on the Bonds.  The 
+Trustee has relied upon the opinion of Kutak Rock LLP,  Bond Counsel (“Bond Counsel”), with respect to 
+the validity and tax-exempt status of the interest on the Bonds.  The Indenture expressly provides that the 
+Trustee shall not be responsible for any loss or dama ge resulting from any action taken or omitted to be 
+taken by it in good faith in reliance upon, and in accordance with, an opinion of counsel. 
+Under the terms of the Indenture, the Trust ee is liable only for those damages caused by its 
+negligence or willful misconduct.  All notices or ot her instruments required by the Indenture to be 
+delivered to the Trustee must be de livered to the designated office of the Trustee.  The summary of the 
+Trustee’s rights, duties, obligations and immunities contained herein is not intended to be a complete 
+summary, and references must be made to the Indentur e for a complete statement of the Trustee’s rights, 
+duties, obligations and immunities. 
+TAX MATTERS 
+General Federal Tax Law Matters  
+Federal tax law contains a num ber of requirements that must be met on a continuing basis 
+subsequent to the issuance and delivery of the B onds for interest on the Bonds to be and remain 
+excludable from gross income for federal income ta x purposes.  Noncompliance with such requirements 
+could cause interest on the Bonds to be included in gross income for federal income tax purposes 
+retroactively to the date of issuance of the Bonds .  These requirements include, but are not limited to, 
+provisions regarding the proper use of bond proceed s and the facilities financed therewith, prescribing 
+yield and other limits within which the proceeds of  the Bonds are to be invested and requiring, under 
+certain circumstances, that certain investment earnings on the foregoing be rebated on a periodic basis to 
+the Treasury Department of the United States of America.  The Company and the Issuer have covenanted 
+to comply with such requirements to the extent applicable. 
+Subject to continuing compliance by the Issuer  and the Company with the above-referenced 
+covenants, in the opinion of Bond Counsel, to be delivered contemporaneously with the delivery of the 
+Bonds, under existing laws, regulations, rulings and judicial decisions, interest on the Bonds is excludable 
+from gross income for federal income tax purposes, except for interest on any Bond for any period during 
+which such Bond is held by a “substantial user” of the Project Facilities or a “related person” (within the 
+meaning of Section 147(a) of the Code); however, such interest on the Bonds is included as an item of tax DMEAST #42829301 v4 30 
+preference in computing the federal alternative minimum tax for individuals.  Bond Counsel will express 
+no opinion regarding any other federal tax consequences arising with respect to the Bonds. 
+In rendering its opinion, Bond Counsel will rely upon certifications of the Company and the 
+Issuer with respect to certain mate rial facts within the knowledge of th e Company and the Issuer and will 
+assume continuing compliance by the Issuer and the Company with the above-referenced covenants.  
+Bond Counsel’s opinion represents its legal judgment based upon its review of the law and the facts that it 
+deems relevant to render such opinion and is not a guarantee of a result. 
+The accrual or receipt of interest on the Bonds may otherwise affect the federal income tax 
+liability of the owners of the Bonds.  The extent of these other tax consequences will depend on such 
+owners’ particular tax status and other items of income or deduction.  Bond Counsel will express no 
+opinion regarding any such consequences.  Prospective purchasers of the Bonds, particularly purchasers 
+that are corporations (including S corporations and foreign corporations operating branches in the United 
+States of America), property or casualty insurance companies, banks, thrifts or other financial institutions, 
+certain recipients of social security or railroad re tirement benefits, taxpayers entitled to claim the earned 
+income credit, taxpayers entitled to claim the refundable credit in Section 36B of the Code for coverage 
+under a qualified health plan or taxpayers who may be deemed to have incurred or continued indebtedness 
+to purchase or carry tax-exempt obligations, should cons ult their tax advisors prior to any purchase of the 
+Bonds as to the tax consequences of purchasing or owning the Bonds. 
+The proposed form of the opinion of Bond Counsel is attached hereto as Appendix B. 
+Backup Withholding 
+ 
+As a result of the enactment of the Tax Increase Prevention and Reconciliation Act of 2005, 
+interest on tax-exempt obligations such as the Bond s is subject to information reporting in a manner 
+similar to interest paid on taxable obligations.  Backup withholding may be imposed on payments to any 
+owner of the Bonds that fails to provide certain required information including an accurate taxpayer 
+identification number to any person required to collect  such information pursuant to Section 6049 of the 
+Code.  The reporting requirement does not in and of itsel f affect or alter the excludability of interest on 
+the Bonds from gross income for federal income ta x purposes or any other federal tax consequence of 
+purchasing, holding or selling tax-exempt obligations. 
+ 
+Changes in Federal Tax Law 
+From time to time, there are legislative proposals in the Congress that, if enacted, could alter or 
+amend the federal tax matters referred to under th is heading “TAX MATTERS” or adversely affect the 
+market value and liquidity of the Bonds.  It cannot be predicted whether or in what form any such 
+proposal might be enacted or whether if enacted it w ould apply to bonds issued prior to enactment.  In 
+addition, regulatory actions are from time to time a nnounced or proposed and litigation is threatened or 
+commenced which, if implemented or concluded in a particular manner, could adversely affect the market 
+value and liquidity of the Bonds.  It cannot be pr edicted whether any such regulatory action will be 
+implemented, how any particular litigation or judicial action will be resolved, or whether the Bonds or the 
+market value or liquidity thereof would be impacted thereby.  Prospective purchasers of the Bonds should 
+consult their tax advisors prior to any purchase of  the Bonds regarding an y pending or proposed 
+legislation, regulatory initiatives or  litigation.  The opinions to be expressed by Bond Counsel are based 
+on existing legislation and regulations  as interpreted by relevant judicial and regulatory authorities as of 
+the date of issuance and delivery of the Bonds, and Bond Counsel will express no opinion as of any date 
+subsequent thereto or with respect to any pending legislation, regulatory initiatives or litigation. 
+ DMEAST #42829301 v4 31 
+Internal Revenue Service Audits 
+ 
+The Internal Revenue Service has an ongoing pr ogram of auditing tax-exempt obligations to 
+determine whether, in the view of the Internal Revenue Service, interest on such tax-exempt obligations is 
+included in gross income for federal income tax pur poses.  It cannot be predicted whether or not the 
+Internal Revenue Service will commence an audit of the Bonds.  If an audit is commenced, under current 
+procedures the Internal Revenue Service may treat the Issuer as a taxpayer, and the registered owners of 
+the Bonds may have no right to participate in such  procedure.  The commencement of an audit could 
+adversely affect the market value and liquidity of the Bonds until the audit is concluded, regardless of the 
+ultimate outcome. 
+PROSPECTIVE PURCHASERS OF THE BONDS ARE ADVISED TO CONSULT THEIR 
+OWN TAX ADVISORS PRIOR TO ANY PURCHASE OF THE BONDS AS TO THE IMPACT 
+OF FEDERAL TAX LAW UPON THEIR ACQUISITION, HOLDING OR DISPOSITION OF 
+THE BONDS. 
+ 
+State Tax Law Matters 
+ 
+In the opinion of Bond Counsel, to be delivered  contemporaneously with the delivery of the 
+Bonds, under existing laws, regulations, rulings and judicial decisions, the Bonds and the income 
+therefrom are exempt from all taxation in the State of  Alabama.  Ownership of the Bonds may result in 
+other state and local tax consequences to certain  taxpayers.  Bond Counsel will express no opinion 
+regarding any such state and local tax conse quences arising with respect to the Bonds.  PROSPECTIVE 
+PURCHASERS OF THE BONDS SHOULD CONSULT THEIR OWN TAX ADVISORS 
+REGARDING THE APPLICABILITY OF ANY SUCH STATE AND LOCAL TAXES. 
+ 
+LEGAL MATTERS 
+Certain legal matters incident to the authoriza tion and issuance of the Bo nds are subject to the 
+approving legal opinion of Kutak Rock LLP, Bond C ounsel, who has been retain ed by, and acts as Bond 
+Counsel to, the Company.  In its capacity as Bond C ounsel, Kutak Rock LLP has not been retained or 
+consulted on disclosure matters and has not undertaken to review or verify the accuracy, completeness or 
+sufficiency of this Official Statement or other offering material relating to the Bonds and assumes no 
+responsibility for the statements or in formation contained in or incorporat ed by reference in this Official 
+Statement. 
+Certain legal matters will be passed upon for th e Underwriters by their counsel, Ballard Spahr 
+LLP; for the Issuer by Bradley Arant Boult Cummings LLP; and for the Company by Mark Furry, its 
+Associate General Counsel – Corporate and by Burr & Forman LLP. 
+NO LITIGATION 
+There is no pending or, to the knowledge of the Company, threatened litigation against the 
+Company, and there is no pending or, to the knowle dge of the Issuer, threatened litigation against the 
+Issuer, that in any way questions or affects the valid ity of the Bonds, or any proceedings or transactions 
+relating to their issuance, sale or delivery. 
+CERTAIN RELATIONSHIPS 
+The Company has various banking relationships w ith the Trustee, and the Trustee serves as 
+trustee with respect to other obligations of the Company. DMEAST #42829301 v4 32 
+The Underwriters and their respective affiliates are full service financial institutions engaged in 
+various activities, which may include sales and trading,  commercial and investment banking, advisory, 
+investment management, investment research, principal investment, hedging, market making, brokerage 
+and other financial and n on-financial activities and services.  Certain of the Underwriters and their 
+respective affiliates have provided, and may in the future provide, a variety of these services to the 
+Company and to persons and entities with relationships  with the Company, for which they received or 
+will receive customary fees and expenses. 
+In the ordinary course of their various business activities, the Underwriters and their respective 
+affiliates, officers, directors and employees may purchase, sell or hold a broad array of investments and 
+actively trade securities, derivatives, loans, commod ities, currencies, credit default swaps and other 
+financial instruments for their own account and for the accounts of their customers, and such investment 
+and trading activities may involve or relate to assets, securities and/or instruments of the Issuer (directly, 
+as collateral securing other obligations or otherwise) and/or persons and entities with relationships with 
+the Issuer.  The Underwriters and their affiliates may also communicate independent investment 
+recommendations, market color or trading ideas and/or publish or express independent research views in 
+respect of such assets, securities or instruments and may at any time hold, or recommend to clients that 
+they should acquire, long and/or short positions in such assets, securities and instruments. 
+From time to time, Bond Counsel has represented the Underwriters in other unrelated 
+transactions, and may do so from time to time in the fu ture.  From time to time, counsel to the Issuer has 
+represented the Underwriters and th e Company in other unrelated transactions, and may do so from time 
+to time in the future. 
+RATINGS 
+The Bonds are rated “Caa2” (negative outlook) by Moody’s Investors Service, Inc. (“Moody’s”) 
+and “B-” by S&P Global Ratings (“S&P”).  Such ra tings reflect only the view of Moody’s or S&P and 
+any explanation of the significance of such ratings must be obtained from Moody’s or S&P. There is no 
+assurance that any such rating will cont inue for any given period of time or that it will not be revised or 
+withdrawn entirely if, in the judgment of Moody’s or S&P, circumstances so  warrant. A revision, 
+suspension, or withdrawal of a rating may have an adverse effect on the market price of the Bonds. 
+UNDERWRITING 
+The Bonds are being purchased by BofA Securities, Inc., Morgan Stanley & Co. LLC, Wells 
+Fargo Securities, LLC, Barclays Capital Inc., Citigroup Global Markets Inc., Fifth Third Securities, Inc., 
+Goldman Sachs & Co. LLC and Truist Securities, Inc. (collectively, the “Underwriters”), from the Issuer 
+at a purchase price of $62,982,788.11 (equal to the par amount of the Bonds minus the Underwriters’ 
+discount of $417,211.89), subject to the terms of a Bond Purchase Agreement entered into among the 
+Underwriters, the Company and the Issuer.  The U nderwriters have committed to purchase all of the 
+Bonds if any of the Bonds are purchased.  The Bonds ma y be offered and sold to dealers, including the 
+Underwriters and dealers acquiring the Bonds for th eir own account or an account managed by them, at 
+prices lower than the public offering price.  The obligation of the Underwriters to purchase the Bonds is 
+subject to various conditions set forth in the Bond Purchase Agreement.  Pursuant to the Bond Purchase 
+Agreement, the Company has agreed to reimburse the Underwriters for certain expenses they incurred in 
+connection with the purchase and sale of the Bonds a nd to indemnify the Underwriters against certain 
+liabilities to the extent permitted by law. 
+BofA Securities, Inc., an underwriter of the Bonds , has entered into a distribution agreement with 
+its affiliate Merrill Lynch, Pierce, Fenner & Smith Incorporated (“MLPF&S”).  As part of this DMEAST #42829301 v4 33 
+arrangement, BofA Securities, Inc. may distribute securities to MLPF&S, which may in turn distribute 
+such securities to investors through the financial a dvisor network of MLPF&S.  As part of this 
+arrangement, BofA Securities, Inc. may compensate MLPF&S as a dealer for their selling efforts with 
+respect to the Bonds. 
+Morgan Stanley, parent company of Morgan St anley & Co. LLC, an underwriter of the Bonds, 
+has entered into a retail distribution arrangement with its affiliate Morgan Stanley Smith Barney LLC.  As 
+part of the distribution arrangement, Morgan Stan ley & Co. LLC may distribute municipal securities to 
+retail investors through the financial advisor network of  Morgan Stanley Smith Barney LLC.  As part of 
+this arrangement, Morgan Stanley & Co. LLC may compensate Morgan Stanley Smith Barney LLC for 
+its selling efforts with respect to the Bonds. 
+Truist Securities, Inc. (“TSI”), an underwriter of  the Bonds, has entered into an agreement (the 
+“Distribution Agreement”) with SunTrust Investment Services, Inc. (“STIS”) for the retail distribution of 
+certain municipal securities offerings, including the Bonds .   Pursuant to the Distribution Agreement, TSI 
+will share a portion of its underwriting or remarketing agent compensation, as applicable, with respect to 
+the Bonds with STIS.  TSI and STIS are both subsidiaries of Truist Financial Corporation. 
+Wells Fargo Securities is the trade name for certain securities-related capital markets and 
+investment banking services of Wells Fargo & Comp any and its subsidiaries, including Wells Fargo 
+Securities, LLC, member NYSE, FINRA, NFA, and SIPC.  Wells Fargo Securities, LLC ("WFSLLC"), 
+an underwriter of the Bonds, has entered into an ag reement (the “WFA Distribution Agreement”) with its 
+affiliate, Wells Fargo Clearing Services, LLC (which uses the trade name “Wells Fargo Advisors”) 
+("WFA") for the distribution of certain municipal se curities offerings, including the Bonds. Pursuant to 
+the WFA Distribution Agreement, WFSLLC will share a portion of its underwriti ng or remarketing agent 
+compensation, as applicable, with respect to the Bonds with WFA. WFSLLC has also entered into an 
+agreement (the “WFBNA Distributio n Agreement”) with its affiliate , Wells Fargo Bank, N.A., acting 
+through its Municipal Finance Group (“WFBNA”), for the distribution of municipal securities offerings, 
+including the Bonds.  Pursuant to the WFBNA Distribution Agreement, WFBNA pays a portion of 
+WFSLLC's expenses based on its municipal securities transactions. WFBNA, WFSLLC, and WFA are 
+each wholly-owned subsidiaries of Wells Fargo & Company. 
+CONTINUING DISCLOSURE 
+With respect to the Bonds, the Company will enter into a Continuing Disclosure Agreement dated 
+the date of delivery of the Bonds under which th e Company will undertake (the “Undertaking”) for the 
+benefit of the Holders and beneficial owners of th e Bonds to provide certain financial information and 
+operating data relating to the Company to the Muni cipal Securities Rulemaking Board and to provide 
+notice to the Municipal Securities Rulemaking Board of the occurrence of certain enumerated events, 
+pursuant to the requirements of Section (b)(5)(i) of  Securities and Exchange Commission Rule 15c2–l2 
+(17 C.F.R. § 240.l5c2–12) (the “Rule”).  Reference is  made to the Continuing Disclosure Agreement for 
+the detailed provisions thereof.  See “APPENDIX C ― FORM OF CONTINUING DISCLOSURE 
+AGREEMENT.” 
+A failure by the Company to comply with an Undertaking will not constitute an event of default 
+under the Agreement or the Indenture, although any Ho lder or any beneficial owner of the Bonds may 
+bring action to compel the Company to comply with its obligations under such Undertaking.  Any such 
+failure must be reported in accordance with the Rule and must be considered by any broker, dealer or 
+municipal securities dealer before recommending th e purchase or sale of the Bonds in the secondary 
+market.  Consequently, such a failure may adversely affect the transferability and liquidity of the Bonds 
+and their market price. DMEAST #42829301 v4 34 
+In addition, the Company is subject to the info rmational requirements of the Securities Exchange 
+Act of 1934, and information about the Company is av ailable as set forth in Appendix A to this Official 
+Statement. 
+The Issuer has no responsibility to any person with respect to the provision of such information 
+about the Company, and, because the Bonds are special  and limited obligations of the Issuer, the annual 
+financial information and operating data of the Issuer are not material in connection with the Bonds. 
+Separate and apart from the Bonds and the Indiana Bonds, the Company has issued and currently 
+has outstanding other bonds which are subject to the Ru le.  Pursuant to its existing continuing disclosure 
+agreements with respect to such other bonds, th e Company has covenanted to provide notices of 
+occurrence of certain enumerated ev ents.  However, the Company did not timely file notices of (1) rating 
+downgrades of certain bonds resulting from a rating downgrade of the Company by Fitch Ratings Inc. 
+(“Fitch”) that occurred in 2016, and (2) rating upgrad es of certain bonds resulting from rating upgrades of 
+the Company by Fitch that occurred in 2017 and 2018 (these rating changes occurred during periods when 
+Fitch was rating the Company on an unsolicited b asis).  The Company posted notices of these rating 
+changes on EMMA on October 8, 2019. 
+The Company’s failure to timely file notices of rating changes as described above is a violation of 
+its contractual continuing disclosure obligations but it  does not constitute an event of default under any of 
+its outstanding bonds.  The Company has implemented procedures to facilitate future compliance. 
+MISCELLANEOUS 
+The foregoing summaries and explanations do not purport to be comprehensive and are expressly 
+made subject to the exact provisions of the complete  documents referred to herein.  For details of all 
+terms and conditions, prosp ective purchasers are referred to the Agre ement and the Indenture, copies of 
+which may be obtained from the Company.  The Appendi ces attached hereto are a part of this Official 
+Statement.  Any matters in this Official Statemen t involving matters of opinion, whether or not expressly 
+so stated, are intended as such and not as representations of fact. 
+This Official Statement has been approved for use by the Issuer and by the Company.  
+DMEAST #42829301 v4 A-1 
+APPENDIX A 
+ 
+UNITED STATES STEEL CORPORATION 
+United States Steel Corporation (the “Company”) is an integrated steel producer of flat-rolled and tubular 
+products with major production operations in the Unit ed States and Europe. An integrated steel producer 
+uses iron ore and coke as primary raw materials for steel production. The Company has annual raw steel 
+production capability of 22.0 million net tons (17.0 m illion tons in the United States and 5.0 million tons 
+in Europe). The Company supplies customers thr oughout the world primarily in the automotive, 
+construction, consumer (packaging and appliance), electrical, industrial equipment, and energy (oil 
+country tubular goods (OCTG) and line pipe) markets. According to the World St eel Association’s latest 
+published statistics, in 2018 the Company was the thir d largest steel producer in the United States and the 
+twenty-sixth largest steel producer in the world. The Company is also engaged in other business activities 
+consisting primarily of railroad services and real  estate operations. The Company is a Delaware 
+corporation established in 1901. 
+AVAILABLE INFORMATION 
+The Company files annual, quarterly and other reports and other information with the SEC.  The SEC 
+maintains an Internet site (www.sec.gov) that contains reports and other information regarding issuers 
+that file electronically with the SEC, including the Company.  
+INCORPORATION OF CERTAIN DOCUMENTS BY REFERENCE 
+The following documents filed with the SEC are incorporated herein by reference: 
+1. The Company’s Annual Report on Form 10-K for the year ended December 31, 2019; 
+2. The Company’s Quarterly Reports on Form 10-Q for the quarters ended March 31, 2020, June 30, 
+2020 and September 30, 2020; 
+3. The Company’s Current Report on Form 8-K file d and furnished on October 29, 2020 pertaining 
+to Item 7.01, including all exhibits filed in connection therewith; and 
+4. The Company’s proxy statement for its 2020 annual meeting of stockholders filed pursuant to the 
+Exchange Act. 
+The prospective financial data disclosed in the Form 8-K filed October 29, 2020, incorporated by 
+reference in this document, h as been prepared by, and is the responsibility of, the Company’s 
+management. PricewaterhouseCoopers LLP has not audite d, reviewed, examined, compiled, or applied 
+agreed-upon procedures with respect to the prospective financial data. Accordingly, 
+PricewaterhouseCoopers LLP does not express an opinion or any other form of assurance with respect 
+thereto. 
+ 
+All documents filed by the Company with the SEC purs uant to Sections 13(a), 13(c), 14 or 15(d) of the 
+Exchange Act subsequent to the date of this Official  Statement (other than any documents or portions of 
+documents not deemed to be filed) and prior to the te rmination of the offering of all of the Bonds covered 
+by this Official Statement shall be deemed to be inco rporated by reference in this Appendix A and to be a 
+part hereof from the date of filing of such docum ents. Except for Item 7.01 furnished under the Form 8-K 
+filed October 29, 2020 (and the corresponding inform ation furnished under Item 9.01 or included as an 
+exhibit), the Company is not incorporating by reference any information furnished under Items 2.02, 7.01  
+DMEAST #42829301 v4 A-2 
+or 8.01 (or corresponding information furnished under Item 9.01 or included as an exhibit) in any past or 
+future current report on Form 8-K that the Company files with the SEC, unless otherwise specified in 
+such current report. 
+ 
+Any statement contained in a document incorporated or  deemed to be incorporated by reference herein 
+will be deemed to be modified or superseded for pur poses of this Official Statement to the extent that a 
+statement contained herein or in any subsequently f iled document which is deemed to be incorporated by 
+reference herein modifies or supersedes that statement.  Any statement so modified or superseded shall 
+not be deemed, except as so modified or superseded, to constitute part of this Official Statement. 
+ 
+The Company will provide without charge to each pers on to whom this Official Statement is delivered, 
+upon written or oral request of any such person, a copy of any or all of the documents referred to above 
+that have been or may be incorporated by reference in this Appendix A, excluding the exhibits thereto. 
+Requests for such copies should be directed to the O ffice of the Corporate Secretary, United States Steel 
+Corporation, 600 Grant Street, 18
+th Floor, Pittsburgh, Pennsylva nia 15219-2800 (telephone: 412-433-
+1121). 
+ 
+RISK FACTORS 
+ 
+Before purchasing the Bonds, investors should carefully  consider the risk factors described in the 
+Company’s annual, quarterly and current reports filed with the SEC under the Exchange Act, which are 
+incorporated by reference in this Appendix A, toge ther with the other information incorporated by 
+reference or provided in this Official Statement in order to evaluate an investment in the Bonds. 
+ 
+RECENT DEVELOPMENTS 
+Big River Steel was successful in obtaining the consent of the holders of the 2019 BRS Bonds to an 
+amendment to the 2019 Bond Financing Agreement executed in connection with the issuance of the 2019 
+BRS Bonds and related documents  to include USS Holdco as a permitted holder under the 2019 Bond 
+Financing Agreement.  As a result, the potential exercise of the US Steel Option will no longer trigger a 
+change of control with respect to the 2019 BRS Bonds and the holders of the 2019 BRS Bonds will no 
+longer have the right to require the repurchase of the 2019 BRS Bonds. The Company will not be required 
+to refinance such portion of Big River Steel’s indebtedness at a premium should the Company elect to 
+exercise the US Steel Option. 
+ 
+OUTSTANDING USS TAX EXEMPT MUNICIPAL BONDS 
+ 
+As of the date of this Official Statement, the following USS tax exempt municipal bonds are outstanding: 
+ 
+CUSIP* Conduit Issuer 
+AMT 
+Status 
+Bullet 
+Maturity 
+Interest 
+Rate 
+Optional 
+Redemption 
+Issue Size 
+($) 
+01730PAA7 
+Allegheny County IDA, 
+Pennsylvania 
+Non-AMT 11/01/2024 4.875% Non-callable 59,600,000 
+01730PAB5 
+Allegheny County IDA, 
+Pennsylvania 
+Non-AMT 05/01/2030 5.125% Non-callable 33,030,000 
+455054AM8 
+Indiana Finance 
+Authority 
+Non-AMT 12/01/2026 6.000% 6/1/2020 @ 100 88,810,000 
+017292XG3 
+Allegheny County IDA, 
+Pennsylvania 
+Non-AMT 12/01/2027 6.550% 12/1/2021 @ 100 13,580,000  
+DMEAST #42829301 v4 A-3 
+017292XF5 
+Allegheny County IDA, 
+Pennsylvania 
+Non-AMT 12/01/2027 6.750% 12/1/2021 @ 100 15,000,000 
+118615AF0 
+Bucks County IDA, 
+Pennsylvania 
+Non-AMT 06/01/2026 6.750% 12/1/2021 @ 100 19,460,000 
+677656AC4 
+Ohio Water 
+Development Authority 
+Non-AMT 05/01/2029 6.600% 11/1/2021 @ 100 21,800,000 
+455054AT3 
+Indiana Finance 
+Authority 
+AMT 08/01/2042 5.750% 8/1/2022 @ 100 29,000,000 
+017292XM0 
+Allegheny County IDA, 
+Pennsylvania 
+AMT 08/01/2042 5.750% 8/1/2022 @ 100 24,995,000 
+84552TAB8 
+Southwestern Illinois 
+Development Authority 
+AMT 08/01/2042 5.750% 8/1/2022 @ 100 40,000,000 
+439241AA8 IDB of City of Hoover 
+(Alabama) AMT 10/01/2049 5.75% 10/01/ 2029 @ 100 275,000,000 
+Total 620,275,000 
+* CUSIP is a registered trademark of American Bankers Association.  The CUSIP numbers set forth herein are provided by 
+CUSIP Global Services LLC, managed on behalf of the American Bankers Association by S&P Global Market Intelligence, a 
+division of S&P Global Inc.  The CUSIP numbers set forth herein are included solely for convenience and none of the Company, 
+the Issuer, the Trustee or the Underwriters make any representation as to the correctness of, nor shall any of them be responsible 
+for, the accuracy of the CUSIP numbers set forth herein.  
+ [THIS PAGE INTENTIONALLY LEFT BLANK]  
+DMEAST #42829301 v4 B-1 
+APPENDIX B 
+ 
+PROPOSED FORM OF OPINION OF BOND COUNSEL 
+Opinion of Kutak Rock LLP, Bond Counsel  
+[To be dated the date of the Bonds] 
+United States Steel Corporation 
+600 Grant Street 
+Pittsburgh, Pennsylvania 15219 
+$63,400,000 
+The Industrial Development Board of the City of Hoover 
+Environmental Improvement Revenue Bonds, Series 2020 
+(United States Steel Corporation Project) 
+(Green Bonds) 
+Ladies and Gentlemen: 
+We have acted as bond counsel to you in connection with the issuance and sale by The Industrial 
+Development Board of the City of Hoover (the “I ssuer”) of its $63,400,000 Environmental Improvement 
+Revenue Bonds, Series 2020 (United States Steel Corporation Project) (Green Bonds) (the “Bonds”).  The 
+Bonds are being issued pursuant to a Trust Indenture dated as of November 1, 2020 (the “Indenture”) 
+between the Issuer and The Bank of New York Mell on Trust Company, N.A., as trustee (the “Trustee”), 
+the provisions of Title 11, Chapter 54, Article 4 (S ection 11-54-80, et seq.), Code of Alabama 1975, as 
+amended (the “Act”), and a resolution of the Issuer  adopted October 26, 2020 (the “Bond Resolution”).  
+Capitalized terms used herein and not otherwise de fined shall have the meanings specified in the 
+Indenture. 
+The proceeds of the Bonds will be used to fina nce or refinance the costs of the acquisition, 
+construction, equipping and insta llation of certain solid waste disposal facilities constituting pollution 
+control facilities under the Act (the “Project Facilities”).  The Project Facilities will be sold by the Issuer 
+to United States Steel Corporation, a Delaware corporation (the “Company”), for use by the Company at 
+its Fairfield Works Mill, located in unincorporated Jefferson County, Alabama (t he “County”) within 25 
+miles of the City of Hoover, Alabama (the “City”),  pursuant to an Agreement of Sale dated as of 
+November 1, 2020 (the “Sale Agreement”) between the Issuer and the Comp any.  The Company has 
+agreed under the Sale Agreement to make Installment Pa yments to the Trustee, on behalf of the Issuer, 
+sufficient to pay the principal or redemption price of , and interest on, the Bonds on each date on which 
+any payment of principal, redemption price or interest on the Bonds becomes due. 
+The Bonds are issuable as fully registered Bonds in denominations of $5,000 and any integral 
+multiple thereof, are dated the date hereof, mature on November 1, 2050, bear interest as determined from 
+time to time in the manner set forth in the Bonds and the Indenture and are subject to mandatory tender 
+for purchase, redemption prior to maturity and purchase in lieu of redemption at the times, in the manner 
+and upon the terms and conditions set forth in the Bonds and the Indenture.  
+DMEAST #42829301 v4 B-2 
+In connection with the issuance of the Bonds, we have examined the following: 
+1. The Act and such other laws as we  deem relevant to this opinion. 
+2. Certified copies of proceedings of the bo ard of directors of the Issuer, preliminary 
+to and in connection with the issuance of the Bonds, authorizing, among other things, the 
+following: 
+(a) The execution and delivery of the Indenture. 
+(b) The execution and delivery of the Sale Agreement. 
+(c) The execution and delivery of the Tax Regulatory Agreement (the “Tax 
+Agreement”), dated the date hereof, between the Issuer and the Company. 
+(d) The issuance, sale and delivery of the Bonds. 
+3 Evidence of the approval of the Project Facilities and the Bonds by the County 
+Commission of the County and the Mayor of the City. 
+4. Evidence of sufficient allocation of Alabama state volume cap to the Bonds. 
+5. Executed counterparts of the Indenture, the Sale Agreement and the Tax 
+Agreement. 
+6. The form of bond prescribed for said issue. 
+7. Certifications of the Company with r espect to certain material facts regarding 
+qualification of the Project Facilities as solid waste disposal facilities within the meaning of 
+Section 142(a)(6) of the Internal Revenue Code of 1986, as amended (the “Code”), and 
+regulations proposed or promulgated thereunder as of the date hereof. 
+8. The opinion of even date herewith of Bradley Arant Boult Cummings LLP, counsel 
+for the Issuer, delivered concurrently with this opinion. 
+9. The opinion of even date herewith of Mark Furry, Associate General Counsel – 
+Corporate of the Company, delivered concurrently with this opinion. 
+10. The opinion of even date herewith of Burr & Forman LLP, Alabama counsel for 
+the Company, delivered concurrently with this opinion. 
+11. Such other matters and documents as we deem necessary for purposes of this 
+opinion. 
+We have assumed the accuracy and truthfulness of all public records and of all certifications, 
+documents, written opinions and other proceedings pr ovided to us, the authen ticity of all documents 
+submitted to us as originals, the genuineness of all si gnatures appearing on documents we have examined, 
+the conformity to the originals of all documents su bmitted to us as certified or photostatic copies and the 
+legal capacity of natural persons executing all executed documents. 
+As to questions of fact material to our opinions, we have relied upon the certified proceedings and 
+other certifications of public officials furnished to us and certain representatio ns and covenants made by  
+DMEAST #42829301 v4 B-3 
+the Company and the Issuer in the Sale Agreemen t, the Indenture and the Tax Agreement, without 
+undertaking to verify any of the foregoing by independent investigation. 
+From such examination, we are of the opinion that, under existing laws, regulations, rulings and 
+judicial decisions: 
+1. The Issuer is a public corporation duly organized and existing under the laws of the State 
+of Alabama (the “State”).  The Issuer has the power and authority under the Act to issue the Bonds, to 
+enter into the Indenture and the Sale Agreement, to apply the proceeds of the Bonds in the manner 
+described in the Indenture and to pledge and assign to the Trustee the Pledged Receipts pursuant to the 
+Indenture. 
+2. The Bonds, in the amount named, have been  validly authorized, executed and issued by 
+the Issuer and, subject to the last paragraph he reof, constitute valid and binding special, limited 
+obligations of the Issuer payable solely from and secured by the amounts available under the Sale 
+Agreement that have been pledged and assigned under the Indenture fo r payment of the Bonds and from 
+other amounts and sources of revenues held under the Indenture and pledged therefor.  The Bonds do not 
+constitute an indebtedness of the City, the County, the State or any political subdivision thereof within the 
+meaning of any State constitutional or statutory provision, nor constitute or give rise to a pecuniary 
+liability of the City, the County or the State or a char ge against their general credit or taxing power.  The 
+Issuer has no taxing power. 
+3. The Indenture, the Sale Agreement and th e Tax Agreement have been duly authorized, 
+executed and delivered by the Issuer and, assuming th e due authorization, execution and delivery thereof 
+by the Trustee and the Company, as the case may be , constitute valid and binding agreements of the 
+Issuer enforceable against the Issuer in accordance with their respec tive terms, subject to the last 
+paragraph hereof. 
+4. Subject to the assumption and in reliance upon the representations and certifications 
+stated below, interest on the Bonds is excludable from gross income for fede ral income tax purposes, 
+except for interest on any Bond for any period during wh ich such Bond is held by a “substantial user” of 
+the Project Facilities or a “related person” (within the meaning of Section 147(a) of the Code); however, 
+such interest on the Bonds is includ ed as an item of tax preference in  computing the federal alternative 
+minimum tax for individuals. 
+5. The Bonds and the income therefrom are exempt from all taxation in the State.  We 
+express no opinion regarding other tax consequences aris ing with respect to the Bonds under the laws of 
+the State or any other state or any local jurisdiction. 
+The Code imposes certain requirements which must  be met on a continuing basis subsequent to 
+the issuance of the Bonds for interest thereon to be  excluded from gross income for federal income tax 
+purposes.  In rendering the opinions expressed herein, we have assumed continuing compliance with the 
+covenants of the Issuer and the Company in the Sa le Agreement, the Indenture and the Tax Agreement 
+pertaining to those sections of the Code which affect  the exclusion from gross income of interest on the 
+Bonds for federal income tax purposes and, in a ddition, we have relied upon representations and 
+certifications by the Issuer and the Company with r espect to certain material facts within the knowledge 
+of the Issuer and the Company, which we have not i ndependently verified.  If the Issuer or the Company 
+should fail to comply with such covenants, or if th e representations or certifications relied upon should be 
+determined to be inaccurate or incomplete, intere st on the Bonds could become includable in gross 
+income for federal income tax purposes retroactively to the date of issuance of the Bonds.  
+DMEAST #42829301 v4 B-4 
+Although the interest on the Bonds is excluded from gross income for federal income tax 
+purposes, the accrual or receipt of interest on the B onds may otherwise affect the federal income tax 
+liability of the recipient.  The extent of these ot her tax consequences will depend upon the recipient’s 
+particular tax status or other items of income or  deduction.  We express no opinion regarding any such 
+consequences. 
+We express no opinion herein as to the accuracy, adequacy or completeness of the Official 
+Statement relating to the Bonds. 
+Our opinions represent our legal judgment based upon our review of the law and the facts that we 
+deem relevant to render such opinions  and are not a guarantee of a resu lt.  The opinions expressed herein 
+are given as of the date hereof based upon laws, regulati ons, rulings and judicial decisions in effect on the 
+date hereof and we assume no obligation to revise or  supplement such opinions to reflect any facts or 
+circumstances that may hereafter come to our attenti on or any changes in law that may hereafter occur.  
+Each purchaser of the Bonds should consult his, her or  its tax advisor regarding the status of any pending 
+or proposed legislation. 
+It is to be understood that the rights of the hol ders of the Bonds and the enforceability of the 
+Bonds, the Indenture, the Sale Agreement, the Tax Agreement and other related financing documents may 
+be subject to bankruptcy, insolven cy, reorganization, receivership, moratorium and other similar laws 
+affecting creditors’ rights and remedies heretofore or  hereafter enacted to the extent constitutionally 
+applicable and that their enforcement may also be subject to equitable principles and the exercise of 
+judicial discretion in appropriate cases. 
+Very truly yours,  
+DMEAST #42829301 v4 C-1 
+APPENDIX C 
+ 
+FORM OF CONTINUING DISCLOSURE AGREEMENT 
+This Continuing Disclosure Agreement (this “Agree ment”) is executed and delivered by United 
+States Steel Corporation (the “Company”) in consider ation of the issuance and sale of The Industrial 
+Development Board of the City of Hoover (Alaba ma) (the “Issuer”) Environmental Improvement 
+Revenue Bonds, Series 2020 (United States Steel Cor poration Project) (Green Bonds) (the “Bonds”) in 
+the aggregate principal amount of $63,400,000. 
+Section 1.  The Company does hereby covenant and agree and enter into a written undertaking 
+for the benefit of the Holders and beneficial owne rs of the Bonds required by Section (b)(5)(i) of 
+Securities and Exchange Commission Rule 15c2–12 under the Securities Exchange Act of 1934, as 
+amended (17 C.F.R. § 240.15c2–l2) (the “Rule”).  Ca pitalized terms used in this Agreement and not 
+otherwise defined herein shall have the respective me anings assigned to such terms in the Trust Indenture 
+(the “Indenture”) dated as of November 1, 2020 betw een the Issuer and The Bank of New York Mellon 
+Trust Company, N.A., as trustee (the “Trustee”).  It being the intention of the Company that there be 
+compliance with the Rule, this Agreement shall be construed in accordance with the written interpretative 
+guidance and no-action letters published from time to  time by the Securities and Exchange Commission 
+and its staff with respect to the Rule. 
+Section 2 .  The Company undertakes to provide the following information as provided in this 
+Agreement: 
+(a) Annual Financial Information; 
+(b) Annual Green Bonds Certificate; 
+(c) Audited Financial St atements, if any; and 
+(d) Material Event Notices. 
+Section 3. 
+(a) The Company shall, while any Bonds are Outstanding, provide the Annual 
+Financial Information on or before the date which is 120 days after the end of each fiscal year of 
+the Company (the “Report Date”) to the Municipal Securities Rulemaking Board (the “MSRB”) 
+in an electronic format accompanied by identif ying information as prescribed by the MSRB.  The 
+Company shall include with each submission of Annual Financial Information a written statement 
+to the effect that the Annual Financial Inform ation is the Annual Financ ial Information required 
+by this Agreement and that it complies with the applicable requirements of this Agreement and 
+that it has been provided to th e MSRB.  If the Company changes its fiscal year, it shall provide 
+written notice of the change of fiscal year to th e MSRB.  It shall be sufficient if the Company 
+provides to the MSRB any or all of the Annual Fi nancial Information by specific reference to 
+documents previously provided to the MSRB or  filed with the Securities and Exchange 
+Commission and, if such a document is a final offi cial statement within the meaning of the Rule, 
+available from the MSRB. 
+(b) If not provided as part of the Annual Financial Information, the Company shall 
+provide the Audited Financial Statements when an d if available while any Bonds are Outstanding 
+to the MSRB.  
+DMEAST #42829301 v4 C-2 
+(c) The Company shall, while any Bonds are Outstanding, provide the Annual Green 
+Bonds Certificate on or before the date which is 180 days after the end of each fiscal year of the 
+Company, commencing with the fiscal year endi ng December 31, 2021, to the MSRB in an 
+electronic format accompanied by identifying information as prescribed by the MSRB.  The 
+Company shall include with each submission of  the Annual Green Bonds Certificate a written 
+statement to the effect that the Annual Green Bonds Certificate is the Annual Green Bonds 
+Certificate required by this Agreement and that it complies with the applicable requirements of 
+this Agreement and that it has been provided to the MSRB.  Once the Company has spent all of 
+the proceeds of the Bonds, it will submit a final certificate to the MSRB that includes a statement 
+that all of the proceeds of the Bonds have been  spent. Thereafter, the Company will no longer be 
+obligated to provide the certificate to the MSRB. 
+(d) If a Material Event occurs while any Bonds are Outstanding, the Company shall 
+provide a Material Event Notice in a timely manner, not in excess of 10 business days after the 
+occurrence of the event, to th e MSRB.  Each Material Event Notice shall be so captioned and 
+shall prominently state the date, title and CUSIP numbers of the Bonds. 
+(e) The Company shall provide in a timely manner to the MSRB notice of any 
+failure by the Company while any Bonds are Outstanding to provide to the MSRB Annual 
+Financial Information on or before the Report Date. 
+(f) Any filing or report under this Agreement may be made solely by transmitting 
+such filing or report to the MSRB in an electronic format accompanied by identifying information 
+as prescribed by the MSRB. 
+Section 4.  The following are the definitions of the capitalized terms used in this Agreement not 
+otherwise defined in this Agreement or the Indenture: 
+(a) “ Annual Financial Information” means the financial information or operating 
+data with respect to the Company, provided at  least annually, of the type incorporated by 
+reference under “APPENDIX A ― UNITED STATES STEEL CORPORATION” of the final 
+Official Statement dated November 12, 2020 with respect to the Bonds.  The consolidated 
+financial statements included in the Annual Financial Information shall be prepared in accordance 
+with generally accepted accounting principles (“GAAP”) as prescribed by the Financial 
+Accounting Standards Board (“FASB”).  Such consolidated financia l statements may, but are not 
+required to be, Audited Financial Statements. 
+(b) “ Annual Green Bonds Certificate ” means a certificate that includes a description 
+of the costs of the Project Facilities funded with the Bonds and the amount of Bond proceeds so 
+applied and stating to the effect that no chang es have been made to the Project Facilities that 
+would reasonably be expected to materially adve rsely affect the environmental benefits of the 
+Project Facilities. 
+(c) “ Audited Financial Statements ” means the Company’s annual consolidated 
+financial statements, prepared in accordan ce with GAAP as prescribed by FASB, which 
+consolidated financial statements shall have been  audited by an independent auditor or firm of 
+independent auditors as shall be then retained by the Company. 
+(d) “ Financial Obligation” means a (i) a debt obligation; (ii) derivative instrument 
+entered into in connection with, or pledged as secur ity or a source of payment for, an existing or 
+planned debt obligation; or (iii) guarantee of (i) or (ii). The term “Financial Obligation” shall not  
+DMEAST #42829301 v4 C-3 
+include municipal securities as to which a final o fficial statement has been provided to the MSRB 
+consistent with the Rule. 
+(e) “ Material Event” means any of the following events with respect to the Bonds: 
+1. Principal and interest payment delinquencies; 
+2. Nonpayment-related defaults, if material; 
+3. Unscheduled draws on debt service reserves reflecting financial 
+difficulties; 
+4. Unscheduled draws on credit enhancements reflecting financial 
+difficulties; 
+5. Substitution of credit or liquidity providers, or their failure to perform; 
+6. Adverse tax opinions, the issuance by the Internal Revenue Service of 
+proposed or final determinations of taxa bility, Notices of Proposed Issue (IRS Form 
+5701-TEB) or other material notices or determinations with respect to the tax status of the 
+security, or other material events affecting the tax status of the security; 
+7. Modifications to rights of security holders, if material; 
+8. Bond calls, if material, and tender offers; 
+9. Defeasances; 
+10. Release, substitution or sale of property securing repayment of the 
+securities, if material; 
+11. Rating changes; 
+12. Bankruptcy, insolvency, receivership or similar event of United States 
+Steel Corporation;†   
+13. The consummation of a merger, cons olidation or acquisition involving 
+United States Steel Corporation or the sale of all or substantially all of the assets of United 
+States Steel Corporation, other than in the ordinary course of business, the entry into a 
+definitive agreement to undertake such an action or the termination of a definitive agreement 
+relating to any such actions, other than pursuant to its terms, if material;  
+                                                 
+† This event is considered to occur when any of the following occur:  the appointment of a receiver, fiscal agent or 
+similar officer for United States Steel Corporation in a proceeding under the U.S. Bankruptcy Code or in any other 
+proceeding under state or federal law in which a court or governmental authority has assumed jurisdiction over 
+substantially all of the assets or business of United States Steel Corporation, or if such jurisdiction has been assumed 
+by leaving the existing governing body and officials or officers in possession but subject to the supervision and 
+orders of a court or governmental authority, or the entry of an order confirming a plan of reorganization, 
+arrangement or liquidation by a court or governmental authority having supervision or jurisdiction over substantially 
+all of the assets or business of United States Steel Corporation.  
+DMEAST #42829301 v4 C-4 
+14. Appointment of a successor or additional trustee or the change of name 
+of a trustee, if material; 
+15. The incurrence of Financial Obligation of United States Steel 
+Corporation, if material, or agreement to cove nants, events of default, remedies, priority 
+rights or other similar terms of a Financial Obliga tion, any of which affect security holders, if 
+material; and 
+16. Default, event of acceleration, termination event, modification of terms 
+or other similar events under a Financial Obligation of United States Steel Corporation, if any 
+such event reflects financial difficulties. 
+(f) “ Material Event Notice” means electronic notice of a Material Event. 
+(g) “ MSRB” means the Municipal Securities Rulemaking Board.  On July 1, 2009, 
+the MSRB became the sole repository to which the Company must electronically submit Annual 
+Financial Information, Audited Financial Statements, if any, and Material Event Notices pursuant 
+to this Agreement.  Reference is made to Securities and Exchange Commission Release No. 34 
+59062, December 8, 2008 (the “Release”) relating to the MSRB’s Electronic Municipal Market 
+Access (“EMMA”) system for municipal securities disclosure, which became effective on July 1, 
+2009.  To the extent applicable to this Agreem ent, the Company shall co mply with the Release 
+and with EMMA, as amended or supplemented from time to time. 
+Section 5. 
+(a) The continuing obligation hereunder of the Company to provide Annual 
+Financial Information, the Annual Green Bonds Certificate, Audited Financial Statements, if any, 
+and Material Event Notices shall terminate immediately once the Bonds no longer are 
+Outstanding.  This Agreement, or any provision hereof, shall be null and void if the Company 
+obtains an opinion of nationally recognized bond counsel to the effect that those portions of the 
+Rule which require this Agreement, or any su ch provision, are invalid, have been repealed 
+retroactively or otherwise do not apply to the Bonds, provided that the Company shall have 
+provided notice of such delivery and the cancellation of this Agreement to the MSRB. 
+(b) This Agreement may be amended, wit hout the consent of the Bondholders, but 
+only upon the Company obtaining and providing to the Trustee an opinion of nationally 
+recognized bond counsel to the effect that such am endment, and giving effect thereto, will not 
+adversely affect the compliance of this Agreem ent and by the Company with the Rule, provided 
+that the Company shall have provided notice of such delivery and of the amendment to the 
+MSRB.  Any such amendment shall satisfy, unless otherwise permitted by the Rule, the following 
+conditions: 
+(i) The amendment may only be made in connection with a change in 
+circumstances that arises from a change in legal requirements, change in law or change in 
+the identity, nature or status of the Company or type of business conducted; 
+(ii) This Agreement, as amended,  would have complied with the 
+requirements of the Rule at the time of the primary offering, after taking into account any 
+amendments or interpretations of the Rule, as well as any change in circumstances; and  
+DMEAST #42829301 v4 C-5 
+(iii) The amendment does not materially impair the interests of Bondholders, 
+as determined either by parties unaffilia ted with the Company (such as nationally 
+recognized bond counsel) or by approving vote of  Bondholders pursuant to the terms of 
+the Indenture at the time of the amendment. 
+The initial Annual Financial Information after the amendment shall explain, in narrative 
+form, the reasons for the amendment and the effect of  the change, if any, in the type of operating 
+data or financial information being provided. 
+(c) The Company shall not transfer its obligations under the Agreement unless the 
+transferee agrees to assume all obligations of the Company hereunder or to execute a continuing 
+disclosure undertaking under the Rule. 
+Section 6.  Any failure by the Company to perform in  accordance with this Agreement shall not 
+constitute an Event of Default with respect to the Bonds.  If the Company fails to comply herewith, any 
+Holder or beneficial owner may take such actions  as may be necessary and appropriate, including seeking 
+specific performance by court order, to cause the Company to comply with its obligations hereunder. 
+Section 7.  This Agreement shall be governed by a nd construed in accordance with the laws of 
+the State of New York. 
+ 
+Dated:  ___________ ____, 2020 
+UNITED STATES STEEL CORPORATION 
+By: ________________________________ 
+ Authorized Signatory 
+ 
+Acknowledged this ____ day of_________, 2020 
+THE BANK OF NEW YORK MELLON TRUST COMPANY, N.A., as Trustee 
+By: __________________________________ 
+Authorized Signatory 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ [THIS PAGE INTENTIONALLY LEFT BLANK] [THIS PAGE INTENTIONALLY LEFT BLANK] [THIS PAGE INTENTIONALLY LEFT BLANK] 
