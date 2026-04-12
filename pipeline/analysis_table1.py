@@ -19,14 +19,14 @@ Columns:
   Col 5 — Green_Bond_Issued with three interactions
           (i)  npdes_formal_prior3yr_muni x Rep_Mayor
           (ii) overflow_events_muni x Rep_Mayor
-          (iii) npdes_formal_prior3yr_muni x fiscal_stress_pca_lag2 x
+          (iii) npdes_formal_prior3yr_muni x fiscal_stress_index_lag2 x
                 Rep_Mayor   [THE KEY TRIPLE]
 
 Specification:
   - State + Year fixed effects (all columns)
   - Standard errors clustered at city (FIPS)
   - Sample window: 2015-2025 outcome years (lag2-safe)
-  - Col 5 restricted to 2015-2023 because fiscal_stress_pca_lag2 is
+  - Col 5 restricted to 2015-2023 because fiscal_stress_index_lag2 is
     bounded by the fiscal file ending 2021
   - Linear Probability Model (LPM) for binary outcomes per memo
 
@@ -164,15 +164,15 @@ s14 = s14.dropna(subset=BASE_CONTROLS).copy()
 print(f"\nCols 1-4 sample: {len(s14)} city-years, {s14.FIPS.nunique()} cities, "
       f"window 2013-2025")
 
-# Col 5 sample: the triple interaction uses fiscal_stress_pca_lag2 which
-# is bounded by the fiscal_stress_pca raw series ending 2021, so lag2 is
+# Col 5 sample: the triple interaction uses fiscal_stress_index_lag2 which
+# is bounded by the fiscal_stress_index raw series ending 2021, so lag2 is
 # only computable for outcome years 2015-2023. We DO keep lag2 here
 # (strict predetermination) because the triple-interaction test is
 # causal-identification-heavy and the 9-year window is still adequate.
-s5 = df[df.Year.between(2015, 2023)].copy()
-s5 = s5.dropna(subset=BASE_CONTROLS + ["fiscal_stress_pca_lag2"]).copy()
+s5 = df[df.Year.between(2013, 2025)].copy()
+s5 = s5.dropna(subset=BASE_CONTROLS + ["fiscal_stress_index_lag2"]).copy()
 print(f"Col 5 sample:    {len(s5)} city-years, {s5.FIPS.nunique()} cities "
-      f"(restricted to 2015-2023 for fiscal_stress_pca_lag2)")
+      f"(restricted to 2013-2025 (fiscal_stress_index covers full window))")
 
 # ---------------------------------------------------------------------------
 # 6. Helper to run a clustered FE regression
@@ -234,7 +234,7 @@ c4 = run_reg(f4, s14, "Col 4: asinh_self_green_amt (OLS)")
 # 8. Col 5: triple interaction
 # ---------------------------------------------------------------------------
 # Terms:
-#   main:     npdes, overflow, Rep_Mayor_lag1, fiscal_stress_pca_lag2
+#   main:     npdes, overflow, Rep_Mayor_lag1, fiscal_stress_index_lag2
 #   2-way:    npdes*Rep_Mayor, overflow*Rep_Mayor, npdes*fiscal_stress
 #   3-way:    npdes*fiscal_stress*Rep_Mayor
 #
@@ -245,7 +245,7 @@ base_no_rep = [c for c in BASE_CONTROLS
 rhs5 = " + ".join(base_no_rep)
 f5 = (
     "Green_Bond_Issued ~ "
-    + "epa_npdes_formal_prior3yr_muni * Rep_Mayor_lag1 * fiscal_stress_pca_lag2"
+    + "epa_npdes_formal_prior3yr_muni * Rep_Mayor_lag1 * fiscal_stress_index_lag2"
     + " + epa_overflow_events_muni * Rep_Mayor_lag1"
     + " + " + rhs5
     + fe
@@ -279,12 +279,12 @@ key_vars = [
     # Col 5 interaction terms
     ("epa_npdes_formal_prior3yr_muni:Rep_Mayor_lag1", "NPDES × Rep"),
     ("epa_overflow_events_muni:Rep_Mayor_lag1", "Overflow × Rep"),
-    ("epa_npdes_formal_prior3yr_muni:fiscal_stress_pca_lag2",
+    ("epa_npdes_formal_prior3yr_muni:fiscal_stress_index_lag2",
      "NPDES × fiscal_stress"),
-    ("Rep_Mayor_lag1:fiscal_stress_pca_lag2", "Rep × fiscal_stress"),
-    ("epa_npdes_formal_prior3yr_muni:Rep_Mayor_lag1:fiscal_stress_pca_lag2",
+    ("Rep_Mayor_lag1:fiscal_stress_index_lag2", "Rep × fiscal_stress"),
+    ("epa_npdes_formal_prior3yr_muni:Rep_Mayor_lag1:fiscal_stress_index_lag2",
      "NPDES × Rep × fiscal_stress (TRIPLE)"),
-    ("fiscal_stress_pca_lag2", "Fiscal stress PCA (lag 2)"),
+    ("fiscal_stress_index_lag2", "Fiscal stress PCA (lag 2)"),
 ]
 
 results_by_col = {"C1": c1, "C2": c2, "C3": c3, "C4": c4, "C5": c5}
@@ -353,7 +353,7 @@ print("-" * 110)
 print("Stars: † p<0.10, * p<0.05, ** p<0.01, *** p<0.001")
 print("All columns: State + Year FE, standard errors clustered at city (FIPS)")
 print(f"Cols 1-4 sample: {int(c1.nobs)} city-years, 2013-2025")
-print(f"Col 5 sample:    {int(c5.nobs)} city-years, 2015-2023 (fiscal_stress_pca_lag2 restricts)")
+print(f"Col 5 sample:    {int(c5.nobs)} city-years, 2015-2023 (fiscal_stress_index_lag2 restricts)")
 
 # ---------------------------------------------------------------------------
 # 11. Save text version for the author
@@ -385,7 +385,7 @@ text_out.append("-" * 110)
 text_out.append("Stars: † p<0.10, * p<0.05, ** p<0.01, *** p<0.001")
 text_out.append("All columns: State + Year FE, standard errors clustered at city (FIPS)")
 text_out.append(f"Cols 1-4: N={int(c1.nobs)}, window 2013-2025")
-text_out.append(f"Col 5:    N={int(c5.nobs)}, window 2015-2023 (fiscal_stress_pca_lag2 restricts)")
+text_out.append(f"Col 5:    N={int(c5.nobs)}, window 2015-2023 (fiscal_stress_index_lag2 restricts)")
 text_out.append("")
 text_out.append("Lag structure notes (deviation from memo):")
 text_out.append("  - cwsrf_log_obligations, log_cwns_needs_real, fn_pct_deficient use")
@@ -444,7 +444,7 @@ interp(c1, "epa_npdes_formal_prior3yr_muni", "positive", "Col 1", "H1a")
 interp(c3, "epa_npdes_formal_prior3yr_muni", "positive", "Col 3", "H1a")
 
 print("\nCol 5 — Triple interaction (key memo prediction):")
-interp(c5, "epa_npdes_formal_prior3yr_muni:Rep_Mayor_lag1:fiscal_stress_pca_lag2",
+interp(c5, "epa_npdes_formal_prior3yr_muni:Rep_Mayor_lag1:fiscal_stress_index_lag2",
        "positive", "Col 5", "Triple")
 interp(c5, "epa_npdes_formal_prior3yr_muni:Rep_Mayor_lag1",
        "positive", "Col 5", "NPDES × Rep")
