@@ -1,0 +1,28 @@
+================================================================================
+TABLE 2 — Compositional Gap and Compulsion Gradient
+================================================================================
+
+Panel A: raw participation rates by party
+Category                     Dem %    Rep %      Gap
+-------------------------------------------------------
+Water/Sewer                  2.14%    0.65%   +1.49pp
+Clean Transportation         0.42%    0.00%   +0.42pp
+Renewable Energy             0.36%    0.04%   +0.32pp
+Energy Efficiency            0.42%    0.08%   +0.34pp
+Green Buildings              0.47%    0.00%   +0.47pp
+Climate Adaptation           0.11%    0.00%   +0.11pp
+Pollution Control            0.14%    0.04%   +0.10pp
+
+Panel B: Rep_Mayor_lag1 coefficient from LPM regressions (Cols 1-5)
+Category                           β        SE       p      N
+------------------------------------------------------------
+Water/Sewer                -0.00967*     0.00445  0.0297   6054
+Clean Transportation       -0.00174      0.00148  0.2370   6054
+Renewable Energy           -0.00241      0.00406  0.5528    885
+Energy Efficiency          -0.00118      0.00135  0.3798   6054
+Green Buildings            -0.00368*     0.00165  0.0257   6054
+
+Panel D: Stacked regression — Rep_Mayor × compulsion_ordinal
+  β(interaction) = -0.00291 (SE=0.00110, p=0.0081)
+
+All: State + Year FE, SE clustered at FIPS. Sample: 2013-2025.
