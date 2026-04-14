@@ -362,6 +362,44 @@ if 'pct_deficient_lag2' in df.columns:
 else:
     log("  [skip] pct_deficient_lag2 missing")
 
+# ----- 1.7b EPA CAA county-level nonattainment (transportation compulsion) -----
+# Source: raw/epa_greenbook/phistory.xls + nayro.xls
+# Retrieved 2026-03-31 from https://www.epa.gov/green-book/green-book-data-download.
+# Authority: EPA Office of Air Quality Planning and Standards.
+# Base variables merged in 00_build_panel.py §6b. Here we build lag-1 / lag-2
+# panel-aware lags and the Rep_Mayor interactions pre-committed in
+# processed/tables/transportation_compulsion_plan.md.
+log("\n── 1.7b EPA CAA nonattainment — lags + Rep_Mayor interactions ──")
+caa_base_vars = [
+    'caa_any_criteria_nonattainment',
+    'caa_ozone_nonattainment_any',
+    'caa_ozone_nonattainment_whole',
+    'caa_pm25_2012_nonattainment',
+    'caa_pm10_nonattainment',
+    'caa_co_nonattainment',
+    'caa_so2_nonattainment',
+    'caa_lead_nonattainment',
+    'caa_ozone_class_ordinal',
+]
+for v in caa_base_vars:
+    if v in df.columns:
+        df[f'{v}_lag1'] = group_shift(v, 1)
+        df[f'{v}_lag2'] = group_shift(v, 2)
+if 'caa_any_criteria_nonattainment' in df.columns:
+    log(f"  caa_any_criteria_nonattainment: "
+        f"{int(df['caa_any_criteria_nonattainment'].sum()):,} positive city-years")
+
+# Pre-committed interactions with Rep_Mayor (tests whether federal air-quality
+# mandates compress the partisan gap in Step 1+2 issuance).
+if {'caa_ozone_nonattainment_any_lag1', 'Rep_Mayor_lag1'}.issubset(df.columns):
+    df['rep_x_caa_ozone'] = df['Rep_Mayor_lag1'] * df['caa_ozone_nonattainment_any_lag1']
+    log(f"  rep_x_caa_ozone built "
+        f"(n_positive={int((df['rep_x_caa_ozone'] > 0).sum())})")
+if {'caa_any_criteria_nonattainment_lag1', 'Rep_Mayor_lag1'}.issubset(df.columns):
+    df['rep_x_caa_any'] = df['Rep_Mayor_lag1'] * df['caa_any_criteria_nonattainment_lag1']
+    log(f"  rep_x_caa_any built "
+        f"(n_positive={int((df['rep_x_caa_any'] > 0).sum())})")
+
 # ----- 1.8 Fiscal stress robustness -----
 log("\n── 1.8 Fiscal-stress robustness ──")
 # fiscal_stress_index_lag2 is already built in 00_build_panel.py; alias for consistency.

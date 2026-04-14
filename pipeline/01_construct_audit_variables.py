@@ -508,6 +508,8 @@ needed_prefixes = [
     'rps_x_muni_electric','state_rps_stringency','net_metering',
     # FEMA / NFIP
     'fema_disaster','nfip_',
+    # EPA Green Book CAA nonattainment (from phistory.xls / nayro.xls merged in 00)
+    'caa_',
     # Federal grants
     'iija_','federal_grant',
     # Transit

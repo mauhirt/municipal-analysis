@@ -33,6 +33,8 @@ sourced in 00 or 01 from documented public datasets. No new encoding.
 | `nfip_total_losses_asinh_lag2` | `nfip_total_losses` | `raw/disasters/nfip_flood_claims.csv` | FEMA NFIP |
 | `fema_disaster_flood_lag2` | `fema_disaster_flood` | `raw/disasters/fema_disaster_declarations.csv` | FEMA OpenFEMA |
 | `nri_inland_flooding_eal_bv` | `Inland Flooding - Expected Annual Loss - Building Value` | `raw/nri/epa_nri.csv` | FEMA National Risk Index |
+| `caa_any_criteria_nonattainment`, `caa_ozone_nonattainment_any`, `caa_ozone_nonattainment_whole`, `caa_pm25_2012_nonattainment`, `caa_pm10_nonattainment`, `caa_co_nonattainment`, `caa_so2_nonattainment`, `caa_lead_nonattainment` (plus `_lag1` / `_lag2` for each) | `pw_YYYY` columns in PHISTORY; aggregated across 8 current-NAAQS pollutants | `raw/epa_greenbook/phistory.xls` | **EPA Green Book, retrieved 2026-03-31** from https://www.epa.gov/green-book/green-book-data-download |
+| `caa_ozone_class_ordinal` | `class` column in NAYRO (Marginal→Extreme mapped to 1–5) | `raw/epa_greenbook/nayro.xls` | **EPA Green Book, retrieved 2026-03-31** |
 | `opinion_{regulate,fundrenewables,happening,worried}_lag2` | respective raw columns | `raw/climate/climate_opinion_ycom.csv` | Yale PCCC YCOM |
 | `mayor_prob_{rep,dem}_lag1` | `prob_{republican,democrat}` | `raw/mayor/mayor_party.csv` | Hand-coded + DIME + endorsement tiered |
 | `esg_law_intensity_lag1` | `esg_law_intensity_score` | `raw/political/antiesg_laws.csv` | State legislative tracking |
@@ -229,7 +231,7 @@ ladder (Tier 1 broad pressure → Tier 4 judicial).
 
 | Variable | Reason | Next step |
 |---|---|---|
-| EPA CAA county-level nonattainment | Requires structured pull from EPA Green Book historical series; cannot reconstruct from memory | See `raw/policy/caa_nonattainment_placeholder.md` |
+| ~~EPA CAA county-level nonattainment~~ | **RESOLVED 2026-04.** Green Book phistory.xls + nayro.xls retrieved; merged into 00_build_panel.py §6b. See Section A above for the derived `caa_*` variables. | Done |
 | `pct_deficient_lag2` | Source data deferred in `variable_list_audit.md` (EPA CWNS unavailable) | Flagged as data gap |
 | `Nearby_Water_CITY_Amt_25km_Cumul` | Requires geospatial aggregation not yet run | Geospatial build pending |
 | `Y_Mgmt_Proceeds_Yes`, `Y_Proj_Selection_Yes` | Bloomberg `Count_Mgmt of Proc__Yes` / `Count_Proj Sel Proc__Yes` not derived in `01` | Add construction step to `01_construct_audit_variables.py` |

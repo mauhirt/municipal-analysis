@@ -53,6 +53,28 @@ log(f"  After Y_ construction: {df.shape}")
 
 
 # ═══════════════════════════════════════════════════════════════════════
+# 1b. CROSSWALK — county_fips5 from Census crosswalk (needed for CAA merge)
+# ═══════════════════════════════════════════════════════════════════════
+log("\n── 1b. Crosswalk county FIPS ──")
+cw = pd.read_csv(ROOT / 'raw' / 'crosswalk' / 'Crosswalk.csv')
+# county_geo_id is "0500000US<county_fips5>", extract last 5 digits.
+if 'county_geo_id' in cw.columns:
+    cw['county_fips5'] = (
+        cw['county_geo_id'].astype(str)
+        .str.split('US', n=1).str[1]
+        .where(lambda s: s.str.len() == 5, other=None)
+    )
+    cw['county_fips5'] = pd.to_numeric(cw['county_fips5'], errors='coerce')
+    cw_keep = cw[['fips', 'county_fips5']].rename(columns={'fips': 'fips7'})
+    cw_keep = cw_keep.drop_duplicates('fips7')
+    df = df.merge(cw_keep, on='fips7', how='left')
+    log(f"  county_fips5 merged from crosswalk: "
+        f"{int(df['county_fips5'].notna().sum())} non-null")
+else:
+    log("  [warn] county_geo_id not found in crosswalk — county_fips5 not built")
+
+
+# ═══════════════════════════════════════════════════════════════════════
 # HELPER: merge with logging
 # ═══════════════════════════════════════════════════════════════════════
 def safe_merge(df, right, on, name, how='left'):
@@ -243,6 +265,177 @@ es = pd.read_csv(ROOT / 'raw' / 'epa' / 'epa_state_enforcement.csv')
 es_new = [c for c in es.columns if c not in df.columns and c not in ('city_name',)]
 if es_new:
     df = safe_merge(df, es[['fips7', 'year'] + es_new], on=['fips7', 'year'], name='EPA state enforcement')
+
+
+# ═══════════════════════════════════════════════════════════════════════
+# 6b. EPA CAA Green Book county-level nonattainment (1992-2026 history)
+#     Source: raw/epa_greenbook/phistory.xls + nayro.xls
+#     Retrieved 2026-03-31 from https://www.epa.gov/green-book/green-book-data-download
+#     Authority: US EPA Office of Air Quality Planning and Standards
+#
+#     PHISTORY encodes pw_YYYY column = "P" (part county in nonattainment that year)
+#     or "W" (whole county). We treat both as nonattainment (binary 1) and also
+#     retain the W/P distinction as `caa_*_whole` variants for robustness.
+#
+#     NAYRO provides the classification ordinal (Marginal/Moderate/Serious/Severe/
+#     Extreme for ozone) which we merge per (county, pollutant).
+# ═══════════════════════════════════════════════════════════════════════
+log("\n── 6b. EPA CAA Green Book nonattainment ──")
+gb_dir = ROOT / 'raw' / 'epa_greenbook'
+phistory_path = gb_dir / 'phistory.xls'
+nayro_path = gb_dir / 'nayro.xls'
+
+if phistory_path.exists():
+    ph = pd.read_excel(phistory_path, sheet_name='phistory')
+    log(f"  PHISTORY: {ph.shape[0]} (county × pollutant) rows, "
+        f"{ph['pollutant'].nunique()} pollutants")
+
+    # Build 5-digit county FIPS from state + county. Drop rows with missing FIPS
+    # (rare; occasional non-county tribal/territorial rows).
+    ph = ph.dropna(subset=['fips_state', 'fips_cnty']).copy()
+    ph['county_fips5'] = (
+        ph['fips_state'].astype(int) * 1000 + ph['fips_cnty'].astype(int)
+    )
+
+    # Pollutant → short code mapping (NAAQS-aware, includes revocation metadata).
+    # Keys use uppercase and punctuation preserved; short codes are safe for
+    # Python identifiers.
+    pollutant_code = {
+        '8-Hour Ozone (2008)': 'ozone_2008',
+        '8-Hour Ozone (2015)': 'ozone_2015',
+        '8-Hour Ozone (1997)': 'ozone_1997',  # revoked
+        '1-Hour Ozone (1979)': 'ozone_1hr',   # revoked
+        'PM-2.5 (2012)':       'pm25_2012',
+        'PM-2.5 (2006)':       'pm25_2006',   # revoked 2015
+        'PM-2.5 (1997)':       'pm25_1997',   # revoked
+        'PM-10 (1987)':        'pm10_1987',
+        'Carbon Monoxide (1971)': 'co_1971',
+        'Sulfur Dioxide (2010)': 'so2_2010',
+        'Sulfur Dioxide (1971)': 'so2_1971',  # largely revoked
+        'Lead (2008)':         'pb_2008',
+        'Lead (1978)':         'pb_1978',      # revoked
+        'Nitrogen Dioxide (1971)': 'no2_1971',
+    }
+    ph['pollutant_code'] = ph['pollutant'].map(pollutant_code)
+    unknown = ph[ph['pollutant_code'].isna()]['pollutant'].unique()
+    if len(unknown):
+        log(f"  WARNING — unmapped pollutants: {list(unknown)}")
+
+    # Tag which NAAQS are currently in force (not revoked). This drives the
+    # primary aggregate `caa_any_criteria_nonattainment` variable.
+    current_naaqs = {
+        'ozone_2008', 'ozone_2015',  # 2008 is being phased out but still binding
+        'pm25_2012',
+        'pm10_1987',  # still in force
+        'co_1971',    # still in force
+        'so2_2010',
+        'pb_2008',
+        'no2_1971',
+    }
+
+    # Melt the pw_YYYY columns into long form (county × pollutant × year).
+    year_cols = [c for c in ph.columns if c.startswith('pw_')]
+    ph_long = ph.melt(
+        id_vars=['county_fips5', 'pollutant_code', 'revoked_naaqs'],
+        value_vars=year_cols,
+        var_name='year', value_name='na_status',
+    )
+    ph_long['year'] = ph_long['year'].str.replace('pw_', '').astype(int)
+    # na_status is "P" (part), "W" (whole), or NaN (not in nonattainment).
+    ph_long['nonattain_any'] = ph_long['na_status'].notna().astype(int)
+    ph_long['nonattain_whole'] = (ph_long['na_status'] == 'W').astype(int)
+    log(f"  PHISTORY melted: {len(ph_long):,} county-pollutant-year rows; "
+        f"{int(ph_long['nonattain_any'].sum()):,} nonattainment observations")
+
+    # Aggregate per (county_fips5, year): build the criterion-pollutant indicators.
+    def _aggregate(pollutants_set, name, wide_col):
+        """For each (county, year), 1 iff any pollutant in the set is nonattainment."""
+        sub = ph_long[ph_long['pollutant_code'].isin(pollutants_set)]
+        agg = sub.groupby(['county_fips5', 'year'])[wide_col].max().reset_index()
+        agg = agg.rename(columns={wide_col: name})
+        return agg
+
+    # Ozone (any — 2008 or 2015 currently binding).
+    caa_ozone = _aggregate({'ozone_2008', 'ozone_2015'}, 'caa_ozone_nonattainment_any', 'nonattain_any')
+    caa_ozone_whole = _aggregate({'ozone_2008', 'ozone_2015'},
+                                  'caa_ozone_nonattainment_whole', 'nonattain_whole')
+
+    # PM2.5 (current 2012 + phased-out 2006).
+    caa_pm25 = _aggregate({'pm25_2012'}, 'caa_pm25_2012_nonattainment', 'nonattain_any')
+
+    # PM10, CO, SO2, Lead (current NAAQS each).
+    caa_pm10 = _aggregate({'pm10_1987'}, 'caa_pm10_nonattainment', 'nonattain_any')
+    caa_co = _aggregate({'co_1971'}, 'caa_co_nonattainment', 'nonattain_any')
+    caa_so2 = _aggregate({'so2_2010'}, 'caa_so2_nonattainment', 'nonattain_any')
+    caa_pb = _aggregate({'pb_2008'}, 'caa_lead_nonattainment', 'nonattain_any')
+
+    # Any current NAAQS.
+    caa_any = _aggregate(current_naaqs, 'caa_any_criteria_nonattainment', 'nonattain_any')
+
+    # Merge all CAA indicators into a single county-year panel, then left-join
+    # to the main city-year panel on county_fips5.
+    caa = caa_any
+    for extra in [caa_ozone, caa_ozone_whole, caa_pm25, caa_pm10, caa_co, caa_so2, caa_pb]:
+        caa = caa.merge(extra, on=['county_fips5', 'year'], how='outer')
+    caa = caa.fillna(0)
+
+    # If nayro.xls is available, add the ozone classification ordinal.
+    if nayro_path.exists():
+        na = pd.read_excel(nayro_path, sheet_name='nayro')
+        na = na.dropna(subset=['fips_state', 'fips_cnty']).copy()
+        na['county_fips5'] = (
+            na['fips_state'].astype(int) * 1000 + na['fips_cnty'].astype(int)
+        )
+        na['pollutant_code'] = na['pollutant'].map(pollutant_code)
+        # Classification ordinal for ozone (2008 or 2015): map strings → 1-5.
+        class_ordinal = {
+            'Marginal': 1, 'Marginal (Rural Transport)': 1, 'Rural Transport (Marginal)': 1,
+            'Moderate': 2, 'Moderate <= 12.7ppm': 2, 'Moderate > 12.7ppm': 2,
+            'Serious': 3,
+            'Severe 15': 4, 'Severe 17': 4, 'Severe-15': 4, 'Severe-17': 4,
+            'Extreme': 5,
+            'Former Subpart 1': 0, 'Not Classified': 0, 'Incomplete Data': 0,
+        }
+        na_ozone = na[na['pollutant_code'].isin({'ozone_2008', 'ozone_2015'})].copy()
+        na_ozone['class_ord'] = na_ozone['class'].map(class_ordinal).fillna(0).astype(int)
+        # One observation per county (max across ozone standards).
+        na_class = na_ozone.groupby('county_fips5')['class_ord'].max().reset_index()
+        na_class = na_class.rename(columns={'class_ord': 'caa_ozone_class_ordinal'})
+        caa = caa.merge(na_class, on='county_fips5', how='left')
+        # Classification ordinal is time-invariant (current snapshot). Cities in
+        # counties with no ozone nonattainment history get 0.
+        caa['caa_ozone_class_ordinal'] = caa['caa_ozone_class_ordinal'].fillna(0).astype(int)
+        log(f"  NAYRO: merged {int(caa['caa_ozone_class_ordinal'].gt(0).sum()):,} "
+            f"county-years with ozone classification ordinal")
+
+    # Retain only panel years (2013-2025). Green Book covers 1992-2026.
+    caa = caa[(caa['year'] >= 2013) & (caa['year'] <= 2025)]
+
+    if 'county_fips5' in df.columns:
+        # NaN county_fips5 = city not matched in crosswalk; preserve but don't cast.
+        df['county_fips5'] = pd.to_numeric(df['county_fips5'], errors='coerce')
+        caa['county_fips5'] = pd.to_numeric(caa['county_fips5'], errors='coerce').astype('Int64')
+        df['county_fips5'] = df['county_fips5'].astype('Int64')
+        caa_cols = [c for c in caa.columns if c.startswith('caa_')]
+        before = set(df.columns)
+        df = df.merge(
+            caa[['county_fips5', 'year'] + caa_cols].drop_duplicates(['county_fips5', 'year']),
+            on=['county_fips5', 'year'], how='left', suffixes=('', '_CAA'),
+        )
+        for c in list(df.columns):
+            if c.endswith('_CAA'):
+                df = df.drop(columns=c)
+        # Fill NaN with 0 (counties with no CAA nonattainment history).
+        for c in caa_cols:
+            if c in df.columns:
+                df[c] = df[c].fillna(0)
+        log(f"  Merged {len(caa_cols)} CAA variables onto city-year panel. "
+            f"caa_any_criteria_nonattainment: "
+            f"{int(df['caa_any_criteria_nonattainment'].sum()):,} positive city-years.")
+    else:
+        log("  [skip] county_fips5 not in panel yet — CAA merge requires it")
+else:
+    log(f"  [skip] PHISTORY not found at {phistory_path}")
 
 
 # ═══════════════════════════════════════════════════════════════════════

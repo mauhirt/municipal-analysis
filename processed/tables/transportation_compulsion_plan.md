@@ -79,35 +79,32 @@ direct bond-financing demand for:
 (CT, NJ, MA, NY, etc.) are pre-panel; no within-state variation for
 them.
 
-## What's blocked — EPA Clean Air Act Nonattainment
+## ✅ CAA nonattainment — RESOLVED 2026-04
 
-See `raw/policy/caa_nonattainment_placeholder.md` for full details.
+**Source files (retrieved 2026-03-31 from https://www.epa.gov/green-book/green-book-data-download):**
+- `raw/epa_greenbook/phistory.xls` (historical per-year county-NAAQS indicators, 1992–2026)
+- `raw/epa_greenbook/nayro.xls` (current nonattainment with effective dates + classification)
+- `raw/epa_greenbook/greenbook_exportdoc.pdf` (data dictionary)
 
-**Why it matters:** CAA nonattainment is the sharpest federal-mandate
-transportation compulsion channel, and it varies at the **county-MSA
-level within a state** — so it identifies under state fixed effects,
-unlike state GHG / ZEV rules.
+**Merged into:** `pipeline/00_build_panel.py` §6b (via `county_fips5` built upstream from the crosswalk in §1b). Per-pollutant binary indicators + ordinal ozone classification cover all 8 currently-binding NAAQS:
 
-**What's required:** A structured pull of EPA Green Book historical
-quarterly releases, reconciled against Federal Register publications for
-classification changes over 2013-2025. Minimum output:
+| Variable | Source NAAQS | Positive city-years |
+|---|---|---|
+| `caa_any_criteria_nonattainment` | union of 8 current NAAQS | 3,450 |
+| `caa_ozone_nonattainment_any` | 8-Hour Ozone 2008 or 2015 | 3,126 |
+| `caa_ozone_nonattainment_whole` | ditto, whole-county only | 2,222 |
+| `caa_pm25_2012_nonattainment` | PM-2.5 2012 | 537 |
+| `caa_pm10_nonattainment` | PM-10 1987 | 453 |
+| `caa_lead_nonattainment` | Lead 2008 | 418 |
+| `caa_so2_nonattainment` | SO₂ 2010 | 300 |
+| `caa_co_nonattainment` | CO 1971 | 0 (current CO NAAs all in AK/HI, not in panel) |
+| `caa_ozone_class_ordinal` | NAYRO `class` → 0-5 ordinal (None/Marginal/Moderate/Serious/Severe/Extreme) | 3,510 |
 
-```
-county_fips,year,caa_ozone_nonattainment_any,caa_pm25_nonattainment_any,
-  caa_classification,effective_date,attainment_date,source
-```
+**Panel characteristics:** 297/578 cities ever in any CAA nonattainment; 270/578 ever in ozone nonattainment. Within-city SD is low (status changes are rare) but **17 party-switcher cities have within-city CAA variation**, which gives the city+year FE robustness some identifying variation.
 
-**Alternative (lower-cost):** EPA Clean Air Markets Division publishes
-county-level annual air quality design value data. Could be used as a
-proxy: designate a county as "nonattainment-pressure" if its 3-year
-design value for 8-hour ozone exceeds the current NAAQS. This is
-coarser than actual nonattainment designation but retrievable.
-
-**Until this is done:** The clean-transportation column in Table 2
-continues to use `iija_transit_grant_amt_asinh_lag1` as the best available
-compulsion proxy, with state GHG + state ZEV as new supplementary
-variables. The caveat in the paper must acknowledge that CAA compulsion
-is not directly measured.
+**Pre-committed interactions built in `02_variable_additions.py` §1.7b:**
+- `rep_x_caa_ozone = Rep_Mayor_lag1 × caa_ozone_nonattainment_any_lag1` (1,191 positive)
+- `rep_x_caa_any = Rep_Mayor_lag1 × caa_any_criteria_nonattainment_lag1` (1,319 positive)
 
 ## Proposed specification updates
 
@@ -141,4 +138,6 @@ Proposed: `iija_transit_grant_amt_asinh_lag1` + `state_ghg_law_active_lag1`
 |---|---|---|---|
 | `state_ghg_law_active_lag1` | `raw/policy/state_ghg_reduction_laws.csv` (23 laws, 15 states) | 2,447 city-years | ✅ |
 | `state_zev_mandate_active_lag1` | `raw/policy/state_zev_mandate.csv` (17 states) | 2,666 city-years | ✅ |
-| `caa_ozone_nonattainment_any` | EPA Green Book (pending pull) | county-year | ❌ blocked |
+| `caa_ozone_nonattainment_any` | `raw/epa_greenbook/phistory.xls` retrieved 2026-03-31 | 3,126 city-years | ✅ |
+| `caa_any_criteria_nonattainment` | ditto + 7 other NAAQS unions | 3,450 city-years | ✅ |
+| `caa_ozone_class_ordinal` | `raw/epa_greenbook/nayro.xls` (Marginal–Extreme, 0–5) | 3,510 city-years | ✅ |
