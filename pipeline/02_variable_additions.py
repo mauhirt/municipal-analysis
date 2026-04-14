@@ -650,6 +650,40 @@ if 'tel_stringency_normalized' in df.columns and 'state_rep_trifecta' in df.colu
 else:
     log("  [skip] tel_stringency_normalized or state_rep_trifecta missing")
 
+# ----- 3.8b TEL × city-level fiscal interactions -----
+# TEL is a state-level constitutional constraint; its MAIN EFFECT is absorbed
+# by state FE in any state+year-FE specification. The theoretically meaningful
+# object is the interaction with a city-level variable that captures where
+# the TEL bite actually lands. Two theory-driven interactions:
+#
+#   tel_x_prop_tax_dep  — Mullins/Joyce revenue-substitution hypothesis.
+#     TELs act primarily on property-tax revenue. The bite is proportional to
+#     the city's property-tax dependence. Prediction: positive interaction —
+#     TEL + property-tax-dependent city → bond-financing substitution.
+#
+#   tel_x_charges       — Enterprise-fund escape-valve hypothesis.
+#     Enterprise-fund charges (water / sewer) are NOT subject to TEL; revenue
+#     bonds secured against these charges bypass the TEL constraint entirely.
+#     Prediction: positive interaction — cities with deep enterprise funds
+#     issue more revenue-backed green bonds under tight TEL.
+#
+# Both interactions are identified within-state-across-cities under state FE
+# because the city-level partner varies across cities within a state.
+log("\n── 3.8b TEL × city-level fiscal interactions ──")
+if {'tel_stringency_normalized', 'property_tax_dependence_lag2'}.issubset(df.columns):
+    df['tel_x_prop_tax_dep'] = (df['tel_stringency_normalized']
+                                * df['property_tax_dependence_lag2'])
+    log(f"  tel_x_prop_tax_dep built (n_nonnull={df['tel_x_prop_tax_dep'].notna().sum()})")
+else:
+    log("  [skip] tel_x_prop_tax_dep: tel_stringency_normalized or property_tax_dependence_lag2 missing")
+
+if {'tel_stringency_normalized', 'charges_to_own_source_lag2'}.issubset(df.columns):
+    df['tel_x_charges'] = (df['tel_stringency_normalized']
+                           * df['charges_to_own_source_lag2'])
+    log(f"  tel_x_charges build (n_nonnull={df['tel_x_charges'].notna().sum()})")
+else:
+    log("  [skip] tel_x_charges: tel_stringency_normalized or charges_to_own_source_lag2 missing")
+
 # ----- 3.9 Orthogonal state-ideology instruments (T1 F3 robustness) -----
 log("\n── 3.9 Orthogonal state-ideology instruments ──")
 for src in ['state_medicaid_expanded', 'state_right_to_work']:
