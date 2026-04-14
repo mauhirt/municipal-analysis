@@ -259,6 +259,24 @@ grant_vars = [
     'iija_transit_grant_amt',
     'fema_resil_grant_amt',
 ]
+# Re-pull any grant amounts that were pruned upstream (01 keeps the asinh/lag
+# derivatives but may drop the raw amount columns).
+missing_raw = [v for v in grant_vars if v not in df.columns]
+if missing_raw:
+    fg_path = ROOT / 'raw' / 'grants' / 'federal_grants_panel.csv'
+    if fg_path.exists():
+        fg = pd.read_csv(fg_path)
+        if 'fips7' not in fg.columns:
+            fips_col = [c for c in fg.columns if 'fips' in c.lower()][0]
+            fg = fg.rename(columns={fips_col: 'fips7'})
+        fg['fips7'] = fg['fips7'].astype(int)
+        pull = ['fips7', 'year'] + [c for c in missing_raw if c in fg.columns]
+        if len(pull) > 2:
+            df = df.merge(
+                fg[pull].drop_duplicates(['fips7', 'year']),
+                on=['fips7', 'year'], how='left',
+            )
+            log(f"  re-merged {len(pull)-2} raw grant amount column(s): {pull[2:]}")
 for v in grant_vars:
     if v not in df.columns:
         log(f"  [skip] {v} not in panel")
@@ -288,20 +306,49 @@ if 'nfip_total_losses' in df.columns:
 else:
     log("  [skip] nfip_total_losses unavailable")
 
+# FEMA disaster flood flag: re-pull from raw if the panel only kept counts/any.
+if 'fema_disaster_flood' not in df.columns:
+    fema_src = ROOT / 'raw' / 'disasters' / 'fema_disaster_declarations.csv'
+    if fema_src.exists() and 'county_fips5' in df.columns:
+        fm = pd.read_csv(fema_src)
+        fc = [c for c in fm.columns if 'fips' in c.lower()][0]
+        fm[fc] = fm[fc].astype(str).str.replace('.0', '', regex=False)
+        if 'fema_disaster_flood' in fm.columns and 'year' in fm.columns:
+            fm_agg = fm.groupby([fc, 'year'], as_index=False)['fema_disaster_flood'].max()
+            fm_agg = fm_agg.rename(columns={fc: '_cfips5_str'})
+            df['_cfips5_str'] = df['county_fips5'].astype(str).str.replace('.0', '', regex=False)
+            df = df.merge(fm_agg, on=['_cfips5_str', 'year'], how='left')
+            df['fema_disaster_flood'] = df['fema_disaster_flood'].fillna(0)
+            df = df.drop(columns='_cfips5_str')
+
 if 'fema_disaster_flood' in df.columns:
     df['fema_disaster_flood_lag2'] = group_shift('fema_disaster_flood', 2)
-    log("  fema_disaster_flood_lag2 built")
+    log(f"  fema_disaster_flood_lag2 built (positive city-years: "
+        f"{int(df['fema_disaster_flood_lag2'].fillna(0).sum())})")
 else:
     log("  [skip] fema_disaster_flood not in panel")
 
 # NRI inland flooding expected annual loss on buildings (time-invariant control).
 nri_eal_col = 'Inland Flooding - Expected Annual Loss - Building Value'
-if nri_eal_col in df.columns:
+if nri_eal_col not in df.columns:
+    nri_src = ROOT / 'raw' / 'nri' / 'epa_nri.csv'
+    if nri_src.exists():
+        nri = pd.read_csv(nri_src)
+        if nri_eal_col in nri.columns and 'fips7' in nri.columns:
+            nri_small = nri[['fips7', nri_eal_col]].drop_duplicates('fips7')
+            nri_small = nri_small.rename(columns={nri_eal_col: 'nri_inland_flooding_eal_bv'})
+            df = df.merge(nri_small, on='fips7', how='left')
+
+if 'nri_inland_flooding_eal_bv' in df.columns:
+    df['nri_inland_flooding_expected_annual_loss_building_value'] = df['nri_inland_flooding_eal_bv']
+    log(f"  nri_inland_flooding_eal_bv built (n_nonnull="
+        f"{df['nri_inland_flooding_eal_bv'].notna().sum()})")
+elif nri_eal_col in df.columns:
     df['nri_inland_flooding_eal_bv'] = df[nri_eal_col]
     df['nri_inland_flooding_expected_annual_loss_building_value'] = df[nri_eal_col]
-    log("  nri_inland_flooding_eal_bv aliased")
+    log("  nri_inland_flooding_eal_bv aliased from raw column")
 else:
-    log(f"  [skip] `{nri_eal_col}` not in panel")
+    log(f"  [skip] `{nri_eal_col}` not available")
 
 # ----- 1.7 Reconfigure: bridge-deficiency variable -----
 log("\n── 1.7 Reconfigure bridge deficiency (move to T2-clean transportation) ──")
@@ -510,16 +557,17 @@ for src in ['state_rps_active', 'state_rps_target_pct']:
 
 # ACEEE code rank — raw is `state_building_code_stringency_aceee_rank` (cross-section).
 aceee_path = ROOT / 'raw' / 'energy_policy' / 'state_building_codes.csv'
-if 'state_building_code_stringency_aceee_rank' in df.columns:
-    df['ep_state_aceee_code_rank'] = df['state_building_code_stringency_aceee_rank']
-elif aceee_path.exists() and 'state_abb' in df.columns:
-    ac = pd.read_csv(aceee_path)
-    if 'state_abbr' in ac.columns and 'state_building_code_stringency_aceee_rank' in ac.columns:
-        ac = ac[['state_abbr', 'state_building_code_stringency_aceee_rank']].rename(
-            columns={'state_abbr': 'state_abb',
-                     'state_building_code_stringency_aceee_rank': 'ep_state_aceee_code_rank'})
-        ac = ac.drop_duplicates('state_abb')
-        df = df.merge(ac, on='state_abb', how='left')
+if 'ep_state_aceee_code_rank' not in df.columns:
+    if 'state_building_code_stringency_aceee_rank' in df.columns:
+        df['ep_state_aceee_code_rank'] = df['state_building_code_stringency_aceee_rank']
+    elif aceee_path.exists() and 'state_abb' in df.columns:
+        ac = pd.read_csv(aceee_path)
+        if 'state_abbr' in ac.columns and 'state_building_code_stringency_aceee_rank' in ac.columns:
+            ac = ac[['state_abbr', 'state_building_code_stringency_aceee_rank']].rename(
+                columns={'state_abbr': 'state_abb',
+                         'state_building_code_stringency_aceee_rank': 'ep_state_aceee_code_rank'})
+            ac = ac.drop_duplicates('state_abb')
+            df = df.merge(ac, on='state_abb', how='left')
 
 if 'ep_state_aceee_code_rank' in df.columns:
     # Cross-sectional → lag-1 is identical but included for spec symmetry.
