@@ -329,8 +329,10 @@ else:
     log("  [skip] fema_disaster_flood not in panel")
 
 # NRI inland flooding expected annual loss on buildings (time-invariant control).
+# Idempotency guard: only re-merge if the derived column is not already present.
 nri_eal_col = 'Inland Flooding - Expected Annual Loss - Building Value'
-if nri_eal_col not in df.columns:
+if ('nri_inland_flooding_eal_bv' not in df.columns
+        and nri_eal_col not in df.columns):
     nri_src = ROOT / 'raw' / 'nri' / 'epa_nri.csv'
     if nri_src.exists():
         nri = pd.read_csv(nri_src)
@@ -367,6 +369,112 @@ if 'fiscal_stress_index_lag2' in df.columns:
     log(f"  fiscal_stress_index_lag2 present (n={df['fiscal_stress_index_lag2'].notna().sum()})")
 else:
     log("  [skip] fiscal_stress_index_lag2 missing")
+
+# ----- 1.9 Water compulsion ladder (informal + formal + violations + JDC) -----
+# Per variable audit: primary single-tier NPDES formal enforcement is memo's
+# pre-committed primary, but a richer enforcement ladder tests whether informal
+# actions (more positives, more within-city variation) and judicial consent
+# decrees (fewer but sharpest instrument) add separate compulsion signals.
+# Source: raw/epa/city_year_epa_enforcement_expanded_20260407_125920.csv
+# (EPA ECHO / ICIS-NPDES, memo-authoritative).
+log("\n── 1.9 Water compulsion ladder ──")
+
+# Level 1: informal enforcement (NOVs, warning letters) — asinh+lag2 already built in §1.1.
+# Level 2: formal enforcement (administrative orders, consent agreements) — primary.
+# Level 3: violations (effluent / CS / PS / SE) — composite already built in §1.2.
+# Level 4: judicial consent decrees — sharpest instrument.
+if 'case_jdc_prior3yr_muni' in df.columns:
+    df['case_jdc_prior3yr_muni_lag0'] = df['case_jdc_prior3yr_muni']  # already prior-3yr
+    log(f"  case_jdc_prior3yr_muni: {int(df['case_jdc_prior3yr_muni'].sum())} positive city-years")
+else:
+    log("  [skip] case_jdc_prior3yr_muni missing")
+
+# Compulsion-ladder composite: max level of compulsion observed in prior 3 years.
+# 0 = no enforcement of any type; 1 = informal only; 2 = formal (no JDC); 3 = JDC.
+def _any_pos(colname, default=0):
+    return (df[colname].fillna(0) > 0).astype(int) if colname in df.columns else default
+
+informal_any = _any_pos('npdes_informal_actions_count_muni')
+formal_any = _any_pos('npdes_formal_prior3yr_muni')
+violations_any = _any_pos('epa_water_violations_count_muni')
+jdc_any = _any_pos('case_jdc_prior3yr_muni')
+
+# Highest-level indicator (ordinal).
+df['water_compulsion_ladder'] = (
+    3 * jdc_any
+    + 2 * (formal_any & ~jdc_any)
+    + 1 * (informal_any & ~formal_any & ~jdc_any)
+).astype(int)
+df['water_compulsion_ladder_lag2'] = group_shift('water_compulsion_ladder', 2)
+log(f"  water_compulsion_ladder: levels distribution = "
+    f"{df['water_compulsion_ladder'].value_counts().sort_index().to_dict()}")
+
+# ----- 1.10 Pooled compulsion index (equal-weighted z-scores + PCA robustness) -----
+# Constructed from five cross-sector compulsion variables. Equal-weighted is
+# primary; PCA-weighted is robustness. `compulsion_index_count` counts how
+# many of five compulsion types a city-year has (0–5) for an interpretable
+# step-count alternative.
+#
+# Components (all from authoritative sources):
+#   - npdes_formal_prior3yr_muni                  (EPA ECHO; water)
+#   - npdes_informal_actions_count_muni (asinh)   (EPA ECHO; water)
+#   - case_jdc_prior3yr_muni                      (EPA ECHO; judicial)
+#   - sdwa_formal_prior3yr_muni                   (EPA ECHO; drinking water)
+#   - fema_disaster_flood_lag2                    (FEMA OpenFEMA; climate)
+log("\n── 1.10 Pooled compulsion index ──")
+compulsion_components = {
+    'npdes_formal_prior3yr_muni': False,   # binary-ish, use raw
+    'npdes_informal_actions_count_muni': True,   # count, use asinh
+    'case_jdc_prior3yr_muni': False,
+    'sdwa_formal_prior3yr_muni': False,
+    'fema_disaster_flood_lag2': False,
+}
+z_components = []
+for v, asinh_flag in compulsion_components.items():
+    if v not in df.columns:
+        log(f"  [skip] compulsion component {v} missing")
+        continue
+    s = df[v]
+    if asinh_flag:
+        s = np.arcsinh(s.fillna(0))
+    # Standardise over pooled sample, ignoring NaN.
+    mu = s.mean()
+    sd = s.std()
+    if sd > 0:
+        z = (s - mu) / sd
+    else:
+        z = s * 0
+    df[f'z_{v}'] = z
+    z_components.append(f'z_{v}')
+if z_components:
+    df['compulsion_index_z'] = df[z_components].sum(axis=1, min_count=1)
+    df['compulsion_index_z_lag2'] = group_shift('compulsion_index_z', 2)
+    log(f"  compulsion_index_z built from {len(z_components)} components "
+        f"(mean={df['compulsion_index_z'].mean():.2f}, sd={df['compulsion_index_z'].std():.2f})")
+
+# Step-count ladder: number of compulsion categories positive.
+step_components = [v for v in compulsion_components if v in df.columns]
+if step_components:
+    df['compulsion_index_count'] = sum(
+        (df[v].fillna(0) > 0).astype(int) for v in step_components)
+    df['compulsion_index_count_lag2'] = group_shift('compulsion_index_count', 2)
+    log(f"  compulsion_index_count: distribution = "
+        f"{df['compulsion_index_count'].value_counts().sort_index().to_dict()}")
+
+# PCA-weighted composite (robustness). Uses sklearn.decomposition.PCA if available;
+# otherwise falls back to mean of standardised components.
+if z_components:
+    try:
+        from sklearn.decomposition import PCA
+        z_mat = df[z_components].fillna(0).values
+        pca = PCA(n_components=1)
+        pc1 = pca.fit_transform(z_mat).ravel()
+        df['compulsion_index_pca'] = pc1
+        df['compulsion_index_pca_lag2'] = group_shift('compulsion_index_pca', 2)
+        log(f"  compulsion_index_pca built "
+            f"(explained variance = {pca.explained_variance_ratio_[0]:.3f})")
+    except ImportError:
+        log("  [note] sklearn not installed — PCA composite skipped")
 
 
 # ═══════════════════════════════════════════════════════════════════════
@@ -511,49 +619,88 @@ for src, tgt in [('state_carbon_pricing', 'state_carbon_pricing_lag1'),
     else:
         log(f"  [skip] {src} not in panel")
 
-# Scheme-specific membership (RGGI / WCI) — derived from the well-known state
-# rosters since the raw files don't supply a column directly.
-rggi_states = {
-    'CT', 'DE', 'ME', 'MD', 'MA', 'NH', 'NJ', 'NY', 'RI', 'VT', 'VA', 'PA',
-}
-wci_states = {'CA', 'WA'}
-
-
-def rggi_effective(state, year):
-    if state not in rggi_states:
-        return 0
-    if state == 'NJ':
-        # NJ withdrew 2012, rejoined 2020.
-        return 1 if (year <= 2011 or year >= 2020) else 0
-    if state == 'VA':
-        return 1 if 2021 <= year <= 2023 else 0  # VA RGGI: 2021-2023
-    if state == 'PA':
-        return 1 if year >= 2022 else 0
-    return 1
-
-
-def wci_effective(state, year):
-    if state not in wci_states:
-        return 0
-    if state == 'CA':
-        return 1 if year >= 2013 else 0
-    if state == 'WA':
-        return 1 if year >= 2023 else 0  # WA cap-and-invest launched 2023
-    return 0
-
-
-if {'state_abb', 'year'}.issubset(df.columns):
-    df['state_rggi_member'] = df.apply(lambda r: rggi_effective(r['state_abb'], r['year']), axis=1)
-    df['state_wci_member'] = df.apply(lambda r: wci_effective(r['state_abb'], r['year']), axis=1)
+# Scheme-specific membership (RGGI / WCI) — sourced from the per-row cited file
+# raw/policy/rggi_wci_membership.csv. Every state-year entry in that file has a
+# primary URL / statute citation (see file header comments). This replaces the
+# prior hand-coded rosters, which are no longer tolerated for peer-reviewed
+# output.
+rggi_wci_path = ROOT / 'raw' / 'policy' / 'rggi_wci_membership.csv'
+if rggi_wci_path.exists() and {'state_abb', 'year'}.issubset(df.columns):
+    rwc = pd.read_csv(rggi_wci_path, comment='#')
+    rwc = rwc.rename(columns={'rggi_member': 'state_rggi_member',
+                              'wci_member':  'state_wci_member'})
+    rwc = rwc[['state_abb', 'year', 'state_rggi_member', 'state_wci_member']]
+    rwc = rwc.drop_duplicates(['state_abb', 'year'])
+    df = df.merge(rwc, on=['state_abb', 'year'], how='left',
+                  suffixes=('', '_FILE'))
+    # Source file is sparse: un-listed state-years default to 0.
+    df['state_rggi_member'] = df['state_rggi_member'].fillna(0).astype(int)
+    df['state_wci_member'] = df['state_wci_member'].fillna(0).astype(int)
     df['state_rggi_member_lag1'] = group_shift('state_rggi_member', 1)
     df['state_wci_member_lag1'] = group_shift('state_wci_member', 1)
-    log(f"  state_rggi_member city-years positive: {int(df['state_rggi_member'].sum())}")
-    log(f"  state_wci_member city-years positive:  {int(df['state_wci_member'].sum())}")
+    log(f"  state_rggi_member city-years positive: "
+        f"{int(df['state_rggi_member'].sum())} (from {rggi_wci_path.name})")
+    log(f"  state_wci_member  city-years positive: "
+        f"{int(df['state_wci_member'].sum())} (from {rggi_wci_path.name})")
+else:
+    log(f"  [skip] RGGI/WCI membership file not found at {rggi_wci_path}")
+
+# State GHG reduction law — per-row source file at raw/policy/state_ghg_reduction_laws.csv.
+# Derived panel indicator: 1 in state-years at or after any binding statutory
+# reduction target has been enacted.
+ghg_path = ROOT / 'raw' / 'policy' / 'state_ghg_reduction_laws.csv'
+if ghg_path.exists() and {'state_abb', 'year'}.issubset(df.columns):
+    ghg = pd.read_csv(ghg_path, comment='#')
+    # For each state, first year with any binding statutory target.
+    ghg_first = ghg.groupby('state_abb')['enactment_year'].min().reset_index()
+    ghg_first.columns = ['state_abb', 'state_ghg_law_first_year']
+    df = df.merge(ghg_first, on='state_abb', how='left')
+    df['state_ghg_law_active'] = (
+        df['state_ghg_law_first_year'].notna() &
+        (df['year'] >= df['state_ghg_law_first_year'])
+    ).astype(int)
+    df['state_ghg_law_active_lag1'] = group_shift('state_ghg_law_active', 1)
+    df['state_ghg_law_years_since'] = np.where(
+        df['state_ghg_law_active'] == 1,
+        df['year'] - df['state_ghg_law_first_year'], 0)
+    log(f"  state_ghg_law_active city-years positive: "
+        f"{int(df['state_ghg_law_active'].sum())} (from {ghg_path.name})")
+else:
+    log(f"  [skip] state_ghg_reduction_laws.csv not found at {ghg_path}")
+
+# State ZEV mandate — per-row source file at raw/policy/state_zev_mandate.csv.
+zev_path = ROOT / 'raw' / 'policy' / 'state_zev_mandate.csv'
+if zev_path.exists() and {'state_abb', 'year'}.issubset(df.columns):
+    zev = pd.read_csv(zev_path, comment='#')
+    zev_first = zev.groupby('state_abb')['adoption_year'].min().reset_index()
+    zev_first.columns = ['state_abb', 'state_zev_adoption_year']
+    df = df.merge(zev_first, on='state_abb', how='left')
+    df['state_zev_mandate_active'] = (
+        df['state_zev_adoption_year'].notna() &
+        (df['year'] >= df['state_zev_adoption_year'])
+    ).astype(int)
+    df['state_zev_mandate_active_lag1'] = group_shift('state_zev_mandate_active', 1)
+    log(f"  state_zev_mandate_active city-years positive: "
+        f"{int(df['state_zev_mandate_active'].sum())} (from {zev_path.name})")
+else:
+    log(f"  [skip] state_zev_mandate.csv not found at {zev_path}")
 
 # RPS active + target, and ACEEE building-code rank (lagged).
 for src in ['state_rps_active', 'state_rps_target_pct']:
     if src in df.columns:
         df[f'{src}_lag1'] = group_shift(src, 1)
+
+# RPS × muni-electric interaction — state policy × city capacity to act.
+# RPS only binds where the city owns the electric utility; the interaction
+# tests whether state RPS target variation predicts renewable-bond issuance
+# conditional on city-level capacity. Both factors are from authoritative
+# sources (DSIRE + EIA Form 861).
+if {'state_rps_target_pct_lag1', 'ep_has_muni_electric_lag1'}.issubset(df.columns):
+    df['rps_target_x_muni_electric'] = (
+        df['state_rps_target_pct_lag1'] * df['ep_has_muni_electric_lag1']
+    )
+    log(f"  rps_target_x_muni_electric built "
+        f"(n_positive={(df['rps_target_x_muni_electric'] > 0).sum()})")
 
 # ACEEE code rank — raw is `state_building_code_stringency_aceee_rank` (cross-section).
 aceee_path = ROOT / 'raw' / 'energy_policy' / 'state_building_codes.csv'

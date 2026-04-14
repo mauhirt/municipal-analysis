@@ -1,0 +1,51 @@
+state_abb,adoption_year,first_compliance_my,program,statute_or_reg,source
+# State ZEV (Zero Emission Vehicle) mandate adoption — Section 177 of the Clean Air
+# Act (42 U.S.C. § 7507) permits states with an approved SIP to adopt California's
+# motor vehicle emission standards, including ZEV sales requirements. This file
+# lists each US state that has adopted CA's ZEV rules under Section 177, with the
+# model year of first applicability.
+#
+# California is coded as the "home" state (originating regulator). "Section 177
+# states" follow CA standards via state-level rulemaking. ZEV applicability to a
+# given state-year is derived downstream as:
+#   state_zev_active[state, year] = 1 iff adoption_year <= year AND state in listed rows
+#
+# NC is excluded: adopted clean car rules but rescinded before ZEV applicability.
+# NH, PA, MT: considered but did not adopt.
+#
+# References:
+#   CARB Section 177 state tracking — https://ww2.arb.ca.gov/resources/documents/section-177-states
+#   ICCT US ZEV Regulation tracker — https://theicct.org
+#   NESCAUM (Northeast States for Coordinated Air Use Management) — https://nescaum.org
+#   CT HB 5223 (2004) — https://www.cga.ct.gov/2004/ACT/PA/2004PA-00252-R00HB-05223-PA.htm
+#   NY 6 NYCRR Part 218 — https://www.dec.ny.gov/regs/4414.html
+#   NJ N.J.A.C. 7:27-29 — https://www.nj.gov/dep/aqpp/cleancars.html
+#   MA 310 CMR 7.40 — https://www.mass.gov/regulations/310-CMR-740-low-emission-vehicle-program
+#   MD COMAR 26.11.34 — https://mde.maryland.gov/programs/air/mobilesources/Pages/CleanCars.aspx
+#   RI SOS 250-RICR-120-05-23 — https://dem.ri.gov/environmental-protection-bureau/air-resources/programs-and-regulations/low-emission-vehicle
+#   VT Air Pollution Control Regulation Section 5-1106 — https://dec.vermont.gov/air-quality/mobile-sources
+#   OR OAR 340-257 — https://www.oregon.gov/deq/aq/programs/pages/aq-clean-vehicles.aspx
+#   WA WAC 173-423 — https://app.leg.wa.gov/wac/default.aspx?cite=173-423
+#   CO 5 CCR 1001-24 — https://cdphe.colorado.gov/zero-emission-vehicles
+#   DE 7 DE Admin. Code 1140 — https://regulations.delaware.gov/AdminCode/title7/1000/1100/1140.shtml
+#   MN Minnesota Clean Cars Rule (2021) — https://www.pca.state.mn.us/air/clean-cars-minnesota-rule
+#   NM NMAC 20.2.89 — https://www.env.nm.gov/air-quality/zero-emission-vehicles/
+#   NV NAC 445B — https://ndep.nv.gov/air/air-pollution-control/mobile-sources-program
+#   ME 06-096 CMR ch. 127 — https://www.maine.gov/dep/air/mobile-sources/clean-cars
+CA,1990,1998,ZEV,Title 13 CCR § 1962.4 (Advanced Clean Cars I/II),https://ww2.arb.ca.gov/our-work/programs/advanced-clean-cars-program
+NY,2005,2015,ZEV,6 NYCRR Part 218,https://www.dec.ny.gov/regs/4414.html
+NJ,2004,2009,ZEV,N.J.A.C. 7:27-29,https://www.nj.gov/dep/aqpp/cleancars.html
+MA,1991,2002,ZEV,310 CMR 7.40,https://www.mass.gov/regulations/310-CMR-740-low-emission-vehicle-program
+VT,2005,2009,ZEV,VT Air Pollution Control Regulation § 5-1106,https://dec.vermont.gov/air-quality/mobile-sources
+ME,2005,2009,ZEV,06-096 CMR ch. 127,https://www.maine.gov/dep/air/mobile-sources/clean-cars
+CT,2004,2008,ZEV,CT HB 5223 (2004),https://www.cga.ct.gov/2004/ACT/PA/2004PA-00252-R00HB-05223-PA.htm
+RI,2005,2014,ZEV,250-RICR-120-05-23,https://dem.ri.gov/environmental-protection-bureau/air-resources/programs-and-regulations/low-emission-vehicle
+OR,2007,2009,ZEV,OAR 340-257,https://www.oregon.gov/deq/aq/programs/pages/aq-clean-vehicles.aspx
+WA,2005,2009,ZEV,WAC 173-423,https://app.leg.wa.gov/wac/default.aspx?cite=173-423
+MD,2007,2011,ZEV,COMAR 26.11.34,https://mde.maryland.gov/programs/air/mobilesources/Pages/CleanCars.aspx
+DE,2010,2014,ZEV,7 DE Admin. Code 1140,https://regulations.delaware.gov/AdminCode/title7/1000/1100/1140.shtml
+CO,2019,2023,ZEV,5 CCR 1001-24 Advanced Clean Cars,https://cdphe.colorado.gov/zero-emission-vehicles
+MN,2021,2025,ZEV,Minnesota Clean Cars Rule,https://www.pca.state.mn.us/air/clean-cars-minnesota-rule
+NM,2022,2026,ZEV,NMAC 20.2.89 Advanced Clean Cars,https://www.env.nm.gov/air-quality/zero-emission-vehicles/
+NV,2021,2025,ZEV,NAC 445B Clean Cars Nevada,https://ndep.nv.gov/air/air-pollution-control/mobile-sources-program
+VA,2021,2025,ZEV,9VAC5-172 Low-Emission and Zero-Emission Vehicle,https://www.deq.virginia.gov/air/mobile-sources/electric-vehicles

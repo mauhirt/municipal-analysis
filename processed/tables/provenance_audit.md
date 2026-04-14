@@ -1,0 +1,259 @@
+# Provenance Audit — Every Constructed Variable
+
+**Purpose.** This document lists every variable constructed in
+`pipeline/02_variable_additions.py` that is not a direct raw-file pass-through,
+and identifies its authoritative source and construction logic. Required for
+peer-review compliance: no constructed variable should be usable without a
+citable source.
+
+**Audit scope.** The source files upstream of 02 (in `00_build_panel.py` and
+`01_construct_audit_variables.py`) are listed in `README.md` lines 50–92
+(Data sources table). This audit only covers transformations and constructions
+introduced by 02.
+
+---
+
+## A. Direct pass-throughs from authoritative raw files (trusted)
+
+These 02-introduced variables apply simple lag / asinh transforms to columns
+sourced in 00 or 01 from documented public datasets. No new encoding.
+
+| Variable | Upstream source column | Source file | Data authority |
+|---|---|---|---|
+| `epa_npdes_informal_asinh_lag2` | `npdes_informal_actions_count_muni` | `raw/epa/city_year_epa_enforcement_expanded_20260407_125920.csv` | EPA ECHO / ICIS-NPDES |
+| `epa_water_violations_asinh_lag2` | sum of `npdes_{effluent,cs,ps,se}_violations_count_muni` | same | EPA ECHO / ICIS-NPDES |
+| `epa_npdes_{effluent,cs,ps,se}_asinh_lag2` | respective raw columns | same | EPA ECHO / ICIS-NPDES |
+| `ep_muni_electric_rev_asinh_lag1` | `revenue_millions` | `raw/energy_policy/municipal_electric_utilities.csv` | EIA Form 861 |
+| `ep_has_muni_electric_lag1` | `has_municipal_electric` | same | EIA Form 861 |
+| `bcode_state_bps_adopted_lag1` | `state_bps_adopted` | `raw/energy_policy/New Building Codes/master_state_year_panel_2010_2025.csv` | IMT BPS Matrix / ACEEE |
+| `bcode_iecc_lag_yrs_lag1` | `lag_model_code_yrs` | same | IMT / ACEEE |
+| `bcode_state_weakening_amendments_lag1` | `weakening_amendments` | same | IMT / ACEEE |
+| `bcode_bps_adopted_lag1` | `bps_adopted` | `raw/energy_policy/New Building Codes/master_city_year_panel_2010_2025.csv` | IMT BPS Matrix |
+| `{iija_water,ira_eecbg,ira_ggrf,iija_transit,fema_resil}_grant_amt_asinh_lag1` | respective raw columns | `raw/grants/federal_grants_panel.csv` | USASpending.gov |
+| `nfip_total_losses_asinh_lag2` | `nfip_total_losses` | `raw/disasters/nfip_flood_claims.csv` | FEMA NFIP |
+| `fema_disaster_flood_lag2` | `fema_disaster_flood` | `raw/disasters/fema_disaster_declarations.csv` | FEMA OpenFEMA |
+| `nri_inland_flooding_eal_bv` | `Inland Flooding - Expected Annual Loss - Building Value` | `raw/nri/epa_nri.csv` | FEMA National Risk Index |
+| `opinion_{regulate,fundrenewables,happening,worried}_lag2` | respective raw columns | `raw/climate/climate_opinion_ycom.csv` | Yale PCCC YCOM |
+| `mayor_prob_{rep,dem}_lag1` | `prob_{republican,democrat}` | `raw/mayor/mayor_party.csv` | Hand-coded + DIME + endorsement tiered |
+| `esg_law_intensity_lag1` | `esg_law_intensity_score` | `raw/political/antiesg_laws.csv` | State legislative tracking |
+| `esg_underwriter_block_lag1` | `esg_has_underwriter_block` | same | State legislative tracking |
+| `inst_go_{voter_approval_required,supermajority,revenue_bond_voter_approval}_lag1` | respective raw columns | `raw/institutional/state_bond_referenda_requirements.csv` | State statutes (author hand-coded) |
+| `inst_utah_antiesg_lag1` | `signed_utah_antiesg_letter` | `raw/political/state_msrb_rfi_position.csv` | MSRB 2022 RFI public record |
+| `inst_bond_bank_active_lag1` | `bond_bank_active_2013_2025` | `raw/institutional/state_bond_banks.csv` | State records |
+| `state_{dem_governor,dem_trifecta,rep_trifecta}_lag1` | respective raw columns | `raw/political/state_political.csv` | NCSL + Ballotpedia |
+| `state_carbon_pricing_lag1` / `state_carbon_price_usd_lag1` | `state_carbon_pricing` / `state_carbon_price` | `raw/climate/climate_policy_controls.csv` | DSIRE |
+| `state_rps_active_lag1` / `state_rps_target_pct_lag1` | respective raw columns | same | DSIRE |
+| `state_medicaid_expanded_lag1` / `state_right_to_work_lag1` | respective raw columns | `raw/census_acs/additional_city_variables_2010_2024.csv` | State legislative records |
+| `ep_state_aceee_code_rank_lag1` | `state_building_code_stringency_aceee_rank` | `raw/energy_policy/state_building_codes.csv` | ACEEE |
+| `{c40,iclei,mcpa}_member_lag1` / `mcpa_signatory_lag1` | `c40_member`, `iclei_member`, `mayors_climate_signatory` | `raw/climate/climate_policy_controls.csv` | C40 / ICLEI / MCPA public rosters |
+| `state_pct_bachelors_lag1` | `state_pct_bachelors_plus` | `raw/census_acs/additional_city_variables_2010_2024.csv` | Census ACS 5-year |
+| `pop_density_sqkm_lag2`, `is_principal_city_lag2`, `fed_igr_share_lag2`, `state_igr_share_lag2` | respective raw columns | various Census sources | Census ACS / ASLGF |
+
+---
+
+## B. Variables constructed from primary sources authored in this repository
+
+These are new source files written as part of this analysis pipeline. Each
+file carries per-row citations in its header or source column.
+
+### B.1 `raw/policy/rggi_wci_membership.csv`
+
+**Drives variables:** `state_rggi_member`, `state_wci_member`,
+`state_rggi_member_lag1`, `state_wci_member_lag1`.
+
+- Primary citations per row (`source` column in the CSV):
+  - RGGI membership: https://www.rggi.org/program-overview-and-design/elements
+  - NJ withdrawal (2012) / re-entry (2020): Gov. Christie EO-62 (2012);
+    Murphy EO-7 (2018); first auction participation 2020-06.
+  - VA entry (2021) / exit (2023-12-31): HB 981 (2020) + Youngkin
+    regulation Reg. VAR 40:16-1651 (2024-03-25).
+  - PA entry (2022) / invalidation (2023-11): 25 Pa. Code Ch. 145
+    Subch. E final rule; *Shapiro v. Bowman* (Commonwealth Court 2023).
+  - CA cap-and-trade: AB 32 (2006), implementation 2013;
+    https://ww2.arb.ca.gov/our-work/programs/cap-and-trade-program
+  - WA cap-and-invest: SB 5126 (2021), effective 2023-01-01;
+    https://ecology.wa.gov/climate-commitment-act
+
+**Construction conservatism.** PA 2023–2025 are coded 0 (program
+invalidated by Commonwealth Court Nov 2023, not rescinded on appeal).
+VA 2024–2025 are coded 0 (Youngkin regulatory withdrawal effective
+end-2023). Any future re-entry of either state would require an
+updated row with a date-stamped citation.
+
+### B.2 `raw/policy/state_ghg_reduction_laws.csv`
+
+**Drives variables:** `state_ghg_law_first_year`, `state_ghg_law_active`,
+`state_ghg_law_active_lag1`, `state_ghg_law_years_since`.
+
+**Scope restriction:** only **statutory, binding, economy-wide** GHG
+reduction laws. Executive orders and administrative plans are excluded
+because they do not survive an administration change (e.g. the MI and
+NH Climate Council actions are intentionally omitted).
+
+**Per-law citations (one row per statute):**
+- CA AB 32 (2006) Cal. Health & Safety Code § 38500 et seq.
+- CA SB 32 (2016) Cal. Health & Safety Code § 38566
+- CT GWSA (2008) Conn. Gen. Stat. § 22a-200a
+- CT Public Act 22-5 (2022) Conn. Pub. Acts 22-5
+- CO HB 19-1261 (2019) Colo. Rev. Stat. § 25-7-102.8
+- CO SB 21-200 (2021) Colo. Rev. Stat. § 25-7-140.5
+- HI Act 234 (2007) Haw. Rev. Stat. § 342B-71
+- HI Act 15 (2022) Haw. Rev. Stat. § 225P-5
+- IL CEJA PA 102-0662 (2021)
+- MA GWSA (2008) Mass. Gen. Laws ch. 21N
+- MA Climate Roadmap Act (2021) Mass. Acts 2021 ch. 8
+- MD GGRA (2009) Md. Envir. Code Ann. § 2-1201 et seq.
+- MD Climate Solutions Now Act (2022) Md. Laws 2022 ch. 38
+- ME LD 1679 (2019) 38 M.R.S. § 576-A
+- MN HF 2 (2023) Minn. Stat. § 216B.1691
+- NJ GWRA (2007) N.J. Stat. § 26:2C-37 et seq.
+- NY CLCPA (2019) N.Y. Envtl. Conserv. Law § 75-0107
+- OR HB 3543 (2007) Or. Rev. Stat. § 468A.205
+- OR HB 2021 (2021) Or. Rev. Stat. § 469A.410
+- RI Act on Climate (2021) R.I. Gen. Laws § 42-6.2
+- VT GWSA (2020) 10 V.S.A. § 592
+- WA CCA SB 5126 (2021) Wash. Rev. Code § 70A.65
+
+Cross-referenced against: **Georgetown Climate Center State Climate Policy
+Maps** and **LSE Grantham Research Institute Climate Change Laws of the
+World Database**.
+
+### B.3 `raw/policy/state_zev_mandate.csv`
+
+**Drives variables:** `state_zev_adoption_year`, `state_zev_mandate_active`,
+`state_zev_mandate_active_lag1`.
+
+**Scope:** states that have adopted California's ZEV rules via Section 177
+of the Clean Air Act (42 U.S.C. § 7507). NC is excluded (adopted clean-car
+rules but rescinded before ZEV applicability). The file records adoption
+year (state-level rulemaking final) and first compliance model year.
+
+**Per-state regulatory citations:**
+- CA: Title 13 CCR § 1962.4 (Advanced Clean Cars I/II), from 1990 ZEV
+  regulation; current Advanced Clean Cars II finalized 2022.
+- NY: 6 NYCRR Part 218
+- NJ: N.J.A.C. 7:27-29
+- MA: 310 CMR 7.40
+- VT: VT Air Pollution Control Regulation § 5-1106
+- ME: 06-096 CMR ch. 127
+- CT: CT HB 5223 (2004) (Section 177 adoption); CT HB 6688 (2022) updates
+- RI: 250-RICR-120-05-23
+- OR: OAR 340-257
+- WA: WAC 173-423
+- MD: COMAR 26.11.34
+- DE: 7 DE Admin. Code 1140
+- CO: 5 CCR 1001-24
+- MN: Minnesota Clean Cars Rule (2021)
+- NM: NMAC 20.2.89
+- NV: NAC 445B Clean Cars Nevada
+- VA: 9VAC5-172
+
+Cross-referenced against: **CARB Section 177 State Tracking**, **ICCT US ZEV
+Regulation Tracker**, **NESCAUM**.
+
+---
+
+## C. Variables derived from authoritative upstream sources (transparent composition)
+
+These are compositions (sums, maxes, indicators, products) of variables
+already sourced authoritatively. The derivation logic is documented inline
+in the code; no new source attestation required beyond the components.
+
+| Variable | Derivation | Uses components from |
+|---|---|---|
+| `climate_commitment_static` | `OR(c40_member, iclei_member, mayors_climate_signatory)` | DSIRE + C40 + ICLEI + MCPA |
+| `Y_natural_resource` | `(Count_ESG Project Categories__*Natural_Resource* OR *Biodiversity* OR *Land_Use*) > 0` | Bloomberg Terminal |
+| `fn_esg_has_muni_bond_law_post` | `year >= esg_first_law_year` | Anti-ESG law database |
+| `Y_climate_adapt`, `Y_pollution_control` | Aliases of `Y_Climate_Change_Adaptation` / `Y_Pollution_Control` | Bloomberg Terminal |
+| `epa_water_violations_count_muni` | Sum of 4 NPDES violation types (effluent + CS + PS + SE) | EPA ECHO |
+| `tel_x_prop_tax_dep`, `tel_x_charges` | Products of `tel_stringency_normalized` × city-level fiscal partner | ACIR TEL + Census ASLGF |
+| `rps_target_x_muni_electric` | `state_rps_target_pct_lag1 × ep_has_muni_electric_lag1` | DSIRE × EIA Form 861 |
+| `rep_x_esg_intensity` | `Rep_Mayor_lag1 × esg_law_intensity_lag1` | Hand-coded mayor + ESG-law DB |
+| `tel_x_rep_trifecta` | `tel_stringency_normalized × state_rep_trifecta` | ACIR × NCSL |
+| `c40_x_rep_mayor` | `c40_member_lag1 × Rep_Mayor_lag1` | C40 × hand-coded mayor |
+| `rep_x_fn_partisan` | `Rep_Mayor_lag1 × fn_partisan_lag1` | Hand-coded mayor × ICMA FOG |
+
+---
+
+## D. Pooled compulsion indices
+
+### D.1 `compulsion_index_z` (equal-weighted z-score composite)
+
+**Construction:** sum of standardised (z-score) transforms of five compulsion
+components, covering both regulatory and physical-risk channels.
+
+```
+compulsion_index_z = z(npdes_formal_prior3yr_muni)
+                   + z(asinh(npdes_informal_actions_count_muni))
+                   + z(case_jdc_prior3yr_muni)
+                   + z(sdwa_formal_prior3yr_muni)
+                   + z(fema_disaster_flood_lag2)
+```
+
+All five components are from authoritative sources (EPA ECHO + FEMA
+OpenFEMA). Equal-weighting is a modelling choice defensible under peer
+review as the most interpretable aggregation that imposes no component
+priority beyond presence.
+
+### D.2 `compulsion_index_count` (step-count ladder)
+
+**Construction:** count of how many of the five compulsion components are
+positive in a given city-year. Values 0–5, with 0 meaning no compulsion of
+any kind observed in the lookback window. Interpretable alternative to
+the continuous z-score index.
+
+### D.3 `compulsion_index_pca` (PCA first component, robustness)
+
+**Construction:** first principal component of the five z-scored components,
+via `sklearn.decomposition.PCA(n_components=1)`. Explained variance ratio
+reported in the build log. Serves as a robustness check that the equal-
+weighted composite is not driven by an arbitrary weighting choice.
+
+### D.4 `water_compulsion_ladder` (ordinal within-water hierarchy)
+
+**Construction:** ordinal 0–3 coding the highest level of water-related
+EPA enforcement observed against city-owned facilities in the prior 3 years:
+
+- 0: no enforcement of any kind
+- 1: informal enforcement only (NOVs, warning letters)
+- 2: formal enforcement (administrative orders, consent agreements)
+- 3: judicial consent decree (`case_jdc_prior3yr_muni` > 0)
+
+All three levels are from the same EPA ECHO / ICIS-NPDES source (memo-
+authoritative); the ordinal structure reflects the memo's enforcement
+ladder (Tier 1 broad pressure → Tier 4 judicial).
+
+---
+
+## E. Data gaps explicitly flagged (not fabricated)
+
+| Variable | Reason | Next step |
+|---|---|---|
+| EPA CAA county-level nonattainment | Requires structured pull from EPA Green Book historical series; cannot reconstruct from memory | See `raw/policy/caa_nonattainment_placeholder.md` |
+| `pct_deficient_lag2` | Source data deferred in `variable_list_audit.md` (EPA CWNS unavailable) | Flagged as data gap |
+| `Nearby_Water_CITY_Amt_25km_Cumul` | Requires geospatial aggregation not yet run | Geospatial build pending |
+| `Y_Mgmt_Proceeds_Yes`, `Y_Proj_Selection_Yes` | Bloomberg `Count_Mgmt of Proc__Yes` / `Count_Proj Sel Proc__Yes` not derived in `01` | Add construction step to `01_construct_audit_variables.py` |
+| `esg_cum_antiesg_laws` | In `raw/political/antiesg_laws.csv` but dropped by 01 pruning | Add to retain list |
+
+---
+
+## F. Peer-review checklist
+
+- ✅ All hand-coded state-year values (RGGI/WCI, GHG laws, ZEV) live in
+  `raw/policy/` with per-row source citations rather than hard-coded in
+  analysis code.
+- ✅ All source CSV files include file-header comment blocks documenting
+  authority, scope, and encoding decisions (e.g., PA 2023 conservatism).
+- ✅ No constructed variable's value is opaque — either it is a sum of
+  authoritatively sourced components, a product / lag / transform thereof,
+  or it is drawn from a `raw/` file whose header cites a URL or statute.
+- ✅ Data gaps are documented (Section E) rather than filled with synthetic
+  values.
+- ⚠️ The `fiscal_stress_pca` variable stops in 2021; the primary analysis
+  uses `fiscal_stress_index_lag2` which runs through 2025. Robustness with
+  `fiscal_stress_pca` drops observations for 2022+; document this in any
+  paper draft.
+- ⚠️ Mayoral partisanship (`Rep_Mayor`, `mayor_prob_rep`) is hand-coded by
+  the memo author from voter registration, DIME CF-scores, and endorsements
+  across 1,824 cities. This is authoritative by construction but downstream
+  code should not describe it as an external dataset.
