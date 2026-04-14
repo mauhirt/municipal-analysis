@@ -878,6 +878,125 @@ for src in ['state_medicaid_expanded', 'state_right_to_work']:
     else:
         log(f"  [skip] {src} not in panel")
 
+# ----- 3.10 State green-bond market spillover (self-labelled + co-partisan) -----
+# Sources:
+#   - Y_self_green, Rep_Mayor_lag1 — both from the Bloomberg skeleton × hand-
+#     coded mayoral partisanship (primary panel sources).
+#
+# Variables built:
+#   state_self_green_cum_count_lag1   — cumulative count of self-labelled green
+#                                       bonds issued by any city in the state
+#                                       through year t-1 (memo preference over
+#                                       the all-issuer state_all_green_cum_*).
+#   state_any_self_green_lag1         — binary: any self-labelled issuance in
+#                                       state up through t-1.
+#   state_rep_self_green_cum_count_lag1 — cumulative count issued specifically
+#                                         by Republican-mayor cities in state.
+#   state_any_rep_self_green_lag1     — binary co-partisan indicator (has any
+#                                       Rep-led city in state ever self-labelled?).
+#
+# Interactions (all against Rep_Mayor_lag1, on Y_self_green / Green_Bond_Issued):
+#   rep_x_state_any_green, rep_x_state_self_green_cum, rep_x_state_rep_green.
+#
+# 2013 fill-in: cumulative variables are defined as 0 for 2013 (the first
+# panel year) because no in-panel issuance pre-2013 is observed. This is a
+# deliberate choice: the Bloomberg green-bond field effectively begins in
+# 2013, so a 2012 cumulative is undefined rather than zero; we treat 2013
+# cumulative as 0 per the user's specification.
+log("\n── 3.10 State green-bond market spillover (self-labelled + co-partisan) ──")
+
+if {'state_abb', 'year', 'Y_self_green'}.issubset(df.columns):
+    # City-year × self-label flag
+    sg = df[['state_abb', 'year', 'fips7', 'Y_self_green']].copy()
+    sg['Y_self_green'] = sg['Y_self_green'].fillna(0).astype(int)
+
+    # Co-partisan flag: 1 if the issuance is by a Republican-mayor city.
+    # Use Rep_Mayor_lag1 (same treatment timing as the analysis RHS).
+    rep_col = 'Rep_Mayor_lag1' if 'Rep_Mayor_lag1' in df.columns else 'Rep_Mayor_L1'
+    sg['Rep_self_green'] = (
+        (sg['Y_self_green'] == 1) & (df[rep_col].fillna(0) == 1)
+    ).astype(int)
+
+    # Aggregate to state-year: count of self-green issuances in year t.
+    sy = (sg.groupby(['state_abb', 'year'])
+            .agg(state_self_green_count=('Y_self_green', 'sum'),
+                 state_rep_self_green_count=('Rep_self_green', 'sum'))
+            .reset_index()
+            .sort_values(['state_abb', 'year']))
+
+    # Cumulative counts: through year t within state.
+    sy['state_self_green_cum_count'] = (
+        sy.groupby('state_abb')['state_self_green_count'].cumsum()
+    )
+    sy['state_rep_self_green_cum_count'] = (
+        sy.groupby('state_abb')['state_rep_self_green_count'].cumsum()
+    )
+
+    # Lag 1 — panel-aware at state level, fill 2013 with 0 as specified.
+    sy['state_self_green_cum_count_lag1'] = (
+        sy.groupby('state_abb')['state_self_green_cum_count'].shift(1).fillna(0)
+    )
+    sy['state_rep_self_green_cum_count_lag1'] = (
+        sy.groupby('state_abb')['state_rep_self_green_cum_count'].shift(1).fillna(0)
+    )
+    # Binary: any prior self-labelled issuance in state.
+    sy['state_any_self_green_lag1'] = (sy['state_self_green_cum_count_lag1'] > 0).astype(int)
+    sy['state_any_rep_self_green_lag1'] = (sy['state_rep_self_green_cum_count_lag1'] > 0).astype(int)
+
+    # asinh cumulative count (for scale-robustness).
+    sy['state_self_green_cum_count_asinh_lag1'] = np.arcsinh(
+        sy['state_self_green_cum_count_lag1'].fillna(0))
+    sy['state_rep_self_green_cum_count_asinh_lag1'] = np.arcsinh(
+        sy['state_rep_self_green_cum_count_lag1'].fillna(0))
+
+    spill_cols = [
+        'state_self_green_cum_count_lag1',
+        'state_rep_self_green_cum_count_lag1',
+        'state_any_self_green_lag1',
+        'state_any_rep_self_green_lag1',
+        'state_self_green_cum_count_asinh_lag1',
+        'state_rep_self_green_cum_count_asinh_lag1',
+    ]
+    df = df.merge(sy[['state_abb', 'year'] + spill_cols],
+                  on=['state_abb', 'year'], how='left', suffixes=('', '_SP'))
+    for c in list(df.columns):
+        if c.endswith('_SP'):
+            df = df.drop(columns=c)
+    # Any remaining 2013 NaN — mechanical artefact of shift; fill with 0 per spec.
+    for c in spill_cols:
+        if c in df.columns:
+            df[c] = df[c].fillna(0)
+
+    log(f"  state_self_green_cum_count_lag1: max={int(df['state_self_green_cum_count_lag1'].max())}, "
+        f"positive={int((df['state_self_green_cum_count_lag1']>0).sum())}")
+    log(f"  state_rep_self_green_cum_count_lag1: max={int(df['state_rep_self_green_cum_count_lag1'].max())}, "
+        f"positive={int((df['state_rep_self_green_cum_count_lag1']>0).sum())}")
+    log(f"  state_any_rep_self_green_lag1 (co-partisan): "
+        f"positive={int(df['state_any_rep_self_green_lag1'].sum())}")
+
+    # Three spillover × Rep_Mayor interactions pre-committed for T1 and T2.
+    for base, newvar in [
+        ('state_any_self_green_lag1',       'rep_x_state_any_green'),
+        ('state_self_green_cum_count_asinh_lag1', 'rep_x_state_self_green_cum'),
+        ('state_any_rep_self_green_lag1',   'rep_x_state_rep_green'),
+        ('state_rep_self_green_cum_count_asinh_lag1', 'rep_x_state_rep_green_cum'),
+    ]:
+        if base in df.columns and rep_col in df.columns:
+            df[newvar] = df[rep_col] * df[base]
+            log(f"  {newvar} built (n_positive={int((df[newvar]>0).sum())})")
+else:
+    log("  [skip] state_abb / year / Y_self_green not all present")
+
+# Backfill 2013 for the existing all-issuer state cumulatives (per user spec:
+# no pre-panel issuance was observed, so 2013 cumulative is 0 by convention).
+for c in ['state_green_bond_ever_lag1', 'state_green_bond_cum_count_lag1',
+          'state_green_bond_cum_amt_lag1', 'asinh_state_all_green_cum_amt_lag1']:
+    if c in df.columns:
+        n_before = df.loc[df['year'] == 2013, c].isna().sum()
+        if n_before > 0:
+            df.loc[df['year'] == 2013, c] = df.loc[df['year'] == 2013, c].fillna(0)
+            log(f"  {c}: filled {n_before} year-2013 NaN with 0")
+
 
 # ═══════════════════════════════════════════════════════════════════════
 # SECTION 4 — CONTROLS AND OUTCOMES
@@ -935,6 +1054,46 @@ for src in ['fed_igr_share', 'state_igr_share']:
         log(f"  {src}_lag2: n={df[f'{src}_lag2'].notna().sum()} non-null")
     else:
         log(f"  [skip] {src} not in panel")
+
+# ----- 4.4b Total IGR share lag-2 (primary main-RHS aid-dependence per user spec) -----
+# Per user preference: use `igr_share_lag2` as the primary main-RHS
+# aid-dependence control; use `fed_igr_share_lag2` / `state_igr_share_lag2`
+# in the robustness appendix.
+log("\n── 4.4b Total IGR share lag-2 + Rep × fed_IGR interaction ──")
+if 'igr_share' in df.columns:
+    df['igr_share_lag2'] = group_shift('igr_share', 2)
+    log(f"  igr_share_lag2: n_nonnull={df['igr_share_lag2'].notna().sum()}")
+
+# rep_x_fed_igr_share interaction — from fiscal-constraint-variables doc §D2.
+# Tests whether Republican mayors respond differently to federal-revenue
+# dependence. Theory: federal aid ties cities to federal priorities; Rep
+# mayors in federally-dependent cities may face cross-cutting incentives.
+rep_col_igr = 'Rep_Mayor_lag1' if 'Rep_Mayor_lag1' in df.columns else 'Rep_Mayor_L1'
+if {'fed_igr_share_lag2', rep_col_igr}.issubset(df.columns):
+    df['rep_x_fed_igr_share'] = df[rep_col_igr] * df['fed_igr_share_lag2']
+    log(f"  rep_x_fed_igr_share built "
+        f"(n_nonnull={df['rep_x_fed_igr_share'].notna().sum()})")
+
+# ----- 4.4c Capital outlay lag-2 (J26/J27 in fiscal-constraint doc) -----
+# capital_outlay_pc is the deflated per-capita variant already in the panel
+# (from Census ASLGF, #455/892/890 per the doc). Build standard lag-2.
+log("\n── 4.4c Capital outlay lag-2 ──")
+for src in ['capital_outlay_pc', 'capital_outlay_real', 'capital_share']:
+    if src in df.columns:
+        df[f'{src}_lag2'] = group_shift(src, 2)
+        log(f"  {src}_lag2 built (n_nonnull={df[f'{src}_lag2'].notna().sum()})")
+    else:
+        log(f"  [skip] {src} not in panel")
+
+# ----- 4.4d Additional fiscal-doc primary-tier lag-2 (robustness appendix) -----
+log("\n── 4.4d Fiscal-doc primary-tier lag-2 (robustness) ──")
+for src in ['vfi', 'fiscal_self_sufficiency', 'expenditure_gap_pc',
+            'rating_agency_composite', 'net_borrowing_intensity',
+            'net_borrowing_ratio', 'high_fiscal_stress']:
+    if src in df.columns:
+        tgt = f'{src}_lag2'
+        df[tgt] = group_shift(src, 2)
+        log(f"  {tgt} built (n_nonnull={df[tgt].notna().sum()})")
 
 # ----- 4.5 Reconfigure peer-effects spillover (T1 and T2-water) -----
 log("\n── 4.5 Peer-effect spillover (city-only 25km) ──")

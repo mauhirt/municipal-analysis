@@ -174,6 +174,13 @@ in the code; no new source attestation required beyond the components.
 | `tel_x_rep_trifecta` | `tel_stringency_normalized × state_rep_trifecta` | ACIR × NCSL |
 | `c40_x_rep_mayor` | `c40_member_lag1 × Rep_Mayor_lag1` | C40 × hand-coded mayor |
 | `rep_x_fn_partisan` | `Rep_Mayor_lag1 × fn_partisan_lag1` | Hand-coded mayor × ICMA FOG |
+| `rep_x_fed_igr_share` | `Rep_Mayor_lag1 × fed_igr_share_lag2` | Hand-coded mayor × Census ASLGF |
+| `state_self_green_cum_count_lag1` | Per-state cumulative count of city-year `Y_self_green == 1` up to year t-1 | Bloomberg Terminal |
+| `state_rep_self_green_cum_count_lag1` | As above, restricted to cities with `Rep_Mayor_lag1 == 1` (co-partisan spillover) | Bloomberg × hand-coded mayor |
+| `state_any_self_green_lag1`, `state_any_rep_self_green_lag1` | Binary flags derived from the cumulatives above | Same as above |
+| `rep_x_state_any_green`, `rep_x_state_self_green_cum`, `rep_x_state_rep_green`, `rep_x_state_rep_green_cum` | `Rep_Mayor_lag1 ×` each spillover variable — tests whether market maturity (all / self-labelled / co-partisan) pulls Republican mayors into issuance | Bloomberg × hand-coded mayor |
+| `capital_outlay_pc_lag2`, `capital_outlay_real_lag2`, `capital_share_lag2` | Lag-2 of Census ASLGF deflated per-capita / real / share variants (J26–J28 in the fiscal-constraint variables doc) | Census ASLGF |
+| `igr_share_lag2`, `vfi_lag2`, `fiscal_self_sufficiency_lag2`, `expenditure_gap_pc_lag2`, `rating_agency_composite_lag2`, `net_borrowing_intensity_lag2`, `net_borrowing_ratio_lag2`, `high_fiscal_stress_lag2` | Standard lag-2 of Census-ASLGF-derived variables cited in `fiscal_constraint_variables_updated.docx` (D1, I9, I10, I11, H3, E8, J51, H4) | Census ASLGF |
 
 ---
 
@@ -232,6 +239,7 @@ ladder (Tier 1 broad pressure → Tier 4 judicial).
 | Variable | Reason | Next step |
 |---|---|---|
 | ~~EPA CAA county-level nonattainment~~ | **RESOLVED 2026-04.** Green Book phistory.xls + nayro.xls retrieved; merged into 00_build_panel.py §6b. See Section A above for the derived `caa_*` variables. | Done |
+| ~~`capital_outlay`~~ | **RESOLVED 2026-04.** Panel already had `capital_outlay_pc` / `capital_outlay_real` / `capital_share` from Census ASLGF; lag-2 variants now built in `02_variable_additions.py` §4.4c. | Done |
 | `pct_deficient_lag2` | Source data deferred in `variable_list_audit.md` (EPA CWNS unavailable) | Flagged as data gap |
 | `Nearby_Water_CITY_Amt_25km_Cumul` | Requires geospatial aggregation not yet run | Geospatial build pending |
 | `Y_Mgmt_Proceeds_Yes`, `Y_Proj_Selection_Yes` | Bloomberg `Count_Mgmt of Proc__Yes` / `Count_Proj Sel Proc__Yes` not derived in `01` | Add construction step to `01_construct_audit_variables.py` |
