@@ -1,0 +1,24 @@
+Variable,Col 1 Baseline,Col 2 Rep × NPDES,Col 3 Rep × FiscStress,Col 4 Rep × PresDem,Col 5 Lag4,Col 6 City+Year FE
+Rep_Mayor_lag1,-0.242** (0.098),-0.241** (0.111),-0.142 (0.112),+0.766 (0.665),—,—
+Rep_Mayor_lag4,—,—,—,—,-0.128 (0.121),—
+Ind_Mayor_lag1,-0.383* (0.203),-0.383* (0.204),-0.283 (0.212),-0.409** (0.208),-0.366* (0.199),—
+pres_dem_two_party_share_lag2,+0.124 (0.567),+0.123 (0.565),-0.036 (0.633),+0.287 (0.631),+0.160 (0.597),—
+npdes_formal_prior3yr_muni,+0.027 (0.123),+0.028 (0.126),+0.026 (0.136),+0.026 (0.123),+0.007 (0.127),—
+charges_to_own_source_lag2,+1.213*** (0.434),+1.213*** (0.435),+0.957* (0.552),+1.258*** (0.441),+1.344*** (0.469),—
+reserve_ratio_lag2,+0.096 (0.059),+0.096 (0.059),+0.043 (0.107),+0.090 (0.059),+0.091 (0.061),—
+tel_stringency_normalized,+0.002 (0.002),+0.002 (0.002),+0.003 (0.003),+0.001 (0.002),+0.001 (0.002),—
+state_rep_trifecta,-0.117 (0.101),-0.117 (0.109),-0.103 (0.117),-0.126 (0.101),-0.113 (0.100),—
+esg_has_muni_bond_law,-0.393*** (0.141),-0.393*** (0.144),—,-0.379*** (0.140),-0.357** (0.142),—
+has_substitute_issuer,-0.335** (0.158),-0.335** (0.158),-0.213 (0.199),-0.333** (0.157),-0.329** (0.159),—
+rep_x_npdes,—,-0.004 (0.318),—,—,—,—
+rep_x_fiscal,—,—,-0.055 (0.053),—,—,—
+rep_x_presdem,—,—,—,-1.693 (1.124),—,—
+fiscal_stress_pca_lag2,—,—,+0.053 (0.060),—,—,—
+esg_law_intensity_lag1,—,—,—,—,—,—
+rep_x_esg_intensity,—,—,—,—,—,—
+climate_commitment_static,—,—,—,—,—,—
+state_carbon_price_usd_lag1,—,—,—,—,—,—
+esg_underwriter_block_lag1,—,—,—,—,—,—
+inst_utah_antiesg_lag1,—,—,—,—,—,—
+inst_msrb_antiesg_lag1,—,—,—,—,—,—
+iija_water_grant_amt_asinh_lag1,—,—,—,—,—,—
