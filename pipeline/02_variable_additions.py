@@ -97,6 +97,36 @@ if 'pres_dem_two_party_share' in df.columns and 'pres_dem_two_party_share_lag2' 
     df['pres_dem_two_party_share_lag2'] = group_shift('pres_dem_two_party_share', 2)
     log("  aliased pres_dem_two_party_share_lag2")
 
+# Rep − Dem two-party share (per Part D spec): signed margin, negative when
+# Democrat won, positive when Republican won. More interpretable than the
+# raw Dem share for an R-over-D question.
+if {'pres_rep_vote_share', 'pres_dem_vote_share'}.issubset(df.columns):
+    df['pres_rep_minus_dem_share'] = (
+        df['pres_rep_vote_share'] - df['pres_dem_vote_share']
+    )
+    df['pres_rep_minus_dem_share_lag2'] = group_shift('pres_rep_minus_dem_share', 2)
+    log(f"  pres_rep_minus_dem_share_lag2: "
+        f"n={df['pres_rep_minus_dem_share_lag2'].notna().sum()}, "
+        f"mean={df['pres_rep_minus_dem_share_lag2'].mean():.3f}")
+
+# Rep × pres_dem_two_party_share interaction for T1 symmetry with T3 Col 4
+# (memo's electoral-discipline test). Identified under state + year FE
+# because Dem share varies across cities within a state.
+if {'Rep_Mayor_lag1', 'pres_dem_two_party_share_lag2'}.issubset(df.columns):
+    df['rep_x_pres_dem_share'] = (
+        df['Rep_Mayor_lag1'] * df['pres_dem_two_party_share_lag2']
+    )
+    log(f"  rep_x_pres_dem_share built "
+        f"(n_nonnull={df['rep_x_pres_dem_share'].notna().sum()})")
+
+# Dem × pres_dem_share mirror (since Part D spec switches primary to Dem_Mayor).
+if {'Dem_Mayor', 'pres_dem_two_party_share_lag2'}.issubset(df.columns):
+    df['dem_x_pres_dem_share'] = (
+        df['Dem_Mayor'] * df['pres_dem_two_party_share_lag2']
+    )
+    log(f"  dem_x_pres_dem_share built "
+        f"(n_nonnull={df['dem_x_pres_dem_share'].notna().sum()})")
+
 
 # ═══════════════════════════════════════════════════════════════════════
 # SECTION 1 — FAMILY 1: MATERIAL VARIABLES
@@ -539,17 +569,52 @@ for v in ycom_vars:
 
 # ----- 2.2 Probabilistic partisanship (T1 robustness) -----
 log("\n── 2.2 Probabilistic partisanship ──")
-# The raw columns are `prob_republican` and `prob_democrat`; alias them to the
-# spec convention `mayor_prob_rep`/`mayor_prob_dem` and build lag-1.
+# Per user spec (Part D): use `prob_democrat` / `prob_republican` WITHOUT lag —
+# the mayor_party.csv convention already codes the year following the election
+# as the mayor's first year in office, which effectively lags the variable.
+# Aliases kept for downstream consumers that expect the spec naming.
 alias('prob_republican', 'mayor_prob_rep')
 alias('prob_democrat', 'mayor_prob_dem')
+# Also retain the lag-1 copies (built below) as robustness for
+# backward-compatibility with earlier spec robustness columns.
 for src, lag in [('mayor_prob_rep', 'mayor_prob_rep_lag1'),
                  ('mayor_prob_dem', 'mayor_prob_dem_lag1')]:
     if src in df.columns:
         df[lag] = group_shift(src, 1)
-        log(f"  {lag}: n={df[lag].notna().sum()} non-null")
+        log(f"  {lag}: n={df[lag].notna().sum()} non-null (robustness)")
     else:
         log(f"  [skip] {src} not in panel")
+# Primary (no lag) diagnostic.
+if {'prob_democrat', 'prob_republican'}.issubset(df.columns):
+    log(f"  prob_democrat (no-lag, primary per Part D): "
+        f"n={df['prob_democrat'].notna().sum()}, mean={df['prob_democrat'].mean():.3f}")
+
+# ----- 2.2b Dem_Mayor primary treatment + mayoral candidate variables (Part D) -----
+# Per Part D spec: drop Ind_Mayor from analysis, use Dem_Mayor as the primary
+# binary treatment (no-lag; coding already effectively lags). The inverse of
+# the earlier Rep_Mayor primary flips the interpretation but keeps the panel
+# structure identical.
+log("\n── 2.2b Dem_Mayor primary + mayor vote-share variables ──")
+if 'Dem_Mayor' in df.columns:
+    log(f"  Dem_Mayor (no-lag, primary): "
+        f"n={df['Dem_Mayor'].notna().sum()}, mean={df['Dem_Mayor'].mean():.3f}")
+    if 'Dem_Mayor_L1' in df.columns:
+        log(f"  Dem_Mayor_L1 (robustness): "
+            f"n={df['Dem_Mayor_L1'].notna().sum()}, mean={df['Dem_Mayor_L1'].mean():.3f}")
+else:
+    log("  [skip] Dem_Mayor not in panel (check 00_build_panel.py §2)")
+
+# Candidate-level vote-share variables (merged in 00 §2b).
+candidate_vars = ['mayor_vote_share_win', 'mayor_margin_victory',
+                  'mayor_win_is_dem', 'mayor_win_is_rep',
+                  'mayor_win_prob_democrat', 'mayor_win_prob_republican',
+                  'mayor_win_cfscore']
+for v in candidate_vars:
+    if v in df.columns:
+        nn = df[v].notna().sum()
+        log(f"  {v}: n={nn}")
+    else:
+        log(f"  [skip] {v} missing (check 00_build_panel.py §2b)")
 
 # ----- 2.3 ESG law intensity score (T1 + T3) -----
 log("\n── 2.3 ESG law intensity ──")

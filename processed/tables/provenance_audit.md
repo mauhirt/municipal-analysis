@@ -175,6 +175,11 @@ in the code; no new source attestation required beyond the components.
 | `c40_x_rep_mayor` | `c40_member_lag1 × Rep_Mayor_lag1` | C40 × hand-coded mayor |
 | `rep_x_fn_partisan` | `Rep_Mayor_lag1 × fn_partisan_lag1` | Hand-coded mayor × ICMA FOG |
 | `rep_x_fed_igr_share` | `Rep_Mayor_lag1 × fed_igr_share_lag2` | Hand-coded mayor × Census ASLGF |
+| `rep_x_pres_dem_share` | `Rep_Mayor_lag1 × pres_dem_two_party_share_lag2` — electoral-discipline interaction (T1 symmetric with T3 Col 4) | Hand-coded mayor × MIT MEDSL |
+| `dem_x_pres_dem_share` | `Dem_Mayor × pres_dem_two_party_share_lag2` — Part D mirror using the new primary treatment | Hand-coded mayor × MIT MEDSL |
+| `pres_rep_minus_dem_share`, `pres_rep_minus_dem_share_lag2` | `pres_rep_vote_share − pres_dem_vote_share` signed margin (Part D user request) | MIT MEDSL |
+| `Dem_Mayor`, `Dem_Mayor_L1` | Indicator for D vs. (R ∪ I); constructed in `00_build_panel.py` §2 from `mayor_pid == 'D'`. Primary treatment per Part D spec (drops Ind from analysis); used WITHOUT lag because the year following an election is coded as the mayor's first year in office, effectively lagging the variable by construction | `raw/mayor/mayor_party.csv` (hand-coded + DIME + endorsement) |
+| `mayor_vote_share_win`, `mayor_margin_victory`, `mayor_win_is_dem`, `mayor_win_is_rep`, `mayor_win_prob_democrat`, `mayor_win_prob_republican`, `mayor_win_cfscore`, `mayor_vote_share_total` | Built in `00_build_panel.py` §2b from the MayoralCandidates270326.xlsx file by filtering `winner==1` and merging margin-of-victory (winner_share − runner-up_share). Effective-year convention: election year + 1. Forward-filled between elections. | `raw/mayor/MayoralCandidates270326.xlsx` (Harvard Dataverse municipal-elections dataset, 2001-2025, 8,255 candidates × 576 cities × ~3,505 winning elections) |
 | `state_self_green_cum_count_lag1` | Per-state cumulative count of city-year `Y_self_green == 1` up to year t-1 | Bloomberg Terminal |
 | `state_rep_self_green_cum_count_lag1` | As above, restricted to cities with `Rep_Mayor_lag1 == 1` (co-partisan spillover) | Bloomberg × hand-coded mayor |
 | `state_any_self_green_lag1`, `state_any_rep_self_green_lag1` | Binary flags derived from the cumulatives above | Same as above |
@@ -241,6 +246,7 @@ ladder (Tier 1 broad pressure → Tier 4 judicial).
 | ~~EPA CAA county-level nonattainment~~ | **RESOLVED 2026-04.** Green Book phistory.xls + nayro.xls retrieved; merged into 00_build_panel.py §6b. See Section A above for the derived `caa_*` variables. | Done |
 | ~~`capital_outlay`~~ | **RESOLVED 2026-04.** Panel already had `capital_outlay_pc` / `capital_outlay_real` / `capital_share` from Census ASLGF; lag-2 variants now built in `02_variable_additions.py` §4.4c. | Done |
 | `pct_deficient_lag2` | Source data deferred in `variable_list_audit.md` (EPA CWNS unavailable) | Flagged as data gap |
+| Pre-2013 presidential vote share (2008-2012) | Current `raw/political/presidential_elections.csv` covers 2013-2023 only; lag-2 for 2013-14 NaN | See `raw/political/pres_2008_2012_placeholder.md` — pull from MIT MEDSL Dataverse (`countypres_2000-2020.csv`) |
 | `Nearby_Water_CITY_Amt_25km_Cumul` | Requires geospatial aggregation not yet run | Geospatial build pending |
 | `Y_Mgmt_Proceeds_Yes`, `Y_Proj_Selection_Yes` | Bloomberg `Count_Mgmt of Proc__Yes` / `Count_Proj Sel Proc__Yes` not derived in `01` | Add construction step to `01_construct_audit_variables.py` |
 | `esg_cum_antiesg_laws` | In `raw/political/antiesg_laws.csv` but dropped by 01 pruning | Add to retain list |

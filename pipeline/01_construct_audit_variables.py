@@ -432,7 +432,7 @@ needed_prefixes = [
     # Bloomberg detail
     'Count_','Amt_','Dum_',
     # Mayor
-    'Rep_Mayor','Ind_Mayor','mayor_','prob_democrat','prob_republican',
+    'Rep_Mayor','Ind_Mayor','Dem_Mayor','mayor_','prob_democrat','prob_republican',
     'party_switch','switch_to_','is_switcher',
     # Demographics & economic
     'population_','percapita_income_','totalincome_','unemployment_',

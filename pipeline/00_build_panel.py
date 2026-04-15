@@ -100,9 +100,15 @@ mayor['Rep_Mayor'] = np.where(mayor['mayor_pid'] == 'R', 1.0,
                     np.where(mayor['mayor_pid'].isin(['D', 'I']), 0.0, np.nan))
 mayor['Ind_Mayor'] = np.where(mayor['mayor_pid'] == 'I', 1.0,
                     np.where(mayor['mayor_pid'].isin(['D', 'R']), 0.0, np.nan))
+# Dem_Mayor indicator — Democrat = 1, else 0 (R or I). Preferred per variable-audit Part D
+# because mayor_pid coding already effectively lags through "year following
+# election = mayor's first year in office" convention; use WITHOUT lag.
+mayor['Dem_Mayor'] = np.where(mayor['mayor_pid'] == 'D', 1.0,
+                    np.where(mayor['mayor_pid'].isin(['R', 'I']), 0.0, np.nan))
 mayor = mayor.sort_values(['fips7', 'year'])
 mayor['Rep_Mayor_L1'] = mayor.groupby('fips7')['Rep_Mayor'].shift(1)
 mayor['Ind_Mayor_L1'] = mayor.groupby('fips7')['Ind_Mayor'].shift(1)
+mayor['Dem_Mayor_L1'] = mayor.groupby('fips7')['Dem_Mayor'].shift(1)
 mayor['party_switch'] = ((mayor['Rep_Mayor'] != mayor['Rep_Mayor_L1']) &
                          mayor['Rep_Mayor'].notna() &
                          mayor['Rep_Mayor_L1'].notna()).astype(float)
@@ -115,12 +121,108 @@ mayor['prob_republican_L1'] = mayor.groupby('fips7')['prob_republican'].shift(1)
 mayor['prob_republican_L2'] = mayor.groupby('fips7')['prob_republican'].shift(2)
 mayor['prob_republican_L3'] = mayor.groupby('fips7')['prob_republican'].shift(3)
 mayor_cols = ['fips7', 'year', 'mayor_name', 'mayor_pid', 'Rep_Mayor', 'Ind_Mayor',
+              'Dem_Mayor',
               'prob_democrat', 'prob_republican', 'election_year', 'election_type',
               'Rep_Mayor_L1', 'Rep_Mayor_L2', 'Rep_Mayor_L3', 'Rep_Mayor_L4',
-              'Ind_Mayor_L1',
+              'Ind_Mayor_L1', 'Dem_Mayor_L1',
               'prob_republican_L1', 'prob_republican_L2', 'prob_republican_L3',
               'party_switch', 'switch_to_R', 'switch_to_D']
 df = safe_merge(df, mayor[mayor_cols], on=['fips7', 'year'], name='mayor')
+
+
+# ═══════════════════════════════════════════════════════════════════════
+# 2b. MAYORAL CANDIDATES — MayoralCandidates270326.xlsx (2001-2025)
+#     Builds city-year vote-share + margin-of-victory variables from the
+#     full candidate-election dataset (8,255 candidate-rows, 576 cities,
+#     2001-2025). Only WINNING-candidate rows are retained, then
+#     expanded to city-year with forward-fill between elections (same
+#     convention as mayor_party.csv: the year following an election is
+#     the mayor's first year in office).
+#
+# Variables built:
+#   mayor_vote_share_win       — winning candidate's vote share
+#   mayor_vote_share_total     — total votes in the winning election
+#   mayor_margin_victory       — winner's share minus second-place share
+#   mayor_win_is_dem           — 1 if winner's pid_est == 'D'
+#   mayor_win_is_rep           — 1 if winner's pid_est == 'R'
+#   mayor_win_prob_democrat    — winner's DIME-based prob_democrat
+#   mayor_win_prob_republican  — winner's DIME-based prob_republican
+#   mayor_win_cfscore          — winner's CF score (continuous ideology)
+# ═══════════════════════════════════════════════════════════════════════
+log("\n── 2b. Mayoral candidates vote-share panel (2001-2025) ──")
+candidates_path = ROOT / 'raw' / 'mayor' / 'MayoralCandidates270326.xlsx'
+if candidates_path.exists():
+    cand = pd.read_excel(candidates_path)
+    cand = cand.rename(columns={'fips': 'fips7'})
+    cand['fips7'] = cand['fips7'].astype(int)
+
+    # Winners only — one row per (city, election-year).
+    winners = cand[cand['winner'] == 1].copy()
+
+    # Compute margin of victory = winner share − runner-up share per contest.
+    runner_up_share = (
+        cand[cand['winner'] == 0]
+        .sort_values(['contest', 'vote_share'], ascending=[True, False])
+        .groupby('contest')['vote_share']
+        .max()
+        .rename('runner_up_share')
+        .reset_index()
+    )
+    winners = winners.merge(runner_up_share, on='contest', how='left')
+    winners['mayor_margin_victory'] = (
+        winners['vote_share'] - winners['runner_up_share'].fillna(0)
+    )
+
+    # Per user spec: "the year following the election is coded as the mayor's
+    # first year in office". So attribute the election outcome to (year+1)
+    # onwards, forward-filling until the next election.
+    winners['effective_year'] = winners['year'] + 1
+    winners = winners.sort_values(['fips7', 'effective_year'])
+    winners['mayor_win_is_dem'] = (winners['pid_est'] == 'D').astype(int)
+    winners['mayor_win_is_rep'] = (winners['pid_est'] == 'R').astype(int)
+
+    keep = ['fips7', 'effective_year', 'year', 'month',
+            'vote_share', 'total_votes',
+            'mayor_margin_victory', 'mayor_win_is_dem', 'mayor_win_is_rep',
+            'prob_democrat', 'prob_republican', 'cfscore']
+    winners_small = winners[keep].copy()
+    # When a city has two elections with the same effective_year (e.g. regular +
+    # special election in same calendar year), keep the LATER election (by
+    # year+month). This matches the mayor_party.csv convention of using the
+    # most recent transition for a given year.
+    winners_small = (
+        winners_small.sort_values(['fips7', 'effective_year', 'year', 'month'],
+                                  ascending=[True, True, False, False])
+        .drop_duplicates(['fips7', 'effective_year'], keep='first')
+    )
+    winners_small = winners_small.drop(columns=['year', 'month']).rename(columns={
+        'effective_year': 'year',
+        'vote_share': 'mayor_vote_share_win',
+        'total_votes': 'mayor_vote_share_total',
+        'prob_democrat': 'mayor_win_prob_democrat',
+        'prob_republican': 'mayor_win_prob_republican',
+        'cfscore': 'mayor_win_cfscore',
+    })
+    # Forward-fill within city across years — but only for years after the
+    # election, up to the next election. Achieved by outer-joining to a
+    # full (fips7 × year) grid and applying a city-level ffill.
+    full_grid = df[['fips7', 'year']].drop_duplicates()
+    winners_grid = full_grid.merge(winners_small, on=['fips7', 'year'], how='left')
+    winners_grid = winners_grid.sort_values(['fips7', 'year'])
+    candidate_vars = [c for c in winners_small.columns if c not in ('fips7', 'year')]
+    winners_grid[candidate_vars] = winners_grid.groupby('fips7')[candidate_vars].ffill()
+
+    before = set(df.columns)
+    df = df.merge(winners_grid, on=['fips7', 'year'], how='left', suffixes=('', '_CAND'))
+    for c in list(df.columns):
+        if c.endswith('_CAND'):
+            df = df.drop(columns=c)
+    new_cols = set(df.columns) - before
+    log(f"  mayoral candidates: added {len(new_cols)} cols "
+        f"(winners: {winners.shape[0]}, "
+        f"cities covered in panel: {df['mayor_vote_share_win'].notna().groupby(df['fips7']).any().sum()})")
+else:
+    log(f"  [skip] {candidates_path} not found")
 
 
 # ═══════════════════════════════════════════════════════════════════════
