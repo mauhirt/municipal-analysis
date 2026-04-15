@@ -1071,6 +1071,151 @@ for c in ['state_green_bond_ever_lag1', 'state_green_bond_cum_count_lag1',
             df.loc[df['year'] == 2013, c] = df.loc[df['year'] == 2013, c].fillna(0)
             log(f"  {c}: filled {n_before} year-2013 NaN with 0")
 
+# ----- 3.11 Part E additions: market × partisanship, ESG-law × pre-activity,
+#             bond-commission interactions ------------------------------
+log("\n── 3.11 Part E additions (market, ESG-law pre/post, bond commissions) ──")
+
+# E1 — state_green_cum_x_rep (user's exact formula):
+# asinh_state_all_green_cum_amt_lag1 × Rep_Mayor_lag1. Tests whether a mature
+# state green-bond market pulls Republican mayors in (positive sign supports
+# market-normalisation hypothesis; null/negative supports sticky-identity).
+if {'asinh_state_all_green_cum_amt_lag1', 'Rep_Mayor_lag1'}.issubset(df.columns):
+    df['state_green_cum_x_rep'] = (
+        df['asinh_state_all_green_cum_amt_lag1'] * df['Rep_Mayor_lag1']
+    )
+    log(f"  state_green_cum_x_rep built "
+        f"(n_nonnull={df['state_green_cum_x_rep'].notna().sum()}, "
+        f"n_positive={int((df['state_green_cum_x_rep'] > 0).sum())})")
+
+# E2 — ESG legislation: cumulative count + pre-activity + years-since + interaction.
+# ---------------------------------------------------------------------
+#
+# esg_cum_antiesg_laws_lag1:
+#   The raw `esg_num_antiesg_laws` column is already a cumulative count
+#   (anti-ESG laws only accumulate). Build lag-1 for main-RHS usage.
+if 'esg_num_antiesg_laws' in df.columns:
+    df['esg_cum_antiesg_laws_lag1'] = group_shift('esg_num_antiesg_laws', 1)
+    log(f"  esg_cum_antiesg_laws_lag1 built "
+        f"(max={int(df['esg_cum_antiesg_laws_lag1'].max()) if df['esg_cum_antiesg_laws_lag1'].notna().any() else 0}, "
+        f"nonnull={df['esg_cum_antiesg_laws_lag1'].notna().sum()})")
+
+# years_since_esg_law:
+#   0 before first law year; positive after. Allows testing of suppression
+#   decay (does the effect build, level off, or fade as issuers adapt?).
+#   Note: esg_first_law_year = 0 is the "no law" sentinel in the raw file
+#   (not a real 0 AD year); treat it like NaN.
+if {'esg_first_law_year', 'year'}.issubset(df.columns):
+    has_law = df['esg_first_law_year'].notna() & (df['esg_first_law_year'] > 0)
+    enacted = has_law & (df['year'] >= df['esg_first_law_year'])
+    df['years_since_esg_law'] = np.where(
+        enacted,
+        df['year'] - df['esg_first_law_year'],
+        0,
+    ).astype(int)
+    log(f"  years_since_esg_law built "
+        f"(max={int(df['years_since_esg_law'].max())}, "
+        f"positive_city_years={int((df['years_since_esg_law'] > 0).sum())})")
+
+# state_pre_esg_activity:
+#   1 if the state had any CITY self-labelled green-bond issuance before the
+#   year of its first anti-ESG law. Uses `state_self_green_cum_count_lag1`
+#   (built in §3.10 from Y_self_green — already non-state-government-level
+#   because the panel is at the city-year grain; the user's concern about
+#   state-government issuances is addressed by the panel's construction).
+#   State-year constant (0 or 1) per state: if at any year BEFORE
+#   esg_first_law_year in that state the cumulative self-green count was > 0,
+#   state_pre_esg_activity = 1 for all observations in that state.
+if {'esg_first_law_year', 'state_self_green_cum_count_lag1'}.issubset(df.columns):
+    # Per-state: max pre-law cumulative self-green count.
+    pre_mask = df['esg_first_law_year'].notna() & (df['year'] < df['esg_first_law_year'])
+    per_state_pre = (
+        df[pre_mask]
+        .groupby('state_abb')['state_self_green_cum_count_lag1']
+        .max()
+        .rename('_pre_cum')
+        .reset_index()
+    )
+    per_state_pre['state_pre_esg_activity'] = (per_state_pre['_pre_cum'] > 0).astype(int)
+    df = df.merge(
+        per_state_pre[['state_abb', 'state_pre_esg_activity']],
+        on='state_abb', how='left', suffixes=('', '_PRE'),
+    )
+    for c in list(df.columns):
+        if c.endswith('_PRE'):
+            df = df.drop(columns=c)
+    df['state_pre_esg_activity'] = df['state_pre_esg_activity'].fillna(0).astype(int)
+    log(f"  state_pre_esg_activity: "
+        f"states positive = {df[['state_abb','state_pre_esg_activity']].drop_duplicates()['state_pre_esg_activity'].sum()}/"
+        f"{df['state_abb'].nunique()}")
+
+# Interaction: ESG-law post × state_pre_esg_activity. Tests whether the
+# suppression effect of anti-ESG laws is concentrated in states that had
+# existing green-bond markets to suppress (genuine effect) vs spread evenly
+# across all post-law states including the already-quiescent ones (spurious
+# reverse-causality / backlash-to-nothing).
+# Construct the post indicator inline here because §5.1 (which builds
+# fn_esg_has_muni_bond_law_post) runs later. Uses the same logic.
+if {'esg_first_law_year', 'year', 'state_pre_esg_activity'}.issubset(df.columns):
+    esg_post = (df['esg_first_law_year'].notna() &
+                (df['esg_first_law_year'] > 0) &
+                (df['year'] >= df['esg_first_law_year'])).astype(int)
+    df['esg_post_x_pre_activity'] = esg_post * df['state_pre_esg_activity']
+    log(f"  esg_post_x_pre_activity built "
+        f"(n_positive={int((df['esg_post_x_pre_activity'] > 0).sum())})")
+
+    # Lag-1 variant (for robustness with state-trifecta-style timing).
+    df['_tmp_esg_post'] = esg_post
+    df['esg_post_lag1'] = group_shift('_tmp_esg_post', 1)
+    df = df.drop(columns='_tmp_esg_post')
+    df['esg_post_lag1_x_pre_activity'] = (
+        df['esg_post_lag1'].fillna(0) * df['state_pre_esg_activity']
+    )
+    log(f"  esg_post_lag1_x_pre_activity built "
+        f"(n_positive={int((df['esg_post_lag1_x_pre_activity'] > 0).sum())})")
+
+# Interaction of years_since_esg_law × state_pre_esg_activity for the
+# suppression-decay test (Rep_Mayor not needed; the question is about
+# policy effect intensity as a function of time since enactment,
+# conditional on pre-law market exposure).
+if {'years_since_esg_law', 'state_pre_esg_activity'}.issubset(df.columns):
+    df['esg_years_since_x_pre_activity'] = (
+        df['years_since_esg_law'] * df['state_pre_esg_activity']
+    )
+
+# E3 — Bond-commission interactions.
+# ---------------------------------------------------------------------
+# Both `has_state_bond_commission` and `has_state_approval_body` are
+# cross-sectional state-level indicators (absorbed under state FE as main
+# effects). Useful only as interactions — cross-sectional heterogeneity
+# tests. Build three theoretically-motivated pairings:
+#
+#   rep_x_bond_commission        — bond commissions often require formal
+#     project approval; they may discipline issuance differently depending
+#     on mayoral partisanship. A Republican mayor pushing a green bond
+#     through an anti-ESG state's bond commission faces higher friction.
+#     Negative interaction expected if commissions amplify the partisan
+#     gap (Rep mayors less able to issue in bond-commission states).
+#
+#   rep_x_state_approval_body    — similar logic; broader approval scope.
+#
+#   fiscal_stress_x_bond_commission — stressed cities may have bond-
+#     commission oversight moderate their issuance decisions. Sign
+#     prediction ambiguous; exploratory.
+log("\n── 3.11c Bond-commission interactions ──")
+bc_pairs = [
+    ('has_state_bond_commission', 'Rep_Mayor_lag1', 'rep_x_bond_commission'),
+    ('has_state_approval_body', 'Rep_Mayor_lag1', 'rep_x_state_approval_body'),
+    ('has_state_bond_commission', 'fiscal_stress_index_lag2', 'fiscal_stress_x_bond_commission'),
+    ('has_state_bond_commission', 'Dem_Mayor', 'dem_x_bond_commission'),
+    ('has_state_bond_commission', 'state_ghg_law_active_lag1', 'ghg_law_x_bond_commission'),
+]
+for a, b, newvar in bc_pairs:
+    if {a, b}.issubset(df.columns):
+        df[newvar] = df[a] * df[b]
+        log(f"  {newvar} built (positive city-years = {int((df[newvar] > 0).sum())})")
+    else:
+        log(f"  [skip] {newvar}: missing {a} or {b}")
+
 
 # ═══════════════════════════════════════════════════════════════════════
 # SECTION 4 — CONTROLS AND OUTCOMES
