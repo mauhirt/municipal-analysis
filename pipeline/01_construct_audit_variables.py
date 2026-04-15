@@ -62,6 +62,32 @@ if 'Y_self_green' in df.columns and 'Y_water_only' in df.columns:
     )
     log(f"  O13 category_composition_share: {df['category_composition_share'].notna().sum()} obs")
 
+# O14-O15: Additional ESG credibility outcomes for Table 3 (user-requested).
+# These are distinct Bloomberg fields capturing specific operational dimensions
+# of ESG credibility investment beyond assurance + framework + reporting:
+#
+#   Y_Mgmt_Proceeds_Yes: bond explicitly ring-fences proceeds for green use
+#                        (management-of-proceeds commitment). Bloomberg's
+#                        `Mgmt of Proc__Yes` field.
+#   Y_Proj_Selection_Yes: bond documents pre-screen process for eligible
+#                         projects. Bloomberg's `Proj Sel Proc__Yes` field.
+#
+# Plus matching asinh-amount variables for intensive-margin analysis.
+credibility_map = {
+    'Y_Mgmt_Proceeds_Yes':  ('Count_Mgmt of Proc__Yes',   'Amt_Mgmt of Proc__Yes'),
+    'Y_Proj_Selection_Yes': ('Count_Proj Sel Proc__Yes',  'Amt_Proj Sel Proc__Yes'),
+}
+for yvar, (cnt_col, amt_col) in credibility_map.items():
+    if cnt_col in df.columns:
+        df[yvar] = (df[cnt_col] > 0).astype(int)
+        log(f"  {yvar}: {int(df[yvar].sum())} positive city-years")
+    else:
+        log(f"  [skip] {yvar}: source {cnt_col} missing")
+    if amt_col in df.columns:
+        amt_var = f'asinh_{yvar.replace("Y_", "").lower()}_amt'
+        df[amt_var] = np.arcsinh(df[amt_col].fillna(0))
+        log(f"  {amt_var}: {(df[amt_var] > 0).sum()} positive")
+
 
 # ═══════════════════════════════════════════════════════════════════════
 # 2. SIMPLE LAGS AND DERIVATIONS (S11, F11)
@@ -432,6 +458,7 @@ needed_prefixes = [
     # DVs
     'Green_Bond_','Y_self_green','Y_esg_','Y_water_only','Y_has_non_water','Y_any_',
     'Y_Clean_','Y_Renewable_','Y_Energy_','Y_Green_Buildings','Y_Climate_','Y_Pollution_',
+    'Y_Mgmt_','Y_Proj_','Y_natural_',
     'incidentally_green','asinh_','City_Green_','City_Total_','City_Share_',
     'N_esg_categories','category_composition','count_water','count_non_water',
     # Bloomberg detail

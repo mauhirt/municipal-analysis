@@ -193,6 +193,11 @@ in the code; no new source attestation required beyond the components.
 | `rep_x_bond_commission`, `rep_x_state_approval_body` | `Rep_Mayor_lag1 ×` institutional gatekeeper — cross-sectional heterogeneity tests | Hand-coded mayor × `raw/institutional/state_bond_referenda_requirements.csv` + `raw/institutional/state_bond_banks.csv` |
 | `fiscal_stress_x_bond_commission` | `fiscal_stress_index_lag2 × has_state_bond_commission` — stressed cities × institutional gatekeeper | Census ASLGF × state-statute coding |
 | `dem_x_bond_commission`, `ghg_law_x_bond_commission` | Additional bond-commission interactions with Dem_Mayor and state GHG law | Hand-coded mayor / raw/policy/state_ghg_reduction_laws.csv × state-statute coding |
+| `Y_Mgmt_Proceeds_Yes` | 1 if `Count_Mgmt of Proc__Yes > 0` — Bloomberg's management-of-proceeds flag (ring-fencing commitment) | Bloomberg Terminal |
+| `Y_Proj_Selection_Yes` | 1 if `Count_Proj Sel Proc__Yes > 0` — Bloomberg's project-selection-process flag (pre-screening commitment) | Bloomberg Terminal |
+| `asinh_mgmt_proceeds_yes_amt`, `asinh_proj_selection_yes_amt` | asinh-transformed dollar amounts for intensive-margin analysis of the two new credibility outcomes | Bloomberg Terminal |
+| `rep_x_termlimits`, `rep_x_termlength`, `rep_x_fog`, `rep_x_initiative`, `rep_x_referendum` | `Rep_Mayor_lag1 ×` each ICMA FOG institutional variable. Cross-sectional heterogeneity tests (identified under state + year FE, absorbed under city FE). | Hand-coded mayor × `raw/institutional/fog_institutions_panel_2010_2024.csv` (ICMA FOG Survey) |
+| `dem_x_termlimits`, `dem_x_termlength`, `dem_x_fog`, `dem_x_initiative`, `dem_x_referendum` | Mirror interactions using `Dem_Mayor` (Part D primary treatment) | Same as above |
 | `capital_outlay_pc_lag2`, `capital_outlay_real_lag2`, `capital_share_lag2` | Lag-2 of Census ASLGF deflated per-capita / real / share variants (J26–J28 in the fiscal-constraint variables doc) | Census ASLGF |
 | `igr_share_lag2`, `vfi_lag2`, `fiscal_self_sufficiency_lag2`, `expenditure_gap_pc_lag2`, `rating_agency_composite_lag2`, `net_borrowing_intensity_lag2`, `net_borrowing_ratio_lag2`, `high_fiscal_stress_lag2` | Standard lag-2 of Census-ASLGF-derived variables cited in `fiscal_constraint_variables_updated.docx` (D1, I9, I10, I11, H3, E8, J51, H4) | Census ASLGF |
 

@@ -685,6 +685,47 @@ else:
 if 'fn_partisan_lag1' in df.columns and 'Rep_Mayor_lag1' in df.columns:
     df['rep_x_fn_partisan'] = df['Rep_Mayor_lag1'] * df['fn_partisan_lag1']
 
+# ----- 2.5b ICMA FOG institutional × Rep_Mayor interactions -----
+# Source: raw/institutional/fog_institutions_panel_2010_2024.csv (ICMA FOG
+# Survey). All five FOG variables are cross-sectional city attributes (no
+# within-city variation), so the main effects are absorbed under city FE
+# but the INTERACTIONS with Rep_Mayor introduce heterogeneity at the
+# cross-section that is identified under state + year FE.
+#
+# Theoretical tests:
+#   rep_x_termlimits   — Term-limited Rep mayors have weaker re-election
+#                        incentive; may be more partisan in policy choices.
+#   rep_x_termlength   — Longer terms give mayor more agency; interaction
+#                        sign is ambiguous (could amplify partisan effect
+#                        or allow convergence as tenure deepens).
+#   rep_x_fog          — Form of government (1=mayor-council, 2=council-
+#                        manager, 3=commission). Mayor-council gives mayor
+#                        more direct agency; council-manager less.
+#   rep_x_initiative   — Direct-democracy states may constrain unilateral
+#                        mayoral authority; smaller Rep effect expected.
+#   rep_x_referendum   — Similar logic for referendum availability.
+log("\n── 2.5b ICMA FOG × Rep_Mayor interactions ──")
+fog_partners = [
+    ('termlimits',  'rep_x_termlimits'),
+    ('termlength',  'rep_x_termlength'),
+    ('fog',         'rep_x_fog'),
+    ('initiative',  'rep_x_initiative'),
+    ('referendum',  'rep_x_referendum'),
+]
+for src, newvar in fog_partners:
+    if src in df.columns and 'Rep_Mayor_lag1' in df.columns:
+        df[newvar] = df[src] * df['Rep_Mayor_lag1']
+        log(f"  {newvar}: n_nonnull={df[newvar].notna().sum()}, "
+            f"positive={int((df[newvar] > 0).sum())}")
+    else:
+        log(f"  [skip] {newvar}: missing {src} or Rep_Mayor_lag1")
+
+# Also build Dem_Mayor mirrors for the Part D primary treatment.
+for src, newvar in fog_partners:
+    dem_var = newvar.replace('rep_x_', 'dem_x_')
+    if src in df.columns and 'Dem_Mayor' in df.columns:
+        df[dem_var] = df[src] * df['Dem_Mayor']
+
 # ----- 2.6 Education as constituency control (T1, T2) -----
 log("\n── 2.6 State education (bachelor's plus) ──")
 if 'state_pct_bachelors_plus' in df.columns:
