@@ -99,15 +99,24 @@ if 'pres_dem_two_party_share' in df.columns and 'pres_dem_two_party_share_lag2' 
 
 # Rep − Dem two-party share (per Part D spec): signed margin, negative when
 # Democrat won, positive when Republican won. More interpretable than the
-# raw Dem share for an R-over-D question.
+# raw Dem share for an R-over-D question. Build lag-2 FROM the already-lagged
+# component variables (built in 00_build_panel.py pre-trim) so that 2013 and
+# 2014 get their values from the 2011 / 2012 MEDSL data rather than NaN.
 if {'pres_rep_vote_share', 'pres_dem_vote_share'}.issubset(df.columns):
     df['pres_rep_minus_dem_share'] = (
         df['pres_rep_vote_share'] - df['pres_dem_vote_share']
     )
-    df['pres_rep_minus_dem_share_lag2'] = group_shift('pres_rep_minus_dem_share', 2)
-    log(f"  pres_rep_minus_dem_share_lag2: "
-        f"n={df['pres_rep_minus_dem_share_lag2'].notna().sum()}, "
-        f"mean={df['pres_rep_minus_dem_share_lag2'].mean():.3f}")
+    if {'pres_rep_vote_share_lag2', 'pres_dem_vote_share_lag2'}.issubset(df.columns):
+        df['pres_rep_minus_dem_share_lag2'] = (
+            df['pres_rep_vote_share_lag2'] - df['pres_dem_vote_share_lag2']
+        )
+        log(f"  pres_rep_minus_dem_share_lag2 (from pre-trim components): "
+            f"n={df['pres_rep_minus_dem_share_lag2'].notna().sum()}, "
+            f"mean={df['pres_rep_minus_dem_share_lag2'].mean():.3f}")
+    else:
+        df['pres_rep_minus_dem_share_lag2'] = group_shift('pres_rep_minus_dem_share', 2)
+        log(f"  pres_rep_minus_dem_share_lag2 (post-trim fallback): "
+            f"n={df['pres_rep_minus_dem_share_lag2'].notna().sum()}")
 
 # Rep × pres_dem_two_party_share interaction for T1 symmetry with T3 Col 4
 # (memo's electoral-discipline test). Identified under state + year FE

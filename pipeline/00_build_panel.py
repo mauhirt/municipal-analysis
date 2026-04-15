@@ -620,6 +620,132 @@ if pe_new:
 
 
 # ═══════════════════════════════════════════════════════════════════════
+# 12b. MEDSL COUNTY PRESIDENTIAL RETURNS (2000-2024) — extends coverage
+#      back to 2008 and forward to 2024, closing the pre-2013 / 2024-2025
+#      gap in the existing presidential_elections.csv file.
+#
+#      Source: raw/political/countypres_2000-2024.csv
+#      Authority: MIT Election Data and Science Lab (MEDSL), Harvard Dataverse,
+#                 https://dataverse.harvard.edu/dataset.xhtml?persistentId=doi:10.7910/DVN/VOQCHQ
+#
+#      Aggregation: county-year Dem/Rep votes are summed across the counties
+#      listed in raw/crosswalk/Crosswalk.csv `relevant_counties` for each
+#      fips7 city (handles multi-county consolidated cities like NYC,
+#      Jacksonville-Duval). Only `mode == 'TOTAL'` rows are used to avoid
+#      double-counting across early/absentee/provisional splits.
+# ═══════════════════════════════════════════════════════════════════════
+log("\n── 12b. MEDSL presidential returns (2000-2024) ──")
+medsl_path = ROOT / 'raw' / 'political' / 'countypres_2000-2024.csv'
+if medsl_path.exists():
+    medsl = pd.read_csv(medsl_path)
+    # Mode coding varies by year: 2000-2020 uses 'TOTAL', 2024 uses 'TOTAL VOTES'.
+    # Both represent the overall candidate total for the county-year (not an
+    # early/absentee/provisional split), so we accept both.
+    medsl = medsl[(medsl['mode'].isin(['TOTAL', 'TOTAL VOTES'])) &
+                  (medsl['party'].isin(['DEMOCRAT', 'REPUBLICAN']))].copy()
+    medsl['county_fips'] = pd.to_numeric(medsl['county_fips'], errors='coerce').astype('Int64')
+    medsl = medsl.dropna(subset=['county_fips', 'year'])
+
+    # One row per (county_fips, year, party) with summed candidatevotes,
+    # plus county-year totalvotes.
+    county_yr_parties = (medsl.groupby(['county_fips', 'year', 'party'], as_index=False)
+                              ['candidatevotes'].sum()
+                              .pivot_table(index=['county_fips', 'year'],
+                                           columns='party', values='candidatevotes',
+                                           fill_value=0)
+                              .reset_index())
+    county_yr_totals = (medsl.groupby(['county_fips', 'year'], as_index=False)
+                             ['totalvotes'].first())
+    county_yr = county_yr_parties.merge(county_yr_totals,
+                                        on=['county_fips', 'year'], how='left')
+    county_yr = county_yr.rename(columns={'DEMOCRAT': 'dem_votes',
+                                          'REPUBLICAN': 'rep_votes',
+                                          'totalvotes': 'total_votes'})
+
+    # Build fips7 -> list of county_fips mapping from the crosswalk.
+    cw_full = pd.read_csv(ROOT / 'raw' / 'crosswalk' / 'Crosswalk.csv')
+    def _parse_counties(cell):
+        """Extract 5-digit county FIPS from 'Cook County [0500000US17031]; ...'."""
+        if pd.isna(cell):
+            return []
+        import re
+        return [int(m.group(1)) for m in re.finditer(r'US(\d{5})', str(cell))]
+    cw_full['county_list'] = cw_full['relevant_counties'].apply(_parse_counties)
+    # Fallback: if relevant_counties empty but county_geo_id present, parse that
+    import re
+    cw_full.loc[cw_full['county_list'].apply(len) == 0, 'county_list'] = (
+        cw_full.loc[cw_full['county_list'].apply(len) == 0, 'county_geo_id']
+        .apply(lambda s: [int(m.group(1)) for m in re.finditer(r'US(\d{5})', str(s))])
+    )
+    cw_exploded = cw_full[['fips', 'county_list']].explode('county_list').dropna()
+    cw_exploded = cw_exploded.rename(columns={'fips': 'fips7', 'county_list': 'county_fips'})
+    cw_exploded['county_fips'] = cw_exploded['county_fips'].astype(int)
+    cw_exploded['fips7'] = cw_exploded['fips7'].astype(int)
+
+    # Sum county votes per fips7 × year (multi-county cities aggregate).
+    city_yr = (cw_exploded.merge(county_yr, on='county_fips', how='inner')
+                          .groupby(['fips7', 'year'], as_index=False)
+                          [['dem_votes', 'rep_votes', 'total_votes']].sum())
+    city_yr['pres_dem_vote_share'] = city_yr['dem_votes'] / city_yr['total_votes']
+    city_yr['pres_rep_vote_share'] = city_yr['rep_votes'] / city_yr['total_votes']
+    city_yr['pres_dem_two_party_share'] = (
+        city_yr['dem_votes'] / (city_yr['dem_votes'] + city_yr['rep_votes'])
+    )
+    log(f"  MEDSL city-year: {len(city_yr):,} rows across "
+        f"{city_yr['fips7'].nunique()} cities × "
+        f"{sorted(city_yr['year'].unique())}")
+
+    # Expand election-year values to all intervening years (forward-fill):
+    #   2008 -> 2008-2011; 2012 -> 2012-2015; 2016 -> 2016-2019;
+    #   2020 -> 2020-2023; 2024 -> 2024-2025.
+    election_span = {2008: range(2008, 2012),
+                     2012: range(2012, 2016),
+                     2016: range(2016, 2020),
+                     2020: range(2020, 2024),
+                     2024: range(2024, 2026)}
+    rows = []
+    for elec_yr, yrs in election_span.items():
+        src = city_yr[city_yr['year'] == elec_yr]
+        if src.empty:
+            continue
+        for yr in yrs:
+            r = src.copy()
+            r['year'] = yr
+            rows.append(r)
+    medsl_expanded = pd.concat(rows, ignore_index=True)
+
+    # Merge into the panel. Existing presidential_elections.csv already
+    # populated 2013-2023; MEDSL fills 2008-2012 and 2024-2025 where missing.
+    # We ONLY overwrite NaNs to avoid touching values from the existing
+    # authoritative file.
+    for col in ['pres_dem_vote_share', 'pres_rep_vote_share',
+                'pres_dem_two_party_share']:
+        if col not in df.columns:
+            df[col] = np.nan
+    merged = df[['fips7', 'year']].merge(
+        medsl_expanded[['fips7', 'year',
+                        'pres_dem_vote_share', 'pres_rep_vote_share',
+                        'pres_dem_two_party_share']]
+        .rename(columns={
+            'pres_dem_vote_share':     'pres_dem_vote_share_MEDSL',
+            'pres_rep_vote_share':     'pres_rep_vote_share_MEDSL',
+            'pres_dem_two_party_share': 'pres_dem_two_party_share_MEDSL',
+        }),
+        on=['fips7', 'year'], how='left')
+    for col in ['pres_dem_vote_share', 'pres_rep_vote_share', 'pres_dem_two_party_share']:
+        medsl_col = f'{col}_MEDSL'
+        if medsl_col in merged.columns:
+            # Fill only where df's value is NaN (preserves existing CSV values).
+            mask = df[col].isna()
+            df.loc[mask, col] = merged.loc[mask, medsl_col].values
+    log(f"  Filled presidential NaN from MEDSL. "
+        f"pres_dem_vote_share nonnull: {df['pres_dem_vote_share'].notna().sum():,} "
+        f"(was {df['pres_dem_vote_share'].notna().sum() - mask.sum():,} before MEDSL fill)")
+else:
+    log(f"  [skip] MEDSL file not found at {medsl_path}")
+
+
+# ═══════════════════════════════════════════════════════════════════════
 # 13. CLIMATE POLICY — data/clean/ (2013-2023)
 # ═══════════════════════════════════════════════════════════════════════
 log("\n── 13. Climate policy ──")
@@ -932,6 +1058,15 @@ if 'National Risk Index - Score - Composite' in df.columns:
     lag_count += 1
 
 log(f"  Created {lag_count} new lag/derived variables")
+
+# ── Presidential lags: build BEFORE trimming pre-2013 rows so that lag-2
+#    values for 2013-2014 can reach back to 2011/2012 MEDSL data ──
+df = df.sort_values(['fips7', 'year'])
+for src in ['pres_dem_vote_share', 'pres_rep_vote_share', 'pres_dem_two_party_share']:
+    if src in df.columns:
+        for k in [1, 2]:
+            df[f'{src}_lag{k}'] = df.groupby('fips7')[src].shift(k)
+        log(f"  Built {src}_lag1 / _lag2 (pre-trim; MEDSL reach-back)")
 
 # ── Trim pre-2013 rows (only needed for lag construction) ──
 pre_2013_mask = df['year'] < 2013

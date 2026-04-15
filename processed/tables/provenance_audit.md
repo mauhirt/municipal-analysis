@@ -46,6 +46,7 @@ sourced in 00 or 01 from documented public datasets. No new encoding.
 | `state_carbon_pricing_lag1` / `state_carbon_price_usd_lag1` | `state_carbon_pricing` / `state_carbon_price` | `raw/climate/climate_policy_controls.csv` | DSIRE |
 | `state_rps_active_lag1` / `state_rps_target_pct_lag1` | respective raw columns | same | DSIRE |
 | `state_medicaid_expanded_lag1` / `state_right_to_work_lag1` | respective raw columns | `raw/census_acs/additional_city_variables_2010_2024.csv` | State legislative records |
+| `pres_dem_vote_share`, `pres_rep_vote_share`, `pres_dem_two_party_share` (and their `_lag1` / `_lag2` variants for 2008-2012 and 2024-2025 years) | County-level Dem/Rep vote totals aggregated to city via `raw/crosswalk/Crosswalk.csv` `relevant_counties`; only `mode in {'TOTAL', 'TOTAL VOTES'}` rows retained | `raw/political/countypres_2000-2024.csv` | **MIT Election Data and Science Lab (MEDSL)**, County Presidential Election Returns 2000-2024, Harvard Dataverse DOI:10.7910/DVN/VOQCHQ |
 | `ep_state_aceee_code_rank_lag1` | `state_building_code_stringency_aceee_rank` | `raw/energy_policy/state_building_codes.csv` | ACEEE |
 | `{c40,iclei,mcpa}_member_lag1` / `mcpa_signatory_lag1` | `c40_member`, `iclei_member`, `mayors_climate_signatory` | `raw/climate/climate_policy_controls.csv` | C40 / ICLEI / MCPA public rosters |
 | `state_pct_bachelors_lag1` | `state_pct_bachelors_plus` | `raw/census_acs/additional_city_variables_2010_2024.csv` | Census ACS 5-year |
@@ -246,7 +247,7 @@ ladder (Tier 1 broad pressure → Tier 4 judicial).
 | ~~EPA CAA county-level nonattainment~~ | **RESOLVED 2026-04.** Green Book phistory.xls + nayro.xls retrieved; merged into 00_build_panel.py §6b. See Section A above for the derived `caa_*` variables. | Done |
 | ~~`capital_outlay`~~ | **RESOLVED 2026-04.** Panel already had `capital_outlay_pc` / `capital_outlay_real` / `capital_share` from Census ASLGF; lag-2 variants now built in `02_variable_additions.py` §4.4c. | Done |
 | `pct_deficient_lag2` | Source data deferred in `variable_list_audit.md` (EPA CWNS unavailable) | Flagged as data gap |
-| Pre-2013 presidential vote share (2008-2012) | Current `raw/political/presidential_elections.csv` covers 2013-2023 only; lag-2 for 2013-14 NaN | See `raw/political/pres_2008_2012_placeholder.md` — pull from MIT MEDSL Dataverse (`countypres_2000-2020.csv`) |
+| ~~Pre-2013 presidential vote share (2008-2012)~~ | **RESOLVED 2026-04.** `raw/political/countypres_2000-2024.csv` retrieved from MIT MEDSL; merged in `00_build_panel.py` §12b via county→city aggregation using `raw/crosswalk/Crosswalk.csv`. Presidential lag-2 variables now have full 2013-2025 coverage (was missing for 2013-2014 before this pull). | Done |
 | `Nearby_Water_CITY_Amt_25km_Cumul` | Requires geospatial aggregation not yet run | Geospatial build pending |
 | `Y_Mgmt_Proceeds_Yes`, `Y_Proj_Selection_Yes` | Bloomberg `Count_Mgmt of Proc__Yes` / `Count_Proj Sel Proc__Yes` not derived in `01` | Add construction step to `01_construct_audit_variables.py` |
 | `esg_cum_antiesg_laws` | In `raw/political/antiesg_laws.csv` but dropped by 01 pruning | Add to retain list |

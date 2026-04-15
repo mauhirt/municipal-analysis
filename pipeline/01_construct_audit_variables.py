@@ -71,9 +71,14 @@ log("\n── 2. Simple lags ──")
 df = df.sort_values(['fips7', 'year'])
 
 # S11: pres_dem_vote_share_lag2
-if 'pres_dem_vote_share' in df.columns:
+# NOTE: 00_build_panel.py now builds pres_*_lag1/lag2 BEFORE trimming
+# pre-2013 rows so that lag-2 values for 2013-2014 reach back to 2011/2012
+# MEDSL data. Only re-build here if the pre-trim lag is absent.
+if 'pres_dem_vote_share' in df.columns and 'pres_dem_vote_share_lag2' not in df.columns:
     df['pres_dem_vote_share_lag2'] = df.groupby('fips7')['pres_dem_vote_share'].shift(2)
-    log(f"  S11 pres_dem_vote_share_lag2: {df['pres_dem_vote_share_lag2'].notna().sum()} non-null")
+    log(f"  S11 pres_dem_vote_share_lag2 (post-trim fallback): {df['pres_dem_vote_share_lag2'].notna().sum()} non-null")
+elif 'pres_dem_vote_share_lag2' in df.columns:
+    log(f"  S11 pres_dem_vote_share_lag2: {df['pres_dem_vote_share_lag2'].notna().sum()} non-null (pre-trim from 00)")
 
 # F11: capital_stock_pc_lag2
 if 'capital_stock_pc' in df.columns:
