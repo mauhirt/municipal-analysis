@@ -1,0 +1,56 @@
+filename,url,bytes,seconds,status,error,lead_CUSIP,Issuer_Name,Issue_Date
+P21963220-P21497913-P21950218.pdf,https://emma.msrb.org/P21963220-P21497913-P21950218.pdf,8140800,1.72,ok,,04780M2K4,City of Atlanta GA Department of Aviation,
+P11836470-P11407478-P11849595.pdf,https://emma.msrb.org/P11836470-P11407478-P11849595.pdf,0,0.41,http_error,503 Service Unavailable,5444452H1,City of Los Angeles Department of Airports,
+P11837901-P11408439-P11850619.pdf,https://emma.msrb.org/P11837901-P11408439-P11850619.pdf,5592517,0.49,ok,,79771FGL5,City of San Francisco CA Public Utilities Commission Water Revenue,
+ER710847-ER551237-ER952297.pdf,https://emma.msrb.org/ER710847-ER551237-ER952297.pdf,1947957,0.3,ok,,655867SG5,City of Norfolk VA,2013-11-07
+ER890479-ER695548-ER1097054.pdf,https://emma.msrb.org/ER890479-ER695548-ER1097054.pdf,0,0.06,http_error,503 Service Unavailable,53945CCZ1,City of Los Angeles CA Wastewater System Revenue,2015-06-30
+ES732753-ES574207-ES970101.pdf,https://emma.msrb.org/ES732753-ES574207-ES970101.pdf,1772554,0.28,ok,,254845LC2,District of Columbia Water & Sewer Authority,2015-10-15
+ES778368-ES612030-ES1007776.pdf,https://emma.msrb.org/ES778368-ES612030-ES1007776.pdf,0,0.04,http_error,503 Service Unavailable,793071PM7,City of St Paul MN Sewer Revenue,2016-04-14
+ES821894-ES644906-ES1040084.pdf,https://emma.msrb.org/ES821894-ES644906-ES1040084.pdf,0,0.04,http_error,503 Service Unavailable,544552ZY1,Port of Los Angeles,2016-10-13
+ES997086-ES780844-ES1182154.pdf,https://emma.msrb.org/ES997086-ES780844-ES1182154.pdf,0,0.04,http_error,503 Service Unavailable,79765RM89,City of San Francisco CA Public Utilities Commission Water Revenue,2016-12-14
+EP975656-EP756739-EP1158361.pdf,https://emma.msrb.org/EP975656-EP756739-EP1158361.pdf,2390139,0.32,ok,,254845MX5,District of Columbia Water & Sewer Authority,2017-02-23
+EP985874-EP764592-EP1166360.pdf,https://emma.msrb.org/EP985874-EP764592-EP1166360.pdf,0,0.04,http_error,503 Service Unavailable,793071QU8,City of St Paul MN Sewer Revenue,2017-04-06
+EP996982-EP772996-EP1174766.pdf,https://emma.msrb.org/EP996982-EP772996-EP1174766.pdf,1714299,0.37,ok,,53945CFQ8,City of Los Angeles CA Wastewater System Revenue,2017-05-24
+ER1108407-ER866317-ER1267002.pdf,https://emma.msrb.org/ER1108407-ER866317-ER1267002.pdf,0,0.05,http_error,503 Service Unavailable,79765RQ69,City of San Francisco CA Public Utilities Commission Water Revenue,2017-12-13
+ES1137721-ES890247-ES1291554.pdf,https://emma.msrb.org/ES1137721-ES890247-ES1291554.pdf,0,0.38,http_error,503 Service Unavailable,875143AA7,City of Tampa FL,2018-04-26
+ES1143696-ES894297-ES1295573.pdf,https://emma.msrb.org/ES1143696-ES894297-ES1295573.pdf,0,0.04,http_error,503 Service Unavailable,254845NZ9,District of Columbia Water & Sewer Authority,2018-04-30
+ES1184461-ES925614-ES1326629.pdf,https://emma.msrb.org/ES1184461-ES925614-ES1326629.pdf,2911461,0.33,ok,,79768HDZ8,San Francisco City & County Public Utilities Commission Wastewater Revenue,2018-08-09
+ES1195945-ER896332-ER1296861.pdf,https://emma.msrb.org/ES1195945-ER896332-ER1296861.pdf,0,0.04,http_error,503 Service Unavailable,438687DW2,City & County of Honolulu HI,2018-09-05
+ER1151669-ER900832-ER1301301.pdf,https://emma.msrb.org/ER1151669-ER900832-ER1301301.pdf,0,0.04,http_error,503 Service Unavailable,793071RQ6,City of St Paul MN Sewer Revenue,2018-10-10
+ES1208424-ES943762-ES1344533.pdf,https://emma.msrb.org/ES1208424-ES943762-ES1344533.pdf,3074026,0.52,ok,,60375BDZ6,City of Minneapolis MN,2018-10-31
+ER1165936-ER911496-ER1311964.pdf,https://emma.msrb.org/ER1165936-ER911496-ER1311964.pdf,3294504,0.37,ok,,53945CJC5,City of Los Angeles CA Wastewater System Revenue,2018-11-15
+ES1226847-ES956288-ES1357279.pdf,https://emma.msrb.org/ES1226847-ES956288-ES1357279.pdf,28345178,2.08,ok,,85233GAA2,City of St Louis Park MN,2018-12-28
+ER1196139-ER936152-ER1337167.pdf,https://emma.msrb.org/ER1196139-ER936152-ER1337167.pdf,1924150,0.25,ok,,79772ECA5,City & County of San Francisco CA Community Facilities District No 2014-1,2019-02-26
+ES1272341-ES995769-ES1397201.pdf,https://emma.msrb.org/ES1272341-ES995769-ES1397201.pdf,5503825,0.51,ok,,793071SL6,City of St Paul MN Sewer Revenue,2019-06-19
+ER1252791-ER979149-ER1380636.pdf,https://emma.msrb.org/ER1252791-ER979149-ER1380636.pdf,5938771,0.51,ok,,544552B43,Port of Los Angeles,2019-09-18
+ES1311861-ES1025042-ES1426916.pdf,https://emma.msrb.org/ES1311861-ES1025042-ES1426916.pdf,8341253,0.65,ok,,254845QB9,District of Columbia Water & Sewer Authority,2019-11-06
+ES1328982-ES1036897-ES1439752.pdf,https://emma.msrb.org/ES1328982-ES1036897-ES1439752.pdf,5207541,0.49,ok,,861398CD5,Stockton Public Financing Authority,2019-12-05
+ER1294533-ES1040166-ES1443450.pdf,https://emma.msrb.org/ER1294533-ES1040166-ES1443450.pdf,3164418,0.35,ok,,79765R4K2,City of San Francisco CA Public Utilities Commission Water Revenue,2020-01-09
+ER1312402-ER1022705-ER1428839.pdf,https://emma.msrb.org/ER1312402-ER1022705-ER1428839.pdf,6972771,0.61,ok,,793071TG6,City of St Paul MN Sewer Revenue,2020-03-11
+RE1347013-RE1047751-RE1456143.pdf,https://emma.msrb.org/RE1347013-RE1047751-RE1456143.pdf,11753190,0.88,ok,,084113VF3,City of Berkeley CA,2020-04-16
+SS1381600-SS1075701-SS1483050.pdf,https://emma.msrb.org/SS1381600-SS1075701-SS1483050.pdf,3286774,0.31,ok,,79772ECV9,City & County of San Francisco CA Community Facilities District No 2014-1,2020-05-14
+SS1393189-SS1083903-SS1491943.pdf,https://emma.msrb.org/SS1393189-SS1083903-SS1491943.pdf,7935035,0.64,ok,,812643UE2,City of Seattle WA Municipal Light & Power Revenue,2020-08-05
+"ER1294533-ES1040166-ES1443450.pdf,OS found at issue level (part of 2019 Series ABC 50-CUSIP offering)","https://emma.msrb.org/ER1294533-ES1040166-ES1443450.pdf,OS found at issue level (part of 2019 Series ABC 50-CUSIP offering)",0,0.03,error,"InvalidURL(""URL can't contain control characters. '/ER1294533-ES1040166-ES1443450.pdf,OS found at issue level (part of 2019 Series ABC 50-CUSIP offering)' (found at least ' ')"")",79771FFJ1,City of San Francisco CA Public Utilities Commission Water Revenue,2020-09-01
+P11428776-P11108772-P11518438.pdf,https://emma.msrb.org/P11428776-P11108772-P11518438.pdf,18089049,3.17,ok,,79771FAA5,City of San Francisco CA Public Utilities Commission Water Revenue,2020-10-21
+P11525769-P11178196-P11594549.pdf,https://emma.msrb.org/P11525769-P11178196-P11594549.pdf,17058530,1.5,ok,,051595BQ8,City of Aurora CO Water Revenue,2021-09-09
+P11522928-P11177998-P11594334.pdf,https://emma.msrb.org/P11522928-P11177998-P11594334.pdf,7436551,0.69,ok,,793071UC3,City of St Paul MN Sewer Revenue,2021-09-15
+P11530517-P11183208-P11600029.pdf,https://emma.msrb.org/P11530517-P11183208-P11600029.pdf,3587979,0.43,ok,,044074EA6,City of Asheville NC Water System Revenue,2021-09-30
+P21496670-P21158908-P21573465.pdf,https://emma.msrb.org/P21496670-P21158908-P21573465.pdf,12085228,0.94,ok,,875143AZ2,City of Tampa FL,2021-10-07
+P11539380-P11189325-P11606560.pdf,https://emma.msrb.org/P11539380-P11189325-P11606560.pdf,13667304,1.06,ok,,44420RBK5,Hudson Yards Infrastructure Corp,2021-10-27
+P21502980-P21162007-P21576850.pdf,https://emma.msrb.org/P21502980-P21162007-P21576850.pdf,2480510,0.69,ok,,79772EDP1,City & County of San Francisco CA Community Facilities District No 2014-1,2021-11-03
+P21519443-P21175017-P21591296.pdf,https://emma.msrb.org/P21519443-P21175017-P21591296.pdf,19141655,1.42,ok,,79768HFN3,San Francisco City & County Public Utilities Commission Wastewater Revenue,2021-11-30
+P21520298-P21175673-P21592007.pdf,https://emma.msrb.org/P21520298-P21175673-P21592007.pdf,6183814,0.61,ok,,97951QBB2,Woodland Finance Authority,2021-12-16
+P21520597-P21175877-P21592245.pdf,https://emma.msrb.org/P21520597-P21175877-P21592245.pdf,1664217,0.36,ok,,094725ML9,City of Bloomington IN Sewage Works Revenue,2021-12-21
+P21525393-P21179406-P21596352.pdf,https://emma.msrb.org/P21525393-P21179406-P21596352.pdf,28765261,2.3,ok,,79771KAZ9,San Francisco City & County Public Utilities Commission Power Revenue,2021-12-21
+"P21536543-P21187636-P21605628.pdf,OS found via sibling CUSIP 546589T28","https://emma.msrb.org/P21536543-P21187636-P21605628.pdf,OS found via sibling CUSIP 546589T28",0,0.03,error,"InvalidURL(""URL can't contain control characters. '/P21536543-P21187636-P21605628.pdf,OS found via sibling CUSIP 546589T28' (found at least ' ')"")",5465892G6,Louisville and Jefferson County Metropolitan Sewer District,2022-02-01
+P21554235-P21200604-P21620362.pdf,https://emma.msrb.org/P21554235-P21200604-P21620362.pdf,3999041,0.37,ok,,254845RT9,District of Columbia Water & Sewer Authority,2022-03-23
+P21565303-P21209256-P21630047.pdf,https://emma.msrb.org/P21565303-P21209256-P21630047.pdf,3676792,0.42,ok,,736754SE3,City of Portland OR Water System Revenue,2022-04-07
+P11591429-P11228081-P11650034.pdf,https://emma.msrb.org/P11591429-P11228081-P11650034.pdf,4881437,0.42,ok,,53945CKV1,City of Los Angeles CA Wastewater System Revenue,2022-04-19
+P21570039-P21212802-P21633963.pdf,https://emma.msrb.org/P21570039-P21212802-P21633963.pdf,3057309,0.36,ok,,243127XR3,City of Decatur IL,2022-04-28
+P22018038-P11427523-P11871837.pdf,https://emma.msrb.org/P22018038-P11427523-P11871837.pdf,5270568,0.45,ok,,873519QX3,City of Tacoma WA Electric System Revenue,2025-03-07
+P21949006-P21488358-P21939864.pdf,https://emma.msrb.org/P21949006-P21488358-P21939864.pdf,9976361,0.96,ok,,793071XQ9,City of St Paul MN Sewer Revenue,2025-03-31
+P21986556-P21514279-P21968327.pdf,https://emma.msrb.org/P21986556-P21514279-P21968327.pdf,3839393,0.42,ok,,479790KM8,City of Joliet IL Waterworks & Sewerage Revenue,2025-04-12
+P31462694-P11410516-P11852986.pdf,https://emma.msrb.org/P31462694-P11410516-P11852986.pdf,20499905,1.27,ok,,5444456F1,City of Los Angeles Department of Airports,2025-04-21
+P11842804-P11411795-P11854392.pdf,https://emma.msrb.org/P11842804-P11411795-P11854392.pdf,50802473,3.95,ok,,476623DC4,Jersey City Municipal Utilities Authority,2025-04-30
+P21964955-P21499218-P21951692.pdf,https://emma.msrb.org/P21964955-P21499218-P21951692.pdf,2923131,0.3,ok,,4387015B6,City & County Honolulu HI Wastewater System Revenue,2025-07-24
+P21946866-P21486848-P21938256.pdf,https://emma.msrb.org/P21946866-P21486848-P21938256.pdf,19436760,1.31,ok,,254845UY4,District of Columbia Water & Sewer Authority,2025-08-13
