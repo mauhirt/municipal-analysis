@@ -87,17 +87,14 @@ All on `Y_self_green`. Same primary RHS + additions.
 | R15 Gravity County | asinh county issuance (1/d²) | -0.002 | 0.004 | gravity county +0.007 (ns) |
 | R16 Gravity All | all 3 channels jointly | -0.001 | 0.004 | peer -0.009, special +0.009, county +0.010 (all ns) |
 | R17 ESG Endogeneity | state_pre_esg_activity + interaction | -0.001 | 0.004 | **`state_pre_esg_activity` +0.064\*\*\*** |
-| R18 Co-Partisan | Rep_Mayor + state_any_rep + Rep×rep_green | -0.007 | 0.006 | **`rep_x_state_rep_green` -0.030\*\*** |
-| R19 Rep Mirror | Rep_Mayor_lag1 (legacy) | -0.001 | 0.005 | Confirms null |
-| R20 FOG × Dem | termlimits + fog + initiative interactions | +0.029 | 0.019 | `dem_x_fog` -0.018 (ns) |
+| R18 Rep Mirror | Rep_Mayor_lag1 (legacy) | -0.001 | 0.005 | Confirms null |
+| R19 FOG × Dem | termlimits + fog + initiative interactions | +0.029 | 0.019 | `dem_x_fog` -0.018 (ns) |
 
 ### Reading
 
-`Dem_Mayor` null across all 10 (range: -0.007 to +0.029). Two notable findings:
+`Dem_Mayor` null across all 9 (range: -0.002 to +0.029).
 
-1. **R17 ESG Endogeneity:** `state_pre_esg_activity` = +0.064\*\*\*. States that had city-level green bond activity BEFORE their first anti-ESG law produce significantly more self-labelled bonds than states that enacted anti-ESG laws without prior market activity. This is the endogeneity test from Part E: anti-ESG laws passed in states with existing markets suppress real activity; anti-ESG laws passed in states without prior markets are "backlash to nothing." The interaction `esg_post × pre_activity` is -0.013 (ns), suggesting the suppression effect is not yet statistically distinguishable from the baseline.
-
-2. **R18 Co-Partisan:** `rep_x_state_rep_green` = -0.030\*\*. When a Republican mayor is in a state where another Republican-mayor city has previously self-labelled a green bond, the CURRENT Republican mayor is LESS likely to self-label. This is opposite to the "co-partisan demonstration" prediction — it suggests a **stigma effect** rather than normalisation: Republican mayors avoid the green label precisely when another Republican in their state has already been associated with it.
+**R17 ESG Endogeneity:** `state_pre_esg_activity` = +0.064\*\*\*. States that had city-level green bond activity BEFORE their first anti-ESG law produce significantly more self-labelled bonds than states that enacted anti-ESG laws without prior market activity. This is the endogeneity test from Part E: anti-ESG laws passed in states with existing markets may suppress real activity; anti-ESG laws passed in states without prior markets are "backlash to nothing." The interaction `esg_post × pre_activity` is -0.013 (ns), suggesting the suppression effect is not yet statistically distinguishable from the baseline. R17 is the sole novel robustness finding in this block.
 
 ---
 
@@ -105,7 +102,7 @@ All on `Y_self_green`. Same primary RHS + additions.
 
 | Finding | Evidence | Strength |
 |---|---|---|
-| **H1b: Dem_Mayor null at extensive margin** | β ≈ 0 across 28/28 specs | \*\*\* Rock solid |
+| **H1b: Dem_Mayor null at extensive margin** | β ≈ 0 across 27/27 specs | \*\*\* Rock solid |
 | **Compulsion drives issuance** | NPDES +0.018\*\*, overflow +0.006\*\*\* | \*\*\* Confirmed |
 | **Constituency drives issuance** | pres_dem_share +0.058\*\* | \*\* Consistent |
 | **Reserve ratio as fiscal gate** | +0.006\*\* | \*\* Consistent |
@@ -113,7 +110,6 @@ All on `Y_self_green`. Same primary RHS + additions.
 | **Non-water gap is structural** | C6: 55 vs 4 raw, β=0 conditional | Descriptive vs causal gap |
 | **Labelling incentive (Dem × stress)** | C7: +0.012, directional | Weak (ns in full spec) |
 | **Pre-ESG-law market predicts issuance** | R17: +0.064\*\*\* | \*\*\* Novel |
-| **Co-partisan stigma (Rep)** | R18: -0.030\*\* | \*\* Novel, opposite to prediction |
 | **Gravity spatial effects** | R13-R16: all ns | No spatial spillover at extensive margin |
 | **State ZEV mandate negative** | R5: -0.035\*\*\* | \*\*\* Substitution effect |
 | **RGGI membership positive** | R5: +0.068\* | \* Weak positive |

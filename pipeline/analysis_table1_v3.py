@@ -231,18 +231,14 @@ if MODULE in ('rob2', 'all'):
     endog = [v for v in ['state_pre_esg_activity','esg_post_x_pre_activity'] if v in df.columns]
     if endog: specs.append(('R17 ESG Endog', Y, PRIMARY + endog, 'Anti-ESG suppression × prior market'))
 
-    # R18 Co-partisan spillover
-    copart = [v for v in ['state_any_rep_self_green_lag1','rep_x_state_rep_green'] if v in df.columns]
-    if copart: specs.append(('R18 CoPartisan', Y, PRIMARY + ['Rep_Mayor_lag1'] + copart, 'Co-partisan state spillover'))
-
-    # R19 Rep_Mayor legacy mirror
+    # R18 Rep_Mayor legacy mirror
     rhs_no_dem = [v for v in PRIMARY if v != 'Dem_Mayor']
     if 'Rep_Mayor_lag1' in df.columns:
-        specs.append(('R19 Rep Mirror', Y, rhs_no_dem + ['Rep_Mayor_lag1'], 'Legacy Rep_Mayor_lag1'))
+        specs.append(('R18 Rep Mirror', Y, rhs_no_dem + ['Rep_Mayor_lag1'], 'Legacy Rep_Mayor_lag1'))
 
-    # R20 FOG × Dem interactions
+    # R19 FOG × Dem interactions
     fog = [v for v in ['dem_x_termlimits','dem_x_fog','dem_x_initiative'] if v in df.columns]
-    if fog: specs.append(('R20 FOG×Dem', Y, PRIMARY + fog, 'ICMA FOG institutional interactions'))
+    if fog: specs.append(('R19 FOG×Dem', Y, PRIMARY + fog, 'ICMA FOG institutional interactions'))
 
     run_block(df, specs, 'table1_v3_rob2.md',
-              'Table 1 v3 — Robustness R11-R20 (gravity, ESG endog, co-partisan, FOG)')
+              'Table 1 v3 — Robustness R11-R19 (gravity, ESG endog, Rep mirror, FOG)')
