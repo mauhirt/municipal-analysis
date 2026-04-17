@@ -291,3 +291,97 @@ if MODULE in ('rob2', 'all'):
 
     run_block(df, specs, 'table1_v3_rob2.md',
               'Table 1 v3 — Robustness R11-R19 (gravity, ESG endog, Rep mirror, FOG)')
+
+# ══════════════════════════════════════════════════════════════════════
+# MODULE: ftest — within-R² and compulsion-block F-test (Task 8)
+# ══════════════════════════════════════════════════════════════════════
+if MODULE in ('ftest', 'all'):
+    from linearmodels.panel import PanelOLS
+    print("\n=== Task 8: Within-R² and compulsion-block F-test ===\n")
+
+    # Build interaction terms if missing
+    if 'dem_x_npdes' not in df.columns:
+        df['dem_x_npdes'] = df['Dem_Mayor'] * df.get('npdes_formal_prior3yr_muni', 0)
+    if 'dem_x_overflow' not in df.columns:
+        df['dem_x_overflow'] = df['Dem_Mayor'] * df.get('overflow_events_lag2', 0)
+    if 'dem_x_state_green_cum' not in df.columns:
+        df['dem_x_state_green_cum'] = (
+            df['Dem_Mayor'] * df.get('asinh_state_all_green_cum_amt_lag1', 0))
+
+    COMPULSION_BLOCK = ['npdes_formal_prior3yr_muni', 'overflow_events_lag2',
+                        'reserve_ratio_lag2', 'debt_service_burden_lag2',
+                        'tel_x_prop_tax_dep']
+
+    specs = [
+        ('C1 GBI',          'Green_Bond_Issued',    PRIMARY),
+        ('C2 GBI amt',      'asinh_green_amt',      PRIMARY),
+        ('C3 Self-green',   'Y_self_green',         PRIMARY),
+        ('C4 Self amt',     'asinh_self_green_amt',  PRIMARY),
+        ('C5 NPDES×Party',  'Green_Bond_Issued',    PRIMARY + ['dem_x_npdes']),
+        ('C6 Overflow×Party','Green_Bond_Issued',   PRIMARY + ['dem_x_overflow']),
+        ('C7 Demonstration','Y_self_green',         PRIMARY + ['dem_x_state_green_cum']),
+    ]
+
+    results = []
+    for label, y, xs in specs:
+        if y not in df.columns:
+            continue
+        # Prepare data for PanelOLS
+        all_cols = ['fips7', 'year', y] + xs
+        all_cols = list(dict.fromkeys(c for c in all_cols if c in df.columns))
+        d = df[all_cols].copy().dropna()
+        xs_live = [x for x in xs if x in d.columns and d[x].nunique() > 1]
+        if len(d) < 30 or not xs_live:
+            continue
+
+        d2 = d.set_index(['fips7', 'year'])
+        try:
+            mod = PanelOLS(d2[y], d2[xs_live].astype(float),
+                           entity_effects=True, time_effects=True, check_rank=False)
+            res = mod.fit(cov_type='clustered', cluster_entity=True)
+            within_r2 = float(res.rsquared_within)
+
+            # Compulsion-block Wald test: joint null that all compulsion vars = 0
+            comp_in_model = [v for v in COMPULSION_BLOCK if v in xs_live and v in res.params.index]
+            if comp_in_model:
+                from scipy.stats import f as fdist
+                beta = res.params[comp_in_model].values
+                V = res.cov[comp_in_model].loc[comp_in_model].values
+                try:
+                    f_stat = float(beta @ np.linalg.inv(V) @ beta / len(comp_in_model))
+                    f_p = float(1 - fdist.cdf(f_stat, len(comp_in_model),
+                                              res.nobs - len(res.params)))
+                except Exception:
+                    f_stat, f_p = np.nan, np.nan
+            else:
+                f_stat, f_p = np.nan, np.nan
+
+            results.append((label, y, len(d), within_r2, f_stat, f_p, len(comp_in_model)))
+            print(f"  {label:20s}  N={len(d):4d}  within-R²={within_r2:.4f}  "
+                  f"F({len(comp_in_model)})={f_stat:.2f}  p={f_p:.4f}{stars(f_p)}")
+        except Exception as e:
+            print(f"  {label:20s}  PanelOLS error: {e}")
+
+    # Write output
+    lines = [
+        '# Within-R² and Compulsion-Block F-Test (Task 8)',
+        '',
+        'Estimated via `linearmodels.PanelOLS` with entity (city) + time (year) effects.',
+        'Cluster-robust SE at city level.',
+        '',
+        f'Compulsion block tested: {", ".join(COMPULSION_BLOCK)}',
+        '',
+        '| Column | Outcome | N | Within-R² | F-stat (compulsion block) | p-value | df |',
+        '|---|---|---|---|---|---|---|',
+    ]
+    for label, y, n, wr2, fst, fp, dfn in results:
+        lines.append(f'| {label} | `{y}` | {n} | {wr2:.4f} | {fst:.2f} | {fp:.4f}{stars(fp)} | {dfn} |')
+    lines.extend([
+        '',
+        'Within-R² = variation explained after absorbing city and year FE.',
+        'F-test: joint null that all compulsion-block coefficients = 0.',
+        '',
+        '* p<0.10, ** p<0.05, *** p<0.01.',
+    ])
+    (OUT / 'v3_rr' / 'within_r2_ftest.md').write_text('\n'.join(lines) + '\n')
+    print(f"\nWrote: {OUT / 'v3_rr' / 'within_r2_ftest.md'}")
