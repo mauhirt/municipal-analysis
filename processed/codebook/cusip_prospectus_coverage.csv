@@ -90,28 +90,6 @@ CUSIP,Issuer_Name,City,Issue_Date,Amt_Issued,Self_reported_Green,ESG_Assurance_P
 043260CS5,City of Arvada CO Water Revenue,Arvada,2025-09-07,3450000.0,Yes,No,False,0,
 043260CT3,City of Arvada CO Water Revenue,Arvada,2025-09-07,20025000.0,Yes,No,False,0,
 043260CU0,City of Arvada CO Water Revenue,Arvada,2025-07-09,19940000.0,Yes,No,False,0,
-04780MS59,City of Atlanta GA Department of Aviation,Atlanta,2024-08-22,2980000.0,Yes,Yes,False,0,
-04780MS67,City of Atlanta GA Department of Aviation,Atlanta,2024-08-22,3620000.0,Yes,Yes,False,0,
-04780MS75,City of Atlanta GA Department of Aviation,Atlanta,2024-08-22,3800000.0,Yes,Yes,False,0,
-04780MS83,City of Atlanta GA Department of Aviation,Atlanta,2024-08-22,3990000.0,Yes,Yes,False,0,
-04780MS91,City of Atlanta GA Department of Aviation,Atlanta,2024-08-22,4190000.0,Yes,Yes,False,0,
-04780MT25,City of Atlanta GA Department of Aviation,Atlanta,2024-08-22,4400000.0,Yes,Yes,False,0,
-04780MT33,City of Atlanta GA Department of Aviation,Atlanta,2024-08-22,4620000.0,Yes,Yes,False,0,
-04780MT41,City of Atlanta GA Department of Aviation,Atlanta,2024-08-22,4850000.0,Yes,Yes,False,0,
-04780MT58,City of Atlanta GA Department of Aviation,Atlanta,2024-08-22,5095000.0,Yes,Yes,False,0,
-04780MT66,City of Atlanta GA Department of Aviation,Atlanta,2024-08-22,5345000.0,Yes,Yes,False,0,
-04780MT74,City of Atlanta GA Department of Aviation,Atlanta,2024-08-22,5615000.0,Yes,Yes,False,0,
-04780MT82,City of Atlanta GA Department of Aviation,Atlanta,2024-08-22,5895000.0,Yes,Yes,False,0,
-04780MT90,City of Atlanta GA Department of Aviation,Atlanta,2024-08-22,6190000.0,Yes,Yes,False,0,
-04780MU23,City of Atlanta GA Department of Aviation,Atlanta,2024-08-22,6500000.0,Yes,Yes,False,0,
-04780MU31,City of Atlanta GA Department of Aviation,Atlanta,2024-08-22,6825000.0,Yes,Yes,False,0,
-04780MU49,City of Atlanta GA Department of Aviation,Atlanta,2024-08-22,7165000.0,Yes,Yes,False,0,
-04780MU56,City of Atlanta GA Department of Aviation,Atlanta,2024-08-22,7525000.0,Yes,Yes,False,0,
-04780MU64,City of Atlanta GA Department of Aviation,Atlanta,2024-08-22,7900000.0,Yes,Yes,False,0,
-04780MU72,City of Atlanta GA Department of Aviation,Atlanta,2024-08-22,8295000.0,Yes,Yes,False,0,
-04780MU80,City of Atlanta GA Department of Aviation,Atlanta,2024-08-22,8710000.0,Yes,Yes,False,0,
-04780MU98,City of Atlanta GA Department of Aviation,Atlanta,2024-08-22,50535000.0,Yes,Yes,False,0,
-04780MV22,City of Atlanta GA Department of Aviation,Atlanta,2024-08-22,64500000.0,Yes,Yes,False,0,
 051595BQ8,City of Aurora CO Water Revenue,Aurora,2021-09-09,4355000.0,Yes,No,False,0,
 051595BR6,City of Aurora CO Water Revenue,Aurora,2021-09-09,3585000.0,Yes,No,False,0,
 051595BS4,City of Aurora CO Water Revenue,Aurora,2021-09-09,3595000.0,Yes,No,False,0,
@@ -244,8 +222,6 @@ CUSIP,Issuer_Name,City,Issue_Date,Amt_Issued,Self_reported_Green,ESG_Assurance_P
 09747AAM8,City of Boise City ID Water Renewal Revenue,Boise,2022-06-30,3400000.0,--,No,False,0,
 09747AAN6,City of Boise City ID Water Renewal Revenue,Boise,2022-06-30,3545000.0,--,No,False,0,
 09747AAP1,City of Boise City ID Water Renewal Revenue,Boise,2022-06-30,3695000.0,--,No,False,0,
-09747AAQ9,City of Boise City ID Water Renewal Revenue,Boise,2022-06-30,21285000.0,--,No,False,0,
-09747AAR7,City of Boise City ID Water Renewal Revenue,Boise,2022-06-30,21185000.0,--,No,False,0,
 10146HMC7,City of Boulder CO Water & Sewer Revenue,Boulder,2022-06-01,2190000.0,--,No,False,0,
 10146HMD5,City of Boulder CO Water & Sewer Revenue,Boulder,2022-06-01,1280000.0,--,No,False,0,
 10146HME3,City of Boulder CO Water & Sewer Revenue,Boulder,2022-06-01,1345000.0,--,No,False,0,
@@ -291,28 +267,6 @@ CUSIP,Issuer_Name,City,Issue_Date,Amt_Issued,Self_reported_Green,ESG_Assurance_P
 17132ECC6,Chula Vista Municipal Financing Authority,Chula Vista,2017-12-21,110000.0,--,No,False,0,
 17132ECD4,Chula Vista Municipal Financing Authority,Chula Vista,2017-12-21,335000.0,--,No,False,0,
 17132ECE2,Chula Vista Municipal Financing Authority,Chula Vista,2017-12-21,1740000.0,--,No,False,0,
-186423AY5,City of Cleveland OH Water Pollution Control,Cleveland,2024-08-15,100000.0,--,No,False,0,
-186423AZ2,City of Cleveland OH Water Pollution Control,Cleveland,2024-08-15,475000.0,--,No,False,0,
-186423BA6,City of Cleveland OH Water Pollution Control,Cleveland,2024-08-15,500000.0,--,No,False,0,
-186423BB4,City of Cleveland OH Water Pollution Control,Cleveland,2024-08-15,525000.0,--,No,False,0,
-186423BC2,City of Cleveland OH Water Pollution Control,Cleveland,2024-08-15,550000.0,--,No,False,0,
-186423BD0,City of Cleveland OH Water Pollution Control,Cleveland,2024-08-15,575000.0,--,No,False,0,
-186423BE8,City of Cleveland OH Water Pollution Control,Cleveland,2024-08-15,605000.0,--,No,False,0,
-186423BF5,City of Cleveland OH Water Pollution Control,Cleveland,2024-08-15,635000.0,--,No,False,0,
-186423BG3,City of Cleveland OH Water Pollution Control,Cleveland,2024-08-15,670000.0,--,No,False,0,
-186423BH1,City of Cleveland OH Water Pollution Control,Cleveland,2024-08-15,700000.0,--,No,False,0,
-186423BJ7,City of Cleveland OH Water Pollution Control,Cleveland,2024-08-15,735000.0,--,No,False,0,
-186423BK4,City of Cleveland OH Water Pollution Control,Cleveland,2024-08-15,775000.0,--,No,False,0,
-186423BL2,City of Cleveland OH Water Pollution Control,Cleveland,2024-08-15,810000.0,--,No,False,0,
-186423BM0,City of Cleveland OH Water Pollution Control,Cleveland,2024-08-15,850000.0,--,No,False,0,
-186423BN8,City of Cleveland OH Water Pollution Control,Cleveland,2024-08-15,895000.0,--,No,False,0,
-186423BP3,City of Cleveland OH Water Pollution Control,Cleveland,2024-08-15,940000.0,--,No,False,0,
-186423BQ1,City of Cleveland OH Water Pollution Control,Cleveland,2024-08-15,985000.0,--,No,False,0,
-186423BR9,City of Cleveland OH Water Pollution Control,Cleveland,2024-08-15,1035000.0,--,No,False,0,
-186423BS7,City of Cleveland OH Water Pollution Control,Cleveland,2024-08-15,1090000.0,--,No,False,0,
-186423BT5,City of Cleveland OH Water Pollution Control,Cleveland,2024-08-15,1140000.0,--,No,False,0,
-186423BU2,City of Cleveland OH Water Pollution Control,Cleveland,2024-08-15,6630000.0,--,No,False,0,
-186423BV0,City of Cleveland OH Water Pollution Control,Cleveland,2024-08-15,8455000.0,--,No,False,0,
 243127VC8,City of Decatur IL,Decatur,2016-11-09,235000.0,Yes,No,False,0,
 243127VD6,City of Decatur IL,Decatur,2016-11-09,765000.0,Yes,No,False,0,
 243127VE4,City of Decatur IL,Decatur,2016-11-09,785000.0,Yes,No,False,0,
@@ -574,10 +528,6 @@ CUSIP,Issuer_Name,City,Issue_Date,Amt_Issued,Self_reported_Green,ESG_Assurance_P
 4387013P7,City & County Honolulu HI Wastewater System Revenue,honolulu,2023-09-27,7030000.0,Yes,No,False,0,
 4387013Q5,City & County Honolulu HI Wastewater System Revenue,honolulu,2023-09-27,7365000.0,Yes,No,False,0,
 4387013R3,City & County Honolulu HI Wastewater System Revenue,honolulu,2023-09-27,7710000.0,Yes,No,False,0,
-4387013S1,City & County Honolulu HI Wastewater System Revenue,honolulu,2023-09-27,25000000.0,Yes,No,False,0,
-4387013T9,City & County Honolulu HI Wastewater System Revenue,honolulu,2023-09-27,19660000.0,Yes,No,False,0,
-4387013U6,City & County Honolulu HI Wastewater System Revenue,honolulu,2023-09-27,31925000.0,Yes,No,False,0,
-4387013V4,City & County Honolulu HI Wastewater System Revenue,honolulu,2023-09-27,25000000.0,Yes,No,False,0,
 4387014A9,City & County Honolulu HI Wastewater System Revenue,honolulu,2024-09-25,14485000.0,Yes,No,False,0,
 4387014B7,City & County Honolulu HI Wastewater System Revenue,honolulu,2024-09-25,15225000.0,Yes,No,False,0,
 4387014C5,City & County Honolulu HI Wastewater System Revenue,honolulu,2024-09-25,16005000.0,Yes,No,False,0,
@@ -816,46 +766,6 @@ CUSIP,Issuer_Name,City,Issue_Date,Amt_Issued,Self_reported_Green,ESG_Assurance_P
 5444456E4,City of Los Angeles Department of Airports,Los Angeles,2025-04-22,44390000.0,Yes,Yes,False,0,
 5444456F1,City of Los Angeles Department of Airports,Los Angeles,2025-04-21,46605000.0,Yes,Yes,False,0,
 5444456G9,City of Los Angeles Department of Airports,Los Angeles,2025-04-22,48940000.0,Yes,Yes,False,0,
-544445A41,City of Los Angeles Department of Airports,Los Angeles,2022-08-24,10010000.0,Yes,Yes,False,0,
-544445A58,City of Los Angeles Department of Airports,Los Angeles,2022-08-24,15015000.0,Yes,Yes,False,0,
-544445A66,City of Los Angeles Department of Airports,Los Angeles,2022-08-24,15765000.0,Yes,Yes,False,0,
-544445A74,City of Los Angeles Department of Airports,Los Angeles,2022-08-24,16550000.0,Yes,Yes,False,0,
-544445A82,City of Los Angeles Department of Airports,Los Angeles,2022-08-24,19165000.0,Yes,Yes,False,0,
-544445A90,City of Los Angeles Department of Airports,Los Angeles,2022-08-24,18250000.0,Yes,Yes,False,0,
-544445B24,City of Los Angeles Department of Airports,Los Angeles,2022-08-24,17380000.0,Yes,Yes,False,0,
-544445B40,City of Los Angeles Department of Airports,Los Angeles,2022-08-24,21130000.0,Yes,Yes,False,0,
-544445B57,City of Los Angeles Department of Airports,Los Angeles,2022-08-24,22180000.0,Yes,Yes,False,0,
-544445B65,City of Los Angeles Department of Airports,Los Angeles,2022-08-24,23295000.0,Yes,Yes,False,0,
-544445B73,City of Los Angeles Department of Airports,Los Angeles,2022-08-24,24575000.0,Yes,Yes,False,0,
-544445B81,City of Los Angeles Department of Airports,Los Angeles,2022-08-24,25925000.0,Yes,Yes,False,0,
-544445B99,City of Los Angeles Department of Airports,Los Angeles,2022-08-24,27350000.0,Yes,Yes,False,0,
-544445C23,City of Los Angeles Department of Airports,Los Angeles,2022-08-24,28855000.0,Yes,Yes,False,0,
-544445C31,City of Los Angeles Department of Airports,Los Angeles,2022-08-24,30445000.0,Yes,Yes,False,0,
-544445C49,City of Los Angeles Department of Airports,Los Angeles,2022-08-24,32115000.0,Yes,Yes,False,0,
-544445C56,City of Los Angeles Department of Airports,Los Angeles,2022-08-24,33395000.0,Yes,Yes,False,0,
-544445C64,City of Los Angeles Department of Airports,Los Angeles,2022-08-24,91170000.0,Yes,Yes,False,0,
-544445C72,City of Los Angeles Department of Airports,Los Angeles,2022-08-24,50000000.0,Yes,Yes,False,0,
-544445C80,City of Los Angeles Department of Airports,Los Angeles,2022-08-24,50000000.0,Yes,Yes,False,0,
-544445C98,City of Los Angeles Department of Airports,Los Angeles,2022-08-24,10135000.0,Yes,Yes,False,0,
-544445F95,City of Los Angeles Department of Airports,Los Angeles,2022-08-24,4655000.0,Yes,Yes,False,0,
-544445G29,City of Los Angeles Department of Airports,Los Angeles,2022-08-24,4885000.0,Yes,Yes,False,0,
-544445G45,City of Los Angeles Department of Airports,Los Angeles,2022-08-24,5385000.0,Yes,Yes,False,0,
-544445G52,City of Los Angeles Department of Airports,Los Angeles,2022-08-24,5655000.0,Yes,Yes,False,0,
-544445G60,City of Los Angeles Department of Airports,Los Angeles,2022-08-24,5940000.0,Yes,Yes,False,0,
-544445G78,City of Los Angeles Department of Airports,Los Angeles,2022-08-24,6235000.0,Yes,Yes,False,0,
-544445G86,City of Los Angeles Department of Airports,Los Angeles,2022-08-24,6545000.0,Yes,Yes,False,0,
-544445G94,City of Los Angeles Department of Airports,Los Angeles,2022-08-24,6875000.0,Yes,Yes,False,0,
-544445H28,City of Los Angeles Department of Airports,Los Angeles,2022-08-24,7220000.0,Yes,Yes,False,0,
-544445H36,City of Los Angeles Department of Airports,Los Angeles,2022-08-24,7580000.0,Yes,Yes,False,0,
-544445H44,City of Los Angeles Department of Airports,Los Angeles,2022-08-24,7960000.0,Yes,Yes,False,0,
-544445H51,City of Los Angeles Department of Airports,Los Angeles,2022-08-24,8355000.0,Yes,Yes,False,0,
-544445H69,City of Los Angeles Department of Airports,Los Angeles,2022-08-24,8775000.0,Yes,Yes,False,0,
-544445H77,City of Los Angeles Department of Airports,Los Angeles,2022-08-24,9215000.0,Yes,Yes,False,0,
-544445H85,City of Los Angeles Department of Airports,Los Angeles,2022-08-24,9675000.0,Yes,Yes,False,0,
-544445H93,City of Los Angeles Department of Airports,Los Angeles,2022-08-24,10155000.0,Yes,Yes,False,0,
-544445J26,City of Los Angeles Department of Airports,Los Angeles,2022-08-24,10665000.0,Yes,Yes,False,0,
-544445J34,City of Los Angeles Department of Airports,Los Angeles,2022-08-24,65920000.0,Yes,Yes,False,0,
-544445J42,City of Los Angeles Department of Airports,Los Angeles,2022-08-24,10000000.0,Yes,Yes,False,0,
 544445W39,City of Los Angeles Department of Airports,Los Angeles,2023-04-11,8155000.0,Yes,Yes,False,0,
 544445W47,City of Los Angeles Department of Airports,Los Angeles,2023-04-11,8570000.0,Yes,Yes,False,0,
 544445W54,City of Los Angeles Department of Airports,Los Angeles,2023-04-11,9000000.0,Yes,Yes,False,0,
@@ -876,20 +786,11 @@ CUSIP,Issuer_Name,City,Issue_Date,Amt_Issued,Self_reported_Green,ESG_Assurance_P
 544445Y45,City of Los Angeles Department of Airports,Los Angeles,2023-04-11,9120000.0,Yes,Yes,False,0,
 544445Y52,City of Los Angeles Department of Airports,Los Angeles,2023-04-11,9600000.0,Yes,Yes,False,0,
 544445Y60,City of Los Angeles Department of Airports,Los Angeles,2023-04-11,10105000.0,Yes,Yes,False,0,
-544445Y78,City of Los Angeles Department of Airports,Los Angeles,2023-04-11,26210000.0,Yes,Yes,False,0,
 54444SB32,City of Los Angeles Department of Airports,Los Angeles,2022-08-24,20115000.0,Yes,Yes,False,0,
 54445G37,City of Los Angeles Department of Airports,Los Angeles,2022-08-24,5130000.0,Yes,Yes,False,0,
-544552C83,Port of Los Angeles,Los Angeles,2024-09-25,9060000.0,--,--,False,0,
-544552C91,Port of Los Angeles,Los Angeles,2024-09-25,9335000.0,--,--,False,0,
-544552D25,Port of Los Angeles,Los Angeles,2024-09-25,8330000.0,--,--,False,0,
-544552D82,Port of Los Angeles,Los Angeles,2024-08-01,9505000.0,--,--,False,0,
-544552D90,Port of Los Angeles,Los Angeles,2024-09-25,9485000.0,--,--,False,0,
-544552E24,Port of Los Angeles,Los Angeles,2024-09-25,3890000.0,--,--,False,0,
 54466DAA3,City of Los Angeles CA Wastewater System Revenue,Los Angeles,2023-09-13,280000000.0,--,No,False,0,
 5465892A9,Louisville and Jefferson County Metropolitan Sewer District,Louisville/Jefferson County metro government (balance),2023-10-26,16770000.0,--,No,False,0,
 5465892B7,Louisville and Jefferson County Metropolitan Sewer District,Louisville/Jefferson County metro government (balance),2023-10-26,17610000.0,--,No,False,0,
-5465892D3,Louisville and Jefferson County Metropolitan Sewer District,Louisville/Jefferson County metro government (balance),2023-10-26,37905000.0,--,No,False,0,
-5465892F8,Louisville and Jefferson County Metropolitan Sewer District,Louisville/Jefferson County metro government (balance),2023-10-26,41790000.0,--,No,False,0,
 5465892G6,Louisville and Jefferson County Metropolitan Sewer District,Louisville/Jefferson County metro government (balance),2022-02-01,,Yes,Yes,False,0,
 546589S94,Louisville and Jefferson County Metropolitan Sewer District,Louisville/Jefferson County metro government (balance),2022-02-01,250000.0,Yes,Yes,False,0,
 546589T28,Louisville and Jefferson County Metropolitan Sewer District,Louisville/Jefferson County metro government (balance),2022-02-01,500000.0,Yes,Yes,False,0,
@@ -916,7 +817,6 @@ CUSIP,Issuer_Name,City,Issue_Date,Amt_Issued,Self_reported_Green,ESG_Assurance_P
 546589V74,Louisville and Jefferson County Metropolitan Sewer District,Louisville/Jefferson County metro government (balance),2022-02-01,23515000.0,Yes,Yes,False,0,
 546589V82,Louisville and Jefferson County Metropolitan Sewer District,Louisville/Jefferson County metro government (balance),2022-02-01,24220000.0,Yes,Yes,False,0,
 546589V90,Louisville and Jefferson County Metropolitan Sewer District,Louisville/Jefferson County metro government (balance),2022-02-01,24860000.0,Yes,Yes,False,0,
-546589W81,Louisville and Jefferson County Metropolitan Sewer District,Louisville/Jefferson County metro government (balance),2022-10-05,226340000.0,--,No,False,0,
 546589X31,Louisville and Jefferson County Metropolitan Sewer District,Louisville/Jefferson County metro government (balance),2023-10-26,3595000.0,--,No,False,0,
 546589X49,Louisville and Jefferson County Metropolitan Sewer District,Louisville/Jefferson County metro government (balance),2023-10-26,3320000.0,--,No,False,0,
 546589X56,Louisville and Jefferson County Metropolitan Sewer District,Louisville/Jefferson County metro government (balance),2023-10-26,15905000.0,--,No,False,0,
@@ -1005,7 +905,6 @@ CUSIP,Issuer_Name,City,Issue_Date,Amt_Issued,Self_reported_Green,ESG_Assurance_P
 562361BL8,City of Manchester NH Sewer Revenue,Manchester,2024-06-01,4405000.0,Yes,--,False,0,
 562361BM6,City of Manchester NH Sewer Revenue,Manchester,2024-06-01,4625000.0,Yes,--,False,0,
 562361BN4,City of Manchester NH Sewer Revenue,Manchester,2024-10-30,4855000.0,Yes,--,False,0,
-562361BP9,City of Manchester NH Sewer Revenue,Manchester,2024-10-30,41075000.0,Yes,--,False,0,
 59225CAA6,Metropolitan Pier & Exposition Authority,Chicago,2019-05-08,530000.0,--,No,False,0,
 59225CAB4,Metropolitan Pier & Exposition Authority,Chicago,2019-05-08,630000.0,--,No,False,0,
 59225CAC2,Metropolitan Pier & Exposition Authority,Chicago,2019-05-08,735000.0,--,No,False,0,
@@ -1159,7 +1058,6 @@ CUSIP,Issuer_Name,City,Issue_Date,Amt_Issued,Self_reported_Green,ESG_Assurance_P
 630337AM5,City of Napa CA Solid Waste Revenue,Napa,2016-10-20,610000.0,Yes,No,False,0,
 630337AN3,City of Napa CA Solid Waste Revenue,Napa,2016-10-20,620000.0,Yes,No,False,0,
 65587SG5,City of Norfolk VA,Norfolk,2013-11-07,2470000.0,No,No,False,0,
-671448AA6,Village of Oak Lawn IL Regional Water System Revenue,Oak Lawn,2022-06-15,19285000.0,Yes,No,False,0,
 679468F37,City of Olathe KS Water & Sewer System Revenue,Olathe,2023-07-01,170000.0,--,No,False,0,
 679468F45,City of Olathe KS Water & Sewer System Revenue,Olathe,2023-07-11,175000.0,--,No,False,0,
 679468F52,City of Olathe KS Water & Sewer System Revenue,Olathe,2023-07-11,185000.0,--,No,False,0,
@@ -1213,7 +1111,6 @@ CUSIP,Issuer_Name,City,Issue_Date,Amt_Issued,Self_reported_Green,ESG_Assurance_P
 68825RMZ0,City of Oshkosh WI Storm Water Utility Revenue,Oshkosh,2023-06-22,315000.0,--,No,False,0,
 68825RNA4,City of Oshkosh WI Storm Water Utility Revenue,Oshkosh,2023-06-22,330000.0,--,No,False,0,
 68825RNB2,City of Oshkosh WI Storm Water Utility Revenue,Oshkosh,2023-06-22,350000.0,--,No,False,0,
-68825RND8,City of Oshkosh WI Storm Water Utility Revenue,Oshkosh,2023-06-22,745000.0,--,No,False,0,
 68825RNE6,City of Oshkosh WI Storm Water Utility Revenue,Oshkosh,2023-06-22,395000.0,--,No,False,0,
 68825RNF3,City of Oshkosh WI Storm Water Utility Revenue,Oshkosh,2023-06-22,410000.0,--,No,False,0,
 68825RNG1,City of Oshkosh WI Storm Water Utility Revenue,Oshkosh,2023-06-22,430000.0,--,No,False,0,
@@ -1301,64 +1198,6 @@ CUSIP,Issuer_Name,City,Issue_Date,Amt_Issued,Self_reported_Green,ESG_Assurance_P
 791642AA9,St Louis Clean Energy Development Board,St. Louis,2017-09-21,10105000.0,--,No,False,0,
 791642AC5,St Louis Clean Energy Development Board,St. Louis,2018-06-22,2638000.0,--,No,False,0,
 79165TRS2,St Louis Municipal Finance Corp,St. Louis,2016-05-04,3635000.0,--,No,False,0,
-793071UY5,City of St Paul MN Sewer Revenue,St. Paul,2022-09-14,180000.0,Yes,No,False,0,
-793071UZ2,City of St Paul MN Sewer Revenue,St. Paul,2022-09-14,260000.0,Yes,No,False,0,
-793071VA6,City of St Paul MN Sewer Revenue,St. Paul,2022-09-14,270000.0,Yes,No,False,0,
-793071VB4,City of St Paul MN Sewer Revenue,St. Paul,2022-09-14,285000.0,Yes,No,False,0,
-793071VC2,City of St Paul MN Sewer Revenue,St. Paul,2022-09-14,300000.0,Yes,No,False,0,
-793071VD0,City of St Paul MN Sewer Revenue,St. Paul,2022-09-14,315000.0,Yes,No,False,0,
-793071VE8,City of St Paul MN Sewer Revenue,St. Paul,2022-09-14,330000.0,Yes,No,False,0,
-793071VF5,City of St Paul MN Sewer Revenue,St. Paul,2022-09-14,345000.0,Yes,No,False,0,
-793071VG3,City of St Paul MN Sewer Revenue,St. Paul,2022-09-14,365000.0,Yes,No,False,0,
-793071VH1,City of St Paul MN Sewer Revenue,St. Paul,2022-09-14,380000.0,Yes,No,False,0,
-793071VJ7,City of St Paul MN Sewer Revenue,St. Paul,2022-09-14,400000.0,Yes,No,False,0,
-793071VK4,City of St Paul MN Sewer Revenue,St. Paul,2022-09-14,415000.0,Yes,No,False,0,
-793071VL2,City of St Paul MN Sewer Revenue,St. Paul,2022-09-14,425000.0,Yes,No,False,0,
-793071VM0,City of St Paul MN Sewer Revenue,St. Paul,2022-09-14,440000.0,Yes,No,False,0,
-793071VN8,City of St Paul MN Sewer Revenue,St. Paul,2022-09-14,450000.0,Yes,No,False,0,
-793071VP3,City of St Paul MN Sewer Revenue,St. Paul,2022-09-14,465000.0,Yes,No,False,0,
-793071VQ1,City of St Paul MN Sewer Revenue,St. Paul,2022-09-14,485000.0,Yes,No,False,0,
-793071VR9,City of St Paul MN Sewer Revenue,St. Paul,2022-09-14,500000.0,Yes,No,False,0,
-793071VS7,City of St Paul MN Sewer Revenue,St. Paul,2022-09-14,520000.0,Yes,No,False,0,
-793071VT5,City of St Paul MN Sewer Revenue,St. Paul,2022-09-14,545000.0,Yes,No,False,0,
-793071VU2,City of St Paul MN Sewer Revenue,St. Paul,2023-10-12,195000.0,Yes,Yes,False,0,
-793071VV0,City of St Paul MN Sewer Revenue,St. Paul,2023-12-12,255000.0,Yes,Yes,False,0,
-793071VW8,City of St Paul MN Sewer Revenue,St. Paul,2023-12-12,265000.0,Yes,Yes,False,0,
-793071VX6,City of St Paul MN Sewer Revenue,St. Paul,2023-10-12,280000.0,Yes,Yes,False,0,
-793071VY4,City of St Paul MN Sewer Revenue,St. Paul,2023-10-12,295000.0,Yes,Yes,False,0,
-793071VZ1,City of St Paul MN Sewer Revenue,St. Paul,2023-12-12,305000.0,Yes,Yes,False,0,
-793071WA5,City of St Paul MN Sewer Revenue,St. Paul,2023-12-12,320000.0,Yes,Yes,False,0,
-793071WB3,City of St Paul MN Sewer Revenue,St. Paul,2023-10-12,340000.0,Yes,Yes,False,0,
-793071WC1,City of St Paul MN Sewer Revenue,St. Paul,2023-10-12,355000.0,Yes,Yes,False,0,
-793071WD9,City of St Paul MN Sewer Revenue,St. Paul,2023-10-12,375000.0,Yes,Yes,False,0,
-793071WE7,City of St Paul MN Sewer Revenue,St. Paul,2023-12-12,390000.0,Yes,Yes,False,0,
-793071WF4,City of St Paul MN Sewer Revenue,St. Paul,2023-12-12,410000.0,Yes,Yes,False,0,
-793071WG2,City of St Paul MN Sewer Revenue,St. Paul,2023-10-12,430000.0,Yes,Yes,False,0,
-793071WK3,City of St Paul MN Sewer Revenue,St. Paul,2023-10-12,1415000.0,Yes,Yes,False,0,
-793071WL1,City of St Paul MN Sewer Revenue,St. Paul,2023-12-12,510000.0,Yes,Yes,False,0,
-793071WM9,City of St Paul MN Sewer Revenue,St. Paul,2023-10-12,530000.0,Yes,Yes,False,0,
-793071WN7,City of St Paul MN Sewer Revenue,St. Paul,2023-10-12,550000.0,Yes,Yes,False,0,
-793071WP2,City of St Paul MN Sewer Revenue,St. Paul,2023-10-12,575000.0,Yes,Yes,False,0,
-793071WQ0,City of St Paul MN Sewer Revenue,St. Paul,2024-09-17,200000.0,Yes,No,False,0,
-793071WR8,City of St Paul MN Sewer Revenue,St. Paul,2024-09-17,285000.0,Yes,No,False,0,
-793071WS6,City of St Paul MN Sewer Revenue,St. Paul,2024-09-17,300000.0,Yes,No,False,0,
-793071WT4,City of St Paul MN Sewer Revenue,St. Paul,2024-09-17,315000.0,Yes,No,False,0,
-793071WU1,City of St Paul MN Sewer Revenue,St. Paul,2024-09-17,330000.0,Yes,No,False,0,
-793071WV9,City of St Paul MN Sewer Revenue,St. Paul,2024-09-17,350000.0,Yes,No,False,0,
-793071WW7,City of St Paul MN Sewer Revenue,St. Paul,2024-09-17,365000.0,Yes,No,False,0,
-793071WX5,City of St Paul MN Sewer Revenue,St. Paul,2024-09-17,385000.0,Yes,No,False,0,
-793071WY3,City of St Paul MN Sewer Revenue,St. Paul,2024-09-17,400000.0,Yes,No,False,0,
-793071WZ0,City of St Paul MN Sewer Revenue,St. Paul,2024-09-17,425000.0,Yes,No,False,0,
-793071XA4,City of St Paul MN Sewer Revenue,St. Paul,2024-09-17,440000.0,Yes,No,False,0,
-793071XB2,City of St Paul MN Sewer Revenue,St. Paul,2024-09-17,455000.0,Yes,No,False,0,
-793071XC0,City of St Paul MN Sewer Revenue,St. Paul,2024-09-17,475000.0,Yes,No,False,0,
-793071XD8,City of St Paul MN Sewer Revenue,St. Paul,2024-09-17,495000.0,Yes,No,False,0,
-793071XE6,City of St Paul MN Sewer Revenue,St. Paul,2024-09-17,515000.0,Yes,No,False,0,
-793071XF3,City of St Paul MN Sewer Revenue,St. Paul,2024-09-17,535000.0,Yes,No,False,0,
-793071XG1,City of St Paul MN Sewer Revenue,St. Paul,2024-09-17,555000.0,Yes,No,False,0,
-793071XH9,City of St Paul MN Sewer Revenue,St. Paul,2024-09-17,580000.0,Yes,No,False,0,
-793071XJ5,City of St Paul MN Sewer Revenue,St. Paul,2024-09-17,600000.0,Yes,No,False,0,
-793071XK2,City of St Paul MN Sewer Revenue,St. Paul,2024-09-17,625000.0,Yes,No,False,0,
 797646W93,City & County of San Francisco CA,San Francisco,2018-04-03,30225000.0,--,No,False,0,
 797646X27,City & County of San Francisco CA,San Francisco,2018-04-03,1630000.0,--,No,False,0,
 797646X35,City & County of San Francisco CA,San Francisco,2018-04-03,1710000.0,--,No,False,0,
@@ -1441,9 +1280,6 @@ CUSIP,Issuer_Name,City,Issue_Date,Amt_Issued,Self_reported_Green,ESG_Assurance_P
 79765R4W6,City of San Francisco CA Public Utilities Commission Water Revenue,San Francisco,2020-01-09,31095000.0,Yes,Yes,False,0,
 79765R4X4,City of San Francisco CA Public Utilities Commission Water Revenue,San Francisco,2020-01-09,4055000.0,Yes,Yes,False,0,
 79765R4Y2,City of San Francisco CA Public Utilities Commission Water Revenue,San Francisco,2020-01-09,4180000.0,Yes,Yes,False,0,
-79765R5G0,City of San Francisco CA Public Utilities Commission Water Revenue,San Francisco,2020-09-23,22175000.0,Yes,Yes,False,0,
-79765R5H8,City of San Francisco CA Public Utilities Commission Water Revenue,San Francisco,2020-09-23,25000000.0,Yes,Yes,False,0,
-79765R5J4,City of San Francisco CA Public Utilities Commission Water Revenue,San Francisco,2020-09-23,103720000.0,Yes,No,False,0,
 79765RM89,City of San Francisco CA Public Utilities Commission Water Revenue,San Francisco,2016-12-14,5465000.0,Yes,Yes,False,0,
 79765RM97,City of San Francisco CA Public Utilities Commission Water Revenue,San Francisco,2016-12-14,5525000.0,Yes,Yes,False,0,
 79765RN21,City of San Francisco CA Public Utilities Commission Water Revenue,San Francisco,2016-12-14,5605000.0,Yes,Yes,False,0,
@@ -1558,8 +1394,6 @@ CUSIP,Issuer_Name,City,Issue_Date,Amt_Issued,Self_reported_Green,ESG_Assurance_P
 79768HKK3,San Francisco City & County Public Utilities Commission Wastewater Revenue,San Francisco,2024-07-31,19155000.0,Yes,Yes,False,0,
 79768HKL1,San Francisco City & County Public Utilities Commission Wastewater Revenue,San Francisco,2024-07-31,17550000.0,Yes,Yes,False,0,
 79768HKM9,San Francisco City & County Public Utilities Commission Wastewater Revenue,San Francisco,2024-07-31,15690000.0,Yes,Yes,False,0,
-79768HKN7,San Francisco City & County Public Utilities Commission Wastewater Revenue,San Francisco,2024-07-31,72575000.0,Yes,Yes,False,0,
-79768HKP2,San Francisco City & County Public Utilities Commission Wastewater Revenue,San Francisco,2024-07-31,247285000.0,Yes,Yes,False,0,
 79771FAA5,City of San Francisco CA Public Utilities Commission Water Revenue,San Francisco,2020-10-21,300005000.0,Yes,Yes,False,0,
 79771FAB3,City of San Francisco CA Public Utilities Commission Water Revenue,San Francisco,2020-10-21,41430000.0,Yes,Yes,False,0,
 79771FCC9,City of San Francisco CA Public Utilities Commission Water Revenue,San Francisco,2023-07-27,7150000.0,--,No,False,0,
@@ -1578,8 +1412,6 @@ CUSIP,Issuer_Name,City,Issue_Date,Amt_Issued,Self_reported_Green,ESG_Assurance_P
 79771FCR6,City of San Francisco CA Public Utilities Commission Water Revenue,San Francisco,2023-07-27,13700000.0,--,No,False,0,
 79771FCS4,City of San Francisco CA Public Utilities Commission Water Revenue,San Francisco,2023-07-27,14400000.0,--,No,False,0,
 79771FCT2,City of San Francisco CA Public Utilities Commission Water Revenue,San Francisco,2023-07-27,15140000.0,--,No,False,0,
-79771FCU9,City of San Francisco CA Public Utilities Commission Water Revenue,San Francisco,2023-07-27,88745000.0,--,No,False,0,
-79771FCV7,City of San Francisco CA Public Utilities Commission Water Revenue,San Francisco,2023-07-27,89830000.0,--,No,False,0,
 79771FCW5,City of San Francisco CA Public Utilities Commission Water Revenue,San Francisco,2023-07-27,1320000.0,--,No,False,0,
 79771FCX3,City of San Francisco CA Public Utilities Commission Water Revenue,San Francisco,2023-07-27,1390000.0,--,No,False,0,
 79771FCY1,City of San Francisco CA Public Utilities Commission Water Revenue,San Francisco,2023-07-27,1460000.0,--,No,False,0,
@@ -1596,8 +1428,6 @@ CUSIP,Issuer_Name,City,Issue_Date,Amt_Issued,Self_reported_Green,ESG_Assurance_P
 79771FDK0,City of San Francisco CA Public Utilities Commission Water Revenue,San Francisco,2023-07-27,2530000.0,--,No,False,0,
 79771FDL8,City of San Francisco CA Public Utilities Commission Water Revenue,San Francisco,2023-07-27,2660000.0,--,No,False,0,
 79771FDM6,City of San Francisco CA Public Utilities Commission Water Revenue,San Francisco,2023-07-27,2795000.0,--,No,False,0,
-79771FDN4,City of San Francisco CA Public Utilities Commission Water Revenue,San Francisco,2023-07-27,16390000.0,--,No,False,0,
-79771FDP9,City of San Francisco CA Public Utilities Commission Water Revenue,San Francisco,2023-07-27,16585000.0,--,No,False,0,
 79771FDQ7,City of San Francisco CA Public Utilities Commission Water Revenue,San Francisco,2023-08-10,12425000.0,Yes,Yes,False,0,
 79771FDR5,City of San Francisco CA Public Utilities Commission Water Revenue,San Francisco,2023-08-10,12100000.0,Yes,Yes,False,0,
 79771FDS3,City of San Francisco CA Public Utilities Commission Water Revenue,San Francisco,2023-08-10,7225000.0,Yes,Yes,False,0,
@@ -1759,8 +1589,6 @@ CUSIP,Issuer_Name,City,Issue_Date,Amt_Issued,Self_reported_Green,ESG_Assurance_P
 79772EEQ8,City & County of San Francisco CA Community Facilities District No 2014-1,San Francisco,2022-12-15,1210000.0,Yes,Yes,False,0,
 79772EER6,City & County of San Francisco CA Community Facilities District No 2014-1,San Francisco,2022-12-15,1355000.0,Yes,Yes,False,0,
 79772EES4,City & County of San Francisco CA Community Facilities District No 2014-1,San Francisco,2022-12-15,1500000.0,Yes,Yes,False,0,
-79772EET2,City & County of San Francisco CA Community Facilities District No 2014-1,San Francisco,2022-12-15,10335000.0,Yes,Yes,False,0,
-79772EEU9,City & County of San Francisco CA Community Facilities District No 2014-1,San Francisco,2022-12-15,26085000.0,Yes,No,False,0,
 79816NAC1,San Jose Financing Authority,San Jose,2022-12-15,3950000.0,Yes,Yes,False,0,
 79816NAD9,San Jose Financing Authority,San Jose,2022-12-15,4155000.0,Yes,Yes,False,0,
 79816NAE7,San Jose Financing Authority,San Jose,2022-12-15,4365000.0,Yes,Yes,False,0,
@@ -1820,33 +1648,6 @@ CUSIP,Issuer_Name,City,Issue_Date,Amt_Issued,Self_reported_Green,ESG_Assurance_P
 801517AZ6,City of Santa Clara CA Sewer Revenue,Santa Clara,2023-10-24,2070000.0,Yes,Yes,False,0,
 801517BA0,City of Santa Clara CA Sewer Revenue,Santa Clara,2023-10-24,2160000.0,Yes,Yes,False,0,
 801517BB8,City of Santa Clara CA Sewer Revenue,Santa Clara,2023-10-24,2260000.0,Yes,Yes,False,0,
-812728WV1,City of Seattle WA Water System Revenue,Seattle,2022-07-28,900000.0,Yes,Yes,False,0,
-812728WW9,City of Seattle WA Water System Revenue,Seattle,2022-07-28,17305000.0,Yes,Yes,False,0,
-812728WX7,City of Seattle WA Water System Revenue,Seattle,2022-07-28,8890000.0,Yes,Yes,False,0,
-812728WY5,City of Seattle WA Water System Revenue,Seattle,2022-07-28,9330000.0,Yes,Yes,False,0,
-812728WZ2,City of Seattle WA Water System Revenue,Seattle,2022-07-28,740000.0,Yes,Yes,False,0,
-812728XA6,City of Seattle WA Water System Revenue,Seattle,2022-07-28,1255000.0,Yes,Yes,False,0,
-812728XB4,City of Seattle WA Water System Revenue,Seattle,2022-07-28,820000.0,Yes,Yes,False,0,
-812728XC2,City of Seattle WA Water System Revenue,Seattle,2022-07-28,8695000.0,Yes,Yes,False,0,
-812728XD0,City of Seattle WA Water System Revenue,Seattle,2022-07-28,9660000.0,Yes,Yes,False,0,
-812728XE8,City of Seattle WA Water System Revenue,Seattle,2022-07-28,925000.0,Yes,Yes,False,0,
-812728XF5,City of Seattle WA Water System Revenue,Seattle,2022-07-28,975000.0,Yes,Yes,False,0,
-812728XG3,City of Seattle WA Water System Revenue,Seattle,2022-07-28,1020000.0,Yes,Yes,False,0,
-812728XH1,City of Seattle WA Water System Revenue,Seattle,2022-07-28,1070000.0,Yes,Yes,False,0,
-812728XJ7,City of Seattle WA Water System Revenue,Seattle,2022-07-28,1125000.0,Yes,Yes,False,0,
-812728XK4,City of Seattle WA Water System Revenue,Seattle,2022-07-28,1180000.0,Yes,Yes,False,0,
-812728XL2,City of Seattle WA Water System Revenue,Seattle,2022-07-28,1240000.0,Yes,Yes,False,0,
-812728XM0,City of Seattle WA Water System Revenue,Seattle,2022-07-28,1305000.0,Yes,Yes,False,0,
-812728XN8,City of Seattle WA Water System Revenue,Seattle,2022-07-28,1370000.0,Yes,Yes,False,0,
-812728XP3,City of Seattle WA Water System Revenue,Seattle,2022-07-28,1435000.0,Yes,Yes,False,0,
-812728XQ1,City of Seattle WA Water System Revenue,Seattle,2022-07-28,1510000.0,Yes,Yes,False,0,
-812728XR9,City of Seattle WA Water System Revenue,Seattle,2022-07-28,1585000.0,Yes,Yes,False,0,
-812728XS7,City of Seattle WA Water System Revenue,Seattle,2022-07-28,1665000.0,Yes,Yes,False,0,
-812728XT5,City of Seattle WA Water System Revenue,Seattle,2022-07-28,1745000.0,Yes,Yes,False,0,
-812728XU2,City of Seattle WA Water System Revenue,Seattle,2022-07-28,1835000.0,Yes,Yes,False,0,
-812728XV0,City of Seattle WA Water System Revenue,Seattle,2022-07-28,1925000.0,Yes,Yes,False,0,
-812728XX6,City of Seattle WA Water System Revenue,Seattle,2022-07-28,4145000.0,Yes,Yes,False,0,
-812728YB3,City of Seattle WA Water System Revenue,Seattle,2022-07-28,9610000.0,Yes,Yes,False,0,
 849103ACO,City of Spokane WA Water & Wastewater Revenue,Spokane,2014-12-02,6215000.0,Yes,Yes,False,0,
 849103ALO,City of Spokane WA Water & Wastewater Revenue,Spokane,2014-12-02,9185000.0,Yes,Yes,False,0,
 851103SP7,City of Springfield OH,Springfield,2019-03-27,150000.0,Yes,Yes,False,0,
@@ -1906,8 +1707,6 @@ CUSIP,Issuer_Name,City,Issue_Date,Amt_Issued,Self_reported_Green,ESG_Assurance_P
 873519QJ4,City of Tacoma WA Electric System Revenue,Tacoma,2024-02-15,4180000.0,Yes,Yes,False,0,
 873519QK1,City of Tacoma WA Electric System Revenue,Tacoma,2024-02-15,4390000.0,Yes,Yes,False,0,
 873519QL9,City of Tacoma WA Electric System Revenue,Tacoma,2024-02-15,4610000.0,Yes,Yes,False,0,
-873519QM7,City of Tacoma WA Electric System Revenue,Tacoma,2024-02-15,26750000.0,Yes,Yes,False,0,
-873519QN5,City of Tacoma WA Electric System Revenue,Tacoma,2024-02-15,34145000.0,Yes,Yes,False,0,
 873519QX3,City of Tacoma WA Electric System Revenue,Tacoma,2025-03-07,7345000.0,Yes,Yes,False,0,
 873519QY1,City of Tacoma WA Electric System Revenue,Tacoma,2025-03-07,7715000.0,Yes,Yes,False,0,
 873519QZ8,City of Tacoma WA Electric System Revenue,Tacoma,2025-03-07,8100000.0,Yes,Yes,False,0,
@@ -2136,6 +1935,28 @@ CUSIP,Issuer_Name,City,Issue_Date,Amt_Issued,Self_reported_Green,ESG_Assurance_P
 04780MJ59,City of Atlanta GA Department of Aviation,Atlanta,2023-08-31,8685000.0,Yes,Yes,True,1,P11693706-P11302614-P11733473.txt
 04780MJ67,City of Atlanta GA Department of Aviation,Atlanta,2023-08-31,28735000.0,Yes,Yes,True,1,P11693706-P11302614-P11733473.txt
 04780MJ75,City of Atlanta GA Department of Aviation,Atlanta,2023-08-31,58315000.0,Yes,Yes,True,1,P11693706-P11302614-P11733473.txt
+04780MS59,City of Atlanta GA Department of Aviation,Atlanta,2024-08-22,2980000.0,Yes,Yes,True,1,P21837036-P21408019-P21850316.txt
+04780MS67,City of Atlanta GA Department of Aviation,Atlanta,2024-08-22,3620000.0,Yes,Yes,True,1,P21837036-P21408019-P21850316.txt
+04780MS75,City of Atlanta GA Department of Aviation,Atlanta,2024-08-22,3800000.0,Yes,Yes,True,1,P21837036-P21408019-P21850316.txt
+04780MS83,City of Atlanta GA Department of Aviation,Atlanta,2024-08-22,3990000.0,Yes,Yes,True,1,P21837036-P21408019-P21850316.txt
+04780MS91,City of Atlanta GA Department of Aviation,Atlanta,2024-08-22,4190000.0,Yes,Yes,True,1,P21837036-P21408019-P21850316.txt
+04780MT25,City of Atlanta GA Department of Aviation,Atlanta,2024-08-22,4400000.0,Yes,Yes,True,1,P21837036-P21408019-P21850316.txt
+04780MT33,City of Atlanta GA Department of Aviation,Atlanta,2024-08-22,4620000.0,Yes,Yes,True,1,P21837036-P21408019-P21850316.txt
+04780MT41,City of Atlanta GA Department of Aviation,Atlanta,2024-08-22,4850000.0,Yes,Yes,True,1,P21837036-P21408019-P21850316.txt
+04780MT58,City of Atlanta GA Department of Aviation,Atlanta,2024-08-22,5095000.0,Yes,Yes,True,1,P21837036-P21408019-P21850316.txt
+04780MT66,City of Atlanta GA Department of Aviation,Atlanta,2024-08-22,5345000.0,Yes,Yes,True,1,P21837036-P21408019-P21850316.txt
+04780MT74,City of Atlanta GA Department of Aviation,Atlanta,2024-08-22,5615000.0,Yes,Yes,True,1,P21837036-P21408019-P21850316.txt
+04780MT82,City of Atlanta GA Department of Aviation,Atlanta,2024-08-22,5895000.0,Yes,Yes,True,1,P21837036-P21408019-P21850316.txt
+04780MT90,City of Atlanta GA Department of Aviation,Atlanta,2024-08-22,6190000.0,Yes,Yes,True,1,P21837036-P21408019-P21850316.txt
+04780MU23,City of Atlanta GA Department of Aviation,Atlanta,2024-08-22,6500000.0,Yes,Yes,True,1,P21837036-P21408019-P21850316.txt
+04780MU31,City of Atlanta GA Department of Aviation,Atlanta,2024-08-22,6825000.0,Yes,Yes,True,1,P21837036-P21408019-P21850316.txt
+04780MU49,City of Atlanta GA Department of Aviation,Atlanta,2024-08-22,7165000.0,Yes,Yes,True,1,P21837036-P21408019-P21850316.txt
+04780MU56,City of Atlanta GA Department of Aviation,Atlanta,2024-08-22,7525000.0,Yes,Yes,True,1,P21837036-P21408019-P21850316.txt
+04780MU64,City of Atlanta GA Department of Aviation,Atlanta,2024-08-22,7900000.0,Yes,Yes,True,1,P21837036-P21408019-P21850316.txt
+04780MU72,City of Atlanta GA Department of Aviation,Atlanta,2024-08-22,8295000.0,Yes,Yes,True,1,P21837036-P21408019-P21850316.txt
+04780MU80,City of Atlanta GA Department of Aviation,Atlanta,2024-08-22,8710000.0,Yes,Yes,True,1,P21837036-P21408019-P21850316.txt
+04780MU98,City of Atlanta GA Department of Aviation,Atlanta,2024-08-22,50535000.0,Yes,Yes,True,1,P21837036-P21408019-P21850316.txt
+04780MV22,City of Atlanta GA Department of Aviation,Atlanta,2024-08-22,64500000.0,Yes,Yes,True,1,P21837036-P21408019-P21850316.txt
 04780TEH3,City of Atlanta GA Airport Passenger Facility Charge,Atlanta,2023-08-31,38960000.0,Yes,Yes,True,1,P11693706-P11302614-P11733473.txt
 04780TEJ9,City of Atlanta GA Airport Passenger Facility Charge,Atlanta,2023-08-31,11500000.0,Yes,Yes,True,1,P11693706-P11302614-P11733473.txt
 04780TEK6,City of Atlanta GA Airport Passenger Facility Charge,Atlanta,2023-08-31,3000000.0,Yes,Yes,True,1,P11693706-P11302614-P11733473.txt
@@ -2261,6 +2082,8 @@ CUSIP,Issuer_Name,City,Issue_Date,Amt_Issued,Self_reported_Green,ESG_Assurance_P
 084113WU9,City of Berkeley CA,Berkeley,2020-06-03,750000.0,Yes,Yes,True,1,SS1383167-SS1076813-SS1484278.txt
 084113WV7,City of Berkeley CA,Berkeley,2020-06-03,770000.0,Yes,Yes,True,1,SS1383167-SS1076813-SS1484278.txt
 084113WW5,City of Berkeley CA,Berkeley,2020-06-03,795000.0,Yes,Yes,True,1,SS1383167-SS1076813-SS1484278.txt
+09747AAQ9,City of Boise City ID Water Renewal Revenue,Boise,2022-06-30,21285000.0,--,No,True,1,P11610223-P11241605-P11665208.txt
+09747AAR7,City of Boise City ID Water Renewal Revenue,Boise,2022-06-30,21185000.0,--,No,True,1,P11610223-P11241605-P11665208.txt
 100853A83,City of Boston MA,Boston,2020-12-30,6000000.0,Yes,Yes,True,1,P31402850-P31090850-P31499586.txt
 100853A91,City of Boston MA,Boston,2020-12-30,6000000.0,Yes,Yes,True,1,P31402850-P31090850-P31499586.txt
 100853B25,City of Boston MA,Boston,2020-12-30,6000000.0,Yes,Yes,True,1,P31402850-P31090850-P31499586.txt
@@ -2343,6 +2166,28 @@ CUSIP,Issuer_Name,City,Issue_Date,Amt_Issued,Self_reported_Green,ESG_Assurance_P
 186423AV1,City of Cleveland OH Water Pollution Control,Cleveland,2016-04-14,1310000.0,Yes,No,True,1,ES781071-ES614229-ES1009918.txt
 186423AW9,City of Cleveland OH Water Pollution Control,Cleveland,2016-04-14,7595000.0,Yes,No,True,1,ES781071-ES614229-ES1009918.txt
 186423AX7,City of Cleveland OH Water Pollution Control,Cleveland,2016-04-14,7565000.0,Yes,No,True,1,ES781071-ES614229-ES1009918.txt
+186423AY5,City of Cleveland OH Water Pollution Control,Cleveland,2024-08-15,100000.0,--,No,True,1,P21832967-P11362993-P21846817.txt
+186423AZ2,City of Cleveland OH Water Pollution Control,Cleveland,2024-08-15,475000.0,--,No,True,1,P21832967-P11362993-P21846817.txt
+186423BA6,City of Cleveland OH Water Pollution Control,Cleveland,2024-08-15,500000.0,--,No,True,1,P21832967-P11362993-P21846817.txt
+186423BB4,City of Cleveland OH Water Pollution Control,Cleveland,2024-08-15,525000.0,--,No,True,1,P21832967-P11362993-P21846817.txt
+186423BC2,City of Cleveland OH Water Pollution Control,Cleveland,2024-08-15,550000.0,--,No,True,1,P21832967-P11362993-P21846817.txt
+186423BD0,City of Cleveland OH Water Pollution Control,Cleveland,2024-08-15,575000.0,--,No,True,1,P21832967-P11362993-P21846817.txt
+186423BE8,City of Cleveland OH Water Pollution Control,Cleveland,2024-08-15,605000.0,--,No,True,1,P21832967-P11362993-P21846817.txt
+186423BF5,City of Cleveland OH Water Pollution Control,Cleveland,2024-08-15,635000.0,--,No,True,1,P21832967-P11362993-P21846817.txt
+186423BG3,City of Cleveland OH Water Pollution Control,Cleveland,2024-08-15,670000.0,--,No,True,1,P21832967-P11362993-P21846817.txt
+186423BH1,City of Cleveland OH Water Pollution Control,Cleveland,2024-08-15,700000.0,--,No,True,1,P21832967-P11362993-P21846817.txt
+186423BJ7,City of Cleveland OH Water Pollution Control,Cleveland,2024-08-15,735000.0,--,No,True,1,P21832967-P11362993-P21846817.txt
+186423BK4,City of Cleveland OH Water Pollution Control,Cleveland,2024-08-15,775000.0,--,No,True,1,P21832967-P11362993-P21846817.txt
+186423BL2,City of Cleveland OH Water Pollution Control,Cleveland,2024-08-15,810000.0,--,No,True,1,P21832967-P11362993-P21846817.txt
+186423BM0,City of Cleveland OH Water Pollution Control,Cleveland,2024-08-15,850000.0,--,No,True,1,P21832967-P11362993-P21846817.txt
+186423BN8,City of Cleveland OH Water Pollution Control,Cleveland,2024-08-15,895000.0,--,No,True,1,P21832967-P11362993-P21846817.txt
+186423BP3,City of Cleveland OH Water Pollution Control,Cleveland,2024-08-15,940000.0,--,No,True,1,P21832967-P11362993-P21846817.txt
+186423BQ1,City of Cleveland OH Water Pollution Control,Cleveland,2024-08-15,985000.0,--,No,True,1,P21832967-P11362993-P21846817.txt
+186423BR9,City of Cleveland OH Water Pollution Control,Cleveland,2024-08-15,1035000.0,--,No,True,1,P21832967-P11362993-P21846817.txt
+186423BS7,City of Cleveland OH Water Pollution Control,Cleveland,2024-08-15,1090000.0,--,No,True,1,P21832967-P11362993-P21846817.txt
+186423BT5,City of Cleveland OH Water Pollution Control,Cleveland,2024-08-15,1140000.0,--,No,True,1,P21832967-P11362993-P21846817.txt
+186423BU2,City of Cleveland OH Water Pollution Control,Cleveland,2024-08-15,6630000.0,--,No,True,1,P21832967-P11362993-P21846817.txt
+186423BV0,City of Cleveland OH Water Pollution Control,Cleveland,2024-08-15,8455000.0,--,No,True,1,P21832967-P11362993-P21846817.txt
 198502AA4,City of Columbia SC Stormwater System Revenue,Columbia,2018-12-19,430000.0,Yes,Yes,True,1,ER1175794-ER919055-ER1319618.txt
 198502AB2,City of Columbia SC Stormwater System Revenue,Columbia,2018-12-19,660000.0,Yes,Yes,True,1,ER1175794-ER919055-ER1319618.txt
 198502AC0,City of Columbia SC Stormwater System Revenue,Columbia,2018-12-19,685000.0,Yes,Yes,True,1,ER1175794-ER919055-ER1319618.txt
@@ -2507,6 +2352,10 @@ CUSIP,Issuer_Name,City,Issue_Date,Amt_Issued,Self_reported_Green,ESG_Assurance_P
 4387012X1,City & County Honolulu HI Wastewater System Revenue,honolulu,2022-05-25,34370000.0,Yes,No,True,1,P11603229-P11236637-P11659652.txt
 4387012Y9,City & County Honolulu HI Wastewater System Revenue,honolulu,2022-05-25,26005000.0,Yes,No,True,1,P11603229-P11236637-P11659652.txt
 4387012Z6,City & County Honolulu HI Wastewater System Revenue,honolulu,2022-05-25,32850000.0,Yes,No,True,1,P11603229-P11236637-P11659652.txt
+4387013S1,City & County Honolulu HI Wastewater System Revenue,honolulu,2023-09-27,25000000.0,Yes,No,True,1,P11699065-P11306477-P11737668.txt
+4387013T9,City & County Honolulu HI Wastewater System Revenue,honolulu,2023-09-27,19660000.0,Yes,No,True,1,P11699065-P11306477-P11737668.txt
+4387013U6,City & County Honolulu HI Wastewater System Revenue,honolulu,2023-09-27,31925000.0,Yes,No,True,1,P11699065-P11306477-P11737668.txt
+4387013V4,City & County Honolulu HI Wastewater System Revenue,honolulu,2023-09-27,25000000.0,Yes,No,True,1,P11699065-P11306477-P11737668.txt
 4387015F7,City & County Honolulu HI Wastewater System Revenue,honolulu,2025-09-24,29210000.0,No,,True,1,P21964955-P21499218-P21951692.txt
 4387015G5,City & County Honolulu HI Wastewater System Revenue,honolulu,2025-09-24,87960000.0,No,,True,1,P21964955-P21499218-P21951692.txt
 439241AB6,Hoover Industrial Development Board,Hoover,2020-11-24,63400000.0,Yes,No,True,1,P11441870-P11118127-P11528507.txt
@@ -2632,6 +2481,47 @@ CUSIP,Issuer_Name,City,Issue_Date,Amt_Issued,Self_reported_Green,ESG_Assurance_P
 5444456H7,City of Los Angeles Department of Airports,Los Angeles,2025-04-22,130070000.0,Yes,Yes,True,1,P31462694-P11410516-P11852986.txt
 5444456J3,City of Los Angeles Department of Airports,Los Angeles,2025-04-22,32000000.0,Yes,Yes,True,1,P31462694-P11410516-P11852986.txt
 5444456K0,City of Los Angeles Department of Airports,Los Angeles,2025-04-22,188255000.0,Yes,Yes,True,1,P31462694-P11410516-P11852986.txt
+544445A41,City of Los Angeles Department of Airports,Los Angeles,2022-08-24,10010000.0,Yes,Yes,True,1,P21608101-P21238032-P21661618.txt
+544445A58,City of Los Angeles Department of Airports,Los Angeles,2022-08-24,15015000.0,Yes,Yes,True,1,P21608101-P21238032-P21661618.txt
+544445A66,City of Los Angeles Department of Airports,Los Angeles,2022-08-24,15765000.0,Yes,Yes,True,1,P21608101-P21238032-P21661618.txt
+544445A74,City of Los Angeles Department of Airports,Los Angeles,2022-08-24,16550000.0,Yes,Yes,True,1,P21608101-P21238032-P21661618.txt
+544445A82,City of Los Angeles Department of Airports,Los Angeles,2022-08-24,19165000.0,Yes,Yes,True,1,P21608101-P21238032-P21661618.txt
+544445A90,City of Los Angeles Department of Airports,Los Angeles,2022-08-24,18250000.0,Yes,Yes,True,1,P21608101-P21238032-P21661618.txt
+544445B24,City of Los Angeles Department of Airports,Los Angeles,2022-08-24,17380000.0,Yes,Yes,True,1,P21608101-P21238032-P21661618.txt
+544445B40,City of Los Angeles Department of Airports,Los Angeles,2022-08-24,21130000.0,Yes,Yes,True,1,P21608101-P21238032-P21661618.txt
+544445B57,City of Los Angeles Department of Airports,Los Angeles,2022-08-24,22180000.0,Yes,Yes,True,1,P21608101-P21238032-P21661618.txt
+544445B65,City of Los Angeles Department of Airports,Los Angeles,2022-08-24,23295000.0,Yes,Yes,True,1,P21608101-P21238032-P21661618.txt
+544445B73,City of Los Angeles Department of Airports,Los Angeles,2022-08-24,24575000.0,Yes,Yes,True,1,P21608101-P21238032-P21661618.txt
+544445B81,City of Los Angeles Department of Airports,Los Angeles,2022-08-24,25925000.0,Yes,Yes,True,1,P21608101-P21238032-P21661618.txt
+544445B99,City of Los Angeles Department of Airports,Los Angeles,2022-08-24,27350000.0,Yes,Yes,True,1,P21608101-P21238032-P21661618.txt
+544445C23,City of Los Angeles Department of Airports,Los Angeles,2022-08-24,28855000.0,Yes,Yes,True,1,P21608101-P21238032-P21661618.txt
+544445C31,City of Los Angeles Department of Airports,Los Angeles,2022-08-24,30445000.0,Yes,Yes,True,1,P21608101-P21238032-P21661618.txt
+544445C49,City of Los Angeles Department of Airports,Los Angeles,2022-08-24,32115000.0,Yes,Yes,True,1,P21608101-P21238032-P21661618.txt
+544445C56,City of Los Angeles Department of Airports,Los Angeles,2022-08-24,33395000.0,Yes,Yes,True,1,P21608101-P21238032-P21661618.txt
+544445C64,City of Los Angeles Department of Airports,Los Angeles,2022-08-24,91170000.0,Yes,Yes,True,1,P21608101-P21238032-P21661618.txt
+544445C72,City of Los Angeles Department of Airports,Los Angeles,2022-08-24,50000000.0,Yes,Yes,True,1,P21608101-P21238032-P21661618.txt
+544445C80,City of Los Angeles Department of Airports,Los Angeles,2022-08-24,50000000.0,Yes,Yes,True,1,P21608101-P21238032-P21661618.txt
+544445C98,City of Los Angeles Department of Airports,Los Angeles,2022-08-24,10135000.0,Yes,Yes,True,1,P21608101-P21238032-P21661618.txt
+544445F95,City of Los Angeles Department of Airports,Los Angeles,2022-08-24,4655000.0,Yes,Yes,True,1,P21608101-P21238032-P21661618.txt
+544445G29,City of Los Angeles Department of Airports,Los Angeles,2022-08-24,4885000.0,Yes,Yes,True,1,P21608101-P21238032-P21661618.txt
+544445G45,City of Los Angeles Department of Airports,Los Angeles,2022-08-24,5385000.0,Yes,Yes,True,1,P21608101-P21238032-P21661618.txt
+544445G52,City of Los Angeles Department of Airports,Los Angeles,2022-08-24,5655000.0,Yes,Yes,True,1,P21608101-P21238032-P21661618.txt
+544445G60,City of Los Angeles Department of Airports,Los Angeles,2022-08-24,5940000.0,Yes,Yes,True,1,P21608101-P21238032-P21661618.txt
+544445G78,City of Los Angeles Department of Airports,Los Angeles,2022-08-24,6235000.0,Yes,Yes,True,1,P21608101-P21238032-P21661618.txt
+544445G86,City of Los Angeles Department of Airports,Los Angeles,2022-08-24,6545000.0,Yes,Yes,True,1,P21608101-P21238032-P21661618.txt
+544445G94,City of Los Angeles Department of Airports,Los Angeles,2022-08-24,6875000.0,Yes,Yes,True,1,P21608101-P21238032-P21661618.txt
+544445H28,City of Los Angeles Department of Airports,Los Angeles,2022-08-24,7220000.0,Yes,Yes,True,1,P21608101-P21238032-P21661618.txt
+544445H36,City of Los Angeles Department of Airports,Los Angeles,2022-08-24,7580000.0,Yes,Yes,True,1,P21608101-P21238032-P21661618.txt
+544445H44,City of Los Angeles Department of Airports,Los Angeles,2022-08-24,7960000.0,Yes,Yes,True,1,P21608101-P21238032-P21661618.txt
+544445H51,City of Los Angeles Department of Airports,Los Angeles,2022-08-24,8355000.0,Yes,Yes,True,1,P21608101-P21238032-P21661618.txt
+544445H69,City of Los Angeles Department of Airports,Los Angeles,2022-08-24,8775000.0,Yes,Yes,True,1,P21608101-P21238032-P21661618.txt
+544445H77,City of Los Angeles Department of Airports,Los Angeles,2022-08-24,9215000.0,Yes,Yes,True,1,P21608101-P21238032-P21661618.txt
+544445H85,City of Los Angeles Department of Airports,Los Angeles,2022-08-24,9675000.0,Yes,Yes,True,1,P21608101-P21238032-P21661618.txt
+544445H93,City of Los Angeles Department of Airports,Los Angeles,2022-08-24,10155000.0,Yes,Yes,True,1,P21608101-P21238032-P21661618.txt
+544445J26,City of Los Angeles Department of Airports,Los Angeles,2022-08-24,10665000.0,Yes,Yes,True,1,P21608101-P21238032-P21661618.txt
+544445J34,City of Los Angeles Department of Airports,Los Angeles,2022-08-24,65920000.0,Yes,Yes,True,1,P21608101-P21238032-P21661618.txt
+544445J42,City of Los Angeles Department of Airports,Los Angeles,2022-08-24,10000000.0,Yes,Yes,True,1,P21608101-P21238032-P21661618.txt
+544445Y78,City of Los Angeles Department of Airports,Los Angeles,2023-04-11,26210000.0,Yes,Yes,True,1,P21689407-P21300130-P21731021.txt
 54445CAA1,City of Los Angeles Department of Airports Customer Facility Charge Revenue,Los Angeles,2022-03-16,18755000.0,Yes,Yes,True,1,P21555452-P21201836-P21621714.txt
 54445CAB9,City of Los Angeles Department of Airports Customer Facility Charge Revenue,Los Angeles,2022-03-16,19350000.0,Yes,Yes,True,1,P21555452-P21201836-P21621714.txt
 54445CAC7,City of Los Angeles Department of Airports Customer Facility Charge Revenue,Los Angeles,2022-03-16,19980000.0,Yes,Yes,True,1,P21555452-P21201836-P21621714.txt
@@ -2645,8 +2535,17 @@ CUSIP,Issuer_Name,City,Issue_Date,Amt_Issued,Self_reported_Green,ESG_Assurance_P
 544495ZK3,Los Angeles Department of Water & Power,Los Angeles,2013-06-04,27855000.0,No,No,True,1,EA531719-EA414230-EA811102.txt
 544552B43,Port of Los Angeles,Los Angeles,2019-09-18,4995000.0,Yes,Yes,True,1,ER1252791-ER979149-ER1380636.txt
 544552B50,Port of Los Angeles,Los Angeles,2019-09-18,10680000.0,Yes,Yes,True,1,ER1252791-ER979149-ER1380636.txt
+544552C83,Port of Los Angeles,Los Angeles,2024-09-25,9060000.0,--,--,True,1,P21846946-P21414886-P21857793.txt
+544552C91,Port of Los Angeles,Los Angeles,2024-09-25,9335000.0,--,--,True,1,P21846946-P21414886-P21857793.txt
+544552D25,Port of Los Angeles,Los Angeles,2024-09-25,8330000.0,--,--,True,1,P21846946-P21414886-P21857793.txt
+544552D82,Port of Los Angeles,Los Angeles,2024-08-01,9505000.0,--,--,True,1,P21846946-P21414886-P21857793.txt
+544552D90,Port of Los Angeles,Los Angeles,2024-09-25,9485000.0,--,--,True,1,P21846946-P21414886-P21857793.txt
+544552E24,Port of Los Angeles,Los Angeles,2024-09-25,3890000.0,--,--,True,1,P21846946-P21414886-P21857793.txt
 544552ZY1,Port of Los Angeles,Los Angeles,2016-10-13,35205000.0,Yes,Yes,True,1,ES821894-ES644906-ES1040084.txt
+5465892D3,Louisville and Jefferson County Metropolitan Sewer District,Louisville/Jefferson County metro government (balance),2023-10-26,37905000.0,--,No,True,1,P21737014-P21334139-P21768189.txt
+5465892F8,Louisville and Jefferson County Metropolitan Sewer District,Louisville/Jefferson County metro government (balance),2023-10-26,41790000.0,--,No,True,1,P21737014-P21334139-P21768189.txt
 546589W73,Louisville and Jefferson County Metropolitan Sewer District,Louisville/Jefferson County metro government (balance),2022-02-01,50775000.0,Yes,Yes,True,1,P21536543-P21187636-P21605628.txt
+546589W81,Louisville and Jefferson County Metropolitan Sewer District,Louisville/Jefferson County metro government (balance),2022-10-05,226340000.0,--,No,True,1,P21617486-P21246237-P21670689.txt
 562361AA3,City of Manchester NH Sewer Revenue,Manchester,2021-12-23,85000.0,Yes,No,True,1,P11550252-P11197056-P11615130.txt
 562361AB1,City of Manchester NH Sewer Revenue,Manchester,2021-12-23,395000.0,Yes,No,True,1,P11550252-P11197056-P11615130.txt
 562361AC9,City of Manchester NH Sewer Revenue,Manchester,2021-12-23,605000.0,Yes,No,True,1,P11550252-P11197056-P11615130.txt
@@ -2660,6 +2559,7 @@ CUSIP,Issuer_Name,City,Issue_Date,Amt_Issued,Self_reported_Green,ESG_Assurance_P
 562361AL9,City of Manchester NH Sewer Revenue,Manchester,2021-12-23,2335000.0,Yes,No,True,1,P11550252-P11197056-P11615130.txt
 562361AM7,City of Manchester NH Sewer Revenue,Manchester,2021-12-23,14775000.0,Yes,No,True,1,P11550252-P11197056-P11615130.txt
 562361AN5,City of Manchester NH Sewer Revenue,Manchester,2021-12-23,17975000.0,Yes,No,True,1,P11550252-P11197056-P11615130.txt
+562361BP9,City of Manchester NH Sewer Revenue,Manchester,2024-10-30,41075000.0,Yes,--,True,1,P11932461-P11377053-P11815454.txt
 602418BY0,Milwaukee Redevelopment Authority,Milwaukee,2016-12-01,6275000.0,--,No,True,1,EP965467-EP749037-EP1150641.txt
 60242MEG4,City of Milwaukee WI Sewerage System Revenue,Milwaukee,2021-05-14,100000.0,Yes,No,True,1,P21458655-P21132163-P21544598.txt
 60242MEH2,City of Milwaukee WI Sewerage System Revenue,Milwaukee,2021-05-14,100000.0,Yes,No,True,1,P21458655-P21132163-P21544598.txt
@@ -2711,6 +2611,7 @@ CUSIP,Issuer_Name,City,Issue_Date,Amt_Issued,Self_reported_Green,ESG_Assurance_P
 649717VM4,Trust for Cultural Resources of The City of New York/The,New York,2021-01-07,73260000.0,Yes,Yes,True,1,P31405868-P31093055-P31502104.txt
 655867TL3,City of Norfolk VA,Norfolk,2016-10-19,6835000.0,No,No,True,1,EP953346-EP739582-EP1141192.txt
 655867TM1,City of Norfolk VA,Norfolk,2016-10-19,3665000.0,No,No,True,1,EP953346-EP739582-EP1141192.txt
+671448AA6,Village of Oak Lawn IL Regional Water System Revenue,Oak Lawn,2022-06-15,19285000.0,Yes,No,True,1,P21577992-P21218099-P21639677.txt
 686513AA0,City of Orlando FL Reclamation System Revenue,Orlando,2024-10-30,235000.0,--,No,True,1,P11797579-P11378568-P11817122.txt
 686513AB8,City of Orlando FL Reclamation System Revenue,Orlando,2024-10-30,495000.0,--,No,True,1,P11797579-P11378568-P11817122.txt
 686513AC6,City of Orlando FL Reclamation System Revenue,Orlando,2024-10-30,520000.0,--,No,True,1,P11797579-P11378568-P11817122.txt
@@ -2742,6 +2643,7 @@ CUSIP,Issuer_Name,City,Issue_Date,Amt_Issued,Self_reported_Green,ESG_Assurance_P
 686513BE1,City of Orlando FL Reclamation System Revenue,Orlando,2024-10-30,2395000.0,--,--,True,1,P11797579-P11378568-P11817122.txt
 686513BF8,City of Orlando FL Reclamation System Revenue,Orlando,2024-10-30,2510000.0,--,--,True,1,P11797579-P11378568-P11817122.txt
 68825RME7,City of Oshkosh WI Storm Water Utility Revenue,Oshkosh,2022-07-07,960000.0,--,No,True,1,P11609142-P11240564-P11664310.txt
+68825RND8,City of Oshkosh WI Storm Water Utility Revenue,Oshkosh,2023-06-22,745000.0,--,No,True,1,P11671453-P11286636-P11715977.txt
 691879FX3,Oxnard Financing Authority,Oxnard,2021-03-03,725000.0,Yes,No,True,1,P31413978-P31099449-P31509204.txt
 691879FY1,Oxnard Financing Authority,Oxnard,2021-03-03,705000.0,Yes,No,True,1,P31413978-P31099449-P31509204.txt
 691879FZ8,Oxnard Financing Authority,Oxnard,2021-03-03,385000.0,Yes,No,True,1,P31413978-P31099449-P31509204.txt
@@ -2920,6 +2822,64 @@ CUSIP,Issuer_Name,City,Issue_Date,Amt_Issued,Self_reported_Green,ESG_Assurance_P
 793071UT6,City of St Paul MN Sewer Revenue,St. Paul,2021-09-15,440000.0,Yes,No,True,1,P11522928-P11177998-P11594334.txt
 793071UU3,City of St Paul MN Sewer Revenue,St. Paul,2021-09-15,450000.0,Yes,No,True,1,P11522928-P11177998-P11594334.txt
 793071UX7,City of St Paul MN Sewer Revenue,St. Paul,2021-09-15,1395000.0,Yes,No,True,1,P11522928-P11177998-P11594334.txt
+793071UY5,City of St Paul MN Sewer Revenue,St. Paul,2022-09-14,180000.0,Yes,No,True,1,P11620089-P11248857-P11673211.txt
+793071UZ2,City of St Paul MN Sewer Revenue,St. Paul,2022-09-14,260000.0,Yes,No,True,1,P11620089-P11248857-P11673211.txt
+793071VA6,City of St Paul MN Sewer Revenue,St. Paul,2022-09-14,270000.0,Yes,No,True,1,P11620089-P11248857-P11673211.txt
+793071VB4,City of St Paul MN Sewer Revenue,St. Paul,2022-09-14,285000.0,Yes,No,True,1,P11620089-P11248857-P11673211.txt
+793071VC2,City of St Paul MN Sewer Revenue,St. Paul,2022-09-14,300000.0,Yes,No,True,1,P11620089-P11248857-P11673211.txt
+793071VD0,City of St Paul MN Sewer Revenue,St. Paul,2022-09-14,315000.0,Yes,No,True,1,P11620089-P11248857-P11673211.txt
+793071VE8,City of St Paul MN Sewer Revenue,St. Paul,2022-09-14,330000.0,Yes,No,True,1,P11620089-P11248857-P11673211.txt
+793071VF5,City of St Paul MN Sewer Revenue,St. Paul,2022-09-14,345000.0,Yes,No,True,1,P11620089-P11248857-P11673211.txt
+793071VG3,City of St Paul MN Sewer Revenue,St. Paul,2022-09-14,365000.0,Yes,No,True,1,P11620089-P11248857-P11673211.txt
+793071VH1,City of St Paul MN Sewer Revenue,St. Paul,2022-09-14,380000.0,Yes,No,True,1,P11620089-P11248857-P11673211.txt
+793071VJ7,City of St Paul MN Sewer Revenue,St. Paul,2022-09-14,400000.0,Yes,No,True,1,P11620089-P11248857-P11673211.txt
+793071VK4,City of St Paul MN Sewer Revenue,St. Paul,2022-09-14,415000.0,Yes,No,True,1,P11620089-P11248857-P11673211.txt
+793071VL2,City of St Paul MN Sewer Revenue,St. Paul,2022-09-14,425000.0,Yes,No,True,1,P11620089-P11248857-P11673211.txt
+793071VM0,City of St Paul MN Sewer Revenue,St. Paul,2022-09-14,440000.0,Yes,No,True,1,P11620089-P11248857-P11673211.txt
+793071VN8,City of St Paul MN Sewer Revenue,St. Paul,2022-09-14,450000.0,Yes,No,True,1,P11620089-P11248857-P11673211.txt
+793071VP3,City of St Paul MN Sewer Revenue,St. Paul,2022-09-14,465000.0,Yes,No,True,1,P11620089-P11248857-P11673211.txt
+793071VQ1,City of St Paul MN Sewer Revenue,St. Paul,2022-09-14,485000.0,Yes,No,True,1,P11620089-P11248857-P11673211.txt
+793071VR9,City of St Paul MN Sewer Revenue,St. Paul,2022-09-14,500000.0,Yes,No,True,1,P11620089-P11248857-P11673211.txt
+793071VS7,City of St Paul MN Sewer Revenue,St. Paul,2022-09-14,520000.0,Yes,No,True,1,P11620089-P11248857-P11673211.txt
+793071VT5,City of St Paul MN Sewer Revenue,St. Paul,2022-09-14,545000.0,Yes,No,True,1,P11620089-P11248857-P11673211.txt
+793071VU2,City of St Paul MN Sewer Revenue,St. Paul,2023-10-12,195000.0,Yes,Yes,True,1,P11698661-P11306161-P11737312.txt
+793071VV0,City of St Paul MN Sewer Revenue,St. Paul,2023-12-12,255000.0,Yes,Yes,True,1,P11698661-P11306161-P11737312.txt
+793071VW8,City of St Paul MN Sewer Revenue,St. Paul,2023-12-12,265000.0,Yes,Yes,True,1,P11698661-P11306161-P11737312.txt
+793071VX6,City of St Paul MN Sewer Revenue,St. Paul,2023-10-12,280000.0,Yes,Yes,True,1,P11698661-P11306161-P11737312.txt
+793071VY4,City of St Paul MN Sewer Revenue,St. Paul,2023-10-12,295000.0,Yes,Yes,True,1,P11698661-P11306161-P11737312.txt
+793071VZ1,City of St Paul MN Sewer Revenue,St. Paul,2023-12-12,305000.0,Yes,Yes,True,1,P11698661-P11306161-P11737312.txt
+793071WA5,City of St Paul MN Sewer Revenue,St. Paul,2023-12-12,320000.0,Yes,Yes,True,1,P11698661-P11306161-P11737312.txt
+793071WB3,City of St Paul MN Sewer Revenue,St. Paul,2023-10-12,340000.0,Yes,Yes,True,1,P11698661-P11306161-P11737312.txt
+793071WC1,City of St Paul MN Sewer Revenue,St. Paul,2023-10-12,355000.0,Yes,Yes,True,1,P11698661-P11306161-P11737312.txt
+793071WD9,City of St Paul MN Sewer Revenue,St. Paul,2023-10-12,375000.0,Yes,Yes,True,1,P11698661-P11306161-P11737312.txt
+793071WE7,City of St Paul MN Sewer Revenue,St. Paul,2023-12-12,390000.0,Yes,Yes,True,1,P11698661-P11306161-P11737312.txt
+793071WF4,City of St Paul MN Sewer Revenue,St. Paul,2023-12-12,410000.0,Yes,Yes,True,1,P11698661-P11306161-P11737312.txt
+793071WG2,City of St Paul MN Sewer Revenue,St. Paul,2023-10-12,430000.0,Yes,Yes,True,1,P11698661-P11306161-P11737312.txt
+793071WK3,City of St Paul MN Sewer Revenue,St. Paul,2023-10-12,1415000.0,Yes,Yes,True,1,P11698661-P11306161-P11737312.txt
+793071WL1,City of St Paul MN Sewer Revenue,St. Paul,2023-12-12,510000.0,Yes,Yes,True,1,P11698661-P11306161-P11737312.txt
+793071WM9,City of St Paul MN Sewer Revenue,St. Paul,2023-10-12,530000.0,Yes,Yes,True,1,P11698661-P11306161-P11737312.txt
+793071WN7,City of St Paul MN Sewer Revenue,St. Paul,2023-10-12,550000.0,Yes,Yes,True,1,P11698661-P11306161-P11737312.txt
+793071WP2,City of St Paul MN Sewer Revenue,St. Paul,2023-10-12,575000.0,Yes,Yes,True,1,P11698661-P11306161-P11737312.txt
+793071WQ0,City of St Paul MN Sewer Revenue,St. Paul,2024-09-17,200000.0,Yes,No,True,1,P21845120-P21411829-P21854445.txt
+793071WR8,City of St Paul MN Sewer Revenue,St. Paul,2024-09-17,285000.0,Yes,No,True,1,P21845120-P21411829-P21854445.txt
+793071WS6,City of St Paul MN Sewer Revenue,St. Paul,2024-09-17,300000.0,Yes,No,True,1,P21845120-P21411829-P21854445.txt
+793071WT4,City of St Paul MN Sewer Revenue,St. Paul,2024-09-17,315000.0,Yes,No,True,1,P21845120-P21411829-P21854445.txt
+793071WU1,City of St Paul MN Sewer Revenue,St. Paul,2024-09-17,330000.0,Yes,No,True,1,P21845120-P21411829-P21854445.txt
+793071WV9,City of St Paul MN Sewer Revenue,St. Paul,2024-09-17,350000.0,Yes,No,True,1,P21845120-P21411829-P21854445.txt
+793071WW7,City of St Paul MN Sewer Revenue,St. Paul,2024-09-17,365000.0,Yes,No,True,1,P21845120-P21411829-P21854445.txt
+793071WX5,City of St Paul MN Sewer Revenue,St. Paul,2024-09-17,385000.0,Yes,No,True,1,P21845120-P21411829-P21854445.txt
+793071WY3,City of St Paul MN Sewer Revenue,St. Paul,2024-09-17,400000.0,Yes,No,True,1,P21845120-P21411829-P21854445.txt
+793071WZ0,City of St Paul MN Sewer Revenue,St. Paul,2024-09-17,425000.0,Yes,No,True,1,P21845120-P21411829-P21854445.txt
+793071XA4,City of St Paul MN Sewer Revenue,St. Paul,2024-09-17,440000.0,Yes,No,True,1,P21845120-P21411829-P21854445.txt
+793071XB2,City of St Paul MN Sewer Revenue,St. Paul,2024-09-17,455000.0,Yes,No,True,1,P21845120-P21411829-P21854445.txt
+793071XC0,City of St Paul MN Sewer Revenue,St. Paul,2024-09-17,475000.0,Yes,No,True,1,P21845120-P21411829-P21854445.txt
+793071XD8,City of St Paul MN Sewer Revenue,St. Paul,2024-09-17,495000.0,Yes,No,True,1,P21845120-P21411829-P21854445.txt
+793071XE6,City of St Paul MN Sewer Revenue,St. Paul,2024-09-17,515000.0,Yes,No,True,1,P21845120-P21411829-P21854445.txt
+793071XF3,City of St Paul MN Sewer Revenue,St. Paul,2024-09-17,535000.0,Yes,No,True,1,P21845120-P21411829-P21854445.txt
+793071XG1,City of St Paul MN Sewer Revenue,St. Paul,2024-09-17,555000.0,Yes,No,True,1,P21845120-P21411829-P21854445.txt
+793071XH9,City of St Paul MN Sewer Revenue,St. Paul,2024-09-17,580000.0,Yes,No,True,1,P21845120-P21411829-P21854445.txt
+793071XJ5,City of St Paul MN Sewer Revenue,St. Paul,2024-09-17,600000.0,Yes,No,True,1,P21845120-P21411829-P21854445.txt
+793071XK2,City of St Paul MN Sewer Revenue,St. Paul,2024-09-17,625000.0,Yes,No,True,1,P21845120-P21411829-P21854445.txt
 793071XL0,City of St Paul MN Sewer Revenue,St. Paul,2025-08-19,190000.0,Yes,No,True,1,P21949006-P21488358-P21939864.txt
 793071XM8,City of St Paul MN Sewer Revenue,St. Paul,2025-08-19,340000.0,Yes,No,True,1,P21949006-P21488358-P21939864.txt
 793071XN6,City of St Paul MN Sewer Revenue,St. Paul,2025-08-19,355000.0,Yes,No,True,1,P21949006-P21488358-P21939864.txt
@@ -2946,6 +2906,9 @@ CUSIP,Issuer_Name,City,Issue_Date,Amt_Issued,Self_reported_Green,ESG_Assurance_P
 79765R4Z9,City of San Francisco CA Public Utilities Commission Water Revenue,San Francisco,2020-01-09,4310000.0,Yes,Yes,True,1,P11837901-P11408439-P11850619.txt
 79765R5A3,City of San Francisco CA Public Utilities Commission Water Revenue,San Francisco,2020-01-09,308895000.0,Yes,No,True,2,ER1294533-ES1040166-ES1443450.txt;P11837901-P11408439-P11850619.txt
 79765R5B1,City of San Francisco CA Public Utilities Commission Water Revenue,San Francisco,2020-01-09,204340000.0,Yes,Yes,True,2,ER1294533-ES1040166-ES1443450.txt;P11837901-P11408439-P11850619.txt
+79765R5G0,City of San Francisco CA Public Utilities Commission Water Revenue,San Francisco,2020-09-23,22175000.0,Yes,Yes,True,1,P11411213-P11096461-P11505380.txt
+79765R5H8,City of San Francisco CA Public Utilities Commission Water Revenue,San Francisco,2020-09-23,25000000.0,Yes,Yes,True,1,P11411213-P11096461-P11505380.txt
+79765R5J4,City of San Francisco CA Public Utilities Commission Water Revenue,San Francisco,2020-09-23,103720000.0,Yes,No,True,1,P11411213-P11096461-P11505380.txt
 79765RQ44,City of San Francisco CA Public Utilities Commission Water Revenue,San Francisco,2016-12-14,53520000.0,Yes,Yes,True,1,ES997086-ES780844-ES1182154.txt
 79765RQ51,City of San Francisco CA Public Utilities Commission Water Revenue,San Francisco,2016-12-14,65740000.0,Yes,Yes,True,1,ES997086-ES780844-ES1182154.txt
 79765RT33,City of San Francisco CA Public Utilities Commission Water Revenue,San Francisco,2017-12-13,20990000.0,Yes,Yes,True,1,ER1108407-ER866317-ER1267002.txt
@@ -2967,6 +2930,12 @@ CUSIP,Issuer_Name,City,Issue_Date,Amt_Issued,Self_reported_Green,ESG_Assurance_P
 79768HFW3,San Francisco City & County Public Utilities Commission Wastewater Revenue,San Francisco,2021-11-30,34095000.0,Yes,Yes,True,1,P21519443-P21175017-P21591296.txt
 79768HGG7,San Francisco City & County Public Utilities Commission Wastewater Revenue,San Francisco,2021-11-30,218355000.0,Yes,No,True,1,P21519443-P21175017-P21591296.txt
 79768HGH5,San Francisco City & County Public Utilities Commission Wastewater Revenue,San Francisco,2021-11-30,129110000.0,Yes,No,True,1,P21519443-P21175017-P21591296.txt
+79768HKN7,San Francisco City & County Public Utilities Commission Wastewater Revenue,San Francisco,2024-07-31,72575000.0,Yes,Yes,True,1,P21830885-P21403242-P21845144.txt
+79768HKP2,San Francisco City & County Public Utilities Commission Wastewater Revenue,San Francisco,2024-07-31,247285000.0,Yes,Yes,True,1,P21830885-P21403242-P21845144.txt
+79771FCU9,City of San Francisco CA Public Utilities Commission Water Revenue,San Francisco,2023-07-27,88745000.0,--,No,True,1,P11687086-P11297878-P11728349.txt
+79771FCV7,City of San Francisco CA Public Utilities Commission Water Revenue,San Francisco,2023-07-27,89830000.0,--,No,True,1,P11687086-P11297878-P11728349.txt
+79771FDN4,City of San Francisco CA Public Utilities Commission Water Revenue,San Francisco,2023-07-27,16390000.0,--,No,True,1,P11687086-P11297878-P11728349.txt
+79771FDP9,City of San Francisco CA Public Utilities Commission Water Revenue,San Francisco,2023-07-27,16585000.0,--,No,True,1,P11687086-P11297878-P11728349.txt
 79771FFE2,City of San Francisco CA Public Utilities Commission Water Revenue,San Francisco,2020-01-09,2760000.0,Yes,Yes,True,1,P11837901-P11408439-P11850619.txt
 79771FFF9,City of San Francisco CA Public Utilities Commission Water Revenue,San Francisco,2020-01-09,2820000.0,Yes,Yes,True,1,P11837901-P11408439-P11850619.txt
 79771FFG7,City of San Francisco CA Public Utilities Commission Water Revenue,San Francisco,2020-01-09,2980000.0,Yes,Yes,True,1,P11837901-P11408439-P11850619.txt
@@ -2984,6 +2953,8 @@ CUSIP,Issuer_Name,City,Issue_Date,Amt_Issued,Self_reported_Green,ESG_Assurance_P
 79772EDZ9,City & County of San Francisco CA Community Facilities District No 2014-1,San Francisco,2021-11-03,3605000.0,Yes,No,True,1,P21502980-P21162007-P21576850.txt
 79772EEA3,City & County of San Francisco CA Community Facilities District No 2014-1,San Francisco,2021-11-03,5150000.0,Yes,Yes,True,1,P21502980-P21162007-P21576850.txt
 79772EEB1,City & County of San Francisco CA Community Facilities District No 2014-1,San Francisco,2021-11-03,20945000.0,Yes,Yes,True,1,P21502980-P21162007-P21576850.txt
+79772EET2,City & County of San Francisco CA Community Facilities District No 2014-1,San Francisco,2022-12-15,10335000.0,Yes,Yes,True,1,P11636214-P11260306-P11685894.txt
+79772EEU9,City & County of San Francisco CA Community Facilities District No 2014-1,San Francisco,2022-12-15,26085000.0,Yes,No,True,1,P11636214-P11260306-P11685894.txt
 79816NAZ0,San Jose Financing Authority,San Jose,2022-12-15,48770000.0,Yes,Yes,True,1,P11636800-P11260714-P11686344.txt
 79816NBA4,San Jose Financing Authority,San Jose,2022-12-15,76415000.0,Yes,Yes,True,1,P11636800-P11260714-P11686344.txt
 799317BS0,San Rafael Joint Powers Financing Authority,San Rafael,2018-03-28,1910000.0,Yes,No,True,1,ES1122236-ES877569-ES1278825.txt
@@ -3046,6 +3017,33 @@ CUSIP,Issuer_Name,City,Issue_Date,Amt_Issued,Self_reported_Green,ESG_Assurance_P
 812728WQ2,City of Seattle WA Water System Revenue,Seattle,2021-06-17,7430000.0,Yes,Yes,True,1,P21467249-P21138349-P21551271.txt
 812728WR0,City of Seattle WA Water System Revenue,Seattle,2021-06-17,7730000.0,Yes,Yes,True,1,P21467249-P21138349-P21551271.txt
 812728WS8,City of Seattle WA Water System Revenue,Seattle,2021-06-17,2775000.0,Yes,Yes,True,1,P21467249-P21138349-P21551271.txt
+812728WV1,City of Seattle WA Water System Revenue,Seattle,2022-07-28,900000.0,Yes,Yes,True,1,P21594452-P21230082-P21652868.txt
+812728WW9,City of Seattle WA Water System Revenue,Seattle,2022-07-28,17305000.0,Yes,Yes,True,1,P21594452-P21230082-P21652868.txt
+812728WX7,City of Seattle WA Water System Revenue,Seattle,2022-07-28,8890000.0,Yes,Yes,True,1,P21594452-P21230082-P21652868.txt
+812728WY5,City of Seattle WA Water System Revenue,Seattle,2022-07-28,9330000.0,Yes,Yes,True,1,P21594452-P21230082-P21652868.txt
+812728WZ2,City of Seattle WA Water System Revenue,Seattle,2022-07-28,740000.0,Yes,Yes,True,1,P21594452-P21230082-P21652868.txt
+812728XA6,City of Seattle WA Water System Revenue,Seattle,2022-07-28,1255000.0,Yes,Yes,True,1,P21594452-P21230082-P21652868.txt
+812728XB4,City of Seattle WA Water System Revenue,Seattle,2022-07-28,820000.0,Yes,Yes,True,1,P21594452-P21230082-P21652868.txt
+812728XC2,City of Seattle WA Water System Revenue,Seattle,2022-07-28,8695000.0,Yes,Yes,True,1,P21594452-P21230082-P21652868.txt
+812728XD0,City of Seattle WA Water System Revenue,Seattle,2022-07-28,9660000.0,Yes,Yes,True,1,P21594452-P21230082-P21652868.txt
+812728XE8,City of Seattle WA Water System Revenue,Seattle,2022-07-28,925000.0,Yes,Yes,True,1,P21594452-P21230082-P21652868.txt
+812728XF5,City of Seattle WA Water System Revenue,Seattle,2022-07-28,975000.0,Yes,Yes,True,1,P21594452-P21230082-P21652868.txt
+812728XG3,City of Seattle WA Water System Revenue,Seattle,2022-07-28,1020000.0,Yes,Yes,True,1,P21594452-P21230082-P21652868.txt
+812728XH1,City of Seattle WA Water System Revenue,Seattle,2022-07-28,1070000.0,Yes,Yes,True,1,P21594452-P21230082-P21652868.txt
+812728XJ7,City of Seattle WA Water System Revenue,Seattle,2022-07-28,1125000.0,Yes,Yes,True,1,P21594452-P21230082-P21652868.txt
+812728XK4,City of Seattle WA Water System Revenue,Seattle,2022-07-28,1180000.0,Yes,Yes,True,1,P21594452-P21230082-P21652868.txt
+812728XL2,City of Seattle WA Water System Revenue,Seattle,2022-07-28,1240000.0,Yes,Yes,True,1,P21594452-P21230082-P21652868.txt
+812728XM0,City of Seattle WA Water System Revenue,Seattle,2022-07-28,1305000.0,Yes,Yes,True,1,P21594452-P21230082-P21652868.txt
+812728XN8,City of Seattle WA Water System Revenue,Seattle,2022-07-28,1370000.0,Yes,Yes,True,1,P21594452-P21230082-P21652868.txt
+812728XP3,City of Seattle WA Water System Revenue,Seattle,2022-07-28,1435000.0,Yes,Yes,True,1,P21594452-P21230082-P21652868.txt
+812728XQ1,City of Seattle WA Water System Revenue,Seattle,2022-07-28,1510000.0,Yes,Yes,True,1,P21594452-P21230082-P21652868.txt
+812728XR9,City of Seattle WA Water System Revenue,Seattle,2022-07-28,1585000.0,Yes,Yes,True,1,P21594452-P21230082-P21652868.txt
+812728XS7,City of Seattle WA Water System Revenue,Seattle,2022-07-28,1665000.0,Yes,Yes,True,1,P21594452-P21230082-P21652868.txt
+812728XT5,City of Seattle WA Water System Revenue,Seattle,2022-07-28,1745000.0,Yes,Yes,True,1,P21594452-P21230082-P21652868.txt
+812728XU2,City of Seattle WA Water System Revenue,Seattle,2022-07-28,1835000.0,Yes,Yes,True,1,P21594452-P21230082-P21652868.txt
+812728XV0,City of Seattle WA Water System Revenue,Seattle,2022-07-28,1925000.0,Yes,Yes,True,1,P21594452-P21230082-P21652868.txt
+812728XX6,City of Seattle WA Water System Revenue,Seattle,2022-07-28,4145000.0,Yes,Yes,True,1,P21594452-P21230082-P21652868.txt
+812728YB3,City of Seattle WA Water System Revenue,Seattle,2022-07-28,9610000.0,Yes,Yes,True,1,P21594452-P21230082-P21652868.txt
 83756UAA3,South Dallas Water Authority Inc,Dallas,2022-01-25,215000.0,Yes,No,True,1,P21533908-P21185611-P21603404.txt
 83756UAB1,South Dallas Water Authority Inc,Dallas,2022-01-25,170000.0,Yes,No,True,1,P21533908-P21185611-P21603404.txt
 83756UAC9,South Dallas Water Authority Inc,Dallas,2022-01-25,280000.0,Yes,Yes,True,1,P21533908-P21185611-P21603404.txt
@@ -3145,6 +3143,8 @@ CUSIP,Issuer_Name,City,Issue_Date,Amt_Issued,Self_reported_Green,ESG_Assurance_P
 873519PY2,City of Tacoma WA Electric System Revenue,Tacoma,2021-09-14,38460000.0,Yes,Yes,True,1,P11528735-P21155952-P21570195.txt
 873519PZ9,City of Tacoma WA Electric System Revenue,Tacoma,2021-09-14,22140000.0,Yes,Yes,True,1,P11528735-P21155952-P21570195.txt
 873519QA3,City of Tacoma WA Electric System Revenue,Tacoma,2021-09-14,25000000.0,Yes,Yes,True,1,P11528735-P21155952-P21570195.txt
+873519QM7,City of Tacoma WA Electric System Revenue,Tacoma,2024-02-15,26750000.0,Yes,Yes,True,1,P21771544-P21359989-P21797159.txt
+873519QN5,City of Tacoma WA Electric System Revenue,Tacoma,2024-02-15,34145000.0,Yes,Yes,True,1,P21771544-P21359989-P21797159.txt
 873519RA2,City of Tacoma WA Electric System Revenue,Tacoma,2025-03-07,47225000.0,Yes,Yes,True,1,P22018038-P11427523-P11871837.txt
 873519RB0,City of Tacoma WA Electric System Revenue,Tacoma,2025-01-01,60985000.0,Yes,Yes,True,1,P22018038-P11427523-P11871837.txt
 87354VAA8,City of Tacoma WA Solid Waste Utility Revenue,Tacoma,2015-03-18,1960000.0,Yes,No,True,1,EA696473-EA546297-EA942538.txt
