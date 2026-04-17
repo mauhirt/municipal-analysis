@@ -1,0 +1,86 @@
+name: Download EMMA Prospectuses (Uncovered Issuances - First 15)
+
+on:
+  workflow_dispatch:
+
+jobs:
+  download-prospectuses:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+        with:
+          ref: claude/convert-pdfs-to-text-TQGQd
+
+      - name: Download EMMA Official Statement PDFs
+        run: |
+          set -e
+          DEST="raw/emma/prospectuses"
+          mkdir -p "$DEST"
+
+          download_pdf() {
+            local url="$1"
+            local filename=$(basename "$url")
+            local dest_path="$DEST/$filename"
+            if [ -f "$dest_path" ]; then
+              echo "SKIP: $filename (already exists)"
+              return
+            fi
+            echo "Downloading: $filename"
+            if curl -f -L -o "$dest_path" -H "User-Agent: Mozilla/5.0" --retry 3 --retry-delay 5 "$url"; then
+              echo "OK: $filename ($(du -sh $dest_path | cut -f1))"
+            else
+              echo "FAILED: $filename"
+              rm -f "$dest_path"
+            fi
+          }
+
+          # Row 1: City of Atlanta GA Department of Aviation (CUSIP: 04780M2K4)
+          download_pdf "https://emma.msrb.org/P21963220-P21497913-P21950218.pdf"
+          # Row 2: City of Los Angeles Department of Airports (CUSIP: 5444452H1)
+          download_pdf "https://emma.msrb.org/P11836470-P11407478-P11849595.pdf"
+          # Row 3: SF CA Public Utilities Commission Water Revenue (CUSIP: 79771FGL5)
+          download_pdf "https://emma.msrb.org/P11837901-P11408439-P11850619.pdf"
+          # Row 4: City of Renton WA (CUSIP: 760133SZ2) - No OS submitted on EMMA
+          # Row 5: City of Gresham OR (CUSIP: 397730RA2)
+          download_pdf "https://emma.msrb.org/EA548110-EA427013-EA823896.pdf"
+          # Row 6: City of Norfolk VA (CUSIP: 655867SG5)
+          download_pdf "https://emma.msrb.org/ER710847-ER551237-ER952297.pdf"
+          # Row 7: City of Spokane WA Water & Wastewater Revenue (CUSIP: 849103AC0)
+          download_pdf "https://emma.msrb.org/EA665289-EA521356-EA917540.pdf"
+          # Row 8: SF City & County PUC Power Revenue (CUSIP: 79771KAA4)
+          download_pdf "https://emma.msrb.org/ER881975-ER689101-ER1090744.pdf"
+          # Row 9: City of Los Angeles CA Wastewater System Revenue (CUSIP: 53945CCZ1)
+          download_pdf "https://emma.msrb.org/ER890479-ER695548-ER1097054.pdf"
+          # Row 10: District of Columbia Water & Sewer Authority (CUSIP: 254845LC2)
+          download_pdf "https://emma.msrb.org/ES732753-ES574207-ES970101.pdf"
+          # Row 11: City of St Paul MN Sewer Revenue (CUSIP: 793071PM7)
+          download_pdf "https://emma.msrb.org/ES778368-ES612030-ES1007776.pdf"
+          # Row 12: St Louis Municipal Finance Corp (CUSIP: 79165TRS2)
+          download_pdf "https://emma.msrb.org/ES790334-ES618314-ER1154135.pdf"
+          # Row 13: SF City & County PUC Wastewater Revenue (CUSIP: 79768HCH9)
+          download_pdf "https://emma.msrb.org/ES786506-ES618502-ES1014137.pdf"
+          # Row 14: Port of Los Angeles (CUSIP: 544552ZY1)
+          download_pdf "https://emma.msrb.org/ES821894-ES644906-ES1040084.pdf"
+          # Row 15: City of Napa CA Solid Waste Revenue (CUSIP: 630337AE3)
+          download_pdf "https://emma.msrb.org/EP954217-EP740267-EP1141856.pdf"
+
+          echo "Downloads complete. Files:"
+          ls -lh "$DEST/"*.pdf 2>/dev/null || echo "No new PDFs downloaded"
+
+      - name: Commit downloaded PDFs
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git add raw/emma/prospectuses/
+          if git diff --cached --quiet; then
+            echo "No new files to commit."
+          else
+            ADDED=$(git diff --cached --name-only | wc -l)
+            git commit -m "Add EMMA prospectuses: uncovered issuances rows 1-15 ($ADDED new PDFs)"
+            git push
+            echo "Done: committed and pushed $ADDED new PDFs."
+          fi
