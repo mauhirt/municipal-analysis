@@ -137,13 +137,12 @@ if MODULE in ('main', 'all'):
         ('C6 Overflow×Party','Green_Bond_Issued',
          PRIMARY + ['dem_x_overflow'],
          'Overflow compulsion × Dem (NPDES as main-effect control)'),
-        ('C7 Non-water',    'Y_has_non_water',      PRIMARY, 'Compositional gap'),
-        ('C8 Demonstration','Y_self_green',
+        ('C7 Demonstration','Y_self_green',
          PRIMARY + ['dem_x_state_green_cum'],
          'M1: Dem × asinh state green cum (Task 2, 47 states, p=0.019)'),
     ]
     run_block(df, specs, 'table1_v3_main.md',
-              'Table 1 v3 — Main 8 columns')
+              'Table 1 v3 — Main 7 columns')
 
 # ══════════════════════════════════════════════════════════════════════
 # MODULE: appendix — demoted interaction specs + M2-M4
