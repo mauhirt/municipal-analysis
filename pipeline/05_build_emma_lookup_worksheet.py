@@ -42,7 +42,7 @@ def main() -> int:
 
     out_rows = []
     for (iss, date), group in sorted(groups.items(),
-                                     key=lambda x: (x[0][1], x[0][0])):
+                                     key=lambda x: (x[0][0], x[0][1])):
         group_sorted = sorted(group, key=lambda r: r["CUSIP"])
         lead = group_sorted[0]["CUSIP"]
         cusip_list = ";".join(r["CUSIP"] for r in group_sorted)
