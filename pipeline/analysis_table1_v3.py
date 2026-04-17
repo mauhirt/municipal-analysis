@@ -362,7 +362,7 @@ if MODULE in ('ftest', 'all'):
         except Exception as e:
             print(f"  {label:20s}  PanelOLS error: {e}")
 
-    # Write output
+    # Write ftest output
     lines = [
         '# Within-R² and Compulsion-Block F-Test (Task 8)',
         '',
@@ -385,3 +385,155 @@ if MODULE in ('ftest', 'all'):
     ])
     (OUT / 'v3_rr' / 'within_r2_ftest.md').write_text('\n'.join(lines) + '\n')
     print(f"\nWrote: {OUT / 'v3_rr' / 'within_r2_ftest.md'}")
+
+
+# ══════════════════════════════════════════════════════════════════════
+# MODULE: cluster_check — three SE schemes (Task 4)
+# ══════════════════════════════════════════════════════════════════════
+if MODULE in ('cluster_check', 'all'):
+    print("\n=== Task 4: Clustering comparison (city / state / two-way) ===\n")
+
+    if 'dem_x_npdes' not in df.columns:
+        df['dem_x_npdes'] = df['Dem_Mayor'] * df.get('npdes_formal_prior3yr_muni', 0)
+    if 'dem_x_overflow' not in df.columns:
+        df['dem_x_overflow'] = df['Dem_Mayor'] * df.get('overflow_events_lag2', 0)
+    if 'dem_x_state_green_cum' not in df.columns:
+        df['dem_x_state_green_cum'] = (
+            df['Dem_Mayor'] * df.get('asinh_state_all_green_cum_amt_lag1', 0))
+
+    FOCUS_VARS = [
+        'Dem_Mayor', 'pres_dem_two_party_share_lag2',
+        'npdes_formal_prior3yr_muni', 'overflow_events_lag2',
+        'reserve_ratio_lag2', 'debt_service_burden_lag2',
+        'dem_x_npdes', 'dem_x_overflow', 'dem_x_state_green_cum',
+    ]
+
+    specs = [
+        ('C1 GBI',          'Green_Bond_Issued',    PRIMARY),
+        ('C3 Self-green',   'Y_self_green',         PRIMARY),
+        ('C5 NPDES×Party',  'Green_Bond_Issued',    PRIMARY + ['dem_x_npdes']),
+        ('C6 Overflow×Party','Green_Bond_Issued',   PRIMARY + ['dem_x_overflow']),
+        ('C7 Demonstration','Y_self_green',         PRIMARY + ['dem_x_state_green_cum']),
+    ]
+
+    all_rows = []
+    for label, y, xs in specs:
+        if y not in df.columns:
+            continue
+        all_cols = ['fips7', 'state_id', 'year', y] + xs
+        all_cols = list(dict.fromkeys(c for c in all_cols if c in df.columns))
+        d = df[all_cols].copy().dropna()
+        xs_live = [x for x in xs if x in d.columns and d[x].nunique() > 1]
+        if len(d) < 30 or not xs_live:
+            continue
+
+        # (a) City-clustered via OLS + dummies (baseline)
+        X_parts = [d[xs_live].astype(float)]
+        for f in ('state_id', 'year'):
+            if f in d.columns and d[f].nunique() > 1:
+                X_parts.append(pd.get_dummies(d[f], prefix=f, drop_first=True, dtype=float))
+        X = pd.concat(X_parts, axis=1)
+        X = sm.add_constant(X).astype(float)
+        yv = d[y].values.astype(float)
+
+        res_city = sm.OLS(yv, X.values).fit(
+            cov_type='cluster', cov_kwds={'groups': d['fips7'].values})
+        res_city._xnames = list(X.columns)
+
+        res_state = sm.OLS(yv, X.values).fit(
+            cov_type='cluster', cov_kwds={'groups': d['state_id'].values})
+        res_state._xnames = list(X.columns)
+
+        # (c) Two-way: Cameron-Gelbach-Miller = V_city + V_state - V_city∩state
+        # city∩state = city (cities don't span states), so V_twoway = V_city + V_state - V_city
+        # = V_state. Actually CGM two-way with non-nested clusters:
+        # V = V1 + V2 - V_intersection. Since each city is in exactly one state,
+        # the intersection cluster = city. So V_twoway = V_city + V_state - V_city = V_state.
+        # This means two-way = state clustering when clusters are nested.
+        # For non-nested (city × year): V = V_city + V_year - V_city×year.
+        # V_city×year = HC0 (each obs is its own cluster). Let's do city × year.
+        res_hc0 = sm.OLS(yv, X.values).fit(cov_type='HC0')
+        res_hc0._xnames = list(X.columns)
+
+        # Two-way (city, year): V = V_city + V_year - V_HC0
+        res_year = sm.OLS(yv, X.values).fit(
+            cov_type='cluster', cov_kwds={'groups': d['year'].values})
+        res_year._xnames = list(X.columns)
+
+        V_twoway = (np.diag(res_city.bse**2) + np.diag(res_year.bse**2)
+                    - np.diag(res_hc0.bse**2))
+        se_twoway = np.sqrt(np.maximum(np.diag(V_twoway), 0))
+
+        for v in FOCUS_VARS:
+            if v not in xs_live and v not in list(X.columns):
+                continue
+            try:
+                i = list(X.columns).index(v)
+            except ValueError:
+                continue
+            b = float(res_city.params[i])
+            se_c = float(res_city.bse[i])
+            se_s = float(res_state.bse[i])
+            se_tw = float(se_twoway[i])
+            t_c = b / se_c if se_c > 0 else np.nan
+            t_s = b / se_s if se_s > 0 else np.nan
+            t_tw = b / se_tw if se_tw > 0 else np.nan
+            from scipy.stats import norm
+            p_c = float(2 * (1 - norm.cdf(abs(t_c)))) if not np.isnan(t_c) else np.nan
+            p_s = float(2 * (1 - norm.cdf(abs(t_s)))) if not np.isnan(t_s) else np.nan
+            p_tw = float(2 * (1 - norm.cdf(abs(t_tw)))) if not np.isnan(t_tw) else np.nan
+
+            all_rows.append({
+                'col': label, 'var': v, 'b': b,
+                'se_city': se_c, 't_city': t_c, 'p_city': p_c,
+                'se_state': se_s, 't_state': t_s, 'p_state': p_s,
+                'se_twoway': se_tw, 't_twoway': t_tw, 'p_twoway': p_tw,
+                'n': len(d),
+            })
+
+        print(f"  {label} done (N={len(d)})")
+
+    # Write output
+    lines = [
+        '# Clustering Comparison: City vs State vs Two-Way (Task 4)',
+        '',
+        'Same coefficient estimated under three SE schemes:',
+        '- **(a) City-clustered** (baseline, 572 clusters)',
+        '- **(b) State-clustered** (49 clusters)',
+        '- **(c) Two-way city × year** (Cameron-Gelbach-Miller: V_city + V_year − V_HC0)',
+        '',
+        '| Column | Variable | β | SE(city) | t | p | SE(state) | t | p | SE(2way) | t | p |',
+        '|---|---|---|---|---|---|---|---|---|---|---|---|',
+    ]
+    for r in all_rows:
+        lines.append(
+            f'| {r["col"]} | `{r["var"]}` | {r["b"]:+.4f} | '
+            f'{r["se_city"]:.4f} | {r["t_city"]:+.2f} | {r["p_city"]:.3f}{stars(r["p_city"])} | '
+            f'{r["se_state"]:.4f} | {r["t_state"]:+.2f} | {r["p_state"]:.3f}{stars(r["p_state"])} | '
+            f'{r["se_twoway"]:.4f} | {r["t_twoway"]:+.2f} | {r["p_twoway"]:.3f}{stars(r["p_twoway"])} |'
+        )
+
+    # Reading: flag any variable where significance changes across schemes
+    lines.extend(['', '## Reading', ''])
+    attenuated = []
+    for r in all_rows:
+        city_sig = r['p_city'] < 0.10
+        state_sig = r['p_state'] < 0.10
+        tw_sig = r['p_twoway'] < 0.10
+        if city_sig and not state_sig:
+            attenuated.append(f'- **`{r["var"]}` in {r["col"]}:** significant under city clustering '
+                            f'(p={r["p_city"]:.3f}) but NOT under state clustering '
+                            f'(p={r["p_state"]:.3f}). SE inflates from {r["se_city"]:.4f} to {r["se_state"]:.4f}.')
+        if city_sig and not tw_sig:
+            attenuated.append(f'- **`{r["var"]}` in {r["col"]}:** significant under city clustering '
+                            f'(p={r["p_city"]:.3f}) but NOT under two-way '
+                            f'(p={r["p_twoway"]:.3f}).')
+    if attenuated:
+        lines.append('### Coefficients where significance is attenuated by alternative clustering:')
+        lines.extend(attenuated)
+    else:
+        lines.append('No coefficients change significance category across clustering schemes.')
+
+    lines.extend(['', '* p<0.10, ** p<0.05, *** p<0.01.'])
+    (OUT / 'v3_rr' / 'cluster_comparison.md').write_text('\n'.join(lines) + '\n')
+    print(f"\nWrote: {OUT / 'v3_rr' / 'cluster_comparison.md'}")
