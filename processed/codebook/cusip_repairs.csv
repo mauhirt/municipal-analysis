@@ -5,3 +5,5 @@ ID,Issuer Name,Issue Date,original_CUSIP,corrected_CUSIP,anchor_prefix,n_candida
 2022-104,City of Los Angeles Department of Airports,2022-08-24,54445G37,544445G37,544445,1
 2022-1681,City & County Honolulu HI Wastewater System Revenue,2022-05-25,4387012E_3,4387012E3,438701,1
 2023-1878,City & County Honolulu HI Wastewater System Revenue,2023-09-27,4387013E_2,4387013E2,438701,1
+2013-344,City of Spokane WA Water & Wastewater Revenue,2014-12-02,849103ACO,849103AC0,849103,1
+2013-345,City of Spokane WA Water & Wastewater Revenue,2014-12-02,849103ALO,849103AL0,849103,1

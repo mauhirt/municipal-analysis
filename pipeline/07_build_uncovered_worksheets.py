@@ -40,7 +40,7 @@ def main() -> int:
     with MATCHED.open(newline="") as fh:
         rows = list(csv.DictReader(fh))
 
-    uncov = [r for r in rows if r["included"] == "0"]
+    uncov = [r for r in rows if r.get("issuance_covered", r["included"]) == "0"]
 
     # --- Per-CUSIP file ---
     OUT_CUSIPS.parent.mkdir(parents=True, exist_ok=True)
