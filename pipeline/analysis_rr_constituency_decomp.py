@@ -29,7 +29,7 @@ OUT_F.mkdir(parents=True, exist_ok=True)
 PRIMARY = [
     'Dem_Mayor',
     'pres_dem_two_party_share_lag2',
-    'npdes_formal_prior3yr_muni', 'overflow_events_lag2',
+    'npdes_formal_prior3yr_muni',
     'charges_to_own_source_lag2', 'reserve_ratio_lag2',
     'debt_service_burden_lag2', 'igr_share_lag2', 'tel_x_prop_tax_dep',
     'state_dem_governor_lag1', 'state_dem_trifecta_lag1', 'state_rep_trifecta_lag1',

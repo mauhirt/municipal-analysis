@@ -26,7 +26,7 @@ MODULE = os.environ.get('TABLE1_MODULE', 'main')
 PRIMARY = [
     'Dem_Mayor',
     'pres_dem_two_party_share_lag2',
-    'npdes_formal_prior3yr_muni', 'overflow_events_lag2',
+    'npdes_formal_prior3yr_muni',
     'charges_to_own_source_lag2', 'reserve_ratio_lag2',
     'debt_service_burden_lag2', 'igr_share_lag2', 'tel_x_prop_tax_dep',
     'state_dem_governor_lag1', 'state_dem_trifecta_lag1', 'state_rep_trifecta_lag1',
@@ -115,8 +115,6 @@ print(f"Panel: {df.shape}, Module: {MODULE}")
 # Build interaction terms needed for main cols
 if 'dem_x_npdes' not in df.columns:
     df['dem_x_npdes'] = df['Dem_Mayor'] * df.get('npdes_formal_prior3yr_muni', 0)
-if 'dem_x_overflow' not in df.columns:
-    df['dem_x_overflow'] = df['Dem_Mayor'] * df.get('overflow_events_lag2', 0)
 # M1 demonstration interaction (Task 2 winner)
 if 'dem_x_state_green_cum' not in df.columns:
     df['dem_x_state_green_cum'] = (
@@ -133,16 +131,13 @@ if MODULE in ('main', 'all'):
         ('C4 Self amt',     'asinh_self_green_amt',  PRIMARY, 'Self-label amount'),
         ('C5 NPDES×Party',  'Green_Bond_Issued',
          PRIMARY + ['dem_x_npdes'],
-         'NPDES compulsion × Dem (overflow as main-effect control)'),
-        ('C6 Overflow×Party','Green_Bond_Issued',
-         PRIMARY + ['dem_x_overflow'],
-         'Overflow compulsion × Dem (NPDES as main-effect control)'),
-        ('C7 Demonstration','Y_self_green',
+         'NPDES compulsion × Dem'),
+        ('C6 Demonstration','Y_self_green',
          PRIMARY + ['dem_x_state_green_cum'],
          'M1: Dem × asinh state green cum (Task 2, 47 states, p=0.019)'),
     ]
     run_block(df, specs, 'table1_v3_main.md',
-              'Table 1 v3 — Main 7 columns')
+              'Table 1 v3 — Main 6 columns')
 
 # ══════════════════════════════════════════════════════════════════════
 # MODULE: appendix — demoted interaction specs + M2-M4
@@ -235,9 +230,9 @@ if MODULE in ('rob1', 'all'):
     if bps: specs.append(('R9 BPS/IECC', Y, PRIMARY + bps, 'Building codes'))
 
     # R10 Pooled compulsion index
-    rhs_no_comp = [v for v in PRIMARY if v not in ('npdes_formal_prior3yr_muni','overflow_events_lag2')]
+    rhs_no_comp = [v for v in PRIMARY if v not in ('npdes_formal_prior3yr_muni',)]
     if 'compulsion_index_z' in df.columns:
-        specs.append(('R10 Pooled Idx', Y, rhs_no_comp + ['compulsion_index_z'], 'Pooled 5-comp z-score'))
+        specs.append(('R10 Pooled Idx', Y, rhs_no_comp + ['compulsion_index_z'], 'Pooled compulsion z-score'))
 
     run_block(df, specs, 'table1_v3_rob1.md',
               'Table 1 v3 — Robustness R1-R10')
@@ -313,13 +308,11 @@ if MODULE in ('ftest', 'all'):
     # Build interaction terms if missing
     if 'dem_x_npdes' not in df.columns:
         df['dem_x_npdes'] = df['Dem_Mayor'] * df.get('npdes_formal_prior3yr_muni', 0)
-    if 'dem_x_overflow' not in df.columns:
-        df['dem_x_overflow'] = df['Dem_Mayor'] * df.get('overflow_events_lag2', 0)
     if 'dem_x_state_green_cum' not in df.columns:
         df['dem_x_state_green_cum'] = (
             df['Dem_Mayor'] * df.get('asinh_state_all_green_cum_amt_lag1', 0))
 
-    COMPULSION_BLOCK = ['npdes_formal_prior3yr_muni', 'overflow_events_lag2',
+    COMPULSION_BLOCK = ['npdes_formal_prior3yr_muni',
                         'reserve_ratio_lag2', 'debt_service_burden_lag2',
                         'tel_x_prop_tax_dep']
 
@@ -329,8 +322,7 @@ if MODULE in ('ftest', 'all'):
         ('C3 Self-green',   'Y_self_green',         PRIMARY),
         ('C4 Self amt',     'asinh_self_green_amt',  PRIMARY),
         ('C5 NPDES×Party',  'Green_Bond_Issued',    PRIMARY + ['dem_x_npdes']),
-        ('C6 Overflow×Party','Green_Bond_Issued',   PRIMARY + ['dem_x_overflow']),
-        ('C7 Demonstration','Y_self_green',         PRIMARY + ['dem_x_state_green_cum']),
+        ('C6 Demonstration','Y_self_green',         PRIMARY + ['dem_x_state_green_cum']),
     ]
 
     results = []
@@ -406,25 +398,22 @@ if MODULE in ('cluster_check', 'all'):
 
     if 'dem_x_npdes' not in df.columns:
         df['dem_x_npdes'] = df['Dem_Mayor'] * df.get('npdes_formal_prior3yr_muni', 0)
-    if 'dem_x_overflow' not in df.columns:
-        df['dem_x_overflow'] = df['Dem_Mayor'] * df.get('overflow_events_lag2', 0)
     if 'dem_x_state_green_cum' not in df.columns:
         df['dem_x_state_green_cum'] = (
             df['Dem_Mayor'] * df.get('asinh_state_all_green_cum_amt_lag1', 0))
 
     FOCUS_VARS = [
         'Dem_Mayor', 'pres_dem_two_party_share_lag2',
-        'npdes_formal_prior3yr_muni', 'overflow_events_lag2',
+        'npdes_formal_prior3yr_muni',
         'reserve_ratio_lag2', 'debt_service_burden_lag2',
-        'dem_x_npdes', 'dem_x_overflow', 'dem_x_state_green_cum',
+        'dem_x_npdes', 'dem_x_state_green_cum',
     ]
 
     specs = [
         ('C1 GBI',          'Green_Bond_Issued',    PRIMARY),
         ('C3 Self-green',   'Y_self_green',         PRIMARY),
         ('C5 NPDES×Party',  'Green_Bond_Issued',    PRIMARY + ['dem_x_npdes']),
-        ('C6 Overflow×Party','Green_Bond_Issued',   PRIMARY + ['dem_x_overflow']),
-        ('C7 Demonstration','Y_self_green',         PRIMARY + ['dem_x_state_green_cum']),
+        ('C6 Demonstration','Y_self_green',         PRIMARY + ['dem_x_state_green_cum']),
     ]
 
     all_rows = []

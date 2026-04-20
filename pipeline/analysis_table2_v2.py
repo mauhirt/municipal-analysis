@@ -143,14 +143,13 @@ if MODULE in ('water', 'all'):
     Y = 'Y_water_only'
     n_pos = int(df[Y].fillna(0).sum())
 
-    # Variant 1: memo primary compulsion (NPDES formal + overflow)
+    # Variant 1: memo primary compulsion (NPDES formal)
     rhs_primary = SHARED_RHS + [
-        'npdes_formal_prior3yr_muni', 'overflow_events_lag2',
+        'npdes_formal_prior3yr_muni',
     ]
     # Variant 2: water compulsion ladder (simultaneously)
     rhs_ladder = SHARED_RHS + [
         'npdes_formal_prior3yr_muni',
-        'overflow_events_lag2',
         'epa_npdes_informal_asinh_lag2',
         'epa_water_violations_asinh_lag2',
         'case_jdc_prior3yr_muni',
@@ -160,11 +159,11 @@ if MODULE in ('water', 'all'):
 
     specs = [
         ('W1 Primary (memo)', Y, rhs_primary,
-         'Memo primary: NPDES formal + overflow events'),
+         'Memo primary: NPDES formal enforcement'),
         ('W2 Ladder',          Y, rhs_ladder,
          'Full ladder: informal + formal + violations + JDC'),
         ('W3 Pooled Index',    Y, rhs_pooled,
-         'Equal-weighted 5-component z-score composite'),
+         'Equal-weighted compulsion z-score composite'),
     ]
     results = []
     for label, y, xs, note in specs:
@@ -176,7 +175,7 @@ if MODULE in ('water', 'all'):
         print(f"  {label:18s}  n={n:4d}  n_pos={n_pos}  β(Dem_Mayor)={b:+.4f}{stars(p)} (se={se:.4f})")
         # Report each compulsion variable coefficient for comparison
         for v in xs:
-            if v in ('npdes_formal_prior3yr_muni', 'overflow_events_lag2',
+            if v in ('npdes_formal_prior3yr_muni',
                      'epa_npdes_informal_asinh_lag2', 'epa_water_violations_asinh_lag2',
                      'case_jdc_prior3yr_muni', 'compulsion_index_z'):
                 bb, ss, pp = coef(res, v)
@@ -184,7 +183,7 @@ if MODULE in ('water', 'all'):
                     print(f"           β({v:40s})={bb:+.4f}{stars(pp)} (se={ss:.4f})")
 
     # Write md
-    focus = ['Dem_Mayor', 'npdes_formal_prior3yr_muni', 'overflow_events_lag2',
+    focus = ['Dem_Mayor', 'npdes_formal_prior3yr_muni',
              'epa_npdes_informal_asinh_lag2', 'epa_water_violations_asinh_lag2',
              'case_jdc_prior3yr_muni', 'compulsion_index_z',
              'pres_dem_two_party_share_lag2',
