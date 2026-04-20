@@ -1,4 +1,4 @@
-﻿"Row,Issuer_Name,Issue_Date,lead_CUSIP,emma_security_details_url,prospectus_url"
+"Row,Issuer_Name,Issue_Date,lead_CUSIP,emma_security_details_url,prospectus_url"
 "1,City of Atlanta GA Department of Aviation,,04780M2K4,https://emma.msrb.org/Security/Details/04780M2K4,https://emma.msrb.org/P21963220-P21497913-P21950218.pdf"
 "2,City of Los Angeles Department of Airports,,5444452H1,https://emma.msrb.org/Security/Details/5444452H1,https://emma.msrb.org/P11836470-P11407478-P11849595.pdf"
 "3,City of San Francisco CA Public Utilities Commission Water Revenue,,79771FGL5,https://emma.msrb.org/Security/Details/79771FGL5,https://emma.msrb.org/P11837901-P11408439-P11850619.pdf"
@@ -183,3 +183,8 @@
 "182,City of Los Angeles Department of Airports,2025-09-25,5444456C8,https://emma.msrb.org/Security/Details/5444456C8,https://emma.msrb.org/P31462694-P11410516-P11852986.pdf"
 "183,City of Los Angeles Department of Airports,2025-10-22,5444455Q8,https://emma.msrb.org/Security/Details/5444455Q8,https://emma.msrb.org/P31462694-P11410516-P11852986.pdf"
 "184,City of Los Angeles Department of Airports,2025-11-07,5444452Q1,https://emma.msrb.org/Security/Details/5444452Q1,https://emma.msrb.org/P11836470-P11407478-P11849595.pdf"
+185,City of Los Angeles Department of Airports,2022-08-24,54444SB32,https://emma.msrb.org/Security/Details/54444SB32,NO OS FOUND
+186,San Francisco City & County Public Utilities Commission Wastewater Revenue,2018-08-09,79768HEA2,https://emma.msrb.org/Security/Details/79768HEA2,https://emma.msrb.org/P21853260-ES925634-ES1326652.pdf
+187,San Francisco City & County Public Utilities Commission Wastewater Revenue,2021-11-30,79768HFV5,https://emma.msrb.org/Security/Details/79768HFV5,https://emma.msrb.org/P21519443-P21175017-P21591296.pdf
+188,City of Tampa FL,2021-10-07,875143B57,https://emma.msrb.org/Security/Details/875143B57,NO OS FOUND
+189,City of Spokane WA Water & Wastewater Revenue,2014-12-02,849103ACO,https://emma.msrb.org/Security/Details/849103AC0,https://emma.msrb.org/EA665289-EA521356-EA917540.pdf
