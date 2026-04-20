@@ -289,8 +289,19 @@ if MODULE in ('rob2', 'all'):
     fog = [v for v in ['dem_x_termlimits','dem_x_fog','dem_x_initiative'] if v in df.columns]
     if fog: specs.append(('R19 FOG×Dem', Y, PRIMARY + fog, 'ICMA FOG institutional interactions'))
 
+    # R20 EPA ownership tier: replace _muni with _locgov (local-gov water districts)
+    rhs_no_muni = [v for v in PRIMARY if v != 'npdes_formal_prior3yr_muni']
+    if 'npdes_formal_prior3yr_locgov' in df.columns:
+        specs.append(('R20 NPDES Locgov', Y, rhs_no_muni + ['npdes_formal_prior3yr_locgov'],
+                      'Supplement: replace _muni with _locgov (water districts)'))
+
+    # R21 EPA ownership placebo: _private enforcement (expected null)
+    if 'npdes_formal_prior3yr_private' in df.columns:
+        specs.append(('R21 NPDES Private', Y, rhs_no_muni + ['npdes_formal_prior3yr_private'],
+                      'Placebo: _private enforcement (expected null)'))
+
     run_block(df, specs, 'table1_v3_rob2.md',
-              'Table 1 v3 — Robustness R11-R19 (gravity, ESG endog, Rep mirror, FOG)')
+              'Table 1 v3 — Robustness R11-R21 (gravity, ESG endog, Rep mirror, FOG, EPA tiers)')
 
 # ══════════════════════════════════════════════════════════════════════
 # MODULE: ftest — within-R² and compulsion-block F-test (Task 8)

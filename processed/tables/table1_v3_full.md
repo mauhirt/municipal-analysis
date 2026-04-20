@@ -74,7 +74,7 @@ All on `Y_self_green`. Same primary RHS + one addition per column.
 
 ---
 
-## Robustness R11–R20
+## Robustness R11–R21
 
 All on `Y_self_green`. Same primary RHS + additions.
 
@@ -89,10 +89,12 @@ All on `Y_self_green`. Same primary RHS + additions.
 | R17 ESG Endogeneity | state_pre_esg_activity + interaction | -0.001 | 0.004 | **`state_pre_esg_activity` +0.064\*\*\*** |
 | R18 Rep Mirror | Rep_Mayor_lag1 (legacy) | -0.001 | 0.005 | Confirms null |
 | R19 FOG × Dem | termlimits + fog + initiative interactions | +0.029 | 0.019 | `dem_x_fog` -0.018 (ns) |
+| R20 NPDES Locgov | replace `_muni` with `_locgov` supplement | -0.002 | 0.004 | **`npdes_formal_prior3yr_locgov` +0.014\*\*** |
+| R21 NPDES Private | replace `_muni` with `_private` placebo | -0.001 | 0.004 | `npdes_formal_prior3yr_private` -0.006 (ns) |
 
 ### Reading
 
-`Dem_Mayor` null across all 9 (range: -0.002 to +0.029).
+`Dem_Mayor` null across all 11 (range: -0.002 to +0.029).
 
 **R17 ESG Endogeneity:** `state_pre_esg_activity` = +0.064\*\*\*. States that had city-level green bond activity BEFORE their first anti-ESG law produce significantly more self-labelled bonds than states that enacted anti-ESG laws without prior market activity. This is the endogeneity test from Part E: anti-ESG laws passed in states with existing markets may suppress real activity; anti-ESG laws passed in states without prior markets are "backlash to nothing." The interaction `esg_post × pre_activity` is -0.013 (ns), suggesting the suppression effect is not yet statistically distinguishable from the baseline. R17 is the sole novel robustness finding in this block.
 
