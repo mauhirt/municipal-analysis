@@ -7,12 +7,12 @@ Compulsion block tested: npdes_formal_prior3yr_muni, reserve_ratio_lag2, debt_se
 
 | Column | Outcome | N | Within-R² | F-stat (compulsion block) | p-value | df |
 |---|---|---|---|---|---|---|
-| C1 GBI | `Green_Bond_Issued` | 6477 | 0.0041 | 0.92 | 0.4297 | 3 |
-| C2 GBI amt | `asinh_green_amt` | 6477 | 0.0041 | 0.84 | 0.4726 | 3 |
-| C3 Self-green | `Y_self_green` | 6477 | 0.0017 | 0.14 | 0.9371 | 3 |
-| C4 Self amt | `asinh_self_green_amt` | 6477 | 0.0017 | 0.14 | 0.9386 | 3 |
-| C5 NPDES×Party | `Green_Bond_Issued` | 6477 | 0.0023 | 0.47 | 0.7043 | 3 |
-| C6 Demonstration | `Y_self_green` | 6477 | -0.0022 | 0.17 | 0.9176 | 3 |
+| C1 GBI | `Green_Bond_Issued` | 6825 | 0.0007 | 1.47 | 0.2198 | 3 |
+| C2 GBI amt | `asinh_green_amt` | 6825 | -0.0006 | 1.37 | 0.2505 | 3 |
+| C3 Self-green | `Y_self_green` | 6825 | -0.0029 | 0.56 | 0.6433 | 3 |
+| C4 Self amt | `asinh_self_green_amt` | 6825 | -0.0045 | 0.55 | 0.6461 | 3 |
+| C5 NPDES×Party | `Green_Bond_Issued` | 6825 | 0.0040 | 0.82 | 0.4814 | 3 |
+| C6 Demonstration | `Y_self_green` | 6825 | 0.0016 | 0.49 | 0.6918 | 3 |
 
 Within-R² = variation explained after absorbing city and year FE.
 F-test: joint null that all compulsion-block coefficients = 0.
