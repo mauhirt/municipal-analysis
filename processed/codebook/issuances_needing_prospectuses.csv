@@ -1,6 +1,4 @@
 Issuer_Name,Issue_Date,n_CUSIPs,Self_reported_Green,Total_Face_Value,lead_CUSIP,all_CUSIPs,emma_search
-City & County Honolulu HI Wastewater System Revenue,2024-09-25,8,Yes,287200000,4387014A9,4387014A9;4387014B7;4387014C5;4387014D3;4387014E1;4387014F8;4387014G6;4387014H4,https://emma.msrb.org/Search/Search.aspx?criteria=4387014A9
-City of Bloomington MN,2018-12-05,15,Yes,10805000,094780V42,094780V42;094780V59;094780V67;094780V75;094780V83;094780V91;094780W25;094780W33;094780W41;094780W58;094780W66;094780W74;094780W82;094780W90;094780X24,https://emma.msrb.org/Search/Search.aspx?criteria=094780V42
 City of Little Rock AR Water Reclamation System Revenue,2020-12-03,13,Yes,22850000,53746QAV2,53746QAV2;53746QAW0;53746QAX8;53746QAY6;53746QAZ3;53746QBA7;53746QBB5;53746QBC3;53746QBD1;53746QBE9;53746QBF6;53746QBG4;53746QBH2,https://emma.msrb.org/Search/Search.aspx?criteria=53746QAV2
 City of Los Angeles CA Wastewater System Revenue,2023-09-13,1,No,280000000,54466DAA3,54466DAA3,https://emma.msrb.org/Search/Search.aspx?criteria=54466DAA3
 City of Renton WA,2013-07-01,1,No,3200000,760133SZ2,760133SZ2,https://emma.msrb.org/Search/Search.aspx?criteria=760133SZ2
@@ -8,4 +6,3 @@ Metropolitan Pier & Exposition Authority,2019-05-08,20,No,36865000,59225CAA6,592
 Metropolitan Pier & Exposition Authority,2024-01-10,3,No,42830000,59225CAW8,59225CAW8;59225CAX6;59225CAY4,https://emma.msrb.org/Search/Search.aspx?criteria=59225CAW8
 St Louis Clean Energy Development Board,2017-09-21,1,No,10105000,791642AA9,791642AA9,https://emma.msrb.org/Search/Search.aspx?criteria=791642AA9
 St Louis Clean Energy Development Board,2018-06-22,1,No,2638000,791642AC5,791642AC5,https://emma.msrb.org/Search/Search.aspx?criteria=791642AC5
-St Louis Municipal Finance Corp,2016-05-04,1,No,3635000,79165TRS2,79165TRS2,https://emma.msrb.org/Search/Search.aspx?criteria=79165TRS2

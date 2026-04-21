@@ -1,27 +1,4 @@
 CUSIP,Issuer_Name,Issue_Date,Maturity,Amt_Issued,Self_reported_Green,State
-4387014A9,City & County Honolulu HI Wastewater System Revenue,2024-09-25,2041-07-01,14485000.0,Yes,HI
-4387014B7,City & County Honolulu HI Wastewater System Revenue,2024-09-25,2042-07-01,15225000.0,Yes,HI
-4387014C5,City & County Honolulu HI Wastewater System Revenue,2024-09-25,2043-07-01,16005000.0,Yes,HI
-4387014D3,City & County Honolulu HI Wastewater System Revenue,2024-09-25,2025-12-01,16825000.0,Yes,HI
-4387014E1,City & County Honolulu HI Wastewater System Revenue,2024-09-25,2045-07-01,17690000.0,Yes,HI
-4387014F8,City & County Honolulu HI Wastewater System Revenue,2024-09-25,2046-07-01,18595000.0,Yes,HI
-4387014G6,City & County Honolulu HI Wastewater System Revenue,2024-09-25,2049-07-01,61710000.0,Yes,HI
-4387014H4,City & County Honolulu HI Wastewater System Revenue,2024-09-25,2054-07-01,126665000.0,Yes,HI
-094780V42,City of Bloomington MN,2018-12-05,2020-02-01,470000.0,Yes,MN
-094780V59,City of Bloomington MN,2018-12-05,2021-02-01,555000.0,Yes,MN
-094780V67,City of Bloomington MN,2018-12-05,2022-02-01,580000.0,Yes,MN
-094780V75,City of Bloomington MN,2018-12-05,2023-02-01,610000.0,Yes,MN
-094780V83,City of Bloomington MN,2018-12-05,2024-02-01,635000.0,Yes,MN
-094780V91,City of Bloomington MN,2018-12-05,2025-02-01,665000.0,Yes,MN
-094780W25,City of Bloomington MN,2018-12-05,2026-02-01,690000.0,Yes,MN
-094780W33,City of Bloomington MN,2018-12-05,2027-02-01,725000.0,Yes,MN
-094780W41,City of Bloomington MN,2018-12-05,2028-02-01,755000.0,Yes,MN
-094780W58,City of Bloomington MN,2018-12-05,2029-02-01,790000.0,Yes,MN
-094780W66,City of Bloomington MN,2018-12-05,2030-02-01,810000.0,Yes,MN
-094780W74,City of Bloomington MN,2018-12-05,2031-02-01,835000.0,Yes,MN
-094780W82,City of Bloomington MN,2018-12-05,2032-02-01,865000.0,Yes,MN
-094780W90,City of Bloomington MN,2018-12-05,2033-02-01,895000.0,Yes,MN
-094780X24,City of Bloomington MN,2018-12-05,2034-02-01,925000.0,Yes,MN
 53746QAV2,City of Little Rock AR Water Reclamation System Revenue,2020-12-03,2024-08-01,365000.0,Yes,AR
 53746QAW0,City of Little Rock AR Water Reclamation System Revenue,2020-12-03,2025-08-01,1055000.0,Yes,AR
 53746QAX8,City of Little Rock AR Water Reclamation System Revenue,2020-12-03,2026-08-01,1070000.0,Yes,AR
@@ -62,4 +39,3 @@ CUSIP,Issuer_Name,Issue_Date,Maturity,Amt_Issued,Self_reported_Green,State
 59225CAY4,Metropolitan Pier & Exposition Authority,2024-01-10,2038-06-15,13980000.0,--,IL
 791642AA9,St Louis Clean Energy Development Board,2017-09-21,2037-03-01,10105000.0,--,MO
 791642AC5,St Louis Clean Energy Development Board,2018-06-22,2038-03-01,2638000.0,--,MO
-79165TRS2,St Louis Municipal Finance Corp,2016-05-04,2031-04-15,3635000.0,--,MO
