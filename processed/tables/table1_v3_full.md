@@ -66,7 +66,10 @@ Full coefficients in `table1_v3_rob2.md`. `Dem_Mayor` null across all 14 specs (
 |---|---|---|
 | R11 CAA nonattainment | -0.001 | ozone ns |
 | R12 Water ladder (informal+violations+JDC) | -0.002 | water_violations weakly + |
-| R13–R16 Gravity (peer/special/county/all) | -0.001 | all ns — no spatial spillover |
+| R13 Gravity peer city self-label (1/d²) | -0.001 | peer -0.009 (ns) |
+| R14 Gravity special district self-label (1/d²) | -0.001 | special +0.011 (ns) |
+| R15 Gravity county self-label (1/d²) | -0.001 | county +0.004 (ns) |
+| R16 Gravity all three channels jointly | -0.001 | all ns |
 | R17 ESG endogeneity | -0.001 | **`state_pre_esg_activity` +0.064\*\*\*** |
 | R18 Rep_Mayor mirror | — | confirms null |
 | R19 FOG × Dem | +0.027 | ns |
@@ -75,6 +78,8 @@ Full coefficients in `table1_v3_rob2.md`. `Dem_Mayor` null across all 14 specs (
 | R22 Kitchen-sink (+all dropped vars) | -0.002 | confirms drop was inert |
 | **R23 Fiscal stress composite** | -0.001 | composite replaces components |
 | **R24 State trifectas** | -0.001 | trifecta dummies ns |
+
+**R13–R16 Local spatial spillover.** All three gravity-weighted channels (peer city self-label, special district self-label, county self-label, all inverse-distance-squared) are null. No evidence of local spatial spillover at the extensive margin once state-level market depth is included in Family 3. The marketability channel operates at the **state market level**, not through local peer imitation or neighbour substitution — a cleaner theoretical story than alternative "nearby issuer effects" explanations.
 
 **R22 Kitchen-sink** includes all previously-dropped variables (`charges_to_own_source`, `igr_share`, `tel_x_prop_tax_dep`, `capital_outlay_pc`, `has_substitute_issuer`, state trifectas, `fiscal_stress_index`). `Dem_Mayor` still null; confirms the trimmed main spec loses no information.
 
