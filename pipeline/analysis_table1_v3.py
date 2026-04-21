@@ -23,47 +23,48 @@ OUT.mkdir(parents=True, exist_ok=True)
 MODULE = os.environ.get('TABLE1_MODULE', 'main')
 
 # ── RHS blocks ──
-# Three-family spec, aligned with VARIABLE_ADDITIONS_SPEC.md.
+# Theory-driven specification for top publication.
+# Every variable maps to a hypothesis or is a standard muni-finance control.
+# All variables have ≥98% panel coverage — no sample loss.
 #
-# FAMILY 1 — MATERIAL (compulsion + fiscal capacity):
-#   npdes_formal_prior3yr_muni, npdes_x_state_green (marketability interaction),
-#   reserve_ratio_lag2, debt_service_burden_lag2
+# TREATMENT: Dem_Mayor
 #
-# FAMILY 2 — POLITICAL (partisan identity + constituency):
-#   Dem_Mayor, pres_dem_two_party_share_lag2
+# CORE CHANNELS (3 hypotheses):
+#   npdes_formal_prior3yr_muni          H2 compulsion
+#   pres_dem_two_party_share_lag2       H1a constituency
+#   asinh_state_all_green_cum_amt_lag1  H3 market depth / demonstration
 #
-# FAMILY 3 — STATE/INSTITUTIONAL (state political + ESG policy + market depth):
-#   state_dem_governor_lag1, fn_esg_has_muni_bond_law_post_lag1,
-#   asinh_state_all_green_cum_amt_lag1
+# FISCAL (standard muni-finance, 99% coverage):
+#   reserve_ratio_lag2                  fiscal capacity gate
+#   debt_service_burden_lag2            debt load / borrowing cost
 #
-# CONTROLS (standard muni-finance demographics):
+# INSTITUTIONAL:
+#   fn_esg_has_muni_bond_law_post_lag1  anti-ESG law (topical, anchors R17/CS-DiD)
+#
+# DEMOGRAPHICS (standard controls):
 #   log_population_city_lag2, log_percapita_income_city_lag2, unemployment_city_lag2
 #
-# Total: 12 variables (including the npdes_x_state_green interaction).
-# Dropped from earlier iterations (available in robustness R22 kitchen-sink):
-#   charges_to_own_source_lag2, igr_share_lag2, tel_x_prop_tax_dep,
-#   capital_outlay_pc_lag2, has_substitute_issuer, state_dem_trifecta_lag1,
-#   state_rep_trifecta_lag1, fiscal_stress_index_lag2 (collinear composite)
+# Total: 10 variables. Maximises N by excluding variables with Census
+# fiscal gaps (capital_outlay_pc_lag2, igr_share_lag2 — both 16% missing,
+# zero coverage in 2013-2014, never significant). Those and other dropped
+# variables are tested in robustness (R22 kitchen-sink).
 PRIMARY = [
-    # Family 1: Material
-    'Dem_Mayor',  # moved up as treatment (reported first for clarity)
-    'pres_dem_two_party_share_lag2',  # Family 2
+    'Dem_Mayor',
     'npdes_formal_prior3yr_muni',
-    'reserve_ratio_lag2', 'debt_service_burden_lag2',
-    # Family 3: State/Institutional
-    'state_dem_governor_lag1',
-    'fn_esg_has_muni_bond_law_post_lag1',
+    'pres_dem_two_party_share_lag2',
     'asinh_state_all_green_cum_amt_lag1',
-    # Controls
+    'reserve_ratio_lag2', 'debt_service_burden_lag2',
+    'fn_esg_has_muni_bond_law_post_lag1',
     'log_population_city_lag2', 'log_percapita_income_city_lag2',
     'unemployment_city_lag2',
 ]
 
-# 18-var "kitchen-sink" spec for the R22 robustness column below.
+# Kitchen-sink: PRIMARY + all previously-dropped controls for R22.
 PRIMARY_KITCHEN = PRIMARY + [
-    'charges_to_own_source_lag2', 'igr_share_lag2', 'tel_x_prop_tax_dep',
-    'capital_outlay_pc_lag2', 'has_substitute_issuer',
-    'state_dem_trifecta_lag1', 'state_rep_trifecta_lag1',
+    'capital_outlay_pc_lag2', 'igr_share_lag2',
+    'charges_to_own_source_lag2', 'tel_x_prop_tax_dep',
+    'has_substitute_issuer',
+    'state_dem_governor_lag1', 'state_dem_trifecta_lag1', 'state_rep_trifecta_lag1',
     'fiscal_stress_index_lag2',
 ]
 
