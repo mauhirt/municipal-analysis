@@ -23,16 +23,33 @@ OUT.mkdir(parents=True, exist_ok=True)
 MODULE = os.environ.get('TABLE1_MODULE', 'main')
 
 # ── RHS blocks ──
+# LEAN PRIMARY (13 vars): theory-driven + standard demographic controls.
+# Dropped from earlier spec (all consistently null, no strong theoretical case):
+#   charges_to_own_source_lag2, igr_share_lag2, tel_x_prop_tax_dep,
+#   capital_outlay_pc_lag2, has_substitute_issuer
+# Available as "kitchen-sink" robustness column (R22 below).
 PRIMARY = [
+    # Treatment
     'Dem_Mayor',
+    # Constituency (H1a)
     'pres_dem_two_party_share_lag2',
+    # Compulsion (H2)
     'npdes_formal_prior3yr_muni',
-    'charges_to_own_source_lag2', 'reserve_ratio_lag2',
-    'debt_service_burden_lag2', 'igr_share_lag2', 'tel_x_prop_tax_dep',
-    'state_dem_governor_lag1', 'state_dem_trifecta_lag1', 'state_rep_trifecta_lag1',
+    # Fiscal capacity
+    'reserve_ratio_lag2', 'debt_service_burden_lag2',
+    # Policy environment (H3 + anti-ESG)
     'fn_esg_has_muni_bond_law_post_lag1', 'asinh_state_all_green_cum_amt_lag1',
+    # State political environment
+    'state_dem_governor_lag1', 'state_dem_trifecta_lag1', 'state_rep_trifecta_lag1',
+    # Demographic controls
     'log_population_city_lag2', 'log_percapita_income_city_lag2',
-    'unemployment_city_lag2', 'has_substitute_issuer', 'capital_outlay_pc_lag2',
+    'unemployment_city_lag2',
+]
+
+# 18-var "kitchen-sink" spec for the R22 robustness column below.
+PRIMARY_KITCHEN = PRIMARY + [
+    'charges_to_own_source_lag2', 'igr_share_lag2', 'tel_x_prop_tax_dep',
+    'capital_outlay_pc_lag2', 'has_substitute_issuer',
 ]
 
 def fit(df, y, xs, fe=('state_id','year'), cluster='fips7'):
@@ -103,6 +120,12 @@ def run_block(df, specs, outfile, title):
     lines.append('| N | ' + ' | '.join(str(n) for (_, _, _, _, _, n) in results) + ' |')
     lines.append('| R² | ' + ' | '.join(
         f'{res.rsquared:.3f}' if res else '—' for (_, _, _, _, res, _) in results) + ' |')
+    # Note omitted controls for transparency
+    omitted = list(dict.fromkeys(v for (_, _, xs, *_) in results for v in xs
+                                  if (v.startswith('log_') or v.startswith('unemployment')
+                                      or v in ('has_substitute_issuer','capital_outlay_pc_lag2'))))
+    if omitted:
+        lines.append('\nControls included but not shown: ' + ', '.join(f'`{v}`' for v in omitted) + '.')
     lines.append('\n* p<0.10, ** p<0.05, *** p<0.01.')
     (OUT / outfile).write_text('\n'.join(lines) + '\n')
     print(f"\nWrote: {OUT / outfile}")
@@ -295,8 +318,12 @@ if MODULE in ('rob2', 'all'):
         specs.append(('R21 NPDES Private', Y, rhs_no_muni + ['npdes_formal_prior3yr_private'],
                       'Placebo: _private enforcement (expected null)'))
 
+    # R22 Kitchen-sink: lean PRIMARY + 5 dropped fiscal controls
+    specs.append(('R22 Kitchen-sink', Y, PRIMARY_KITCHEN,
+                  '18-var spec: PRIMARY + dropped fiscal controls (charges, IGR, TEL, capital_outlay, substitute_issuer)'))
+
     run_block(df, specs, 'table1_v3_rob2.md',
-              'Table 1 v3 — Robustness R11-R21 (gravity, ESG endog, Rep mirror, FOG, EPA tiers)')
+              'Table 1 v3 — Robustness R11-R22 (gravity, ESG endog, Rep mirror, FOG, EPA tiers, kitchen-sink)')
 
 # ══════════════════════════════════════════════════════════════════════
 # MODULE: ftest — within-R² and compulsion-block F-test (Task 8)

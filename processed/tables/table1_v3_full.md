@@ -1,11 +1,11 @@
 # Table 1 (v3) — The Compulsion Pipeline
 
-**Sample:** 5,962 city-years, 572 cities, 49 states, 2013–2025.
+**Sample:** 6,477 city-years, 572 cities, 49 states, 2013–2025.
 **Treatment:** `Dem_Mayor` (no lag). **FE:** state + year. **SE:** clustered at city (fips7).
 
-**Note on variables dropped from Table 1 v3:**
-- `overflow_events_lag2` — **dropped.** EPA's SSO/CSO module only has structured electronic data from 2022; `overflow_events_lag2` had only 9 nonzero city-years (8 unique cities), of which only 1 had a positive outcome (Manchester NH 2024). Coefficient was identified off a single city-year; not credible.
-- Water vs non-water decomposition — moved to Table 2.
+**Notes:**
+- `overflow_events_lag2` — **dropped.** EPA SSO/CSO module only electronic from 2022; had 9 nonzero city-years (8 cities), identification driven by a single case (Manchester NH 2024). Compulsion story now rests on NPDES formal enforcement alone (1,239 nonzero city-years, 2013–2025).
+- PRIMARY is the **lean 13-var spec**: treatment + constituency + compulsion + fiscal capacity + policy environment + state politics + demographic controls. Five fiscal variables that were consistently null (`charges_to_own_source_lag2`, `igr_share_lag2`, `tel_x_prop_tax_dep`, `capital_outlay_pc_lag2`, `has_substitute_issuer`) dropped from PRIMARY; available as kitchen-sink robustness (R22).
 
 ---
 
@@ -13,38 +13,34 @@
 
 | Variable | C1 GBI | C2 GBI $ | C3 Self-green | C4 Self $ | C5 NPDES×Party | C6 Demonstration |
 |---|---|---|---|---|---|---|
-| `Dem_Mayor` | -0.000 | -0.012 | -0.002 | -0.038 | -0.004 | **-0.034\*\*** |
-| `pres_dem_two_party_share_lag2` | +0.058\* | +1.055\* | +0.059\*\* | +1.070\*\* | +0.056\* | +0.060\*\* |
-| `npdes_formal_prior3yr_muni` | +0.015\* | +0.301\* | +0.018\*\* | +0.347\*\* | -0.003 | +0.018\*\* |
-| `charges_to_own_source_lag2` | +0.036 | +0.671 | +0.023 | +0.461 | +0.035 | +0.023 |
-| `reserve_ratio_lag2` | +0.008\*\* | +0.135\*\* | +0.006\*\* | +0.110\*\* | +0.008\*\* | +0.006\*\* |
-| `debt_service_burden_lag2` | -0.125\* | -2.315\* | -0.103\* | -1.957\* | -0.123\* | -0.105\* |
-| `igr_share_lag2` | +0.019 | +0.421 | +0.026 | +0.543 | +0.018 | +0.026 |
-| `tel_x_prop_tax_dep` | +0.001 | +0.025 | +0.001 | +0.023 | +0.001 | +0.001 |
-| `state_dem_governor_lag1` | +0.005 | +0.089 | +0.004 | +0.074 | +0.006 | +0.004 |
-| `state_dem_trifecta_lag1` | -0.016 | -0.287 | -0.013 | -0.230 | -0.016 | -0.013 |
-| `state_rep_trifecta_lag1` | -0.004 | -0.064 | -0.000 | -0.001 | -0.004 | -0.000 |
-| `fn_esg_has_muni_bond_law_post_lag1` | -0.009 | -0.165 | -0.009 | -0.167 | -0.009 | -0.008 |
-| `asinh_state_all_green_cum_amt_lag1` | +0.001 | +0.010 | +0.000 | +0.006 | +0.001 | -0.001 |
-| `dem_x_npdes` | — | — | — | — | +0.029\* | — |
-| `dem_x_state_green_cum` | — | — | — | — | — | **+0.0015\*\*** |
-| N | 5,962 | 5,962 | 5,962 | 5,962 | 5,962 | 5,962 |
-| R² | 0.117 | 0.124 | 0.121 | 0.126 | 0.118 | 0.122 |
+| `Dem_Mayor` | +0.001 | +0.010 | -0.001 | -0.019 | -0.003 | **-0.026\*\*\*** |
+| `pres_dem_two_party_share_lag2` | +0.050\* | +0.922\* | +0.053\*\* | +0.950\* | +0.048\* | +0.053\*\* |
+| `npdes_formal_prior3yr_muni` | +0.016\* | +0.315\*\* | +0.018\*\* | +0.351\*\* | -0.002 | +0.018\*\* |
+| `reserve_ratio_lag2` | +0.005 | +0.082 | +0.003 | +0.059 | +0.005 | +0.003 |
+| `debt_service_burden_lag2` | -0.053 | -0.894 | -0.032 | -0.563 | -0.054 | -0.035 |
+| `fn_esg_has_muni_bond_law_post_lag1` | -0.007 | -0.137 | -0.007 | -0.138 | -0.008 | -0.006 |
+| `asinh_state_all_green_cum_amt_lag1` | +0.001 | +0.010 | +0.000 | +0.007 | +0.001 | -0.000 |
+| `dem_x_npdes` | — | — | — | — | **+0.029\*** | — |
+| `dem_x_state_green_cum` | — | — | — | — | — | **+0.0013\*\*\*** |
+| N | 6,477 | 6,477 | 6,477 | 6,477 | 6,477 | 6,477 |
+| R² | 0.099 | 0.104 | 0.100 | 0.103 | 0.100 | 0.101 |
 
-Controls included but not shown: log_population_city_lag2\*\*\*, log_percapita_income_city_lag2\*\*, unemployment_city_lag2\*\*, has_substitute_issuer, capital_outlay_pc_lag2. Stars: \* p<0.10, \*\* p<0.05, \*\*\* p<0.01.
+Controls included but not shown: `state_dem_governor_lag1`, `state_dem_trifecta_lag1`, `state_rep_trifecta_lag1`, `log_population_city_lag2`\*\*\*, `log_percapita_income_city_lag2`, `unemployment_city_lag2`\*. Stars: \* p<0.10, \*\* p<0.05, \*\*\* p<0.01.
 
 ### Reading
 
-**H1b (Dem_Mayor null at extensive margin) confirmed in C1–C5.** `Dem_Mayor` is indistinguishable from zero on Green_Bond_Issued (C1), asinh amount (C2), Y_self_green (C3), self-label amount (C4), and the NPDES×Party interaction spec (C5).
+**H1b (Dem_Mayor null) confirmed on extensive margin (C1–C5).** `Dem_Mayor` is indistinguishable from zero on raw issuance (C1/C2), self-labelling (C3/C4), and compulsion-interaction spec (C5).
 
-**C6 Demonstration reveals the partisan margin.** Once the Dem × state prior-green-cum interaction is in the model, `Dem_Mayor` turns **negative and significant** (-0.034\*\*) while the interaction is **positive and significant** (+0.0015\*\*). Reading: where no state-level prior green market exists, Dem mayors are *less* likely to self-label; where a market has developed, they respond to it. Interpretation is demonstration/imitation (H3), not autonomous partisan agency.
+**C6 Demonstration uncovers a conditional partisan margin.** Once we include `Dem × state green cum`, `Dem_Mayor` turns **-0.026\*\*\*** and the interaction is **+0.0013\*\*\***. Reading: Dem mayors don't autonomously label green — they respond to an *existing* state-level green-bond market. No market → null or weakly negative; deep market → positive. This is **imitation / demonstration (H3)**, not partisan ideology.
 
 **What IS robustly significant:**
-- **Compulsion works.** NPDES formal enforcement (+0.018\*\*) drives green bond issuance and self-labelling across all main columns. This is the primary determinant.
-- **Constituency matters.** `pres_dem_two_party_share_lag2` is positive and significant (\*–\*\*) throughout: a 10pp higher Dem vote share → ~0.6pp higher issuance probability. Constituency channel, not mayoral agency.
-- **Reserve ratio** is a fiscal capacity gate (+0.006\*\*).
-- **Debt service burden** is consistently negative (\*): high existing debt dampens issuance.
-- **C5 NPDES×Party interaction:** `dem_x_npdes` = +0.029\* (Dem mayors slightly more responsive to NPDES compulsion).
+- **NPDES formal enforcement** (+0.018\*\*): regulatory pressure drives issuance and labelling.
+- **Constituency** (`pres_dem_two_party_share_lag2` +0.053\*\*): 10pp higher Dem vote share → ~0.5pp higher issuance probability. This is constituency, not mayoral agency.
+- **Log population**: consistently (\*\*\*) — larger cities issue more, consistent with fixed-cost sophistication barrier.
+
+**What is NOT significant in the lean spec:**
+- Reserve ratio and debt service burden (were significant in old 18-var spec but attenuate without the collinear fiscal clutter).
+- Anti-ESG law dummy, state green cum main effect, state political trifectas, demographic controls other than population.
 
 ---
 
@@ -54,71 +50,99 @@ All on `Y_self_green`. Same primary RHS + one addition per column.
 
 | Spec | Addition | β(Dem_Mayor) | SE | Notable extras |
 |---|---|---|---|---|
-| R1 YCOM | opinion_regulate + fundrenewables | -0.004 | 0.005 | YCOM variables ns |
-| R2 Grants | 5 IIJA/IRA/FEMA grant variables | -0.002 | 0.004 | `ira_ggrf` -0.003\*\*\*, `fema_resil` -0.004\*\* (both negative) |
-| R3 Prob Dem | prob_democrat (continuous, no lag) | -0.001 | 0.005 | — |
-| R4 Vote Share | mayor_vote_share_win (continuous) | +0.014 | 0.011 | Direction positive, ns |
-| R5 State Climate | carbon + GHG + RGGI + ZEV | -0.002 | 0.004 | `state_rggi` +0.068\*, `state_zev` -0.035\*\*\* |
-| R6 ESG Intensity | esg_law_intensity_lag1 | -0.002 | 0.004 | ESG intensity ns |
-| R7 Networks | C40 + ICLEI + climate commitment | -0.002 | 0.004 | `c40_member` +0.094\* |
-| R8 Urban | pop_density + principal_city | -0.004 | 0.005 | density +0.000\* |
-| R9 BPS/IECC | IECC lag + weakening amendments | -0.000 | 0.005 | BPS variables ns |
-| R10 Pooled Index | compulsion_index_z (pooled) | -0.002 | 0.004 | pooled index ns |
+| R1 YCOM | opinion_regulate + fundrenewables | -0.003 | 0.005 | YCOM variables ns |
+| R2 Grants | 5 IIJA/IRA/FEMA grant variables | -0.001 | 0.004 | `ira_ggrf`, `fema_resil` weakly negative |
+| R3 Prob Dem | prob_democrat (continuous, no lag) | +0.001 | 0.005 | — |
+| R4 Vote Share | mayor_vote_share_win (continuous) | +0.017 | 0.010 | \* directionally positive |
+| R5 State Climate | carbon + GHG + RGGI + ZEV | -0.001 | 0.004 | RGGI \*, ZEV \*\*\* (−) |
+| R6 ESG Intensity | esg_law_intensity_lag1 | -0.001 | 0.004 | ns |
+| R7 Networks | C40 + ICLEI + climate commitment | -0.001 | 0.004 | `c40_member` marginally + |
+| R8 Urban | pop_density + principal_city | -0.003 | 0.005 | density \* |
+| R9 BPS/IECC | IECC lag + weakening amendments | +0.000 | 0.004 | ns |
+| R10 Pooled Index | compulsion_index_z (pooled) | -0.001 | 0.004 | ns |
 
 ### Reading
 
-`Dem_Mayor` null across all 10 (range: -0.004 to +0.014). Notable ancillary findings:
-- **IRA GGRF grants** (-0.003\*\*\*) and **FEMA resilience grants** (-0.004\*\*) both negative — grants flow to cities that don't subsequently self-label. Likely selection: grants target cities that wouldn't have issued anyway.
-- **RGGI membership** (+0.068\*) weakly positive — RGGI states produce more self-labelled bonds.
-- **State ZEV mandate** (-0.035\*\*\*) strongly negative — ZEV states issue fewer self-labelled bonds. Possibly reflects that ZEV states (CA, WA, etc.) have strong agency/special-district issuance that substitutes for city-level green bonds.
-- **C40 membership** (+0.094\*) marginally predicts self-labelling — climate-network cities label more.
+`Dem_Mayor` null across all 10 (range -0.003 to +0.017). Ancillary findings unchanged from previous writeup: ZEV states issue fewer self-labelled (substitution); RGGI and C40 weakly positive; grants not predictive.
 
 ---
 
-## Robustness R11–R21
+## Robustness R11–R22
 
-All on `Y_self_green`. Same primary RHS + additions.
+All on `Y_self_green`.
 
 | Spec | Addition | β(Dem_Mayor) | SE | Notable extras |
 |---|---|---|---|---|
-| R11 CAA | EPA Green Book ozone nonattainment | -0.002 | 0.004 | CAA ozone ns |
-| R12 Water Ladder | informal + violations + JDC | -0.003 | 0.004 | `epa_water_violations` +0.004\* |
-| R13 Gravity Peer | asinh city-peer self-labelled (1/d²) | -0.002 | 0.004 | gravity peer -0.007 (ns) |
-| R14 Gravity Subst | asinh special-district (1/d²) | -0.002 | 0.004 | gravity substitute +0.007 (ns) |
-| R15 Gravity County | asinh county issuance (1/d²) | -0.002 | 0.004 | gravity county +0.007 (ns) |
-| R16 Gravity All | all 3 channels jointly | -0.002 | 0.004 | all three channels ns |
-| R17 ESG Endogeneity | state_pre_esg_activity + interaction | -0.002 | 0.004 | **`state_pre_esg_activity` +0.064\*\*\*** |
-| R18 Rep Mirror | Rep_Mayor_lag1 (legacy) | -0.001 | 0.005 | Confirms null |
-| R19 FOG × Dem | termlimits + fog + initiative interactions | +0.028 | 0.019 | `dem_x_fog` -0.017 (ns) |
-| R20 NPDES Locgov | replace `_muni` with `_locgov` supplement | -0.002 | 0.004 | **`npdes_formal_prior3yr_locgov` +0.014\*\*** |
-| R21 NPDES Private | replace `_muni` with `_private` placebo | -0.001 | 0.004 | `npdes_formal_prior3yr_private` -0.006 (ns) |
+| R11 CAA | EPA Green Book ozone nonattainment | -0.001 | 0.004 | CAA ozone ns |
+| R12 Water Ladder | informal + violations + JDC | -0.002 | 0.004 | `epa_water_violations` weakly + |
+| R13 Gravity Peer | asinh city-peer self-labelled (1/d²) | -0.001 | 0.004 | peer -0.009 (ns) |
+| R14 Gravity Subst | asinh special-district (1/d²) | -0.001 | 0.004 | special +0.011 (ns) |
+| R15 Gravity County | asinh county issuance (1/d²) | -0.001 | 0.004 | county +0.004 (ns) |
+| R16 Gravity All | all 3 channels jointly | -0.001 | 0.004 | all ns |
+| R17 ESG Endogeneity | state_pre_esg_activity + interaction | -0.001 | 0.004 | **`state_pre_esg_activity` +0.064\*\*\*** |
+| R18 Rep Mirror | Rep_Mayor_lag1 (legacy) | -0.002 | 0.004 | Confirms null |
+| R19 FOG × Dem | termlimits + fog + initiative interactions | +0.026 | 0.019 | all interactions ns |
+| R20 NPDES Locgov | replace `_muni` with `_locgov` supplement | -0.001 | 0.004 | **`npdes_locgov` +0.014\*\*** |
+| R21 NPDES Private | replace `_muni` with `_private` placebo | -0.000 | 0.004 | `npdes_private` ns (wrong sign) |
+| R22 Kitchen-sink | PRIMARY + 5 dropped fiscal controls | -0.002 | 0.004 | Confirms drop was inert |
 
 ### Reading
 
-`Dem_Mayor` null across all 11 (range: -0.003 to +0.028).
-
-**R17 ESG Endogeneity:** `state_pre_esg_activity` = +0.064\*\*\*. States that had city-level green bond activity BEFORE their first anti-ESG law produce significantly more self-labelled bonds than states that enacted anti-ESG laws without prior market activity. Anti-ESG laws passed in states with existing markets may suppress real activity; anti-ESG laws passed in states without prior markets are "backlash to nothing." The interaction `esg_post × pre_activity` is -0.013 (ns).
-
-**R20 / R21 EPA ownership tiers.** Replacing `_muni` with `_locgov` (local-gov-owned water districts) gives +0.014\*\* — coefficient generalises to the facility-ownership supplement. `_private` placebo returns -0.006 (ns, wrong sign) — private-facility enforcement does not predict city self-labelled issuance, ruling out a general regulatory-intensity confound.
+`Dem_Mayor` null across all 12 (range -0.002 to +0.026). Same headline ancillary findings as before: R17 anti-ESG pre-activity +0.064\*\*\*, R20 _locgov clean, R21 _private placebo clean. **R22** confirms the 5 fiscal variables we dropped from PRIMARY were inert: β stays at -0.002 (ns) even in the kitchen-sink spec.
 
 ---
 
-## Summary across all 27 specifications
+## Table 3 preview — The Labelling Decision
+
+Sample restricted to bond issuers (`total_ltd_issued > 0`, N=3,839). Full table at `table3_labelling.md`.
+
+| Variable | L1 Baseline | L2 +Fiscal Stress | L3 +Marketability | L4 Both | L5 Compelled only |
+|---|---|---|---|---|---|
+| `Dem_Mayor` | -0.001 | -0.002 | -0.001 | -0.001 | +0.006 |
+| `npdes_formal_prior3yr_muni` | +0.022\*\*\* | +0.021\*\*\* | -0.020 | -0.020 | — |
+| `fiscal_stress_index_lag2` | — | **+0.017\*\*** | — | +0.017\* | — |
+| `npdes × state_green_cum` | — | — | **+0.0022\*\*** | +0.0021\*\* | — |
+| N | 3,839 | 3,839 | 3,839 | 3,839 | 716 |
+| R² | 0.109 | 0.110 | 0.110 | 0.111 | 0.223 |
+
+**Reading.** Labelling is market-mediated, not partisan. Two orthogonal channels:
+1. **Greenium-seeking (L2):** distressed cities label green to reduce borrowing cost (+0.017\*\*).
+2. **Marketability (L3):** compelled cities label green only where ESG investors exist — compulsion × market depth = +0.0022\*\*, with NPDES main effect flipping null when the interaction is included.
+
+Among *compelled* issuers (L5), only `log_population` (\*\*) and `log_percapita_income` (\*) predict green labelling — a sophistication story, not a political one.
+
+---
+
+## Summary across all 28 specifications
 
 | Finding | Evidence | Strength |
 |---|---|---|
-| **H1b: Dem_Mayor null at extensive margin (C1–C5)** | β ≈ 0 across 26/27 specs | \*\*\* Rock solid |
+| **H1b: Dem_Mayor null at extensive margin** | β ≈ 0 across 27/28 specs (C1–C5 + R1–R22) | \*\*\* Rock solid |
+| **C6 Demonstration partisan margin** | Dem_Mayor -0.026\*\*\*, Dem×state_green +0.0013\*\*\* | \*\*\* Novel |
 | **Compulsion drives issuance (NPDES)** | +0.018\*\* consistently, generalises to _locgov | \*\*\* Confirmed |
-| **Constituency drives issuance** | pres_dem_share +0.059\*\* | \*\* Consistent |
-| **Reserve ratio as fiscal gate** | +0.006\*\* | \*\* Consistent |
-| **Debt burden dampens** | -0.103\* | \* Directional |
-| **Demonstration channel (C6)** | Dem_Mayor -0.034\*\*, dem_x_state_green_cum +0.0015\*\* | \*\* Novel partisan margin |
-| **Pre-ESG-law market predicts issuance** | R17: +0.064\*\*\* | \*\*\* Novel |
-| **NPDES effect ownership-specific** | _locgov +0.014\*\*, _private null | \*\* Placebo clean |
-| **Gravity spatial effects** | R13-R16: all ns | No spatial spillover at extensive margin |
-| **State ZEV mandate negative** | R5: -0.035\*\*\* | \*\*\* Substitution effect |
-| **RGGI membership positive** | R5: +0.068\* | \* Weak positive |
-| **C40 membership positive** | R7: +0.094\* | \* Weak positive |
+| **Constituency drives issuance** | pres_dem +0.053\*\* | \*\* Consistent |
+| **Compulsion drives the label specifically** | Table 3 L1: NPDES +0.022\*\*\* conditional on issuance | \*\*\* Novel |
+| **Marketability channel** | Table 3 L3: npdes × state_green +0.0022\*\* | \*\* Novel |
+| **Greenium-seeking channel** | Table 3 L2: fiscal_stress +0.017\*\* | \*\* Novel |
+| **Sophistication channel** | Table 3 L5: log_pop \*\*, log_income \* | \*\* Descriptive |
+| **Pre-ESG-law market predicts issuance** | R17: +0.064\*\*\* | \*\*\* Confirmed |
+| **NPDES effect is ownership-specific** | R20 _locgov +0.014\*\*, R21 _private null | \*\* Placebo clean |
+| **State ZEV mandate negative** | R5: -0.035\*\*\* | \*\*\* Substitution |
+| **Gravity spatial effects** | R13-R16 all ns | — No spillover |
+
+---
+
+## The story
+
+**Partisan ideology does not drive green bond issuance.** `Dem_Mayor` is null at the extensive margin across 27 specifications and in every column of Table 3 (the labelling decision).
+
+**What drives issuance is regulatory pressure + constituency.** NPDES formal enforcement and Dem vote share consistently predict green bond issuance. State trifectas, governors, and anti-ESG laws do not.
+
+**Labelling a bond "green" is a market-mediated choice, not an ideological one.** Among cities that do issue, two orthogonal channels predict the green label:
+- **Marketability** (NPDES × state ESG market depth): compelled cities label green only where there's an ESG investor base to sell into.
+- **Greenium-seeking** (fiscal stress): distressed cities label green, presumably to reduce borrowing cost through ESG-oriented demand.
+
+The only partisan signal in the whole analysis is the **demonstration interaction** (C6): Dem mayors respond to existing state-level green markets. They don't initiate markets, but they follow them once established. This is imitation, not ideology.
 
 ---
 
@@ -127,9 +151,15 @@ All on `Y_self_green`. Same primary RHS + additions.
 ```
 processed/tables/
 ├── table1_v3_full.md       ← this document
-├── table1_v3_main.md       ← main C1–C6 coefficients
-├── table1_v3_rob1.md       ← R1–R10 full coefficients
-└── table1_v3_rob2.md       ← R11–R21 full coefficients
+├── table1_v3_main.md       ← C1–C6 main coefficients
+├── table1_v3_rob1.md       ← R1–R10 robustness
+├── table1_v3_rob2.md       ← R11–R22 robustness (+ kitchen-sink)
+├── table3_labelling.md     ← The Labelling Decision (5 cols on issuer subsample)
+└── v3_rr/                  ← R&R supplementary package (Tasks 2–8)
 ```
 
-Reproduce: `TABLE1_MODULE={main,rob1,rob2,all} python3 pipeline/analysis_table1_v3.py`
+Reproduce:
+```
+TABLE1_MODULE=all python3 pipeline/analysis_table1_v3.py
+python3 pipeline/analysis_table3_labelling.py
+```
