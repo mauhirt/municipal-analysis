@@ -23,25 +23,38 @@ OUT.mkdir(parents=True, exist_ok=True)
 MODULE = os.environ.get('TABLE1_MODULE', 'main')
 
 # ── RHS blocks ──
-# LEAN PRIMARY (13 vars): theory-driven + standard demographic controls.
-# Dropped from earlier spec (all consistently null, no strong theoretical case):
+# Three-family spec, aligned with VARIABLE_ADDITIONS_SPEC.md.
+#
+# FAMILY 1 — MATERIAL (compulsion + fiscal capacity):
+#   npdes_formal_prior3yr_muni, npdes_x_state_green (marketability interaction),
+#   reserve_ratio_lag2, debt_service_burden_lag2
+#
+# FAMILY 2 — POLITICAL (partisan identity + constituency):
+#   Dem_Mayor, pres_dem_two_party_share_lag2
+#
+# FAMILY 3 — STATE/INSTITUTIONAL (state political + ESG policy + market depth):
+#   state_dem_governor_lag1, fn_esg_has_muni_bond_law_post_lag1,
+#   asinh_state_all_green_cum_amt_lag1
+#
+# CONTROLS (standard muni-finance demographics):
+#   log_population_city_lag2, log_percapita_income_city_lag2, unemployment_city_lag2
+#
+# Total: 12 variables (including the npdes_x_state_green interaction).
+# Dropped from earlier iterations (available in robustness R22 kitchen-sink):
 #   charges_to_own_source_lag2, igr_share_lag2, tel_x_prop_tax_dep,
-#   capital_outlay_pc_lag2, has_substitute_issuer
-# Available as "kitchen-sink" robustness column (R22 below).
+#   capital_outlay_pc_lag2, has_substitute_issuer, state_dem_trifecta_lag1,
+#   state_rep_trifecta_lag1, fiscal_stress_index_lag2 (collinear composite)
 PRIMARY = [
-    # Treatment
-    'Dem_Mayor',
-    # Constituency (H1a)
-    'pres_dem_two_party_share_lag2',
-    # Compulsion (H2)
+    # Family 1: Material
+    'Dem_Mayor',  # moved up as treatment (reported first for clarity)
+    'pres_dem_two_party_share_lag2',  # Family 2
     'npdes_formal_prior3yr_muni',
-    # Fiscal capacity
     'reserve_ratio_lag2', 'debt_service_burden_lag2',
-    # Policy environment (H3 + anti-ESG)
-    'fn_esg_has_muni_bond_law_post_lag1', 'asinh_state_all_green_cum_amt_lag1',
-    # State political environment
-    'state_dem_governor_lag1', 'state_dem_trifecta_lag1', 'state_rep_trifecta_lag1',
-    # Demographic controls
+    # Family 3: State/Institutional
+    'state_dem_governor_lag1',
+    'fn_esg_has_muni_bond_law_post_lag1',
+    'asinh_state_all_green_cum_amt_lag1',
+    # Controls
     'log_population_city_lag2', 'log_percapita_income_city_lag2',
     'unemployment_city_lag2',
 ]
@@ -50,6 +63,8 @@ PRIMARY = [
 PRIMARY_KITCHEN = PRIMARY + [
     'charges_to_own_source_lag2', 'igr_share_lag2', 'tel_x_prop_tax_dep',
     'capital_outlay_pc_lag2', 'has_substitute_issuer',
+    'state_dem_trifecta_lag1', 'state_rep_trifecta_lag1',
+    'fiscal_stress_index_lag2',
 ]
 
 def fit(df, y, xs, fe=('state_id','year'), cluster='fips7'):
@@ -151,8 +166,10 @@ if 'asinh_water_only_amt' not in df.columns:
     water_amt = df.get('City_Green_Amt_Issued', 0) * df.get('Y_water_only', 0)
     df['asinh_water_only_amt'] = np.arcsinh(water_amt)
 
-# PRIMARY_EXPANDED = lean PRIMARY + market-channel variables
-PRIMARY_EXPANDED = PRIMARY + ['fiscal_stress_index_lag2', 'npdes_x_state_green']
+# PRIMARY_EXPANDED = three-family PRIMARY + marketability interaction (F1×F3)
+# fiscal_stress_index moved to robustness; debt_service carries the
+# greenium-incentive story (high marginal borrowing cost).
+PRIMARY_EXPANDED = PRIMARY + ['npdes_x_state_green']
 
 # ══════════════════════════════════════════════════════════════════════
 # MODULE: main — 8 primary columns
@@ -340,12 +357,24 @@ if MODULE in ('rob2', 'all'):
         specs.append(('R21 NPDES Private', Y, rhs_no_muni + ['npdes_formal_prior3yr_private'],
                       'Placebo: _private enforcement (expected null)'))
 
-    # R22 Kitchen-sink: lean PRIMARY + 5 dropped fiscal controls
+    # R22 Kitchen-sink: PRIMARY + all previously-dropped controls
     specs.append(('R22 Kitchen-sink', Y, PRIMARY_KITCHEN,
-                  '18-var spec: PRIMARY + dropped fiscal controls (charges, IGR, TEL, capital_outlay, substitute_issuer)'))
+                  'Kitchen-sink: PRIMARY + charges, IGR, TEL, capital_outlay, substitute_issuer, state trifectas, fiscal_stress composite'))
+
+    # R23 Fiscal-stress composite (replaces components)
+    rhs_no_fiscal = [v for v in PRIMARY if v not in ('reserve_ratio_lag2','debt_service_burden_lag2')]
+    if 'fiscal_stress_index_lag2' in df.columns:
+        specs.append(('R23 Fiscal Stress', Y, rhs_no_fiscal + ['fiscal_stress_index_lag2'],
+                      'Composite fiscal stress in place of reserve + debt_service'))
+
+    # R24 State trifectas (federalism courtesy)
+    trifectas = [v for v in ['state_dem_trifecta_lag1','state_rep_trifecta_lag1'] if v in df.columns]
+    if trifectas:
+        specs.append(('R24 State Trifectas', Y, PRIMARY + trifectas,
+                      'Add state trifecta dummies alongside governor'))
 
     run_block(df, specs, 'table1_v3_rob2.md',
-              'Table 1 v3 — Robustness R11-R22 (gravity, ESG endog, Rep mirror, FOG, EPA tiers, kitchen-sink)')
+              'Table 1 v3 — Robustness R11-R24 (gravity, ESG endog, Rep mirror, FOG, EPA tiers, kitchen-sink, fiscal stress, trifectas)')
 
 # ══════════════════════════════════════════════════════════════════════
 # MODULE: ftest — within-R² and compulsion-block F-test (Task 8)
