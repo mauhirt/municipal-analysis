@@ -98,18 +98,20 @@ No. The triple interaction `Dem × fiscal_stress × state_green_cum` = -0.00002 
 
 **4. Is the TEL-related result robust to alternative TEL operationalizations?**
 
-No — the results flip. In the 10-variable PRIMARY + TEL spec:
+**No, and the question itself is partly precluded by identification.** Under state FE:
 
-| Spec | TEL coefficient | Sig |
+| Spec | TEL coefficient | Identified? |
 |---|---|---|
-| TEL-0 Mullins (`tel_x_prop_tax_dep`) | +0.00091 (0.00063) | p=0.15 |
-| TEL-1 Simple binary (`has_tel_binding_lag1`) | **+0.0371\*\*\*** (0.0135) | p<0.01 |
-| TEL-2 Continuous strictness (`tel_strictness_index_lag1`) | -0.0007 (0.0009) | p=0.40 |
-| TEL-3 Components separately (binary + prop_tax_dep) | binary **+0.042\*\*** (0.019); prop_tax_dep +0.015 (0.024) | — |
+| TEL-0 Mullins (`tel_x_prop_tax_dep`) | +0.00091 (0.00063), p=0.15 | **Yes** (via city-level prop_tax_dep) |
+| TEL-1 Simple binary (`has_tel_binding_lag1`) | **NOT IDENTIFIED** — rank-deficient under state FE (0 within-state variation in 49 states) | No |
+| TEL-2 Continuous strictness (`tel_strictness_index_lag1`) | -0.0007 (0.0009), p=0.40 | Yes |
+| TEL-3 Components separately | binary: NOT IDENTIFIED; `property_tax_dependence_lag2`: +0.0154 (0.0239), p=0.52 | Partially |
 
-The simple binary "has any TEL binding" (TEL-1) produces the strongest TEL-related coefficient (**+0.037\*\*\***). The Mullins interaction form (TEL-0) is not significant in the full 10-variable spec, and the continuous-strictness form (TEL-2) is null with the wrong sign. Decomposing into components (TEL-3) assigns the effect entirely to the binary TEL indicator, not to property-tax dependence or their product. `Dem_Mayor` is null (≤ |0.0005|) in all four TEL specs.
+The initial "TEL-1 +0.037\*\*\*" reported was a pseudo-inverse numerical artifact — statsmodels computed an estimate despite rank-deficiency. It is not interpretable. Among the three identified specifications, **none is significant** and the coefficients are very small in magnitude.
 
-Implication for the main table: the Mullins interaction is not the uniquely productive form of the TEL variable. A main-table specification that uses `has_tel_binding_lag1` as the TEL variable would produce a stronger and more readily interpretable result than `tel_x_prop_tax_dep`, and would not depend on Property tax dependence to carry the signal.
+Implication: the Mullins interaction form (`tel_x_prop_tax_dep`) is the only TEL variable in the repository that is both identified under state FE and has a consistent positive sign — but it fails to reach conventional significance in the 10-variable PRIMARY spec. A simpler binary TEL variable cannot be estimated in this design; it would require dropping state FE or switching to a region FE specification, either of which weakens causal identification. Recommendation: demote TEL from the main table to a fiscal-robustness column and document the identification issue.
+
+`Dem_Mayor` is null (|β| ≤ 0.0005) across all identified TEL specifications.
 
 ---
 
