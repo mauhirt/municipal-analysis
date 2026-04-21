@@ -39,4 +39,6 @@ Dem_Mayor (no lag), state+year FE, city-clustered SE.
 | N | 4992 | 6477 | 6372 | 5782 | 6417 | 6429 | 6417 | 5971 | 5891 | 6487 |
 | R² | 0.121 | 0.102 | 0.103 | 0.104 | 0.104 | 0.102 | 0.119 | 0.114 | 0.105 | 0.098 |
 
+Controls included but not shown: `log_population_city_lag2`, `log_percapita_income_city_lag2`, `unemployment_city_lag2`.
+
 * p<0.10, ** p<0.05, *** p<0.01.

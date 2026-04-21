@@ -142,25 +142,52 @@ if 'dem_x_npdes' not in df.columns:
 if 'dem_x_state_green_cum' not in df.columns:
     df['dem_x_state_green_cum'] = (
         df['Dem_Mayor'] * df.get('asinh_state_all_green_cum_amt_lag1', 0))
+# Marketability interaction: NPDES × state green market depth
+if 'npdes_x_state_green' not in df.columns:
+    df['npdes_x_state_green'] = (
+        df.get('npdes_formal_prior3yr_muni', 0) * df.get('asinh_state_all_green_cum_amt_lag1', 0))
+# Water-only amount (for C6 main column)
+if 'asinh_water_only_amt' not in df.columns:
+    water_amt = df.get('City_Green_Amt_Issued', 0) * df.get('Y_water_only', 0)
+    df['asinh_water_only_amt'] = np.arcsinh(water_amt)
+
+# PRIMARY_EXPANDED = lean PRIMARY + market-channel variables
+PRIMARY_EXPANDED = PRIMARY + ['fiscal_stress_index_lag2', 'npdes_x_state_green']
 
 # ══════════════════════════════════════════════════════════════════════
 # MODULE: main — 8 primary columns
 # ══════════════════════════════════════════════════════════════════════
 if MODULE in ('main', 'all'):
+    # Main 6 cols: 3 outcomes × (prob, amount). All with PRIMARY_EXPANDED
+    # (lean PRIMARY + fiscal_stress + npdes×state_green marketability).
     specs = [
-        ('C1 GBI',          'Green_Bond_Issued',    PRIMARY, 'H1b: Dem_Mayor null'),
-        ('C2 GBI amt',      'asinh_green_amt',      PRIMARY, 'Intensive margin'),
-        ('C3 Self-green',   'Y_self_green',         PRIMARY, 'Step 3 pivot'),
-        ('C4 Self amt',     'asinh_self_green_amt',  PRIMARY, 'Self-label amount'),
-        ('C5 NPDES×Party',  'Green_Bond_Issued',
-         PRIMARY + ['dem_x_npdes'],
-         'NPDES compulsion × Dem'),
-        ('C6 Demonstration','Y_self_green',
-         PRIMARY + ['dem_x_state_green_cum'],
-         'M1: Dem × asinh state green cum (Task 2, 47 states, p=0.019)'),
+        ('C1 GBI',         'Green_Bond_Issued',     PRIMARY_EXPANDED, 'H1b: Dem_Mayor null'),
+        ('C2 GBI amt',     'asinh_green_amt',       PRIMARY_EXPANDED, 'Intensive margin (any green)'),
+        ('C3 Self-green',  'Y_self_green',          PRIMARY_EXPANDED, 'Self-labelled issuance'),
+        ('C4 Self amt',    'asinh_self_green_amt',  PRIMARY_EXPANDED, 'Self-labelled amount'),
+        ('C5 Water-only',  'Y_water_only',          PRIMARY_EXPANDED, 'Water-only self-labelled issuance'),
+        ('C6 Water amt',   'asinh_water_only_amt',  PRIMARY_EXPANDED, 'Water-only amount'),
     ]
     run_block(df, specs, 'table1_v3_main.md',
-              'Table 1 v3 — Main 6 columns')
+              'Table 1 v3 — Main 6 columns (3 outcomes × prob/amount)')
+
+    # Partisan-interaction sub-block (separate output: complements main table)
+    interaction_specs = [
+        ('I1 NPDES×Party',   'Green_Bond_Issued',
+         PRIMARY_EXPANDED + ['dem_x_npdes'],
+         'NPDES compulsion × Dem'),
+        ('I2 NPDES×Party Self','Y_self_green',
+         PRIMARY_EXPANDED + ['dem_x_npdes'],
+         'NPDES compulsion × Dem on self-green'),
+        ('I3 Demonstration', 'Y_self_green',
+         PRIMARY_EXPANDED + ['dem_x_state_green_cum'],
+         'Dem × state green cum (demonstration/imitation)'),
+        ('I4 Demonstration Water','Y_water_only',
+         PRIMARY_EXPANDED + ['dem_x_state_green_cum'],
+         'Dem × state green cum on water-only'),
+    ]
+    run_block(df, interaction_specs, 'table1_v3_interactions.md',
+              'Table 1 v3 — Partisan interactions (complement to main table)')
 
 # ══════════════════════════════════════════════════════════════════════
 # MODULE: appendix — demoted interaction specs + M2-M4
