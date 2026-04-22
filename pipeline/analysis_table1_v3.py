@@ -180,23 +180,17 @@ PRIMARY_EXPANDED = PRIMARY + ['npdes_x_state_green']
 # MODULE: main — 8 primary columns
 # ══════════════════════════════════════════════════════════════════════
 if MODULE in ('main', 'all'):
-    # Main 8 cols: 4 outcome × scale combos × (no interaction, with interaction).
-    # PRIMARY      = three families + controls (no marketability interaction)
-    # PRIMARY_EXPANDED = PRIMARY + npdes × state_green_cum (marketability)
-    # Paired columns let readers see the NPDES main effect flip when the
-    # interaction is added.
+    # Main 4 cols: 2 outcomes × (prob, amount). PRIMARY only (no marketability
+    # interaction — dropped after Task 10 LOSO fragility on California and
+    # domain-subsample weakness; retained in Table 3 L3 on issuer subsample).
     specs = [
-        ('C1 GBI',          'Green_Bond_Issued',    PRIMARY,          'No interaction'),
-        ('C2 GBI+int',      'Green_Bond_Issued',    PRIMARY_EXPANDED, 'With marketability interaction'),
-        ('C3 GBI amt',      'asinh_green_amt',      PRIMARY,          'No interaction'),
-        ('C4 GBI amt+int',  'asinh_green_amt',      PRIMARY_EXPANDED, 'With marketability interaction'),
-        ('C5 Self',         'Y_self_green',         PRIMARY,          'No interaction'),
-        ('C6 Self+int',     'Y_self_green',         PRIMARY_EXPANDED, 'With marketability interaction'),
-        ('C7 Self amt',     'asinh_self_green_amt', PRIMARY,          'No interaction'),
-        ('C8 Self amt+int', 'asinh_self_green_amt', PRIMARY_EXPANDED, 'With marketability interaction'),
+        ('C1 GBI',         'Green_Bond_Issued',     PRIMARY, 'H1b: Dem_Mayor null'),
+        ('C2 GBI amt',     'asinh_green_amt',       PRIMARY, 'Intensive margin (any green)'),
+        ('C3 Self-green',  'Y_self_green',          PRIMARY, 'Self-labelled issuance'),
+        ('C4 Self amt',    'asinh_self_green_amt',  PRIMARY, 'Self-labelled amount'),
     ]
     run_block(df, specs, 'table1_v3_main.md',
-              'Table 1 v3 — Main 8 columns (4 outcomes × {no interaction, with interaction})')
+              'Table 1 v3 — Main 4 columns (2 outcomes × prob/amount)')
 
     # Partisan-interaction sub-block (separate output: complements main table)
     # Single interaction: Dem_Mayor × pres_dem_two_party_share_lag2.
