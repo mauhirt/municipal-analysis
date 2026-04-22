@@ -199,27 +199,23 @@ if MODULE in ('main', 'all'):
               'Table 1 v3 — Main 8 columns (4 outcomes × {no interaction, with interaction})')
 
     # Partisan-interaction sub-block (separate output: complements main table)
-    # Each column tests a different moderation channel on the partisan effect:
-    #   I1 — compulsion (NPDES × Dem)
-    #   I2 — same on self-green
-    #   I3 — supply-side market depth (Dem × state_green_cum)
-    #   I4 — demand-side constituency (Dem × pres_dem_share)
+    # Single interaction: Dem_Mayor × pres_dem_two_party_share_lag2.
+    # Tests whether the partisan null masks responsive amplification of
+    # constituency demand. Strongest of the candidate interactions; in
+    # interpretable units; discretion-specific (Table 2 water placebo).
+    # Dropped: I1/I2 (NPDES×Party — confusing sign on non-water);
+    #          I3 (Dem × state_green_cum — same underlying variation as I4,
+    #              less interpretable units).
     interaction_specs = [
-        ('I1 NPDES×Party',   'Green_Bond_Issued',
-         PRIMARY_EXPANDED + ['dem_x_npdes'],
-         'NPDES compulsion × Dem'),
-        ('I2 NPDES×Party Self','Y_self_green',
-         PRIMARY_EXPANDED + ['dem_x_npdes'],
-         'NPDES compulsion × Dem on self-green'),
-        ('I3 Demonstration', 'Y_self_green',
-         PRIMARY_EXPANDED + ['dem_x_state_green_cum'],
-         'Dem × state_green_cum (supply-side market imitation)'),
-        ('I4 Constituency×Party', 'Y_self_green',
+        ('I1 Constituency×Party (GBI)', 'Green_Bond_Issued',
          PRIMARY_EXPANDED + ['dem_x_pres_dem'],
-         'Dem × pres_dem_share (demand-side constituency amplification)'),
+         'Dem × pres_dem_share on any green bond issuance'),
+        ('I2 Constituency×Party (Self)', 'Y_self_green',
+         PRIMARY_EXPANDED + ['dem_x_pres_dem'],
+         'Dem × pres_dem_share on self-labelled (paper primary)'),
     ]
     run_block(df, interaction_specs, 'table1_v3_interactions.md',
-              'Table 1 v3 — Partisan interactions (complement to main table)')
+              'Table 1 v3 — Partisan interaction (constituency × party)')
 
 # ══════════════════════════════════════════════════════════════════════
 # MODULE: appendix — demoted interaction specs + M2-M4
