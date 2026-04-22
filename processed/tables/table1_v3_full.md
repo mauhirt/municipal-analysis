@@ -38,18 +38,21 @@ Controls not shown: `log_population_city_lag2`\*\*\*, `log_percapita_income_city
 
 ## Partisan interactions (complement to main table)
 
-Three specifications testing whether the null `Dem_Mayor` hides a conditional partisan effect.
+Four specifications testing whether the null `Dem_Mayor` hides a conditional partisan effect. Each tests a different moderation channel.
 
-| Term | I1 NPDES×Party (GBI) | I2 NPDES×Party (Self) | I3 Demonstration (Self) |
-|---|---|---|---|
-| `Dem_Mayor` | -0.003 | -0.004 | **-0.024\*\*\*** |
-| `dem_x_npdes` | **+0.028\*** | **+0.025\*** | — |
-| `dem_x_state_green_cum` | — | — | **+0.0011\*\*\*** |
-| N | 6,825 | 6,825 | 6,825 |
+| Term | I1 NPDES×Party (GBI) | I2 NPDES×Party (Self) | I3 Demonstration (Self) | I4 Constituency×Party (Self) |
+|---|---|---|---|---|
+| `Dem_Mayor` | -0.003 | -0.004 | **-0.022\*\*\*** | **-0.065\*\*** |
+| `pres_dem_two_party_share_lag2` | +0.053\*\* | +0.054\*\* | +0.055\*\* | -0.003 |
+| `dem_x_npdes` | **+0.028\*** | **+0.024\*** | — | — |
+| `dem_x_state_green_cum` | — | — | **+0.0011\*\*\*** | — |
+| **`dem_x_pres_dem`** | — | — | — | **+0.114\*\*** |
+| N | 6,825 | 6,825 | 6,825 | 6,825 |
 
-**Reading.**
-- **I1 / I2 NPDES×Party:** Dem mayors are slightly more responsive to NPDES compulsion than Rep/Ind mayors (+0.028\* on GBI, +0.025\* on self). Main-effect `Dem_Mayor` stays null.
-- **I3 Demonstration:** With `Dem × state_green_cum` included, `Dem_Mayor` turns **-0.024\*\*\*** and the interaction is **+0.0011\*\*\***. Dem mayors self-label only where a state market already exists. Imitation, not ideology. Marginal effect crosses zero at asinh_state_green_cum ≈ 20.07 (~28% of sample below). VIF-verified (centered VIF = 1.14, identical coefficient).
+**Reading.** Three distinct channels moderate the partisan effect. All three say the same thing at the meta-level: *Dem mayors do not act autonomously — they amplify external forces.*
+- **I1 / I2 Compulsion responsiveness.** Dem mayors are more responsive to NPDES compulsion than Rep/Ind mayors (+0.028\* GBI, +0.024\* self). Main-effect `Dem_Mayor` stays null.
+- **I3 Supply-side market imitation.** `Dem × state_green_cum` = **+0.0011\*\*\***. Dem mayors self-label where a state market already exists. VIF-verified (centered VIF = 1.14). Crossover at asinh ≈ 20.07 (~28% of sample below).
+- **I4 Demand-side constituency amplification.** `Dem × pres_dem_share` = **+0.114\*\*** on self-green. Crossover at pres_dem ≈ 0.55. VIF-verified (centered VIF = 1.18, identical coefficient). Marginal effect of `Dem_Mayor` on self-green: **-0.020\*\*** in red cities (10th pct), **+0.000** at median, **+0.021\*\*** in blue cities (90th pct). **On non-water outcomes, the interaction strengthens to +0.101\*\*\* (p=0.002); on water, it collapses to -0.002 (p=0.94).** The interaction operates specifically in the discretionary domain — see Table 2.
 
 ---
 
@@ -144,7 +147,8 @@ Located in `processed/tables/v3_rr/`. Summary in `v3_rr/README.md`.
 | **Marketability channel** | npdes × state_green +0.0016\* to +0.0018\* | \* Novel, main table |
 | **Fiscal-capacity gates** | reserve + (ns), debt service − (ns) in main; Table 3 L2 fiscal_stress +0.018\*\* | \*\* Conditional on issuance |
 | **NPDES × Party interaction** | I1 dem_x_npdes +0.028\* | \* Conditional partisan |
-| **Demonstration margin** | I3 Dem_Mayor -0.024\*\*\*, interaction +0.0011\*\*\*, VIF 1.14 centered | \*\*\* Novel, robust |
+| **Demonstration margin (supply-side)** | I3 Dem_Mayor -0.022\*\*\*, interaction +0.0011\*\*\*, VIF 1.14 centered | \*\*\* Novel, robust |
+| **Constituency amplification (demand-side)** | I4 Dem_Mayor -0.065\*\*, interaction +0.114\*\*, VIF 1.18 centered; +0.101\*\*\* on non-water, -0.002 ns on water | \*\* Novel, discretion-specific |
 | **No local spatial spillover** | R13–R16 all ns | — Clean |
 | **Pre-ESG-law market predicts issuance** | R17: +0.064\*\*\* | \*\*\* Confirmed |
 | **NPDES effect ownership-specific** | R20 _locgov +0.014\*\*, R21 _private null | \*\* Placebo clean |
@@ -161,7 +165,13 @@ Located in `processed/tables/v3_rr/`. Summary in `v3_rr/README.md`.
 1. **Regulatory pressure × market depth** (marketability): compulsion drives issuance *where ESG investors exist*, not as a standalone force.
 2. **Constituency** (`pres_dem_share`): cities with green-leaning electorates issue more, irrespective of mayor partisanship.
 3. **Fiscal capacity** (reserve ratio, debt service): directional but not individually significant in the 10-variable spec.
-4. **Demonstration / imitation** (partisan interactions): Dem mayors *respond to* existing state markets (I3: -0.024\*\*\* with interaction +0.0011\*\*\*); they don't create them.
+
+**The partisan null masks conditional amplification, not autonomous agency.** Three distinct interaction channels reveal the same underlying pattern:
+- **Compulsion responsiveness** (I1 dem_x_npdes +0.028\*): Dem mayors respond slightly more to regulatory pressure.
+- **Supply-side imitation** (I3 dem_x_state_green_cum +0.0011\*\*\*): Dem mayors follow existing state markets.
+- **Demand-side amplification** (I4 dem_x_pres_dem +0.114\*\*): Dem mayors amplify constituency demand — positive effect in blue cities, negative in red cities, null on average. On non-water this strengthens to +0.101\*\*\*; on water it is zero (Table 2 placebo).
+
+These are **responsive-representation** results, not autonomous partisan agency. Dem mayors don't create green demand — they amplify it where it exists (constituency), follow it where markets have formed (demonstration), and respond to it where regulators force the issue (compulsion).
 
 **Conditional on issuance, the labelling decision is market-mediated (Table 3).** Distressed issuers label green to seek the greenium; compelled issuers label only where the ESG investor base can absorb the supply. Neither channel operates through partisan agency.
 

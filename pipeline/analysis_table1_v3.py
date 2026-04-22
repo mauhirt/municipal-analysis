@@ -158,6 +158,10 @@ if 'dem_x_npdes' not in df.columns:
 if 'dem_x_state_green_cum' not in df.columns:
     df['dem_x_state_green_cum'] = (
         df['Dem_Mayor'] * df.get('asinh_state_all_green_cum_amt_lag1', 0))
+# Constituency × partisan interaction (demand-side responsive representation)
+if 'dem_x_pres_dem' not in df.columns:
+    df['dem_x_pres_dem'] = (
+        df['Dem_Mayor'] * df.get('pres_dem_two_party_share_lag2', 0))
 # Marketability interaction: NPDES × state green market depth
 if 'npdes_x_state_green' not in df.columns:
     df['npdes_x_state_green'] = (
@@ -195,6 +199,11 @@ if MODULE in ('main', 'all'):
               'Table 1 v3 — Main 8 columns (4 outcomes × {no interaction, with interaction})')
 
     # Partisan-interaction sub-block (separate output: complements main table)
+    # Each column tests a different moderation channel on the partisan effect:
+    #   I1 — compulsion (NPDES × Dem)
+    #   I2 — same on self-green
+    #   I3 — supply-side market depth (Dem × state_green_cum)
+    #   I4 — demand-side constituency (Dem × pres_dem_share)
     interaction_specs = [
         ('I1 NPDES×Party',   'Green_Bond_Issued',
          PRIMARY_EXPANDED + ['dem_x_npdes'],
@@ -204,7 +213,10 @@ if MODULE in ('main', 'all'):
          'NPDES compulsion × Dem on self-green'),
         ('I3 Demonstration', 'Y_self_green',
          PRIMARY_EXPANDED + ['dem_x_state_green_cum'],
-         'Dem × state green cum (demonstration/imitation)'),
+         'Dem × state_green_cum (supply-side market imitation)'),
+        ('I4 Constituency×Party', 'Y_self_green',
+         PRIMARY_EXPANDED + ['dem_x_pres_dem'],
+         'Dem × pres_dem_share (demand-side constituency amplification)'),
     ]
     run_block(df, interaction_specs, 'table1_v3_interactions.md',
               'Table 1 v3 — Partisan interactions (complement to main table)')
