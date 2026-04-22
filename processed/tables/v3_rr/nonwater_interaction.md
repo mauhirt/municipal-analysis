@@ -100,4 +100,30 @@ Whether this constitutes a "partisan story" depends on the causal interpretation
 
 ---
 
+## Water placebo
+
+Same `Dem_Mayor × pres_dem_share` interaction estimated on `Y_water_only` (compelled domain, n+=89).
+
+| Variable | Water (placebo) | Non-water (NW3) |
+|---|---|---|
+| `Dem_Mayor` | +0.001 (0.017) | **-0.056\*\*\*** (0.018) |
+| `pres_dem_two_party_share_lag2` | +0.019 (0.017) | -0.014 (0.014) |
+| **`dem_x_pres_dem`** | **-0.002 (0.030)** p=0.94 | **+0.101\*\*\*** (0.032) p=0.002 |
+| `npdes_formal_prior3yr_muni` | -0.007 (0.009) | -0.011 (0.009) |
+| `npdes_x_state_green` | +0.0007 (0.0006) | +0.0008 (0.0006) |
+| N | 6,825 | 6,825 |
+| n+ | 89 | 57 |
+
+### Marginal effect of `Dem_Mayor` on water (placebo)
+
+| Percentile | pres_dem | ME | SE | p |
+|---|---|---|---|---|
+| 10th | 0.389 | -0.0002 | 0.0061 | 0.979 |
+| 50th | 0.566 | -0.0006 | 0.0039 | 0.888 |
+| 90th | 0.750 | -0.0010 | 0.0071 | 0.893 |
+
+**The interaction is flat zero on water** (p=0.94). Marginal effects at all percentiles are ≈ 0 (p > 0.88). The constituency × partisan interaction operates **only in the discretionary domain**. Water issuance is immune to partisan-constituency alignment — compulsion dominates regardless of who governs for whom.
+
+---
+
 \* p<0.10, \*\* p<0.05, \*\*\* p<0.01. SEs clustered at city (fips7). State + year FE.
