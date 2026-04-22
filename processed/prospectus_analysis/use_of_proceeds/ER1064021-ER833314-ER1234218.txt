@@ -1,0 +1,128 @@
+the financing plan for the 2017-26 Capital Plan. In the event that any of such sources
+are unavailable for any reason, including unavailability of revenues of the Harbor Department, reduction
+in the amount or delays in the receipt of federal and State grants available to the Harbor Department or
+any other reason, the completion of the 2017-26 Capital Plan could be substantially delayed and financing
+costs could be higher than projected. There can be no assurances that such circumstances will not
+materially adversely affect the financial condition or operations of the Port.
+Market Access Required if Subordinate TIFIA Loan Proceeds are not Disbursed
+As of the date of this Official Statement, the Harbor Department is reviewing several options to
+pay the principal of the Series 2014C Senior Notes on November 15, 2018, including, among other
+options, drawing down the proceeds of the Subordinate TIFIA Loan and/or issuing additional Senior
+Bonds and/or additional Subordinate Obligations. See “OUTSTANDING OBLIGATIONS AND DEBT
+SERVICE SCHEDULE—Outstanding Subordinate Obligations (Subordinate Revolving Obligations and
+Subordinate TIFIA Loan)—Subordinate TIFIA Loan” and “CAPITAL DEVELOPMENT PROGRAM—
+2017-26 Capital Plan—Gerald Desmond Bridge Replacement Project.” In the event the conditions to
+disbursement of the Subordinate TIFIA Loan cannot be satisfied on or before the maturity date of the
+Series 2014C Senior Notes (November 15, 2018) or the Harbor Department decides that drawing down
+proceeds from the Subordinate TIFIA Loan is not in its best interest (financial or otherwise), the Harbor
+Department will be required to use an alternate method of repaying the Series 2014C Senior Notes, which
+could include issuing additional Senior Bonds and/or additional Subordinate Obligations. See
+“SECURITY AND SOURCES OF PAYMENT FOR THE SERIES 2017 SENIOR BONDS—Additional
+Senior Bonds.” However, no assurances can be given that the City, acting by and through the Board, will
+be able to access the capital markets in the event proceeds are not disbursed under the Subordinate TIFIA
+Loan.
+Future Executive Orders and Federal Laws and Regulations
+Since taking office in January 2017, the Trump Administration has issued several executive
+orders, and has indicated its intent to initiate additional executive orders, legislation and/or regulations
+affecting Federal policy in areas such as immigration, tariffs and trade. As of the date of this Official
+Statement, there is insufficient information available about the potential Federal action to estimate the
+impacts, if any, on Federal funding to local governments or their operations, including law enforcement,
+transportation or other activities.
+While enforcement of potential executive orders, laws or regulations could impose additional
+financial burdens upon the Harbor Department and/or the tenants of the Port, as of the date of this Official
+Statement, insufficient information is available regarding potential Federal action to estimate the
+magnitude, if any, of such potential impacts.65
+Security at the Port
+As a result of the terrorists attacks of September 11, 2001, the Maritime Transportation Security
+Act of 2002 (“MTSA”) was signed into law on November 25, 2002 to require sectors of the maritime
+industry to implement measures designed to protect the ports and waterways of the U.S. from a terrorist
+attack. MTSA requires interagency teamwork within the Department of Homeland Security, including,
+the U.S. Coast Guard, the Transportation Security Administration (the “TSA”) and the Bureau of
+Customs and Border Protection, and the Department of Transportation’s Maritime Administration to
+develop security regulations. The security regulations focus on those sectors of maritime industry that
+have a higher risk of involvement in a transportation security incident, including various tank vessels,
+barges, large passenger vessels, cargo vessels, towing vessels, offshore oil and gas platforms, and port
+facilities that handle certain kinds of dangerous cargo or service the vessels listed above. Such
+regulations were implemented on July 1, 2003, and final rules became effective in November 2003. The
+regulations provide for port and vessel owners and operators to assess their vulnerabilities, and to then
+develop plans that may include implementing vehicl e, container and baggage screening procedures,
+designating security patrols, establishing restricted areas, implementing personnel identification
+procedures, accessing control measures, and/or installing surveillance equipment. The Harbor
+Department and each of its applicable tenants have in place procedures for complying with MTSA.
+To comply with MTSA regulations and based on the Harbor Department’s own initiatives, the
+Harbor Department is implementing certain security measures. The Harbor Department has installed and
+implemented a video camera surveillance system to monitor activities throughout the Port complex. To
+address waterside threats, the Harbor Department has installed radar and sonar detection systems and has
+agreements with the Long Beach Police Department to provide 24/7 “on water” patrol capability. The
+Harbor Department is working with marine terminal operators and other stakeholders within and outside
+the Port to share video camera feeds, thereby enhancing overall regional security monitoring capabilities.
+The Harbor Department has installed tools to assist in emergencies, including programmable highway
+signs, an AM radio station, an automated emergency notification system, and an encrypted radio system
+to provide secure communications with tenants and emergency services. The Harbor Department
+continues to support efforts by the TSA to implement a transportation workers identification card. The
+Harbor Department has improved and continues to enhance physical security throughout the Port complex
+by installing security fencing, lighting, barriers and access control systems. These improvements are
+being applied to all infrastructure above and below ground. Radiation portal monitors have been installed
+at all of the container terminals, which are managed by the U.S. Customs & Border Protection. All
+containers originating at foreign ports will be tested for the presence of radioactive materials when
+leaving the Port.
+In February 2009, the Harbor Department opened the Joint Command & Control Center which
+serves as the Harbor Department Security Division and Port Police Division headquarters and functions as
+a multi-agency incident command post, housing approx imately 120 personnel (which is triple the level of
+staffing on September 11, 2001). The Command and Control Center functions as a “maritime domain
+awareness center” and combines and displays all the surveillance, detection and monitoring data from
+throughout the Port; this data is shared and communicated with facility security personnel and law
+enforcement agencies that protect the harbor complex. In addition, the Harbor Department is working
+closely with local, regional, and state agencies to develop a geo-spatial software platform that will
+interconnect these agencies and provide a common operational picture of the region’s maritime domain to
+support daily security functions, incident response, and recovery operations. The Command and Control
+Center also is the home to the Maritime Coordination Center, which coordinates the response to offshore
+illicit activities for over 70 different maritime law enforcement entities along 320 miles of California
+coastline. The Harbor Department has significantly increased its budgeted security operating costs since66
+2002. Security Division operating expenses as well as service agreements with City of Long Beach Fire
+and Police Departments have increased from $15.6 million in 2008 to $26.4 million in 2017.
+There can be no assurance that MTSA requirements will not become more strict or that additional
+requirements may require the Harbor Department to incur additional security-related expenses.
+National and local law enforcement officials have warned that additional terrorist attacks upon
+key infrastructure and other targets in the United States are possible. The Port and the surrounding
+waterways are particularly visible infrastructure assets that could be the subject of future attempted
+terrorist attacks. A shutdown of the Port complex could have a significant impact on the U.S. economy.
+A terrorist attack on the Port or the surrounding waterways or an attack somewhere else in the country or
+the world could have a material adverse effect on the collection of Revenues at the Port. See
+“FINANCIAL DATA—Risk Management and Insurance.”
+Cybersecurity
+Computer networks and data transmission and collection are vital to the efficient operations of the
+Port. The Harbor Department and the tenants at the Port collect and store sensitive data, including
+intellectual property, proprietary business information, information regarding customers, suppliers and
+business partners, and personally identifiable information of customers and employees. The secure
+processing, maintenance and transmission of this information is critical to industry operations.
+The Harbor Department approaches cybersecurity through a multi-threaded approach to ensure a
+layered defense. The Cyber Program Management (“CPM”) framework utilized by the Harbor
+Department aligns with industry standards and regulations (focusing on National Institute of Standards
+and Technology Special Publication 800-53 (a publication that recommends security controls for federal
+information systems and organizations and documen ts security controls for all federal information
+systems, except those designed for national security)) and enables it to continually assess and improve its
+cybersecurity program. The Harbor Department routinely utilizes respected and objective third-party
+consultants to perform risk assessments of its cybersecurity programs. The CPM framework is used to
+assess the people, process and technology components. Additionally, the Harbor Department regularly
+consults with the United States Coast Guard, the Federal Bureau of Investigation, and the Center for
+Internet Security to benchmark its practices and stay abreast of emerging threats.
+Despite security measures, information technology and infrastructure may be vulnerable to
+attacks by hackers or breached due to employee error, malfeasance or other disruptions. Any such breach
+could compromise networks and the information stored there could be disrupted, accessed, publicly
+disclosed, lost or stolen. Any such disruption, access, disclosure or other loss of information could result
+in disruptions in the efficiency of commerce, legal claims or proceedings, liability under laws that protect
+the privacy of personal information, regulatory penalties, operations and the services provided, and cause
+a loss of confidence in the commercial operations of industries including the operations at the Port, which
+could ultimately adversely affect Harbor Department revenues.
+Environmental Compliance and Impacts
+Future environmental laws, regulations, enfo rcement priorities and standards and judicial
+decisions may impact the Harbor Department and the Port and the ability to construct and develop new
+revenue-generating facilities at the Port. Such impacts could be material and could result in significantly
+delays. See “THE PORT OF LONG BEACH—Environmental Compliance.”67
+In addition to the laws and regulations enacted and adopted by governmental entities, certain
+individuals and organizations could seek additional legal remedies to require the Harbor Department to
+take further actions to mitigate health hazards or seek damages from the Harbor Department in connection
+with the environmental impact of its maritime activities. Any actions taken by these individuals and
+organizations could be costly to defend, could result in substantial damage awards against the Harbor
+Department or could significantly delay or limit the Harbor

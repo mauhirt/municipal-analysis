@@ -1,0 +1,121 @@
+use of proceeds of the Bonds or any of 
+the property financed or refinanced with proceeds of the Bonds, or any portion thereof, by any person other than a 
+governmental unit (as such te rm is used in Section 141 of the Code), in such manner or to such extent as would 
+result in the loss of exclusion from gross income for federal income tax purposes of interest on the Bonds. 
+Events of Default and Remedies of Bondholders 
+Events of Default. The following events will be Events of Default under the Indenture: 
+(a) default in the due and punctual payment of the principal, Accreted Value or Redemption 
+Price of any Bond when and as the same shall become due and payable, whether at maturity as therei n 
+expressed, by proceedings for redemption, by declaration or otherwise in the amounts and at the times 
+provided therefor; 
+(b) default in the due and punctual payment of any installment of interest on any Bond when 
+and as such interest installment shall become due and payable; 
+(c) failure by the City to observe or perform any covenant, condition, agreement or provision 
+in the Indenture on its part to be observed or performed, other than as referred to in (a) or (b) under this 
+section captioned “Events of De fault and Remedies of Bondholders – Events of Default”, for a period of 
+thirty (30) days after written notice, specifying such failure and requesting that it be remedied, has been 
+given to the City by the Trustee; except that, if such failure can be remedi ed but not within such thirty (30) 
+day period and if the City has taken all action reasonably possible to remedy such failure within such thirty 
+(30) day period, such failure shall not become an Event of Default for so long as the City shall diligently 
+proceed to remedy the same in accordance with and subject to any directions or limitations of time 
+established by the Trustee or any insurer of the Bonds; 
+(d) default by the City under any agreement governing any Parity Debt and the continuance 
+of such default beyond the therein stated grace period, if any, with respect to such default; 
+(e) the filing by the City of a petition in voluntary bankruptcy for the composition of its 
+affairs or for its corporate reorganization under any state or federal bankruptcy or  insolvency law, or an 
+assignment by the City for the benefit of creditors, or the admission by the City in writing to its insolvency 
+or inability to pay debts as they mature, or the consent by the City in writing to the appointment of a trustee 
+or receiver for itself; 
+(f) the entering by a court of competent jurisdiction of an order, judgment or decree 
+declaring the City insolvent, or adjudging it bankrupt, or appointing a trustee or receiver of the City, or 
+approving a petition filed against the City seek ing reorganization of the City under any applicable law or 
+statute of the United States of America or any state thereof, and such order, judgment or decree shall not be 
+vacated or set aside or stayed within sixty (60) days from the date of the entry thereof; or  
+(g) the assumption, under the provisions of any other law for the relief or aid of debtors, by 
+any court of competent jurisdiction of custody or control of the City or of the Net Revenues and such 
+custody or control shall not be terminated within si xty (60) days from the date of assumption of such 
+custody or control. 
+Application of Net Revenues and Other Funds After Default; Acceleration.  If an Event of Default occurs 
+and is continuing, the City shall immediately transfer to the Trustee all Net Reve nues held by it and received 
+thereafter and the Trustee will apply all Net Revenues and any other funds then held or thereafter received by the 
+Trustee under any of the provisions of the Indenture (except as otherwise provided in the Indenture) as follows and 
+in the following order:  
+ C-22 
+(1) To the payment of any expenses necessary in the opinion of the Trustee to protect the 
+interests of the Owners of the Bonds and Parity Debt, including the costs and expenses of the Trustee and 
+the Bondholders in declaring suc h Event of Default, and payment of reasonable fees and expenses of the 
+Trustee (including reasonable fees and disbursements of its counsel and other agents) incurred in and about 
+the performance of its powers and duties under the Indenture; 
+(2) To the paym ent of the whole amount of Bond Obligation then due on the Bonds and 
+Parity Debt (upon presentation of the Bonds and Parity Debt to be paid, and stamping thereon of the 
+payment if only partially paid, or surrender thereof if fully paid) subject to the provisions of the Indenture, 
+with interest on such Bond Obligation at the rate or rates of interest borne by the respective Bonds and 
+Parity Debt, to the payment to the persons entitled thereto of all installments of interest then due and the 
+unpaid principal or Redemption Price of any Bonds and Parity Debt which shall have become due, whether 
+at maturity or by call for redemption, in the order of their due dates, with interest on the overdue Bond 
+Obligation and Parity Debt at the rate borne by the respective Bonds and Parity Debt, and, if the amount 
+available shall not be sufficient to pay in full all the Bonds and Parity Debt due on any date, together with 
+such interest, then to the payment thereof ratably, according to the amounts of principal or interest or 
+Accreted Value (plus accrued interest) due on such date to the persons entitled thereto, without any 
+discrimination or preference. 
+In each and every such case during the continuance of such Event of Default (and subject to any rights 
+granted to any insurer of the Bonds with respect to the enforcement of remedies upon an Event of Default pursuant 
+to a Supplemental Indenture), the Owners of not less than a majority in aggregate amount of Bond Obligation of the 
+Bonds at the time Outstanding will be entitled, u pon notice in writing to the City, to declare the principal of all of 
+the Bonds then Outstanding, and the interest accrued thereon, to be due and payable immediately, and upon any such 
+declaration the same will become and will be immediately due and payabl e, anything in the Indenture or in the 
+Bonds contained to the contrary notwithstanding. 
+This provision, however, is subject to the condition that if, at any time after the principal of the Bonds shall 
+have been so declared due and payable, the City shall pay to or shall deposit with the Trustee a sum sufficient to pay 
+all principal on such Bonds matured prior to such declaration and all matured installments of interest (if any) upon 
+all the Bonds, and the reasonable fees and expenses of the Trustee, and any  and all other defaults known to the 
+Trustee (other than in the payment of principal of and interest on the Bonds due and payable solely by reason of 
+such declaration) shall have been made good or cured to the satisfaction of the Trustee, or provision deem ed by the 
+Trustee to be adequate shall have been made therefor, then, and in every such case, the Owners of not less than a 
+majority in aggregate amount of Bond Obligation of the Bonds at the time Outstanding, by written notice to the City 
+and to the Trust ee, may, on behalf of the Owners of all the Bonds, rescind and annul such declaration and its 
+consequences; but no such rescission and annulment shall extend to or shall affect any subsequent default, or shall 
+impair or exhaust any right or power consequent thereon. 
+Trustee to Represent Bondholders .  The Trustee is irrevocably appointed (and the successive respective 
+Owners of the Bonds, by taking and holding the same, shall be conclusively deemed to have so appointed the 
+Trustee) as trustee and true and lawful attorney-in-fact of the Owners of the Bonds for the purpose of exercising and 
+prosecuting on their behalf such rights and remedies as may be available to such Owners under the provisions of the 
+Bonds, the Indenture and applicable provisions of any oth er law.  Upon the occurrence and continuance of an Event 
+of Default or other occasion giving rise to a right in the Trustee to represent the Bondholders, the Trustee in its 
+discretion may, and upon the written request of the Owners of not less than twenty -five percent (25%) in aggregate 
+amount of Bond Obligation of the Bonds then Outstanding, and upon being indemnified to its satisfaction therefore, 
+shall, proceed to protect or enforce its rights or the rights of such Owners by such appropriate action, suit , 
+mandamus or other proceedings as it shall deem most effectual to protect and enforce any such right, at law or in 
+equity, either for the specific performance of any covenant or agreement contained in the Indenture, or in aid of the 
+execution of any power  in the Indenture granted, or for the enforcement of any other appropriate legal or equitable 
+right or remedy vested in the Trustee or in such Owners under the Indenture or any other law; and upon instituting 
+such proceeding, the Trustee shall be entitled,  as a matter of right, to the appointment of a receiver of the Net 
+Revenues, and other assets pledged under the Indenture, pending such proceedings.  All rights of action under the 
+Indenture or the Bonds or otherwise may be prosecuted and enforced by the Trustee without the possession of any of 
+the Bonds or the production thereof in any proceeding relating thereto, and any such suit, action or proceeding  
+ C-23 
+instituted by the Trustee shall be brought in the name of the Trustee for the benefit and protection of all the Owners 
+of such Bonds, subject to the provisions of the Indenture (including the section entitled “ – Limitations on 
+Bondholders’ Right to Sue” herein). 
+Bondholders’ Direction of Proceedings .  Anything in the Indenture to the contrary notwithstanding, the 
+Owners of a majority in aggregate amount of Bond Obligation of the Bonds then Outstanding will have the right, by 
+an instrument or concurrent instruments in writing executed and delivered to the Trustee and upon furnishing the 
+Trustee with indemnification satisfactory to it, to direct the method of conducting all remedial proceedings taken by 
+the Trustee under the Indenture, provided that such direction shall not be otherwise than in accordance with law and 
+the provisions of the Indenture, that the Tr ustee may take any other action deemed proper by the Trustee which is 
+not inconsistent with such direction, and that the Trustee shall have the right to decline to follow any such direction 
+which in the opinion of the Trustee would be unjustly prejudicial to Bondholders or holders of Parity Debt not 
+parties to such direction. 
+Limitation on Bondholders’ Right to Sue.  No Owner of any Bond shall have the right to institute any suit, 
+action or proceeding at law or in equity, for the protection or enforcement of any right or remedy under the 
+Indenture or any other applicable law with respect to such Bond, unless (1) such Owner shall have given to the 
+Trustee written notice of the occurrence of an Event of Default; (2) the Owners of not less than twenty -five percent 
+(25%) in aggregate amount of Bond Obligation of the Bonds then Outstanding shall have made written request upon 
+the Trustee to exercise the powers hereinbefore granted or to institute such suit, action or proceeding in its own 
+name; (3) such Owner or s aid Owners shall have tendered to the Trustee reasonable indemnity against the costs, 
+expenses and liabilities to be incurred in compliance with such request; (4) the Trustee shall have refused or omitted 
+to comply with such request for a period of sixty ( 60) days after such written request shall have been received by, 
+and said tender of indemnity shall have been made to, the Trustee; and (5) the Trustee shall not have received 
+contrary directions from the Owners of a majority in aggregate amount of Bond Obligation of the Bonds then 
+Outstanding. 
+Such notification, request, tender of indemnity and refusal or omission are declared, in every

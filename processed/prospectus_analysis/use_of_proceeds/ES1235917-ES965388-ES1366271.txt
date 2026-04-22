@@ -1,0 +1,166 @@
+Use of Proceeds
+The proceeds of the Series 2018C Bonds will be used for the following purposes:
+/g120Approximately $323.5 million in proceeds from  the Series 2018C Bonds will be used 
+to refund all of the City’s outstanding Series 2013A Bonds and pay costs of issuance 
+associated with the Series 2018C Bonds.
+1.3 Scope
+This report summarizes the results of collaborative Department and PMST efforts to modify
+capital project plans previously updated in the Series 2018A and Series 2018B Feasibility 
+Study. The capital project plans reflect scheduli ng of wastewater collection projects enabled 
+by the approval of the City’s Financial Capability-Based Schedule Extension Request in 
+September 2012 by the U.S. District Court, Northern District of Georgia, the United States 
+Environmental Protection Agency (USEPA) and United States Department of Justice 
+(USDOJ). Project plans also reflect assessments of the adequacy of the System to meet 
+requirements of the Federal Clean Water Act, the Georgia Water Quality Control Act, the 
+Federal Safe Drinking Water Act, and the Georgia Safe Drinking Water Act.
+Data sources reviewed during the course of this study included key reports and documents 
+prepared by the City and the Department including:
+/g120FY 2018–2023 revised Capital Improvement Program (CIP) encumbrance and projected 
+expenditure schedule;
+/g120Department’s FY 2018 budget and budgetary variance reports, as well as 
+Comprehensive Annual Financial Reports (CAFRs) for FY 2012 through FY 2017 (where 
+available);
+/g120Department’s “Strategic Plan 2020: A One Water Vision”;
+                                                      
+4 The Rothstein Group, LLC – a component of Galardi Rothstein Group, LLC – is a Municipal Advisor registered with the 
+Municipal Securities Rulemaking Board (MSRB) (MSRB ID: K0764) and Securities and Exchange Commission (SEC) 
+(Municipal Advisor SEC ID: 867-01397).
+B-11 
+1.0 INTRODUCTION
+1-3
+ 
+/g120Integrated Utility Plan. Draft, July 2014;
+/g120Integrated Plan for the City of Atlanta, East Area Control Facilities National Pollutant
+Discharge Elimination System (NPDES) Permit No. GA0037168
+/g120Various other documents or financial reports prepared by the Department, the City, or 
+the PMST regarding the performance of the System.
+Engineering evaluations reported herein and in the Series 2018A and Series 2018B 
+Feasibility Study are based on a number of facility assessments and master planning efforts 
+conducted between 2011 and 2017, including perhaps most notably the integrated master 
+plan drafted in mid-2014. Reported asset condi tion assessments are based on the same 
+five-point condition definitions employed in the context of prior City bond issues (related to 
+the System), provided in Table 1-1. The repor t reiterates engineering evaluations reported 
+for the Series 2018A Bonds and Series 2018B Bonds that referenced prior, limited visual 
+inspections of selected major above ground facilities operated by the City, interviews of key 
+staff responsible for operation of facilities, and reviews of ongoing and planned capital 
+improvements. No field-testing or detailed evaluation of facility maintenance records was 
+performed to confirm scoring or to assign more refined condition scores. 
+While the Department continues to reference prior facility condition assessments, its capital 
+program reflects an evolution in focus from Consent Decree compliance to long-term 
+sustainability. This evolution is reflected in capital project definition, cost estimation and 
+prioritization – now informed by asset management and holistic water resource management 
+principles. Priority projects not only reflect asset condition assessments but also 
+opportunities to leverage new technologies or approaches (like green infrastructure and 
+biosolids management). Project cost estimation has been revisited and updated to reflect 
+emerging market conditions and project delivery requirements (e.g., site restoration).  Project 
+prioritization, while retaining the primacy of Consent Decree compliance, has embraced 
+opportunities to enhance sustainability—as evidenced by recent biosolids, nutrient 
+harvesting and energy management initiatives.
+Our financial evaluations have included an analysis of billing system data, updating of 
+detailed revenue forecasting models, and revisions to the strategic financial planning model 
+used to determine System rate revenue requirements. The strategic financial planning model 
+forecasts all System cash flows, employing approved FY 2018 departmental operating 
+budgets and recent forecasts of capital financing expenses funded through prior and 
+anticipated revenue bond proceeds, low-interest Georgia Environmental Finance Authority 
+(GEFA) loans, the 2018 Commercial Paper P rogram as described below), and operating
+revenues. The resulting financial plan, which is reported on herein, was developed to ensure 
+compliance with the applicable covenants of the City’s Master Bond Ordinance adopted on 
+May 31, 1999 as thereafter supplemented (the “Master Bond Ordinance”).
+Our updates also address several planned financial transactions that will marginally impact 
+the Department’s overall debt portfolio. In par ticular, with support from a Rockefeller 
+Foundation grant to facilitate transaction structuring, the Department is planning to issue a 
+$13.3 million ($12.5 million net proceeds) Environmental Impact Bond under a pay-for-
+B-12 
+1.0 INTRODUCTION
+1-4
+ 
+performance model.5 As outlined in Section 7, the Department is planning to use its 2018 
+Commercial Paper program to continue to facilitate capital project procurement and timing of 
+re-entry into the credit market.  Lastly, the Department has applied for Water Infrastructure 
+Finance and Innovation Act (WIFIA) loans to fund selected projects of regional importance 
+for system resiliency.
+TABLE 1-1
+Condition Score Definitions
+Condition 
+Score Scoring Definition
+1
+Very Good. Sound physical condition. Asset likely to perform adequately without major work 
+for 25 years or more for structures and for 10 years or more for mechanical or electrical 
+assets.
+2
+Good. Acceptable physical condition. Minimal short-term failure risk, but potential for 
+deterioration in medium- to long-term (10 years plus for structures and 5 to 10 years for 
+mechanical and electrical assets). Only minor work required, if any.
+3
+Fair. Moderate deterioration evident for structures and deterioration beginning to be 
+reflected in performance and higher maintenance for mechanical and electrical assets. 
+Failure unlikely within next 2 years, but further deterioration likely and major replacement 
+likely within 10 years for structures and within 5 years for mechanical and electrical assets. 
+Minor components or isolated sections of the asset need replacement or repair now, but 
+asset still functions safely at adequate level of service. Work required, but asset is still 
+serviceable.
+4
+Poor. Failure likely in short-term. Likely need to replace most, or all, of asset within 2 years. 
+No immediate risk to health or safety, but work required within 2 years to ensure asset 
+remains safe. Substantial work required in short-term, asset barely serviceable.
+5
+Very Poor. Failed or near failure. Immediate need to replace most, or all, of asset. 
+Component effective life exceeded and excessive maintenance costs incurred. A high risk of 
+breakdown with serious impact on performance. Health and safety hazards exist which 
+present a possible risk to public safety, or the asset cannot be serviced/operated without risk 
+to personnel. Major work or replacement required urgently.
+Source: Adapted by MWH Americas, Inc. from International Infrastructure Management Manual, Version 3.0, 2006.
+1.4 Firm Qualifications
+GRG, who has worked in close collaboration with the Department since 2003, produced this 
+report for the City.6 GRG provides strategic financial and management consulting services to 
+government agencies, public-private partnerships and special districts worldwide. GRG is the 
+partnering of Galardi Consulting LLC, established in 1996 – a certified Woman-Owned and 
+Emerging Small Business Enterprise; Stanger Consulting LLC established in 2012; and the 
+Rothstein Group LLC established in 2007, located in Chicago, IL, and a Municipal Advisor 
+registered with the Municipal Securities Rulemaking Board (MSRB). GRG has prepared 
+strategic financial plans, conducted cost-of-service rate studies, and participated in consent 
+                                                      
+5 For more information on Atlanta’s planned EIB and pay for performance models for impact investing, see Case i3: 
+Working Paper #1: Environmental Impact Bonds by David J. Nicola, MBA, Class of 2013, Duke University, The Fuqua 
+School of Business, https://sites.duke.edu/casei3/files/2013/03/CASEi3_EIB_Report_FINAL-links.pdf accessed 
+9/3/2018.  On Atlanta’s EIB, see for example. “Sharing Risks and Rewards, Water Finance & Management, June 18, 
+2018 at https://waterfm.com/sharing-risks-rewards/ accessed 9/3/2018.
+6 GRG, under a separate contract, serves as a sub-contractor of the Stantec/SG Joint Venture Program Management 
+Services Team (PMST) responsible for various aspects of the City’s wastewater consent decree compliance program.
+B-13 
+1.0 INTRODUCTION
+1-5
+ 
+decree negotiations related to financial capabilities for numerous utilities throughout North 
+America including Akron, OH; Halifax Regional Water Commission, Nova Scotia; Honolulu, 
+HI; Northeast Ohio Regional Sewer District (Cleveland, OH); Salem, OR; Metropolitan St. 
+Louis Sewer District, MO; Tucson, AZ and Winnipeg, Manitoba. GRG, through a contract 
+with Chemonics International Inc., was also engaged in 2012 by the United States Agency 
+for International Development (USAID) to participate in a national tariff study for the 
+Government of Egypt’s Ministry of Housing, Utilities and Urban Development. GRG is 
+supporting the Guam Waterworks Authorit y in ongoing water and wastewater system 
+consent decree negotiations with USEPA. GRG also prepared the Municipal Advisor’s 
+Report for the $1.785 billion Series 2013 Jefferson County Alabama Sewer Warrant is sue 
+that enabled the county to exit from bankruptcy under a Plan of Adjustment confirmed by the 
+U.S. Federal Bankruptcy Court in November 2013.  Most recently, GRG Principal Eric 
+Rothstein served as Implementation Planning Program Manager for the creation of the Great 
+Lakes Water Authority in Detroit, Michigan and as a member of the Flint Water Advisory 
+Task Force appointed by Michigan Governor Rick Snyder in October 2015.
+Two consulting engineering teams - BGR and JP2 - were engaged by the Department
+between 2011 and 2014 to conduct various facility assessments and develop an integrated 
+master plan for prospective rehabilitation and development of the System. These firms 
+contributed the facility condition assessment information reported herein.
+/g120BGR has provided engineering services on a variety of assignments to the City for 
+over four years. BGR is a joint venture of Black & Veatch, Gresham, Smith & 
+Partners, and Rohadfox Construction Control Services Corporation, bringing together 
+the combined expertise, experience, and capacity of these industry-leading firms. 
+/g120The JP2 Team has performed short- and long-term master plan activities for the 
+water system. In addition, JP2 completed a short-term assessment of the Combined 
+Sewer Overflow facilities and sewer lift stations. The JP2 team that completed the 
+master plan consisted of three primary consultants - PRAD Group, Tetra Tech and 
+River 2 Tap (R2T).
+1.5 Capital Financing Strategy Refinement
+The Series 2018C Bonds are part of an updated strategy for the Department’s debt portfolio 
+and projected capital program financing. This refinement builds on the strategy outlined in 
+the Series 2018A and Series 2018B Feasibility Study, updates assessments of System 
+needs and funding options, and includes the impa

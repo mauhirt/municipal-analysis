@@ -1,0 +1,135 @@
+use of proceeds of the Bonds or any of the 
+property financed or refinanced with proceeds of the Bonds, or any portion thereof, by any person other than a 
+governmental unit (as such term is used in Section 141 of the Code), in such manner or to such extent as would 
+result in the loss of exclusion from gross income for federal income tax purposes of interest on the Bonds.   
+ 
+ 
+ A-11 
+(b) The SFPUC will not take any action, or fail to take any action, if any such action or failure to take 
+action would cause the Bonds to be “private activity bonds” within the meaning of Section 141 of the Code, and in 
+furtherance thereof, will not make any use of the proc eeds of the Bonds or any of the property financed or 
+refinanced with proceeds of the Bonds, or any portion thereof, or any other funds of the SFPUC, that would cause 
+the Bonds to be “private activity bonds” within the meaning of Section 141 of the Code.  To that end, so long as any 
+Bonds are Outstanding, the SFPUC, with respect to such proceeds and property and such other funds, will comply 
+with applicable requirements of the Code and all regulations  of the United States Department of the Treasury issued 
+thereunder, to the extent such requirements are, at the time, applicable and in eff ect.  The SFPUC will establish 
+reasonable procedures necess ary to ensure continued compliance with Section 141 of the Code and the continued 
+qualification of the Bonds as “governmental bonds.”  
+Further Assurances.  The SFPUC will at any and all times, insofar as it may be authorized to do so by law, 
+pass, make, do, execute, acknowledge and deliver all and every such further resolutions, acts, assignments, 
+instruments and assurances as may be necessary or desirable for the better assuring, granting, pledging, assigning 
+and confirming any and all of the rights, revenues, funds a nd other property hereby granted, pledged or assigned to 
+pay or secure the payment of the Bonds, in the manner and to the extent provided herein. 
+Defaults and Remedies 
+Events of Default.  Each of the following is an “Event of Default” under the Indenture: 
+(a) The SFPUC will default in the payment of any Principal, Purchase Price or Redemption Price of 
+or interest on any Bond when the same becomes due and payable; or 
+(b) Subject to the provisions of the Indenture, default in the performance, or breach, of any covenant, 
+warranty or representation of the SFPUC contained in the Indenture (other than a default under (a) above); or 
+(c) (i) The filing of a petition in bankruptcy (or other commencement of a bankruptcy or similar 
+proceedings) by the SFPUC or the City as debtor, under federal or state bankruptcy law; (ii) the filing of a petition in 
+bankruptcy (or other commencement of a bankruptcy or similar proceedings) against the SFPUC or the City as 
+debtor, under federal or state bankruptcy law, which petiti on is not dismissed within 60 days after filing; (iii) the 
+appointment of a receiver, liquidator, assignee, custodian, trustee, sequestrator or other similar official of the SFPUC 
+or the City or of any substantial portion of its property; or (iv) the ordering of the winding up or liquidation of the 
+affairs of the SFPUC or the City. 
+Remedies Upon Default. 
+(a) If an Event of Default under the caption “Events of Default” occurs and is continuing, the Trustee 
+may, and upon the written request to the Trustee by the Owners of a majority in aggregate Principal amount of the 
+Outstanding Bonds the Trustee will, subject to the require ments under the caption “Certain Rights of the Trustee,” 
+by written notice to the SFPUC, declare the Principal of the Bonds and all interest accrue d thereon to the date of 
+acceleration to be immediately due and payable. 
+(b) At any time after such a declaration of accelera tion has been made and before the entry of a 
+judgment or decree for payment of the money due, the Trustee may, or the Owners of a majority in aggregate 
+Principal amount of the Outstanding Bonds, may by written notice to the SFPUC and the Trustee, and subject to the 
+requirements under the caption “Certain Rights of the Trustee,” direct the Trustee to, rescind and annul such 
+declaration and its consequences if: 
+(i) there has been paid to or deposited with th e Trustee by or for the account of the SFPUC, 
+or provision satisfactory to the Trustee has been made for the payment of a sum sufficient to pay: (A) all 
+overdue installments of interest on the Bonds; (B) the Principal, Purchase Price, and Redemption Price of 
+any Bonds that have become due other than by such d eclaration of acceleration and interest thereon; (C) to 
+the extent lawful, interest upon overdue interest and redemption premium, if any; and (D) all sums paid or 
+advanced by the Trustee under the Indenture, together with the reasonable compensation, expenses,  
+ 
+ 
+ A-12 
+disbursements and advances of the Trustee and its agents and counsel prior to the date of notice of 
+rescission; and 
+(ii) all Events of Default have been cured or waived, other than the nonpayment of Principal, 
+Purchase Price or Redemption Price of and interest on the Bonds that occasioned such acceleration. 
+(c) No such rescission and annulment will affect any subsequent default or impair any consequent 
+right. 
+Additional Remedies. 
+(a) The Trustee, upon the occurrence of an Event of Default may, and upon the written request of the 
+Owners of a majority in aggregate Principal amount of the Outstanding Bonds, and subject to the requirements 
+under the caption “Certain Rights of the Trustee,” will proceed to protect and en force its rights and the rights of the 
+Owners of the Bonds under the Indenture by a suit or suits in equity or at law, either for the specific performance of 
+any covenant or agreement contained in the Indenture or in aid of the execution of any power herein or therein 
+granted, or for the enforcement of any other appropriate legal or equitable remedy, and the Trustee in reliance upon 
+the advice of counsel may deem most eff ective to protect and enforce any of the rights or interests of the Owners of 
+the Bonds under the Bonds or the Indenture. 
+(b) Without limiting the generality of the foregoing, the Trustee will at all times have the power to 
+institute and maintain such proceedings as it may deem expedient: (i) to  prevent any impairment of the money and 
+other property then held under the Indenture by any acts that may be unlawful or in violation of the Indenture, and 
+(ii) to protect its interests and the interests of the Owners in the money and other property then held under the 
+Indenture and in the issues, profits, revenues and other income arising therefrom, including the power to maintain 
+proceedings to restrain the enforcemen t of or compliance with any governmental enactment, rule or order that may 
+be unconstitutional or otherwise invalid, if the enforcement of, or compliance with, such enactment, rule or order 
+would impair the money and other property then held under the Indenture or be prejudicial to the interests of the 
+Owners or the Trustee. 
+Marshaling of Assets.  Upon the occurrence of an Event of Default, all money in all Funds will be available 
+to be utilized by the Trustee in accordance with the provisi ons under the caption “Events of Default.”  The rights of 
+the Trustee under the caption “Compensation and Expenses of the Trustee,” will be applicable.  During the 
+continuance of any such Event of Default, all provisions of  the Indenture relating to the utilization of the Funds will 
+be superseded by the provisions under the caption “Events of Default.”  Subsequent to the curing or waiver of any 
+such Event of Default, the provisions of the Indenture relating to utilization of the Funds will be reinstated. 
+Notice and Opportunity to Cure Certain Defaults.  No default in (b) under the caption “Events of Default,” 
+will constitute an Event of Default until written notice of su ch default will have been given to the SFPUC by the 
+Trustee or by the Owners of at least 25% in aggregate Principal amount of the Bonds Outstanding, and the SFPUC 
+will have had 60 days after receipt of su ch notice to correct such default or cause such default to be corrected, and 
+will have failed to do so.  In the event, however, that the default is such that it cannot be corrected within such 60-
+day period, it will not constitute an Event of Default if corrective action is instituted by the SFPUC within such 
+period and diligently pursued (as determined by the Trustee) until the default is corrected. 
+Priority of Payment Following Event of Default. 
+(a) If at any time after the occurrence of an Event of Default the money held by the Trustee under the 
+Indenture will not be sufficient to pay the Bonds as the sa me become due and payable, such money, together with 
+any money then available or  thereafter becoming available for such pu rpose, whether through the exercise of 
+remedies in the provisions under the caption “Events of Defa ult” or otherwise, will, subject to (b) and (c) under this 
+section, be applied by the Trustee as follows: 
+(i) First, to the payment of all amounts due the Trustee under the caption “Compensation 
+and Expenses of the Trustee;”  
+ 
+ 
+ A-13 
+(ii) Second, to the payment of Operation and Maintenance Expenses; 
+(iii) Third, to the payment of all interest on the Bonds and Swap Agreem ent Payments then 
+due and payable in the order in whic h the same became due and payable,  and, if the amount available will 
+not be sufficient to make any paymen t in full, then to th e payment, ratably, according to the amounts due 
+with respect to such payments, without discrimination or preference; 
+(iv) Fourth, to the payment of the unpaid Principal amount of any of the Bonds that will have 
+become due and payable, in the order of due dates (other than Bonds called for redemption or contracted to 
+be purchased for the payment of which money is held pursuant to the provisions of the Indenture), with 
+interest upon the Principal amount of the Bonds from the respective dates upon which they will have 
+become due and payable, and, if the amount available will not be sufficient to pa y in full the Principal of 
+such Bonds due and payable on any particular due date, together with such interest, then to the payment 
+first of such interest, ratably, according to the am ount of Principal due on such date, without any 
+discrimination or preference; 
+(v) Fifth, to the payment of the Redemption Price of Bonds called for optional redemption, if 
+any; 
+(vi) Sixth, to the payment under all reimbursement agreements with the providers of Reserve 
+Account Credit Facilities of all amounts due and payable thereunder (and if there is not sufficient money to 
+make all such payments, then on a pro rata basis to each provider); 
+(vii) Seventh, (A) for the payment of principal and premium, if any, and interest on 
+Subordinate Obligations; (B) for deposit into a reserve fund securing any Subordinate Obligations; (C) for 
+Swap Agreement Payments pursuant to any Swap Agreements entered into by the SFPUC with respect to 
+any Subordinate Obligations; and (D) for payment to any financial institution or insurance company 
+providing any letter of credit, line of credit, or other credit or liquidity facility, including municipal bond 
+insurance and guarantees, that secures the payment of principal of or interest on any Subordinate 
+Obligations; in each case in any order of priority which may be hereafter established by the SFPUC; 
+(viii) Eighth, for any payment under a Take-or-Pay Power Purchase Agreement that does not 
+constitute an Operation and Maintenance Expense; 
+(ix) Ninth, for any payment under a Swap Agreement that does not constitute a Swap 
+Agreement Payment; and 
+(x) Tenth, to the payment of all other charges or obligations against the Revenues of 
+whatever nature now or hereafter imposed thereon by law or contract, in any order of priority which may be 
+hereafter established by the SFPU

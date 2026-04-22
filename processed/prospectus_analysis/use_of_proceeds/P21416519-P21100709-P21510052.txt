@@ -1,0 +1,268 @@
+Use of Proceeds - Categorization of green 
+project with clear environmental 
+benefits 
+“Section 2: Description of 
+Resiliency Projects” 
+ 
+“Section 4.2: Alignment with 
+other ESG and 
+Environmental Frameworks” 
+2. Process for Project 
+Evaluation and Selection 
+- Clear communication of 
+environmental sustainability 
+objectives 
+- Process by which issuer 
+determines project fit under 
+Green Project categories above
+- Context within the issuer’s 
+overarching objectives, 
+strategy, policy and/or 
+processes relating to 
+environmental sustainability 
+“Section 4: Discussion of 
+Project Objectives” 
+ 
+“Section 2.2: Process for 
+Project Evaluation and 
+Selection” 
+ 
+3. Management of 
+Proceeds 
+- Net proceeds credited to sub-
+account or otherwise tracked in 
+an appropriate manner 
+- Formal internal tracking 
+process, including periodically 
+adjusting balance of tracked 
+net proceeds 
+“Section 3.2: Management of 
+City of Hampton EIB 
+Proceeds” 
+4. Reporting - Annual reporting of use of 
+proceeds until full allocation 
+“Section 7: Environmental 
+Impact Bond and Green 
+Bond Reporting” 
+ 
+Table 5: Alignment of the City of Hampton EIB with the ICMA Green Bond Principles 
+ 
+4.2.2 Alignment with United Nations Sustainable Development Goals 
+Impacts from the Resiliency Projects are aligned with several United Nations 
+Sustainable Development Goals (“UN SDGs”), as described in the ICMA “Green and 
+Social Bonds: A High-Level Mapping to the Sustainable Development Goals” (June 
+2019) and the U.N. SDG 11 Synthesis Report: Tracking Progress Towards Inclusive, 
+Safe, Resilient and Sustainable Cities and Human Settlements (2018). The Resiliency 
+Projects address goals 1 (No Poverty), 11 (Sustainable Cities and Communities), 13 
+(Climate Action), and 14 (Life Below Water).17  
+ 
+ 
+ 
+17 https://www.icmagroup.org/assets/documents/Regulatory/Green-Bonds/June-2019/Mapping-SDGs-to-Green-Social-and-
+Sustainability-Bonds06-2019-100619.pdf; http://uis.unesco.org/sites/default/files/documents/sdg11-synthesis-report-2018-en.pdf, at 
+p. 69.                
+ 
+18 
+ 
+UN SDG Target Indicator in EIB Projects 
+1 (No Poverty) 1.5 – Number of people 
+benefiting from measures to 
+mitigate the consequences of 
+climate change such as 
+natural disasters 
+Population of census tracts 
+benefiting from flood mitigation 
+11 (Sustainable Cities 
+and Communities) 
+11.5 – Reduce human and 
+economic impact of disasters, 
+including water-related 
+disasters, with a focus on 
+poor and vulnerable 
+populations 
+Population of census tracts 
+benefiting from flood mitigation 
+ 
+Reduction in annual days of flood 
+closures on North Armistead 
+Avenue 
+13 (Climate Action) 13.1 – Water storage capacity
+ 
+ 
+13.1 – Reduction in weather-
+related disruption (days p.a.) 
+and/or risk frequency (%) 
+Stormwater volume storage 
+capacity of Resiliency Projects 
+ 
+Reduction in annual days of flood 
+closures on North Armistead 
+Avenue 
+14 (Life Below Water) 14.1 – Avoided or reduced 
+marine and freshwater 
+pollution 
+Stormwater runoff retention 
+capacity of Resiliency Projects 
+ 
+Table 6: Alignment of the City of Hampton EIB with the UN Sustainable Development Goals 
+5. Project Impact Estimation, as Designed Pre-Construction  
+5.1 Primary Project Outcome Metric: Stormwater Volume Storage Capacity 
+The primary Outcome Metric for the Resiliency Projects will be Stormwater Volume 
+Storage Capacity (gallons). The aggregate volume storage capacity for the Resiliency 
+Projects is estimated to be 8.62 million gallons. Although there are multiple ways to 
+measure the resilience benefits of these Resiliency Projects, this metric was chosen 
+because it is a meaningful proxy measure of the resilience benefits, decision-useful for 
+the City in capital planning of future resiliency projects, and able to be measured cost-
+efficiently (see Section 6, “Project Impact Evaluation, Post-Construction”): 
+ 
+● Directly relevant to project goals: A significant amount of localized flooding in 
+Hampton is driven by stormwater, making storage provided by the Resiliency 
+Projects during rain events a key measure of flood resilience 
+● Decision-useful: The Resiliency Projects are intended to be re plicable pilots that 
+inform future capital planning decisions, making data about the cost-efficiency of 
+localized flood mitigation projects valuable. 
+● Objective: Measurements are tak en by registered land surveyors, verified by 
+professional engineers, and can be repeated if desired. 
+● Cost-effective to quantify: Vol ume storage capacity can be measured via one 
+post-construction survey, and verified by a third party using spot check survey 
+measurements.                
+ 
+19 
+ 
+ 
+As a capacity measure, the Resiliency Projects’ storage capacity represents the 
+maximum amount of stormwater they can store every time it rains. This will especially 
+benefit the City by absorbing chronic runoff during those less severe, more frequent rain 
+events. In aggregate, the Resiliency Projects are expected to add 8.62 million gallons of 
+stormwater volume storage capacity, or 26.4 acre-feet. One acre-foot is approximately 
+equal to filling a football field with water to a height of one foot. The expected 
+performance of the Resiliency Projects is given in the table below. 
+ 
+Resiliency Project Expected Added Stormwater Volume Storage 
+Capacity, gallons (acre-feet) 
+Big Bethel Blueway 2.70 million gallons (8.3 acre-feet)  
+North Armistead Avenue Green 
+Infrastructure 0.33 million gallons (1.0 acre-feet) 
+Lake Hampton 5.59 million gallons (17.1 acre-feet) 
+Total 8.62 million gallons (26.4 acre-feet) 
+ 
+Table 7: Stormwater volume storage capacity, as designed, for EIB-funded Resiliency Projects 
+ 
+In addition, as described in Section 4.1, the road raising portion of the North Armistead 
+Avenue Project is expected to eliminate the impacts of chronic flooding, which currently 
+causes 92 hours of flooding and affects 45,000 vehicles in an average year.  
+ 
+The flood resilience benefits can also be thought of in terms of more infrequent but 
+more extreme rain events. A “ten-year storm” is a rain event unusual enough in its 
+severity to only have a 10% chance of occurring in any given year. These storms are 
+more likely to flood residential areas and disrupt economic activity. Capturing as much 
+runoff as possible is a critical step to managing flooding during these extreme events, 
+which have become more frequent in coastal Virginia in recent years. 
+ 
+Resiliency 
+Project 
+Stormwater Volume 
+Storage Capacity 
+Total Nearby Runoff 
+From a Ten-Year Storm 
+Nearby Runoff Absorbed 
+by Project (%) 
+Big Bethel 
+Blueway 
+2.70 million gallons  
+(8.3 acre-feet) 
+213.8 acre-feet 3.9% 
+North 
+Armistead 
+Ave. GI 
+0.33 million gallons 
+(1.0 acre-feet) 
+9.4 acre-feet 10.8% 
+Lake 
+Hampton 
+5.59 million gallons 
+(17.1 acre-feet) 
+43.0 acre-feet 39.9% 
+ 
+Table 8: Reduction in runoff during a ten-year storm due to Resiliency Projects                
+ 
+20 
+ 
+ 
+A ten-year storm also creates about 207,000 gallons of runoff from the average 
+commercial parcel in Hampton, and about 28,000 gallons of runoff from the average 
+single-family residential parcel. With their combined storage capacity of 8.62 million 
+gallons, the Resiliency Projects are projected to create stormwater volume capture 
+equivalent to the runoff from 27 commercial parcels, or 200 single-family residential 
+parcels, during a ten-year rain event. 
+ 
+5.2 Overview of Pre-Construction Outcome Estimation Approach 
+The Stormwater Volume Storage Capacity achieved by the Resiliency Projects can be 
+estimated using the engineering design drawings at the time of the issuance of the City 
+of Hampton EIB. The storage capacity of each Resiliency Project is dependent on the 
+geometric dimensions of several of its key design features. Using the dimensions in the 
+design drawings allows pre-construction estimation of the Stormwater Volume Storage 
+Capacity created by each Resiliency Project.  
+ 
+Big Bethel Blueway: The Stormwater Volume Storage Capacity added by this project 
+comes from the addition of weirs and the expansion of the drainage channels. Since the 
+existing channel does not have weirs, it does not currently have the ability to store 
+stormwater. The weirs will hold back stormwater runoff collected from the nearby 
+neighborhoods until it tops the weirs, reducing the rate of water flowing downstream into 
+Newmarket Creek. The main drainage channel behind the weirs will be widened, 
+increasing the amount of water that can be stored behind the weirs. Further, the 
+backyard drainage swales that connect and contribute to the main drainage channel will 
+have their storage capacity increased through the addition of bioretention cells. In the 
+future, a site directly adjacent to the Blueway, currently a school site no longer in use, 
+may receive green infrastructure installations to further enhance the stormwater 
+management ability of the weirs.  
+ 
+North Armistead Avenue Road Raising and Green Infrastructure: The Stormwater 
+Volume Storage Capacity added by this project comes from the installation of bioswales 
+in the median of the road and between the road and the shared-use path, which will 
+hold back and infiltrate stormwater runoff from the road itself. The surface storage 
+capacity in the median and roadside bioswales will be an increase over present 
+conditions.  It is also likely that underground storage and infiltration capacity can be 
+included as bioretention cells under the median and roadside bioswales. 
+ 
+Lake Hampton: The Stormwater Volume Storage Capacity added by this project comes 
+from two key design features. First, the majority of the lake’s storage capacity comes 
+from precipitation filling the lake, preventing water from entering Newmarket Creek until 
+the lake’s levels top its weir into the Creek. The improvements made through the project 
+to the outflow structures, including raising the height of the weir and the dam, will allow 
+the lake to store an increased amount of precipitation before it tops the weir. Second, 
+the project will add a number of detention basins in a “treatment train” that will capture                
+ 
+21 
+ 
+excess stormwater runoff from North Armistead Avenue. Each basin will fill in sequence, 
+sending its excess volume to the basin adjacent to it, and eventually to the lake itself.  
+ 
+5.3 Calculations of Pre-Construction Outcome and Results 
+The following sections discuss the methodology used by the City’s engineering 
+consultants, Moffatt & Nichol, to calculate the as-designed Stormwater Volume Storage 
+Capacity of each Resiliency Projects. 
+5.3.1. Big Bethel Blueway  
+The Stormwater Volume Storage Capacity created by this project is the sum of the 
+storage capacity in the main drainage channel (the Blueway), plus the storage capacity 
+in the bioretention cells to be created along several drainage easements running 
+between residential properties adjacent to the channel. 
+ 
+The estimated storage capacity in the channel is calculated over intervals of 100 feet 
+along the stream, by multiplying the 100 feet length by the average cross-sectional 
+storage area available at each end of that interval. This is an “average end area” 
+calculation method that is a typical method used in engineering and construction for 
+establishing quantities. The storage available at each cross-section is the area bounded 
+by the stream channel topography (the expanded banks and stream bed) and below the 
+next downstream weir elevation associated with each cross-section. The calculation for 
+a typical 100-foot interval is illustrated in Figures 3 and 4 below. The storage capacity is 
+the average of the storage area at the upstream cross-section (A1) and the downstream 
+cross-section (A2) times the length between cross-sections (L), which is 100 feet, so 
+that: Blueway in-stream storage capacity at each 100-foot interval = (A1+A2)/2 x L. 
+                
+ 
+22 
+ 
+ 
+ 
+Figure 6: Big Bethel Blueway cross-section channel storage calculatio
