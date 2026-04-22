@@ -1,0 +1,111 @@
+Green Bonds)] 
+ APPENDIX III 
+III-1 
+SUMMARY OF TAX LEVIES, PAYMENT PROVISIONS, AND 
+MINNESOTA REAL PROPERTY VALUATION 
+ 
+Following is a summary of certain statutory provisions relative to tax levy procedures, tax payment and 
+credit procedures, and the mechanics of real property valuation.  The summary does not purport to be 
+inclusive of all such provisions or of the specific provisions discussed, and is qualified by reference to the 
+complete text of applicable statutes, rules and regulations of the State of Minnesota. 
+ 
+ 
+Property Valuations (Chapter 273, Minnesota Statutes) 
+ 
+Assessor's Estimated Market Value.  Each parcel of real property subject to taxation must, by statute, be 
+appraised at least once every five years as of January  2 of the year of appraisal.  With certain exceptions, 
+all property is valued at its market value, which is the value the assessor determ ines to be the price the 
+property t o be fairly worth, and which is referred to as the “Estimated Market Value.”  The 2013 
+Minnesota Legislature established the Estimated Market Value as the value used to calculate a 
+municipality’s legal debt limit. 
+ 
+Economic Market Value.  The Economic Mark et Value is the value of locally assessed real property 
+(Assessor’s Estimated Market Value) divided by the sales ratio as provided by the State of Minnesota 
+Department of Revenue plus the estimated market value of personal property, utilities, railroad, an d 
+minerals. 
+ 
+Taxable Market Value.  The Taxable Market Value is the value that Net Tax Capacity is based on, after 
+all reductions, limitations, exemptions and deferrals. 
+ 
+Net Tax Capacity .  The Net Tax Capacity is the val ue upon which net taxes are levied, extended and 
+collected.  The Net Tax Capacity is computed by applying the class rate percentages specific to each type 
+of property classification against the Taxable Market Value.  Class rate percentages vary depending o n 
+the type of property as shown on the last page of this Appendix.  The formulas and class rates for 
+converting Taxable Market Value to Net Tax Capacity represent a basic element of the State's property 
+tax relief system and are subject to annual revisions by the State Legislature.  Propert y taxes are the sum 
+of the amounts determined by (i)  multiplying the Net Tax Capacity by the tax capacity rate, and 
+(ii) multiplying the referendum market value by the market value rate. 
+ 
+Market Value Homestead Exclusion.  In 2011, the Market Value Homestead Exclusion Program (MVHE) 
+was implemented to offset the elimination of the Market Value Homestead Credit Program that provided 
+relief to certain homesteads.  The MVHE reduces the taxable market value of a homestead with  an 
+Assessor’s Estimated Market Value up to $413,800 in an attempt to result in a property tax similar to the 
+effective property tax prior to the elimination of the homestead credit.  The MVHE applies to property 
+classified as Class 1a or 1b and Class 2a, and causes a decrease in the  City’s aggregate Taxable Market 
+Value, even if the Assessor’s Estimated Market Value on the same properties did not decline. 
+ 
+ 
+Property Tax Payments and Delinquencies 
+   (Chapters 275, 276, 277, 279-282 and 549, Minnesota Statutes) 
+ 
+Ad valorem property taxes lev ied by local governments in Minnesota are extended and collected by the 
+various counties within the State.  Each taxing jurisdiction is required to certify the annual tax levy to the 
+county auditor within five (5) working  days after December 20 of the year  preceding the collection year.  
+A listing of property taxes due is prepared by the county auditor and turned over to the county treasurer 
+on or before the first business day in March. 
+   
+III-2 
+The county treasurer is responsibl e for collecting all property taxes  within the county.  Real estate and 
+personal property tax statements are mailed out by March 31.  One-half (1/2) of the taxes on real property 
+is due on or before May  15.  The remainder is due on or before October  15.  Real property taxes not paid 
+by their due date are assessed a penalty on homestead property of 2% until May 31 and increased to 4% 
+on June 1.  The penalty on nonhomestead property is assessed at a rate of 4% until May 31 and increased 
+to 8% on June 1.  Ther eafter, an additional 1% penalty sh all accrue each month through October  1 of the 
+collection year for unpaid real property taxes.  In the case of the second installment of real property taxes 
+due October 15, a penalty of 2% on homestead property and 4% on nonhomestead property is assessed.  
+The penalty for homestead property increases to 6% on November  1 and again to 8% on December  1.  
+The penalty for nonhomestead property increases to 8% on November 1 and again to 12% on 
+December 1.  Personal property taxe s remaining unpaid on May  16 are de emed to be delinquent and a 
+penalty of 8% attaches to the unpaid tax.  However, personal property that is owned by a tax- exempt 
+entity, but is treated as taxable by virtue of a lease agreement, is subject to the same deli nquent property 
+tax penalties as real property.   
+ 
+On the first business day of January of the year following collection all delinquencies are subject to an 
+additional 2% penalty, and those delinquencies outstanding as of February  15 are filed for a tax lien 
+judgment with the district court.  By March 20 the county auditor files a publication of legal action and a 
+mailing of notice of action to delinquent parties.  Those property interests not responding to this notice 
+have judgment entered for the amount of the delinquency and assoc iated penalties.  The amount of the 
+judgment is subject to a variable interest determined annually by the Department of Revenue, and equal to 
+the adjusted prime rate charged by banks but in no event is the rate less than 10% or more than 14%. 
+ 
+Property owners subject to a tax lien judgment generally have three years (3) to redeem the property.  
+After expiration of the redemption period, unredeemed properties are declared tax forfeit with title held in 
+trust by the Stat e of Minnesota for the respective taxin g districts.  The county auditor, or equivalent 
+thereof, then sells those properties not claimed for a public purpose at auction.  The net proceeds of the 
+sale are first dedicated to the satisfaction of outstanding sp ecial assessments on the parcel, with any 
+remaining balance in most cases being divided on the following basis:  county - 40%; town or city - 20%; 
+and school district - 40%.  
+ 
+ 
+Property Tax Credits (Chapter 273, Minnesota Statutes) 
+ 
+In addition to adjusting the taxable value for various property types, primary elements of Minnesota's 
+property tax relief system are:  property tax levy reduction aids; the homestead credit refund and the 
+renter’s property tax refund, which relate property taxes to inc ome and provide relief on a sliding inc ome 
+scale; and targeted tax relief, which is aimed primarily at easing the effect of significant tax increases.  
+The homestead credit refund, the renter’s property tax refund, and targeted credits are reimbursed to th e 
+taxpayer upon application by the taxpayer.  Property tax levy reduction aid includes educational aids, 
+local governmental aid, equalization aid, county program aid and disparity reduction aid. 
+ 
+ 
+Debt Limitations 
+ 
+All Minnesota municipalities (counties, c ities, towns and school districts) are subject to statutory “net 
+debt” limitations under the provisions of Minnesota Statutes, Section 475.53.  Net debt is defined as the 
+amount remaining after deducting from gross debt the amount of current revenues that are applicable 
+within the current fisca l year to the payment of any debt and the aggregate of the principal of the 
+following: 
+ 
+1. Obligations issued for improvements which are payable wholly or partly from the proceeds of 
+special assessments levied upon prope rty specially benefited thereby, includ ing those which are 
+general obliga

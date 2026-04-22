@@ -1,0 +1,99 @@
+Green Bonds designation. 
+ABOUT THE ISSUER  
+The District of Columbia Water and Sewer Authority ( “DC Water”) provides retail water, sewer , and 
+stormwater services to approximately 700,000 residents in t he District of Columbia (the “District”) and 
+almost 26 million visitors. In addition, the DC Water  treats wastewater for about 1. 8 million people in 
+neighboring jurisdictions in Maryland and Virginia . DC Water is one of the largest water and wastewater 
+utilities in the United States.   
+ 
+Kestrel | Second Party Opinion 2 
+The wastewater and stormwater system includes approximately 1,900 miles of sanitary  and combined 
+sewers and the Blue Plains Advanced Wastewater Treatment Plant (“Blue Plains”). Blue Plains has a 
+permitted design capacity of 384 million gallons per day  and a permitted peak wet weather capacity of  
+780 million gallons per day. The facility is located along the Potomac River on a  150-acre site  in the 
+southernmost point of the District. Treated effluent is discharged into the Potomac River which flows to 
+the Chesapeake Bay. 
+Sustainability and resilience are integrated into all dimensions of operations at DC Water. Stewardship of 
+watershed resources, integrated planning, and progress toward decarbonization all point to DC Water’s 
+leadership in sustainability. A strategic plan adopted in 2021, Blueprint 2.0, identifies five core 
+organizational imperatives: Healthy, Safe and Well; Reliable; Resilient; Sustainable; and Equitable. These 
+imperatives are central to the long-term vision of DC Water.1  
+DC Water has demonstrated leadership in restoration of the Potomac River , Anacostia River,  and 
+Chesapeake Bay, the largest estuar y in the US, by nutrient removal capabilities at Blue Plains. Managing 
+nitrogen and phosphorus in the Chesapeake Bay is a high priority because elevated nutrient levels fuel 
+excessive growth of algal blooms that result in damaging conditions for aquatic ecosystems. This process 
+is referred to as “eutrophication.” These conditions can pose public health threats and undermine seafood 
+and tourism industries. A dvanced treatment processes have enabled DC Water to achieve some of the 
+lowest nitrogen levels in effluent among utilities in the United States.  These water quality improvements 
+illustrate DC Water’s longstanding commitment to watershed stewardship.  
+DC Water collaborates with regional governments to achieve energy use and emission reductions. 
+DC Water is committed to goals in the Clean Energy DC Plan to achieve 60% reduction in greenhouse gas 
+emissions by 2030 and carbon neutrality by 2045. Carbon footprint and energy models are maintained for 
+all operations. As the largest single site consumer of electricity in Washington, DC, improvements to energy 
+efficiency and the transition to renewable energy  by DC Water  are critical to meeting regional  emission 
+reduction targets. Climate mitigation strategies include:  
+• Renewable Energy: The Blue Plains Wastewater Treatment Plant has 3.4 MW of solar  and DC 
+Water plans for an additional 10.5 MW of capacity  there. Nine additional sites are ear marked 
+for solar installations in the future.  
+• Energy Efficient Buildings: DC Water’s headquarters building is LEED Platinum  certified, and 
+other new construction is required to meet at least LEED Silver standards in accordance with 
+the Washington, DC Green Building Act of 2006. 
+• Electrification: DC Water is switching  from fossil-fuel-based infrastructure to fully electrified 
+options where feasible. 
+• Waste-to-Energy: Biogas from the wastewater treatment process powers a combined heat and 
+power plant which provides about one third of the energy used at Blue Plains . Effluent from 
+Blue Plains is used as a coolant in the combined heat and power plant, reducing the energy 
+demand for cooling. DC Water is evaluating additional projects to recover thermal energy from 
+the wastewater treatment process to reduce energy demand. 
+ 
+1 “Blueprint 2.0,” District of Columbia Water and Sewer Authority, 2022, https://www.dcwater.com/sites/default/files/board-
+docs/BluePrint/Blueprint%202.0.pdf.  
+ 
+Kestrel | Second Party Opinion 3 
+• Byproduct Reuse: Biosolids from the treatment process are reused to produce Bloom ® soil 
+amendments. This process enables reuse of biosolids instead of landfilling, and the 
+amendments, which are high in organic matter  and nutrients, enhance soil health and reduce 
+demand for fertilizers which are otherwise energy-intensive to produce. Biosolids are monitored 
+for per- and polyfluoroalkyl substances (“PFAS”). 
+• Innovation and Research: DC Water participates in  applied research on effective solutions to 
+reduce emissions and improve operational efficiency. For example, researchers identified a 
+novel process for nitrogen removal at Blue Plains which has the potential to reduce the need 
+for methanol, an input with a high carbon footprint and high operational costs. 
+DC Water supports community development initiatives and programs for disadvantaged communities. 
+Rate assistance is offered to income-eligible households and non-profits to help ensure equitable access 
+to essential services. Workforce development efforts create opportunities for current employees and offer 
+training to community members for future employment  in the water sector . Programs include 
+apprenticeships and internships for high school students. DC Water is also the founding utility member of 
+the National Green Infrastructure Certification Program which sets standards for the skills needed to build, 
+inspect, and maintain green infrastructure for stormwater management. 2 Together, these efforts reflect 
+DC Water’s commitment to meeting diverse community needs and building a strong green workforce for 
+the future.  
+ALIGNMENT TO GREEN STANDARDS 3 
+Use of Proceeds  
+The Series 2025B  Bonds finance and refinance the DC Clean Rivers Project  
+(“Clean Rivers Project” or “Project”) . The Clean Rivers Project involves 
+construction of tunnels, diversion structures, sewer separation, and green 
+infrastructure to reduce combined sewer overflows, improve climate resilience, 
+and improve water quality to safeguard public and environmental health. The 
+Clean Rivers Project is an eligible green project as defined by the Green Bond 
+Principles in the Sustainable Wastewater Management project category.  
+The Clean Rivers Project will reduce  the volume of combined sewer  overflows into the Anacostia and 
+Potomac rivers and Rock Creek by approximately 96% in an average rainfall year. When complete in 2030, 
+there will be 18 miles of deep tunnels to capture flows that could otherwise be released into waterways. 
+Captured flows are treated at the Blue Plains Advanced Wastewater Treatment Plant. Sewer separation 
+projects help isolate wastewater from combined flows for appropriate treatment. Green infrastructure in 
+92 acres of the Rock Creek watershed will slow, spread , and store stormwater, reducing volume that 
+contributes to overflows downstream. Major components of the Clean Rivers Project are described below. 
+ 
+2 “National Green Infrastructure Certification Program,” District of Columbia Water and Sewer Authority, accessed June 24, 2025, 
+https://envirocert.org/ngicp.  
+3 Green Bonds are any type of debt instrument where the proceeds will be exclusively applied to finance or refinance eligible Green 
+Projects which are aligned with the four core components of ICMA Green Bond Principles. 
+ 
+ 
+Kestrel | Second Party Opinion 4 
+Sewer Separation: DC Water’s sewer system includes both combined and separated sanitary sewers, 
+a setup common in older US cities. During heavy storms, the capacity of combined sewers can be 
+exceeded and discharge a mix of sewage and stormwater — known as combined sewer overflows 
+(“CSOs”)—into local waterways such as the Anacostia and Potomac rivers and Rock Creek. To mitigate 
+overflows, the Clean Rivers Project will build infrastructure to separate portions of the c
