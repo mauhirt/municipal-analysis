@@ -202,10 +202,10 @@ if MODULE in ('main', 'all'):
     #              less interpretable units).
     interaction_specs = [
         ('I1 Constituency×Party (GBI)', 'Green_Bond_Issued',
-         PRIMARY_EXPANDED + ['dem_x_pres_dem'],
+         PRIMARY + ['dem_x_pres_dem'],
          'Dem × pres_dem_share on any green bond issuance'),
         ('I2 Constituency×Party (Self)', 'Y_self_green',
-         PRIMARY_EXPANDED + ['dem_x_pres_dem'],
+         PRIMARY + ['dem_x_pres_dem'],
          'Dem × pres_dem_share on self-labelled (paper primary)'),
     ]
     run_block(df, interaction_specs, 'table1_v3_interactions.md',
@@ -401,16 +401,15 @@ if MODULE in ('ftest', 'all'):
             df['Dem_Mayor'] * df.get('asinh_state_all_green_cum_amt_lag1', 0))
 
     COMPULSION_BLOCK = ['npdes_formal_prior3yr_muni',
-                        'reserve_ratio_lag2', 'debt_service_burden_lag2',
-                        'tel_x_prop_tax_dep']
+                        'reserve_ratio_lag2', 'debt_service_burden_lag2']
 
     specs = [
         ('C1 GBI',          'Green_Bond_Issued',    PRIMARY),
         ('C2 GBI amt',      'asinh_green_amt',      PRIMARY),
         ('C3 Self-green',   'Y_self_green',         PRIMARY),
         ('C4 Self amt',     'asinh_self_green_amt',  PRIMARY),
-        ('C5 NPDES×Party',  'Green_Bond_Issued',    PRIMARY + ['dem_x_npdes']),
-        ('C6 Demonstration','Y_self_green',         PRIMARY + ['dem_x_state_green_cum']),
+        ('I1 Const×Party',  'Green_Bond_Issued',    PRIMARY + ['dem_x_pres_dem']),
+        ('I2 Const×Party',  'Y_self_green',         PRIMARY + ['dem_x_pres_dem']),
     ]
 
     results = []
@@ -494,14 +493,14 @@ if MODULE in ('cluster_check', 'all'):
         'Dem_Mayor', 'pres_dem_two_party_share_lag2',
         'npdes_formal_prior3yr_muni',
         'reserve_ratio_lag2', 'debt_service_burden_lag2',
-        'dem_x_npdes', 'dem_x_state_green_cum',
+        'dem_x_pres_dem',
     ]
 
     specs = [
         ('C1 GBI',          'Green_Bond_Issued',    PRIMARY),
         ('C3 Self-green',   'Y_self_green',         PRIMARY),
-        ('C5 NPDES×Party',  'Green_Bond_Issued',    PRIMARY + ['dem_x_npdes']),
-        ('C6 Demonstration','Y_self_green',         PRIMARY + ['dem_x_state_green_cum']),
+        ('I1 Const×Party',  'Green_Bond_Issued',    PRIMARY + ['dem_x_pres_dem']),
+        ('I2 Const×Party',  'Y_self_green',         PRIMARY + ['dem_x_pres_dem']),
     ]
 
     all_rows = []
