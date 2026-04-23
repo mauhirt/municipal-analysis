@@ -233,6 +233,21 @@ ESG_KEYWORDS = {
     "sea_level":          r"\bsea[\s-]?level\s+rise\b",
     "drought":            r"\bdrought\b",
     "wildfire":           r"\bwildfire\b",
+    # --- Compliance / regulatory-compulsion family (H1/H4) ---
+    "clean_water_act":    r"\bclean\s+water\s+act\b|\bCWA\b",
+    "safe_drinking_water": r"\bsafe\s+drinking\s+water\s+act\b|\bSDWA\b",
+    "cercla":             r"\bCERCLA\b|\bcomprehensive\s+environmental\s+response\b",
+    "npdes":              r"\bNPDES\b|\bnational\s+pollutant\s+discharge\s+elimination\b",
+    "consent_decree":     r"\bconsent\s+decree\b",
+    "epa_enforcement":    r"\bEPA\s+(?:enforcement|order|administrative\s+order)\b|\benvironmental\s+protection\s+agency\s+(?:enforcement|order)\b",
+    "administrative_order": r"\badministrative\s+order\s+(?:on\s+consent|for\s+compliance)?\b",
+    "ms4_permit":         r"\bMS4\s+permit\b|\bmunicipal\s+separate\s+storm\s+sewer\s+system\b",
+    "compliance_schedule": r"\bcompliance\s+schedule\b",
+    "court_order":        r"\bcourt\s+order(?:ed)?\b|\bfederal\s+court\s+order\b",
+    "regulatory_mandate": r"\b(?:regulatory|statutory)\s+mandate\b|\brequired\s+by\s+(?:law|federal\s+law|state\s+law)\b",
+    "tmdl":               r"\bTMDL\b|\btotal\s+maximum\s+daily\s+load\b",
+    "violation":          r"\b(?:regulatory|environmental|permit)\s+violation\b|\bnotice\s+of\s+violation\b",
+    "enforcement_action": r"\benforcement\s+action\b",
 }
 
 
