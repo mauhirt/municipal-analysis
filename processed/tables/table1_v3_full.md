@@ -40,24 +40,33 @@ Controls not shown: `log_population_city_lag2`\*\*\*, `log_percapita_income_city
 
 A single interaction tests whether the null `Dem_Mayor` masks a conditional partisan effect: `Dem_Mayor × pres_dem_two_party_share_lag2`.
 
-| Term | I1 GBI | I2 Self-green |
+| *Variable* | *I1 GBI* | *I2 Self-green* |
 |---|---|---|
-| `Dem_Mayor` | **-0.056\*** | **-0.065\*\*** |
-| `pres_dem_two_party_share_lag2` | +0.003 | -0.003 |
-| **`dem_x_pres_dem`** | **+0.101\*** | **+0.114\*\*** |
-| `npdes_x_state_green` | +0.0017\* | +0.0015\* |
+| Dem Mayor | −0.0569 | −0.0654 |
+| | (1.85)\* | (2.18)\*\* |
+| Dem presidential vote share | +0.0019 | −0.0040 |
+| | (0.08) | (0.17) |
+| Dem Mayor × Dem vote share | +0.1019 | +0.1155 |
+| | (1.90)\* | (2.20)\*\* |
 | N | 6,825 | 6,825 |
 
-**Reading.** The Dem main effect turns negative and the interaction is positive: Dem mayors have a positive effect on green bond issuance only in heavily Dem constituencies. Crossover at pres_dem ≈ 0.55. VIF-verified (centered VIF = 1.18, identical coefficient).
+Remaining PRIMARY variables included but not shown; coefficients stable relative to C1–C4.
 
-Marginal effect of `Dem_Mayor` on self-green:
-- 10th pct (red, pres_dem ≈ 0.39): **-0.020\*\*** (Dem mayors issue *fewer*)
-- 50th pct (median, pres_dem ≈ 0.57): +0.000 (null)
-- 90th pct (blue, pres_dem ≈ 0.75): **+0.021\*\*** (Dem mayors issue *more*)
+### Marginal effect of `Dem_Mayor` on self-green (I2)
 
-The Table 1 main null (β(Dem_Mayor) ≈ 0) is the pooled average of these two significant tails cancelling. **On non-water outcomes the interaction strengthens to +0.101\*\*\* (p=0.002); on water it collapses to -0.002 (p=0.94).** The effect is specific to the discretionary domain — see Table 2.
+| Percentile | pres\_dem | Marginal effect | *t*-stat |
+|---|---|---|---|
+| 10th (red city) | 0.39 | **−0.020** | **(2.01)\*\*** |
+| 50th (median) | 0.57 | +0.000 | (0.00) |
+| 90th (blue city) | 0.75 | **+0.021** | **(2.04)\*\*** |
 
-**Earlier-tested interactions removed from main table:** `Dem × NPDES` (I1 in earlier drafts) showed an unstable sign across categories — null on water, negative-then-positive on non-water — incompatible with a clean compulsion-responsiveness interpretation. `Dem × state_green_cum` (demonstration) tests the same underlying environmental "blueness" as `Dem × pres_dem_share` but in less interpretable units (asinh of cumulative green bond amount); kept only in the demonstration diagnostic supplementary file.
+### Reading
+
+Democratic mayors act as responsive representatives: they amplify electorate preferences where those preferences favor green issuance (blue cities) and substitute away from green issuance where they do not (red cities). Republican mayors are comparatively insensitive to electoral composition. The symmetry between the two tails is the finding. In blue cities (90th percentile pres\_dem ≈ 0.75), Democratic mayors issue 2.1 percentage points more self-labelled green bonds than comparable Republican mayors. In red cities (10th percentile pres\_dem ≈ 0.39), Democratic mayors issue 2.0 percentage points fewer. The Table 1 main-table null is the population-weighted average of these two equal-and-opposite partisan effects.
+
+**Domain specificity.** On non-water outcomes the interaction strengthens to +0.102\*\*\* (t = 3.14); on water it collapses to −0.002 (t = 0.05). The constituency × partisan mechanism operates **exclusively in the discretionary domain** where mayors have latitude — see Table 2.
+
+**Earlier-tested interactions removed from main table:** `Dem × NPDES` (unstable signs across domains); `Dem × state_green_cum` (same underlying variation, less interpretable units); `npdes × state_green_cum` marketability (California LOSO fragility, domain-subsample weakness). All documented in the appendix.
 
 ---
 
@@ -147,35 +156,30 @@ Located in `processed/tables/v3_rr/`. Summary in `v3_rr/README.md`.
 
 | Finding | Evidence | Strength |
 |---|---|---|
-| **H1b: Dem_Mayor null across outcomes** | β ≈ 0 across C1–C8 + R1–R24 | \*\*\* Rock solid (32 specs) |
-| **Constituency drives issuance** | pres_dem +0.053\*\* to +0.055\*\* | \*\* Consistent |
-| **Marketability channel** | npdes × state_green +0.0016\* to +0.0018\* | \* Novel, main table |
-| **Fiscal-capacity gates** | reserve + (ns), debt service − (ns) in main; Table 3 L2 fiscal_stress +0.018\*\* | \*\* Conditional on issuance |
-| **Constituency × partisan interaction** | I2 Dem_Mayor -0.065\*\*, dem_x_pres_dem +0.114\*\*, VIF 1.18 centered; +0.101\*\*\* on non-water, -0.002 ns on water (Table 2 placebo) | \*\* Novel, discretion-specific |
-| **No local spatial spillover** | R13–R16 all ns | — Clean |
-| **Pre-ESG-law market predicts issuance** | R17: +0.064\*\*\* | \*\*\* Confirmed |
+| **H1b: Dem_Mayor null across outcomes** | β ≈ 0 across C1–C4 + R1–R24 (28 main + robustness specs) | \*\*\* Rock solid |
+| **NPDES compulsion drives issuance** | +0.015\* (GBI), +0.016\*\* (self-green), generalises to _locgov | \*\* Confirmed |
+| **Constituency drives issuance** | pres_dem +0.054\*\* (C3 self-green) | \*\* Consistent |
+| **Constituency × partisan interaction (I2)** | Dem × pres_dem +0.116\*\* (self-green), +0.102\*\*\* (non-water), −0.002 (water placebo). Amplification in blue cities (+0.021\*\*), substitution in red cities (−0.020\*\*). VIF 1.18 centered. LOSO 0/49 above p=0.10 | \*\* Novel, discretion-specific |
+| **Labelling-margin marketability** | Table 3 L3: npdes × state_green +0.0022\*\* (issuer subsample) | \*\* Separate sample |
+| **Labelling-margin fiscal stress** | Table 3 L2: fiscal_stress +0.018\*\* (issuer subsample) | \*\* Separate sample |
+| **Pre-ESG-law market predicts issuance** | R17: state_pre_esg_activity +0.064\*\*\* | \*\*\* Confirmed |
 | **NPDES effect ownership-specific** | R20 _locgov +0.014\*\*, R21 _private null | \*\* Placebo clean |
+| **No local spatial spillover** | R13–R16 all ns | — Clean |
 | **Fiscal-stress × partisan interactions** | FS1–FS4 null or fragile; FS5 triple = 0 | — No support |
-| **TEL under state FE** | Mullins ns (p=0.15); binary forms unidentified | — Dropped from main |
 
 ---
 
 ## The story
 
-**Partisan ideology does not drive green bond issuance.** `Dem_Mayor` is null at the extensive margin across all 32 specifications tested.
+**First claim: The partisan main effect is null.** `Dem_Mayor` is indistinguishable from zero across all four main-table outcomes and all 24 robustness specifications. The null survives two-way clustering, leave-one-state-out sensitivity, alternative partisan measures (probabilistic, vote-share), and three-tier mayor-party imputation. Partisan ideology does not drive green bond issuance at the extensive margin.
 
-**The engine is material + political interacting with institutional.**
-1. **Regulatory pressure × market depth** (marketability): compulsion drives issuance *where ESG investors exist*, not as a standalone force.
-2. **Constituency** (`pres_dem_share`): cities with green-leaning electorates issue more, irrespective of mayor partisanship.
-3. **Fiscal capacity** (reserve ratio, debt service): directional but not individually significant in the 10-variable spec.
+**Second claim: The null masks conditional partisan agency on the issuance margin.** The constituency × partisan interaction (`Dem_Mayor × pres_dem_two_party_share_lag2` = +0.116\*\*, I2) reveals that Democratic mayors act as responsive representatives: they amplify electorate preferences where those preferences favor green issuance (blue cities, 90th pct: +0.021\*\*) and substitute away from green issuance where they do not (red cities, 10th pct: −0.020\*\*). Republican mayors are comparatively insensitive to electoral composition. The Table 1 main-table null is the population-weighted average of these two equal-and-opposite partisan effects. The interaction is specific to the discretionary domain: on non-water outcomes it strengthens to +0.102\*\*\* (Table 2 NW2); on water outcomes it collapses to −0.002, ns (Table 2 W2).
 
-**The partisan null masks conditional amplification, not autonomous agency.** The constituency × partisan interaction (I2 `dem_x_pres_dem` = +0.114\*\*) reveals the underlying pattern: Dem mayors have a **negative** effect on green bond issuance in red constituencies and a **positive** effect in blue constituencies. The Table 1 average null is the pooled mean of these two significant tails. The pattern strengthens to +0.101\*\*\* on non-water (discretionary) outcomes and collapses to -0.002 (ns) on water (compelled) outcomes — the interaction is specific to where mayoral latitude is greatest.
+**Third claim: On the labelling margin conditional on issuance, marketability and fiscal stress are the operative mechanisms.** Table 3 restricts to bond issuers (`total_ltd_issued > 0`, N = 3,888). L2 shows fiscal stress drives labelling (+0.018\*\*): distressed issuers label green to seek the greenium. L3 shows the marketability interaction (`npdes × state_green_cum` = +0.0022\*\*) drives labelling further in compelled issuers: cities under NPDES enforcement label green where the state ESG investor base exists. Partisanship is absent on the labelling margin — `Dem_Mayor` is null in every Table 3 column.
 
-This is **responsive representation**, not autonomous partisan agency. Dem mayors do not create green demand — they amplify it where it exists. Where constituency demand is absent (red cities) or compulsion forces the issue regardless (water), the partisan effect vanishes or reverses.
+**Fourth claim: The paper identifies a clean division between the issuance margin and the labelling margin.** On the issuance margin (Tables 1 and 2), the operative mechanism is constituency × partisan responsive representation in the discretionary domain, with regulatory compulsion dominating the water domain. On the labelling margin conditional on issuance (Table 3), the operative mechanisms are market-structural — fiscal stress and NPDES × market depth — with no partisan component. The Table 1 null on `Dem_Mayor` is the artefact of averaging issuance-margin heterogeneity across constituencies; the Table 3 analysis shows that once issuance happens, labelling is determined by non-partisan market factors.
 
-**Conditional on issuance, the labelling decision is market-mediated (Table 3).** Distressed issuers label green to seek the greenium; compelled issuers label only where the ESG investor base can absorb the supply. Neither channel operates through partisan agency.
-
-**Sensitivity and robustness.** Dem_Mayor null survives 24 robustness columns, 3 fiscal-interaction batteries, a Callaway-Sant'Anna event study on anti-ESG laws, two-way and state clustering, VIF centering checks, and three-tier imputation of the mayor partisan indicator. The two significant interactions (demonstration + marketability) survive centered-VIF robustness: identical coefficients, p-values, and standard errors under the orthogonalised specification.
+**Sensitivity and robustness.** The I2 constituency × partisan interaction survives centered-VIF (1.18), leave-one-state-out (0/49 above p = 0.10; California worst case at p = 0.078), and the water-domain placebo (−0.002, ns). Three alternative interaction specifications (Dem × NPDES, Dem × state_green_cum, npdes × state_green_cum) were tested and discarded on diagnostic grounds — see appendix.
 
 ---
 
