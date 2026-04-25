@@ -206,6 +206,42 @@ Seven individual use-of-proceeds categories with 3–20 positive city-years. Too
 
 ---
 
+## Appendix Table — Bloomberg Green-Flag Validation
+
+Cross-tabulation of Bloomberg `Self-reported Green` against prospectus-detected green designation (N = 3,140 CUSIPs covered by a prospectus).
+
+**Text-green criterion.** A CUSIP is classified as text-green if its primary prospectus has any of: (i) a detected Second-Party Opinion verifier (Kestrel, Sustainalytics, BAM, Moody's ESG); (ii) a green-bond designation section longer than 500 characters; or (iii) at least one cited green-bond framework (ICMA GBP, Climate Bonds Standard, SDGs).
+
+### Confusion matrix (CUSIP-level)
+
+| | text-green = 1 | text-green = 0 | row total |
+|---|---:|---:|---:|
+| Bloomberg green = Yes | **2,134** (TP) | 298 (FN) | 2,432 |
+| Bloomberg green ≠ Yes | 143 (FP) | **565** (TN) | 708 |
+| column total | 2,277 | 863 | 3,140 |
+
+### Classifier metrics (Bloomberg as predictor of text-green)
+
+| Metric | Value |
+|---|---|
+| Sensitivity (recall) | **0.877** |
+| Specificity | **0.798** |
+| Precision | **0.937** |
+
+### Intensity stratification by Bloomberg flag
+
+| Bloomberg flag | CUSIPs | Green-section median chars | Green keywords median | SPO rate |
+|---|---:|---:|---:|---:|
+| Yes | 2,432 | 5,961 | 158 | 48.0% |
+| No | 76 | 4,183 | 140 | 42.1% |
+| -- (missing) | 632 | 0 | 65 | 1.4% |
+
+### Reading
+
+Bloomberg's `Self-reported Green` flag — the basis for `Y_self_green` in the panel — has sensitivity 0.877 and precision 0.937 against the prospectus-text classifier. The flag rarely inflates (specificity 0.798). The intensity stratification reveals the labelling-margin story: Bloomberg "Yes" and "No" bonds have near-identical prospectus content (SPO rate 48% vs 42%; green-section median 5,961 vs 4,183 characters). The real dividing line is labelled (Yes or No) vs unlabelled (--), not the intensity of green disclosure. This validates `Y_self_green` as capturing a meaningful issuer-level labelling decision.
+
+---
+
 ## The story
 
 **First claim.** The partisan main effect is null. `Dem_Mayor` is indistinguishable from zero across all four main-table outcomes and all 24 robustness specifications. The null survives two-way clustering, leave-one-state-out sensitivity, alternative partisan measures (probabilistic, vote-share), and three-tier mayor-party imputation. Partisan ideology does not drive green bond issuance at the extensive margin.
