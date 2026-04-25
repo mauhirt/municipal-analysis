@@ -250,6 +250,33 @@ Seven individual use-of-proceeds categories with 3–20 positive city-years. Too
 
 **Robustness of the assurance result.** The Panel A Dem_Mayor coefficient on third-party assurance does not survive dropping California: β falls from +0.0044\* (p = 0.080) to +0.0031 (p = 0.239). California accounts for 22 of 61 assurance events (36%); San Francisco alone contributes 10 Dem-mayor assurance city-years, Los Angeles 6. Only 33 cities ever obtain third-party assurance. The between-state correlation between state-mean assurance rate and state-mean Dem-mayor rate is +0.12; the within-state correlation is +0.07. The assurance pattern reflects a sophistication-and-scale concentration in a handful of large coastal Democratic cities, not autonomous mayoral partisan agency. Full diagnostics in `v3_rr/assurance_robustness.md`.
 
+### Panel C — Conditional on green bond issuance
+
+Among cities that issue self-labelled green bonds (N = 118), what predicts credibility? Year FE only (state FE infeasible at N = 118); controls: `Dem_Mayor`, `pres_dem_share`, `npdes_formal`, `log_population`, `log_percapita_income`.
+
+| *Outcome* | *N* | *n+* | *Dem Mayor* | *NPDES* | *Log population* |
+|---|---:|---:|---|---|---|
+| Any credibility indicator | 118 | 77 | +0.1335 | +0.1402 | +0.1171 |
+| | | | (1.00) | (1.38) | (2.72)\*\*\* |
+| **Third-party ESG assurance** | 118 | 61 | **+0.4488** | +0.0463 | +0.0794 |
+| | | | **(3.81)\*\*\*** | (0.36) | (1.51) |
+| ICMA / CBI framework | 118 | 70 | −0.0051 | +0.1548 | +0.1355 |
+| | | | (0.04) | (1.41) | (2.86)\*\*\* |
+| Impact reporting | 118 | 73 | +0.0375 | +0.1296 | +0.1507 |
+| | | | (0.30) | (1.15) | (3.57)\*\*\* |
+| Documented project selection | 118 | 78 | +0.1441 | +0.0995 | +0.1488 |
+| | | | (1.09) | (0.93) | (3.45)\*\*\* |
+| Documented proceeds management | 118 | 73 | +0.0547 | +0.1351 | +0.1417 |
+| | | | (0.41) | (1.22) | (3.07)\*\*\* |
+
+\*, \*\*, \*\*\* denote significance at the 10 per cent, 5 per cent and 1 per cent level, respectively. Year FE only.
+
+#### Reading
+
+**Third-party assurance is the single credibility dimension with a conditional partisan gap.** Among self-labelled green bond issuers, Democratic mayors are 45 percentage points more likely to obtain third-party assurance (β = +0.449\*\*\*, t = 3.81). The coefficient is large because the conditional base rate is high (59% Dem vs 15% Rep — Panel B). The other five credibility dimensions are null on `Dem_Mayor` and instead driven by **city size** (`log_population` at \*\*\*): larger cities adopt frameworks, report impact, and document proceeds regardless of mayoral partisanship. Third-party assurance is the one quality margin where the mayor's party identity appears to matter, conditional on having already decided to issue green.
+
+**Caveat.** The conditional sample is small (N = 118), state FE cannot be included, and the assurance result is California-fragile (Panel A shows it disappears when California is dropped from the full-sample regression). The conditional finding is consistent with large Dem-led cities (San Francisco, Los Angeles, Milwaukee, Seattle) systematically procuring Kestrel/Sustainalytics verification — a sophistication/scale effect concentrated among a few cities rather than a generalisable partisan mechanism.
+
 ---
 
 ## Appendix Table — Bloomberg Green-Flag Validation
