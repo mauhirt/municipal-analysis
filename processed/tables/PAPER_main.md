@@ -206,6 +206,52 @@ Seven individual use-of-proceeds categories with 3–20 positive city-years. Too
 
 ---
 
+## Appendix Table — Credibility Outcomes
+
+**Purpose.** Test whether the partisan null on issuance and amount (Tables 1–2) hides a partisan effect on the *quality* of the green bond — whether Democratic mayors disproportionately seek third-party verification, adopt ICMA/CBI frameworks, publish impact reports, or document project-selection and proceeds-management procedures.
+
+**Outcomes.** Six binary credibility indicators from Bloomberg's bond-level ESG fields, aggregated to the city-year. `Y_any_credibility` = 1 if any of the five specific indicators is present.
+
+### Panel A — Full-sample regression (10-variable PRIMARY)
+
+| *Outcome* | *N* | *n+* | *Dem Mayor* | *NPDES* | *pres\_dem* |
+|---|---:|---:|---|---|---|
+| Any credibility indicator | 6,825 | 78 | +0.0005 | +0.0179 | +0.0292 |
+| | | | (0.13) | (2.86)\*\*\* | (1.42) |
+| Third-party ESG assurance | 6,825 | 61 | +0.0044 | +0.0136 | +0.0166 |
+| | | | (1.75)\* | (2.37)\*\* | (0.85) |
+| ICMA / CBI framework | 6,825 | 71 | −0.0021 | +0.0190 | +0.0398 |
+| | | | (0.62) | (3.05)\*\*\* | (2.09)\*\* |
+| Impact reporting | 6,825 | 73 | −0.0015 | +0.0174 | +0.0378 |
+| | | | (0.44) | (2.79)\*\*\* | (1.93)\* |
+| Documented project selection | 6,825 | 78 | −0.0002 | +0.0163 | +0.0323 |
+| | | | (0.05) | (2.58)\*\*\* | (1.56) |
+| Documented proceeds management | 6,825 | 73 | −0.0014 | +0.0177 | +0.0369 |
+| | | | (0.40) | (2.83)\*\*\* | (1.90)\* |
+
+\*, \*\*, \*\*\* denote significance at the 10 per cent, 5 per cent and 1 per cent level, respectively. Absolute *t*-statistic in parenthesis. Each row is a separate regression on the 10-variable PRIMARY. State + year FE absorbed. SE clustered at city.
+
+### Panel B — Descriptive: rates conditional on issuing a self-labelled green bond
+
+| *Outcome* | *Dem rate* | *Rep rate* | *Fisher p* |
+|---|---|---|---|
+| Any credibility indicator | 67/98 (68.4%) | 10/20 (50.0%) | 0.129 |
+| **Third-party ESG assurance** | **58/98 (59.2%)** | **3/20 (15.0%)** | **0.000\*\*\*** |
+| ICMA / CBI framework | 60/98 (61.2%) | 10/20 (50.0%) | 0.455 |
+| Impact reporting | 63/98 (64.3%) | 10/20 (50.0%) | 0.312 |
+| Documented project selection | 68/98 (69.4%) | 10/20 (50.0%) | 0.121 |
+| Documented proceeds management | 63/98 (64.3%) | 10/20 (50.0%) | 0.312 |
+
+### Reading
+
+**Panel A.** `Dem_Mayor` is null on five of six credibility outcomes. The single exception is third-party ESG assurance (β = +0.0044\*, p = 0.080) — the only outcome where mayoral partisanship reaches conventional significance. NPDES compulsion drives all six credibility outcomes (\*\*–\*\*\*), and constituency drives three (framework adoption, impact reporting, proceeds management). The compulsion-and-constituency pattern from Table 1 generalises to the credibility margin.
+
+**Panel B.** Conditional on issuing a self-labelled green bond, Democratic mayor cities are four times more likely to obtain third-party assurance (59.2% vs 15.0%, Fisher p < 0.001). The other five credibility dimensions show smaller and statistically insignificant gaps.
+
+**Robustness of the assurance result.** The Panel A Dem_Mayor coefficient on third-party assurance does not survive dropping California: β falls from +0.0044\* (p = 0.080) to +0.0031 (p = 0.239). California accounts for 22 of 61 assurance events (36%); San Francisco alone contributes 10 Dem-mayor assurance city-years, Los Angeles 6. Only 33 cities ever obtain third-party assurance. The between-state correlation between state-mean assurance rate and state-mean Dem-mayor rate is +0.12; the within-state correlation is +0.07. The assurance pattern reflects a sophistication-and-scale concentration in a handful of large coastal Democratic cities, not autonomous mayoral partisan agency. Full diagnostics in `v3_rr/assurance_robustness.md`.
+
+---
+
 ## Appendix Table — Bloomberg Green-Flag Validation
 
 Cross-tabulation of Bloomberg `Self-reported Green` against prospectus-detected green designation (N = 3,140 CUSIPs covered by a prospectus).
