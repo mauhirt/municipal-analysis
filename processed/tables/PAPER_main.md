@@ -242,6 +242,44 @@ Bloomberg's `Self-reported Green` flag — the basis for `Y_self_green` in the p
 
 ---
 
+## Appendix Table — Third-party verification and framework citations
+
+Among the 134 prospectuses with extractable green-bond designation sections, the table reports the frequency of cited green-bond frameworks and named third-party verifiers (Second Party Opinion providers).
+
+### Frameworks cited
+
+| Framework | Bonds citing |
+|---|---:|
+| ICMA Green Bond Principles | 36 |
+| Sustainable Development Goals | 22 |
+| Climate Bonds Standard | 15 |
+
+### Verifiers (Second Party Opinion providers)
+
+| Verifier | Bonds citing |
+|---|---:|
+| Green Bond Principles (self-attestation) | 36 |
+| Climate Bond Initiative | 35 |
+| Kestrel | 26 |
+| Sustainalytics | 18 |
+| ICMA GBP (other reference) | 16 |
+| Build America Mutual | 2 |
+| Moody's ESG | 1 |
+
+### Coverage cross-tab
+
+| | Verifier present | No verifier | Total |
+|---|---:|---:|---:|
+| Framework cited | 58 | 6 | 64 |
+| No framework | 14 | 56 | 70 |
+| **Total** | **72** | **62** | **134** |
+
+### Reading
+
+Of the 134 self-labelled bonds in the prospectus subset, 54% (72/134) name a third-party verifier and 48% (64/134) cite a recognised green-bond framework. Forty-three per cent (58/134) do both; 42% (56/134) do neither. The Kestrel and Sustainalytics dominance among named verifiers (26 + 18 = 44 of 72 verifier-citing bonds) is consistent with the assurance-robustness diagnostic in `v3_rr/assurance_robustness.md`: third-party verification is concentrated among large coastal Democratic cities (San Francisco, Los Angeles, Milwaukee, Seattle), and the apparent partisan gap on `Y_esg_assurance` (β = +0.004\*) does not survive dropping California (β = +0.003, p = 0.24). The verification table here documents the corpus-level concentration; the panel diagnostic shows it does not generalise to a partisan-mayoral effect.
+
+---
+
 ## The story
 
 **First claim.** The partisan main effect is null. `Dem_Mayor` is indistinguishable from zero across all four main-table outcomes and all 24 robustness specifications. The null survives two-way clustering, leave-one-state-out sensitivity, alternative partisan measures (probabilistic, vote-share), and three-tier mayor-party imputation. Partisan ideology does not drive green bond issuance at the extensive margin.
