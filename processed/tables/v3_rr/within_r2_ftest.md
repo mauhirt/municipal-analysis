@@ -3,16 +3,16 @@
 Estimated via `linearmodels.PanelOLS` with entity (city) + time (year) effects.
 Cluster-robust SE at city level.
 
-Compulsion block tested: npdes_formal_prior3yr_muni, reserve_ratio_lag2, debt_service_burden_lag2
+Compulsion block tested: effluent_muni_asinh_lag2, reserve_ratio_lag2, debt_service_burden_lag2
 
 | Column | Outcome | N | Within-R² | F-stat (compulsion block) | p-value | df |
 |---|---|---|---|---|---|---|
-| C1 GBI | `Green_Bond_Issued` | 6825 | 0.0007 | 1.47 | 0.2198 | 3 |
-| C2 GBI amt | `asinh_green_amt` | 6825 | -0.0006 | 1.37 | 0.2505 | 3 |
-| C3 Self-green | `Y_self_green` | 6825 | -0.0029 | 0.56 | 0.6433 | 3 |
-| C4 Self amt | `asinh_self_green_amt` | 6825 | -0.0045 | 0.55 | 0.6461 | 3 |
-| I1 Const×Party | `Green_Bond_Issued` | 6825 | 0.0042 | 1.44 | 0.2283 | 3 |
-| I2 Const×Party | `Y_self_green` | 6825 | 0.0016 | 0.49 | 0.6891 | 3 |
+| C1 GBI | `Green_Bond_Issued` | 7401 | -0.0016 | 1.63 | 0.1808 | 3 |
+| C2 GBI amt | `asinh_green_amt` | 7401 | -0.0038 | 1.67 | 0.1723 | 3 |
+| C3 Self-green | `Y_self_green` | 7401 | -0.0062 | 2.01 | 0.1103 | 3 |
+| C4 Self amt | `asinh_self_green_amt` | 7401 | -0.0091 | 2.05 | 0.1051 | 3 |
+| I1 Const×Party | `Green_Bond_Issued` | 7401 | -0.0021 | 1.57 | 0.1943 | 3 |
+| I2 Const×Party | `Y_self_green` | 7401 | -0.0066 | 1.99 | 0.1134 | 3 |
 
 Within-R² = variation explained after absorbing city and year FE.
 F-test: joint null that all compulsion-block coefficients = 0.

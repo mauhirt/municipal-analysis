@@ -145,11 +145,11 @@ if MODULE in ('water', 'all'):
 
     # Variant 1: memo primary compulsion (NPDES formal)
     rhs_primary = SHARED_RHS + [
-        'npdes_formal_prior3yr_muni',
+        'effluent_muni_asinh_lag2',
     ]
     # Variant 2: water compulsion ladder (simultaneously)
     rhs_ladder = SHARED_RHS + [
-        'npdes_formal_prior3yr_muni',
+        'effluent_muni_asinh_lag2',
         'epa_npdes_informal_asinh_lag2',
         'epa_water_violations_asinh_lag2',
         'case_jdc_prior3yr_muni',
@@ -175,7 +175,7 @@ if MODULE in ('water', 'all'):
         print(f"  {label:18s}  n={n:4d}  n_pos={n_pos}  β(Dem_Mayor)={b:+.4f}{stars(p)} (se={se:.4f})")
         # Report each compulsion variable coefficient for comparison
         for v in xs:
-            if v in ('npdes_formal_prior3yr_muni',
+            if v in ('effluent_muni_asinh_lag2',
                      'epa_npdes_informal_asinh_lag2', 'epa_water_violations_asinh_lag2',
                      'case_jdc_prior3yr_muni', 'compulsion_index_z'):
                 bb, ss, pp = coef(res, v)
@@ -183,7 +183,7 @@ if MODULE in ('water', 'all'):
                     print(f"           β({v:40s})={bb:+.4f}{stars(pp)} (se={ss:.4f})")
 
     # Write md
-    focus = ['Dem_Mayor', 'npdes_formal_prior3yr_muni',
+    focus = ['Dem_Mayor', 'effluent_muni_asinh_lag2',
              'epa_npdes_informal_asinh_lag2', 'epa_water_violations_asinh_lag2',
              'case_jdc_prior3yr_muni', 'compulsion_index_z',
              'pres_dem_two_party_share_lag2',

@@ -26,7 +26,7 @@ OUT.mkdir(parents=True, exist_ok=True)
 
 PRIMARY = [
     'Dem_Mayor', 'pres_dem_two_party_share_lag2',
-    'npdes_formal_prior3yr_muni',
+    'effluent_muni_asinh_lag2',
     'reserve_ratio_lag2', 'debt_service_burden_lag2',
     'fn_esg_has_muni_bond_law_post_lag1', 'asinh_state_all_green_cum_amt_lag1',
     'state_dem_governor_lag1', 'state_dem_trifecta_lag1', 'state_rep_trifecta_lag1',
@@ -71,7 +71,7 @@ print(f"Panel: {df.shape}")
 
 # ── Subsamples ──
 issuers = df[df['total_ltd_issued'] > 0].copy()
-compelled_issuers = issuers[issuers['npdes_formal_prior3yr_muni'] > 0].copy()
+compelled_issuers = issuers[issuers['effluent_muni_asinh_lag2'] > 0].copy()
 print(f"Bond issuers:        N={len(issuers)}, cities={issuers['fips7'].nunique()}, "
       f"Y_self_green={int(issuers['Y_self_green'].sum())}")
 print(f"Compelled issuers:   N={len(compelled_issuers)}, cities={compelled_issuers['fips7'].nunique()}, "
@@ -80,11 +80,11 @@ print(f"Compelled issuers:   N={len(compelled_issuers)}, cities={compelled_issue
 # ── Build interaction ──
 for sub in (issuers, compelled_issuers):
     sub['npdes_x_state_green'] = (
-        sub['npdes_formal_prior3yr_muni'] * sub['asinh_state_all_green_cum_amt_lag1'])
+        sub['effluent_muni_asinh_lag2'] * sub['asinh_state_all_green_cum_amt_lag1'])
 
 # ── Specs ──
 Y = 'Y_self_green'
-rhs_no_npdes = [v for v in PRIMARY if v != 'npdes_formal_prior3yr_muni']
+rhs_no_npdes = [v for v in PRIMARY if v != 'effluent_muni_asinh_lag2']
 
 SPECS = [
     ('L1 Baseline',       issuers,           PRIMARY),
@@ -105,7 +105,7 @@ for label, sample, xs in SPECS:
         print(f"  {label:20s}  skipped")
         continue
     b_dem, se_dem, p_dem = c(res, 'Dem_Mayor')
-    b_npdes, se_npdes, p_npdes = c(res, 'npdes_formal_prior3yr_muni')
+    b_npdes, se_npdes, p_npdes = c(res, 'effluent_muni_asinh_lag2')
     b_stress, se_stress, p_stress = c(res, 'fiscal_stress_index_lag2')
     b_mkt, se_mkt, p_mkt = c(res, 'npdes_x_state_green')
     print(f"  {label:20s}  N={n:4d}  R²={res.rsquared:.3f}  "
@@ -119,7 +119,7 @@ for label, sample, xs in SPECS:
 DISPLAY_VARS = [
     ('Dem_Mayor', '`Dem_Mayor`'),
     ('pres_dem_two_party_share_lag2', '`pres_dem_two_party_share_lag2`'),
-    ('npdes_formal_prior3yr_muni', '`npdes_formal_prior3yr_muni`'),
+    ('effluent_muni_asinh_lag2', '`npdes_formal_prior3yr_muni`'),
     ('reserve_ratio_lag2', '`reserve_ratio_lag2`'),
     ('debt_service_burden_lag2', '`debt_service_burden_lag2`'),
     ('fn_esg_has_muni_bond_law_post_lag1', '`fn_esg_has_muni_bond_law_post_lag1`'),
