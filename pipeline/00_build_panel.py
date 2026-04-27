@@ -53,6 +53,28 @@ log(f"  After Y_ construction: {df.shape}")
 
 
 # ═══════════════════════════════════════════════════════════════════════
+# 1b. CROSSWALK — county_fips5 from Census crosswalk (needed for CAA merge)
+# ═══════════════════════════════════════════════════════════════════════
+log("\n── 1b. Crosswalk county FIPS ──")
+cw = pd.read_csv(ROOT / 'raw' / 'crosswalk' / 'Crosswalk.csv')
+# county_geo_id is "0500000US<county_fips5>", extract last 5 digits.
+if 'county_geo_id' in cw.columns:
+    cw['county_fips5'] = (
+        cw['county_geo_id'].astype(str)
+        .str.split('US', n=1).str[1]
+        .where(lambda s: s.str.len() == 5, other=None)
+    )
+    cw['county_fips5'] = pd.to_numeric(cw['county_fips5'], errors='coerce')
+    cw_keep = cw[['fips', 'county_fips5']].rename(columns={'fips': 'fips7'})
+    cw_keep = cw_keep.drop_duplicates('fips7')
+    df = df.merge(cw_keep, on='fips7', how='left')
+    log(f"  county_fips5 merged from crosswalk: "
+        f"{int(df['county_fips5'].notna().sum())} non-null")
+else:
+    log("  [warn] county_geo_id not found in crosswalk — county_fips5 not built")
+
+
+# ═══════════════════════════════════════════════════════════════════════
 # HELPER: merge with logging
 # ═══════════════════════════════════════════════════════════════════════
 def safe_merge(df, right, on, name, how='left'):
@@ -78,9 +100,15 @@ mayor['Rep_Mayor'] = np.where(mayor['mayor_pid'] == 'R', 1.0,
                     np.where(mayor['mayor_pid'].isin(['D', 'I']), 0.0, np.nan))
 mayor['Ind_Mayor'] = np.where(mayor['mayor_pid'] == 'I', 1.0,
                     np.where(mayor['mayor_pid'].isin(['D', 'R']), 0.0, np.nan))
+# Dem_Mayor indicator — Democrat = 1, else 0 (R or I). Preferred per variable-audit Part D
+# because mayor_pid coding already effectively lags through "year following
+# election = mayor's first year in office" convention; use WITHOUT lag.
+mayor['Dem_Mayor'] = np.where(mayor['mayor_pid'] == 'D', 1.0,
+                    np.where(mayor['mayor_pid'].isin(['R', 'I']), 0.0, np.nan))
 mayor = mayor.sort_values(['fips7', 'year'])
 mayor['Rep_Mayor_L1'] = mayor.groupby('fips7')['Rep_Mayor'].shift(1)
 mayor['Ind_Mayor_L1'] = mayor.groupby('fips7')['Ind_Mayor'].shift(1)
+mayor['Dem_Mayor_L1'] = mayor.groupby('fips7')['Dem_Mayor'].shift(1)
 mayor['party_switch'] = ((mayor['Rep_Mayor'] != mayor['Rep_Mayor_L1']) &
                          mayor['Rep_Mayor'].notna() &
                          mayor['Rep_Mayor_L1'].notna()).astype(float)
@@ -93,12 +121,108 @@ mayor['prob_republican_L1'] = mayor.groupby('fips7')['prob_republican'].shift(1)
 mayor['prob_republican_L2'] = mayor.groupby('fips7')['prob_republican'].shift(2)
 mayor['prob_republican_L3'] = mayor.groupby('fips7')['prob_republican'].shift(3)
 mayor_cols = ['fips7', 'year', 'mayor_name', 'mayor_pid', 'Rep_Mayor', 'Ind_Mayor',
+              'Dem_Mayor',
               'prob_democrat', 'prob_republican', 'election_year', 'election_type',
               'Rep_Mayor_L1', 'Rep_Mayor_L2', 'Rep_Mayor_L3', 'Rep_Mayor_L4',
-              'Ind_Mayor_L1',
+              'Ind_Mayor_L1', 'Dem_Mayor_L1',
               'prob_republican_L1', 'prob_republican_L2', 'prob_republican_L3',
               'party_switch', 'switch_to_R', 'switch_to_D']
 df = safe_merge(df, mayor[mayor_cols], on=['fips7', 'year'], name='mayor')
+
+
+# ═══════════════════════════════════════════════════════════════════════
+# 2b. MAYORAL CANDIDATES — MayoralCandidates270326.xlsx (2001-2025)
+#     Builds city-year vote-share + margin-of-victory variables from the
+#     full candidate-election dataset (8,255 candidate-rows, 576 cities,
+#     2001-2025). Only WINNING-candidate rows are retained, then
+#     expanded to city-year with forward-fill between elections (same
+#     convention as mayor_party.csv: the year following an election is
+#     the mayor's first year in office).
+#
+# Variables built:
+#   mayor_vote_share_win       — winning candidate's vote share
+#   mayor_vote_share_total     — total votes in the winning election
+#   mayor_margin_victory       — winner's share minus second-place share
+#   mayor_win_is_dem           — 1 if winner's pid_est == 'D'
+#   mayor_win_is_rep           — 1 if winner's pid_est == 'R'
+#   mayor_win_prob_democrat    — winner's DIME-based prob_democrat
+#   mayor_win_prob_republican  — winner's DIME-based prob_republican
+#   mayor_win_cfscore          — winner's CF score (continuous ideology)
+# ═══════════════════════════════════════════════════════════════════════
+log("\n── 2b. Mayoral candidates vote-share panel (2001-2025) ──")
+candidates_path = ROOT / 'raw' / 'mayor' / 'MayoralCandidates270326.xlsx'
+if candidates_path.exists():
+    cand = pd.read_excel(candidates_path)
+    cand = cand.rename(columns={'fips': 'fips7'})
+    cand['fips7'] = cand['fips7'].astype(int)
+
+    # Winners only — one row per (city, election-year).
+    winners = cand[cand['winner'] == 1].copy()
+
+    # Compute margin of victory = winner share − runner-up share per contest.
+    runner_up_share = (
+        cand[cand['winner'] == 0]
+        .sort_values(['contest', 'vote_share'], ascending=[True, False])
+        .groupby('contest')['vote_share']
+        .max()
+        .rename('runner_up_share')
+        .reset_index()
+    )
+    winners = winners.merge(runner_up_share, on='contest', how='left')
+    winners['mayor_margin_victory'] = (
+        winners['vote_share'] - winners['runner_up_share'].fillna(0)
+    )
+
+    # Per user spec: "the year following the election is coded as the mayor's
+    # first year in office". So attribute the election outcome to (year+1)
+    # onwards, forward-filling until the next election.
+    winners['effective_year'] = winners['year'] + 1
+    winners = winners.sort_values(['fips7', 'effective_year'])
+    winners['mayor_win_is_dem'] = (winners['pid_est'] == 'D').astype(int)
+    winners['mayor_win_is_rep'] = (winners['pid_est'] == 'R').astype(int)
+
+    keep = ['fips7', 'effective_year', 'year', 'month',
+            'vote_share', 'total_votes',
+            'mayor_margin_victory', 'mayor_win_is_dem', 'mayor_win_is_rep',
+            'prob_democrat', 'prob_republican', 'cfscore']
+    winners_small = winners[keep].copy()
+    # When a city has two elections with the same effective_year (e.g. regular +
+    # special election in same calendar year), keep the LATER election (by
+    # year+month). This matches the mayor_party.csv convention of using the
+    # most recent transition for a given year.
+    winners_small = (
+        winners_small.sort_values(['fips7', 'effective_year', 'year', 'month'],
+                                  ascending=[True, True, False, False])
+        .drop_duplicates(['fips7', 'effective_year'], keep='first')
+    )
+    winners_small = winners_small.drop(columns=['year', 'month']).rename(columns={
+        'effective_year': 'year',
+        'vote_share': 'mayor_vote_share_win',
+        'total_votes': 'mayor_vote_share_total',
+        'prob_democrat': 'mayor_win_prob_democrat',
+        'prob_republican': 'mayor_win_prob_republican',
+        'cfscore': 'mayor_win_cfscore',
+    })
+    # Forward-fill within city across years — but only for years after the
+    # election, up to the next election. Achieved by outer-joining to a
+    # full (fips7 × year) grid and applying a city-level ffill.
+    full_grid = df[['fips7', 'year']].drop_duplicates()
+    winners_grid = full_grid.merge(winners_small, on=['fips7', 'year'], how='left')
+    winners_grid = winners_grid.sort_values(['fips7', 'year'])
+    candidate_vars = [c for c in winners_small.columns if c not in ('fips7', 'year')]
+    winners_grid[candidate_vars] = winners_grid.groupby('fips7')[candidate_vars].ffill()
+
+    before = set(df.columns)
+    df = df.merge(winners_grid, on=['fips7', 'year'], how='left', suffixes=('', '_CAND'))
+    for c in list(df.columns):
+        if c.endswith('_CAND'):
+            df = df.drop(columns=c)
+    new_cols = set(df.columns) - before
+    log(f"  mayoral candidates: added {len(new_cols)} cols "
+        f"(winners: {winners.shape[0]}, "
+        f"cities covered in panel: {df['mayor_vote_share_win'].notna().groupby(df['fips7']).any().sum()})")
+else:
+    log(f"  [skip] {candidates_path} not found")
 
 
 # ═══════════════════════════════════════════════════════════════════════
@@ -246,6 +370,177 @@ if es_new:
 
 
 # ═══════════════════════════════════════════════════════════════════════
+# 6b. EPA CAA Green Book county-level nonattainment (1992-2026 history)
+#     Source: raw/epa_greenbook/phistory.xls + nayro.xls
+#     Retrieved 2026-03-31 from https://www.epa.gov/green-book/green-book-data-download
+#     Authority: US EPA Office of Air Quality Planning and Standards
+#
+#     PHISTORY encodes pw_YYYY column = "P" (part county in nonattainment that year)
+#     or "W" (whole county). We treat both as nonattainment (binary 1) and also
+#     retain the W/P distinction as `caa_*_whole` variants for robustness.
+#
+#     NAYRO provides the classification ordinal (Marginal/Moderate/Serious/Severe/
+#     Extreme for ozone) which we merge per (county, pollutant).
+# ═══════════════════════════════════════════════════════════════════════
+log("\n── 6b. EPA CAA Green Book nonattainment ──")
+gb_dir = ROOT / 'raw' / 'epa_greenbook'
+phistory_path = gb_dir / 'phistory.xls'
+nayro_path = gb_dir / 'nayro.xls'
+
+if phistory_path.exists():
+    ph = pd.read_excel(phistory_path, sheet_name='phistory')
+    log(f"  PHISTORY: {ph.shape[0]} (county × pollutant) rows, "
+        f"{ph['pollutant'].nunique()} pollutants")
+
+    # Build 5-digit county FIPS from state + county. Drop rows with missing FIPS
+    # (rare; occasional non-county tribal/territorial rows).
+    ph = ph.dropna(subset=['fips_state', 'fips_cnty']).copy()
+    ph['county_fips5'] = (
+        ph['fips_state'].astype(int) * 1000 + ph['fips_cnty'].astype(int)
+    )
+
+    # Pollutant → short code mapping (NAAQS-aware, includes revocation metadata).
+    # Keys use uppercase and punctuation preserved; short codes are safe for
+    # Python identifiers.
+    pollutant_code = {
+        '8-Hour Ozone (2008)': 'ozone_2008',
+        '8-Hour Ozone (2015)': 'ozone_2015',
+        '8-Hour Ozone (1997)': 'ozone_1997',  # revoked
+        '1-Hour Ozone (1979)': 'ozone_1hr',   # revoked
+        'PM-2.5 (2012)':       'pm25_2012',
+        'PM-2.5 (2006)':       'pm25_2006',   # revoked 2015
+        'PM-2.5 (1997)':       'pm25_1997',   # revoked
+        'PM-10 (1987)':        'pm10_1987',
+        'Carbon Monoxide (1971)': 'co_1971',
+        'Sulfur Dioxide (2010)': 'so2_2010',
+        'Sulfur Dioxide (1971)': 'so2_1971',  # largely revoked
+        'Lead (2008)':         'pb_2008',
+        'Lead (1978)':         'pb_1978',      # revoked
+        'Nitrogen Dioxide (1971)': 'no2_1971',
+    }
+    ph['pollutant_code'] = ph['pollutant'].map(pollutant_code)
+    unknown = ph[ph['pollutant_code'].isna()]['pollutant'].unique()
+    if len(unknown):
+        log(f"  WARNING — unmapped pollutants: {list(unknown)}")
+
+    # Tag which NAAQS are currently in force (not revoked). This drives the
+    # primary aggregate `caa_any_criteria_nonattainment` variable.
+    current_naaqs = {
+        'ozone_2008', 'ozone_2015',  # 2008 is being phased out but still binding
+        'pm25_2012',
+        'pm10_1987',  # still in force
+        'co_1971',    # still in force
+        'so2_2010',
+        'pb_2008',
+        'no2_1971',
+    }
+
+    # Melt the pw_YYYY columns into long form (county × pollutant × year).
+    year_cols = [c for c in ph.columns if c.startswith('pw_')]
+    ph_long = ph.melt(
+        id_vars=['county_fips5', 'pollutant_code', 'revoked_naaqs'],
+        value_vars=year_cols,
+        var_name='year', value_name='na_status',
+    )
+    ph_long['year'] = ph_long['year'].str.replace('pw_', '').astype(int)
+    # na_status is "P" (part), "W" (whole), or NaN (not in nonattainment).
+    ph_long['nonattain_any'] = ph_long['na_status'].notna().astype(int)
+    ph_long['nonattain_whole'] = (ph_long['na_status'] == 'W').astype(int)
+    log(f"  PHISTORY melted: {len(ph_long):,} county-pollutant-year rows; "
+        f"{int(ph_long['nonattain_any'].sum()):,} nonattainment observations")
+
+    # Aggregate per (county_fips5, year): build the criterion-pollutant indicators.
+    def _aggregate(pollutants_set, name, wide_col):
+        """For each (county, year), 1 iff any pollutant in the set is nonattainment."""
+        sub = ph_long[ph_long['pollutant_code'].isin(pollutants_set)]
+        agg = sub.groupby(['county_fips5', 'year'])[wide_col].max().reset_index()
+        agg = agg.rename(columns={wide_col: name})
+        return agg
+
+    # Ozone (any — 2008 or 2015 currently binding).
+    caa_ozone = _aggregate({'ozone_2008', 'ozone_2015'}, 'caa_ozone_nonattainment_any', 'nonattain_any')
+    caa_ozone_whole = _aggregate({'ozone_2008', 'ozone_2015'},
+                                  'caa_ozone_nonattainment_whole', 'nonattain_whole')
+
+    # PM2.5 (current 2012 + phased-out 2006).
+    caa_pm25 = _aggregate({'pm25_2012'}, 'caa_pm25_2012_nonattainment', 'nonattain_any')
+
+    # PM10, CO, SO2, Lead (current NAAQS each).
+    caa_pm10 = _aggregate({'pm10_1987'}, 'caa_pm10_nonattainment', 'nonattain_any')
+    caa_co = _aggregate({'co_1971'}, 'caa_co_nonattainment', 'nonattain_any')
+    caa_so2 = _aggregate({'so2_2010'}, 'caa_so2_nonattainment', 'nonattain_any')
+    caa_pb = _aggregate({'pb_2008'}, 'caa_lead_nonattainment', 'nonattain_any')
+
+    # Any current NAAQS.
+    caa_any = _aggregate(current_naaqs, 'caa_any_criteria_nonattainment', 'nonattain_any')
+
+    # Merge all CAA indicators into a single county-year panel, then left-join
+    # to the main city-year panel on county_fips5.
+    caa = caa_any
+    for extra in [caa_ozone, caa_ozone_whole, caa_pm25, caa_pm10, caa_co, caa_so2, caa_pb]:
+        caa = caa.merge(extra, on=['county_fips5', 'year'], how='outer')
+    caa = caa.fillna(0)
+
+    # If nayro.xls is available, add the ozone classification ordinal.
+    if nayro_path.exists():
+        na = pd.read_excel(nayro_path, sheet_name='nayro')
+        na = na.dropna(subset=['fips_state', 'fips_cnty']).copy()
+        na['county_fips5'] = (
+            na['fips_state'].astype(int) * 1000 + na['fips_cnty'].astype(int)
+        )
+        na['pollutant_code'] = na['pollutant'].map(pollutant_code)
+        # Classification ordinal for ozone (2008 or 2015): map strings → 1-5.
+        class_ordinal = {
+            'Marginal': 1, 'Marginal (Rural Transport)': 1, 'Rural Transport (Marginal)': 1,
+            'Moderate': 2, 'Moderate <= 12.7ppm': 2, 'Moderate > 12.7ppm': 2,
+            'Serious': 3,
+            'Severe 15': 4, 'Severe 17': 4, 'Severe-15': 4, 'Severe-17': 4,
+            'Extreme': 5,
+            'Former Subpart 1': 0, 'Not Classified': 0, 'Incomplete Data': 0,
+        }
+        na_ozone = na[na['pollutant_code'].isin({'ozone_2008', 'ozone_2015'})].copy()
+        na_ozone['class_ord'] = na_ozone['class'].map(class_ordinal).fillna(0).astype(int)
+        # One observation per county (max across ozone standards).
+        na_class = na_ozone.groupby('county_fips5')['class_ord'].max().reset_index()
+        na_class = na_class.rename(columns={'class_ord': 'caa_ozone_class_ordinal'})
+        caa = caa.merge(na_class, on='county_fips5', how='left')
+        # Classification ordinal is time-invariant (current snapshot). Cities in
+        # counties with no ozone nonattainment history get 0.
+        caa['caa_ozone_class_ordinal'] = caa['caa_ozone_class_ordinal'].fillna(0).astype(int)
+        log(f"  NAYRO: merged {int(caa['caa_ozone_class_ordinal'].gt(0).sum()):,} "
+            f"county-years with ozone classification ordinal")
+
+    # Retain only panel years (2013-2025). Green Book covers 1992-2026.
+    caa = caa[(caa['year'] >= 2013) & (caa['year'] <= 2025)]
+
+    if 'county_fips5' in df.columns:
+        # NaN county_fips5 = city not matched in crosswalk; preserve but don't cast.
+        df['county_fips5'] = pd.to_numeric(df['county_fips5'], errors='coerce')
+        caa['county_fips5'] = pd.to_numeric(caa['county_fips5'], errors='coerce').astype('Int64')
+        df['county_fips5'] = df['county_fips5'].astype('Int64')
+        caa_cols = [c for c in caa.columns if c.startswith('caa_')]
+        before = set(df.columns)
+        df = df.merge(
+            caa[['county_fips5', 'year'] + caa_cols].drop_duplicates(['county_fips5', 'year']),
+            on=['county_fips5', 'year'], how='left', suffixes=('', '_CAA'),
+        )
+        for c in list(df.columns):
+            if c.endswith('_CAA'):
+                df = df.drop(columns=c)
+        # Fill NaN with 0 (counties with no CAA nonattainment history).
+        for c in caa_cols:
+            if c in df.columns:
+                df[c] = df[c].fillna(0)
+        log(f"  Merged {len(caa_cols)} CAA variables onto city-year panel. "
+            f"caa_any_criteria_nonattainment: "
+            f"{int(df['caa_any_criteria_nonattainment'].sum()):,} positive city-years.")
+    else:
+        log("  [skip] county_fips5 not in panel yet — CAA merge requires it")
+else:
+    log(f"  [skip] PHISTORY not found at {phistory_path}")
+
+
+# ═══════════════════════════════════════════════════════════════════════
 # 7. VULCAN EMISSIONS — Vulcan_data.csv (2013-2024)
 # ═══════════════════════════════════════════════════════════════════════
 log("\n── 7. Vulcan emissions (2013-2024) ──")
@@ -322,6 +617,132 @@ pe = pd.read_csv(ROOT / 'raw' / 'political' / 'presidential_elections.csv')
 pe_new = [c for c in pe.columns if c not in df.columns and c not in ('city_name',)]
 if pe_new:
     df = safe_merge(df, pe[['fips7', 'year'] + pe_new], on=['fips7', 'year'], name='presidential')
+
+
+# ═══════════════════════════════════════════════════════════════════════
+# 12b. MEDSL COUNTY PRESIDENTIAL RETURNS (2000-2024) — extends coverage
+#      back to 2008 and forward to 2024, closing the pre-2013 / 2024-2025
+#      gap in the existing presidential_elections.csv file.
+#
+#      Source: raw/political/countypres_2000-2024.csv
+#      Authority: MIT Election Data and Science Lab (MEDSL), Harvard Dataverse,
+#                 https://dataverse.harvard.edu/dataset.xhtml?persistentId=doi:10.7910/DVN/VOQCHQ
+#
+#      Aggregation: county-year Dem/Rep votes are summed across the counties
+#      listed in raw/crosswalk/Crosswalk.csv `relevant_counties` for each
+#      fips7 city (handles multi-county consolidated cities like NYC,
+#      Jacksonville-Duval). Only `mode == 'TOTAL'` rows are used to avoid
+#      double-counting across early/absentee/provisional splits.
+# ═══════════════════════════════════════════════════════════════════════
+log("\n── 12b. MEDSL presidential returns (2000-2024) ──")
+medsl_path = ROOT / 'raw' / 'political' / 'countypres_2000-2024.csv'
+if medsl_path.exists():
+    medsl = pd.read_csv(medsl_path)
+    # Mode coding varies by year: 2000-2020 uses 'TOTAL', 2024 uses 'TOTAL VOTES'.
+    # Both represent the overall candidate total for the county-year (not an
+    # early/absentee/provisional split), so we accept both.
+    medsl = medsl[(medsl['mode'].isin(['TOTAL', 'TOTAL VOTES'])) &
+                  (medsl['party'].isin(['DEMOCRAT', 'REPUBLICAN']))].copy()
+    medsl['county_fips'] = pd.to_numeric(medsl['county_fips'], errors='coerce').astype('Int64')
+    medsl = medsl.dropna(subset=['county_fips', 'year'])
+
+    # One row per (county_fips, year, party) with summed candidatevotes,
+    # plus county-year totalvotes.
+    county_yr_parties = (medsl.groupby(['county_fips', 'year', 'party'], as_index=False)
+                              ['candidatevotes'].sum()
+                              .pivot_table(index=['county_fips', 'year'],
+                                           columns='party', values='candidatevotes',
+                                           fill_value=0)
+                              .reset_index())
+    county_yr_totals = (medsl.groupby(['county_fips', 'year'], as_index=False)
+                             ['totalvotes'].first())
+    county_yr = county_yr_parties.merge(county_yr_totals,
+                                        on=['county_fips', 'year'], how='left')
+    county_yr = county_yr.rename(columns={'DEMOCRAT': 'dem_votes',
+                                          'REPUBLICAN': 'rep_votes',
+                                          'totalvotes': 'total_votes'})
+
+    # Build fips7 -> list of county_fips mapping from the crosswalk.
+    cw_full = pd.read_csv(ROOT / 'raw' / 'crosswalk' / 'Crosswalk.csv')
+    def _parse_counties(cell):
+        """Extract 5-digit county FIPS from 'Cook County [0500000US17031]; ...'."""
+        if pd.isna(cell):
+            return []
+        import re
+        return [int(m.group(1)) for m in re.finditer(r'US(\d{5})', str(cell))]
+    cw_full['county_list'] = cw_full['relevant_counties'].apply(_parse_counties)
+    # Fallback: if relevant_counties empty but county_geo_id present, parse that
+    import re
+    cw_full.loc[cw_full['county_list'].apply(len) == 0, 'county_list'] = (
+        cw_full.loc[cw_full['county_list'].apply(len) == 0, 'county_geo_id']
+        .apply(lambda s: [int(m.group(1)) for m in re.finditer(r'US(\d{5})', str(s))])
+    )
+    cw_exploded = cw_full[['fips', 'county_list']].explode('county_list').dropna()
+    cw_exploded = cw_exploded.rename(columns={'fips': 'fips7', 'county_list': 'county_fips'})
+    cw_exploded['county_fips'] = cw_exploded['county_fips'].astype(int)
+    cw_exploded['fips7'] = cw_exploded['fips7'].astype(int)
+
+    # Sum county votes per fips7 × year (multi-county cities aggregate).
+    city_yr = (cw_exploded.merge(county_yr, on='county_fips', how='inner')
+                          .groupby(['fips7', 'year'], as_index=False)
+                          [['dem_votes', 'rep_votes', 'total_votes']].sum())
+    city_yr['pres_dem_vote_share'] = city_yr['dem_votes'] / city_yr['total_votes']
+    city_yr['pres_rep_vote_share'] = city_yr['rep_votes'] / city_yr['total_votes']
+    city_yr['pres_dem_two_party_share'] = (
+        city_yr['dem_votes'] / (city_yr['dem_votes'] + city_yr['rep_votes'])
+    )
+    log(f"  MEDSL city-year: {len(city_yr):,} rows across "
+        f"{city_yr['fips7'].nunique()} cities × "
+        f"{sorted(city_yr['year'].unique())}")
+
+    # Expand election-year values to all intervening years (forward-fill):
+    #   2008 -> 2008-2011; 2012 -> 2012-2015; 2016 -> 2016-2019;
+    #   2020 -> 2020-2023; 2024 -> 2024-2025.
+    election_span = {2008: range(2008, 2012),
+                     2012: range(2012, 2016),
+                     2016: range(2016, 2020),
+                     2020: range(2020, 2024),
+                     2024: range(2024, 2026)}
+    rows = []
+    for elec_yr, yrs in election_span.items():
+        src = city_yr[city_yr['year'] == elec_yr]
+        if src.empty:
+            continue
+        for yr in yrs:
+            r = src.copy()
+            r['year'] = yr
+            rows.append(r)
+    medsl_expanded = pd.concat(rows, ignore_index=True)
+
+    # Merge into the panel. Existing presidential_elections.csv already
+    # populated 2013-2023; MEDSL fills 2008-2012 and 2024-2025 where missing.
+    # We ONLY overwrite NaNs to avoid touching values from the existing
+    # authoritative file.
+    for col in ['pres_dem_vote_share', 'pres_rep_vote_share',
+                'pres_dem_two_party_share']:
+        if col not in df.columns:
+            df[col] = np.nan
+    merged = df[['fips7', 'year']].merge(
+        medsl_expanded[['fips7', 'year',
+                        'pres_dem_vote_share', 'pres_rep_vote_share',
+                        'pres_dem_two_party_share']]
+        .rename(columns={
+            'pres_dem_vote_share':     'pres_dem_vote_share_MEDSL',
+            'pres_rep_vote_share':     'pres_rep_vote_share_MEDSL',
+            'pres_dem_two_party_share': 'pres_dem_two_party_share_MEDSL',
+        }),
+        on=['fips7', 'year'], how='left')
+    for col in ['pres_dem_vote_share', 'pres_rep_vote_share', 'pres_dem_two_party_share']:
+        medsl_col = f'{col}_MEDSL'
+        if medsl_col in merged.columns:
+            # Fill only where df's value is NaN (preserves existing CSV values).
+            mask = df[col].isna()
+            df.loc[mask, col] = merged.loc[mask, medsl_col].values
+    log(f"  Filled presidential NaN from MEDSL. "
+        f"pres_dem_vote_share nonnull: {df['pres_dem_vote_share'].notna().sum():,} "
+        f"(was {df['pres_dem_vote_share'].notna().sum() - mask.sum():,} before MEDSL fill)")
+else:
+    log(f"  [skip] MEDSL file not found at {medsl_path}")
 
 
 # ═══════════════════════════════════════════════════════════════════════
@@ -637,6 +1058,15 @@ if 'National Risk Index - Score - Composite' in df.columns:
     lag_count += 1
 
 log(f"  Created {lag_count} new lag/derived variables")
+
+# ── Presidential lags: build BEFORE trimming pre-2013 rows so that lag-2
+#    values for 2013-2014 can reach back to 2011/2012 MEDSL data ──
+df = df.sort_values(['fips7', 'year'])
+for src in ['pres_dem_vote_share', 'pres_rep_vote_share', 'pres_dem_two_party_share']:
+    if src in df.columns:
+        for k in [1, 2]:
+            df[f'{src}_lag{k}'] = df.groupby('fips7')[src].shift(k)
+        log(f"  Built {src}_lag1 / _lag2 (pre-trim; MEDSL reach-back)")
 
 # ── Trim pre-2013 rows (only needed for lag construction) ──
 pre_2013_mask = df['year'] < 2013

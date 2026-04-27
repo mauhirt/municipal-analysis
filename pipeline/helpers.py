@@ -166,7 +166,7 @@ def stars(p):
 
 def load_panel():
     """Load master panel from pickle, set panel index."""
-    pkl = Path(__file__).parent / 'panel.pkl'
+    pkl = _REPO_ROOT / 'processed' / 'panel' / 'panel.pkl'
     df = pd.read_pickle(pkl)
     return df
 

@@ -62,6 +62,32 @@ if 'Y_self_green' in df.columns and 'Y_water_only' in df.columns:
     )
     log(f"  O13 category_composition_share: {df['category_composition_share'].notna().sum()} obs")
 
+# O14-O15: Additional ESG credibility outcomes for Table 3 (user-requested).
+# These are distinct Bloomberg fields capturing specific operational dimensions
+# of ESG credibility investment beyond assurance + framework + reporting:
+#
+#   Y_Mgmt_Proceeds_Yes: bond explicitly ring-fences proceeds for green use
+#                        (management-of-proceeds commitment). Bloomberg's
+#                        `Mgmt of Proc__Yes` field.
+#   Y_Proj_Selection_Yes: bond documents pre-screen process for eligible
+#                         projects. Bloomberg's `Proj Sel Proc__Yes` field.
+#
+# Plus matching asinh-amount variables for intensive-margin analysis.
+credibility_map = {
+    'Y_Mgmt_Proceeds_Yes':  ('Count_Mgmt of Proc__Yes',   'Amt_Mgmt of Proc__Yes'),
+    'Y_Proj_Selection_Yes': ('Count_Proj Sel Proc__Yes',  'Amt_Proj Sel Proc__Yes'),
+}
+for yvar, (cnt_col, amt_col) in credibility_map.items():
+    if cnt_col in df.columns:
+        df[yvar] = (df[cnt_col] > 0).astype(int)
+        log(f"  {yvar}: {int(df[yvar].sum())} positive city-years")
+    else:
+        log(f"  [skip] {yvar}: source {cnt_col} missing")
+    if amt_col in df.columns:
+        amt_var = f'asinh_{yvar.replace("Y_", "").lower()}_amt'
+        df[amt_var] = np.arcsinh(df[amt_col].fillna(0))
+        log(f"  {amt_var}: {(df[amt_var] > 0).sum()} positive")
+
 
 # ═══════════════════════════════════════════════════════════════════════
 # 2. SIMPLE LAGS AND DERIVATIONS (S11, F11)
@@ -71,9 +97,14 @@ log("\n── 2. Simple lags ──")
 df = df.sort_values(['fips7', 'year'])
 
 # S11: pres_dem_vote_share_lag2
-if 'pres_dem_vote_share' in df.columns:
+# NOTE: 00_build_panel.py now builds pres_*_lag1/lag2 BEFORE trimming
+# pre-2013 rows so that lag-2 values for 2013-2014 reach back to 2011/2012
+# MEDSL data. Only re-build here if the pre-trim lag is absent.
+if 'pres_dem_vote_share' in df.columns and 'pres_dem_vote_share_lag2' not in df.columns:
     df['pres_dem_vote_share_lag2'] = df.groupby('fips7')['pres_dem_vote_share'].shift(2)
-    log(f"  S11 pres_dem_vote_share_lag2: {df['pres_dem_vote_share_lag2'].notna().sum()} non-null")
+    log(f"  S11 pres_dem_vote_share_lag2 (post-trim fallback): {df['pres_dem_vote_share_lag2'].notna().sum()} non-null")
+elif 'pres_dem_vote_share_lag2' in df.columns:
+    log(f"  S11 pres_dem_vote_share_lag2: {df['pres_dem_vote_share_lag2'].notna().sum()} non-null (pre-trim from 00)")
 
 # F11: capital_stock_pc_lag2
 if 'capital_stock_pc' in df.columns:
@@ -427,12 +458,13 @@ needed_prefixes = [
     # DVs
     'Green_Bond_','Y_self_green','Y_esg_','Y_water_only','Y_has_non_water','Y_any_',
     'Y_Clean_','Y_Renewable_','Y_Energy_','Y_Green_Buildings','Y_Climate_','Y_Pollution_',
+    'Y_Mgmt_','Y_Proj_','Y_natural_',
     'incidentally_green','asinh_','City_Green_','City_Total_','City_Share_',
     'N_esg_categories','category_composition','count_water','count_non_water',
     # Bloomberg detail
     'Count_','Amt_','Dum_',
     # Mayor
-    'Rep_Mayor','Ind_Mayor','mayor_','prob_democrat','prob_republican',
+    'Rep_Mayor','Ind_Mayor','Dem_Mayor','mayor_','prob_democrat','prob_republican',
     'party_switch','switch_to_','is_switcher',
     # Demographics & economic
     'population_','percapita_income_','totalincome_','unemployment_',
@@ -508,6 +540,8 @@ needed_prefixes = [
     'rps_x_muni_electric','state_rps_stringency','net_metering',
     # FEMA / NFIP
     'fema_disaster','nfip_',
+    # EPA Green Book CAA nonattainment (from phistory.xls / nayro.xls merged in 00)
+    'caa_',
     # Federal grants
     'iija_','federal_grant',
     # Transit
