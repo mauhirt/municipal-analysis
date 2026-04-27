@@ -50,7 +50,7 @@ MODULE = os.environ.get('TABLE1_MODULE', 'main')
 # variables are tested in robustness (R22 kitchen-sink).
 PRIMARY = [
     'Dem_Mayor',
-    'npdes_formal_prior3yr_muni',
+    'effluent_muni_asinh_lag2',
     'pres_dem_two_party_share_lag2',
     'asinh_state_all_green_cum_amt_lag1',
     'reserve_ratio_lag2', 'debt_service_burden_lag2',
@@ -61,6 +61,7 @@ PRIMARY = [
 
 # Kitchen-sink: PRIMARY + all previously-dropped controls for R22.
 PRIMARY_KITCHEN = PRIMARY + [
+    'npdes_formal_prior3yr_muni',
     'capital_outlay_pc_lag2', 'igr_share_lag2',
     'charges_to_own_source_lag2', 'tel_x_prop_tax_dep',
     'has_substitute_issuer',
@@ -302,7 +303,7 @@ if MODULE in ('rob1', 'all'):
     if bps: specs.append(('R9 BPS/IECC', Y, PRIMARY + bps, 'Building codes'))
 
     # R10 Pooled compulsion index
-    rhs_no_comp = [v for v in PRIMARY if v not in ('npdes_formal_prior3yr_muni',)]
+    rhs_no_comp = [v for v in PRIMARY if v not in ('effluent_muni_asinh_lag2',)]
     if 'compulsion_index_z' in df.columns:
         specs.append(('R10 Pooled Idx', Y, rhs_no_comp + ['compulsion_index_z'], 'Pooled compulsion z-score'))
 
@@ -357,7 +358,7 @@ if MODULE in ('rob2', 'all'):
     if fog: specs.append(('R19 FOG×Dem', Y, PRIMARY + fog, 'ICMA FOG institutional interactions'))
 
     # R20 EPA ownership tier: replace _muni with _locgov (local-gov water districts)
-    rhs_no_muni = [v for v in PRIMARY if v != 'npdes_formal_prior3yr_muni']
+    rhs_no_muni = [v for v in PRIMARY if v != 'effluent_muni_asinh_lag2']
     if 'npdes_formal_prior3yr_locgov' in df.columns:
         specs.append(('R20 NPDES Locgov', Y, rhs_no_muni + ['npdes_formal_prior3yr_locgov'],
                       'Supplement: replace _muni with _locgov (water districts)'))
@@ -400,7 +401,7 @@ if MODULE in ('ftest', 'all'):
         df['dem_x_state_green_cum'] = (
             df['Dem_Mayor'] * df.get('asinh_state_all_green_cum_amt_lag1', 0))
 
-    COMPULSION_BLOCK = ['npdes_formal_prior3yr_muni',
+    COMPULSION_BLOCK = ['effluent_muni_asinh_lag2',
                         'reserve_ratio_lag2', 'debt_service_burden_lag2']
 
     specs = [
