@@ -78,7 +78,7 @@ for label, var, desc in measures:
 # ── Primary RHS (same as Table 1 v3) ──
 PRIMARY = [
     'Dem_Mayor', 'pres_dem_two_party_share_lag2',
-    'effluent_muni_asinh_lag2',
+    'qncr_nonsevere_asinh_lag1',
     'reserve_ratio_lag2', 'debt_service_burden_lag2',
     'state_dem_governor_lag1',
     'fn_esg_has_muni_bond_law_post_lag1', 'asinh_state_all_green_cum_amt_lag1',
