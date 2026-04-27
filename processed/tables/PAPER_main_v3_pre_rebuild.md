@@ -4,7 +4,7 @@
 
 ---
 
-**Sample.** N = 7,401 city-years · 576 cities · 49 states · 2013–2025.
+**Sample.** N = 6,825 city-years · 576 cities · 49 states · 2014–2025.
 **Estimator.** Linear probability model (continuous outcomes: OLS).
 **Treatment.** `Dem_Mayor` (no lag).
 **Fixed effects.** State + year (absorbed, not reported).
@@ -54,7 +54,7 @@ Table 1 presents the Step 1 use-of-funds decomposition. The aggregate version of
 | *Variable* | *W1 Water* | *W2 Water + I2* | *NW1 Non-water* | *NW2 Non-water + I2* |
 |---|---|---|---|---|
 | **Family 1 — Material conditions** | | | | |
-| Effluent violations (muni, lag 2) | +0.0075 | +0.0075 | +0.0064 | +0.0059 |
+| NPDES formal enforcement (3yr) | +0.0075 | +0.0075 | +0.0064 | +0.0059 |
 | | (1.53) | (1.54) | (1.34) | (1.27) |
 | Reserve ratio | +0.0034 | +0.0034 | +0.0011 | +0.0011 |
 | | (1.32) | (1.32) | (0.56) | (0.63) |
@@ -80,8 +80,8 @@ Table 1 presents the Step 1 use-of-funds decomposition. The aggregate version of
 | Unemployment rate | +0.0021 | +0.0021 | +0.0008 | +0.0009 |
 | | (1.57) | (1.56) | (0.99) | (1.07) |
 | R² | 0.045 | 0.045 | 0.062 | 0.066 |
-| N | 7,401 | 7,401 | 7,401 | 7,401 |
-| Positive city-years | 89 | 89 | 60 | 60 |
+| N | 6,825 | 6,825 | 6,825 | 6,825 |
+| Positive city-years | 89 | 89 | 57 | 57 |
 
 \*, \*\*, \*\*\* denote significance at the 10 per cent, 5 per cent and 1 per cent level, respectively. State + year FE absorbed.
 
@@ -121,7 +121,7 @@ Table 1 presents the Step 1 use-of-funds decomposition. The aggregate version of
 | *Variable* | *C1 GBI* | *C2 GBI $* | *C3 Self-green* | *C4 Self $* | *I1 GBI* | *I2 Self-green* |
 |---|---|---|---|---|---|---|
 | **Family 1 — Material conditions** | | | | | | |
-| Effluent violations (muni, lag 2) | +0.0061 | +0.1165 | +0.0060 | +0.1140 | +0.0062 | +0.0061 |
+| NPDES formal enforcement (3yr) | +0.0145 | +0.2917 | +0.0164 | +0.3238 | +0.0140 | +0.0159 |
 | | (1.85)\* | (1.91)\* | (2.36)\*\* | (2.37)\*\* | (1.83)\* | (2.35)\*\* |
 | Reserve ratio | +0.0044 | +0.0753 | +0.0031 | +0.0551 | +0.0045 | +0.0032 |
 | | (1.31) | (1.20) | (1.05) | (0.99) | (1.35) | (1.10) |
@@ -147,7 +147,7 @@ Table 1 presents the Step 1 use-of-funds decomposition. The aggregate version of
 | Unemployment rate | +0.0030 | +0.0572 | +0.0025 | +0.0495 | +0.0031 | +0.0026 |
 | | (1.91)\* | (1.95)\* | (1.79)\* | (1.87)\* | (1.92)\* | (1.81)\* |
 | R² | 0.092 | 0.098 | 0.094 | 0.097 | 0.094 | 0.096 |
-| N | 7,401 | 7,401 | 7,401 | 7,401 | 7,401 | 7,401 |
+| N | 6,825 | 6,825 | 6,825 | 6,825 | 6,825 | 6,825 |
 
 \*, \*\*, \*\*\* denote significance at the 10 per cent, 5 per cent and 1 per cent level, respectively.
 *Note:* Absolute value of the *t*-statistic is in parenthesis. Outcomes: GBI = `Green_Bond_Issued` (any green bond, prob.), GBI $ = `asinh(green_amt)`, Self-green = `Y_self_green` (city self-labelled, prob.), Self $ = `asinh(self_green_amt)`.
@@ -162,7 +162,7 @@ Table 1 presents the Step 1 use-of-funds decomposition. The aggregate version of
 
 ### Reading
 
-**Family 1 (Material) dominates Step 2.** Municipal effluent violations drive issuance across all main columns (β = +0.006\*\*\*). Cities whose municipal water plants violate NPDES effluent limits are more likely to issue green bonds. Fiscal-capacity variables (reserve ratio, debt service burden) are directionally consistent but not individually significant in this specification.
+**Family 1 (Material) dominates Step 2.** NPDES formal enforcement drives issuance across all main columns (β = +0.015\*–+0.016\*\*). Cities under federal water-quality enforcement are more likely to issue green bonds. Fiscal-capacity variables (reserve ratio, debt service burden) are directionally consistent but not individually significant in this specification.
 
 **Family 2 (Political) is null on average but masks responsive representation.** `Dem_Mayor` is indistinguishable from zero across C1–C4. The constituency × partisan interaction (I1–I2) reveals the conditional pattern: Democratic mayors amplify electorate preferences where those preferences favor green issuance (blue cities, 90th pct: +0.021\*\*) and substitute away where they do not (red cities, 10th pct: −0.020\*\*). The crossover is at pres\_dem ≈ 0.55. The unconditional null is the population-weighted average of these two equal-and-opposite effects. As Table 1 confirms, this responsive-representation mechanism operates exclusively in the discretionary (non-water) domain where mayoral latitude exists.
 
@@ -179,7 +179,7 @@ Table 1 presents the Step 1 use-of-funds decomposition. The aggregate version of
 | *Variable* | *L1 Baseline* | *L2 +Fiscal Stress* | *L3 +Marketability* | *L4 Both* | *L5 Compelled only* |
 |---|---|---|---|---|---|
 | **Family 1 — Material conditions** | | | | | |
-| Effluent violations (muni, lag 2) | +0.0221 | +0.0210 | −0.0201 | −0.0200 | — |
+| NPDES formal enforcement (3yr) | +0.0221 | +0.0210 | −0.0201 | −0.0200 | — |
 | | (2.62)\*\*\* | (2.59)\*\*\* | (1.26) | (1.26) | |
 | Reserve ratio | +0.0035 | +0.0059 | +0.0034 | +0.0057 | +0.0031 |
 | | (0.77) | (1.34) | (0.74) | (1.30) | (0.18) |
@@ -229,17 +229,17 @@ Table 1 presents the Step 1 use-of-funds decomposition. The aggregate version of
 
 | *Outcome* | *N* | *n+* | *Dem Mayor* | *NPDES* | *pres\_dem* |
 |---|---:|---:|---|---|---|
-| Any credibility indicator | 7,401 | 78 | +0.0005 | +0.0179 | +0.0292 |
+| Any credibility indicator | 6,825 | 78 | +0.0005 | +0.0179 | +0.0292 |
 | | | | (0.13) | (2.86)\*\*\* | (1.42) |
-| Third-party ESG assurance | 7,401 | 61 | +0.0044 | +0.0136 | +0.0166 |
+| Third-party ESG assurance | 6,825 | 61 | +0.0044 | +0.0136 | +0.0166 |
 | | | | (1.75)\* | (2.37)\*\* | (0.85) |
-| ICMA / CBI framework | 7,401 | 71 | −0.0021 | +0.0190 | +0.0398 |
+| ICMA / CBI framework | 6,825 | 71 | −0.0021 | +0.0190 | +0.0398 |
 | | | | (0.62) | (3.05)\*\*\* | (2.09)\*\* |
-| Impact reporting | 7,401 | 73 | −0.0015 | +0.0174 | +0.0378 |
+| Impact reporting | 6,825 | 73 | −0.0015 | +0.0174 | +0.0378 |
 | | | | (0.44) | (2.79)\*\*\* | (1.93)\* |
-| Documented project selection | 7,401 | 78 | −0.0002 | +0.0163 | +0.0323 |
+| Documented project selection | 6,825 | 78 | −0.0002 | +0.0163 | +0.0323 |
 | | | | (0.05) | (2.58)\*\*\* | (1.56) |
-| Documented proceeds management | 7,401 | 73 | −0.0014 | +0.0177 | +0.0369 |
+| Documented proceeds management | 6,825 | 73 | −0.0014 | +0.0177 | +0.0369 |
 | | | | (0.40) | (2.83)\*\*\* | (1.90)\* |
 
 ### Panel B — Descriptive: rates conditional on issuing a self-labelled green bond
@@ -333,7 +333,7 @@ Coverage: 54% (72/134) name a third-party verifier; 48% (64/134) cite a framewor
 
 **Step 1 (Investment).** Capital need and federal enforcement mandate drive project selection. Both parties undertake similar levels of capital investment when capital need is comparable. In the compelled domain (water infrastructure under NPDES enforcement), the constituency × partisan interaction is flat zero (Table 1 W2: −0.002, t = 0.05). In the discretionary domain (non-water categories), the interaction is significant (+0.102\*\*\*): Democratic mayors amplify constituency demand for discretionary green capital projects in blue cities and substitute away in red cities. The investment decision is the point in the chain where the compelled-vs-discretionary distinction first operates, and where the water placebo confirms that partisan-constituency alignment matters only where mayors have latitude.
 
-**Step 2 (Bond Financing).** Fiscal capacity and regulatory compulsion shape the debt-financing choice. `Dem_Mayor` is null across all four main-table outcomes (Table 2 C1–C4). Municipal effluent violations (+0.006\*\*\*) and constituency (+0.051\*\*) drive issuance. The null survives 24 robustness specifications, two-way and state clustering, alternative partisan measures, and three-tier mayor-party imputation. Both parties borrow at similar rates conditional on capital need and fiscal position.
+**Step 2 (Bond Financing).** Fiscal capacity and regulatory compulsion shape the debt-financing choice. `Dem_Mayor` is null across all four main-table outcomes (Table 2 C1–C4). NPDES formal enforcement (+0.016\*\*) and constituency (+0.054\*\*) drive issuance. The null survives 24 robustness specifications, two-way and state clustering, alternative partisan measures, and three-tier mayor-party imputation. Both parties borrow at similar rates conditional on capital need and fiscal position.
 
 **Step 3 (Green Labelling).** The labelling decision is driven by market-structural factors. Among bond issuers (Table 3), fiscal stress (+0.018\*\*) and the marketability interaction (NPDES × state green market depth = +0.0022\*\*) are the operative mechanisms. Compelled issuers label green where the state ESG-investor base exists; distressed issuers label green to seek the greenium. Mayoral partisanship is null at this step (|t| ≤ 0.48 across all five Table 3 columns). Among compelled issuers (L5), only city size and per-capita income predict labelling — a sophistication channel.
 
