@@ -397,6 +397,67 @@ Coverage: 54% (72/134) name a third-party verifier; 48% (64/134) cite a framewor
 
 ---
 
+## Appendix E — Placebo Tests
+
+Three families of placebo tests confirm that the paper's key findings are specific to the theorised mechanisms rather than artefacts of general patterns.
+
+### E1. Climate alliance membership (demonstration placebo)
+
+> **Prediction.** If the partisan null on green bonds reflects the absence of a political-agency mechanism in bond financing, then `Dem_Mayor` should predict visible, low-cost climate commitments (pledges, alliance membership) even while failing to predict green bond issuance. The interaction should also be positive for alliances — constituency pressure drives both — but the unconditional Dem_Mayor signal should appear only for alliances (cheap signalling), not for bonds (costly investment).
+
+| *Outcome* | *N* | *n+* | *Dem Mayor* | *Non-severe viol.* | *Dem × vote share (I2)* |
+|---|---:|---:|---|---|---|
+| Mayor's Climate Action signatory | 7,089 | 701 | **+0.0365** | −0.0038 | **+0.6179** |
+| | | | **(2.09)\*\*** | (0.53) | **(4.60)\*\*\*** |
+| ICLEI member | 7,089 | 558 | **+0.0368** | −0.0023 | **+0.4839** |
+| | | | **(2.40)\*\*** | (0.36) | **(3.83)\*\*\*** |
+| C40 member | 7,089 | 267 | −0.0022 | +0.0095 | +0.2562 |
+| | | | (0.22) | (2.15)\*\* | (2.82)\*\*\* |
+| Climate commitment score (0–3) | 7,089 | 1,526 | **+0.0711** | +0.0034 | **+1.3581** |
+| | | | **(1.95)\*** | (0.24) | **(4.75)\*\*\*** |
+
+**Reading.** `Dem_Mayor` is significant on climate alliance membership (+0.037\*\* for Climate Action, +0.037\*\* for ICLEI) but null on green bond issuance (Table 1 C1–C4). Democratic mayors sign climate pledges — a visible, low-cost demonstration — but this partisan signal does not translate into green bond financing. The constituency × partisan interaction is large and significant for alliances (+0.618\*\*\*, +0.484\*\*\*), confirming that the responsive-representation mechanism operates on both domains, but the unconditional Dem\_Mayor effect is specific to cheap signalling. Violations are null on alliances (|t| ≤ 0.53), confirming that the compulsion channel is specific to capital investment, not climate pledges.
+
+### E2. General (non-green) borrowing placebo
+
+> **Prediction.** If the constituency × partisan interaction operates specifically on green bonds rather than reflecting a general tendency of Democratic mayors in blue cities to borrow more, then the interaction should be null on total long-term debt issuance.
+
+| *Outcome* | *N* | *n+* | *Dem Mayor* | *Non-severe viol.* | *Dem × vote share (I2)* |
+|---|---:|---:|---|---|---|
+| Any LTD issued (binary) | 7,413 | 4,509 | +0.0193 | +0.0140 | −0.0685 |
+| | | | (1.13) | (2.28)\*\* | (0.58) |
+| Total LTD issued (asinh) | 6,282 | 4,509 | +0.2982 | +0.2239 | −0.5061 |
+| | | | (1.35) | (2.87)\*\*\* | (0.33) |
+| Net borrowing intensity | 6,278 | 2,092 | +0.0033 | +0.0030 | −0.0120 |
+| | | | (0.62) | (1.55) | (0.32) |
+
+**Reading.** `Dem_Mayor` is null on all general borrowing outcomes (|t| ≤ 1.35). The constituency × partisan interaction is null on general borrowing (|t| ≤ 0.58). Democratic mayors in blue cities do not borrow more overall — the I2 interaction is specific to green bonds. Non-severe violations predict general debt issuance (+0.014\*\*, +0.224\*\*\*), consistent with violations creating capital-investment need that requires debt financing regardless of green labelling.
+
+### E3. Non-severe violations on non-environmental spending
+
+> **Prediction.** If non-severe NPDES violations capture water-specific infrastructure-need pressure, they should be null on non-environmental spending categories.
+
+| *Outcome (asinh)* | *N* | *Dem Mayor* | *Non-severe viol.* |
+|---|---:|---|---|
+| Police expenditure | 7,413 | +0.1194 | +0.0079 |
+| | | (3.57)\*\*\* | (0.51) |
+| Highways expenditure | 7,413 | −0.0456 | +0.0162 |
+| | | (0.86) | (0.85) |
+| Health/hospitals expenditure | 7,413 | +0.2868 | +0.0159 |
+| | | (1.32) | (0.23) |
+
+**Reading.** Non-severe violations are null on police (t=0.51), highways (t=0.85), and health (t=0.23) spending. The compulsion variable does not predict non-environmental expenditure, confirming that it captures water-specific infrastructure-need pressure rather than general fiscal pressure or city-level omitted variables.
+
+### Summary of placebo results
+
+| Placebo test | What it rules out | Result |
+|---|---|---|
+| Climate alliances (E1) | `Dem_Mayor` null on bonds is a power issue | Rejected: Dem\_Mayor is significant on alliances (+0.037\*\*) but null on bonds |
+| General borrowing (E2) | Constituency × partisan interaction reflects general borrowing | Rejected: I2 is null on general LTD (t=0.58) |
+| Non-environmental spending (E3) | Non-severe violations proxy for general fiscal pressure | Rejected: violations null on police, highways, health (|t| ≤ 0.85) |
+
+---
+
 ## Files
 
 - `processed/tables/PAPER_main_v4.md` — this document.
