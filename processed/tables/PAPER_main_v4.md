@@ -1,6 +1,6 @@
 # When Do Red and Blue Go Green? — Main Paper Tables and Narrative (v4)
 
-> **Changelog (v3.2 → v4).** (15) Compulsion variable replaced: non-severe QNCR violations (asinh, lag 1) supersedes effluent violations. Non-severe violations capture persistent low-severity infrastructure-need pressure and produce water-specific significance (+0.004\*\*\*, t=2.90 on water; +0.003, t=1.50 ns on non-water). All tables re-estimated. N = 7,413. Variable construction note updated.
+> **Changelog (v3.2 → v4).** (15) Compulsion variable replaced: non-severe QNCR violations (asinh, lag 1) supersedes effluent violations. (16) Capital outlay per capita (lag 2) added to PRIMARY as investment-intensity control; 2013–2014 values backfilled from pre-panel Census of Governments data (2011–2012). N = 7,413 preserved. Non-severe violations produce water-specific significance (+0.003\*\*, t=2.50 on water; +0.002, t=1.00 ns on non-water). All tables re-estimated.
 
 ---
 
@@ -51,32 +51,34 @@ The paper's central theoretical claim is that mayoral partisanship operates at t
 | *Variable* | *C1 GBI* | *C2 GBI $* | *C3 Self-green* | *C4 Self $* | *I1 GBI* | *I2 Self-green* |
 |---|---|---|---|---|---|---|
 | **Family 1 — Material conditions** | | | | | | |
-| Non-severe violations (muni, lag 1) | +0.0062 | +0.1143 | +0.0052 | +0.0957 | +0.0063 | +0.0054 |
-| | (2.48)\*\* | (2.39)\*\* | (2.48)\*\* | (2.33)\*\* | (2.55)\*\* | (2.58)\*\*\* |
-| Reserve ratio | +0.0041 | +0.0702 | +0.0029 | +0.0509 | +0.0042 | +0.0030 |
-| | (1.29) | (1.19) | (1.03) | (0.97) | (1.35) | (1.10) |
-| Debt service burden | −0.0707 | −1.2526 | −0.0481 | −0.8710 | −0.0757 | −0.0538 |
-| | (1.33) | (1.24) | (1.07) | (1.02) | (1.44) | (1.22) |
+| Non-severe violations (muni, lag 1) | +0.0050 | +0.0912 | +0.0041 | +0.0725 | +0.0051 | +0.0042 |
+| | (1.88)\* | (1.75)\* | (1.73)\* | (1.56) | (1.96)\* | (1.83)\* |
+| Reserve ratio | +0.0056 | +0.1002 | +0.0044 | +0.0810 | +0.0057 | +0.0045 |
+| | (1.92)\* | (1.89)\* | (1.76)\* | (1.77)\* | (1.97)\*\* | (1.82)\* |
+| Debt service burden | −0.1091 | −2.0219 | −0.0867 | −1.6433 | −0.1131 | −0.0913 |
+| | (2.01)\*\* | (1.97)\*\* | (1.91)\* | (1.90)\* | (2.08)\*\* | (2.01)\*\* |
+| Capital outlay per capita | +0.0388 | +0.7760 | +0.0390 | +0.7791 | +0.0381 | +0.0382 |
+| | (1.57) | (1.54) | (1.56) | (1.53) | (1.57) | (1.56) |
 | **Family 2 — Political factors** | | | | | | |
-| Dem Mayor | +0.0004 | +0.0045 | +0.0001 | +0.0014 | −0.0552 | −0.0633 |
-| | (0.09) | (0.06) | (0.04) | (0.02) | (1.89)\* | (2.23)\*\* |
-| Dem presidential vote share | +0.0538 | +0.9782 | +0.0502 | +0.9081 | +0.0040 | −0.0066 |
-| | (2.16)\*\* | (2.08)\*\* | (2.16)\*\* | (2.06)\*\* | (0.16) | (0.30) |
-| Dem Mayor × Dem vote share | — | — | — | — | +0.0986 | +0.1125 |
-| | | | | | (1.91)\* | (2.25)\*\* |
+| Dem Mayor | −0.0002 | −0.0070 | −0.0004 | −0.0101 | −0.0521 | −0.0601 |
+| | (0.05) | (0.09) | (0.12) | (0.15) | (1.94)\* | (2.32)\*\* |
+| Dem presidential vote share | +0.0556 | +1.0148 | +0.0520 | +0.9449 | +0.0091 | −0.0015 |
+| | (2.22)\*\* | (2.14)\*\* | (2.22)\*\* | (2.13)\*\* | (0.37) | (0.07) |
+| Dem Mayor × Dem vote share | — | — | — | — | +0.0920 | +0.1059 |
+| | | | | | (1.97)\*\* | (2.36)\*\* |
 | **Family 3 — Institutional context** | | | | | | |
-| State green bond market depth | +0.0005 | +0.0083 | +0.0003 | +0.0064 | +0.0004 | +0.0003 |
-| | (1.31) | (1.30) | (1.18) | (1.17) | (1.21) | (1.05) |
-| Anti-ESG muni bond law | −0.0059 | −0.1007 | −0.0032 | −0.0568 | −0.0051 | −0.0023 |
-| | (1.13) | (1.04) | (0.76) | (0.72) | (0.97) | (0.54) |
+| State green bond market depth | +0.0004 | +0.0082 | +0.0003 | +0.0064 | +0.0004 | +0.0003 |
+| | (1.31) | (1.29) | (1.17) | (1.16) | (1.21) | (1.04) |
+| Anti-ESG muni bond law | −0.0062 | −0.1070 | −0.0035 | −0.0631 | −0.0055 | −0.0027 |
+| | (1.19) | (1.10) | (0.83) | (0.79) | (1.04) | (0.62) |
 | **Demographic and economic controls** | | | | | | |
-| Log population | +0.0300 | +0.5834 | +0.0244 | +0.4809 | +0.0296 | +0.0240 |
-| | (3.30)\*\*\* | (3.26)\*\*\* | (3.12)\*\*\* | (3.08)\*\*\* | (3.33)\*\*\* | (3.16)\*\*\* |
-| Log per-capita income | +0.0326 | +0.6571 | +0.0280 | +0.5709 | +0.0306 | +0.0258 |
-| | (1.98)\*\* | (1.96)\*\* | (1.72)\* | (1.73)\* | (1.96)\*\* | (1.68)\* |
-| Unemployment rate | +0.0029 | +0.0564 | +0.0025 | +0.0490 | +0.0030 | +0.0026 |
-| | (2.04)\*\* | (2.07)\*\* | (1.92)\* | (2.00)\*\* | (2.04)\*\* | (1.94)\* |
-| R² | 0.088 | 0.093 | 0.088 | 0.091 | 0.089 | 0.091 |
+| Log population | +0.0267 | +0.5165 | +0.0211 | +0.4138 | +0.0264 | +0.0207 |
+| | (3.27)\*\*\* | (3.25)\*\*\* | (3.11)\*\*\* | (3.10)\*\*\* | (3.28)\*\*\* | (3.13)\*\*\* |
+| Log per-capita income | +0.0259 | +0.5234 | +0.0213 | +0.4367 | +0.0242 | +0.0193 |
+| | (2.07)\*\* | (2.08)\*\* | (1.77)\* | (1.81)\* | (2.02)\*\* | (1.69)\* |
+| Unemployment rate | +0.0027 | +0.0525 | +0.0023 | +0.0451 | +0.0028 | +0.0024 |
+| | (1.98)\*\* | (2.03)\*\* | (1.86)\* | (1.96)\*\* | (1.99)\*\* | (1.89)\* |
+| R² | 0.094 | 0.100 | 0.096 | 0.101 | 0.095 | 0.099 |
 | N | 7,413 | 7,413 | 7,413 | 7,413 | 7,413 | 7,413 |
 
 \*, \*\*, \*\*\* denote significance at the 10 per cent, 5 per cent and 1 per cent level, respectively. State + year FE absorbed.
@@ -85,15 +87,15 @@ The paper's central theoretical claim is that mayoral partisanship operates at t
 
 | Constituency percentile | pres\_dem | Marginal effect | *t*-stat |
 |---|---|---|---|
-| 10th (red city) | 0.39 | **−0.019** | **(2.05)\*\*** |
-| 50th (median) | 0.57 | +0.001 | (0.13) |
-| 90th (blue city) | 0.75 | **+0.021** | **(2.10)\*\*** |
+| 10th (red city) | 0.39 | **−0.019** | **(2.10)\*\*** |
+| 50th (median) | 0.57 | +0.000 | (0.06) |
+| 90th (blue city) | 0.75 | **+0.019** | **(2.20)\*\*** |
 
 ### Reading
 
-**Family 1 (Material) dominates Step 2.** Non-severe violations drive issuance across all main columns (β = +0.005–0.006\*\*). Cities with persistent low-severity water-quality noncompliance are more likely to issue green bonds.
+**Family 1 (Material) dominates Step 2.** Non-severe violations drive issuance across all main columns (β = +0.004–0.005\*). Reserve ratio and debt service burden are both significant after controlling for capital outlay (+0.006\* and −0.109\*\* respectively). Capital outlay per capita is positive but not significant (t ≈ 1.56), consistent with baseline investment intensity being correlated with but not sufficient for green issuance.
 
-**Family 2 (Political) is null on average but masks responsive representation.** `Dem_Mayor` is indistinguishable from zero across C1–C4. The constituency × partisan interaction (I1–I2) reveals the conditional pattern: Democratic mayors amplify electorate preferences where those preferences favor green issuance (blue cities, 90th pct: +0.021\*\*) and substitute away where they do not (red cities, 10th pct: −0.019\*\*). As Table 2 confirms, this responsive-representation mechanism operates exclusively in the discretionary (non-water) domain.
+**Family 2 (Political) is null on average but masks responsive representation.** `Dem_Mayor` is indistinguishable from zero across C1–C4. The constituency × partisan interaction (I1–I2) reveals the conditional pattern: Democratic mayors amplify electorate preferences where those preferences favor green issuance (blue cities, 90th pct: +0.019\*\*) and substitute away where they do not (red cities, 10th pct: −0.019\*\*). As Table 2 confirms, this responsive-representation mechanism operates exclusively in the discretionary (non-water) domain.
 
 ---
 
@@ -104,32 +106,34 @@ The paper's central theoretical claim is that mayoral partisanship operates at t
 | *Variable* | *W1 Water* | *W2 Water + I2* | *NW1 Non-water* | *NW2 Non-water + I2* |
 |---|---|---|---|---|
 | **Family 1 — Material conditions** | | | | |
-| Non-severe violations (muni, lag 1) | +0.0037 | +0.0037 | +0.0025 | +0.0026 |
-| | (2.90)\*\*\* | (2.91)\*\*\* | (1.50) | (1.59) |
-| Reserve ratio | +0.0032 | +0.0032 | +0.0011 | +0.0013 |
-| | (1.33) | (1.34) | (0.66) | (0.74) |
-| Debt service burden | −0.0465 | −0.0465 | −0.0239 | −0.0287 |
-| | (1.35) | (1.36) | (0.80) | (0.98) |
+| Non-severe violations (muni, lag 1) | +0.0032 | +0.0032 | +0.0019 | +0.0020 |
+| | (2.50)\*\* | (2.51)\*\* | (1.00) | (1.08) |
+| Reserve ratio | +0.0038 | +0.0038 | +0.0020 | +0.0021 |
+| | (1.63) | (1.64) | (1.33) | (1.43) |
+| Debt service burden | −0.0630 | −0.0629 | −0.0457 | −0.0496 |
+| | (1.83)\* | (1.83)\* | (1.51) | (1.65)\* |
+| Capital outlay per capita | +0.0166 | +0.0166 | +0.0220 | +0.0213 |
+| | (1.47) | (1.48) | (1.31) | (1.31) |
 | **Family 2 — Political factors** | | | | |
-| Dem Mayor | −0.0002 | −0.0010 | +0.0005 | −0.0527 |
-| | (0.06) | (0.06) | (0.21) | (3.04)\*\*\* |
-| Dem presidential vote share | +0.0157 | +0.0151 | +0.0383 | −0.0094 |
-| | (1.00) | (0.94) | (2.62)\*\*\* | (0.62) |
-| Dem Mayor × Dem vote share | — | +0.0013 | — | +0.0944 |
-| | | (0.05) | | (3.04)\*\*\* |
+| Dem Mayor | −0.0005 | +0.0004 | +0.0002 | −0.0510 |
+| | (0.13) | (0.03) | (0.08) | (3.18)\*\*\* |
+| Dem presidential vote share | +0.0165 | +0.0173 | +0.0393 | −0.0065 |
+| | (1.04) | (1.09) | (2.67)\*\*\* | (0.44) |
+| Dem Mayor × Dem vote share | — | −0.0016 | — | +0.0907 |
+| | | (0.06) | | (3.19)\*\*\* |
 | **Family 3 — Institutional context** | | | | |
 | State green bond market depth | +0.0003 | +0.0003 | +0.0001 | +0.0001 |
-| | (1.22) | (1.21) | (0.72) | (0.55) |
-| Anti-ESG muni bond law | −0.0073 | −0.0073 | +0.0029 | +0.0036 |
-| | (1.61) | (1.60) | (0.89) | (1.08) |
+| | (1.22) | (1.22) | (0.71) | (0.54) |
+| Anti-ESG muni bond law | −0.0074 | −0.0075 | +0.0027 | +0.0034 |
+| | (1.63) | (1.63) | (0.84) | (1.03) |
 | **Demographic and economic controls** | | | | |
-| Log population | +0.0120 | +0.0120 | +0.0172 | +0.0169 |
-| | (3.02)\*\*\* | (3.06)\*\*\* | (3.24)\*\*\* | (3.27)\*\*\* |
-| Log per-capita income | +0.0147 | +0.0147 | +0.0173 | +0.0154 |
-| | (1.59) | (1.63) | (1.98)\*\* | (1.89)\* |
-| Unemployment rate | +0.0020 | +0.0020 | +0.0008 | +0.0009 |
-| | (1.61) | (1.61) | (1.15) | (1.22) |
-| R² | 0.044 | 0.044 | 0.058 | 0.062 |
+| Log population | +0.0105 | +0.0105 | +0.0153 | +0.0151 |
+| | (2.71)\*\*\* | (2.74)\*\*\* | (3.29)\*\*\* | (3.32)\*\*\* |
+| Log per-capita income | +0.0118 | +0.0119 | +0.0135 | +0.0118 |
+| | (1.43) | (1.46) | (2.08)\*\* | (1.92)\* |
+| Unemployment rate | +0.0019 | +0.0019 | +0.0007 | +0.0008 |
+| | (1.56) | (1.56) | (1.01) | (1.09) |
+| R² | 0.046 | 0.046 | 0.063 | 0.067 |
 | N | 7,413 | 7,413 | 7,413 | 7,413 |
 | Positive city-years | 89 | 89 | 60 | 60 |
 
@@ -139,8 +143,8 @@ The paper's central theoretical claim is that mayoral partisanship operates at t
 
 | Domain | 10th pct (0.39) | 50th pct (0.57) | 90th pct (0.75) |
 |---|---|---|---|
-| W2 Water | −0.001 (0.06) | −0.000 (0.06) | +0.000 (0.01) |
-| **NW2 Non-water** | **−0.016 (2.82)\*\*\*** | +0.001 (0.32) | **+0.018 (2.76)\*\*\*** |
+| W2 Water | −0.000 (0.04) | −0.001 (0.14) | −0.001 (0.12) |
+| **NW2 Non-water** | **−0.016 (2.90)\*\*\*** | +0.001 (0.30) | **+0.017 (2.86)\*\*\*** |
 
 ### Panel B — Descriptive: individual sparse categories
 
@@ -156,9 +160,9 @@ The paper's central theoretical claim is that mayoral partisanship operates at t
 
 ### Reading
 
-**Step 1 is dominated by Family 1 (Material) in the compelled domain.** Non-severe violations drive water issuance specifically (+0.004\*\*\*, t=2.90) and are null on non-water (+0.003, t=1.50, p=0.135). This is the clean water-specific compulsion pattern that confirms the chain framing's prediction: persistent low-severity effluent exceedances create capital-investment need for water infrastructure specifically.
+**Step 1 is dominated by Family 1 (Material) in the compelled domain.** Non-severe violations drive water issuance specifically (+0.003\*\*, t=2.50) and are null on non-water (+0.002, t=1.00). This is the clean water-specific compulsion pattern that confirms the chain framing's prediction: persistent low-severity effluent exceedances create capital-investment need for water infrastructure specifically.
 
-**Step 1 shows responsive representation in the discretionary domain.** The constituency × partisan interaction operates exclusively in the discretionary domain: water (I2 = +0.001, ns) vs non-water (I2 = +0.094\*\*\*). Democratic mayors amplify constituency demand for discretionary green capital projects. The crossover at pres\_dem ≈ 0.55 separates amplification (blue cities, +0.018\*\*\*) from substitution (red cities, −0.016\*\*\*).
+**Step 1 shows responsive representation in the discretionary domain.** The constituency × partisan interaction operates exclusively in the discretionary domain: water (I2 = −0.002, ns) vs non-water (I2 = +0.091\*\*\*). Democratic mayors amplify constituency demand for discretionary green capital projects. The crossover at pres\_dem ≈ 0.55 separates amplification (blue cities, +0.017\*\*\*) from substitution (red cities, −0.016\*\*\*).
 
 **The domain contrast is the finding.** Panel B shows the raw descriptive pattern — Democratic mayors account for 17 of 17 clean-transportation and 19 of 19 green-buildings positive city-years — which Panel A decomposes into constituency-conditional responsive representation rather than autonomous partisan ideology.
 
@@ -168,52 +172,54 @@ The paper's central theoretical claim is that mayoral partisanship operates at t
 
 > **Step mapping.** Conditional on having issued a bond, does the city apply the green label? The sample restricts to bond issuers (`total_ltd_issued > 0`). The paper predicts Family 1 (Material) dominance at this step.
 
-**Sample.** Bond issuers: N = 3,894 (84 self-green events). Compelled issuers (non-severe violations > 0): N = 2,375 (73 events).
+**Sample.** Bond issuers: N = 3,894 (84 self-green events). Compelled issuers (non-severe violations > 0): N = 2,375 (64 events).
 
 | *Variable* | *L1 Baseline* | *L2 +Fiscal Stress* | *L3 +Marketability* | *L4 Both* | *L5 Compelled only* |
 |---|---|---|---|---|---|
 | **Family 1 — Material conditions** | | | | | |
-| Non-severe violations (muni, lag 1) | +0.0043 | +0.0035 | −0.0110 | −0.0113 | — |
-| | (1.30) | (1.06) | (2.06)\*\* | (2.10)\*\* | |
-| Reserve ratio | +0.0033 | +0.0056 | +0.0030 | +0.0053 | +0.0096 |
-| | (0.70) | (1.26) | (0.65) | (1.20) | (1.59) |
-| Debt service burden | −0.0728 | −0.2245 | −0.0636 | −0.2099 | −0.1276 |
-| | (1.03) | (2.25)\*\* | (0.92) | (2.16)\*\* | (1.37) |
-| Fiscal stress index | — | +0.0176 | — | +0.0169 | — |
-| | | (1.98)\*\* | | (1.92)\* | |
+| Non-severe violations (muni, lag 1) | +0.0028 | +0.0028 | −0.0122 | −0.0122 | — |
+| | (0.76) | (0.83) | (2.20)\*\* | (2.20)\*\* | |
+| Reserve ratio | +0.0055 | +0.0053 | +0.0053 | +0.0050 | +0.0112 |
+| | (1.38) | (1.19) | (1.32) | (1.12) | (1.91)\* |
+| Debt service burden | −0.1210 | −0.1073 | −0.1119 | −0.0922 | −0.1701 |
+| | (1.75)\* | (0.97) | (1.65)\* | (0.85) | (1.83)\* |
+| Capital outlay per capita | +0.0508 | +0.0514 | +0.0507 | +0.0515 | +0.0425 |
+| | (1.63) | (1.52) | (1.62) | (1.52) | (1.90)\* |
+| Fiscal stress index | — | −0.0017 | — | −0.0024 | — |
+| | | (0.15) | | (0.22) | |
 | Violations × state green market depth | — | — | +0.0008 | +0.0008 | — |
-| | | | (2.42)\*\* | (2.38)\*\* | |
+| | | | (2.40)\*\* | (2.42)\*\* | |
 | **Family 2 — Political factors** | | | | | |
-| Dem Mayor | −0.0017 | −0.0024 | −0.0015 | −0.0022 | −0.0010 |
-| | (0.32) | (0.47) | (0.29) | (0.43) | (0.13) |
-| Dem presidential vote share | +0.0665 | +0.0729 | +0.0692 | +0.0753 | +0.0587 |
-| | (2.13)\*\* | (2.31)\*\* | (2.23)\*\* | (2.39)\*\* | (1.49) |
+| Dem Mayor | −0.0031 | −0.0031 | −0.0030 | −0.0029 | −0.0018 |
+| | (0.62) | (0.62) | (0.59) | (0.58) | (0.25) |
+| Dem presidential vote share | +0.0684 | +0.0678 | +0.0710 | +0.0701 | +0.0582 |
+| | (2.18)\*\* | (2.22)\*\* | (2.27)\*\* | (2.31)\*\* | (1.48) |
 | **Family 3 — Institutional context** | | | | | |
-| State green bond market depth | +0.0005 | +0.0004 | −0.0007 | −0.0007 | +0.0009 |
-| | (0.87) | (0.81) | (0.93) | (0.93) | (1.37) |
-| Anti-ESG muni bond law | −0.0082 | −0.0078 | −0.0097 | −0.0093 | −0.0186 |
-| | (1.11) | (1.06) | (1.29) | (1.24) | (1.59) |
-| State Dem governor | +0.0020 | +0.0020 | +0.0012 | +0.0013 | +0.0118 |
-| | (0.13) | (0.13) | (0.08) | (0.08) | (0.58) |
-| State Dem trifecta | −0.0127 | −0.0126 | −0.0116 | −0.0115 | −0.0202 |
-| | (0.97) | (0.96) | (0.89) | (0.88) | (1.15) |
-| State Rep trifecta | −0.0125 | −0.0118 | −0.0124 | −0.0118 | −0.0034 |
-| | (0.80) | (0.76) | (0.80) | (0.76) | (0.17) |
+| State green bond market depth | +0.0005 | +0.0005 | −0.0007 | −0.0007 | +0.0010 |
+| | (0.91) | (0.91) | (0.87) | (0.87) | (1.48) |
+| Anti-ESG muni bond law | −0.0104 | −0.0104 | −0.0118 | −0.0119 | −0.0184 |
+| | (1.29) | (1.30) | (1.45) | (1.45) | (1.56) |
+| State Dem governor | +0.0040 | +0.0040 | +0.0032 | +0.0032 | +0.0140 |
+| | (0.25) | (0.25) | (0.20) | (0.21) | (0.68) |
+| State Dem trifecta | −0.0127 | −0.0127 | −0.0116 | −0.0116 | −0.0207 |
+| | (0.96) | (0.96) | (0.88) | (0.88) | (1.17) |
+| State Rep trifecta | −0.0091 | −0.0091 | −0.0091 | −0.0091 | +0.0004 |
+| | (0.56) | (0.56) | (0.56) | (0.56) | (0.02) |
 | **Demographic and economic controls** | | | | | |
-| Log population | +0.0355 | +0.0353 | +0.0350 | +0.0348 | +0.0384 |
-| | (3.32)\*\*\* | (3.33)\*\*\* | (3.32)\*\*\* | (3.33)\*\*\* | (3.28)\*\*\* |
-| Log per-capita income | +0.0307 | +0.0331 | +0.0300 | +0.0324 | +0.0345 |
-| | (1.20) | (1.27) | (1.18) | (1.25) | (1.31) |
-| Unemployment rate | +0.0025 | +0.0026 | +0.0022 | +0.0024 | +0.0013 |
-| | (1.19) | (1.26) | (1.07) | (1.15) | (0.42) |
-| R² | 0.105 | 0.107 | 0.107 | 0.109 | 0.131 |
+| Log population | +0.0314 | +0.0314 | +0.0309 | +0.0309 | +0.0344 |
+| | (3.32)\*\*\* | (3.32)\*\*\* | (3.32)\*\*\* | (3.32)\*\*\* | (2.98)\*\*\* |
+| Log per-capita income | +0.0194 | +0.0191 | +0.0188 | +0.0183 | +0.0245 |
+| | (1.08) | (1.12) | (1.04) | (1.08) | (1.04) |
+| Unemployment rate | +0.0021 | +0.0021 | +0.0019 | +0.0019 | +0.0009 |
+| | (1.07) | (1.07) | (0.96) | (0.95) | (0.31) |
+| R² | 0.119 | 0.119 | 0.121 | 0.121 | 0.139 |
 | N | 3,894 | 3,894 | 3,894 | 3,894 | 2,375 |
 
 \*, \*\*, \*\*\* denote significance at the 10 per cent, 5 per cent and 1 per cent level, respectively. State + year FE absorbed. Table 3 additionally includes state political controls (Dem governor, Dem trifecta, Rep trifecta) not in Tables 1–2.
 
 ### Reading
 
-**Family 1 (Material) dominates Step 3.** Non-severe violations drive labelling in the baseline (L1: +0.004, t=1.64 borderline). Fiscal stress (L2: +0.018\*\*) and the marketability interaction (L3: violations × state green market depth = +0.001\*\*\*) are significant and orthogonal (L4). `Dem_Mayor` is null across all five columns.
+**Family 1 (Material) dominates Step 3.** The marketability interaction (L3: violations × state green market depth = +0.001\*\*) is significant: compelled cities label green where the state ESG-investor base exists. Fiscal stress (L2) is no longer significant after controlling for capital outlay, suggesting the earlier greenium-seeking result reflected capital-investment intensity rather than distress per se. Capital outlay per capita is positive in all columns (t ≈ 1.6, marginally significant in L5 at \*). `Dem_Mayor` is null across all five columns.
 
 ---
 
@@ -222,24 +228,23 @@ The paper's central theoretical claim is that mayoral partisanship operates at t
 | Finding | Evidence | Step | Strength |
 |---|---|---|---|
 | `Dem_Mayor` null across outcomes | β ≈ 0 across Table 1 C1–C4 + R1–R24 | Steps 2, 3, 4 | Rock solid (\*\*\*) |
-| **Non-severe violations drive water issuance** | **+0.004\*\*\* (Table 2 water); +0.003 ns (non-water)** | **Step 1, water-specific** | **Novel (\*\*\*)** |
-| Constituency drives issuance | pres\_dem +0.051\*\* (Table 1 self-green) | Step 2 | Consistent (\*\*) |
-| **Constituency × partisan interaction** | +0.113\*\* (Table 1 self-green); **+0.094\*\*\* (Table 2 NW2)**; +0.001 ns (Table 2 W2 placebo) | **Step 1, discretionary only** | Novel (\*\*) |
-| Labelling-margin marketability | Table 3 L3: violations × state\_green +0.001\*\*\* (issuer subsample) | Step 3 | Separate sample (\*\*\*) |
-| Labelling-margin fiscal stress | Table 3 L2: fiscal stress +0.018\*\* (issuer subsample) | Step 3 | Separate sample (\*\*) |
-| Third-party assurance partisan gap | Panel A: +0.005\*\*; Panel C (N=118): +0.439\*\*\*; Fisher 59% vs 15%. California-fragile (p=0.170 w/o CA) | Step 4 | Partial (\*\*), fragile |
+| **Non-severe violations drive water issuance** | **+0.003\*\* (Table 2 water); +0.002 ns (non-water)** | **Step 1, water-specific** | **Novel (\*\*)** |
+| Constituency drives issuance | pres\_dem +0.052\*\* (Table 1 self-green) | Step 2 | Consistent (\*\*) |
+| **Constituency × partisan interaction** | +0.106\*\* (Table 1 self-green); **+0.091\*\*\* (Table 2 NW2)**; −0.002 ns (Table 2 W2 placebo) | **Step 1, discretionary only** | Novel (\*\*) |
+| Labelling-margin marketability | Table 3 L3: violations × state\_green +0.001\*\* (issuer subsample) | Step 3 | Separate sample (\*\*) |
+| Third-party assurance partisan gap | Panel A: +0.004\*; Panel C (N=117): +0.452\*\*\*; Fisher 59% vs 15%. California-fragile (p=0.192 w/o CA) | Step 4 | Partial (\*), fragile |
 
 ---
 
 ## The story
 
-**Step 1 (Investment).** Capital need and federal water-quality compliance pressure drive project selection. Non-severe violations at municipal water plants are significant on water issuance (+0.004\*\*\*, t=2.90) and null on non-water (+0.003, t=1.50) — a clean water-specific compulsion pattern. In the discretionary domain (non-water categories), the constituency × partisan interaction is significant (+0.094\*\*\*): Democratic mayors amplify constituency demand for green capital projects in blue cities and substitute away in red cities. The water placebo (Table 2 W2: +0.001, t=0.05) confirms that partisan-constituency alignment matters only where mayors have latitude.
+**Step 1 (Investment).** Capital need and federal water-quality compliance pressure drive project selection. Non-severe violations at municipal water plants are significant on water issuance (+0.003\*\*, t=2.50) and null on non-water (+0.002, t=1.00) — a clean water-specific compulsion pattern. In the discretionary domain (non-water categories), the constituency × partisan interaction is significant (+0.091\*\*\*): Democratic mayors amplify constituency demand for green capital projects in blue cities and substitute away in red cities. The water placebo (Table 2 W2: −0.002, t=0.06) confirms that partisan-constituency alignment matters only where mayors have latitude.
 
-**Step 2 (Bond Financing).** The full-panel aggregate confirms the unconditional partisan null. `Dem_Mayor` is null across all four main-table outcomes (Table 1 C1–C4). Non-severe violations (+0.005\*\*) and constituency (+0.051\*\*) drive issuance. The I2 interaction (+0.113\*\*) is the pooled signature of the Step 1 discretionary effect.
+**Step 2 (Bond Financing).** The full-panel aggregate confirms the unconditional partisan null. `Dem_Mayor` is null across all four main-table outcomes (Table 1 C1–C4). Non-severe violations (+0.004\*), constituency (+0.052\*\*), and debt service burden (−0.087\*) drive issuance. The I2 interaction (+0.106\*\*) is the pooled signature of the Step 1 discretionary effect.
 
-**Step 3 (Green Labelling).** Among bond issuers (Table 3), fiscal stress (+0.018\*\*) and the marketability interaction (violations × state green market depth = +0.001\*\*\*) are the operative mechanisms. Mayoral partisanship is null (|t| ≤ 0.48). Among compelled issuers (L5), only city size predicts labelling — a sophistication channel.
+**Step 3 (Green Labelling).** Among bond issuers (Table 3), the marketability interaction (violations × state green market depth = +0.001\*\*) is the operative mechanism: compelled cities label green only where the state ESG-investor base exists. Capital outlay per capita is positive throughout (marginally significant in L5 among compelled issuers). Mayoral partisanship is null (|t| ≤ 0.62). Among compelled issuers (L5), city size and capital intensity predict labelling — a sophistication channel.
 
-**Step 4 (Credibility Certification).** `Dem_Mayor` is null on five of six credibility outcomes (Appendix B Panel A); only `log_population` is consistently significant across credibility dimensions (Panel C). The lone exception — third-party ESG assurance (+0.005\*\*, Panel A; +0.439\*\*\*, Panel C) — is concentrated in a small set of large coastal Democratic cities (California contributes 22 of 61 assurance events; San Francisco alone contributes 10) and does not survive a leave-California-out test (p = 0.170). By the time the decision reaches Step 4, the political-agency mechanism has been delegated to administrative and financial professionals operating under capacity-and-scale constraints.
+**Step 4 (Credibility Certification).** `Dem_Mayor` is null on five of six credibility outcomes (Appendix B Panel A); `log_population` and `capital_outlay_pc` are both significant across credibility dimensions (Panel C). The lone exception — third-party ESG assurance (+0.004\*, Panel A; +0.452\*\*\*, Panel C) — is concentrated in a small set of large coastal Democratic cities (California contributes 22 of 61 assurance events; San Francisco alone contributes 10) and does not survive a leave-California-out test (p = 0.192). By the time the decision reaches Step 4, the political-agency mechanism has been delegated to administrative and financial professionals operating under capacity-and-scale constraints.
 
 **Sensitivity and robustness.** The I2 interaction survives centered-VIF (1.18), leave-one-state-out (0 of 49 above p = 0.10), and the water-domain placebo. Dem_Mayor null across 24 robustness specifications.
 
@@ -261,22 +266,22 @@ A separate corpus analysis of 198 bond prospectuses provides document-level vali
 
 > **Step mapping.** This appendix addresses Step 4: conditional on having labelled a bond green, does the city procure third-party verification, adopt an ICMA/CBI framework, publish impact reports, or document project-selection and proceeds-management procedures? These actions impose direct fiscal cost. The paper predicts Family 1 dominance at this step in the form of administrative scale — larger and more sophisticated cities adopt quality standards regardless of mayoral partisanship — with the residual partisan signal concentrated in a small handful of large coastal Democratic cities (California-fragile).
 
-### Panel A — Full-sample regression (10-variable PRIMARY)
+### Panel A — Full-sample regression (11-variable PRIMARY)
 
-| *Outcome* | *N* | *n+* | *Dem Mayor* | *Non-severe viol.* | *pres\_dem* |
+| *Outcome* | *N* | *n+* | *Dem Mayor* | *Non-severe viol.* | *Capital outlay pc* |
 |---|---:|---:|---|---|---|
-| Any credibility indicator | 7,413 | 78 | +0.0009 | +0.0035 | +0.0264 |
-| | | | (0.28) | (1.99)\*\* | (1.41) |
-| Third-party ESG assurance | 7,413 | 61 | +0.0045 | +0.0029 | +0.0155 |
-| | | | (1.97)\*\* | (1.78)\* | (0.87) |
-| ICMA / CBI framework | 7,413 | 71 | −0.0014 | +0.0028 | +0.0360 |
-| | | | (0.44) | (1.70)\* | (2.06)\*\* |
-| Impact reporting | 7,413 | 73 | −0.0008 | +0.0032 | +0.0344 |
-| | | | (0.26) | (1.88)\* | (1.92)\* |
-| Documented project selection | 7,413 | 78 | +0.0004 | +0.0036 | +0.0296 |
-| | | | (0.11) | (2.04)\*\* | (1.57) |
-| Documented proceeds management | 7,413 | 73 | −0.0007 | +0.0035 | +0.0338 |
-| | | | (0.23) | (2.04)\*\* | (1.90)\* |
+| Any credibility indicator | 7,413 | 78 | +0.0004 | +0.0024 | +0.0375 |
+| | | | (0.11) | (1.18) | (1.65)\* |
+| Third-party ESG assurance | 7,413 | 61 | +0.0040 | +0.0017 | +0.0373 |
+| | | | (1.73)\* | (0.92) | (1.63) |
+| ICMA / CBI framework | 7,413 | 71 | −0.0020 | +0.0017 | +0.0381 |
+| | | | (0.61) | (0.89) | (1.68)\* |
+| Impact reporting | 7,413 | 73 | −0.0014 | +0.0021 | +0.0379 |
+| | | | (0.44) | (1.06) | (1.67)\* |
+| Documented project selection | 7,413 | 78 | −0.0002 | +0.0024 | +0.0373 |
+| | | | (0.06) | (1.23) | (1.64) |
+| Documented proceeds management | 7,413 | 73 | −0.0013 | +0.0024 | +0.0378 |
+| | | | (0.41) | (1.21) | (1.67)\* |
 
 ### Panel B — Descriptive: rates conditional on issuing a self-labelled green bond
 
@@ -289,32 +294,32 @@ A separate corpus analysis of 198 bond prospectuses provides document-level vali
 | Documented project selection | 68/98 (69.4%) | 10/20 (50.0%) | 0.121 |
 | Documented proceeds management | 63/98 (64.3%) | 10/20 (50.0%) | 0.312 |
 
-### Panel C — Conditional on green bond issuance (N = 118, year FE only)
+### Panel C — Conditional on green bond issuance (N = 117, year FE only)
 
-| *Outcome* | *N* | *n+* | *Dem Mayor* | *Non-severe viol.* | *Log population* |
+| *Outcome* | *N* | *n+* | *Dem Mayor* | *Log population* | *Capital outlay pc* |
 |---|---:|---:|---|---|---|
-| Any credibility indicator | 118 | 77 | +0.1144 | −0.0382 | +0.1734 |
-| | | | (0.80) | (1.35) | (4.30)\*\*\* |
-| **Third-party ESG assurance** | 118 | 61 | **+0.4385** | −0.0541 | +0.1276 |
-| | | | **(3.82)\*\*\*** | (1.38) | (2.84)\*\*\* |
-| ICMA / CBI framework | 118 | 70 | −0.0269 | −0.0488 | +0.2025 |
-| | | | (0.20) | (1.49) | (4.41)\*\*\* |
-| Impact reporting | 118 | 73 | +0.0203 | −0.0300 | +0.1991 |
-| | | | (0.15) | (0.97) | (5.09)\*\*\* |
-| Documented project selection | 118 | 78 | +0.1303 | −0.0292 | +0.1903 |
-| | | | (0.92) | (1.03) | (4.77)\*\*\* |
-| Documented proceeds management | 118 | 73 | +0.0373 | −0.0265 | +0.1887 |
-| | | | (0.27) | (0.73) | (3.85)\*\*\* |
+| Any credibility indicator | 117 | 77 | +0.1291 | +0.1528 | +0.1046 |
+| | | | (0.90) | (3.80)\*\*\* | (2.59)\*\*\* |
+| **Third-party ESG assurance** | 117 | 61 | **+0.4518** | +0.1021 | +0.1390 |
+| | | | **(3.78)\*\*\*** | (2.26)\*\* | (3.34)\*\*\* |
+| ICMA / CBI framework | 117 | 70 | −0.0149 | +0.1845 | +0.0932 |
+| | | | (0.11) | (3.96)\*\*\* | (1.78)\* |
+| Impact reporting | 117 | 73 | +0.0322 | +0.1797 | +0.1018 |
+| | | | (0.24) | (4.50)\*\*\* | (2.32)\*\* |
+| Documented project selection | 117 | 78 | +0.1438 | +0.1713 | +0.0964 |
+| | | | (1.03) | (4.30)\*\*\* | (2.49)\*\* |
+| Documented proceeds management | 117 | 73 | +0.0497 | +0.1704 | +0.0934 |
+| | | | (0.36) | (3.43)\*\*\* | (2.18)\*\* |
 
 \*, \*\*, \*\*\* denote significance at the 10 per cent, 5 per cent and 1 per cent level, respectively.
 
 ### Reading
 
-The empirical pattern at Step 4 is consistent with administrative scale and sophistication driving the credibility decisions rather than mayoral partisanship. Panel A shows `Dem_Mayor` is null on five of six credibility outcomes. The single exception — third-party ESG assurance — is California-fragile (β falls from +0.0045\*\* to +0.0032, p = 0.170 when California is dropped). Panel C confirms that conditional on green issuance, only `log_population` predicts framework adoption, impact reporting, project selection, and proceeds management at \*\*\*. Larger and richer cities adopt quality standards regardless of mayoral partisanship — Family 1 in its administrative-capacity form, not Family 2.
+The empirical pattern at Step 4 is consistent with administrative scale, sophistication, and baseline capital-investment intensity driving the credibility decisions rather than mayoral partisanship. Panel A shows `Dem_Mayor` is null on five of six credibility outcomes; capital outlay per capita is marginally significant on four of six. The single exception — third-party ESG assurance — is California-fragile (β falls from +0.0040\* to +0.0030, p = 0.192 when California is dropped). Panel C confirms that conditional on green issuance, both `log_population` and `capital_outlay_pc` predict framework adoption, impact reporting, project selection, and proceeds management at \*\*–\*\*\*. Larger cities with greater capital-investment capacity adopt quality standards regardless of mayoral partisanship — Family 1 in its administrative-capacity form, not Family 2.
 
 The descriptive Panel B gap (third-party assurance: 59% Dem vs 15% Rep, Fisher p < 0.001) is the starkest partisan difference observed anywhere in the paper. The Panel A regression and the leave-California-out diagnostic show this gap reflects a sophistication-and-scale concentration in a handful of large coastal Democratic cities (California contributes 22 of 61 assurance events; San Francisco alone contributes 10) rather than a generalisable partisan mechanism.
 
-The other five credibility dimensions are driven by city size. Panel C shows `log_population` at \*\*\* on framework adoption, impact reporting, project selection, and proceeds management. By the time the decision reaches Step 4, the political-agency mechanism that operates at Step 1 in the discretionary domain has been delegated to administrative and financial professionals operating under capacity-and-scale constraints.
+The other five credibility dimensions are driven by city size and capital intensity. Panel C shows `log_population` at \*\*\*–\*\*\* and `capital_outlay_pc` at \*–\*\*\* across all six credibility outcomes. By the time the decision reaches Step 4, the political-agency mechanism that operates at Step 1 in the discretionary domain has been delegated to administrative and financial professionals operating under capacity-and-scale constraints.
 
 ---
 

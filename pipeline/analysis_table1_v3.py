@@ -57,6 +57,7 @@ PRIMARY = [
     'fn_esg_has_muni_bond_law_post_lag1',
     'log_population_city_lag2', 'log_percapita_income_city_lag2',
     'unemployment_city_lag2',
+    'capital_outlay_pc_lag2',
 ]
 
 # Kitchen-sink: PRIMARY + all previously-dropped controls for R22.

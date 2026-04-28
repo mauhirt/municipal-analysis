@@ -83,6 +83,7 @@ PRIMARY = [
     'state_dem_governor_lag1',
     'fn_esg_has_muni_bond_law_post_lag1', 'asinh_state_all_green_cum_amt_lag1',
     'log_population_city_lag2', 'log_percapita_income_city_lag2', 'unemployment_city_lag2',
+    'capital_outlay_pc_lag2',
 ]
 
 def fit(df, y, xs, fe=('state_id','year'), cluster='fips7'):
