@@ -1,6 +1,6 @@
 # When Do Red and Blue Go Green? — Main Paper Tables and Narrative (v4)
 
-> **Changelog (v3.2 → v4).** (15) Compulsion variable replaced: non-severe QNCR violations (asinh, lag 1) supersedes effluent violations. (16) Capital outlay per capita (lag 2) added to PRIMARY as investment-intensity control; 2013–2014 values backfilled from pre-panel Census of Governments data (2011–2012). N = 7,413 preserved. Non-severe violations produce water-specific significance (+0.003\*\*, t=2.50 on water; +0.002, t=1.00 ns on non-water). All tables re-estimated.
+> **Changelog (v3.2 → v4).** (15) Compulsion variable replaced: non-severe QNCR violations (asinh, lag 1) supersedes effluent violations. (16) Capital outlay per capita (lag 2) added to PRIMARY as investment-intensity control; 2013–2014 values backfilled from pre-panel Census of Governments data (2011–2012). (17) Anti-ESG law variable broadened from muni-bond-specific (`fn_esg_has_muni_bond_law_post_lag1`, 2 states) to any anti-ESG legislation (`esg_has_antiesg_law_lag1`, 22 states); now significant on water issuance (−0.013\*\*). N = 7,413 preserved. All tables re-estimated.
 
 ---
 
@@ -69,8 +69,8 @@ The paper's central theoretical claim is that mayoral partisanship operates at t
 | **Family 3 — Institutional context** | | | | | | |
 | State green bond market depth | +0.0004 | +0.0082 | +0.0003 | +0.0064 | +0.0004 | +0.0003 |
 | | (1.31) | (1.29) | (1.17) | (1.16) | (1.21) | (1.04) |
-| Anti-ESG muni bond law | −0.0062 | −0.1070 | −0.0035 | −0.0631 | −0.0055 | −0.0027 |
-| | (1.19) | (1.10) | (0.83) | (0.79) | (1.04) | (0.62) |
+| Anti-ESG law (any) | −0.0094 | −0.1792 | −0.0098 | −0.1833 | −0.0085 | −0.0088 |
+| | (1.43) | (1.39) | (1.77)\* | (1.70)\* | (1.29) | (1.58) |
 | **Demographic and economic controls** | | | | | | |
 | Log population | +0.0267 | +0.5165 | +0.0211 | +0.4138 | +0.0264 | +0.0207 |
 | | (3.27)\*\*\* | (3.25)\*\*\* | (3.11)\*\*\* | (3.10)\*\*\* | (3.28)\*\*\* | (3.13)\*\*\* |
@@ -126,8 +126,8 @@ The paper's central theoretical claim is that mayoral partisanship operates at t
 | **Family 3 — Institutional context** | | | | |
 | State green bond market depth | +0.0003 | +0.0003 | +0.0001 | +0.0001 |
 | | (1.22) | (1.22) | (0.71) | (0.54) |
-| Anti-ESG muni bond law | −0.0074 | −0.0075 | +0.0027 | +0.0034 |
-| | (1.63) | (1.63) | (0.84) | (1.03) |
+| Anti-ESG law (any) | −0.0131 | −0.0131 | +0.0044 | +0.0053 |
+| | (2.30)\*\* | (2.30)\*\* | (1.10) | (1.29) |
 | **Demographic and economic controls** | | | | |
 | Log population | +0.0105 | +0.0105 | +0.0153 | +0.0151 |
 | | (2.71)\*\*\* | (2.74)\*\*\* | (3.29)\*\*\* | (3.32)\*\*\* |
@@ -199,8 +199,8 @@ The paper's central theoretical claim is that mayoral partisanship operates at t
 | **Family 3 — Institutional context** | | | | | |
 | State green bond market depth | +0.0005 | +0.0005 | −0.0007 | −0.0007 | +0.0010 |
 | | (0.91) | (0.91) | (0.87) | (0.87) | (1.48) |
-| Anti-ESG muni bond law | −0.0104 | −0.0104 | −0.0118 | −0.0119 | −0.0184 |
-| | (1.29) | (1.30) | (1.45) | (1.45) | (1.56) |
+| Anti-ESG law (any) | −0.0118 | −0.0119 | −0.0135 | −0.0136 | −0.0214 |
+| | (1.54) | (1.55) | (1.72)\* | (1.73)\* | (1.82)\* |
 | State Dem governor | +0.0040 | +0.0040 | +0.0032 | +0.0032 | +0.0140 |
 | | (0.25) | (0.25) | (0.20) | (0.21) | (0.68) |
 | State Dem trifecta | −0.0127 | −0.0127 | −0.0116 | −0.0116 | −0.0207 |
@@ -387,7 +387,7 @@ Coverage: 54% (72/134) name a third-party verifier; 48% (64/134) cite a framewor
 | R² | 0.097 | 0.099 | 0.046 | 0.067 |
 | N | 7,413 | 7,413 | 7,413 | 7,413 |
 
-\*, \*\*, \*\*\* denote significance at the 10 per cent, 5 per cent and 1 per cent level, respectively. State + year FE absorbed. Remaining PRIMARY controls (state green bond market depth, anti-ESG muni bond law, log population, log per-capita income, unemployment) included but not shown for space.
+\*, \*\*, \*\*\* denote significance at the 10 per cent, 5 per cent and 1 per cent level, respectively. State + year FE absorbed. Remaining PRIMARY controls (state green bond market depth, anti-ESG law, log population, log per-capita income, unemployment) included but not shown for space.
 
 ### Reading
 

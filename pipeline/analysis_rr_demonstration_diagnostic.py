@@ -81,7 +81,7 @@ PRIMARY = [
     'qncr_nonsevere_asinh_lag1',
     'reserve_ratio_lag2', 'debt_service_burden_lag2',
     'state_dem_governor_lag1',
-    'fn_esg_has_muni_bond_law_post_lag1', 'asinh_state_all_green_cum_amt_lag1',
+    'esg_has_antiesg_law_lag1', 'asinh_state_all_green_cum_amt_lag1',
     'log_population_city_lag2', 'log_percapita_income_city_lag2', 'unemployment_city_lag2',
     'capital_outlay_pc_lag2',
 ]
