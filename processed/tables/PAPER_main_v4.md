@@ -53,17 +53,33 @@ The paper's central theoretical claim is that mayoral partisanship operates at t
 | **Family 1 — Material conditions** | | | | | | |
 | Non-severe violations (muni, lag 1) | +0.0062 | +0.1143 | +0.0052 | +0.0957 | +0.0063 | +0.0054 |
 | | (2.48)\*\* | (2.39)\*\* | (2.48)\*\* | (2.33)\*\* | (2.55)\*\* | (2.58)\*\*\* |
+| Reserve ratio | +0.0041 | +0.0702 | +0.0029 | +0.0509 | +0.0042 | +0.0030 |
+| | (1.29) | (1.19) | (1.03) | (0.97) | (1.35) | (1.10) |
+| Debt service burden | −0.0707 | −1.2526 | −0.0481 | −0.8710 | −0.0757 | −0.0538 |
+| | (1.33) | (1.24) | (1.07) | (1.02) | (1.44) | (1.22) |
 | **Family 2 — Political factors** | | | | | | |
 | Dem Mayor | +0.0004 | +0.0045 | +0.0001 | +0.0014 | −0.0552 | −0.0633 |
 | | (0.09) | (0.06) | (0.04) | (0.02) | (1.89)\* | (2.23)\*\* |
-| Dem presidential vote share | +0.0547 | +0.9975 | +0.0514 | +0.9326 | +0.0044 | −0.0061 |
-| | (2.18)\*\* | (2.10)\*\* | (2.19)\*\* | (2.10)\*\* | (0.17) | (0.28) |
+| Dem presidential vote share | +0.0538 | +0.9782 | +0.0502 | +0.9081 | +0.0040 | −0.0066 |
+| | (2.16)\*\* | (2.08)\*\* | (2.16)\*\* | (2.06)\*\* | (0.16) | (0.30) |
 | Dem Mayor × Dem vote share | — | — | — | — | +0.0986 | +0.1125 |
 | | | | | | (1.91)\* | (2.25)\*\* |
+| **Family 3 — Institutional context** | | | | | | |
+| State green bond market depth | +0.0005 | +0.0083 | +0.0003 | +0.0064 | +0.0004 | +0.0003 |
+| | (1.31) | (1.30) | (1.18) | (1.17) | (1.21) | (1.05) |
+| Anti-ESG muni bond law | −0.0059 | −0.1007 | −0.0032 | −0.0568 | −0.0051 | −0.0023 |
+| | (1.13) | (1.04) | (0.76) | (0.72) | (0.97) | (0.54) |
+| **Demographic and economic controls** | | | | | | |
+| Log population | +0.0300 | +0.5834 | +0.0244 | +0.4809 | +0.0296 | +0.0240 |
+| | (3.30)\*\*\* | (3.26)\*\*\* | (3.12)\*\*\* | (3.08)\*\*\* | (3.33)\*\*\* | (3.16)\*\*\* |
+| Log per-capita income | +0.0326 | +0.6571 | +0.0280 | +0.5709 | +0.0306 | +0.0258 |
+| | (1.98)\*\* | (1.96)\*\* | (1.72)\* | (1.73)\* | (1.96)\*\* | (1.68)\* |
+| Unemployment rate | +0.0029 | +0.0564 | +0.0025 | +0.0490 | +0.0030 | +0.0026 |
+| | (2.04)\*\* | (2.07)\*\* | (1.92)\* | (2.00)\*\* | (2.04)\*\* | (1.94)\* |
 | R² | 0.088 | 0.093 | 0.088 | 0.091 | 0.089 | 0.091 |
 | N | 7,413 | 7,413 | 7,413 | 7,413 | 7,413 | 7,413 |
 
-Remaining variables (reserve ratio, debt service, state green market depth, anti-ESG law, log population, log income, unemployment) included but not shown for space. Full table in `table1_v3_main.md`.
+\*, \*\*, \*\*\* denote significance at the 10 per cent, 5 per cent and 1 per cent level, respectively. State + year FE absorbed.
 
 ### Marginal effect of `Dem_Mayor` on self-green (I2)
 
@@ -90,6 +106,10 @@ Remaining variables (reserve ratio, debt service, state green market depth, anti
 | **Family 1 — Material conditions** | | | | |
 | Non-severe violations (muni, lag 1) | +0.0037 | +0.0037 | +0.0025 | +0.0026 |
 | | (2.90)\*\*\* | (2.91)\*\*\* | (1.50) | (1.59) |
+| Reserve ratio | +0.0032 | +0.0032 | +0.0011 | +0.0013 |
+| | (1.33) | (1.34) | (0.66) | (0.74) |
+| Debt service burden | −0.0465 | −0.0465 | −0.0239 | −0.0287 |
+| | (1.35) | (1.36) | (0.80) | (0.98) |
 | **Family 2 — Political factors** | | | | |
 | Dem Mayor | −0.0002 | −0.0010 | +0.0005 | −0.0527 |
 | | (0.06) | (0.06) | (0.21) | (3.04)\*\*\* |
@@ -97,10 +117,23 @@ Remaining variables (reserve ratio, debt service, state green market depth, anti
 | | (1.00) | (0.94) | (2.62)\*\*\* | (0.62) |
 | Dem Mayor × Dem vote share | — | +0.0013 | — | +0.0944 |
 | | | (0.05) | | (3.04)\*\*\* |
-| R² | 0.043 | 0.043 | 0.059 | 0.064 |
+| **Family 3 — Institutional context** | | | | |
+| State green bond market depth | +0.0003 | +0.0003 | +0.0001 | +0.0001 |
+| | (1.22) | (1.21) | (0.72) | (0.55) |
+| Anti-ESG muni bond law | −0.0073 | −0.0073 | +0.0029 | +0.0036 |
+| | (1.61) | (1.60) | (0.89) | (1.08) |
+| **Demographic and economic controls** | | | | |
+| Log population | +0.0120 | +0.0120 | +0.0172 | +0.0169 |
+| | (3.02)\*\*\* | (3.06)\*\*\* | (3.24)\*\*\* | (3.27)\*\*\* |
+| Log per-capita income | +0.0147 | +0.0147 | +0.0173 | +0.0154 |
+| | (1.59) | (1.63) | (1.98)\*\* | (1.89)\* |
+| Unemployment rate | +0.0020 | +0.0020 | +0.0008 | +0.0009 |
+| | (1.61) | (1.61) | (1.15) | (1.22) |
+| R² | 0.044 | 0.044 | 0.058 | 0.062 |
 | N | 7,413 | 7,413 | 7,413 | 7,413 |
+| Positive city-years | 89 | 89 | 60 | 60 |
 
-Remaining variables included but not shown.
+\*, \*\*, \*\*\* denote significance at the 10 per cent, 5 per cent and 1 per cent level, respectively. State + year FE absorbed.
 
 #### Marginal effect of `Dem_Mayor` at constituency percentiles
 
@@ -109,11 +142,25 @@ Remaining variables included but not shown.
 | W2 Water | −0.001 (0.06) | −0.000 (0.06) | +0.000 (0.01) |
 | **NW2 Non-water** | **−0.016 (2.82)\*\*\*** | +0.001 (0.32) | **+0.018 (2.76)\*\*\*** |
 
+### Panel B — Descriptive: individual sparse categories
+
+| *Category* | *Total+* | *Dem N* | *Dem+* | *Dem %* | *Rep N* | *Rep+* | *Rep %* | *Fisher p* |
+|---|---|---|---|---|---|---|---|---|
+| Clean transportation | 17 | 4,248 | 17 | 0.40% | 3,266 | 0 | 0.00% | 0.000\*\*\* |
+| Energy efficiency | 20 | 4,248 | 18 | 0.42% | 3,266 | 2 | 0.06% | 0.002\*\*\* |
+| Green buildings | 19 | 4,248 | 19 | 0.45% | 3,266 | 0 | 0.00% | 0.000\*\*\* |
+| Renewable energy | 18 | 4,248 | 17 | 0.40% | 3,266 | 1 | 0.03% | 0.001\*\*\* |
+| Pollution control | 9 | 4,248 | 8 | 0.19% | 3,266 | 1 | 0.03% | 0.087\* |
+| Climate adaptation | 7 | 4,248 | 7 | 0.16% | 3,266 | 0 | 0.00% | 0.021\*\* |
+| Natural resource mgmt | 3 | 4,248 | 3 | 0.07% | 3,266 | 0 | 0.00% | 0.263 |
+
 ### Reading
 
-**Non-severe violations drive water issuance specifically (+0.004\*\*\*, t=2.90) and are null on non-water (+0.003, t=1.50, p=0.135).** This is the clean water-specific compulsion pattern that confirms the chain framing's prediction: persistent low-severity effluent exceedances create capital-investment need for water infrastructure specifically.
+**Step 1 is dominated by Family 1 (Material) in the compelled domain.** Non-severe violations drive water issuance specifically (+0.004\*\*\*, t=2.90) and are null on non-water (+0.003, t=1.50, p=0.135). This is the clean water-specific compulsion pattern that confirms the chain framing's prediction: persistent low-severity effluent exceedances create capital-investment need for water infrastructure specifically.
 
-**The constituency × partisan interaction operates exclusively in the discretionary domain.** Water (I2 = +0.001, ns) vs non-water (I2 = +0.094\*\*\*). Democratic mayors amplify constituency demand for discretionary green capital projects. The crossover at pres\_dem ≈ 0.55 separates amplification (blue cities, +0.018\*\*\*) from substitution (red cities, −0.016\*\*\*).
+**Step 1 shows responsive representation in the discretionary domain.** The constituency × partisan interaction operates exclusively in the discretionary domain: water (I2 = +0.001, ns) vs non-water (I2 = +0.094\*\*\*). Democratic mayors amplify constituency demand for discretionary green capital projects. The crossover at pres\_dem ≈ 0.55 separates amplification (blue cities, +0.018\*\*\*) from substitution (red cities, −0.016\*\*\*).
+
+**The domain contrast is the finding.** Panel B shows the raw descriptive pattern — Democratic mayors account for 17 of 17 clean-transportation and 19 of 19 green-buildings positive city-years — which Panel A decomposes into constituency-conditional responsive representation rather than autonomous partisan ideology.
 
 ---
 
@@ -125,16 +172,44 @@ Remaining variables included but not shown.
 
 | *Variable* | *L1 Baseline* | *L2 +Fiscal Stress* | *L3 +Marketability* | *L4 Both* | *L5 Compelled only* |
 |---|---|---|---|---|---|
+| **Family 1 — Material conditions** | | | | | |
 | Non-severe violations (muni, lag 1) | +0.0043 | +0.0035 | −0.0110 | −0.0113 | — |
-| | (1.64) | (1.35) | (2.09)\*\* | (2.18)\*\* | |
-| Dem Mayor | −0.0017 | −0.0024 | −0.0015 | −0.0022 | −0.0010 |
-| | (0.34) | (0.48) | (0.30) | (0.44) | (0.17) |
+| | (1.30) | (1.06) | (2.06)\*\* | (2.10)\*\* | |
+| Reserve ratio | +0.0033 | +0.0056 | +0.0030 | +0.0053 | +0.0096 |
+| | (0.70) | (1.26) | (0.65) | (1.20) | (1.59) |
+| Debt service burden | −0.0728 | −0.2245 | −0.0636 | −0.2099 | −0.1276 |
+| | (1.03) | (2.25)\*\* | (0.92) | (2.16)\*\* | (1.37) |
 | Fiscal stress index | — | +0.0176 | — | +0.0169 | — |
-| | | (2.05)\*\* | | (1.97)\*\* | |
+| | | (1.98)\*\* | | (1.92)\* | |
 | Violations × state green market depth | — | — | +0.0008 | +0.0008 | — |
-| | | | (2.62)\*\*\* | (2.58)\*\*\* | |
+| | | | (2.42)\*\* | (2.38)\*\* | |
+| **Family 2 — Political factors** | | | | | |
+| Dem Mayor | −0.0017 | −0.0024 | −0.0015 | −0.0022 | −0.0010 |
+| | (0.32) | (0.47) | (0.29) | (0.43) | (0.13) |
+| Dem presidential vote share | +0.0665 | +0.0729 | +0.0692 | +0.0753 | +0.0587 |
+| | (2.13)\*\* | (2.31)\*\* | (2.23)\*\* | (2.39)\*\* | (1.49) |
+| **Family 3 — Institutional context** | | | | | |
+| State green bond market depth | +0.0005 | +0.0004 | −0.0007 | −0.0007 | +0.0009 |
+| | (0.87) | (0.81) | (0.93) | (0.93) | (1.37) |
+| Anti-ESG muni bond law | −0.0082 | −0.0078 | −0.0097 | −0.0093 | −0.0186 |
+| | (1.11) | (1.06) | (1.29) | (1.24) | (1.59) |
+| State Dem governor | +0.0020 | +0.0020 | +0.0012 | +0.0013 | +0.0118 |
+| | (0.13) | (0.13) | (0.08) | (0.08) | (0.58) |
+| State Dem trifecta | −0.0127 | −0.0126 | −0.0116 | −0.0115 | −0.0202 |
+| | (0.97) | (0.96) | (0.89) | (0.88) | (1.15) |
+| State Rep trifecta | −0.0125 | −0.0118 | −0.0124 | −0.0118 | −0.0034 |
+| | (0.80) | (0.76) | (0.80) | (0.76) | (0.17) |
+| **Demographic and economic controls** | | | | | |
+| Log population | +0.0355 | +0.0353 | +0.0350 | +0.0348 | +0.0384 |
+| | (3.32)\*\*\* | (3.33)\*\*\* | (3.32)\*\*\* | (3.33)\*\*\* | (3.28)\*\*\* |
+| Log per-capita income | +0.0307 | +0.0331 | +0.0300 | +0.0324 | +0.0345 |
+| | (1.20) | (1.27) | (1.18) | (1.25) | (1.31) |
+| Unemployment rate | +0.0025 | +0.0026 | +0.0022 | +0.0024 | +0.0013 |
+| | (1.19) | (1.26) | (1.07) | (1.15) | (0.42) |
 | R² | 0.105 | 0.107 | 0.107 | 0.109 | 0.131 |
 | N | 3,894 | 3,894 | 3,894 | 3,894 | 2,375 |
+
+\*, \*\*, \*\*\* denote significance at the 10 per cent, 5 per cent and 1 per cent level, respectively. State + year FE absorbed. Table 3 additionally includes state political controls (Dem governor, Dem trifecta, Rep trifecta) not in Tables 1–2.
 
 ### Reading
 
