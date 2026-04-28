@@ -103,6 +103,8 @@ The paper's central theoretical claim is that mayoral partisanship operates at t
 
 > **Step mapping.** This table addresses Step 1 of the decision chain. The constituency × partisan interaction is tested in both domains. Where compulsion removes discretion (water), the interaction is predicted to be null; where discretion remains (non-water), the interaction is predicted to be positive. This is the locus of the paper's central finding.
 
+**Outcomes.** `Y_water_only` = city-year with green bond issuance in the sustainable-water category only (n+ = 90). `Y_has_non_water` = city-year with green bond issuance in at least one non-water category (n+ = 60). Categories are from Bloomberg's ESG project classification and cover the full green bond universe (`Green_Bond_Issued`, N+ = 152), not just self-labelled bonds. The two outcomes are mutually exclusive (zero overlap).
+
 | *Variable* | *W1 Water* | *W2 Water + I2* | *NW1 Non-water* | *NW2 Non-water + I2* |
 |---|---|---|---|---|
 | **Family 1 — Material conditions** | | | | |
