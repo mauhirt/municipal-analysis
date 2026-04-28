@@ -355,6 +355,48 @@ Coverage: 54% (72/134) name a third-party verifier; 48% (64/134) cite a framewor
 
 ---
 
+## Appendix D — Robustness to Climate Exposure and Revenue Structure Controls
+
+> Two additional controls are tested: (i) FEMA disaster declarations in the prior five years, capturing climate/hazard exposure beyond water-quality compliance pressure; (ii) own-source revenue share (lag 2), capturing fiscal autonomy and revenue structure. Neither is significant in any specification. All key coefficients are stable.
+
+| *Variable* | *C3 Self-green* | *I2 Self-green* | *W1 Water* | *NW2 Non-water + I2* |
+|---|---|---|---|---|
+| **Family 1 — Material conditions** | | | | |
+| Non-severe violations (muni, lag 1) | +0.0040 | +0.0042 | +0.0031 | +0.0020 |
+| | (1.70)\* | (1.79)\* | (2.43)\*\* | (1.06) |
+| Reserve ratio | +0.0046 | +0.0046 | +0.0037 | +0.0022 |
+| | (1.89)\* | (1.93)\* | (1.62) | (1.54) |
+| Debt service burden | −0.0910 | −0.0949 | −0.0631 | −0.0518 |
+| | (1.96)\*\* | (2.04)\*\* | (1.85)\* | (1.68)\* |
+| Capital outlay per capita | +0.0380 | +0.0373 | +0.0162 | +0.0208 |
+| | (1.58) | (1.59) | (1.46) | (1.32) |
+| **Family 2 — Political factors** | | | | |
+| Dem Mayor | −0.0003 | −0.0597 | −0.0004 | −0.0507 |
+| | (0.09) | (2.36)\*\* | (0.11) | (3.19)\*\*\* |
+| Dem presidential vote share | +0.0523 | −0.0006 | +0.0183 | −0.0062 |
+| | (2.22)\*\* | (0.03) | (1.16) | (0.42) |
+| Dem Mayor × Dem vote share | — | +0.1053 | — | +0.0903 |
+| | | (2.40)\*\* | | (3.19)\*\*\* |
+| **Additional controls tested** | | | | |
+| FEMA disaster declarations (prior 5yr) | −0.0009 | −0.0010 | −0.0010 | −0.0004 |
+| | (0.60) | (0.65) | (1.61) | (0.38) |
+| Own-source revenue share | −0.0246 | −0.0216 | −0.0037 | −0.0126 |
+| | (0.73) | (0.66) | (0.18) | (0.76) |
+| R² | 0.097 | 0.099 | 0.046 | 0.067 |
+| N | 7,413 | 7,413 | 7,413 | 7,413 |
+
+\*, \*\*, \*\*\* denote significance at the 10 per cent, 5 per cent and 1 per cent level, respectively. State + year FE absorbed. Remaining PRIMARY controls (state green bond market depth, anti-ESG muni bond law, log population, log per-capita income, unemployment) included but not shown for space.
+
+### Reading
+
+**Climate/hazard exposure does not predict green bond issuance.** FEMA disaster declarations are null across all four specifications (|t| ≤ 1.61). The water-specific compulsion pattern (violations +0.003\*\* on water, +0.002 ns on non-water) is preserved, confirming that the non-severe violations variable captures infrastructure-need pressure rather than general climate exposure.
+
+**Revenue structure does not predict green bond issuance.** Own-source revenue share is null in all specifications (|t| ≤ 0.76). Fiscal autonomy has no independent effect on green labelling after controlling for reserve ratio and debt service burden.
+
+**All key findings are unchanged.** The constituency × partisan interaction is +0.105\*\* (I2) and +0.090\*\*\* (NW2). `Dem_Mayor` remains null in baseline columns. The water-domain placebo holds (W1 violations +0.003\*\*, NW2 violations +0.002 ns).
+
+---
+
 ## Files
 
 - `processed/tables/PAPER_main_v4.md` — this document.
