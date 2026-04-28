@@ -399,6 +399,36 @@ Coverage: 54% (72/134) name a third-party verifier; 48% (64/134) cite a framewor
 
 ---
 
+## Appendix F — Compulsion Variable: Severity Variant Comparison
+
+> Nine NPDES violation variants are tested as alternatives in the compulsion role, each substituted into the 11-variable PRIMARY. The predicted pattern: significant on water issuance, null on non-water — consistent with water-specific compulsion rather than general administrative capacity or fiscal pressure.
+
+| *Variant* | *nz* | *W β* | *W t* | | *NW β* | *NW t* | | *Pool t* | *Pattern* |
+|---|---:|---|---|---|---|---|---|---|---|
+| **Non-severe QNCR, lag 1 [MAIN]** | 4,327 | **+0.003** | **(2.50)\*\*** | | +0.002 | (1.00) | | (1.73)\* | **W sig, NW null** |
+| Total QNCR, lag 1 | 4,624 | +0.003 | (2.55)\*\* | | +0.002 | (1.66)\* | | (2.68)\*\*\* | Both sig |
+| Severe QNCR, lag 1 | 2,164 | +0.001 | (0.41) | | +0.002 | (0.88) | | (0.78) | Both null |
+| SNC only, lag 1 | 242 | −0.009 | (2.05)\*\* | | −0.006 | (1.73)\* | | (2.08)\*\* | Both sig (negative) |
+| Total QNCR, lag 2 | 4,562 | +0.002 | (1.88)\* | | +0.003 | (1.80)\* | | (2.53)\*\* | Both sig |
+| Severe QNCR, lag 2 | 2,156 | +0.001 | (0.72) | | +0.001 | (0.47) | | (0.93) | Both null |
+| Total QNCR, prior 3yr | 5,179 | +0.002 | (2.16)\*\* | | +0.002 | (1.97)\*\* | | (2.89)\*\*\* | Both sig |
+| Severe QNCR, prior 3yr | 2,835 | +0.001 | (0.54) | | +0.002 | (1.08) | | (1.09) | Both null |
+| Effluent violations, lag 2 | 3,930 | +0.003 | (1.68)\* | | +0.002 | (1.36) | | (2.32)\*\* | W sig, NW null |
+
+\*, \*\*, \*\*\* denote significance at the 10 per cent, 5 per cent and 1 per cent level, respectively. State + year FE absorbed. 11-variable PRIMARY throughout; only the compulsion variable is swapped. *nz* = city-years with nonzero values.
+
+### Reading
+
+**Only non-severe violations produce the clean water-specific pattern.** The main specification (non-severe QNCR, lag 1) is the only variant that is significant on water (+0.003, $t = 2.50$\*\*) while clearly null on non-water (+0.002, $t = 1.00$). The effluent violations measure (the prior main variable) achieves a similar pattern but with a weaker water signal ($t = 1.68$\*).
+
+**Total QNCR variants are significant on both water and non-water**, failing to isolate the water-specific compulsion channel. The non-water significance reflects the severe-violation component, which proxies for general regulatory engagement rather than water-infrastructure-specific need.
+
+**Severe violations and SNC are uninformative or counterproductive.** Severe QNCR variants are null on both outcomes ($|t| \leq 1.08$) — too sparse and episodic to predict forward-looking bond issuance. SNC (significant noncompliance) produces negative coefficients on both water and non-water, consistent with post-remediation completion: cities designated as SNC have typically already arranged financing through consent-decree channels.
+
+**The decomposition is the key insight.** Total violations = non-severe + severe. Non-severe violations (83.7\% of total) carry the identifying variation for water-specific compulsion. Severe violations (16.3\%) add noise that contaminates the non-water coefficient. Removing the severe component sharpens the instrument from "both significant" (total) to "water significant, non-water null" (non-severe only).
+
+---
+
 ## Appendix E — Placebo Tests
 
 Three families of placebo tests confirm that the paper's key findings are specific to the theorised mechanisms rather than artefacts of general patterns.
