@@ -1,0 +1,179 @@
+state_abb,year,rggi_member,wci_member,source
+# RGGI / WCI membership panel — state-year indicators for the Regional Greenhouse Gas
+# Initiative (RGGI) and the Western Climate Initiative (WCI, US members only).
+#
+# This file replaces hand-coded state rosters previously embedded in the analysis code.
+# Every state-year entry is traceable to a primary public record cited in the `source`
+# column (URL, statute, or regulatory action). Effective-year boundaries follow the
+# first compliance period under the relevant cap-and-trade regulation, not the date of
+# legislative signing or Memorandum of Understanding.
+#
+# References (full URLs in the source column per row):
+#   RGGI Inc., Program Overview and Design Elements — https://www.rggi.org/program-overview-and-design/elements
+#   RGGI Inc., Historic MOUs and regulation updates — https://www.rggi.org
+#   New Jersey re-entry: rggi.org/news/nj-re-entry-2020-06-29
+#   Virginia: HB 981 (2020) signed 2020-04-10; Youngkin Administration regulatory
+#     withdrawal effective 2023-12-31 (Reg. Reg. 40:16 VA.R. 1651, 2024-03-25).
+#   Pennsylvania: 25 Pa. Code Ch. 145 Subch. E (final rule 2022-04-23); Commonwealth Court
+#     invalidated regulation as unconstitutional tax 2023-11-01 (Shapiro v. Bowman, 2023);
+#     conservative coding: 1 only for 2022. 2023+ coded 0 given judicial invalidation.
+#   California: AB 32 (2006, signed 2006-09-27); cap-and-trade first compliance period 2013-2014.
+#   Washington: Climate Commitment Act SB 5126 (2021, signed 2021-05-17); first compliance period 2023.
+#
+# Scope: panel years 2013-2025. States not listed get the default of 0/0.
+# All entries below encoded at 2025-04 using publicly-available records.
+CT,2013,1,0,https://www.rggi.org/program-overview-and-design/elements
+CT,2014,1,0,https://www.rggi.org/program-overview-and-design/elements
+CT,2015,1,0,https://www.rggi.org/program-overview-and-design/elements
+CT,2016,1,0,https://www.rggi.org/program-overview-and-design/elements
+CT,2017,1,0,https://www.rggi.org/program-overview-and-design/elements
+CT,2018,1,0,https://www.rggi.org/program-overview-and-design/elements
+CT,2019,1,0,https://www.rggi.org/program-overview-and-design/elements
+CT,2020,1,0,https://www.rggi.org/program-overview-and-design/elements
+CT,2021,1,0,https://www.rggi.org/program-overview-and-design/elements
+CT,2022,1,0,https://www.rggi.org/program-overview-and-design/elements
+CT,2023,1,0,https://www.rggi.org/program-overview-and-design/elements
+CT,2024,1,0,https://www.rggi.org/program-overview-and-design/elements
+CT,2025,1,0,https://www.rggi.org/program-overview-and-design/elements
+DE,2013,1,0,https://www.rggi.org/program-overview-and-design/elements
+DE,2014,1,0,https://www.rggi.org/program-overview-and-design/elements
+DE,2015,1,0,https://www.rggi.org/program-overview-and-design/elements
+DE,2016,1,0,https://www.rggi.org/program-overview-and-design/elements
+DE,2017,1,0,https://www.rggi.org/program-overview-and-design/elements
+DE,2018,1,0,https://www.rggi.org/program-overview-and-design/elements
+DE,2019,1,0,https://www.rggi.org/program-overview-and-design/elements
+DE,2020,1,0,https://www.rggi.org/program-overview-and-design/elements
+DE,2021,1,0,https://www.rggi.org/program-overview-and-design/elements
+DE,2022,1,0,https://www.rggi.org/program-overview-and-design/elements
+DE,2023,1,0,https://www.rggi.org/program-overview-and-design/elements
+DE,2024,1,0,https://www.rggi.org/program-overview-and-design/elements
+DE,2025,1,0,https://www.rggi.org/program-overview-and-design/elements
+ME,2013,1,0,https://www.rggi.org/program-overview-and-design/elements
+ME,2014,1,0,https://www.rggi.org/program-overview-and-design/elements
+ME,2015,1,0,https://www.rggi.org/program-overview-and-design/elements
+ME,2016,1,0,https://www.rggi.org/program-overview-and-design/elements
+ME,2017,1,0,https://www.rggi.org/program-overview-and-design/elements
+ME,2018,1,0,https://www.rggi.org/program-overview-and-design/elements
+ME,2019,1,0,https://www.rggi.org/program-overview-and-design/elements
+ME,2020,1,0,https://www.rggi.org/program-overview-and-design/elements
+ME,2021,1,0,https://www.rggi.org/program-overview-and-design/elements
+ME,2022,1,0,https://www.rggi.org/program-overview-and-design/elements
+ME,2023,1,0,https://www.rggi.org/program-overview-and-design/elements
+ME,2024,1,0,https://www.rggi.org/program-overview-and-design/elements
+ME,2025,1,0,https://www.rggi.org/program-overview-and-design/elements
+MD,2013,1,0,https://www.rggi.org/program-overview-and-design/elements
+MD,2014,1,0,https://www.rggi.org/program-overview-and-design/elements
+MD,2015,1,0,https://www.rggi.org/program-overview-and-design/elements
+MD,2016,1,0,https://www.rggi.org/program-overview-and-design/elements
+MD,2017,1,0,https://www.rggi.org/program-overview-and-design/elements
+MD,2018,1,0,https://www.rggi.org/program-overview-and-design/elements
+MD,2019,1,0,https://www.rggi.org/program-overview-and-design/elements
+MD,2020,1,0,https://www.rggi.org/program-overview-and-design/elements
+MD,2021,1,0,https://www.rggi.org/program-overview-and-design/elements
+MD,2022,1,0,https://www.rggi.org/program-overview-and-design/elements
+MD,2023,1,0,https://www.rggi.org/program-overview-and-design/elements
+MD,2024,1,0,https://www.rggi.org/program-overview-and-design/elements
+MD,2025,1,0,https://www.rggi.org/program-overview-and-design/elements
+MA,2013,1,0,https://www.rggi.org/program-overview-and-design/elements
+MA,2014,1,0,https://www.rggi.org/program-overview-and-design/elements
+MA,2015,1,0,https://www.rggi.org/program-overview-and-design/elements
+MA,2016,1,0,https://www.rggi.org/program-overview-and-design/elements
+MA,2017,1,0,https://www.rggi.org/program-overview-and-design/elements
+MA,2018,1,0,https://www.rggi.org/program-overview-and-design/elements
+MA,2019,1,0,https://www.rggi.org/program-overview-and-design/elements
+MA,2020,1,0,https://www.rggi.org/program-overview-and-design/elements
+MA,2021,1,0,https://www.rggi.org/program-overview-and-design/elements
+MA,2022,1,0,https://www.rggi.org/program-overview-and-design/elements
+MA,2023,1,0,https://www.rggi.org/program-overview-and-design/elements
+MA,2024,1,0,https://www.rggi.org/program-overview-and-design/elements
+MA,2025,1,0,https://www.rggi.org/program-overview-and-design/elements
+NH,2013,1,0,https://www.rggi.org/program-overview-and-design/elements
+NH,2014,1,0,https://www.rggi.org/program-overview-and-design/elements
+NH,2015,1,0,https://www.rggi.org/program-overview-and-design/elements
+NH,2016,1,0,https://www.rggi.org/program-overview-and-design/elements
+NH,2017,1,0,https://www.rggi.org/program-overview-and-design/elements
+NH,2018,1,0,https://www.rggi.org/program-overview-and-design/elements
+NH,2019,1,0,https://www.rggi.org/program-overview-and-design/elements
+NH,2020,1,0,https://www.rggi.org/program-overview-and-design/elements
+NH,2021,1,0,https://www.rggi.org/program-overview-and-design/elements
+NH,2022,1,0,https://www.rggi.org/program-overview-and-design/elements
+NH,2023,1,0,https://www.rggi.org/program-overview-and-design/elements
+NH,2024,1,0,https://www.rggi.org/program-overview-and-design/elements
+NH,2025,1,0,https://www.rggi.org/program-overview-and-design/elements
+NJ,2013,0,0,NJ withdrew from RGGI 2012 (Gov. Christie EO-62); see rggi.org/news/nj-re-entry
+NJ,2014,0,0,NJ withdrew from RGGI 2012 (Gov. Christie EO-62); see rggi.org/news/nj-re-entry
+NJ,2015,0,0,NJ withdrew from RGGI 2012 (Gov. Christie EO-62); see rggi.org/news/nj-re-entry
+NJ,2016,0,0,NJ withdrew from RGGI 2012 (Gov. Christie EO-62); see rggi.org/news/nj-re-entry
+NJ,2017,0,0,NJ withdrew from RGGI 2012 (Gov. Christie EO-62); see rggi.org/news/nj-re-entry
+NJ,2018,0,0,NJ withdrew from RGGI 2012 (Gov. Christie EO-62); see rggi.org/news/nj-re-entry
+NJ,2019,0,0,NJ withdrew from RGGI 2012 (Gov. Christie EO-62); see rggi.org/news/nj-re-entry
+NJ,2020,1,0,NJ rejoined RGGI 2020 (Murphy EO-7/2018); first auction participation 2020-06
+NJ,2021,1,0,https://www.rggi.org/program-overview-and-design/elements
+NJ,2022,1,0,https://www.rggi.org/program-overview-and-design/elements
+NJ,2023,1,0,https://www.rggi.org/program-overview-and-design/elements
+NJ,2024,1,0,https://www.rggi.org/program-overview-and-design/elements
+NJ,2025,1,0,https://www.rggi.org/program-overview-and-design/elements
+NY,2013,1,0,https://www.rggi.org/program-overview-and-design/elements
+NY,2014,1,0,https://www.rggi.org/program-overview-and-design/elements
+NY,2015,1,0,https://www.rggi.org/program-overview-and-design/elements
+NY,2016,1,0,https://www.rggi.org/program-overview-and-design/elements
+NY,2017,1,0,https://www.rggi.org/program-overview-and-design/elements
+NY,2018,1,0,https://www.rggi.org/program-overview-and-design/elements
+NY,2019,1,0,https://www.rggi.org/program-overview-and-design/elements
+NY,2020,1,0,https://www.rggi.org/program-overview-and-design/elements
+NY,2021,1,0,https://www.rggi.org/program-overview-and-design/elements
+NY,2022,1,0,https://www.rggi.org/program-overview-and-design/elements
+NY,2023,1,0,https://www.rggi.org/program-overview-and-design/elements
+NY,2024,1,0,https://www.rggi.org/program-overview-and-design/elements
+NY,2025,1,0,https://www.rggi.org/program-overview-and-design/elements
+RI,2013,1,0,https://www.rggi.org/program-overview-and-design/elements
+RI,2014,1,0,https://www.rggi.org/program-overview-and-design/elements
+RI,2015,1,0,https://www.rggi.org/program-overview-and-design/elements
+RI,2016,1,0,https://www.rggi.org/program-overview-and-design/elements
+RI,2017,1,0,https://www.rggi.org/program-overview-and-design/elements
+RI,2018,1,0,https://www.rggi.org/program-overview-and-design/elements
+RI,2019,1,0,https://www.rggi.org/program-overview-and-design/elements
+RI,2020,1,0,https://www.rggi.org/program-overview-and-design/elements
+RI,2021,1,0,https://www.rggi.org/program-overview-and-design/elements
+RI,2022,1,0,https://www.rggi.org/program-overview-and-design/elements
+RI,2023,1,0,https://www.rggi.org/program-overview-and-design/elements
+RI,2024,1,0,https://www.rggi.org/program-overview-and-design/elements
+RI,2025,1,0,https://www.rggi.org/program-overview-and-design/elements
+VT,2013,1,0,https://www.rggi.org/program-overview-and-design/elements
+VT,2014,1,0,https://www.rggi.org/program-overview-and-design/elements
+VT,2015,1,0,https://www.rggi.org/program-overview-and-design/elements
+VT,2016,1,0,https://www.rggi.org/program-overview-and-design/elements
+VT,2017,1,0,https://www.rggi.org/program-overview-and-design/elements
+VT,2018,1,0,https://www.rggi.org/program-overview-and-design/elements
+VT,2019,1,0,https://www.rggi.org/program-overview-and-design/elements
+VT,2020,1,0,https://www.rggi.org/program-overview-and-design/elements
+VT,2021,1,0,https://www.rggi.org/program-overview-and-design/elements
+VT,2022,1,0,https://www.rggi.org/program-overview-and-design/elements
+VT,2023,1,0,https://www.rggi.org/program-overview-and-design/elements
+VT,2024,1,0,https://www.rggi.org/program-overview-and-design/elements
+VT,2025,1,0,https://www.rggi.org/program-overview-and-design/elements
+VA,2021,1,0,VA HB 981 (2020) effective 2021-01-01; first auction 2021-03
+VA,2022,1,0,https://www.rggi.org/program-overview-and-design/elements
+VA,2023,1,0,VA last compliance year per Youngkin Admin withdrawal (Reg. VAR 40:16-1651)
+VA,2024,0,0,VA withdrew from RGGI effective 2023-12-31 (Youngkin regulation Reg. VAR 40:16-1651)
+VA,2025,0,0,VA withdrew from RGGI effective 2023-12-31 (litigation pending but not reversed)
+PA,2022,1,0,PA final rule 25 Pa. Code Ch. 145 Subch. E (2022-04-23); first auction participation 2022-Q3
+PA,2023,0,0,PA Commonwealth Court invalidated RGGI regulation 2023-11-01 (Shapiro v. Bowman); conservative: exclude
+PA,2024,0,0,PA RGGI regulation invalidated; Shapiro administration appeal pending but no active participation
+PA,2025,0,0,PA RGGI regulation invalidated; Shapiro administration appeal pending but no active participation
+CA,2013,0,1,CA cap-and-trade first compliance period 2013-2014 under AB 32 (2006); see ww2.arb.ca.gov/our-work/programs/cap-and-trade-program
+CA,2014,0,1,https://ww2.arb.ca.gov/our-work/programs/cap-and-trade-program
+CA,2015,0,1,https://ww2.arb.ca.gov/our-work/programs/cap-and-trade-program
+CA,2016,0,1,https://ww2.arb.ca.gov/our-work/programs/cap-and-trade-program
+CA,2017,0,1,https://ww2.arb.ca.gov/our-work/programs/cap-and-trade-program
+CA,2018,0,1,https://ww2.arb.ca.gov/our-work/programs/cap-and-trade-program
+CA,2019,0,1,https://ww2.arb.ca.gov/our-work/programs/cap-and-trade-program
+CA,2020,0,1,https://ww2.arb.ca.gov/our-work/programs/cap-and-trade-program
+CA,2021,0,1,https://ww2.arb.ca.gov/our-work/programs/cap-and-trade-program
+CA,2022,0,1,https://ww2.arb.ca.gov/our-work/programs/cap-and-trade-program
+CA,2023,0,1,https://ww2.arb.ca.gov/our-work/programs/cap-and-trade-program
+CA,2024,0,1,https://ww2.arb.ca.gov/our-work/programs/cap-and-trade-program
+CA,2025,0,1,https://ww2.arb.ca.gov/our-work/programs/cap-and-trade-program
+WA,2023,0,1,WA Climate Commitment Act SB 5126 (2021 session; effective 2023-01-01); see apps.ecology.wa.gov/publications/documents/2204056.pdf
+WA,2024,0,1,https://ecology.wa.gov/climate-commitment-act
+WA,2025,0,1,https://ecology.wa.gov/climate-commitment-act

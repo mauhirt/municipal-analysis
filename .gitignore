@@ -1,5 +1,6 @@
-# Processed panel (large file)
+# Processed panel (large files — rebuilt by pipeline/00 → 01 → 02)
 processed/panel/panel.pkl
+processed/merged_city_year_panel.csv.gz
 
 # Python
 __pycache__/

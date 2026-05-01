@@ -1,0 +1,8 @@
+pandas>=2.3
+numpy>=1.26
+scipy>=1.11
+statsmodels>=0.14
+linearmodels>=6.0
+matplotlib>=3.7
+differences>=0.3.0
+lifelines>=0.27

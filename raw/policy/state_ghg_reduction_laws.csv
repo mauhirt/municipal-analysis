@@ -1,0 +1,40 @@
+state_abb,law_shortname,statute_citation,enactment_year,first_binding_year,reduction_target,base_year,target_year,source
+# State binding greenhouse-gas reduction laws — statutes that impose economy-wide
+# or sector-wide GHG emissions reduction targets on a state government. Restricted
+# to laws passed through the legislative process (statutory) rather than executive
+# orders or administrative policies, to ensure binding character that survives an
+# administration change.
+#
+# One row per distinct law / amendment within a state. A state with a later
+# strengthening amendment gets two rows (the amendment inherits the earlier law's
+# binding-start year for the purposes of state_ghg_law_any_year).
+#
+# `first_binding_year` = year the law's binding reduction requirement takes effect.
+# Where the law was signed in year X but binding obligations begin year Y, both
+# are recorded; enactment_year is what we use for the state-year panel indicator.
+#
+# Cross-referenced with: Georgetown Climate Center State Climate Policy Maps
+# (https://www.georgetownclimate.org/adaptation/policy.html),
+# LSE Grantham Climate Change Laws of the World (https://climate-laws.org/legislation).
+CA,AB 32 California Global Warming Solutions Act,"Cal. Health & Safety Code § 38500 et seq.",2006,2012,1990_level,1990,2020,https://leginfo.legislature.ca.gov/faces/billNavClient.xhtml?bill_id=200520060AB32
+CA,SB 32 Emissions Reduction Target,"Cal. Health & Safety Code § 38566",2016,2020,40_pct_below_1990,1990,2030,https://leginfo.legislature.ca.gov/faces/billNavClient.xhtml?bill_id=201520160SB32
+CT,GWSA Global Warming Solutions Act,"Conn. Gen. Stat. § 22a-200a",2008,2010,80_pct_below_2001,2001,2050,https://www.cga.ct.gov/2008/act/Pa/pdf/2008PA-00098-R00HB-05600-PA.pdf
+CT,Public Act 22-5 Interim Targets,"Conn. Pub. Acts 22-5",2022,2022,45_pct_below_2001,2001,2030,https://www.cga.ct.gov/asp/cgabillstatus/cgabillstatus.asp?selBillType=Bill&bill_num=SB-10&which_year=2022
+CO,HB 19-1261 Climate Action Plan,"Colo. Rev. Stat. § 25-7-102.8",2019,2019,90_pct_below_2005,2005,2050,https://leg.colorado.gov/bills/hb19-1261
+CO,SB 21-200 Environmental Justice & Climate Pollution,"Colo. Rev. Stat. § 25-7-140.5",2021,2021,50_pct_below_2005,2005,2030,https://leg.colorado.gov/bills/sb21-200
+HI,Act 234 Hawaii Clean Energy Initiative,"Haw. Rev. Stat. § 342B-71",2007,2007,1990_level,1990,2020,https://www.capitol.hawaii.gov/sessioncurrent/Acts/ACT234.pdf
+HI,Act 15 Strengthened GHG Target,"Haw. Rev. Stat. § 225P-5",2022,2022,net_zero_by_2045,1990,2045,https://www.capitol.hawaii.gov/sessions/session2022/bills/HB2139_CD1_.PDF
+IL,Climate and Equitable Jobs Act (CEJA),"Public Act 102-0662",2021,2021,100_pct_clean_energy_by_2050,2020,2050,https://www.ilga.gov/legislation/publicacts/102/PDF/102-0662.pdf
+MA,GWSA Global Warming Solutions Act,"Mass. Gen. Laws ch. 21N",2008,2011,80_pct_below_1990,1990,2050,https://malegislature.gov/Laws/SessionLaws/Acts/2008/Chapter298
+MA,Climate Roadmap Act,"Mass. Acts 2021 ch. 8",2021,2021,net_zero_by_2050,1990,2050,https://malegislature.gov/Laws/SessionLaws/Acts/2021/Chapter8
+MD,GGRA Greenhouse Gas Emissions Reduction Act,"Md. Envir. Code Ann. § 2-1201 et seq.",2009,2013,25_pct_below_2006,2006,2020,https://mgaleg.maryland.gov/mgawebsite/Legislation/Details/HB0315/?ys=2009RS
+MD,Climate Solutions Now Act,"Md. Laws 2022 ch. 38",2022,2023,60_pct_below_2006,2006,2031,https://mgaleg.maryland.gov/2022RS/chapters_noln/Ch_38_sb0528T.pdf
+ME,LD 1679 Act to Require Maine to Achieve Carbon Neutrality,"38 M.R.S. § 576-A",2019,2020,net_zero_by_2045,1990,2045,https://legislature.maine.gov/legis/bills/display_ps.asp?ld=1679&PID=1456&snum=129
+MN,HF 2 100 Percent Clean Energy by 2040,"Minn. Stat. § 216B.1691",2023,2023,100_pct_clean_electricity_by_2040,2020,2040,https://www.revisor.mn.gov/laws/2023/0/Session+Law/Chapter/7/pdf/
+NJ,Global Warming Response Act,"N.J. Stat. § 26:2C-37 et seq.",2007,2007,80_pct_below_2006,2006,2050,https://pub.njleg.state.nj.us/Bills/2006/PL07/112_.PDF
+NY,Climate Leadership and Community Protection Act (CLCPA),"N.Y. Envtl. Conserv. Law § 75-0107",2019,2019,40_pct_below_1990,1990,2030,https://www.nysenate.gov/legislation/bills/2019/s6599
+OR,HB 3543 Climate Action Plan,"Or. Rev. Stat. § 468A.205",2007,2007,75_pct_below_1990,1990,2050,https://olis.oregonlegislature.gov/liz/2007R1/Downloads/MeasureDocument/HB3543/Enrolled
+OR,HB 2021 100 Percent Clean Energy,"Or. Rev. Stat. § 469A.410",2021,2021,100_pct_clean_electricity_by_2040,2020,2040,https://olis.oregonlegislature.gov/liz/2021R1/Downloads/MeasureDocument/HB2021/Enrolled
+RI,Act on Climate,"R.I. Gen. Laws § 42-6.2",2021,2021,net_zero_by_2050,1990,2050,https://webserver.rilegislature.gov/BillText/BillText21/HouseText21/H5445Aaa.pdf
+VT,GWSA Global Warming Solutions Act,"10 V.S.A. § 592",2020,2020,net_zero_by_2050,1990,2050,https://legislature.vermont.gov/Documents/2020/Docs/ACTS/ACT153/ACT153%20As%20Enacted.pdf
+WA,Climate Commitment Act,"Wash. Rev. Code § 70A.65",2021,2023,95_pct_below_1990,1990,2050,https://lawfilesext.leg.wa.gov/biennium/2021-22/Pdf/Bills/Session%20Laws/Senate/5126-S2.SL.pdf
